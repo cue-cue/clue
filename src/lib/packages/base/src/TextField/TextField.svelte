@@ -1,7 +1,9 @@
 <script lang='ts'>
     import {generateClassNames} from '@clue/utils'
+	import TextFieldBase from './TextFieldBase.svelte';
+	import type { ComponentProps } from 'svelte';
 
-    interface $$Props {
+    interface $$Props extends ComponentProps<TextFieldBase> {
         class?:string
     }
     
@@ -11,6 +13,7 @@
 </script>
 
 <div class={generateClassNames(['TextField', className])}>
+    <TextFieldBase {...$$restProps}/>
 </div>
 
 <style lang='sass'>

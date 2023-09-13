@@ -27,7 +27,6 @@
 	"dependencies": {
 		"@clue/base": "./src/lib/packages/base",
 		"@clue/styles": "./src/lib/packages/styles",
-		"@clue/template": "./src/lib/packages/template",
 		"@clue/utils": "./src/lib/packages/utils"
 	},
 	"devDependencies": {
