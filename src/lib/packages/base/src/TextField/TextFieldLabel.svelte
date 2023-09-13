@@ -1,4 +1,5 @@
 <script lang='ts'>
+    import {generateClassNames} from '@clue/utils'
     interface $$Props {
         class?:string
     }
@@ -8,12 +9,9 @@
     
 </script>
 
-<div class={`Component ${className}`}>
-    Component
+<div class={generateClassNames(['TextFieldLabel', className])}>
 </div>
 
-<style>
-    /* .Component {
-        
-    } */
+<style lang='sass'>
+    .ClueTextFieldLabel
 </style>

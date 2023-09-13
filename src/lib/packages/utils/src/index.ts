@@ -1,1 +1,3 @@
-export * from "./Component/index.js";
+export * from "./generateClassName/index.js";
+export * from "./generateClassNames/index.js";
+export * from "./camelize/index.js";

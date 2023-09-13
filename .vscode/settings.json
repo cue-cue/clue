@@ -1,0 +1,127 @@
+{
+    "folderTemplates.fileTemplates": {
+        "PublicApiFile":[
+            "export {",
+                "\tMain as <FTName>,",
+            "} from './ui'"
+        ],
+        "PublicApiUIFile":[
+            "import Main from './Main/index.svelte'",
+            "\t",
+            "export {",
+                "\tMain,",
+            "}"
+        ],
+        "MainSvelteFile": [
+            "<script lang='ts'>",
+            "\tinterface $$Props {",
+            "\t\tclass?:string",
+            "\t}",
+            "\t",
+            "\tlet className = ''",
+            "\texport { className as class }",
+            "\t",
+            "</script>",
+            "",
+            "<div class={`<FTName> ${className}`}>",
+            "</div>",
+            "",
+            "<style lang='sass'>",
+            "\t.<FTName>",
+            "</style>",
+        ],
+        "PackageInfo":[
+            "{",
+                "\t\"name\": \"@clue/<FTName | lowercase>\",",
+                "\t\"version\": \"1.0.0\",",
+                "\t\"private\": false,",
+                "\t\"license\": \"MIT\",",
+                "\t\"main\": \"src/index.js\",",
+                "\t\"type\": \"module\",",
+                "\t\"author\": \"Nikita Fedorov\"",
+            "}"
+        ],
+        "PackageReadme":"# <FTName>",
+        "PackagePublicApi":"// export * from './<FTName | pascalcase>/index.js'",
+        "PackageModule":[
+            "<script lang='ts'>",
+            "\timport {generateClassNames} from '@clue/utils'",
+            "",
+            "\tinterface $$Props {",
+            "\t\tclass?:string",
+            "\t}",
+            "\t",
+            "\tlet className = ''",
+            "\texport { className as class }",
+            "\t",
+            "</script>",
+            "",
+            "<div class={generateClassNames(['<FTName | pascalcase>', className])}>",
+            "</div>",
+            "",
+            "<style lang='sass'>",
+            "\t.Clue<FTName | pascalcase>",
+            "</style>",
+        ],
+        "PackageModulePublicApi":[
+            "import <FTName | pascalcase> from './<FTName | pascalcase>.svelte'",
+            "",
+            "export {",
+                "\t<FTName | pascalcase>",
+            "}"
+        ]
+    },
+    "folderTemplates.structures": [
+        {
+            "name": "Package Module",
+            "omitParentDirectory": false,
+            "openFilesWhenDone": [
+                "./<FTName | pascalcase>.svelte"
+            ],
+            "structure": [
+              {
+                "fileName": "./<FTName | pascalcase>.svelte",
+                "template": "PackageModule"
+              },
+              {
+                "fileName": "index.ts",
+                "template": "PackageModulePublicApi"
+              }
+            ]
+        },
+        {
+            "name": "Package Module Component",
+            "omitParentDirectory": true,
+            "openFilesWhenDone": [
+                "./<FTName | pascalcase>.svelte"
+            ],
+            "structure": [
+              {
+                "fileName": "./<FTName | pascalcase>.svelte",
+                "template": "PackageModule"
+              }
+            ]
+        },
+        {
+            "name": "Package",
+            "omitParentDirectory": false,
+            "openFilesWhenDone": [
+                "package.json"
+            ],
+            "structure": [
+              {
+                "fileName": "package.json",
+                "template": "PackageInfo"
+              },
+              {
+                "fileName": "README.md",
+                "template": "PackageReadme"
+              },
+              {
+                "fileName": "src/index.ts",
+                "template": "PackagePublicApi"
+              }
+            ]
+        },
+    ],
+}
