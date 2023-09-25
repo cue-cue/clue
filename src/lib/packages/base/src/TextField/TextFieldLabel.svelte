@@ -1,17 +1,30 @@
 <script lang='ts'>
     import {generateClassNames} from '@clue/utils'
-    interface $$Props {
+	import type { HTMLLabelAttributes } from 'svelte/elements';
+	import { context } from './context.js';
+    interface $$Props extends HTMLLabelAttributes {
         class?:string
+        color?:Vars.Colors
     }
     
     let className = ''
     export { className as class }
+    export let color:$$Props['color'] = undefined
     
 </script>
 
-<div class={generateClassNames(['TextFieldLabel', className])}>
-</div>
+<label {...$$restProps} class={generateClassNames(['TextFieldLabel', className])} data-color={color}>
+    <slot/>
+</label>
 
 <style lang='sass'>
     .ClueTextFieldLabel
+        color: #484B5B
+        font-weight: 500
+        font-size: 12px
+        line-height: 150%
+        transition: var(--transition)
+        transition-property: color
+        &[data-color='disabled']
+            color: var(--color-txt-placeholder)
 </style>

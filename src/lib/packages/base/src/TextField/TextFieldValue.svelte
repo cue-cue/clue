@@ -1,0 +1,19 @@
+<script lang='ts'>
+	import {generateClassNames} from '@clue/utils'
+
+	interface $$Props {
+		class?:string
+	}
+	
+	let className = ''
+	export { className as class }
+	
+</script>
+
+<span class={generateClassNames(['TextFieldValue', className])}>
+	<slot></slot>
+</span>
+
+<style lang='sass'>
+	.ClueTextFieldValue
+</style>

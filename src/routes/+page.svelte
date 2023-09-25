@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import {Input, TextField} from '@clue/base'
+    import {Input, PasswordField, TextField, TextFieldValue} from '@clue/base'
 </script>
 
 <div>
@@ -49,6 +49,49 @@
             <li>
                 base with value<br>
                 <TextField value='value'/>
+            </li>
+            <li>
+                PasswordField<br>
+                <PasswordField/>
+            </li>
+            <li>
+                base with TextFieldValue<br>
+                <TextField value='value'>
+                    <TextFieldValue>value in TextFieldValue</TextFieldValue>
+                </TextField>
+            </li>
+            <li>
+                base with label<br>
+                <TextField value='value' label='Label'/>
+            </li>
+            <li>
+                base with helper<br>
+                <TextField value='value' helper='Assistive text'/>
+            </li>
+            <li>
+                base with error<br>
+                <TextField placeholder='Placeholder' error label='Label' helper='Assistive text'/>
+            </li>
+            <li>
+                base with disabled<br>
+                <TextField placeholder='Placeholder' disabled label='Label' helper='Assistive text'/>
+                <TextField value="Value" disabled label='Label' helper='Assistive text'/>
+                base with disabled and the TextFieldValue<br>
+                <TextField disabled label='Label' helper='Assistive text'>
+                    <TextFieldValue>text in TextFieldValue</TextFieldValue>
+                </TextField>
+            </li>
+            <li>
+                textarea
+                <TextField multiline/>
+                <br>
+                <TextField multiline placeholder='Placeholder'/>
+                <br>
+                <TextField multiline value='Value' rows={6}/>
+                <br>
+                <TextField multiline value='Value' disabled/>
+                <br>
+                <TextField multiline value='Value' error/>
             </li>
         </ul>
         <hr>
