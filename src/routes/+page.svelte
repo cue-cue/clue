@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import {Input, PasswordField, TextField, TextFieldValue} from '@clue/base'
+    import {Input, PasswordField, TextField} from '@clue/base'
 </script>
 
 <div>
@@ -57,7 +57,7 @@
             <li>
                 base with TextFieldValue<br>
                 <TextField value='value'>
-                    <TextFieldValue>value in TextFieldValue</TextFieldValue>
+                    Text value (manual)
                 </TextField>
             </li>
             <li>
@@ -78,7 +78,7 @@
                 <TextField value="Value" disabled label='Label' helper='Assistive text'/>
                 base with disabled and the TextFieldValue<br>
                 <TextField disabled label='Label' helper='Assistive text'>
-                    <TextFieldValue>text in TextFieldValue</TextFieldValue>
+                    Text value (manual)
                 </TextField>
             </li>
             <li>

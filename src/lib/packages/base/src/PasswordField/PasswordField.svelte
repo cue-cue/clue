@@ -43,8 +43,6 @@
 			change()
 		}
 	}
-
-	
 </script>
 
 <TextField class={generateClassNames(['PasswordField', className])}>

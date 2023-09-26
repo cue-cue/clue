@@ -4,6 +4,7 @@
 	import TextFieldHelper from './TextFieldHelper.svelte';
     import TextFieldHeader from './TextFieldHeader.svelte'
 	import TextFieldLabel from './TextFieldLabel.svelte';
+	import TextFieldValue from './TextFieldValue.svelte';
 	import type { ComponentProps } from 'svelte';
 	import TextFieldFooter from './TextFieldFooter.svelte';
 	import { context } from './context.js';
@@ -54,7 +55,7 @@
     {/if}
     <slot name='base'>
         {#if $$slots.default}
-            <TextFieldBase {...$$restProps}><slot/></TextFieldBase>
+            <TextFieldBase {...$$restProps}><TextFieldValue><slot/></TextFieldValue></TextFieldBase>
         {:else}
             <TextFieldBase {...$$restProps}></TextFieldBase>
         {/if}
