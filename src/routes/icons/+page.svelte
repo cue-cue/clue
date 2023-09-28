@@ -1,7 +1,6 @@
 <script lang='ts'>
     import {Icon} from '@clue/icons'
     import {eye} from '@clue/icons/line'
-    console.log(eye)
 </script>
 
 <div>
@@ -10,7 +9,7 @@
         <ul>
             <li>
                 test<br>
-                <!-- <Icon icon={eye}/> -->
+                <Icon icon={eye}/>
             </li>
         </ul>
     </main>

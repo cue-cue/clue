@@ -1,14 +1,14 @@
 {
-	"name": "@clue/icons",
-	"version": "1.0.0",
-	"private": false,
-	"license": "MIT",
-	"main": "src/index.js",
-	"type": "module",
-	"author": "Nikita Fedorov",
-	"exports": {
-		".": "./src/index.js",
-		"./plugin": "./src/plugin/index.js",
-		"./line": "./src/icons/line.js"
-	}
+  "name": "@clue/icons",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "main": "src/index.js",
+  "type": "module",
+  "author": "Nikita Fedorov",
+  "exports": {
+    ".": "./src/index.js",
+    "./plugin": "./src/plugin/index.js",
+    "./line": "./src/icons/line.js"
+  }
 }

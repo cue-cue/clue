@@ -12,9 +12,11 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 	},
-	// package: {
-	// 	''
-	// }
+	package: {
+		files: (filepath) => {
+			return !filepath.includes('_build')
+		}
+	}
 };
 
 export default config;
