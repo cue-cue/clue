@@ -1,1 +1,1 @@
-export * from './Icon/index.js'
+export * from './components/index.js'

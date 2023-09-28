@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": false,
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev && build:icons",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",
@@ -12,9 +12,11 @@
 		"test": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"build:icons": "npx ts-node --esm scripts/beforeBuild/createIcons.ts",
-		"build": "build:icons vite build && npm run package && npm run build:styles",
-		"build:styles": "node scripts/buildStyles.mjs"
+		"build:icons": "npx ts-node --esm scripts/beforeBuildAndDev/createIcons.ts",
+		"build:styles": "node scripts/afterBuild/buildStyles.mjs",
+		"build:before": "npm run build:icons",
+		"build:after": "npm run build:styles",
+		"build": " npm run build:before && vite build && npm run package && npm run build:after"
 	},
 	"author": "Nikita Fedorov",
 	"files": [

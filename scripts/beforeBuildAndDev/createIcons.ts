@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //ts-ignore
-import { camelize } from './../../src/lib/packages/utils/src/camelize/index.js'
+import { camelize } from '@clue/utils/src/camelize/index.js'
 import { appendFileSync, writeFileSync } from "fs"
 import { globSync } from "glob"
 import {clearDirectory} from '../clearDirectory.mjs'
-import packageJson from "./../../src/lib/packages/icons/package.json" assert {type: 'json'}
+import packageJson from "../../src/lib/packages/icons/package.json" assert {type: 'json'}
 
 const paths = {
     icons: `src/lib/packages/icons/src/assets/**/*.svg`,
     packageJson: 'src/lib/packages/icons/package.json',
     importsFile: (group:string) => `src/lib/packages/icons/src/icons/${group}.ts`,
-    importsFileDirectory: `src/lib/packages/icons/src/icons/`
+    importsFileDirectory: `src/lib/packages/icons/src/icons`
 }
 
 class Icon {
@@ -67,7 +67,11 @@ const createImports = (icons:ReturnType<typeof getAllIcons>) => {
 
 const addExportsInPackageJson = (icons:ReturnType<typeof getAllIcons>) => {
     const packageJsonPath = `src/lib/packages/icons/package.json`
-    const {exports} = packageJson
+    
+    const exports = {
+        '.': packageJson.exports['.'],
+        './plugin': packageJson.exports['./plugin'],
+    } as typeof packageJson.exports
 
     Object.keys(icons).forEach((group) => {
         //@ts-ignore
@@ -83,7 +87,6 @@ const init = () => {
     const icons = getAllIcons()
     createImports(icons)
     addExportsInPackageJson(icons)
-    process.exit(-1)
 }
 
 init()

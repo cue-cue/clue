@@ -1,4 +1,4 @@
-import config from "./config.mjs";
+import config from "../config.mjs";
 import {globSync} from 'glob'
 import fs from 'fs'
 import * as sass from 'sass'
