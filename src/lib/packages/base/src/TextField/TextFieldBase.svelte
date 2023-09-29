@@ -3,7 +3,7 @@
 	import Input from '../Input/Input.svelte';
 	import type { ComponentProps } from 'svelte';
 	import { context } from './context.js';
-	import { writable } from 'svelte/store';
+	import { derived, writable } from 'svelte/store';
 	import TextFieldButtons from './TextFieldButtons.svelte';
 
 	interface $$Props extends ComponentProps<Input> {
@@ -17,7 +17,6 @@
 	export let disabled:$$Props['disabled'] = undefined
 
 	const localContext = context.get() || writable()
-
 </script>
 
 <div

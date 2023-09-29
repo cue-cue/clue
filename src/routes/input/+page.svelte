@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import {Input, PasswordField, TextField} from '@clue/base'
+    import {Input, PasswordField, TextField, TextFieldBase} from '@clue/base'
 </script>
 
 <h2>Input</h2>
@@ -64,6 +64,17 @@
     <li>
         base with helper<br>
         <TextField value='value' helper='Assistive text'/>
+    </li>
+    <li>
+        multiple inputs<br>
+        <TextField helper='Assistive text' label='test'>
+            <svelte:fragment slot='base'>
+                <TextFieldBase>
+                    <Input placeholder='first'/>
+                    <Input placeholder='second'/>
+                </TextFieldBase>
+            </svelte:fragment>
+        </TextField>
     </li>
     <li>
         base with error<br>
