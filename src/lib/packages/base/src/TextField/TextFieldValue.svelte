@@ -16,4 +16,6 @@
 
 <style lang='sass'>
 	.ClueTextFieldValue
+		overflow: hidden
+		white-space: nowrap
 </style>

@@ -22,13 +22,10 @@
 
 <style lang='sass'>
     .ClueInput
-        resize: none
         border: none
         outline: none
         appearance: none
         background: none
         padding: 0
         margin: 0
-        transition: var(--transition)
-        transition-property: color
 </style>

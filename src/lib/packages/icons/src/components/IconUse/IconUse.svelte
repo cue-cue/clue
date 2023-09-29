@@ -37,10 +37,3 @@
 >
 	<use xlink:href={`#${icon.default}`} />
 </svg>
-
-<style lang="sass">
-	.ClueIconUse
-		display: block
-		transition: var(--transition)
-		transition-property: color
-</style>

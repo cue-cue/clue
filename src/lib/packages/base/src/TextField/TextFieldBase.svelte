@@ -25,6 +25,7 @@
 	data-error={$localContext.error || error}
 	data-disabled={$localContext.disabled || disabled}
 	data-multiline={$$restProps.multiline}
+	data-readonly={$$restProps.readonly}
 >
 	<slot>
 		<Input
@@ -63,16 +64,23 @@
 			&:hover
 				--box-shadow-color: var(--text-field-base-border-color-hover)
 			&[data-multiline]
-				--background-color: var(--color-bg-secondary)
 				#{$root}__border
 					box-shadow: none
-		&[data-disabled]
-			--box-shadow-size: var(--text-field-base-border-width-disabled)
-			--box-shadow-color: var(--text-field-base-border-color-disabled)
+		&[data-multiline]
 			--background-color: var(--color-bg-secondary)
+		&[data-readonly]
+			--background-color: var(--color-bg-secondary)
+			#{$root}__border
+				box-shadow: none
 		&[data-error]
 			--box-shadow-color: var(--text-field-base-border-color-error)
 			--box-shadow-size: var(--text-field-base-border-width-error)
+		&[data-disabled]
+			--box-shadow-size: var(--text-field-base-border-width-disabled)
+			--box-shadow-color: var(--text-field-base-border-color-disabled)
+			:global(.ClueInput), :global(.ClueTextFieldValue)
+				color: var(--text-field-base-placeholder-color-disabled)
+				--placeholder-color: var(--text-field-base-placeholder-color-disabled)
 		&__border
 			content: ''
 			display: block
@@ -102,15 +110,14 @@
 			color: inherit
 			min-height: 100%
 			flex: 1
-				letter-spacing: 1em
+			width: 100%
+			resize: none
+			transition: var(--transition)
+			transition-property: color
 			&::placeholder
 				transition: var(--transition)
 				transition-property: color
 				color: var(--placeholder-color)
-		&[data-disabled]
-			:global(.ClueInput), :global(.ClueTextFieldValue)
-				color: var(--text-field-base-placeholder-color-disabled)
-				--placeholder-color: var(--text-field-base-placeholder-color-disabled)
 		:global(.ClueInput[type='password'])
 			letter-spacing: .18em
 		&:not([data-disabled])
@@ -120,6 +127,7 @@
 				&:focus
 					--placeholder-color: var(--text-field-base-placeholder-color-focus)
 		:global(.ClueTextFieldButtons)
+			flex: none
 			align-self: center
 			margin-right: var(--text-field-base-padding-x)
 </style>

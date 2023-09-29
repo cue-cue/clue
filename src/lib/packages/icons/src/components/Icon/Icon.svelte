@@ -38,4 +38,6 @@
 	:global(.ClueIcon)
 		// --clue-icon-color
 		color: var(--clue-icon-color, var(--color-icon))
+		transition: var(--transition)
+		transition-property: color
 </style>

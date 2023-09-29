@@ -3,8 +3,6 @@
     import {Icon} from '@clue/icons'
     import * as lineIcons from '@clue/icons/line'
 
-    export let data
-
     const getIcons = (icons:Record<string, IIcon>) => {
         return Object.entries(icons).sort((a,b) => {
             if (a[0] < b[0]) {
@@ -15,6 +13,17 @@
             }
             return 0
         })
+    }
+
+    const generateMoreSizeIcon = (icon:IIcon) => {
+        const sizes = [8, 16, 24, 32, 46]
+        return sizes.map(size => ({
+            icon,
+            size: {
+                width: size,
+                height: size
+            }
+        }))
     }
 
     const iconGroups:Record<string, ReturnType<typeof getIcons>> = {
@@ -31,8 +40,15 @@
                 <ul>
                     {#each icons as [name, icon] (name)}
                         <li>
-                            <small><b>{name}</b> ({icon.size.width}/{icon.size.height})px</small>
-                            <Icon {icon}/>
+                            <b>{name}</b> 
+                            <ul style='display: flex; gap: 10px; list-style: none'>
+                                {#each generateMoreSizeIcon(icon) as data}
+                                    <li>
+                                        <small>({data.size.width}/{data.size.height})px</small><br/>
+                                        <Icon icon={data.icon} {...data.size}/>
+                                    </li>
+                                {/each}
+                            </ul>
                         </li>
                     {/each}
                 </ul>
