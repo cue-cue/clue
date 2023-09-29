@@ -1,8 +1,8 @@
 <script lang='ts'>
 	import {generateClassNames} from '@clue/utils'
-	import TextField from '../TextField/TextField.svelte';
-	import TextFieldBase from '../TextField/TextFieldBase.svelte';
 	import type { ComponentProps } from 'svelte';
+	import { TextFieldButton, TextFieldBase, TextField } from '../index.js';
+	import {eye} from '@clue/icons/line'
 
 	interface $$Props extends Pick<ComponentProps<TextFieldBase>, 'type'> {
 		class?:string
@@ -47,8 +47,11 @@
 
 <TextField class={generateClassNames(['PasswordField', className])}>
 	<svelte:fragment slot='base'>
-		<TextFieldBase {type} {...$$restProps}></TextFieldBase>
-		<button on:click={handler.changeClick}>change</button>
+		<TextFieldBase {type} {...$$restProps}>
+			<svelte:fragment slot='buttons'>
+				<TextFieldButton icon={eye} on:click={handler.changeClick}/>
+			</svelte:fragment>
+		</TextFieldBase>
 	</svelte:fragment>
 </TextField>
 

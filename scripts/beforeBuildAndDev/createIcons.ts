@@ -112,6 +112,7 @@ export class CreateIconsViteWatcher extends ViteWatcher {
             'src/lib/packages/icons/src/assets/**/*.svg',
             'src/lib/packages/icons/src/icons/**/*.ts'
         ]), () => {
+            console.log('test')
             init()
         })
     }

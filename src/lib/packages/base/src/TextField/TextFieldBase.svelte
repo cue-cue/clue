@@ -4,6 +4,7 @@
 	import type { ComponentProps } from 'svelte';
 	import { context } from './context.js';
 	import { writable } from 'svelte/store';
+	import TextFieldButtons from './TextFieldButtons.svelte';
 
 	interface $$Props extends ComponentProps<Input> {
 		class?:string
@@ -33,6 +34,9 @@
 		/>
 	</slot>
 	<span class={generateClassNames(['TextFieldBase__border'])}></span>
+	{#if $$slots.buttons}
+		<TextFieldButtons><slot name='buttons'/></TextFieldButtons>
+	{/if}
 </div>
 
 <style lang='sass'>
@@ -115,4 +119,7 @@
 					--placeholder-color: var(--text-field-base-placeholder-color-hover)
 				&:focus
 					--placeholder-color: var(--text-field-base-placeholder-color-focus)
+		:global(.ClueTextFieldButtons)
+			align-self: center
+			margin-right: var(--text-field-base-padding-x)
 </style>
