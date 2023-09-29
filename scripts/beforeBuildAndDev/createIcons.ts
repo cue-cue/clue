@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //ts-ignore
-import { camelize } from '@clue/utils/src/camelize/index.js'
-import { appendFileSync, writeFileSync } from "fs"
+import { camelize } from '../../src/lib/packages/utils/src/index.js'
+import { appendFileSync, readFileSync, writeFileSync } from "fs"
 import { globSync } from "glob"
 import {clearDirectory} from '../clearDirectory.mjs'
 import packageJson from "../../src/lib/packages/icons/package.json" assert {type: 'json'}
+import { ViteWatcher } from '../viteWatcher.js'
 
 const paths = {
     icons: `src/lib/packages/icons/src/assets/**/*.svg`,
@@ -14,10 +15,12 @@ const paths = {
 }
 
 class Icon {
+    path
     group
     name
     camelizedName
     constructor(path:string) {
+        this.path = path
         this.name = this.getNameByPath(path)
         this.camelizedName = camelize(this.name)
         this.group = this.getGroupByPath(path)
@@ -51,7 +54,7 @@ const createImports = (icons:ReturnType<typeof getAllIcons>) => {
         start: `import type { IIcon } from '../types/index.js'\n`,
         icon: ({name, group, camelizedName}:Icon) => `import * as _${camelizedName} from '../assets/${group}/${name}.svg'\nexport const ${camelizedName} = _${camelizedName} as IIcon\n`,
     }
-    Object.entries<Icon[]>(icons).forEach(([group, icons]) => {
+    Object.entries(icons).forEach(([group, icons]) => {
         console.log(`Start create the ${group} group`)
         if (icons.length) {
             const typeFilePath = paths.importsFile(group)
@@ -63,6 +66,19 @@ const createImports = (icons:ReturnType<typeof getAllIcons>) => {
         }
         console.log(`End create the ${group} group`)
     })
+}
+
+const replaceColor = (icons:ReturnType<typeof getAllIcons>) => {
+    console.log(`Start replace color`)
+    Object.values(icons).flat().forEach(icon => {
+        console.log(`Start replace ${icon.name} ${icon.path}`)
+        const svg = readFileSync(icon.path, {
+            encoding: 'utf8'
+        })
+        writeFileSync(icon.path, svg.replaceAll(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`))
+        console.log(`End replace ${icon.name} ${icon.path}`)
+    })
+    console.log(`End replace color`)
 }
 
 const addExportsInPackageJson = (icons:ReturnType<typeof getAllIcons>) => {
@@ -85,8 +101,20 @@ const addExportsInPackageJson = (icons:ReturnType<typeof getAllIcons>) => {
 
 const init = () => {
     const icons = getAllIcons()
+    replaceColor(icons)
     createImports(icons)
     addExportsInPackageJson(icons)
+}
+
+export class CreateIconsViteWatcher extends ViteWatcher {
+    constructor() {
+        super(globSync([
+            'src/lib/packages/icons/src/assets/**/*.svg',
+            'src/lib/packages/icons/src/icons/**/*.ts'
+        ]), () => {
+            init()
+        })
+    }
 }
 
 init()
