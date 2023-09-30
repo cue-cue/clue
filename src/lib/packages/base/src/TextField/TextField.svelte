@@ -15,6 +15,15 @@
         label?:string
         helper?:string
     }
+
+    interface $$Slots {
+        base: {
+            id: $$Props['id']
+        },
+        default: {
+            id: $$Props['id']
+        }
+    }
     
     let className = ''
     export { className as class }
@@ -53,9 +62,9 @@
             {/if}
         </TextFieldHeader>
     {/if}
-    <slot name='base'>
+    <slot name='base' {id}>
         {#if $$slots.default}
-            <TextFieldBase {...$$restProps}><TextFieldValue><slot/></TextFieldValue></TextFieldBase>
+            <TextFieldBase {...$$restProps}><TextFieldValue><slot {id}/></TextFieldValue></TextFieldBase>
         {:else}
             <TextFieldBase {...$$restProps}></TextFieldBase>
         {/if}

@@ -3,13 +3,14 @@
 	import Input from '../Input/Input.svelte';
 	import type { ComponentProps } from 'svelte';
 	import { context } from './context.js';
-	import { derived, writable } from 'svelte/store';
+	import { writable } from 'svelte/store';
 	import TextFieldButtons from './TextFieldButtons.svelte';
 
 	interface $$Props extends ComponentProps<Input> {
 		class?:string
 		error?:boolean
 	}
+
 	
 	let className = ''
 	export { className as class }
@@ -17,6 +18,8 @@
 	export let disabled:$$Props['disabled'] = undefined
 
 	const localContext = context.get() || writable()
+	const restPropsStore = writable($$restProps)
+	$: restPropsStore.set($$restProps)
 
 	let value = ''
 </script>
@@ -33,7 +36,6 @@
 			disabled={$localContext.disabled || disabled}
 			id={$localContext.id}
 			bind:value
-			{...$$restProps}
 		/>
 	</slot>
 	<span class={generateClassNames(['TextFieldBase__border'])}></span>

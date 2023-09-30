@@ -1,6 +1,3 @@
-import type { IIcon } from '../types/index.js'
-import * as _questionCircle from '../assets/line/question-circle.svg'
-export const questionCircle = _questionCircle as IIcon
 import * as _instagram from '../assets/line/instagram.svg'
 export const instagram = _instagram as IIcon
 import * as _eye from '../assets/line/eye.svg'
