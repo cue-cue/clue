@@ -49,39 +49,35 @@ const getAllIcons = () => {
 }
 
 const createImports = (icons:ReturnType<typeof getAllIcons>) => {
+    console.log(`Start create imports`)
     clearDirectory(paths.importsFileDirectory)
     const templates = {
         start: `import type { IIcon } from '../types/index.js'\n`,
         icon: ({name, group, camelizedName}:Icon) => `import * as _${camelizedName} from '../assets/${group}/${name}.svg'\nexport const ${camelizedName} = _${camelizedName} as IIcon\n`,
     }
     Object.entries(icons).forEach(([group, icons]) => {
-        console.log(`Start create the ${group} group`)
         if (icons.length) {
             const typeFilePath = paths.importsFile(group)
             writeFileSync(typeFilePath, templates.start)
             icons.forEach((icon) => {
-                console.log(`Create the ${icon.camelizedName} icon ${icon.group}`)
                 appendFileSync(typeFilePath, templates.icon(icon))
             })
         }
-        console.log(`End create the ${group} group`)
     })
 }
 
 const replaceColor = (icons:ReturnType<typeof getAllIcons>) => {
     console.log(`Start replace color`)
     Object.values(icons).flat().forEach(icon => {
-        console.log(`Start replace ${icon.name} ${icon.path}`)
         const svg = readFileSync(icon.path, {
             encoding: 'utf8'
         })
         writeFileSync(icon.path, svg.replaceAll(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`))
-        console.log(`End replace ${icon.name} ${icon.path}`)
     })
-    console.log(`End replace color`)
 }
 
 const addExportsInPackageJson = (icons:ReturnType<typeof getAllIcons>) => {
+    console.log(`Start add a exports in the package.json`)
     const packageJsonPath = `src/lib/packages/icons/package.json`
     
     const exports = {
@@ -101,6 +97,7 @@ const addExportsInPackageJson = (icons:ReturnType<typeof getAllIcons>) => {
 
 const init = () => {
     const icons = getAllIcons()
+    console.log(`Start createIcons (length:${Object.entries(icons).map(([group, icons]) => `${group}: ${icons.length}`).join(' | ')})`)
     replaceColor(icons)
     createImports(icons)
     addExportsInPackageJson(icons)

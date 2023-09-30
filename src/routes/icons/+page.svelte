@@ -36,7 +36,7 @@
         <h2>Icons</h2>
         <div>
             {#each Object.entries(iconGroups) as [group, icons] (group)}
-                <h3>{group}</h3>
+                <h3>/{group}</h3>
                 <ul>
                     {#each icons as [name, icon] (name)}
                         <li>

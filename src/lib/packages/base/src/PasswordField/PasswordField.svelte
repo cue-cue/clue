@@ -2,54 +2,51 @@
 	import {generateClassNames} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
 	import { TextFieldButton, TextFieldBase, TextField } from '../index.js';
-	import {eye} from '@clue/icons/line'
+	import {eye, calendar} from '@clue/icons/line'
+	import type { HTMLInputTypeAttribute } from 'svelte/elements';
 
 	interface $$Props extends Pick<ComponentProps<TextFieldBase>, 'type'> {
 		class?:string
-		type?:'text' | 'password'
+		visible?:boolean
 	}
 	
 	let className = ''
 	export { className as class }
-	export let type:$$Props['type'] = 'password'
-
-	const setType = (newType:typeof type) => {
-		type = newType
-	}
+	export let visible:$$Props['visible'] = false
 
 	export const show = () => {
-		setType('text')
+		visible = true
 	}
 
 	export const hide = () => {
-		setType('password')
+		visible = false
 	}
 
-	export const change = () => {
-		switch (type) {
-			case 'password': {
-				show()
-				break
-			}
-			case 'text': {
-				hide()
-				break
-			}
-		}
+	export const toggle = () => {
+		visible = !visible
 	}
+
+	const iconMap = new Map<typeof visible, typeof eye>([
+		[false, eye],
+		[true, calendar],
+		[undefined, eye],
+	])
 
 	const handler = {
 		changeClick() {
-			change()
+			toggle()
 		}
 	}
 </script>
 
 <TextField class={generateClassNames(['PasswordField', className])}>
 	<svelte:fragment slot='base'>
-		<TextFieldBase {type} {...$$restProps}>
+		<TextFieldBase type={visible ? 'text' : 'password'} {...$$restProps}>
 			<svelte:fragment slot='buttons'>
-				<TextFieldButton icon={eye} on:click={handler.changeClick}/>
+				<TextFieldButton
+					icon={iconMap.get(visible)}
+					on:click={handler.changeClick}
+				/>
 			</svelte:fragment>
 		</TextFieldBase>
 	</svelte:fragment>

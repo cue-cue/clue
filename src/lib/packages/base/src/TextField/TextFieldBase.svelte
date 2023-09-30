@@ -17,6 +17,8 @@
 	export let disabled:$$Props['disabled'] = undefined
 
 	const localContext = context.get() || writable()
+
+	let value = ''
 </script>
 
 <div
@@ -30,6 +32,7 @@
 		<Input
 			disabled={$localContext.disabled || disabled}
 			id={$localContext.id}
+			bind:value
 			{...$$restProps}
 		/>
 	</slot>

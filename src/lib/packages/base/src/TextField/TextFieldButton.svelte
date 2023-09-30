@@ -12,7 +12,6 @@
 	export let icon:$$Props['icon']
 	export let width:$$Props['width'] = 24
 	export let height:$$Props['width'] = undefined
-	
 </script>
 
 <button on:click class={generateClassNames(['TextFieldButton', className])}>
