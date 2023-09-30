@@ -1,3 +1,4 @@
+import type { IIcon } from '../types/index.js'
 import * as _questionCircle from '../assets/line/question-circle.svg'
 export const questionCircle = _questionCircle as IIcon
 import * as _instagram from '../assets/line/instagram.svg'
