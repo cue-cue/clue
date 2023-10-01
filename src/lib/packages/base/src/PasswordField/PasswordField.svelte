@@ -3,7 +3,6 @@
 	import type { ComponentProps } from 'svelte';
 	import { TextFieldButton, TextFieldBase, TextField } from '../index.js';
 	import {eye, calendar} from '@clue/icons/line'
-	import type { HTMLInputTypeAttribute } from 'svelte/elements';
 
 	interface $$Props extends Pick<ComponentProps<TextFieldBase>, 'type'> {
 		class?:string

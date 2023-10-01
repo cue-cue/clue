@@ -12,6 +12,7 @@
   "exports": {
     ".": "./src/index.js",
     "./plugin": "./src/plugin/index.js",
+    "./test": "./src/icons/test.js",
     "./line": "./src/icons/line.js"
   }
 }

@@ -19,6 +19,19 @@
         [false, InputElement],
         [true, InputTextareaElement],
     ])
+
+    
+    export const set = (newValue:typeof value) => {
+        value = newValue
+    }
+
+    export const update = (callback:(currentValue:typeof value) => typeof value) => {
+        set(callback(value))
+    }
+
+    export const clear = () => {
+        value = ''
+    }
     
 </script>
 

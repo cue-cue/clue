@@ -1,9 +1,8 @@
 <script lang='ts'>
-	import type { IIcon } from '$lib/packages/icons/src/types/index.js';
-    import {Icon} from '@clue/icons'
+    import {Icon, type SvgIconData} from '@clue/icons'
     import * as lineIcons from '@clue/icons/line'
 
-    const getIcons = (icons:Record<string, IIcon>) => {
+    const getIcons = (icons:Record<string, SvgIconData>) => {
         return Object.entries(icons).sort((a,b) => {
             if (a[0] < b[0]) {
                 return -1
@@ -15,7 +14,7 @@
         })
     }
 
-    const generateMoreSizeIcon = (icon:IIcon) => {
+    const generateMoreSizeIcon = (icon:SvgIconData) => {
         const sizes = [8, 16, 24, 32, 46]
         return sizes.map(size => ({
             icon,

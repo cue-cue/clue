@@ -1,10 +1,9 @@
 <script lang="ts">
 	import {generateClassNames} from '@clue/utils'
 	import type { SVGAttributes } from 'svelte/elements';
-	import type { IIcon } from '../../types/index.js';
-
+	import type {SvgIconData} from '../../index.js'
 	interface $$Props extends SVGAttributes<SVGElement> {
-		icon:IIcon
+		icon:SvgIconData
 		class?:string
 		width?:number
 		ratio?:number

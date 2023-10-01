@@ -16,12 +16,19 @@
 	export { className as class }
 	export let error:$$Props['error'] = undefined
 	export let disabled:$$Props['disabled'] = undefined
-
+	export let value:$$Props['value'] = ''
+	
 	const localContext = context.get() || writable()
-	const restPropsStore = writable($$restProps)
-	$: restPropsStore.set($$restProps)
 
-	let value = ''
+	export const inputController:{
+		clear:ComponentProps<Input>['clear']
+		update:ComponentProps<Input>['update']
+		set:ComponentProps<Input>['set']
+	} = {
+		clear: undefined,
+		update: undefined,
+		set: undefined,
+	}
 </script>
 
 <div
@@ -36,6 +43,10 @@
 			disabled={$localContext.disabled || disabled}
 			id={$localContext.id}
 			bind:value
+			bind:clear={inputController.clear}
+			bind:update={inputController.update}
+			bind:set={inputController.set}
+			{...$$restProps}
 		/>
 	</slot>
 	<span class={generateClassNames(['TextFieldBase__border'])}></span>

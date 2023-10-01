@@ -2,8 +2,7 @@
 	import {IconUse} from '../IconUse/index.js';
 	import {generateClassNames} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
-
-	interface $$Props extends Pick<ComponentProps<IconUse>, 'icon' | 'width' | 'height'> {
+	interface $$Props extends Pick<ComponentProps<IconUse>, 'width' | 'height' | 'icon'> {
 		class?:string
 		color?:string
 		size?:'small' | 'medium' | 'large'

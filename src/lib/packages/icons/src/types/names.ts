@@ -1,0 +1,1 @@
+export type IconNames = 'test:eye' | 'line:question-circle' | 'line:instagram' | 'line:eye' | 'line:cross' | 'line:calendar' | 'line:angle-down'
