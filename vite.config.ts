@@ -7,11 +7,11 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
 	plugins: [
 		sveltekit(),
-		// viteWatchers(
-		// 	[
-		// 		new CreateIconsViteWatcher()
-		// 	]
-		// ),
+		viteWatchers(
+			[
+				new CreateIconsViteWatcher()
+			]
+		),
 		clueIconsPlugin(),
 	],
 	test: {

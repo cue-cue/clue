@@ -65,7 +65,7 @@ const createImports = (icons:IconGroups) => {
     const res:Record<string, string> = {}
 
     const templates = {
-        start: `/* eslint-disable @typescript-eslint/ban-ts-comment */\nimport type { SvgIconData } from './index.js'\n`,
+        start: `/* eslint-disable @typescript-eslint/ban-ts-comment */\nimport type { SvgIconData } from '../index.js'\n`,
         icon: ({fullName, group, camelizedName}:Icon) => `//@ts-ignore\nimport * as _${camelizedName} from '../assets/${group}/${fullName}.svg'\nexport const ${camelizedName} = _${camelizedName} as SvgIconData\n`,
     }
 
@@ -100,7 +100,7 @@ const replaceFileNames = (icons:IconGroups) => {
     Object.values(icons).flat().forEach(icon => {
         const oldPath = icon.path
         console.log(icon, {group: icon.group, name: icon.name})
-        const newPath = oldPath.replace(icon.fullName, `${icon.group}-${icon.name}`)
+        const newPath = oldPath.replace(icon.fullName, `${icon.group}${icon.name}`)
         renameSync(oldPath, newPath)
     })
 }
@@ -116,7 +116,10 @@ const addExportsInPackageJson = (icons:IconGroups) => {
 
     Object.keys(icons).forEach((group) => {
         //@ts-ignore
-        exports[`./${group}`] = `./src/icons/${group}.js`
+        exports[`./${group}/*`] = {
+            import: `./src/assets/${group}/*`,
+            types: "./svg/types/module.d.ts"
+        }
     })
 
     packageJson.exports = exports
@@ -146,11 +149,12 @@ const genTypes = {
 const init = () => {
     const icons = getAllIcons()
     console.log(`Start createIcons (length:${Object.entries(icons).map(([group, icons]) => `${group}: ${icons.length}`).join(' | ')})`)
-    replaceFileNames(icons)
+    // replaceFileNames(icons)
+    // icons = getAllIcons()
     replaceColor(icons)
-    createImports(icons)
-    genTypes.groups(icons)
-    genTypes.names(icons)
+    // createImports(icons)
+    // genTypes.groups(icons)
+    // genTypes.names(icons)
     addExportsInPackageJson(icons)
 }
 
@@ -160,8 +164,7 @@ export class CreateIconsViteWatcher extends ViteWatcher {
             'src/lib/packages/icons/src/assets/**/*.svg',
             'src/lib/packages/icons/src/icons/**/*.ts'
         ]), () => {
-            console.log('test')
-            // init()
+            init()
         })
     }
 }

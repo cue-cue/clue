@@ -1,8 +1,9 @@
 <script lang='ts'>
-    import Icon from "$lib/packages/icons/src/components/Icon/Icon.svelte";
-import "$lib/packages/styles/src/index.sass"
+    import "$lib/packages/styles/src/index.sass"
     import "./styles/index.sass"
-    import {calendar, eye} from '@clue/icons/line'
+    import {Icon} from '@clue/icons'
+    import * as eye from '@clue/icons/line/eye.svg'
+    import * as calendar from '@clue/icons/line/calendar.svg'
 </script>
 
 <header>

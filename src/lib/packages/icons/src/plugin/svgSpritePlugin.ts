@@ -9,9 +9,9 @@ export const svgSpritePlugin = (options?:Options) => {
     ]
     return {
         ...createSvgSpritePlugin({
+            symbolId: 'clue-[name]',
             ...options,
             include,
-            symbolId: 'clue-[name]'
         }),
         name: 'clue-icons-plugin'
     }
