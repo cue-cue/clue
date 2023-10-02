@@ -54,19 +54,27 @@
 		// --clue-button-field-padding-x: 0
 		// --clue-button-field-padding-y: 0
 		// --clue-button-field-border-radius: 50px
+		//background color
 		--clue-button-field-background-color: #5B4C9F
 		--clue-button-field-background-color-hover: #473B7C
 		--clue-button-field-background-color-active: #4F428A
 		--clue-button-field-background-color-disabled: #E8E9ED
+		//color
 		--clue-button-field-color: #EFEEF7
 		--clue-button-field-color-hover: #EFEEF7
 		--clue-button-field-color-active: #EFEEF7
 		--clue-button-field-color-disabled: #B0B2C0
+		//border color
 		--clue-button-border-color: transparent
+		--clue-button-border-color-hover: transparent
+		--clue-button-border-color-active: transparent
+		--clue-button-border-color-disabled: transparent
 		--clue-button-border-color-current: var(--clue-button-border-color)
+		//border width
 		--clue-button-border-width: 0
 		--clue-button-border-width-disabled: 0
 		--clue-button-border-width-current: var(--clue-button-border-width)
+		
 		outline: none
 		appearance: none
 		border: none
@@ -83,14 +91,16 @@
 			&:hover
 				background-color: var(--clue-button-field-background-color-hover)
 				color: var(--clue-button-field-color-hover)
+				--clue-button-border-color-current: var(--clue-button-border-color-hover)
 			&:active
 				background-color: var(--clue-button-field-background-color-active)
 				color: var(--clue-button-field-color-active)
+				--clue-button-border-color-current: var(--clue-button-border-color-active)
 		&[disabled], &[data-disabled]
 			cursor: not-allowed
 			background-color: var(--clue-button-field-background-color-disabled)
 			color: var(--clue-button-field-color-disabled)
-			--clue-button-border-width-current: var(--clue-button-border-width-disabled)
+			--clue-button-border-color-current: var(--clue-button-border-color-disabled)
 		&[data-color='action']
 			--clue-button-field-background-color: #EECD47
 			--clue-button-field-background-color-hover: #EAC11A

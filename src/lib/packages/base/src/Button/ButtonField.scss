@@ -1,0 +1,69 @@
+@use "sass:map";
+@use 'sass:list';
+
+@mixin button-field-color($list) {
+    $bg: list.nth($list, 1);
+    $color: list.nth($list, 2);
+    $border: list.nth($list, 3);
+    //background color
+    --clue-button-field-background-color: #{map.get($bg, 'base')};
+    --clue-button-field-background-color-hover: #{map.get($bg, 'hover')};
+    --clue-button-field-background-color-active: #{map.get($bg, 'active')};
+    --clue-button-field-background-color-disabled: #{map.get($bg, 'disabled')};
+    //color
+    --clue-button-field-color: #{map.get($color, 'base')};
+    --clue-button-field-color-hover: #{map.get($color, 'hover')};
+    --clue-button-field-color-active: #{map.get($color, 'active')};
+    --clue-button-field-color-disabled: #{map.get($color, 'disabled')};
+    //border
+    --clue-button-border-color: #{map.get($border, 'base')};
+    --clue-button-border-color-hover: #{map.get($border, 'hover')};
+    --clue-button-border-color-active: #{map.get($border, 'active')};
+    --clue-button-border-color-disabled: #{map.get($border, 'disabled')};
+};
+
+//colors
+
+//primary
+$button-field-color-primary-vars: (
+    'base': #5B4C9F,
+    'hover': #473B7C,
+    'active': #4F428A,
+    'disabled': #E8E9ED
+), (
+    'base': #EFEEF7,
+    'hover': #EFEEF7,
+    'active': #EFEEF7,
+    'disabled': #B0B2C0
+), (
+    'base': transparent,
+    'hover': transparent,
+    'active': transparent,
+    'disabled': transparent
+);
+
+@mixin button-field-color-primary() {
+    @include button-field-color($button-field-color-primary-vars)
+}
+
+//primary
+// $button-field-color-action-vars: (
+//     'base': #EECD47,
+//     'hover': #EAC11A,
+//     'active': #EAC11A,
+//     'disabled': #E8E9ED
+// ), (
+//     'base': #1B1C22,
+//     'hover': #1B1C22,
+//     'active': #1B1C22,
+//     'disabled': #B0B2C0
+// ), (
+//     'base': transparent,
+//     'hover': transparent,
+//     'active': transparent,
+//     'disabled': transparent
+// );
+
+// @mixin button-field-color-action() {
+//     @include button-field-color($button-field-color-action-vars)
+// }
