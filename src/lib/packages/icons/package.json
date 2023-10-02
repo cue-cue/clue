@@ -9,6 +9,7 @@
   "dependencies": {
     "vite-plugin-svg-sprite": "^0.5.0"
   },
+  "types": "./src/types/index.ts",
   "exports": {
     ".": "./src/index.js",
     "./plugin": "./src/plugin/index.js",

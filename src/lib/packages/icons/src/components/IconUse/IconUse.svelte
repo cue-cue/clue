@@ -1,9 +1,9 @@
 <script lang="ts">
 	import {generateClassNames} from '@clue/utils'
 	import type { SVGAttributes } from 'svelte/elements';
-	import type {SvgIconData} from '../../index.js'
+	import type {ClueSvgIconData} from '../../index.js'
 	interface $$Props extends SVGAttributes<SVGElement> {
-		icon:SvgIconData
+		icon:ClueSvgIconData['default']
 		class?:string
 		width?:number
 		ratio?:number
@@ -19,20 +19,20 @@
 	export let nodeElement:$$Props['nodeElement'] = undefined
 
 	$: sizes = {
-		width: width ?? icon.size.width,
-		height: height ?? width ?? icon.size.height
+		width: width ?? 24,
+		height: height ?? width ?? 24
 	}
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <svg
+	bind:this={nodeElement}
 	class={generateClassNames(['IconUse', className])}
 	role='img'
-	on:click
-	bind:this={nodeElement}
-	{...sizes}
 	{...$$restProps}
+	{...sizes}
 	viewBox={`0 0 ${sizes.width} ${sizes.height}`}
+	on:click
 >
-	<use xlink:href={`#${icon.default}`} />
+	<use xlink:href={`#${icon}`} />
 </svg>

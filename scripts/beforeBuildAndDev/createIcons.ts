@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //ts-ignore
 import { camelize } from '../../src/lib/packages/utils/src/index.js'
+import { SvgSpriteIcon } from '../../src/lib/packages/icons/src/plugin/svgSpritePlugin.js'
 import { readFileSync, renameSync, writeFileSync } from "fs"
 import { globSync } from "glob"
 import {clearDirectory} from '../clearDirectory.mjs'
@@ -13,33 +14,15 @@ const paths = {
     importsFile: (group:string) => `src/lib/packages/icons/src/icons/${group}.ts`,
     importsFileDirectory: `src/lib/packages/icons/src/icons`,
     groupsType: `src/lib/packages/icons/src/types/groups.ts`,
-    namesType: `src/lib/packages/icons/src/types/names.ts`
+    namesType: `src/lib/packages/icons/src/types/names.ts`,
+    moduleType: `src/lib/packages/icons/src/types/module.d.ts`
 }
 
-class Icon {
-    path
+class Icon extends SvgSpriteIcon {
     camelizedName
     constructor(path:string) {
-        this.path = path
+        super(path)
         this.camelizedName = camelize(this.name)
-    }
-
-    get group() {
-        return /(?<=assets\/)([\s\S]+?)(?=\/)/.exec(this.path)?.[0] || ''
-    }
-
-    get name() {
-        let name = this.fullName
-
-        if (name.startsWith(`${this.group}-`)) {
-            name = name.replaceAll(`${this.group}-`, '')
-        }
-
-        return name
-    }
-
-    get fullName() {
-        return /\/([^/]+)\./.exec(this.path)?.[1] || ''
     }
 }
 
@@ -65,8 +48,8 @@ const createImports = (icons:IconGroups) => {
     const res:Record<string, string> = {}
 
     const templates = {
-        start: `/* eslint-disable @typescript-eslint/ban-ts-comment */\nimport type { SvgIconData } from '../index.js'\n`,
-        icon: ({fullName, group, camelizedName}:Icon) => `//@ts-ignore\nimport * as _${camelizedName} from '../assets/${group}/${fullName}.svg'\nexport const ${camelizedName} = _${camelizedName} as SvgIconData\n`,
+        start: `/* eslint-disable @typescript-eslint/ban-ts-comment */\nimport type { ClueSvgIconData } from '../index.js'\n`,
+        icon: ({fileName, group, camelizedName}:Icon) => `//@ts-ignore\nimport * as _${camelizedName} from '../assets/${group}/${fileName}.svg'\nexport const ${camelizedName} = _${camelizedName} as ClueSvgIconData\n`,
     }
 
     Object.entries(icons).forEach(([group, icons]) => {
@@ -100,7 +83,7 @@ const replaceFileNames = (icons:IconGroups) => {
     Object.values(icons).flat().forEach(icon => {
         const oldPath = icon.path
         console.log(icon, {group: icon.group, name: icon.name})
-        const newPath = oldPath.replace(icon.fullName, `${icon.group}${icon.name}`)
+        const newPath = oldPath.replace(icon.fileName, `${icon.group}${icon.name}`)
         renameSync(oldPath, newPath)
     })
 }
@@ -135,7 +118,17 @@ const genTypes = {
             res[group] = icons.map(icon => `'${icon.name}'`).join(' | ')
         })
 
-        writeFileSync(paths.groupsType, `export type IconGroups = ${JSON.stringify(res, null, 2).replaceAll('"', '')}`)
+        const moduleFile = readFileSync(paths.moduleType, 'utf8')
+
+        const splitString = 'declare module "*.svg"'
+
+        let [groupsType, moduleType] = moduleFile.split(splitString)
+
+        moduleType = `${splitString}${moduleType}`
+        groupsType = `export type IconGroups = ${JSON.stringify(res, null, 2).replaceAll('"', '')}`
+
+        writeFileSync(paths.moduleType, `${groupsType}\n${moduleType}`)
+        writeFileSync(paths.groupsType, groupsType)
     },
     async names(icons:IconGroups) {
         let res:string[] = []
@@ -146,6 +139,12 @@ const genTypes = {
     }
 }
 
+const createGetAllIconsInRoutes = (icons:IconGroups) => {
+    const tepmlates = {
+        iconImport: ({name, group}:Icon) => `import `
+    }
+}
+
 const init = () => {
     const icons = getAllIcons()
     console.log(`Start createIcons (length:${Object.entries(icons).map(([group, icons]) => `${group}: ${icons.length}`).join(' | ')})`)
@@ -153,7 +152,7 @@ const init = () => {
     // icons = getAllIcons()
     replaceColor(icons)
     // createImports(icons)
-    // genTypes.groups(icons)
+    genTypes.groups(icons)
     // genTypes.names(icons)
     addExportsInPackageJson(icons)
 }

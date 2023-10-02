@@ -2,9 +2,8 @@
 	import {generateClassNames} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
 	import { TextFieldButton, TextFieldBase, TextField } from '../index.js';
-	import * as eye from '@clue/icons/line/eye.svg'
-	import * as calendar from '@clue/icons/line/calendar.svg'
-	import type {SvgIconData} from '@clue/icons'
+	import eye from '@clue/icons/line/eye.svg'
+	import calendar from '@clue/icons/line/calendar.svg'
 
 	interface $$Props extends Pick<ComponentProps<TextFieldBase>, 'type'> {
 		class?:string

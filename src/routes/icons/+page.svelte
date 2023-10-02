@@ -1,6 +1,5 @@
 <script lang='ts'>
-    import {Icon, type SvgIconData} from '@clue/icons'
-	import { fade, slide } from 'svelte/transition';
+    import {Icon, type ClueSvgIconData} from '@clue/icons'
 
     export let data
 
@@ -11,7 +10,7 @@
                 return {
                     group: /(?<=assets\/)([\s\S]+?)(?=\/)/.exec(path)?.[0] || '',
                     name: /\/([^/]+)\./.exec(path.replace('../..', ''))?.[1] || '',
-                    data: await import(path) as SvgIconData,
+                    data: await import(path) as ClueSvgIconData,
                 }
             }
         })
@@ -38,7 +37,7 @@
         })
     }
 
-    const generateMoreSizeIcon = (icon:SvgIconData) => {
+    const generateMoreSizeIcon = (icon:ClueSvgIconData) => {
         const sizes = [8, 16, 24, 32, 46]
         return sizes.map(size => ({
             icon,
@@ -61,13 +60,13 @@
                     <h3>/{group}</h3>
                     <ul>
                         {#each groupedIcons as {name, group, data} (name)}
-                            <li transition:fade>
+                            <li>
                                 <b>/{name} <small>{JSON.stringify(data.size)}</small></b> 
                                 <ul style='display: flex; gap: 10px; list-style: none'>
                                     {#each generateMoreSizeIcon(data) as {icon, size}}
                                         <li>
                                             <small>({size.width}/{size.height})px</small><br/>
-                                            <Icon icon={icon} {...size}/>
+                                            <Icon icon={icon.default} {...size}/>
                                         </li>
                                     {/each}
                                 </ul>
