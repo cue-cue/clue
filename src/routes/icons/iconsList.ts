@@ -1,4 +1,3 @@
-export * as testEye from '@clue/icons/test/eye.svg'
 export * as lineQuestionCircle from '@clue/icons/line/question-circle.svg'
 export * as lineInstagram from '@clue/icons/line/instagram.svg'
 export * as lineEye from '@clue/icons/line/eye.svg'
