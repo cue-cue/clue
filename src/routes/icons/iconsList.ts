@@ -1,0 +1,7 @@
+export * as testEye from '@clue/icons/test/eye.svg'
+export * as lineQuestionCircle from '@clue/icons/line/question-circle.svg'
+export * as lineInstagram from '@clue/icons/line/instagram.svg'
+export * as lineEye from '@clue/icons/line/eye.svg'
+export * as lineCross from '@clue/icons/line/cross.svg'
+export * as lineCalendar from '@clue/icons/line/calendar.svg'
+export * as lineAngleDown from '@clue/icons/line/angle-down.svg'

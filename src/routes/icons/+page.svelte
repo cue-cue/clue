@@ -1,27 +1,13 @@
 <script lang='ts'>
     import {Icon, type ClueSvgIconData} from '@clue/icons'
+    import * as allIcons from './iconsList.js'
 
-    export let data
-
-    const getIcons = async () => {
-        
-        const promises = data.allIconsPath.map(path => {
-            return async () => {
-                return {
-                    group: /(?<=assets\/)([\s\S]+?)(?=\/)/.exec(path)?.[0] || '',
-                    name: /\/([^/]+)\./.exec(path.replace('../..', ''))?.[1] || '',
-                    data: await import(path) as ClueSvgIconData,
-                }
-            }
-        })
-        
-        const res = await Promise.all(promises.map(fn => fn()))
-        
-        const groups = res.reduce<Record<string, typeof res>>((val, icon) => {
-            if (val[icon.group]) {
-                val[icon.group].push(icon)
+    const getIcons = () => {
+        const groups = Object.values<ClueSvgIconData>(allIcons).reduce<Record<string, ClueSvgIconData[]>>((val,icon) => {
+            if (val[icon.groupName]) {
+                val[icon.groupName].push(icon)
             } else {
-                val[icon.group] = [icon]
+                val[icon.groupName] = [icon]
             }
             return val
         }, {})
@@ -53,28 +39,24 @@
     <main>
         <h2>@icons</h2>
         <div>
-            {#await getIcons()}
-                ...load
-            {:then icons} 
-                {#each icons as [group, groupedIcons] (group)}
-                    <h3>/{group}</h3>
-                    <ul>
-                        {#each groupedIcons as {name, group, data} (name)}
-                            <li>
-                                <b>/{name} <small>{JSON.stringify(data.size)}</small></b> 
-                                <ul style='display: flex; gap: 10px; list-style: none'>
-                                    {#each generateMoreSizeIcon(data) as {icon, size}}
-                                        <li>
-                                            <small>({size.width}/{size.height})px</small><br/>
-                                            <Icon icon={icon.default} {...size}/>
-                                        </li>
-                                    {/each}
-                                </ul>
-                            </li>
-                        {/each}
-                    </ul>
-                {/each}
-            {/await}
+            {#each getIcons() as [group, icons] (group)}
+                <h3>/{group}</h3>
+                <ul>
+                    {#each icons as icon (icon.default)}
+                        <li>
+                            <b>/{icon.default.replace('clue-', '')} <small>{JSON.stringify(icon.size)}</small></b> 
+                            <ul style='display: flex; gap: 10px; list-style: none'>
+                                {#each generateMoreSizeIcon(icon) as {icon:data, size}}
+                                    <li>
+                                        <small>({size.width}/{size.height})px</small><br/>
+                                        <Icon icon={data.default} {...size}/>
+                                    </li>
+                                {/each}
+                            </ul>
+                        </li>
+                    {/each}
+                </ul>
+            {/each}
         </div>
     </main>
 </div>

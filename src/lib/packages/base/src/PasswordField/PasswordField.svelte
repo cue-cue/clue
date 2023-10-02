@@ -45,7 +45,3 @@
 		</TextFieldBase>
 	</svelte:fragment>
 </TextField>
-
-<style lang='sass'>
-	.CluePasswordField
-</style>

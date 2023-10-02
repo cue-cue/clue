@@ -15,7 +15,8 @@ const paths = {
     importsFileDirectory: `src/lib/packages/icons/src/icons`,
     groupsType: `src/lib/packages/icons/src/types/groups.ts`,
     namesType: `src/lib/packages/icons/src/types/names.ts`,
-    moduleType: `src/lib/packages/icons/src/types/module.d.ts`
+    moduleType: `src/lib/packages/icons/src/types/module.d.ts`,
+    iconsList: `src/routes/icons/iconsList.ts`,
 }
 
 class Icon extends SvgSpriteIcon {
@@ -125,10 +126,10 @@ const genTypes = {
         let [groupsType, moduleType] = moduleFile.split(splitString)
 
         moduleType = `${splitString}${moduleType}`
-        groupsType = `export type IconGroups = ${JSON.stringify(res, null, 2).replaceAll('"', '')}`
+        groupsType = `type IconGroups = ${JSON.stringify(res, null, 2).replaceAll('"', '')}`
 
         writeFileSync(paths.moduleType, `${groupsType}\n${moduleType}`)
-        writeFileSync(paths.groupsType, groupsType)
+        writeFileSync(paths.groupsType, `export ${groupsType}`)
     },
     async names(icons:IconGroups) {
         let res:string[] = []
@@ -140,9 +141,17 @@ const genTypes = {
 }
 
 const createGetAllIconsInRoutes = (icons:IconGroups) => {
-    const tepmlates = {
-        iconImport: ({name, group}:Icon) => `import `
+    const templates = {
+        iconImport: ({name, group}:Icon) => `export * as ${camelize(`${group} ${name}`)} from '@clue/icons/${group}/${name}.svg'\n`
     }
+    
+    let res = ''
+
+    Object.values(icons).flat().forEach(icon => {
+        res += templates.iconImport(icon)
+    })
+
+    writeFileSync(paths.iconsList, res)
 }
 
 const init = () => {
@@ -153,6 +162,7 @@ const init = () => {
     replaceColor(icons)
     // createImports(icons)
     genTypes.groups(icons)
+    createGetAllIconsInRoutes(icons)
     // genTypes.names(icons)
     addExportsInPackageJson(icons)
 }
