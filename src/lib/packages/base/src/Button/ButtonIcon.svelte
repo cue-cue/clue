@@ -24,4 +24,7 @@
 		display: flex
 		align-items: center
 		justify-content: center
+		:global(.ClueIcon)
+			width: 100%
+			height: 100%
 </style>

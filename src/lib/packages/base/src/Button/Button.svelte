@@ -1,7 +1,7 @@
 <script lang='ts'>
     import {generateClassNames} from '@clue/utils'
 	import ButtonField from './ButtonField.svelte';
-	import type { ComponentProps } from 'svelte';
+	import type { ComponentProps, SvelteComponent } from 'svelte';
 	import ButtonIcon from './ButtonIcon.svelte';
 	import type { HTMLLinkAttributes } from 'svelte/elements';
 
@@ -20,14 +20,11 @@
     export let startIcon:$$Props['startIcon'] = undefined
     export let endIcon:$$Props['endIcon'] = undefined
     export let size:$$Props['size'] = undefined
-
-    $: tag = (href ? 'a' : 'button') as ComponentProps<ButtonField>['tag']
-
 </script>
 
 <ButtonField
     class={generateClassNames(['Button', className])}
-    {tag}
+    tag={href ? 'a' : 'button'}
     {href}
     data-size={size}
     on:click
@@ -57,7 +54,7 @@
         --clue-button-field-padding-y: 12px
         --clue-button-field-border-radius: 50px
         --clue-button-font-size: 16px
-        --clue-button-min-width: 155px
+        --clue-button-font-weight: 500
         --clue-button-gap: 12px
         --clue-button-icon-size: 24px
         display: inline-flex
@@ -65,17 +62,22 @@
         align-items: center
         justify-content: center
         text-decoration: none
-        min-width: var(--clue-button-min-width)
         line-height: 150%
-        font-weight: 500
+        font-weight: var(--clue-button-font-weigh)
         font-size: var(--clue-button-font-size)
-        span
-            margin-left: var(--clue-button-gap)
-            margin-right: var(--clue-button-gap)
         :global(.ClueButtonIcon)
             flex: none
+            width: var(--clue-button-icon-size)
+            height: var(--clue-button-icon-size)
+    :global(.ClueButton[data-size='small'])
+        --clue-button-field-padding-y: 10px
+        --clue-button-icon-size: 20px
+        --clue-button-font-size: 14px
+    :global(.ClueButton[data-size='large'])
+        --clue-button-field-padding-y: 16px
+        --clue-button-field-padding-x: 24px
     :global(.ClueButton__icon_start)
-        margin-left: calc(var(--clue-button-icon-size) * -1)
+        margin-right: var(--clue-button-gap)
     :global(.ClueButton__icon_end)
-        margin-right: calc(var(--clue-button-icon-size) * -1)
+        margin-left: var(--clue-button-gap)
 </style>
