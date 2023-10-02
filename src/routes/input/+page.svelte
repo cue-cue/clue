@@ -1,4 +1,5 @@
 <script lang='ts'>
+	import { generateClassNames } from '$lib/packages/utils/src/index.js';
     import {Input, PasswordField, TextField, TextFieldBase} from '@clue/base'
 	import { get } from 'svelte/store';
 </script>
@@ -61,6 +62,14 @@
     <li>
         base with label<br>
         <TextField value='value' label='Label'/>
+    </li>
+    <li>
+        base with hint<br>
+        <TextField value='value' hint='Hint'/>
+    </li>
+    <li>
+        base with label and hint<br>
+        <TextField value='value' label='Label' hint='Hint'/>
     </li>
     <li>
         base with helper<br>

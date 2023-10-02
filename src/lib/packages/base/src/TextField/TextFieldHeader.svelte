@@ -19,4 +19,6 @@
 		min-height: 18px
 		display: flex
 		align-items: center
+		:global(.ClueTextFieldHint)
+			margin-left: auto
 </style>

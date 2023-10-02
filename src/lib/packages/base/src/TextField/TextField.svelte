@@ -9,10 +9,12 @@
 	import TextFieldFooter from './TextFieldFooter.svelte';
 	import { context } from './context.js';
 	import { writable } from 'svelte/store';
+	import TextFieldHint from './TextFieldHint.svelte';
 
     interface $$Props extends ComponentProps<TextFieldBase> {
         class?:string
         label?:string
+        hint?:string
         helper?:string
     }
 
@@ -29,6 +31,7 @@
     export { className as class }
 
     export let label:$$Props['label'] = undefined
+    export let hint:$$Props['hint'] = undefined
     export let helper:$$Props['helper'] = undefined
 	export let id:$$Props['id'] = randomId('input')
     export let error:$$Props['error'] = undefined
@@ -53,12 +56,17 @@
     data-error={error}
     data-disabled={disabled}
 >
-    {#if label}
+    {#if label || hint}
         <TextFieldHeader>
             {#if label}
                 <TextFieldLabel for={id} color={disabled ? 'disabled' : undefined}>
                     {label}
                 </TextFieldLabel>
+            {/if}
+            {#if hint}
+                <TextFieldHint>
+                    {hint}
+                </TextFieldHint>
             {/if}
         </TextFieldHeader>
     {/if}
