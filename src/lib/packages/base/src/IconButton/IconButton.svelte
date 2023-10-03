@@ -24,6 +24,7 @@
 	tag={href ? 'a' : 'button'}
 	class={generateClassNames(['IconButton', className])}
 	data-size={size}
+	{href}
 	{...$$restProps}
 >
 	<Icon {icon}/>
@@ -36,6 +37,7 @@
 		display: inline-flex
 		align-items: center
 		justify-content: center
+		flex: none
 		width: var(--clue-icon-size)
 		height: var(--clue-icon-size)
 		:global(.ClueIcon)
@@ -46,6 +48,7 @@
 		--clue-icon-size: 56px
 	:global(.ClueIconButton[data-size='small'])
 		--clue-icon-size: 40px
+		--clue-icon-button-icon-size: 20px
 	:global(.ClueIconButton[data-color='primary'])
 		--clue-button-field-background-color-disabled: #D3CFE8
 		--clue-button-field-color-disabled: #958AC7
