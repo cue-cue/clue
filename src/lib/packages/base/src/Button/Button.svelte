@@ -62,6 +62,7 @@
         align-items: center
         justify-content: center
         text-decoration: none
+        line-height: var(--clue-button-icon-size)
         font-weight: var(--clue-button-font-weigh)
         font-size: var(--clue-button-font-size)
         :global(.ClueButtonIcon)

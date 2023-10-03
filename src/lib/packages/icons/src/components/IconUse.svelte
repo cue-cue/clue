@@ -1,7 +1,9 @@
 <script lang="ts">
 	import {generateClassNames} from '@clue/utils'
 	import type { SVGAttributes } from 'svelte/elements';
-	import type {ClueSvgIconData} from '../../index.js'
+	import type { ClueSvgIconData } from '../index.js';
+	import { fade, type TransitionConfig } from 'svelte/transition';
+
 	interface $$Props extends SVGAttributes<SVGElement> {
 		icon:ClueSvgIconData['default']
 		class?:string
@@ -9,6 +11,7 @@
 		ratio?:number
 		height?:number
 		nodeElement?:HTMLOrSVGElement
+		transitionFn?:(node:Element, params:unknown) => TransitionConfig
 	}
 	
 	let className = ''
@@ -17,11 +20,14 @@
 	export let width:$$Props['width'] = undefined
 	export let height:$$Props['height'] = undefined
 	export let nodeElement:$$Props['nodeElement'] = undefined
+	export let transitionFn:$$Props['transitionFn'] = undefined
 
 	$: sizes = {
 		width: width ?? 24,
 		height: height ?? width ?? 24
 	}
+
+	$: transition = transitionFn ?? fade
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -34,5 +40,7 @@
 	viewBox={`0 0 ${sizes.width} ${sizes.height}`}
 	on:click
 >
-	<use xlink:href={`#${icon}`} />
+	{#key icon}
+		<use transition:transition={{duration: 200}} xlink:href={`#${icon}`} />
+	{/key}
 </svg>

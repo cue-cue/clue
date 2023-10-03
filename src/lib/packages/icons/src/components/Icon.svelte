@@ -1,7 +1,8 @@
 <script lang='ts'>
-	import {IconUse} from '../IconUse/index.js';
+	import IconUse from './IconUse.svelte';
 	import {generateClassNames} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
+	
 	interface $$Props extends Pick<ComponentProps<IconUse>, 'width' | 'height' | 'icon'> {
 		class?:string
 		color?:string

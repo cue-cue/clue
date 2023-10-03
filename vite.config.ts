@@ -1,5 +1,5 @@
-import { CreateIconsViteWatcher } from './scripts/beforeBuildAndDev/createIcons'
-import { viteWatchers } from './scripts/viteWatcher'
+import { CreateIconsViteWatcher } from './scripts/beforeBuildAndDev/createIcons.js'
+import { viteWatchers } from './scripts/viteWatcher.js'
 import { clueIconsPlugin } from './src/lib/packages/icons/src/plugin/index.js';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';

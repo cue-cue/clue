@@ -7,8 +7,7 @@
     import cross from '@clue/icons/line/cross.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
-	import { get } from "svelte/store";
-    
+
     const menuItems:(ComponentProps<Button> & {name:string})[] = [
         {
             name: 'Input',

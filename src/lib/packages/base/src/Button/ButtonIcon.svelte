@@ -2,7 +2,7 @@
 	import { Icon } from '@clue/icons';
 	import {generateClassNames} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import { fade, scale } from 'svelte/transition';
 
 	interface $$Props extends ComponentProps<Icon> {
 		class?:string
@@ -14,7 +14,7 @@
 	
 </script>
 
-<div class={generateClassNames(['ButtonIcon', className])} transition:fade|local={{duration: 200}}>
+<div class={generateClassNames(['ButtonIcon', className])}>
 	<Icon width={24} {icon} {...$$restProps}/>
 </div>
 

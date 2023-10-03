@@ -1,1 +1,5 @@
-export * from './Icon/index.js'
+import Icon from './Icon.svelte'
+
+export {
+    Icon
+}

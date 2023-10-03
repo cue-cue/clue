@@ -13,8 +13,7 @@ const paths = {
     packageJson: 'src/lib/packages/icons/package.json',
     importsFile: (group:string) => `src/lib/packages/icons/src/icons/${group}.ts`,
     importsFileDirectory: `src/lib/packages/icons/src/icons`,
-    groupsType: `src/lib/packages/icons/src/types/groups.ts`,
-    namesType: `src/lib/packages/icons/src/types/names.ts`,
+    mainType: `src/lib/packages/icons/src/types/index.ts`,
     moduleType: `src/lib/packages/icons/src/types/module.d.ts`,
     iconsList: `src/routes/icons/iconsList.ts`,
 }
@@ -75,7 +74,7 @@ const replaceColor = (icons:IconGroups) => {
         const svg = readFileSync(icon.path, {
             encoding: 'utf8'
         })
-        writeFileSync(icon.path, svg.replaceAll(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`))
+        writeFileSync(icon.path, svg.replace(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`))
     })
 }
 
@@ -112,31 +111,52 @@ const addExportsInPackageJson = (icons:IconGroups) => {
 }
 
 const genTypes = {
-    async groups(icons:IconGroups) {
+    replaceTemplates(icons:IconGroups,file:string, inner = false) {
+        const tab = inner ? '\t' : ''
+
+        const groupsType = this.genGroups(icons).type
+        const namesType = this.genNames(icons).type
+
+        let newFile = file.replace(
+            /(?<=\/\/IconGroups-template)([\s\S]+?)(?=\/\/IconGroups-template)/gi,
+            `\n${tab}${groupsType.replace('\n', `\n${tab}`).replace('}', `${tab}}`)}\n${tab}`
+        )
+        if (namesType) {
+            newFile = newFile.replace(/(?<=\/\/IconNames-template)([\s\S]+?)(?=\/\/IconNames-template)/gi, `\n${tab}${namesType}\n${tab}`)
+        }
+
+        return newFile
+    },
+    all(icons:IconGroups) {
+        let mainTypeFile = readFileSync(paths.mainType, 'utf8')
+        let moduleTypeFile = readFileSync(paths.moduleType, 'utf-8')
+
+        mainTypeFile = this.replaceTemplates(icons, mainTypeFile, false)
+        moduleTypeFile = this.replaceTemplates(icons, moduleTypeFile, true)
+
+        writeFileSync(paths.mainType, mainTypeFile)
+        writeFileSync(paths.moduleType, moduleTypeFile)
+    },
+    genGroups(icons:IconGroups) {
         const res:Record<string, string> = {}
 
         Object.entries(icons).forEach(([group, icons]) => {
             res[group] = icons.map(icon => `'${icon.name}'`).join(' | ')
         })
-
-        const moduleFile = readFileSync(paths.moduleType, 'utf8')
-
-        const splitString = 'declare module "*.svg"'
-
-        let [groupsType, moduleType] = moduleFile.split(splitString)
-
-        moduleType = `${splitString}${moduleType}`
-        groupsType = `type IconGroups = ${JSON.stringify(res, null, 2).replaceAll('"', '')}`
-
-        writeFileSync(paths.moduleType, `${groupsType}\n${moduleType}`)
-        writeFileSync(paths.groupsType, `export ${groupsType}`)
+        return {
+            groups: res,
+            type: `type IconGroups = ${JSON.stringify(res, null, 2).replace(new RegExp('"', 'gi'), '')}`
+        }
     },
-    async names(icons:IconGroups) {
+    genNames(icons:IconGroups) {
         let res:string[] = []
         Object.entries(icons).forEach(([group, icons]) => {
-            res = [...res, ...(icons.map(icon => `'${group}:${icon.name}'`))]
+            res = [...res, ...(icons.map(icon => `${'`'}${'${T}'}${group}-${icon.name}${'`'}`))]
         })
-        writeFileSync(paths.namesType, `export type IconNames = ${res.join(' | ')}`)
+        return {
+            names: res,
+            type: `type IconNames<T extends string = 'clue-'> = ${res.join(' | ')}`
+        }
     }
 }
 
@@ -161,7 +181,7 @@ const init = () => {
     // icons = getAllIcons()
     replaceColor(icons)
     // createImports(icons)
-    genTypes.groups(icons)
+    genTypes.all(icons)
     createGetAllIconsInRoutes(icons)
     // genTypes.names(icons)
     addExportsInPackageJson(icons)
@@ -170,8 +190,7 @@ const init = () => {
 export class CreateIconsViteWatcher extends ViteWatcher {
     constructor() {
         super(globSync([
-            'src/lib/packages/icons/src/assets/**/*.svg',
-            'src/lib/packages/icons/src/icons/**/*.ts'
+            'src/lib/packages/icons/src/assets/**/*.svg'
         ]), () => {
             init()
         })
