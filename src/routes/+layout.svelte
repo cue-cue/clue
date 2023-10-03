@@ -5,7 +5,9 @@
     import eye from '@clue/icons/line/eye.svg'
     import calendar from '@clue/icons/line/calendar.svg'
     import cross from '@clue/icons/line/cross.svg'
+    import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
+	import { get } from "svelte/store";
     
     const menuItems:(ComponentProps<Button> & {name:string})[] = [
         {
@@ -30,7 +32,7 @@
 <header>
     <nav>
         {#each menuItems as button (button.href)}
-            <Button {...button} size='small' color='ghost'>{button.name}</Button>
+            <Button {...button} size='small' color={$page.url.pathname.startsWith(button.href || '') ? 'primary' : 'ghost'}>{button.name}</Button>
         {/each}
     </nav>
     <hr>

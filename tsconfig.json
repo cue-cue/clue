@@ -12,6 +12,5 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "NodeNext",
-	},
-	"include": ["./scripts/**/*.ts", "./src/**/*.*"]
+	}
 }

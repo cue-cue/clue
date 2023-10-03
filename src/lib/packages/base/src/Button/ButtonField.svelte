@@ -71,7 +71,7 @@
 		--clue-button-border-color-disabled: transparent
 		--clue-button-border-color-current: var(--clue-button-border-color)
 		//border width
-		--clue-button-border-width: 0
+		--clue-button-border-width: 1px
 		--clue-button-border-width-disabled: 0
 		--clue-button-border-width-current: var(--clue-button-border-width)
 		
@@ -125,6 +125,6 @@
 			--clue-button-field-color-active: #5B4C9F
 		&[data-variant='outlined']
 			--clue-button-border-color: #D3CFE8
-			--clue-button-border-width: 1px
-			--clue-button-border-width-disabled: 0
+			--clue-button-border-color-hover: #D3CFE8
+			--clue-button-border-color-active: #D3CFE8
 </style>

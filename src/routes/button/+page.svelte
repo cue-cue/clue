@@ -105,7 +105,7 @@
                             <h5>{id}</h5>
                             <div style='display: flex; gap: 16px; align-items: center'>
                                 <Button {...button}>Button</Button>
-                                <IconButton icon={eye} {...button}>Button</IconButton>
+                                <IconButton icon={eye} {...button}/>
                             </div>
                         </li>
                     {/each}
