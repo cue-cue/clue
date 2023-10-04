@@ -68,7 +68,7 @@
 		position: relative
 		width: auto
 		min-height: var(--clue-text-field-base-height)
-		font-weight: 400
+		font-weight: var(--clue-text-field-base-font-weight)
 		font-size: var(--clue-text-field-base-font-size)
 		color: var(--clue-text-field-base-color)
 		background-color: var(--background-color)

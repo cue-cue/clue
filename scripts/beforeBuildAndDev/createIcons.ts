@@ -180,8 +180,6 @@ const createGetAllIconsInRoutes = (icons:IconGroups) => {
         res += templates.iconImport(icon)
     })
 
-    console.log('test')
-
     if (allIcons.length) {
         res += templates.export(allIcons)
     }
@@ -207,7 +205,7 @@ export class CreateIconsViteWatcher extends ViteWatcher {
         super(globSync([
             'src/lib/packages/icons/src/assets/**/*.svg'
         ]), () => {
-            init()
+            // init()
         })
     }
 }

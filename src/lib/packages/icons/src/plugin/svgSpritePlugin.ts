@@ -18,14 +18,7 @@ export class SvgSpriteIcon {
         return /(?<=assets\/)([\s\S]+?)(?=\/)/.exec(this.path)?.[0] || ''
     }
     #getName() {
-        let name = this.#getFileName()
-        const group = this.#getGroup()
-
-        if (name.startsWith(`${group}-`)) {
-            name = name.replaceAll(`${group}-`, '')
-        }
-
-        return name
+        return this.#getFileName()
     }
     #getFileName() {
         return /\/([^/]+)\./.exec(this.path)?.[1] || ''

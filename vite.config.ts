@@ -1,4 +1,3 @@
-import { CreateIconsViteWatcher } from './scripts/beforeBuildAndDev/createIcons.js'
 import { viteWatchers } from './scripts/viteWatcher.js'
 import { clueIconsPlugin } from './src/lib/packages/icons/src/plugin/index.js';
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -9,7 +8,7 @@ export default defineConfig({
 		sveltekit(),
 		viteWatchers(
 			[
-				new CreateIconsViteWatcher()
+				// new CreateIconsViteWatcher()
 			]
 		),
 		clueIconsPlugin(),
