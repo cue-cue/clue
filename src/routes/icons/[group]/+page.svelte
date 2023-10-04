@@ -23,7 +23,7 @@
     }
     $: icons = getIcons($page.params.group as keyof IconGroups).filter((icon) => icon.default.includes(searchValue)).map((icon, id) => ({...icon, id}))
 </script>
-<TextField placeholder='Search' bind:value={searchValue}/>
+<TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
 <br><br>
 <div style='display: flex; justify-content: center; text-align: center'>
     {#if icons.length}
@@ -37,7 +37,7 @@
                 <ul style='display: flex; gap: 10px; list-style: none'>
                     {#each generateMoreSizeIcon(icon) as {icon:data, size}}
                         <li>
-                            <small>({size.width}/{size.height})px</small><br/>
+                            <small style='margin-bottom: 6px; display: block'>({size.width}/{size.height})px</small>
                             <Icon icon={data.default} {...size}/>
                         </li>
                     {/each}
