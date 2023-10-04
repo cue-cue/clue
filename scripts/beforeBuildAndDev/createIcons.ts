@@ -82,8 +82,7 @@ const replaceColor = (icons:IconGroups) => {
 const replaceFileNames = (icons:IconGroups) => {
     Object.values(icons).flat().forEach(icon => {
         const oldPath = icon.path
-        console.log(icon, {group: icon.group, name: icon.name})
-        const newPath = oldPath.replace(icon.fileName, `${icon.group}${icon.name}`)
+        const newPath = oldPath.replace(`${icon.fileName}.svg`, `${icon.name}.svg`.toLowerCase())
         renameSync(oldPath, newPath)
     })
 }
@@ -188,9 +187,10 @@ const createGetAllIconsInRoutes = (icons:IconGroups) => {
 }
 
 const init = () => {
-    const icons = getAllIcons()
+    let icons = getAllIcons()
     console.log(`Start createIcons (length:${Object.entries(icons).map(([group, icons]) => `${group}: ${icons.length}`).join(' | ')})`)
-    // replaceFileNames(icons)
+    replaceFileNames(icons)
+    icons = getAllIcons()
     // icons = getAllIcons()
     replaceColor(icons)
     // createImports(icons)

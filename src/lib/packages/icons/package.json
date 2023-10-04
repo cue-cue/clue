@@ -13,12 +13,8 @@
   "exports": {
     ".": "./src/index.js",
     "./plugin": "./src/plugin/index.js",
-    "./line/*": {
-      "import": "./src/assets/line/*",
-      "types": "./svg/types/module.d.ts"
-    },
-    "./filled/*": {
-      "import": "./src/assets/filled/*",
+    ".//*": {
+      "import": "./src/assets//*",
       "types": "./svg/types/module.d.ts"
     }
   }
