@@ -12,7 +12,6 @@
 		"test": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"build:site": "npm run build:before && vite build",
 		"build:icons": "npx ts-node --esm scripts/beforeBuildAndDev/createIcons.ts",
 		"build:styles": "node scripts/afterBuild/buildStyles.mjs",
 		"build:before": "npm run build:icons",
