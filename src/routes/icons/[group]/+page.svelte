@@ -27,10 +27,12 @@
             }
         }))
     }
-    
+
     $: icons = allIcons.filter((icon) => icon.groupName === $page.params.group &&  icon.name.includes(searchValue)).map((icon, id) => ({...icon, id}))
 </script>
-<TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
+<div style="position: sticky; top: 16px">
+    <TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
+</div>
 <br><br>
 <div style='display: flex; justify-content: center; text-align: center'>
     {#if icons.length}

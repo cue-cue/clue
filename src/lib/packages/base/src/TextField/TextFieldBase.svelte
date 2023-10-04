@@ -62,7 +62,7 @@
 		+text-field-base-vars()
 		--box-shadow-color: var(--clue-text-field-base-border-color)
 		--box-shadow-size: var(--clue-text-field-base-border-width)
-		--background-color: transparent
+		--background-color: #fff
 		--border-radius: var(--clue-size-border-radius-3)
 		display: flex
 		position: relative
