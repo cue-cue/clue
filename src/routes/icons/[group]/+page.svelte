@@ -21,7 +21,7 @@
             }
         }))
     }
-    $: icons = getIcons($page.params.group as keyof IconGroups).filter((icon) => icon.default.includes(searchValue)).map((icon, id) => ({...icon, id}))
+    $: icons = getIcons($page.params.group as keyof IconGroups).filter((icon) => icon.name.includes(searchValue)).map((icon, id) => ({...icon, id}))
 </script>
 <TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
 <br><br>
