@@ -1,6 +1,6 @@
 <script lang='ts'>
     import {Icon, type ClueSvgIconData} from '@clue/icons'
-    import * as allIcons from './iconsList.js'
+    import * as allIcons from '../iconsList.js'
 
     const getIcons = () => {
         const groups = Object.values<ClueSvgIconData>(allIcons).reduce<Record<string, ClueSvgIconData[]>>((val,icon) => {

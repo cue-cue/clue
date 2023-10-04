@@ -13,10 +13,6 @@
   "exports": {
     ".": "./src/index.js",
     "./plugin": "./src/plugin/index.js",
-    ".//*": {
-      "import": "./src/assets//*",
-      "types": "./svg/types/module.d.ts"
-    },
     "./line/*": {
       "import": "./src/assets/line/*",
       "types": "./svg/types/module.d.ts"
