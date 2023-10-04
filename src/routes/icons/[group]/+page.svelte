@@ -1,13 +1,19 @@
 <script lang='ts'>
     import {Icon, type ClueSvgIconData, type IconGroups} from '@clue/icons'
 	import {TextField} from '@clue/base';
-    import * as allIcons from '../iconsList.js'
+    import * as allIconsByList from '../iconsList.js'
     import VirtualScroll from "svelte-virtual-scroll-list"
 	import { page } from '$app/stores';
 
-    const getIcons = (group:keyof IconGroups):ClueSvgIconData[] => {
-        return Object.values(allIcons).filter(icon => icon.groupName === group).map((icon, id) => ({...icon, id}))
-    }
+    const allIcons = Object.values(allIconsByList).sort((a,b) => {
+        if (a.name < b.name) {
+            return -1
+        }
+        if (a.name > b.name) {
+            return 1
+        }
+        return 0
+    })
 
     let searchValue = ''
 
@@ -21,7 +27,7 @@
             }
         }))
     }
-    $: icons = getIcons($page.params.group as keyof IconGroups).filter((icon) => icon.name.includes(searchValue)).map((icon, id) => ({...icon, id}))
+    $: icons = allIcons.filter((icon) => icon.groupName === $page.params.group &&  icon.name.includes(searchValue)).map((icon, id) => ({...icon, id}))
 </script>
 <TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
 <br><br>
