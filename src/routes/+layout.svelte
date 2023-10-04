@@ -4,7 +4,7 @@
 	import {Button} from "@clue/base";
     import eye from '@clue/icons/line/eye.svg'
     import calendar from '@clue/icons/line/calendar.svg'
-    import cross from '@clue/icons/line/cross.svg'
+    import bell from '@clue/icons/line/bell.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
 
@@ -22,7 +22,7 @@
         {
             name: 'Button',
             href: '/button',
-            startIcon: cross
+            startIcon: bell
         }
     ]
 

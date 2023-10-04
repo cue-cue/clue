@@ -24,7 +24,7 @@
     }
 
     const generateMoreSizeIcon = (icon:ClueSvgIconData) => {
-        const sizes = [8, 16, 24, 32, 46]
+        const sizes = [8, 12, 16, 24, 30, 40]
         return sizes.map(size => ({
             icon,
             size: {

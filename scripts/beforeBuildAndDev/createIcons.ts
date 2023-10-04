@@ -161,15 +161,30 @@ const genTypes = {
 }
 
 const createGetAllIconsInRoutes = (icons:IconGroups) => {
+
+    const allIcons = Object.values(icons).flat()
+
+    const getName = ({name, group}:Pick<Icon, 'name' | 'group'>) => camelize(`${group} ${name}`)
+
     const templates = {
-        iconImport: ({name, group}:Icon) => `export * as ${camelize(`${group} ${name}`)} from '@clue/icons/${group}/${name}.svg'\n`
+        iconImport: (icon:Icon) => {
+            const name = getName(icon)
+            return `import * as _${name} from '@clue/icons/${icon.group}/${icon.name}.svg'\nconst ${name} = _${name} as unknown as ClueSvgIconData\n`
+        },
+        export: (icons:Icon[]) => `export {\n${icons.map(icon => `\t${getName(icon)}`).join(',\n')}\n}` 
     }
     
-    let res = ''
+    let res = `import type { ClueSvgIconData } from '@clue/icons'\n`
 
-    Object.values(icons).flat().forEach(icon => {
+    allIcons.forEach(icon => {
         res += templates.iconImport(icon)
     })
+
+    console.log('test')
+
+    if (allIcons.length) {
+        res += templates.export(allIcons)
+    }
 
     writeFileSync(paths.iconsList, res)
 }

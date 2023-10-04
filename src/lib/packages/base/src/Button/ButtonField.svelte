@@ -83,7 +83,7 @@
 		background-color: var(--clue-button-field-background-color)
 		color: var(--clue-button-field-color)
 		box-shadow: inset 0 0 0 var(--clue-button-border-width-current) var(--clue-button-border-color-current)
-		transition: var(--transition)
+		transition: var(--clue-transition)
 		transition-property: color, background, width, height, padding, border, box-shadow
 		@at-root button#{&}, a#{&}
 			cursor: pointer

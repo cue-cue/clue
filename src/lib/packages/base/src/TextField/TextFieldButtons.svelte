@@ -26,7 +26,7 @@
 					content: ''
 					width: 1px
 					height: 16px
-					background: var(--color-border)
+					background: var(--clue-color-border)
 					display: block
 					position: absolute
 					right: -12px

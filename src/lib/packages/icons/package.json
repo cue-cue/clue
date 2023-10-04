@@ -16,6 +16,10 @@
     "./line/*": {
       "import": "./src/assets/line/*",
       "types": "./svg/types/module.d.ts"
+    },
+    "./filled/*": {
+      "import": "./src/assets/filled/*",
+      "types": "./svg/types/module.d.ts"
     }
   }
 }

@@ -23,8 +23,8 @@
         font-weight: 500
         font-size: 12px
         line-height: 150%
-        transition: var(--transition)
+        transition: var(--clue-transition)
         transition-property: color
         &[data-color='disabled']
-            color: var(--color-txt-placeholder)
+            color: var(--clue-color-txt-placeholder)
 </style>

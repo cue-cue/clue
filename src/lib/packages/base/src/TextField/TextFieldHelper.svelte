@@ -20,10 +20,10 @@
         color: #484B5B
         font-size: 12px
         line-height: 150%
-        transition: var(--transition)
+        transition: var(--clue-transition)
         transition-property: color
         &[data-color='error']
             color: #D15A45
         &[data-color='disabled']
-            color: var(--color-txt-placeholder)
+            color: var(--clue-color-txt-placeholder)
 </style>

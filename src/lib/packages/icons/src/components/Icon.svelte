@@ -37,7 +37,7 @@
 <style lang='sass'>
 	:global(.ClueIcon)
 		// --clue-icon-color
-		color: var(--clue-icon-color, var(--color-icon))
-		transition: var(--transition)
+		color: var(--clue-icon-color, var(--clue-color-icon))
+		transition: var(--clue-transition)
 		transition-property: color
 </style>

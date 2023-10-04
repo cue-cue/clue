@@ -33,7 +33,7 @@
 		cursor: pointer
 		&:hover
 			:global(.ClueIcon)
-				--clue-icon-color: var(--color-icon-secondary)
+				--clue-icon-color: var(--clue-color-icon-secondary)
 		&::before
 			content: ''
 			position: absolute
