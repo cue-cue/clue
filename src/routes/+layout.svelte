@@ -2,9 +2,9 @@
     import "$lib/packages/styles/src/index.sass"
     import "./styles/index.sass"
 	import {Button} from "@clue/base";
-    import eye from '@clue/icons/line/eye.svg'
-    import calendar from '@clue/icons/line/calendar.svg'
-    import bell from '@clue/icons/line/bell.svg'
+    import inputIcon from '@clue/icons/line/eye.svg'
+    import iconsIcon from '@clue/icons/line/papers.svg'
+    import buttonIcon from '@clue/icons/line/bell.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
 
@@ -12,17 +12,17 @@
         {
             name: 'Input',
             href: '/input',
-            startIcon: eye
+            startIcon: inputIcon
         },
         {
             name: 'Icons',
             href: '/icons',
-            startIcon: calendar
+            startIcon: iconsIcon
         },
         {
             name: 'Button',
             href: '/button',
-            startIcon: bell
+            startIcon: buttonIcon
         }
     ]
 
