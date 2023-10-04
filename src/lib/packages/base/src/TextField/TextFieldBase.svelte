@@ -6,9 +6,12 @@
 	import { writable } from 'svelte/store';
 	import TextFieldButtons from './TextFieldButtons.svelte';
 
-	interface $$Props extends ComponentProps<Input> {
+	type InputTypes = Extract<ComponentProps<Input>['type'], 'password' | 'email' | 'text' | 'url' | 'tel'>
+
+	interface $$Props extends Omit<ComponentProps<Input>, 'type'> {
 		class?:string
 		error?:boolean
+		type?:InputTypes
 	}
 
 	
@@ -17,6 +20,7 @@
 	export let error:$$Props['error'] = undefined
 	export let disabled:$$Props['disabled'] = undefined
 	export let value:$$Props['value'] = ''
+	export let type:$$Props['type'] = 'text'
 	
 	const localContext = context.get() || writable()
 
@@ -42,6 +46,7 @@
 		<Input
 			disabled={$localContext.disabled || disabled}
 			id={$localContext.id}
+			{type}
 			bind:value
 			bind:clear={inputController.clear}
 			bind:update={inputController.update}

@@ -1,0 +1,28 @@
+body {
+    --dot-bg: #fffffe;
+    --dot-color: #2c210018;
+    --dot-size: 2px;
+    --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+    font-family: var(--clue-font-family);
+    color: #2c2100;
+}
+
+hr {
+    height: 2px;
+    background: #2c210017;
+    border: none;
+}
+
+ul {
+    > {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -12,12 +12,12 @@
     }[] = [
         {
             name: 'Line',
-            href: '/icons/line',
+            href: '/package/icons/line',
             icon: lineIcon
         },
         {
             name: 'Filled',
-            href: '/icons/filled',
+            href: '/package/icons/filled',
             icon: filledIcon
         }
     ]
