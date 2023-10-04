@@ -15,7 +15,7 @@ const paths = {
     importsFileDirectory: `src/lib/packages/icons/src/icons`,
     mainType: `src/lib/packages/icons/src/types/index.ts`,
     moduleType: `src/lib/packages/icons/src/types/module.d.ts`,
-    iconsList: `src/routes/icons/iconsList.ts`,
+    iconsList: `src/routes/package/icons/iconsList.ts`,
 }
 
 class Icon extends SvgSpriteIcon {
