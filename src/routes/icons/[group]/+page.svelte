@@ -1,27 +1,15 @@
 <script lang='ts'>
-    import {Icon, type ClueSvgIconData} from '@clue/icons'
+    import {Icon, type ClueSvgIconData, type IconGroups} from '@clue/icons'
+	import {TextField} from '@clue/base';
     import * as allIcons from '../iconsList.js'
+    import VirtualScroll from "svelte-virtual-scroll-list"
+	import { page } from '$app/stores';
 
-    const getIcons = () => {
-        const groups = Object.values<ClueSvgIconData>(allIcons).reduce<Record<string, ClueSvgIconData[]>>((val,icon) => {
-            if (val[icon.groupName]) {
-                val[icon.groupName].push(icon)
-            } else {
-                val[icon.groupName] = [icon]
-            }
-            return val
-        }, {})
-
-        return Object.entries(groups).sort((a,b) => {
-            if (a[0] < b[0]) {
-                return -1
-            }
-            if (a[0] > b[0]) {
-                return 1
-            }
-            return 0
-        })
+    const getIcons = (group:keyof IconGroups):ClueSvgIconData[] => {
+        return Object.values(allIcons).filter(icon => icon.groupName === group).map((icon, id) => ({...icon, id}))
     }
+
+    let searchValue = ''
 
     const generateMoreSizeIcon = (icon:ClueSvgIconData) => {
         const sizes = [8, 12, 16, 24, 30, 40]
@@ -33,30 +21,29 @@
             }
         }))
     }
+    $: icons = getIcons($page.params.group as keyof IconGroups).filter((icon) => icon.default.includes(searchValue)).map((icon, id) => ({...icon, id}))
 </script>
-
-<div>
-    <main>
-        <h2>@icons</h2>
-        <div>
-            {#each getIcons() as [group, icons] (group)}
-                <h3>/{group}</h3>
-                <ul>
-                    {#each icons as icon (icon.default)}
+<TextField placeholder='Search' bind:value={searchValue}/>
+<br><br>
+<div style='display: flex; justify-content: center; text-align: center'>
+    {#if icons.length}
+        <VirtualScroll
+            data={icons}
+            key='id'
+            let:data={icon}
+            pageMode={true}
+        >
+                <h4>{icon.name}</h4> 
+                <ul style='display: flex; gap: 10px; list-style: none'>
+                    {#each generateMoreSizeIcon(icon) as {icon:data, size}}
                         <li>
-                            <b>/{icon.default.replace('clue-', '')} <small>{JSON.stringify(icon.size)}</small></b> 
-                            <ul style='display: flex; gap: 10px; list-style: none'>
-                                {#each generateMoreSizeIcon(icon) as {icon:data, size}}
-                                    <li>
-                                        <small>({size.width}/{size.height})px</small><br/>
-                                        <Icon icon={data.default} {...size}/>
-                                    </li>
-                                {/each}
-                            </ul>
+                            <small>({size.width}/{size.height})px</small><br/>
+                            <Icon icon={data.default} {...size}/>
                         </li>
                     {/each}
                 </ul>
-            {/each}
-        </div>
-    </main>
+        </VirtualScroll>
+    {:else}
+        <h3>Not found</h3>
+    {/if}
 </div>

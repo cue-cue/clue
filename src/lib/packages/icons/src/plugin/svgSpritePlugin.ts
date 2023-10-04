@@ -33,6 +33,10 @@ const replaceCode = (code:string, path:string, pluginOptions:Options) => {
         newCode += `export const groupName = "${icon.group}"\n`
     }
 
+    if (icon.name) {
+        newCode += `export const name = "${icon.name}"\n`
+    }
+
     const symbolId = pluginOptions?.symbolId?.replace('[name]', icon.name) || ''
     const newSymbolId = pluginOptions?.symbolId?.replace('[name]', `${icon.group}-${icon.name}`) || ''
 

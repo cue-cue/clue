@@ -36,6 +36,7 @@
 	export let id:$$Props['id'] = randomId('input')
     export let error:$$Props['error'] = undefined
     export let disabled:$$Props['disabled'] = undefined
+    export let value:$$Props['value'] = ''
 
     const localContext = context.set(writable({
         error,
@@ -72,9 +73,9 @@
     {/if}
     <slot name='base' {id}>
         {#if $$slots.default}
-            <TextFieldBase {...$$restProps}><TextFieldValue><slot {id}/></TextFieldValue></TextFieldBase>
+            <TextFieldBase bind:value {...$$restProps}><TextFieldValue><slot {id}/></TextFieldValue></TextFieldBase>
         {:else}
-            <TextFieldBase {...$$restProps}></TextFieldBase>
+            <TextFieldBase bind:value {...$$restProps}></TextFieldBase>
         {/if}
     </slot>
     {#if helper}

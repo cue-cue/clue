@@ -2,4 +2,4 @@
     
 </script>
 
-<h2>Icons</h2>
+<h2 style="text-align: center;">Go to</h2>
