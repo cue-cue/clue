@@ -13,8 +13,7 @@
 	export let group:$$Props['group'] = undefined
 	export let value:$$Props['value'] = undefined
 	export let checked:boolean = false
-
-	$: checked = group === value
+	checked = false
 </script>
 <input
 	class={generateClassNames(['InputRadio', className])}

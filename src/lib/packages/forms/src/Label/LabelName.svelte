@@ -20,16 +20,16 @@
 		+label-name-vars()
 	.ClueLabelName
 		cursor: pointer
-		color: var(--clue-checkbox-field-label-color)
-		font-size: var(--clue-checkbox-field-label-font-size)
-		font-weight: var(--clue-checkbox-field-label-font-weight)
+		color: var(--clue-label-name-color)
+		font-size: var(--clue-label-name-font-size)
+		font-weight: var(--clue-label-name-font-weight)
 		line-height: 125%
 		transition: var(--clue-transition)
 		transition-property: color
 		&[data-disabled]
 			cursor: not-allowed
-			color: var(--clue-checkbox-field-label-color-disabled)
+			color: var(--clue-label-name-color-disabled)
 		&:not([data-disabled])
 			@at-root :global(.ClueLabel__main):hover &, &:hover
-				color: var(--clue-checkbox-field-label-color-hover)
+				color: var(--clue-label-name-color-hover)
 </style>

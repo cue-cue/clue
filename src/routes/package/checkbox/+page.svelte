@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import { randomId } from '@clue/utils';
-    import {Checkbox} from '@clue/forms'
+    import {Checkbox, Radio} from '@clue/forms'
 	import type { ComponentProps } from 'svelte';
 
     const items:(Omit<ComponentProps<Checkbox>, 'value' | 'id' | 'group'> & {
@@ -17,15 +17,15 @@
             label: 'Lorem ipsum',
             component: Checkbox
         },
-        // {
-        //     id: 'Radio',
-        //     component: Radio
-        // },
-        // {
-        //     id: 'Radio + label',
-        //     label: 'Lorem ipsum',
-        //     component: Radio
-        // }
+        {
+            id: 'Radio',
+            component: Radio
+        },
+        {
+            id: 'Radio + label',
+            label: 'Lorem ipsum',
+            component: Radio
+        }
     ]
 
     const genVariants = (params:Omit<typeof items[0], 'id'>) => {
@@ -52,22 +52,23 @@
                 ...params,
                 name,
                 value: 'checked + disabled',
-                checked: true,
+                // checked: true,
                 disabled: true
             }
         ]
     }
 
-    let groups = items.reduce<Partial<Record<string, string[] | string>>>((val, {id}) => {
-        val[id] = []
+    let groups = items.reduce<Partial<Record<string, string[] | string>>>((val, {id, component, ...all}) => {
+        val[id] = component.name === Radio.name ? 'checked + disabled' : ['checked + disabled']
         return val
     }, {})
+
 </script>
 
 <ul>
     {#each items as {id, ...item} (id)}
         <li>
-            <h4>{id}: <small>[{[groups[id] || []].flat()?.join(', ') || ''}]</small></h4>
+            <h4>{id}: <small>{groups[id]}</small></h4>
             <ul style="display: flex; gap: 30px">
                 {#each genVariants(item) as {component, label, value, ...props} (value)}
                     <li>

@@ -18,6 +18,7 @@
 	export let value: $$Props['value']
 
 	const onChange = () => {
+		typeof group === 'string' && (group = [group])
 		const index = group.indexOf(value)
 
 		if (checked === undefined) checked = index >= 0
@@ -47,6 +48,8 @@
 			update
 		}
 	}
+
+	onChange()
 </script>
 
 <input
