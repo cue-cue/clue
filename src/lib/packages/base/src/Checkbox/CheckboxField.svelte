@@ -12,7 +12,7 @@
 	
 	let className = ''
 	export { className as class }
-	export let checked:$$Props['checked'] = false
+	export let checked:$$Props['checked'] = undefined
 	export let id:$$Props['id'] = undefined
 	export let type:$$Props['type']
 	export let disabled:$$Props['disabled'] = undefined

@@ -7,7 +7,7 @@
     const items:Parameters<typeof genVariants>[0][] = [
         {
             id: 'Base',
-            component: InputCheckbox
+            component: Checkbox
         },
         // {
         //     id: 'Label',
@@ -40,7 +40,7 @@
                 ...params,
                 name,
                 value: 'checked',
-                // checked: true,
+                checked: true,
             },
             {
                 ...params,
@@ -52,38 +52,26 @@
                 ...params,
                 name,
                 value: 'checked + disabled',
-                // checked: true,
+                checked: true,
                 disabled: true
             }
         ]
     }
 
     let groups = {
-        'Base': [
-            "checked",
-            "default"
-        ]
+        'Base': []
     }
-    let group = [
-        "checked",
-        "default"
-    ]
 </script>
 
 <ul>
-    <pre>
-        {JSON.stringify(groups, null, 2)}
-        group: {group}
-    </pre>
     {#each items as {id, ...item} (id)}
         <li>
-            <h4>{id}</h4>
+            <h4>{id}: <small>[{groups[id]?.join(', ') || ''}]</small></h4>
             <ul style="display: flex; gap: 30px">
                 {#each genVariants(item) as {component, value, ...props} (value)}
                     <li>
-                        <h5 style="margin: 0; margin-bottom: 10px">{value}{id}</h5>
-                        <InputCheckbox {value} {...props} bind:group/>
-                        <!-- <svelte:component this={component} bind:group={groups[id]} {...props} {value}/> -->
+                        <h5 style="margin: 0; margin-bottom: 10px">{value}</h5>
+                        <svelte:component this={component} bind:group={groups[id]} {...props} {value}/>
                     </li>
                 {/each}
             </ul>

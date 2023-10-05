@@ -21,7 +21,7 @@
 	export { className as class }
 	export let type:$$Props['type']
 	export let group:$$Props['group'] = undefined
-	export let checked:$$Props['checked'] = false
+	export let checked:$$Props['checked'] = undefined
 	export let value:$$Props['value'] = undefined
 	
 	const componentsMap = new Map<'radio' | 'checkbox', ConstructorOfATypedSvelteComponent>([
@@ -34,7 +34,8 @@
 <svelte:component
 	this={componentsMap.get(type)}
 	class={generateClassNames(['CheckboxBase', className])}
-	bind:group={group}
+	bind:group
+	bind:checked
 	{value}
 	{...$$restProps}
 />

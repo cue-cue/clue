@@ -14,7 +14,7 @@
 	let className = ''
 	export { className as class }
 
-	export let checked:$$Props['checked'] = false
+	export let checked:$$Props['checked'] = undefined
 	export let type:T = 'checkbox' as T
 	export let disabled:$$Props['disabled'] = undefined
 	export let id:$$Props['id'] = randomId('checkbox')
@@ -75,5 +75,5 @@
 			background-size: 12px 10px
 			background-position: center center
 		:global(.ClueCheckboxInput)
-			// display: none
+			display: none
 </style>
