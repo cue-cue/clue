@@ -29,9 +29,10 @@
 	},
 	"dependencies": {
 		"@clue/base": "./src/lib/packages/base",
+		"@clue/utils": "./src/lib/packages/utils",
 		"@clue/icons": "./src/lib/packages/icons",
 		"@clue/styles": "./src/lib/packages/styles",
-		"@clue/utils": "./src/lib/packages/utils"
+		"@clue/forms": "./src/lib/packages/forms"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",

@@ -1,19 +1,22 @@
 <script lang='ts'>
-	import InputCheckbox from '$lib/packages/base/src/Input/InputCheckbox.svelte';
-	import { randomId } from '$lib/packages/utils/src/index.js';
-    import {Checkbox, Radio} from '@clue/base'
+	import { randomId } from '@clue/utils';
+    import {Checkbox} from '@clue/forms'
 	import type { ComponentProps } from 'svelte';
 
-    const items:Parameters<typeof genVariants>[0][] = [
+    const items:(Omit<ComponentProps<Checkbox>, 'value' | 'id' | 'group'> & {
+        component: any
+        id: string
+        label?:string
+    })[] = [
         {
             id: 'Base',
+            component: Checkbox,
+        },
+        {
+            id: 'Label',
+            label: 'Lorem ipsum',
             component: Checkbox
         },
-        // {
-        //     id: 'Label',
-        //     label: 'Lorem ipsum',
-        //     component: Checkbox
-        // },
         // {
         //     id: 'Radio',
         //     component: Radio
@@ -25,10 +28,7 @@
         // }
     ]
 
-    const genVariants = (params:Omit<ComponentProps<Checkbox>, 'value'> & {component:ConstructorOfATypedSvelteComponent}):(typeof params & {
-        value: string,
-        name: string
-    })[] => {
+    const genVariants = (params:Omit<typeof items[0], 'id'>) => {
         const name = randomId()
         return [
             {
@@ -58,20 +58,25 @@
         ]
     }
 
-    let groups = {
-        'Base': []
-    }
+    let groups = items.reduce<Partial<Record<string, string[] | string>>>((val, {id}) => {
+        val[id] = []
+        return val
+    }, {})
 </script>
 
 <ul>
     {#each items as {id, ...item} (id)}
         <li>
-            <h4>{id}: <small>[{groups[id]?.join(', ') || ''}]</small></h4>
+            <h4>{id}: <small>[{[groups[id] || []].flat()?.join(', ') || ''}]</small></h4>
             <ul style="display: flex; gap: 30px">
-                {#each genVariants(item) as {component, value, ...props} (value)}
+                {#each genVariants(item) as {component, label, value, ...props} (value)}
                     <li>
                         <h5 style="margin: 0; margin-bottom: 10px">{value}</h5>
-                        <svelte:component this={component} bind:group={groups[id]} {...props} {value}/>
+                        <svelte:component this={component} bind:group={groups[id]} {...props} {value} let:label={labelComponent}>
+                            {#if label}
+                                <svelte:component this={labelComponent}>{label}</svelte:component>
+                            {/if}
+                        </svelte:component>
                     </li>
                 {/each}
             </ul>

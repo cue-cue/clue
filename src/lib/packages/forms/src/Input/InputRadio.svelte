@@ -2,10 +2,9 @@
 	import {generateClassNames} from '@clue/utils'
 	import type { HTMLInputAttributes } from 'svelte/elements';
 
-	interface $$Props extends Omit<HTMLInputAttributes, 'type'> {
+	interface $$Props extends Omit<HTMLInputAttributes, 'type' | 'checked'> {
 		class?:string
 		group?:string | number
-		checked?:boolean
 	}
 	
 	let className = ''
@@ -13,10 +12,9 @@
 
 	export let group:$$Props['group'] = undefined
 	export let value:$$Props['value'] = undefined
-	export let checked:$$Props['checked'] = false
+	export let checked:boolean = false
 
-
-	$: checked = group ? group === value : false
+	$: checked = group === value
 </script>
 <input
 	class={generateClassNames(['InputRadio', className])}

@@ -1,7 +1,5 @@
 <script lang='ts'>
-	import { generateClassNames } from '$lib/packages/utils/src/index.js';
-    import {Input, PasswordField, TextField, TextFieldBase} from '@clue/base'
-	import { get } from 'svelte/store';
+    import {Input, PasswordField, TextField, TextFieldBase} from '@clue/forms'
 </script>
 
 <h2>Input</h2>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { generateClassNames } from '@clue/utils'
-	import { onMount } from 'svelte'
+	import { onMount, tick } from 'svelte'
 	import type { HTMLInputAttributes } from 'svelte/elements'
 
 	interface $$Props extends Omit<HTMLInputAttributes, 'type' | 'value'> {
@@ -47,9 +47,6 @@
 			update
 		}
 	}
-	onMount(() => {
-		onChange()
-	})
 </script>
 
 <input

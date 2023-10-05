@@ -1,5 +1,6 @@
 <script lang='ts'>
 	import {generateClassNames} from '@clue/utils'
+	import { Hint } from '@clue/base';
 
 	interface $$Props {
 		class?:string
@@ -10,9 +11,4 @@
 	
 </script>
 
-<div class={generateClassNames(['Radio', className])}>
-</div>
-
-<style lang='sass'>
-	.ClueRadio
-</style>
+<Hint class={generateClassNames(['TextFieldHint', className])}><slot/></Hint>
