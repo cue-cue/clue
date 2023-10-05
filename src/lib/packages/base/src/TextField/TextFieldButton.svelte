@@ -19,8 +19,10 @@
 </button>
 
 <style lang='sass'>
+	@import './TextFieldButton'
+	:global(:root)
+		+text-field-button-vars()
 	.ClueTextFieldButton
-		--clue-text-field-button-click-area-size: 24px
 		padding: 0
 		margin: 0
 		position: relative

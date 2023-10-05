@@ -1,53 +1,89 @@
 <script lang='ts'>
-    import {Checkbox} from '@clue/base'
+	import InputCheckbox from '$lib/packages/base/src/Input/InputCheckbox.svelte';
+	import { randomId } from '$lib/packages/utils/src/index.js';
+    import {Checkbox, Radio} from '@clue/base'
 	import type { ComponentProps } from 'svelte';
 
-    const items:(ComponentProps<Checkbox> & {id:string})[] = [
+    const items:Parameters<typeof genVariants>[0][] = [
         {
             id: 'Base',
+            component: InputCheckbox
         },
-        {
-            id: 'Label',
-            label: 'Lorem ipsum'
-        }
+        // {
+        //     id: 'Label',
+        //     label: 'Lorem ipsum',
+        //     component: Checkbox
+        // },
+        // {
+        //     id: 'Radio',
+        //     component: Radio
+        // },
+        // {
+        //     id: 'Radio + label',
+        //     label: 'Lorem ipsum',
+        //     component: Radio
+        // }
     ]
 
-    const genVariants = (params:ComponentProps<Checkbox>):(ComponentProps<Checkbox> & {id: string})[] => {
+    const genVariants = (params:Omit<ComponentProps<Checkbox>, 'value'> & {component:ConstructorOfATypedSvelteComponent}):(typeof params & {
+        value: string,
+        name: string
+    })[] => {
+        const name = randomId()
         return [
             {
                 ...params,
-                id: 'default'
+                name,
+                value: 'default'
             },
             {
                 ...params,
-                id: 'checked',
-                checked: true,
+                name,
+                value: 'checked',
+                // checked: true,
             },
             {
                 ...params,
-                id: 'disabled',
+                name,
+                value: 'disabled',
                 disabled: true,
             },
             {
                 ...params,
-                id: 'checked + disabled',
-                checked: true,
+                name,
+                value: 'checked + disabled',
+                // checked: true,
                 disabled: true
             }
         ]
     }
 
+    let groups = {
+        'Base': [
+            "checked",
+            "default"
+        ]
+    }
+    let group = [
+        "checked",
+        "default"
+    ]
 </script>
 
 <ul>
+    <pre>
+        {JSON.stringify(groups, null, 2)}
+        group: {group}
+    </pre>
     {#each items as {id, ...item} (id)}
         <li>
             <h4>{id}</h4>
             <ul style="display: flex; gap: 30px">
-                {#each genVariants(item) as {id, ...props} (id)}
+                {#each genVariants(item) as {component, value, ...props} (value)}
                     <li>
-                        <h5 style="margin: 0; margin-bottom: 10px">{id}</h5>
-                        <Checkbox {...props}/>
+                        <h5 style="margin: 0; margin-bottom: 10px">{value}{id}</h5>
+                        <InputCheckbox {value} {...props} bind:group/>
+                        <!-- <svelte:component this={component} bind:group={groups[id]} {...props} {value}/> -->
                     </li>
                 {/each}
             </ul>

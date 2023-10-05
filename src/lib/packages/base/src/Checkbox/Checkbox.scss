@@ -1,0 +1,9 @@
+@mixin checkbox-vars() {
+    //label
+    --clue-checkbox-label-gap: 8px;
+    --clue-checkbox-label-font-size: 16px;
+    --clue-checkbox-label-font-weight: 400;
+    --clue-checkbox-label-color: #484B5B;
+    --clue-checkbox-label-color-hover: #000;
+    --clue-checkbox-label-color-disabled: #B0B2C0;
+}

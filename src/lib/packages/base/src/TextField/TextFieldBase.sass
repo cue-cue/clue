@@ -1,32 +1,55 @@
 @mixin text-field-base-vars()
+	//height
 	--clue-text-field-base-height: 48px
 
+	//padding
 	--clue-text-field-base-padding-y: 12px
 	--clue-text-field-base-padding-x: 16px
 
+	//border color
 	--clue-text-field-base-border-color: #E8E9ED
 	--clue-text-field-base-border-color-hover: var(--clue-color-txt-placeholder)
 	--clue-text-field-base-border-color-focus: #958AC7
 	--clue-text-field-base-border-color-error: #D15A45
 	--clue-text-field-base-border-color-disabled: var(--clue-color-border-disabled)
 
-	--clue-text-field-base-background-color: transparent
+	//background color
+	--clue-text-field-base-background-color: #fff
 	--clue-text-field-base-background-color-disabled: var(--clue-color-bg-secondary)
+	--clue-text-field-base-background-color-readonly: var(--clue-color-bg-secondary)
+
+	//background color (textarea)
 	--clue-text-field-base-textarea-background-color: var(--clue-color-bg-secondary)
 
+	//border width
 	--clue-text-field-base-border-width: 1px
 	--clue-text-field-base-border-width-focus: 2px
 	--clue-text-field-base-border-width-error: 2px
 	--clue-text-field-base-border-width-disabled: 1px
+	--clue-text-field-base-border-width-readonly: 0
 
+	//border width (textarea)
+	--clue-text-field-base-textarea-border-width: 0
+	--clue-text-field-base-textarea-border-width-focus: 0
+	--clue-text-field-base-textarea-border-width-error: 0
+	--clue-text-field-base-textarea-border-width-disabled: 0
+
+	//border radius
+	--clue-text-field-base-border-radius: var(--clue-size-border-radius-3)
+
+	//font size
 	--clue-text-field-base-font-size: 16px
+
+	//font weight
 	--clue-text-field-base-font-weight: 400
 
+	//color
 	--clue-text-field-base-color: #000000
 	--clue-text-field-base-color-hover: #484B5B
 	--clue-text-field-base-color-focus: #000000
 	--clue-text-field-base-color-disabled: var(--clue-color-txt-placeholder)
 
+	//placeholder color
 	--clue-text-field-base-placeholder-color: #9397A9
 	--clue-text-field-base-placeholder-color-hover: #484B5B
 	--clue-text-field-base-placeholder-color-focus: #484B5B

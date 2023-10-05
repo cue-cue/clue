@@ -49,14 +49,13 @@
 </ButtonField>
 
 <style lang='sass'>
+    @import './Button'
+    :global(:root)
+        +button-vars()
     :global(.ClueButton)
-        --clue-button-field-padding-x: 16px
-        --clue-button-field-padding-y: 12px
-        --clue-button-field-border-radius: 50px
-        --clue-button-font-size: 16px
-        --clue-button-font-weight: 500
-        --clue-button-gap: 12px
-        --clue-button-icon-size: 24px
+        --clue-button-field-padding-x: var(--clue-button-padding-x)
+        --clue-button-field-padding-y: var(--clue-button-padding-y)
+        --clue-button-field-border-radius: var(--clue-button-border-radius)
         display: inline-flex
         text-align: center
         align-items: center
@@ -70,12 +69,9 @@
             width: var(--clue-button-icon-size)
             height: var(--clue-button-icon-size)
     :global(.ClueButton[data-size='small'])
-        --clue-button-field-padding-y: 10px
-        --clue-button-icon-size: 20px
-        --clue-button-font-size: 14px
+        +button-apply-size-vars('small')
     :global(.ClueButton[data-size='large'])
-        --clue-button-field-padding-y: 16px
-        --clue-button-field-padding-x: 24px
+        +button-apply-size-vars('large')
     :global(.ClueButton__icon_start)
         margin-right: var(--clue-button-gap)
     :global(.ClueButton__icon_end)

@@ -50,81 +50,68 @@
 </svelte:element>
 
 <style lang='sass'>
+	@import './ButtonField'
+	:global(:root)
+		+button-field-vars()
 	.ClueButtonField
 		// --clue-button-field-padding-x: 0
 		// --clue-button-field-padding-y: 0
 		// --clue-button-field-border-radius: 50px
 		//background color
-		--clue-button-field-background-color: #5B4C9F
-		--clue-button-field-background-color-hover: #473B7C
-		--clue-button-field-background-color-active: #4F428A
-		--clue-button-field-background-color-disabled: #E8E9ED
+		--background-color: var(--clue-button-field-background-color)
+		--background-color-hover: var(--clue-button-field-background-color-hover)
+		--background-color-active: var(--clue-button-field-background-color-active)
+		--background-color-disabled: var(--clue-button-field-background-color-disabled)
+
 		//color
-		--clue-button-field-color: #EFEEF7
-		--clue-button-field-color-hover: #EFEEF7
-		--clue-button-field-color-active: #EFEEF7
-		--clue-button-field-color-disabled: #B0B2C0
-		//border color
-		--clue-button-border-color: transparent
-		--clue-button-border-color-hover: transparent
-		--clue-button-border-color-active: transparent
-		--clue-button-border-color-disabled: transparent
-		--clue-button-border-color-current: var(--clue-button-border-color)
+		--color: var(--clue-button-field-color)
+		--color-hover: var(--clue-button-field-color-hover)
+		--color-active: var(--clue-button-field-color-active)
+		--color-disabled: var(--clue-button-field-color-disabled)
+
+		//border-color
+		--border-color: var(--clue-button-field-border-color)
+		--border-color-hover: var(--clue-button-field-border-color-hover)
+		--border-color-active: var(--clue-button-field-border-color-active)
+		--border-color-disabled: var(--clue-button-field-border-color-disabled)
+		--border-color-current: var(--border-color)
+		
 		//border width
-		--clue-button-border-width: 1px
-		--clue-button-border-width-disabled: 0
-		--clue-button-border-width-current: var(--clue-button-border-width)
+		--border-width: 1px
+		--border-width-disabled: 0
+		--border-width-current: var(--border-width)
 		
 		outline: none
 		appearance: none
 		border: none
 		border-radius: var(--clue-button-field-border-radius, 50px)
 		padding: var(--clue-button-field-padding-y, 0) var(--clue-button-field-padding-x, 0)
-		background-color: var(--clue-button-field-background-color)
-		color: var(--clue-button-field-color)
-		box-shadow: inset 0 0 0 var(--clue-button-border-width-current) var(--clue-button-border-color-current)
+		background-color: var(--background-color)
+		color: var(--color)
 		transition: var(--clue-transition)
 		transition-property: color, background, width, height, padding, border, box-shadow
 		@at-root button#{&}, a#{&}
 			cursor: pointer
 		&:not(&[data-disabled], &[disabled])
 			&:hover
-				background-color: var(--clue-button-field-background-color-hover)
-				color: var(--clue-button-field-color-hover)
-				--clue-button-border-color-current: var(--clue-button-border-color-hover)
+				background-color: var(--background-color-hover)
+				color: var(--color-hover)
+				--border-color-current: var(--border-color-hover)
 			&:active
-				background-color: var(--clue-button-field-background-color-active)
-				color: var(--clue-button-field-color-active)
-				--clue-button-border-color-current: var(--clue-button-border-color-active)
+				background-color: var(--background-color-active)
+				color: var(--color-active)
+				--border-color-current: var(--border-color-active)
 		&[disabled], &[data-disabled]
 			cursor: not-allowed
-			background-color: var(--clue-button-field-background-color-disabled)
-			color: var(--clue-button-field-color-disabled)
-			--clue-button-border-color-current: var(--clue-button-border-color-disabled)
+			background-color: var(--background-color-disabled)
+			color: var(--color-disabled)
+			--border-color-current: var(--border-color-disabled)
 		&[data-color='action']
-			--clue-button-field-background-color: #EECD47
-			--clue-button-field-background-color-hover: #EAC11A
-			--clue-button-field-background-color-active: #EAC11A
-			--clue-button-field-color: #1B1C22
-			--clue-button-field-color-hover: #1B1C22
-			--clue-button-field-color-active: #1B1C22
+			+button-field-apply-color-vars('action')
 		&[data-color='secondary']
-			--clue-button-field-background-color: #E6E3F2
-			--clue-button-field-background-color-hover: #DDD9ED
-			--clue-button-field-background-color-active: #DDD9ED
-			--clue-button-field-color: #5B4C9F
-			--clue-button-field-color-hover: #5B4C9F
-			--clue-button-field-color-active: #5B4C9F
+			+button-field-apply-color-vars('secondary')
 		&[data-color='ghost']
-			--clue-button-field-background-color: transparent
-			--clue-button-field-background-color-hover: #EFEEF7
-			--clue-button-field-background-color-active: #EFEEF7
-			--clue-button-field-background-color-disabled: transparent
-			--clue-button-field-color: #5B4C9F
-			--clue-button-field-color-hover: #5B4C9F
-			--clue-button-field-color-active: #5B4C9F
+			+button-field-apply-color-vars('ghost')
 		&[data-variant='outlined']
-			--clue-button-border-color: #D3CFE8
-			--clue-button-border-color-hover: #D3CFE8
-			--clue-button-border-color-active: #D3CFE8
+			box-shadow: inset 0 0 0 var(--border-width-current) var(--border-color-current)
 </style>

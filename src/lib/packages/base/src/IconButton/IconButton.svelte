@@ -31,25 +31,30 @@
 </ButtonField>
 
 <style lang='sass'>
+	@import './IconButton'
+	:global(:root)
+		+icon-button-vars()
+		
 	:global(.ClueIconButton)
-		--clue-icon-size: 48px
-		--clue-icon-button-icon-size: 24px
+		--size: var(--clue-icon-button-size)
+		--icon-size: var(--clue-icon-button-icon-size)
 		display: inline-flex
 		align-items: center
 		justify-content: center
 		flex: none
-		width: var(--clue-icon-size)
-		height: var(--clue-icon-size)
+		width: var(--size)
+		height: var(--size)
 		:global(.ClueIcon)
 			--clue-icon-color: currentColor
-			width: var(--clue-icon-button-icon-size)
-			height: var(--clue-icon-button-icon-size)
+			width: var(--icon-size)
+			height: var(--icon-size)
 	:global(.ClueIconButton[data-size='large'])
-		--clue-icon-size: 56px
+		--size: var(--clue-icon-button-size-large)
+		--icon-size: var(--clue-icon-button-icon-size-large)
 	:global(.ClueIconButton[data-size='small'])
-		--clue-icon-size: 40px
-		--clue-icon-button-icon-size: 20px
+		--size: var(--clue-icon-button-size-small)
+		--icon-size: var(--clue-icon-button-icon-size-small)
 	:global(.ClueIconButton[data-color='primary'])
-		--clue-button-field-background-color-disabled: #D3CFE8
-		--clue-button-field-color-disabled: #958AC7
+		--clue-button-field-background-color-disabled: var(--clue-icon-button-background-color-disabled-primary)
+		--clue-button-field-color-disabled: var(--clue-icon-button-color-disabled-primary)
 </style>

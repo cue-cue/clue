@@ -1,5 +1,12 @@
+import { config } from "$lib/packages/config.js";
+import { get } from "svelte/store";
 import { generateClassName } from "../index.js";
 
 export const generateClassNames = (slots:string[], prefix?:Parameters<typeof generateClassName>[1]):string => {
-    return slots.filter(slot => Boolean(slot)).map(slot => slot.split(' ')).flat().map(slot => generateClassName(slot, prefix)).join(' ')
+    const allSlots = new Set([...slots, ...get(config).customClassNames]
+        .filter(slot => Boolean(slot))
+        .map(slot => slot.split(' '))
+        .flat()
+        .map(slot => generateClassName(slot, prefix)))
+    return Array.from(allSlots).join(' ')
 }

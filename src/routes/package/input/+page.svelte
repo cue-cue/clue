@@ -100,9 +100,10 @@
         </TextField>
     </li>
     <li>
-        base with readonly<br>
+        with readonly<br>
         <TextField placeholder='Placeholder' readonly label='Label' helper='Assistive text'/>
         <TextField value="Value" readonly label='Label' helper='Assistive text'/>
+        <TextField multiline value="Value" readonly label='Label' helper='Assistive text'/>
         base with disabled and the TextFieldValue<br>
         <TextField readonly label='Label' helper='Assistive text'>
             Text value (manual)

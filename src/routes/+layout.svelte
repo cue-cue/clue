@@ -8,6 +8,9 @@
     import checkboxIcon from '@clue/icons/line/check-square.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
+	import { config } from "$lib/packages/config.js";
+
+    config.setCustomClassNames(['customClass'])
 
     const menuItems:(ComponentProps<Button> & {name:string})[] = [
         {

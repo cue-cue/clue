@@ -1,69 +1,131 @@
 @use "sass:map";
 @use 'sass:list';
 
-@mixin button-field-color($list) {
+@mixin button-field-color($list, $name: '') {
     $bg: list.nth($list, 1);
     $color: list.nth($list, 2);
     $border: list.nth($list, 3);
+
+    $postfix: '';
+
+    @if $name != '' {
+        $postfix: '-c-#{$name}'
+    }
+
+    $root: '--clue-button-field#{$postfix}';
+
     //background color
-    --clue-button-field-background-color: #{map.get($bg, 'base')};
-    --clue-button-field-background-color-hover: #{map.get($bg, 'hover')};
-    --clue-button-field-background-color-active: #{map.get($bg, 'active')};
-    --clue-button-field-background-color-disabled: #{map.get($bg, 'disabled')};
+    #{$root}-background-color: #{map.get($bg, 'base')};
+    #{$root}-background-color-hover: #{map.get($bg, 'hover')};
+    #{$root}-background-color-active: #{map.get($bg, 'active')};
+    #{$root}-background-color-disabled: #{map.get($bg, 'disabled')};
     //color
-    --clue-button-field-color: #{map.get($color, 'base')};
-    --clue-button-field-color-hover: #{map.get($color, 'hover')};
-    --clue-button-field-color-active: #{map.get($color, 'active')};
-    --clue-button-field-color-disabled: #{map.get($color, 'disabled')};
+    #{$root}-color: #{map.get($color, 'base')};
+    #{$root}-color-hover: #{map.get($color, 'hover')};
+    #{$root}-color-active: #{map.get($color, 'active')};
+    #{$root}-color-disabled: #{map.get($color, 'disabled')};
     //border
-    --clue-button-border-color: #{map.get($border, 'base')};
-    --clue-button-border-color-hover: #{map.get($border, 'hover')};
-    --clue-button-border-color-active: #{map.get($border, 'active')};
-    --clue-button-border-color-disabled: #{map.get($border, 'disabled')};
+    #{$root}-border-color: #{map.get($border, 'base')};
+    #{$root}-border-color-hover: #{map.get($border, 'hover')};
+    #{$root}-border-color-active: #{map.get($border, 'active')};
+    #{$root}-border-color-disabled: #{map.get($border, 'disabled')};
 };
 
-//colors
-
-//primary
-$button-field-color-primary-vars: (
-    'base': #5B4C9F,
-    'hover': #473B7C,
-    'active': #4F428A,
-    'disabled': #E8E9ED
-), (
-    'base': #EFEEF7,
-    'hover': #EFEEF7,
-    'active': #EFEEF7,
-    'disabled': #B0B2C0
-), (
-    'base': transparent,
-    'hover': transparent,
-    'active': transparent,
-    'disabled': transparent
-);
-
-@mixin button-field-color-primary() {
-    @include button-field-color($button-field-color-primary-vars)
+@mixin button-field-c-action-vars() {
+    @include button-field-color(((
+        'base': #EECD47,
+        'hover': #EAC11A,
+        'active': #EAC11A,
+        'disabled': var(--clue-button-field-background-color-disabled)
+    ), (
+        'base': #1B1C22,
+        'hover': #1B1C22,
+        'active': #1B1C22,
+        'disabled': var(--clue-button-field-color-disabled)
+    ), (
+        'base': var(--clue-button-field-border-color),
+        'hover': var(--clue-button-field-border-color-hover),
+        'active': var(--clue-button-field-border-color-active),
+        'disabled': var(--clue-button-field-border-color-disabled)
+    )), 'action');
 }
 
-//primary
-// $button-field-color-action-vars: (
-//     'base': #EECD47,
-//     'hover': #EAC11A,
-//     'active': #EAC11A,
-//     'disabled': #E8E9ED
-// ), (
-//     'base': #1B1C22,
-//     'hover': #1B1C22,
-//     'active': #1B1C22,
-//     'disabled': #B0B2C0
-// ), (
-//     'base': transparent,
-//     'hover': transparent,
-//     'active': transparent,
-//     'disabled': transparent
-// );
+@mixin button-field-c-secondary-vars() {
+    @include button-field-color(((
+        'base': #E6E3F2,
+        'hover': #DDD9ED,
+        'active': #DDD9ED,
+        'disabled': var(--clue-button-field-background-color-disabled)
+    ), (
+        'base': #5B4C9F,
+        'hover': #5B4C9F,
+        'active': #5B4C9F,
+        'disabled': var(--clue-button-field-color-disabled)
+    ), (
+        'base': var(--clue-button-field-border-color),
+        'hover': var(--clue-button-field-border-color-hover),
+        'active': var(--clue-button-field-border-color-active),
+        'disabled': var(--clue-button-field-border-color-disabled)
+    )), 'secondary');
+}
 
-// @mixin button-field-color-action() {
-//     @include button-field-color($button-field-color-action-vars)
-// }
+@mixin button-field-c-ghost-vars() {
+    @include button-field-color(((
+        'base': transparent,
+        'hover': #EFEEF7,
+        'active': #EFEEF7,
+        'disabled': transparent
+    ), (
+        'base': #5B4C9F,
+        'hover': #5B4C9F,
+        'active': #5B4C9F,
+        'disabled': var(--clue-button-field-color-disabled)
+    ), (
+        'base': #D3CFE8,
+        'hover': #D3CFE8,
+        'active': #D3CFE8,
+        'disabled': var(--clue-button-field-border-color-disabled)
+    )), 'ghost');
+}
+
+@mixin button-field-vars() {
+    //BASE
+    @include button-field-color(((
+        'base': #5B4C9F,
+        'hover': #473B7C,
+        'active': #4F428A,
+        'disabled': #E8E9ED
+    ), (
+        'base': #EFEEF7,
+        'hover': #EFEEF7,
+        'active': #EFEEF7,
+        'disabled': #B0B2C0
+    ), (
+        'base': transparent,
+        'hover': transparent,
+        'active': transparent,
+        'disabled': transparent
+    )));
+
+    @include button-field-c-action-vars();
+    @include button-field-c-secondary-vars();
+    @include button-field-c-ghost-vars();
+}
+
+@mixin button-field-apply-color-vars($color: 'action') {
+    $states: '', '-hover', '-active', '-disabled';
+    //background color
+    @each $state in $states {
+        --background-color#{$state}: #{'var(--clue-button-field-c-#{$color}-background-color#{$state})'};
+    }
+
+    //color
+    @each $state in $states {
+        --color#{$state}: #{'var(--clue-button-field-c-#{$color}-color#{$state})'};
+    }
+
+    //border-color
+    @each $state in $states {
+        --border-color#{$state}: #{'var(--clue-button-field-c-#{$color}-border-color#{$state})'};
+    }
+}

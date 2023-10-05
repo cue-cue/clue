@@ -62,13 +62,14 @@
 
 <style lang='sass'>
 	@import './TextFieldBase'
+	:global(:root)
+		+text-field-base-vars()
 	.ClueTextFieldBase
 		$root: &
-		+text-field-base-vars()
 		--box-shadow-color: var(--clue-text-field-base-border-color)
 		--box-shadow-size: var(--clue-text-field-base-border-width)
-		--background-color: #fff
-		--border-radius: var(--clue-size-border-radius-3)
+		--background-color: var(--clue-text-field-base-background-color)
+		--border-radius: var(--clue-text-field-base-border-radius)
 		display: flex
 		position: relative
 		width: auto
@@ -80,18 +81,16 @@
 		border-radius: var(--border-radius)
 		transition: var(--clue-transition)
 		transition-property: background, border-radius
-		&:not(&[data-disabled])
+		&:not(&[data-disabled], &[data-readonly])
 			&:hover
 				--box-shadow-color: var(--clue-text-field-base-border-color-hover)
 			&[data-multiline]
-				#{$root}__border
-					box-shadow: none
+				--box-shadow-size: var(--clue-text-field-base-textarea-border-width)
 		&[data-multiline]
-			--background-color: var(--clue-color-bg-secondary)
+			--background-color: var(--clue-text-field-base-textarea-background-color)
 		&[data-readonly]
-			--background-color: var(--clue-color-bg-secondary)
-			#{$root}__border
-				box-shadow: none
+			--background-color: var(--clue-text-field-base-background-color-readonly)
+			--box-shadow-size: var(--clue-text-field-base-border-width-readonly)
 		&[data-error]
 			--box-shadow-color: var(--clue-text-field-base-border-color-error)
 			--box-shadow-size: var(--clue-text-field-base-border-width-error)
@@ -115,9 +114,10 @@
 			transition: var(--clue-transition)
 			transition-property: box-shadow
 
-		:global(.ClueInput:focus ~ #{$root}__border)
-			--box-shadow-color: var(--clue-text-field-base-border-color-focus)
-			--box-shadow-size: var(--clue-text-field-base-border-width-focus)
+		&:not(&[data-disabled])
+			:global(.ClueInput:focus ~ #{$root}__border)
+				--box-shadow-color: var(--clue-text-field-base-border-color-focus)
+				--box-shadow-size: var(--clue-text-field-base-border-width-focus)
 
 		:global(.ClueInput), :global(.ClueTextFieldValue)
 			--placeholder-color: var(--clue-text-field-base-placeholder-color)
@@ -140,7 +140,7 @@
 				color: var(--placeholder-color)
 		:global(.ClueInput[type='password'])
 			letter-spacing: .18em
-		&:not([data-disabled])
+		&:not(&[data-disabled], &[data-readonly])
 			:global(.ClueInput), :global(.ClueTextFieldValue)
 				&:hover
 					--placeholder-color: var(--clue-text-field-base-placeholder-color-hover)
