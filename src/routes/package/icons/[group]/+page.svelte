@@ -43,7 +43,7 @@
             let:data={icon}
             pageMode={true}
         >
-                <h4>{@html icon.name.replace(new RegExp(_searchValue, 'gi'), `<span style='color: #5B4C9F'>${searchValue}</span>`)}</h4> 
+                <h4>{@html icon.name.replace(new RegExp(_searchValue, 'gi'), `<span style='color: #5B4C9F'>${_searchValue}</span>`)}</h4> 
                 <ul style='display: flex; gap: 10px; list-style: none'>
                     {#each generateMoreSizeIcon(icon) as {icon:data, size}}
                         <li>
