@@ -28,7 +28,7 @@
         }))
     }
 
-    $: icons = allIcons.filter((icon) => icon.groupName === $page.params.group &&  icon.name.includes(searchValue)).map((icon, id) => ({...icon, id}))
+    $: icons = allIcons.filter((icon) => icon.groupName === $page.params.group &&  icon.name.includes(searchValue.replace(new RegExp(' ', 'gi'), '-'))).map((icon, id) => ({...icon, id}))
 </script>
 <div style="position: sticky; top: 16px">
     <TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
