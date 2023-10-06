@@ -28,7 +28,8 @@
         }))
     }
 
-    $: icons = allIcons.filter((icon) => icon.groupName === $page.params.group &&  icon.name.includes(searchValue.replace(new RegExp(' ', 'gi'), '-'))).map((icon, id) => ({...icon, id}))
+    $: _searchValue = searchValue.replace(new RegExp(' ', 'gi'), '-')
+    $: icons = allIcons.filter((icon) => icon.groupName === $page.params.group &&  icon.name.includes(_searchValue)).map((icon, id) => ({...icon, id}))
 </script>
 <div style="position: sticky; top: 16px">
     <TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
@@ -42,7 +43,7 @@
             let:data={icon}
             pageMode={true}
         >
-                <h4>{@html icon.name.replace(new RegExp(searchValue, 'gi'), `<span style='color: #5B4C9F'>${searchValue}</span>`)}</h4> 
+                <h4>{@html icon.name.replace(new RegExp(_searchValue, 'gi'), `<span style='color: #5B4C9F'>${searchValue}</span>`)}</h4> 
                 <ul style='display: flex; gap: 10px; list-style: none'>
                     {#each generateMoreSizeIcon(icon) as {icon:data, size}}
                         <li>
