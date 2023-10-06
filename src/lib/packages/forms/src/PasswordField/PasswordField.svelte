@@ -2,8 +2,8 @@
 	import {generateClassNames} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
 	import { TextFieldButton, TextFieldBase, TextField } from '../index.js';
-	import eye from '@clue/icons/line/eye.svg'
-	import calendar from '@clue/icons/line/calendar.svg'
+	import icon from '@clue/icons/line/eye.svg'
+	import iconClosed from '@clue/icons/line/eye-closed.svg'
 
 	interface $$Props extends Pick<ComponentProps<TextFieldBase>, 'type'> {
 		class?:string
@@ -38,7 +38,7 @@
 		<TextFieldBase type={visible ? 'text' : 'password'} {...$$restProps}>
 			<svelte:fragment slot='buttons'>
 				<TextFieldButton
-					icon={visible ? calendar : eye}
+					icon={visible ? icon : iconClosed}
 					on:click={handler.changeClick}
 				/>
 			</svelte:fragment>
