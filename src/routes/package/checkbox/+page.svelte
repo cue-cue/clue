@@ -2,6 +2,7 @@
 	import { randomId } from '@clue/utils';
     import {Checkbox, Radio} from '@clue/forms'
 	import type { ComponentProps } from 'svelte';
+	import Switch from '$lib/packages/forms/src/Switch/Switch.svelte'
 
     const items:(Omit<ComponentProps<Checkbox>, 'value' | 'id' | 'group'> & {
         component: any
@@ -25,6 +26,15 @@
             id: 'Radio + label',
             label: 'Lorem ipsum',
             component: Radio
+        },
+        {
+            id: 'Switch',
+            component: Switch
+        },
+        {
+            id: 'Switch + label',
+            label: 'Lorem ipsum',
+            component: Switch
         }
     ]
 

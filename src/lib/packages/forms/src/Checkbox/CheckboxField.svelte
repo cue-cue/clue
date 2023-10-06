@@ -25,8 +25,8 @@
 		$root: &
 		$label: #{$root}__label
 		--border-radius: var(--clue-checkbox-field-border-radius)
-		width: var(--clue-checkbox-field-size)
-		height: var(--clue-checkbox-field-size)
+		width: var(--clue-checkbox-field-width)
+		height: var(--clue-checkbox-field-height)
 		&__label
 			display: inline-block
 			width: 100%

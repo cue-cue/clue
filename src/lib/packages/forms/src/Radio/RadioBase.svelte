@@ -33,7 +33,7 @@
 		--clue-checkbox-field-checked-background-color-disabled: var(--clue-radio-base-checked-background-color-disabled)
 		:global(input:checked:disabled ~ .ClueCheckboxField__label)
 			&::after
-				background: var(--clue-radio-base-checked-icon-background-color-disabled)
+				background: var(--clue-radio-base-checked-thumb-background-color-disabled)
 		:global(input:checked ~ .ClueCheckboxField__label)
 			&::after
 				opacity: 1
@@ -46,7 +46,7 @@
 				transform: translate(-50%, -50%)
 				width: 8px
 				height: 8px
-				background: var(--clue-radio-base-icon-background-color)
+				background: var(--clue-radio-base-thumb-background-color)
 				border-radius: 50%
 				opacity: 0
 				transition: var(--clue-transition)

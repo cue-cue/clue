@@ -1,6 +1,7 @@
 @mixin checkbox-field-vars() {
     //size
-    --clue-checkbox-field-size: 20px;
+    --clue-checkbox-field-width: 20px;
+    --clue-checkbox-field-height: 20px;
     //border radius
     --clue-checkbox-field-border-radius: 5px;
     //border width
@@ -21,4 +22,11 @@
     --clue-checkbox-field-checked-background-color: #7567B6;
     --clue-checkbox-field-checked-background-color-hover: #5B4C9F;
     --clue-checkbox-field-checked-background-color-disabled: #B4ACD7;
+    //thumb background color
+    --clue-checkbox-field-thumb-background-color: #7567B6;
+    --clue-checkbox-field-thumb-background-color-hover: #5B4C9F;
+    --clue-checkbox-field-thumb-background-color-disabled: #B0B2C0;
+    //thumb background color checked
+    --clue-checkbox-field-checked-thumb-background-color: #fff;
+    --clue-checkbox-field-checked-thumb-background-color-disabled: #B0B2C0;
 }
