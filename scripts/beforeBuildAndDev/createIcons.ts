@@ -7,6 +7,7 @@ import { globSync } from "glob"
 import {clearDirectory} from '../clearDirectory.mjs'
 import packageJson from "../../src/lib/packages/icons/package.json" assert {type: 'json'}
 import { ViteWatcher } from '../viteWatcher.js'
+import {optimize} from 'svgo'
 
 const paths = {
     icons: `src/lib/packages/icons/src/assets/**/*.svg`,
@@ -186,11 +187,22 @@ const createGetAllIconsInRoutes = (icons:IconGroups) => {
     writeFileSync(paths.iconsList, res)
 }
 
+const optimizeIcons = (icons:IconGroups) => {
+    Object.values(icons).flat().forEach(icon => {
+        const res = optimize(readFileSync(icon.path, 'utf8'), {
+            path: icon.path,
+            multipass: true
+        })
+        writeFileSync(icon.path, res.data)
+    })
+}
+
 const init = () => {
     let icons = getAllIcons()
     console.log(`Start createIcons (length:${Object.entries(icons).map(([group, icons]) => `${group}: ${icons.length}`).join(' | ')})`)
     replaceFileNames(icons)
     icons = getAllIcons()
+    optimizeIcons(icons)
     // icons = getAllIcons()
     replaceColor(icons)
     // createImports(icons)
