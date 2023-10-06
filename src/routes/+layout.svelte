@@ -40,7 +40,8 @@
 <header>
     <nav>
         {#each menuItems as button (button.href)}
-            <Button {...button} size='small' color={$page.url.pathname.startsWith(button.href || '') ? 'primary' : 'ghost'}>{button.name}</Button>
+            {@const active = $page.url.pathname.startsWith(button.href || '')}
+            <Button {...button} size='small' variant={active ? 'filled' : 'ghost'} color={active ? 'primary' : 'secondary'} >{button.name}</Button>
         {/each}
     </nav>
     <hr>

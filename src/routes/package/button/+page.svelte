@@ -75,15 +75,16 @@
             })
         },
         {
-            name: 'Ghost',
+            name: 'Secondary: ghost',
             styles: getButtonStyles({
-                color: 'ghost'
+                color: 'secondary',
+                variant: 'ghost'
             })
         },
         {
-            name: 'Ghost Outlined',
+            name: 'Secondary: Outlined',
             styles: getButtonStyles({
-                color: 'ghost',
+                color: 'secondary',
                 variant: 'outlined'
             })
         },

@@ -7,8 +7,8 @@
 		class?:string
 		tag?:'button' | 'div' | 'a'
 		disabled?:boolean
-		color?:'action' | 'primary' | 'secondary' | 'ghost'
-		variant?:'filled' | 'outlined'
+		color?:'action' | 'primary' | 'secondary'
+		variant?:'filled' | 'ghost' | 'outlined'
 	}
 
 	let className = ''
@@ -62,12 +62,19 @@
 		--background-color-hover: var(--clue-button-field-background-color-hover)
 		--background-color-active: var(--clue-button-field-background-color-active)
 		--background-color-disabled: var(--clue-button-field-background-color-disabled)
+		//ghost
+		--v-ghost-background-color-hover: var(--clue-button-field-background-color-hover)
+		--v-ghost-background-color-active: var(--clue-button-field-background-color-active)
 
 		//color
 		--color: var(--clue-button-field-color)
 		--color-hover: var(--clue-button-field-color-hover)
 		--color-active: var(--clue-button-field-color-active)
 		--color-disabled: var(--clue-button-field-color-disabled)
+		//ghost
+		--v-ghost-color: var(--clue-button-field-color)
+		--v-ghost-color-hover: var(--clue-button-field-color-hover)
+		--v-ghost-color-active: var(--clue-button-field-color-active)
 
 		//border-color
 		--border-color: var(--clue-button-field-border-color)
@@ -110,8 +117,27 @@
 			+button-field-apply-color-vars('action')
 		&[data-color='secondary']
 			+button-field-apply-color-vars('secondary')
-		&[data-color='ghost']
-			+button-field-apply-color-vars('ghost')
+		&[data-variant='ghost']
+			//background
+			--background-color: transparent
+			--background-color-hover: var(--v-ghost-background-color-active)
+			--background-color-active: var(--v-ghost-background-color-active)
+			--background-color-disabled: transparent
+
+			//color
+			--color: var(--v-ghost-color)
+			--color-hover: var(--v-ghost-color-hover)
+			--color-active: var(--v-ghost-color-active)
 		&[data-variant='outlined']
 			box-shadow: inset 0 0 0 var(--border-width-current) var(--border-color-current)
+			//background
+			--background-color: var(--v-outlined-background-color)
+			--background-color-hover: var(--v-outlined-background-color-active)
+			--background-color-active: var(--v-outlined-background-color-active)
+			--background-color-disabled: var(--v-outlined-background-color-disabled)
+
+			//color
+			--color: var(--v-outlined-color)
+			--color-hover: var(--v-outlined-color-hover)
+			--color-active: var(--v-outlined-color-active)
 </style>
