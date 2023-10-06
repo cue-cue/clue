@@ -27,6 +27,7 @@
 		--border-radius: var(--clue-checkbox-field-border-radius)
 		width: var(--clue-checkbox-field-width)
 		height: var(--clue-checkbox-field-height)
+		flex: none
 		&__label
 			display: inline-block
 			width: 100%
