@@ -20,7 +20,7 @@
         return values.map(value => {
             return {
                 value,
-                cssVar: `hsl(${data.h}, ${data.s}%, ${(1000 - value) / 10}%)`
+                cssVar: `hsl(${data.h}, ${data.s}%, ${data.l + ((500 - value) / 10)}%)`
             }
         })
     }
