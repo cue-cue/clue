@@ -3,7 +3,7 @@
     import { Color } from "@clue/utils"
     import customColorIcon from '@clue/icons/line/cursor-click.svg'
 
-    const colors = ['aubergine', 'gray', 'mustard', 'sky', 'green', 'coral']
+    const colors = ['primary', 'gray', 'active', 'sky', 'green', 'coral']
     const values = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
     const getVariants = (color:string) => {

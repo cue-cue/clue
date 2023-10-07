@@ -2,9 +2,9 @@
 
 @mixin vars-colors() {
     --clue-color-white: #fff;
-    @include color-generator('aubergine', #5B4C9F);
+    @include color-generator('primary', #5B4C9F);
+    @include color-generator('active', #EECD47);
     @include color-generator('gray', #5F6377);
-    @include color-generator('mustard', #EECD47);
     @include color-generator('sky', #C9E2EE);
     @include color-generator('green', #839E44);
     @include color-generator('coral', #D15A45);
