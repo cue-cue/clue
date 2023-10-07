@@ -4,10 +4,10 @@
     --clue-color-white: #fff;
     @include color-primary-generator(#5B4C9F);
     @include color-active-generator(#EECD47);
+    @include color-positive-generator(#839E44);
+    @include color-negative-generator(#D15A45);
     @include color-generator('gray', #5F6377);
     @include color-generator('blue', #C9E2EE);
-    @include color-generator('positive', #839E44);
-    @include color-generator('negative', #D15A45);
 
     --clue-color-txt-placeholder: #B0B2C0;
 

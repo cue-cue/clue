@@ -50,9 +50,13 @@
             <h3>Custom color: {customColor}</h3>
             <ul class='variant-list'>
                 {#each getVariantsFromHSL(customHSLResult) as data (data.value)}
-                    <li style:--color={data.hsl} title={data.hsl}>
-                        <div><span>{data.hex}</span></div>
-                        <h5>{data.value}</h5>
+                    <li style:--color={data.hex} title={data.hsl} data-value={data.value}>
+                        <div>
+                            <span>
+                                <b>{data.hex}</b>
+                                <small>{data.hsl.replaceAll(/[\s(hsl)]/gi, '')}</small>
+                            </span>
+                        </div>
                     </li>
                 {/each}
             </ul>
@@ -65,9 +69,8 @@
             <h3>{color}</h3>
             <ul class='variant-list'>
                 {#each getVariants(color) as data (data.value)}
-                    <li style:--color={`var(${data.cssVar})`}>
+                    <li style:--color={`var(${data.cssVar})`} data-value={data.value}>
                         <div></div>
-                        <h5>{data.value}</h5>
                     </li>
                 {/each}
             </ul>
@@ -128,6 +131,26 @@
             list-style: none
             text-align: center
             padding: 0
+            margin: 0
+            &::after
+                content: attr(data-value)
+                display: block
+                font-size: 14px
+                font-weight: 600
+                margin-top: 10px
+            &[data-value='500']
+                div
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 8px
+                        left: 50%
+                        transform: translateX(-50%)
+                        width: 50%
+                        height: 4px
+                        border-radius: 10px
+                        background: var(--clue-color-white)
+                        mix-blend-mode: difference
             div
                 position: relative
                 width: 100%
@@ -145,7 +168,6 @@
                     font-weight: 500
                     color: var(--clue-color-white)
                     mix-blend-mode: difference
-            h5
-                margin-top: 10px
-                margin-bottom: 0
+                    small
+                        font-size: 8px
 </style>

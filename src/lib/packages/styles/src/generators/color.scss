@@ -24,3 +24,9 @@
 @mixin color-active-generator($color) {
     @include color-generator('active', $color)
 }
+@mixin color-positive-generator($color) {
+    @include color-generator('positive', $color)
+}
+@mixin color-negative-generator($color) {
+    @include color-generator('negative', $color)
+}
