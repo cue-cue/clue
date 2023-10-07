@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use 'sass:math';
+
 @mixin color-generator($name, $color) {
     // @debug 'color-generator start #{$name} #{$color}';
     $root: '--clue-color-#{$name}';
@@ -9,4 +10,12 @@
         // @debug $postfix, percentage($lightnessPercent), color.adjust($color, $lightness: math.percentage($lightnessPercent));
         #{$root}-#{$postfix}: color.adjust($color, $lightness: math.percentage($lightnessPercent));
     }
+}
+
+@mixin color-primary-generator($color) {
+    @include color-generator('primary', $color)
+}
+
+@mixin color-active-generator($color) {
+    @include color-generator('active', $color)
 }

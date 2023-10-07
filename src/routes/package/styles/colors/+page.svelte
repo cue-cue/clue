@@ -32,7 +32,7 @@
 <h2>Colors</h2>
 <div class='custom-color' style:--color={customHSLResult.color}>
     <!-- svelte-ignore a11y-label-has-associated-control -->
-    <label class='color-picker' style={`box-shadow: ${customColor.toLowerCase() === '#ffffff' ? '0 0 0 5px var(--clue-color-aubergine-100)' : 'none'}`}>
+    <label class='color-picker' style={`box-shadow: ${customColor.toLowerCase() === '#ffffff' ? '0 0 0 5px var(--clue-color-primary-100)' : 'none'}`}>
         <Icon icon={customColorIcon}/>
         <input type='color' bind:value={customColor}/>
         <span>{customColor}</span>
