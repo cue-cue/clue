@@ -18,9 +18,17 @@
 
     const getVariantsFromHSL = ({data}:ReturnType<typeof Color.hexToHSL>) => {
         return values.map(value => {
+            let l = data.l + ((500 - value) / 10)
+            if (l > 100) {
+                l = 100
+            } else if (l < 0) {
+                l = 0
+            }
+            const hsl = `hsl(${data.h}, ${data.s}%, ${l}%)`
             return {
                 value,
-                cssVar: `hsl(${data.h}, ${data.s}%, ${data.l + ((500 - value) / 10)}%)`
+                hsl,
+                hex: Color.hslToHEX(hsl).color
             }
         })
     }
@@ -42,7 +50,8 @@
             <h3>Custom color: {customColor}</h3>
             <ul class='variant-list'>
                 {#each getVariantsFromHSL(customHSLResult) as data (data.value)}
-                    <li style:--color={data.cssVar} title={data.cssVar}>
+                    <li style:--color={data.hex}>
+                        <div><span>{data.hex}</span></div>
                         <h5>{data.value}</h5>
                     </li>
                 {/each}
@@ -57,6 +66,7 @@
             <ul class='variant-list'>
                 {#each getVariants(color) as data (data.value)}
                     <li style:--color={`var(${data.cssVar})`}>
+                        <div></div>
                         <h5>{data.value}</h5>
                     </li>
                 {/each}
@@ -111,20 +121,30 @@
         padding: 0
     .variant-list
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr))
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr))
         gap: 20px
         padding: 0
         li
             list-style: none
             text-align: center
             padding: 0
-            &::before
-                content: ''
-                display: block
+            div
+                position: relative
                 width: 100%
                 padding-bottom: 100%
                 background: var(--color)
                 border-radius: var(--clue-size-border-radius)
+                span
+                    display: block
+                    position: absolute
+                    text-align: center
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    font-size: 14px
+                    font-weight: 500
+                    color: #fff
+                    mix-blend-mode: difference
             h5
                 margin-top: 10px
                 margin-bottom: 0

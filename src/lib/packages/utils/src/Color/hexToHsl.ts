@@ -1,4 +1,6 @@
-export const hexToHSL = (hex:string) => {
+import type { ColorTransferHSL } from "./types.js"
+
+export const hexToHSL:ColorTransferHSL = (hex) => {
 
     const normalizedHex = hex.replace('#', '')
 
