@@ -50,6 +50,7 @@
 		:global(input:disabled ~ #{$label})
 			cursor: not-allowed
 			border-color: var(--clue-checkbox-field-border-color-disabled)
+			background-color: var(--clue-checkbox-field-background-color-disabled)
 		:global(input:disabled:checked ~ #{$label})
 			background-color: var(--clue-checkbox-field-checked-background-color-disabled)
 			border-color: var(--clue-checkbox-field-checked-border-color-disabled)
