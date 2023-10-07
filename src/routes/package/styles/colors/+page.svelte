@@ -3,8 +3,8 @@
     import { Color } from "@clue/utils"
     import customColorIcon from '@clue/icons/line/cursor-click.svg'
 
-    const colors = ['primary', 'gray', 'active', 'sky', 'green', 'coral']
-    const values = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
+    const colors = ['primary', 'gray', 'active', 'blue', 'positive', 'negative']
+    const values = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990]
 
     const getVariants = (color:string) => {
         return values.map(value => {
@@ -50,7 +50,7 @@
             <h3>Custom color: {customColor}</h3>
             <ul class='variant-list'>
                 {#each getVariantsFromHSL(customHSLResult) as data (data.value)}
-                    <li style:--color={data.hex}>
+                    <li style:--color={data.hsl} title={data.hsl}>
                         <div><span>{data.hex}</span></div>
                         <h5>{data.value}</h5>
                     </li>
@@ -88,7 +88,7 @@
         text-align: center
         width: 280px
         border-radius: var(--clue-size-border-radius)
-        background: #fff
+        background: var(--clue-color-white)
         border: 4px solid var(--color)
         cursor: pointer
         position: relative
@@ -143,7 +143,7 @@
                     transform: translate(-50%, -50%)
                     font-size: 14px
                     font-weight: 500
-                    color: #fff
+                    color: var(--clue-color-white)
                     mix-blend-mode: difference
             h5
                 margin-top: 10px

@@ -2,14 +2,19 @@
 @use 'sass:math';
 
 @mixin color-generator($name, $color) {
-    // @debug 'color-generator start #{$name} #{$color}';
+    // @debug 'color-generator start #{$name} #{$color} hue:#{color.hue($color)}';
     $root: '--clue-color-#{$name}';
-    $lightnessList: 0, .1, .2, .3, .4, .45, -.1, -.2, -.3, -.4, -.45;
-    @each $lightnessPercent in $lightnessList {
-        $postfix: 500 - 1000 * $lightnessPercent;
-        // @debug $postfix, percentage($lightnessPercent), color.adjust($color, $lightness: math.percentage($lightnessPercent));
-        #{$root}-#{$postfix}: color.adjust($color, $lightness: math.percentage($lightnessPercent));
+    $lightnessList: 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990;
+    @each $lightnessValue in $lightnessList {
+        $percent: math.div(500 - $lightnessValue, 1000);
+        $colorResult: color.adjust($color, $lightness: math.percentage($percent));
+
+        // @debug $lightnessValue, $percent, 46% + math.percentage($percent), $colorResult, color.hue($colorResult), color.saturation($colorResult), color.lightness($colorResult);
+        $colorString: 'hsl(#{math.round(color.hue($colorResult))}, #{math.round(color.saturation($colorResult))}, #{math.round(color.lightness($colorResult))})';
+        // @debug $colorString;
+        #{$root}-#{$lightnessValue}: #{$colorString};
     }
+    #{$root}: #{'var(#{$root}-500)'}
 }
 
 @mixin color-primary-generator($color) {
