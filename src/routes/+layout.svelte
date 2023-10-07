@@ -6,6 +6,7 @@
     import iconsIcon from '@clue/icons/line/papers.svg'
     import buttonIcon from '@clue/icons/line/bell.svg'
     import checkboxIcon from '@clue/icons/line/check-square.svg'
+    import colorsIcon from '@clue/icons/line/apple-fruit.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
 	import { config } from "$lib/packages/config.js";
@@ -32,6 +33,11 @@
             name: 'Checkbox',
             href: '/package/checkbox',
             startIcon: checkboxIcon
+        },
+        {
+            name: 'Colors',
+            href: '/package/styles/colors',
+            startIcon: colorsIcon
         }
     ]
 

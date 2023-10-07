@@ -1,0 +1,23 @@
+@import '../generators/color';
+
+@mixin vars-colors() {
+    --clue-color-white: #fff;
+    @include color-generator('aubergine', #5B4C9F);
+    @include color-generator('gray', #5F6377);
+    @include color-generator('mustard', #EECD47);
+    @include color-generator('sky', #C9E2EE);
+    @include color-generator('green', #839E44);
+    @include color-generator('coral', #D15A45);
+
+    --clue-color-txt-placeholder: #B0B2C0;
+
+    --clue-color-button-action-bg-disabled: #E8E9ED;
+
+    --clue-color-border-disabled: #E8E9ED;
+    --clue-color-border: #B0B2C0;
+
+    --clue-color-icon: #32343F;
+    --clue-color-icon-secondary: #5F6377;
+
+    --clue-color-bg-secondary: #F3F3F7;
+}
