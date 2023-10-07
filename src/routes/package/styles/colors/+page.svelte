@@ -81,6 +81,7 @@
         background: #fff
         border: 4px solid var(--color)
         cursor: pointer
+        position: relative
         transition: var(--clue-transition)
         transition-property: box-shadow
         :global(.ClueIcon)
@@ -96,7 +97,14 @@
             font-weight: 600
             color: var(--color)
         input
-            display: none
+            // display: none
+            position: absolute
+            top: -100px
+            right: -40px
+            width: 0
+            height: 0
+            pointer-events: none
+            opacity: 0
     .color-list
         width: 100%
         list-style: none
