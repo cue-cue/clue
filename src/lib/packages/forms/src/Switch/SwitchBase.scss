@@ -2,8 +2,7 @@
     --clue-switch-base-width: 42px;
     --clue-switch-base-height: 24px;
 
-    --clue-switch-background-color-disabled: #F4F4F6;
-    --clue-switch-checked-background-color-disabled: var(--clue-switch-background-color-disabled);
+    --clue-switch-checked-background-color-disabled: var(--clue-checkbox-field-background-color-disabled);
     
     --clue-switch-checked-border-color-disabled: transparent;
 

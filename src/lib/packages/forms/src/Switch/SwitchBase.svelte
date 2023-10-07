@@ -32,11 +32,14 @@
 	:global(.ClueSwitchBase)
 		--clue-checkbox-field-width: var(--clue-switch-base-width)
 		--clue-checkbox-field-height: var(--clue-switch-base-height)
-		--clue-checkbox-field-border-radius: var(--clue-switch-base-height)
-		--clue-checkbox-field-background-color-disabled: var(--clue-switch-background-color-disabled)
+
 		--clue-checkbox-field-checked-background-color-disabled: var(--clue-switch-checked-background-color-disabled)
+
+		--clue-checkbox-field-border-radius: var(--clue-switch-base-height)
 		--clue-checkbox-field-border-color-disabled: var(--clue-switch-checked-border-color-disabled)
+		
 		--thumb-space: calc((var(--clue-switch-base-height) - var(--clue-switch-thumb-height)) / 2 - var(--clue-checkbox-field-border-width))
+
 		:global(input:disabled ~ .ClueCheckboxField__label)
 			&::after
 				background-color: var(--clue-switch-thumb-background-color-disabled)

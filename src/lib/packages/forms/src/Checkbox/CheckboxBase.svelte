@@ -31,6 +31,9 @@
 	:global(:root)
 		+checkbox-base-vars()
 	:global(.ClueCheckboxBase)
+		:global(input:not(:checked):disabled ~ .ClueCheckboxField__label)
+			&::after
+				opacity: 0
 		:global(.ClueCheckboxField__label)
 			&::after
 				content: ''
@@ -44,4 +47,6 @@
 				background-repeat: no-repeat
 				background-size: 12px 10px
 				background-position: center center
+				transition: var(--clue-transition)
+				transition-property: opacity
 </style>
