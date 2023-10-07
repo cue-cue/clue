@@ -74,9 +74,9 @@
         display: flex
         align-items: center
         justify-content: center
-        padding: 5px 16px
+        padding: 5px 0
         text-align: center
-        width: 240px
+        width: 280px
         border-radius: var(--clue-size-border-radius)
         background: #fff
         border: 4px solid var(--color)
@@ -90,7 +90,7 @@
             height: 60px
             transition: none
         span
-            margin-left: 20px
+            margin-left: 10px
             font-size: 40px
             display: block
             font-weight: 600
