@@ -48,7 +48,7 @@
 
 <style lang='sass'>
 	@import './ButtonField'
-	:global(:root)
+	:global(body)
 		+button-field-vars()
 	.ClueButtonField
 		// --clue-button-field-padding-x: 0

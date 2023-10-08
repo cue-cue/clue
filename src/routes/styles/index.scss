@@ -3,12 +3,12 @@ body {
     --dot-color: #2c210018;
     --dot-size: 2px;
     --dot-space: 24px;
+    padding: 0 20px;
 	background:
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
     font-family: var(--clue-font-family);
-    color: #2c2100;
 }
 
 hr {
