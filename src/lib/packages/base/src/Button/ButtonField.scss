@@ -41,8 +41,8 @@
     @include button-field-type('', (
         'background-color': (
             'default': var(--clue-color-primary),
-            'hover': #473B7C,
-            'active': #4F428A,
+            'hover': var(--clue-color-primary-600),
+            'active': var(--clue-color-primary-600),
             'disabled': #E8E9ED
         ),
         'color': (
