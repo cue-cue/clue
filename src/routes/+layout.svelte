@@ -13,8 +13,6 @@
     import { onMount } from "svelte"
     import {compileString} from 'sass'
 
-	export let data
-
     config.setCustomClassNames(['customClass'])
 
     const menuItems:(ComponentProps<Button> & {name:string})[] = [
@@ -51,10 +49,34 @@
 		'positive': '#839E44',
 		'negative': '#D15A45',
 	}
-	
+
 	const loadColorsInStyles = () => {
+
+		const colorGeneratorScss = `
+			@use 'sass:color';
+			@use 'sass:math';
+
+			@function get-color-by-value($color, $value: 500) {
+				$percent: math.div(500 - $value, 1000);
+				$colorResult: color.adjust($color, $lightness: math.percentage($percent));
+
+				$colorString: 'hsl(#{math.round(color.hue($colorResult))}, #{math.round(color.saturation($colorResult))}, #{math.round(color.lightness($colorResult))})';
+				@return $colorString;
+			}
+
+			@mixin color-generator($name, $color) {
+				$root: '--clue-color-#{$name}';
+				$lightnessList: 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990;
+				@each $lightnessValue in $lightnessList {
+					$colorString: get-color-by-value($color, $lightnessValue);
+					#{$root}-#{$lightnessValue}: #{$colorString};
+				}
+				#{$root}: #{'var(#{$root}-500)'}
+			}
+		`
+
 		const scss = `
-			${data.colorGeneratorScss}
+			${colorGeneratorScss}
             body[clue-custom] {
 				${Object.entries(colors).map(([name, color]) => `@include color-generator('${name}', ${color});`).join('\n')}
 			}
