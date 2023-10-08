@@ -7,26 +7,26 @@
 	//border width
 	--clue-checkbox-field-border-width: 2px;
 	//border color
-	--clue-checkbox-field-border-color: #b0b2c0;
-	--clue-checkbox-field-border-color-hover: #5b4c9f;
-	--clue-checkbox-field-border-color-disabled: #ccced6;
+	--clue-checkbox-field-border-color: var(--clue-color-gray-200);
+	--clue-checkbox-field-border-color-hover: var(--clue-color-primary);
+	--clue-checkbox-field-border-color-disabled: var(--clue-color-gray-100);
 	//border color checked
 	--clue-checkbox-field-checked-border-color: transparent;
 	--clue-checkbox-field-checked-border-color-hover: transparent;
 	--clue-checkbox-field-checked-border-color-disabled: transparent;
 	//background color
-	--clue-checkbox-field-background-color: #fff;
-	--clue-checkbox-field-background-color-hover: #fff;
+	--clue-checkbox-field-background-color: var(--clue-color-white);
+	--clue-checkbox-field-background-color-hover: var(--clue-color-white);
 	--clue-checkbox-field-background-color-disabled: #f4f4f6;
 	//background color checked
-	--clue-checkbox-field-checked-background-color: #7567b6;
-	--clue-checkbox-field-checked-background-color-hover: #5b4c9f;
-	--clue-checkbox-field-checked-background-color-disabled: #b4acd7;
+	--clue-checkbox-field-checked-background-color: var(--clue-color-primary-400);
+	--clue-checkbox-field-checked-background-color-hover: var(--clue-color-primary);
+	--clue-checkbox-field-checked-background-color-disabled: var(--clue-color-primary-200);
 	//thumb background color
-	--clue-checkbox-field-thumb-background-color: #7567b6;
-	--clue-checkbox-field-thumb-background-color-hover: #5b4c9f;
-	--clue-checkbox-field-thumb-background-color-disabled: #b0b2c0;
+	--clue-checkbox-field-thumb-background-color: var(--clue-color-primary-400);
+	--clue-checkbox-field-thumb-background-color-hover: var(--clue-color-primary);
+	--clue-checkbox-field-thumb-background-color-disabled: var(--clue-color-gray-200);
 	//thumb background color checked
-	--clue-checkbox-field-checked-thumb-background-color: #fff;
-	--clue-checkbox-field-checked-thumb-background-color-disabled: #b0b2c0;
+	--clue-checkbox-field-checked-thumb-background-color: var(--clue-color-white);
+	--clue-checkbox-field-checked-thumb-background-color-disabled: var(--clue-color-gray-200);
 }

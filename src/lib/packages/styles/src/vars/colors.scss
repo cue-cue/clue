@@ -9,12 +9,12 @@
     @include color-generator('gray', #5F6377);
     @include color-generator('blue', #C9E2EE);
 
-    --clue-color-txt-placeholder: #B0B2C0;
+    --clue-color-txt-placeholder: var(--clue-color-gray-200);
 
     --clue-color-button-action-bg-disabled: #E8E9ED;
 
     --clue-color-border-disabled: #E8E9ED;
-    --clue-color-border: #B0B2C0;
+    --clue-color-border: var(--clue-color-gray-200);
 
     --clue-color-icon: #32343F;
     --clue-color-icon-secondary: #5F6377;

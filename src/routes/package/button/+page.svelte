@@ -65,27 +65,25 @@
         {
             name: 'Action',
             styles: getButtonStyles({
-                color: 'action'
+                type: 'action'
             })
         },
         {
             name: 'Secondary',
             styles: getButtonStyles({
-                color: 'secondary'
+                type: 'secondary'
             })
         },
         {
-            name: 'Secondary: ghost',
+            name: 'Ghost',
             styles: getButtonStyles({
-                color: 'secondary',
-                variant: 'ghost'
+                type: 'ghost'
             })
         },
         {
-            name: 'Secondary: Outlined',
+            name: 'Outlined',
             styles: getButtonStyles({
-                color: 'secondary',
-                variant: 'outlined'
+                type: 'outlined'
             })
         },
     ] 

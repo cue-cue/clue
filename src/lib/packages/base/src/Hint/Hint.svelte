@@ -27,7 +27,7 @@
 
 <style lang='sass'>
 	.ClueHint
-		--clue-icon-color: #B0B2C0
+		--clue-icon-color: var(--clue-color-gray-200)
 		cursor: pointer
 		&:hover
 			--clue-icon-color: #333
