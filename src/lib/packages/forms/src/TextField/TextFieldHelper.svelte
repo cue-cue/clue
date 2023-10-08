@@ -23,7 +23,7 @@
         transition: var(--clue-transition)
         transition-property: color
         &[data-color='error']
-            color: #D15A45
+            color: var(--clue-color-negarive-500)
         &[data-color='disabled']
             color: var(--clue-color-txt-placeholder)
 </style>
