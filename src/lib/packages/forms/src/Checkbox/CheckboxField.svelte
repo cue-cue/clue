@@ -19,7 +19,7 @@
 
 <style lang='sass'>
 	@import './CheckboxField'
-	:global(:root)
+	:global(body)
 		+checkbox-field-vars()
 	.ClueCheckboxField
 		$root: &

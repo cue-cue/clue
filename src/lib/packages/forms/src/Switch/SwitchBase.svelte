@@ -27,7 +27,7 @@
 
 <style lang='sass'>
 	@import './SwitchBase'
-	:global(:root)
+	:global(body)
 		+switch-base-vars()
 	:global(.ClueSwitchBase)
 		--clue-checkbox-field-width: var(--clue-switch-base-width)

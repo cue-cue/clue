@@ -62,7 +62,7 @@
 
 <style lang='sass'>
 	@import './TextFieldBase'
-	:global(:root)
+	:global(body)
 		+text-field-base-vars()
 	.ClueTextFieldBase
 		$root: &

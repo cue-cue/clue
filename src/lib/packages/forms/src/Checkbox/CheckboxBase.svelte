@@ -28,7 +28,7 @@
 
 <style lang='sass'>
 	@import './CheckboxBase'
-	:global(:root)
+	:global(body)
 		+checkbox-base-vars()
 	:global(.ClueCheckboxBase)
 		:global(input:not(:checked):disabled ~ .ClueCheckboxField__label)

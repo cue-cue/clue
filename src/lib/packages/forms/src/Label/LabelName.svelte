@@ -16,7 +16,7 @@
 
 <style lang="sass">
 	@import './LabelName'
-	:global(:root)
+	:global(body)
 		+label-name-vars()
 	.ClueLabelName
 		cursor: pointer

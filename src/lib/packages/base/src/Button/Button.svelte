@@ -50,7 +50,7 @@
 
 <style lang='sass'>
     @import './Button'
-    :global(:root)
+    :global(body)
         +button-vars()
     :global(.ClueButton)
         --clue-button-field-padding-x: var(--clue-button-padding-x)

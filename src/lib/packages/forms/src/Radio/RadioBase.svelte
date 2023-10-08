@@ -26,7 +26,7 @@
 
 <style lang='sass'>
 	@import './RadioBase'
-	:global(:root)
+	:global(body)
 		+radio-base-vars()
 	:global(.ClueRadioBase)
 		--clue-checkbox-field-border-radius: var(--clue-radio-base-border-radius)

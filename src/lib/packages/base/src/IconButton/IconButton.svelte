@@ -32,7 +32,7 @@
 
 <style lang='sass'>
 	@import './IconButton'
-	:global(:root)
+	:global(body)
 		+icon-button-vars()
 		
 	:global(.ClueIconButton)

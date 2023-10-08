@@ -128,6 +128,7 @@
 		padding: 10px 0
 		background: var(--clue-color-white)
 		position: sticky
+		z-index: 10
 		top: 0
 		nav
 			flex: none

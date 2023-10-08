@@ -20,7 +20,7 @@
 
 <style lang='sass'>
 	@import './TextFieldButton'
-	:global(:root)
+	:global(body)
 		+text-field-button-vars()
 	.ClueTextFieldButton
 		padding: 0
