@@ -26,9 +26,10 @@
 	export let id:$$Props['id'] = undefined
 	export let name:$$Props['name'] = undefined
 	export let value:$$Props['value'] = ''
+	export let manual:$$Props['manual'] = undefined
 	
-	const fieldContextStore = fieldContext.set(writable({id, name, disabled}))
-	$: fieldContextStore.set({id, name, disabled})
+	const fieldContextStore = fieldContext.set(writable({id, name, disabled, manual}))
+	$: fieldContextStore.set({id, name, disabled, manual})
 
 </script>
 

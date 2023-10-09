@@ -2,17 +2,31 @@
 
 	import {generateClassNames, randomId} from '@clue/utils'
 	import type { HTMLInputAttributes } from 'svelte/elements'
+	import { fieldContext } from '../FieldContext/index.js'
 
 	interface $$Props extends Pick<HTMLInputAttributes, 'id'> {
 		class?:string
+		manual?:boolean
 	}
 	
 	let className = ''
 	export { className as class }
 	export let id:$$Props['id'] = undefined
+	export let manual:$$Props['manual'] = undefined
+
+	const fieldContextStore = fieldContext.get()
+
+	const handler = {
+		click(e:MouseEvent) {
+			if ($fieldContextStore.manual || manual) e.preventDefault()
+		}
+	}
+	
 	
 </script>
-<label for={id} class={generateClassNames(['CheckboxField', className])}>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<label for={id} on:click={handler.click} class={generateClassNames(['CheckboxField', className])}>
 	<slot/>
 	<span class={generateClassNames(['CheckboxField__label'])}></span>
 </label>
@@ -44,7 +58,7 @@
 		:global(input)
 			display: none
 		:global(input:not(:checked):not(:disabled) ~ #{$label})
-			@at-root :global(.ClueLabel__main):hover &, &:hover
+			@at-root :global([data-clue-checkbox-field-hover-trigger]):hover &, &:hover
 				border-color: var(--clue-checkbox-field-border-color-hover)
 				background-color: var(--clue-checkbox-field-background-color-hover)
 		:global(input:disabled ~ #{$label})

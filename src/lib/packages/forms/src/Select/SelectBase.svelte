@@ -92,6 +92,7 @@
 			transition: var(--clue-transition)
 			transition-property: transform
 	:global(.ClueSelectBase[data-focused='true'])
+		--clue-text-field-base-border-radius: var(--clue-size-border-radius-3) var(--clue-size-border-radius-3) 0 0
 		:global(.ClueTextFieldButton)
 			transform: scaleY(-1)
 </style>

@@ -1,9 +1,18 @@
 <script lang='ts'>
-	import {generateClassNames, outclick, type OutclickEvent} from '@clue/utils'
-	import SelectBase from './SelectBase.svelte'
-	import type { ComponentEvents } from 'svelte'
+	import { fly } from 'svelte/transition'
 
-	interface $$Props {
+	import type { IOption } from './types.js'
+
+	import {generateClassNames, outclick} from '@clue/utils'
+	import SelectBase from './SelectBase.svelte'
+	import type { ComponentProps } from 'svelte'
+	import SelectOptionList from './SelectOptionList.svelte'
+
+	type SelectBaseProps = ComponentProps<SelectBase>
+
+	type T = $$Generic<IOption[]>
+	type U = $$Generic<boolean>
+	interface $$Props extends ComponentProps<SelectOptionList<T, U>> {
 		class?:string
 		opened?:boolean
 	}
@@ -11,38 +20,50 @@
 	let className = ''
 	export { className as class }
 	export let opened:$$Props['opened'] = false
+	export let options:$$Props['options']
+	export let multiple:$$Props['multiple'] = false as U
+	export let value:$$Props['value'] = undefined
 
-	const setOpened = (_opened:typeof opened) => {
-		opened = _opened
-	}
-
-	export const open = () => {
-		setOpened(true)
-	}
-
-	export const close = () => {
-		setOpened(false)
-	}
-
-	export const toggle = () => {
-		setOpened(!opened)
-	}
-
+	let close:SelectBaseProps['close']
+	let open:SelectBaseProps['open']
+	let toggle:SelectBaseProps['toggle']
+	
 	const handler = {
-		outclick(e:OutclickEvent) {
-			close()
-		}
+		outclick() {
+			close?.()
+		},
 	}
+
+	const getInputValue = (value:$$Props['value']) => {
+		if (Array.isArray(value)) {
+			return value.join(', ')
+		}
+		return value
+	}
+
+	let inputValue = getInputValue(value)
+	$: inputValue = getInputValue(value)
 </script>
-{opened}
+<small>
+	opened: {opened}<br>
+	multiple: {multiple}<br>
+	value ({typeof value === 'object' ? 'array' : typeof value}): {value}
+</small>
 <div
 	class={generateClassNames(['Select', className])}
 	use:outclick
 	on:outclick={handler.outclick}
 >
-	<SelectBase bind:opened />
+	<SelectBase bind:close bind:open bind:toggle bind:value={inputValue} bind:opened />
+	{#if opened}
+		<div transition:fly={{duration: 200, y: -20}}>
+			<SelectOptionList {options} {multiple} bind:value/>
+		</div>
+	{/if}
 </div>
 
 <style lang='sass'>
 	.ClueSelect
+		:global(.ClueSelectOptionList)
+			max-height: min(400px, 80vh)
 </style>

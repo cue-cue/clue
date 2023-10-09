@@ -121,7 +121,7 @@
 			box-shadow: inset 0 0 0 var(--box-shadow-size) var(--box-shadow-color)
 			pointer-events: none
 			transition: var(--clue-transition)
-			transition-property: box-shadow
+			transition-property: box-shadow, border-radius
 
 		&:not(&[data-disabled])
 			&[data-focused='true']
@@ -144,7 +144,7 @@
 			width: 100%
 			resize: none
 			transition: var(--clue-transition)
-			transition-property: color
+			transition-property: color, border-radius
 			&::placeholder
 				transition: var(--clue-transition)
 				transition-property: color

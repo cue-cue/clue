@@ -5,6 +5,7 @@ interface IData {
     id?:string | null
     name?:string | null
     disabled?:boolean | null
+    manual?:boolean
 }
 
 export class FieldContext extends Context<Writable<IData>> {

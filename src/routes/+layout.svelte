@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import "$lib/packages/styles/src/index.sass"
+    import "$lib/packages/styles/src/index.scss"
     import "./styles/index.scss"
 	import {Button} from "@clue/base";
     import inputIcon from '@clue/icons/line/eye.svg'

@@ -4,7 +4,7 @@
 	import {generateClassNames, randomId} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
 	import CheckboxField from './CheckboxField.svelte'
-
+	import { fieldContext } from '../FieldContext/index.js'
 	interface $$Props extends Omit<ComponentProps<InputCheckbox>, 'group' | 'value'> {
 		class?:string
 		group?:ComponentProps<InputCheckbox>['group']
@@ -19,11 +19,16 @@
 	export let id:$$Props['id'] = randomId('checkbox')
 	export let group:Exclude<$$Props['group'], undefined> = []
 	export let value:Exclude<$$Props['value'], undefined> = ''
+	export let manual:$$Props['manual'] = undefined
+
+	const fieldContextStore = fieldContext.get()
 	
+	$: _manual = $fieldContextStore.manual || manual
+
 </script>
 
-<CheckboxField {id} class={generateClassNames(['CheckboxBase', className])}>
-	<InputCheckbox bind:group bind:value {id} bind:checked {disabled} {...$$restProps}/>
+<CheckboxField manual={_manual} {id} class={generateClassNames(['CheckboxBase', className])}>
+	<InputCheckbox manual={_manual} bind:group bind:value {id} bind:checked {disabled} {...$$restProps}/>
 </CheckboxField>
 
 <style lang='sass'>

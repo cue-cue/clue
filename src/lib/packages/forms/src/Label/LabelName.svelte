@@ -1,6 +1,7 @@
 <script lang='ts'>
 	import {generateClassNames} from '@clue/utils'
 	import { fieldContext } from '../FieldContext/index.js'
+	import { writable } from 'svelte/store'
 
 	interface $$Props {
 		class?:string
@@ -9,10 +10,25 @@
 	let className = ''
 	export { className as class }
 
-	const fieldContextData = fieldContext.get()
+	const fieldContextData = fieldContext.get() || writable({})
+
+	const handler = {
+		click(e:MouseEvent) {
+			if ($fieldContextData.manual) e.preventDefault()
+		}
+	}
 </script>
 
-<label for={$fieldContextData.id} class={generateClassNames(['LabelName', className])} data-disabled={$fieldContextData.disabled}><slot/></label>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<label
+	class={generateClassNames(['LabelName', className])}
+	for={$fieldContextData.id}
+	data-disabled={$fieldContextData.disabled}
+	on:click={handler.click}
+>
+	<slot/>
+</label>
 
 <style lang="sass">
 	@import './LabelName'
@@ -30,6 +46,6 @@
 			cursor: not-allowed
 			color: var(--clue-label-name-color-disabled)
 		&:not([data-disabled])
-			@at-root :global(.ClueLabel__main):hover &, &:hover
+			@at-root :global([data-clue-label-name-hover-trigger]):hover &, &:hover
 				color: var(--clue-label-name-color-hover)
 </style>

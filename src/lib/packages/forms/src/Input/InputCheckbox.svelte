@@ -8,6 +8,7 @@
 		type?: Extract<HTMLInputAttributes['type'], 'checkbox' | 'radio'>
 		group: (string | number)[]
 		value: string
+		manual?:boolean
 	}
 
 	let className = ''
@@ -16,6 +17,7 @@
 	export let checked: $$Props['checked'] = undefined
 	export let group: $$Props['group'] = []
 	export let value: $$Props['value']
+	export let manual: $$Props['manual'] = false
 
 	const onChange = () => {
 		typeof group === 'string' && (group = [group])
@@ -34,6 +36,10 @@
 				group = group
 			}
 		}
+	}
+
+	const onClick = (e:MouseEvent) => {
+		if (manual) e.preventDefault()
 	}
 
 	const init = (node: HTMLInputElement, _group: typeof group) => {
@@ -62,6 +68,7 @@
 	on:keypress
 	on:focus
 	on:blur
+	on:click={onClick}
 	on:click
 	on:mouseover
 	on:mouseenter
