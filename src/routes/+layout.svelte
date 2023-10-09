@@ -13,6 +13,9 @@
 	import { config } from "$lib/packages/config.js";
     import { onMount } from "svelte"
     import {compileString} from 'sass'
+	import { colorsStore } from "./stores/colors.js"
+	import { Color } from "@clue/utils"
+	import { browser } from "$app/environment"
 
     config.setCustomClassNames(['customClass'])
 
@@ -49,15 +52,8 @@
         }
     ]
 
-	const colors:Record<string, string> = {
-		'primary': '#5B4C9F',
-		'active': '#EECD47',
-		'positive': '#839E44',
-		'negative': '#D15A45',
-	}
-
 	const loadColorsInStyles = () => {
-
+		if (!browser) return
 		const colorGeneratorScss = `
 			@use 'sass:color';
 			@use 'sass:math';
@@ -84,7 +80,7 @@
 		const scss = `
 			${colorGeneratorScss}
             body[clue-custom] {
-				${Object.entries(colors).map(([name, color]) => `@include color-generator('${name}', ${color});`).join('\n')}
+				${Object.entries($colorsStore).map(([name, color]) => `@include color-generator('${name}', ${color});`).join('\n')}
 			}
         `
 
@@ -100,7 +96,18 @@
 
     onMount(() => {
 		loadColorsInStyles()
+		const rootStyles = getComputedStyle(document.documentElement)
+		Object.keys($colorsStore).forEach(colorKey => {
+			const color = rootStyles.getPropertyValue(`--clue-color-${colorKey}`)
+			const isHSL = color.includes('hsl(')
+			$colorsStore[colorKey] = isHSL ? Color.hslToHEX(rootStyles.getPropertyValue(`--clue-color-${colorKey}`)).color : color
+		})
     })
+
+	$: {
+		loadColorsInStyles()
+		$colorsStore
+	}
 
 </script>
 
@@ -112,9 +119,9 @@
         {/each}
     </nav>
 	<div class='colors'>
-		{#each Object.keys(colors) as color (color)}
-			<label style:--color={colors[color]}>
-				<input type="color" bind:value={colors[color]} on:input={() => loadColorsInStyles()}>
+		{#each Object.keys($colorsStore) as color (color)}
+			<label style:--color={$colorsStore[color]}>
+				<input type="color" bind:value={$colorsStore[color]}>
 				<span></span>
 			</label>
 		{/each}

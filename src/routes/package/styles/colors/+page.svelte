@@ -3,6 +3,8 @@
     import { Color } from "@clue/utils"
     import customColorIcon from '@clue/icons/line/cursor-click.svg'
 	import { browser } from "$app/environment"
+	import { derived } from "svelte/store"
+	import { colorsStore } from "../../../stores/colors.js"
 
     const colors = ['primary', 'gray', 'active', 'blue', 'positive', 'negative']
     const values = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990]
@@ -34,25 +36,30 @@
         })
     }
 
-    const getCssVarColor= (cssVar:string) => {
-        if (browser) {
-            const color = getComputedStyle(document.documentElement).getPropertyValue(cssVar)
-            let hsl = ''
-            let hex = ''
-            if (color.includes('hsl(')) {
-                hsl = color
-                hex = Color.hslToHEX(color).color
-            } else {
-                hex = color
-                hsl = Color.hexToHSL(color).color
-            }
-            return {
-                hsl,
-                hex
+    const cssVarColorValue = derived(colorsStore, () => {
+        return {
+            get(cssVar:string) {
+                if (browser) {
+                    const bodyColor = getComputedStyle(document.body).getPropertyValue(cssVar)
+                    const color = bodyColor || getComputedStyle(document.documentElement).getPropertyValue(cssVar)
+                    let hsl = ''
+                    let hex = ''
+                    if (color.includes('hsl(')) {
+                        hsl = color
+                        hex = Color.hslToHEX(color).color
+                    } else {
+                        hex = color
+                        hsl = Color.hexToHSL(color).color
+                    }
+                    return {
+                        hsl,
+                        hex
+                    }
+                }
+                return undefined
             }
         }
-        return undefined
-    }
+    })
 
     const copyAction = (node:HTMLElement, val?:string) => {
         let text = val
@@ -65,7 +72,7 @@
                 node.setAttribute(attr, '')
                 timeout = setTimeout(() => {
                     node.removeAttribute(attr)
-                }, 500)
+                }, 400)
             }
         }
 
@@ -117,7 +124,7 @@
             <h3>{color}</h3>
             <ul class='variant-list'>
                 {#each getVariants(color) as data (data.value)}
-                    {@const cssVarValue = getCssVarColor(data.cssVar)}
+                    {@const cssVarValue = $cssVarColorValue.get(data.cssVar)}
                     <li style:--color={`var(${data.cssVar})`} data-value={data.value}>
                         <button use:copyAction={cssVarValue?.hsl}>
                             {#if cssVarValue}
