@@ -14,6 +14,7 @@
     
     export let value:$$Props['value'] = ''
     export let multiline:$$Props['multiline'] = false
+    export let nodeElement:$$Props['nodeElement'] = undefined
 
     const elementsMap = new Map<typeof multiline, typeof InputElement | typeof InputTextareaElement>([
         [false, InputElement],
@@ -37,6 +38,7 @@
 
 <svelte:component
     this={elementsMap.get(multiline)}
+    bind:nodeElement
     class={generateClassNames(['Input', className])}
     on:input
     on:change

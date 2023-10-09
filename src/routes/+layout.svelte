@@ -7,6 +7,7 @@
     import buttonIcon from '@clue/icons/line/bell.svg'
     import checkboxIcon from '@clue/icons/line/check-square.svg'
     import colorsIcon from '@clue/icons/line/apple-fruit.svg'
+    import selectIcon from '@clue/icons/line/note-list-square.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
 	import { config } from "$lib/packages/config.js";
@@ -18,8 +19,13 @@
     const menuItems:(ComponentProps<Button> & {name:string})[] = [
         {
             name: 'Input',
-            href: '/package/input',
+            href: '/package/forms/input',
             startIcon: inputIcon
+        },
+		{
+            name: 'Select',
+            href: '/package/forms/select',
+            startIcon: selectIcon
         },
         {
             name: 'Icons',
@@ -28,12 +34,12 @@
         },
         {
             name: 'Button',
-            href: '/package/button',
+            href: '/package/base/button',
             startIcon: buttonIcon
         },
         {
             name: 'Checkbox',
-            href: '/package/checkbox',
+            href: '/package/forms/checkbox',
             startIcon: checkboxIcon
         },
         {

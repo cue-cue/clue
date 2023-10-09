@@ -8,10 +8,11 @@
 
 	type InputTypes = Extract<ComponentProps<Input>['type'], 'password' | 'email' | 'text' | 'url' | 'tel'>
 
-	interface $$Props extends Omit<ComponentProps<Input>, 'type'> {
+	interface $$Props extends Omit<ComponentProps<Input>, 'type'>, Partial<Record<`data-${string}`, string>> {
 		class?:string
 		error?:boolean
 		type?:InputTypes
+		focused?:boolean
 	}
 
 	
@@ -21,8 +22,9 @@
 	export let disabled:$$Props['disabled'] = undefined
 	export let value:$$Props['value'] = ''
 	export let type:$$Props['type'] = 'text'
+	export let focused:$$Props['focused'] = undefined
 	
-	const localContext = context.get() || writable()
+	const localContext = context.get() || writable({})
 
 	export const inputController:{
 		clear:ComponentProps<Input>['clear']
@@ -35,18 +37,25 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
 	class={generateClassNames(['TextFieldBase', className])}
-	data-error={$localContext.error || error}
-	data-disabled={$localContext.disabled || disabled}
+	data-error={$localContext?.error || error}
+	data-disabled={$localContext?.disabled || disabled}
 	data-multiline={$$restProps.multiline}
 	data-readonly={$$restProps.readonly}
+	data-focused={focused}
+	on:click
+	on:dblclick
 >
 	<slot>
 		<Input
-			disabled={$localContext.disabled || disabled}
-			id={$localContext.id}
+			disabled={$localContext?.disabled || disabled}
+			id={$localContext?.id}
 			{type}
+			on:focus
+			on:blur
 			bind:value
 			bind:clear={inputController.clear}
 			bind:update={inputController.update}
@@ -115,10 +124,12 @@
 			transition-property: box-shadow
 
 		&:not(&[data-disabled])
+			&[data-focused='true']
+				--box-shadow-color: var(--clue-text-field-base-border-color-focus)
+				--box-shadow-size: var(--clue-text-field-base-border-width-focus)
 			:global(.ClueInput:focus ~ #{$root}__border)
 				--box-shadow-color: var(--clue-text-field-base-border-color-focus)
 				--box-shadow-size: var(--clue-text-field-base-border-width-focus)
-
 		:global(.ClueInput), :global(.ClueTextFieldValue)
 			--placeholder-color: var(--clue-text-field-base-placeholder-color)
 			display: flex

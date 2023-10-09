@@ -2,6 +2,7 @@
 	import Icon from "$lib/packages/icons/src/components/Icon.svelte"
     import { Color } from "@clue/utils"
     import customColorIcon from '@clue/icons/line/cursor-click.svg'
+	import { browser } from "$app/environment"
 
     const colors = ['primary', 'gray', 'active', 'blue', 'positive', 'negative']
     const values = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990]
@@ -33,6 +34,53 @@
         })
     }
 
+    const getCssVarColor= (cssVar:string) => {
+        if (browser) {
+            const color = getComputedStyle(document.documentElement).getPropertyValue(cssVar)
+            let hsl = ''
+            let hex = ''
+            if (color.includes('hsl(')) {
+                hsl = color
+                hex = Color.hslToHEX(color).color
+            } else {
+                hex = color
+                hsl = Color.hexToHSL(color).color
+            }
+            return {
+                hsl,
+                hex
+            }
+        }
+        return undefined
+    }
+
+    const copyAction = (node:HTMLElement, val?:string) => {
+        let text = val
+        let timeout:ReturnType<typeof setTimeout>
+        const attr = 'data-copying'
+        const handleClick = () => {
+            if (text) {
+                navigator.clipboard.writeText(text)
+                clearTimeout(timeout)
+                node.setAttribute(attr, '')
+                timeout = setTimeout(() => {
+                    node.removeAttribute(attr)
+                }, 500)
+            }
+        }
+
+        node.addEventListener('click', handleClick)
+
+        return {
+            update(val:typeof text) {
+                text = val
+            },
+            destroy() {
+                node.removeEventListener('click', handleClick)
+            }
+        }
+    }
+
     let customColor = '#cda7cd'
     $: customHSLResult = Color.hexToHSL(customColor)
 </script>
@@ -50,13 +98,13 @@
             <h3>Custom color: {customColor}</h3>
             <ul class='variant-list'>
                 {#each getVariantsFromHSL(customHSLResult) as data (data.value)}
-                    <li style:--color={data.hex} title={data.hsl} data-value={data.value}>
-                        <div>
+                    <li style:--color={data.hex} data-value={data.value}>
+                        <button use:copyAction={data.hsl}>
                             <span>
                                 <b>{data.hex}</b>
-                                <small>{data.hsl.replaceAll(/[\s(hsl)]/gi, '')}</small>
+                                <small>{data.hsl.replace(/[\s(hsl)]/gi, '')}</small>
                             </span>
-                        </div>
+                        </button>
                     </li>
                 {/each}
             </ul>
@@ -69,8 +117,16 @@
             <h3>{color}</h3>
             <ul class='variant-list'>
                 {#each getVariants(color) as data (data.value)}
+                    {@const cssVarValue = getCssVarColor(data.cssVar)}
                     <li style:--color={`var(${data.cssVar})`} data-value={data.value}>
-                        <div></div>
+                        <button use:copyAction={cssVarValue?.hsl}>
+                            {#if cssVarValue}
+                                <span>
+                                    <b>{cssVarValue.hex}</b>
+                                    <small>{cssVarValue.hsl.replace(/[\s(hsl)deg]/gi, '')}</small>
+                                </span>
+                            {/if}
+                        </button>
                     </li>
                 {/each}
             </ul>
@@ -139,28 +195,49 @@
                 font-weight: 600
                 margin-top: 10px
             &[data-value='500']
-                div
+                button
                     &::before
-                        content: ''
-                        position: absolute
-                        top: 8px
-                        left: 50%
-                        transform: translateX(-50%)
-                        width: 50%
-                        height: 4px
-                        border-radius: 10px
-                        background: var(--clue-color-white)
-                        mix-blend-mode: difference
-            div
+                        opacity: 1
+            &:not([data-value='500'])
+                button:not([data-copying])
+                    &:hover
+                        &::before
+                            opacity: .2
+            :global(button[data-copying])
+                &::before
+                    opacity: 1
+                    height: calc(100% - 16px)
+            button
+                border: none
+                cursor: pointer
                 position: relative
                 width: 100%
                 padding-bottom: 100%
                 background: var(--color)
                 border-radius: var(--clue-size-border-radius)
+                &:hover
+                    span
+                        opacity: 1
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 8px
+                    left: 50%
+                    transform: translateX(-50%)
+                    width: 50%
+                    height: 4px
+                    border-radius: 10px
+                    background: var(--clue-color-white)
+                    mix-blend-mode: difference
+                    opacity: 0
+                    transition: var(--clue-transition)
+                    transition-property: opacity, height
                 span
                     display: block
                     position: absolute
                     text-align: center
+                    width: 100%
+                    opacity: .2
                     top: 50%
                     left: 50%
                     transform: translate(-50%, -50%)
@@ -168,6 +245,9 @@
                     font-weight: 500
                     color: var(--clue-color-white)
                     mix-blend-mode: difference
+                    transition: var(--clue-transition)
                     small
+                        display: block
+                        width: 100%
                         font-size: 8px
 </style>
