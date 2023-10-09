@@ -81,7 +81,7 @@
 		border-radius: var(--border-radius)
 		transition: var(--clue-transition)
 		transition-property: background, border-radius
-		&:not(&[data-disabled], &[data-readonly])
+		&:not(&[data-disabled], &[data-readonly], &[data-error='true'])
 			&:hover
 				--box-shadow-color: var(--clue-text-field-base-border-color-hover)
 			&[data-multiline]

@@ -30,7 +30,7 @@
 		--clue-icon-color: var(--clue-color-gray-200)
 		cursor: pointer
 		&:hover
-			--clue-icon-color: #333
+			--clue-icon-color: var(--clue-color-gray-400)
 		span
 			display: none
 </style>

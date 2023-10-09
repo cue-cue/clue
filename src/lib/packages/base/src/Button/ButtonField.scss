@@ -43,13 +43,13 @@
             'default': var(--clue-color-primary),
             'hover': var(--clue-color-primary-600),
             'active': var(--clue-color-primary-600),
-            'disabled': #E8E9ED
+            'disabled': var(--clue-color-gray-10)
         ),
         'color': (
             'default': var(--clue-color-primary-10),
             'hover': var(--clue-color-primary-10),
             'active': var(--clue-color-primary-10),
-            'disabled': var(--clue-color-gray-200)
+            'disabled': var(--clue-color-gray-300)
         ),
         'border-color': (
             'default': transparent,
@@ -82,9 +82,9 @@
 
     @include button-field-type('secondary', (
         'background-color': (
-            'default': #E6E3F2,
-            'hover': #DDD9ED,
-            'active': #DDD9ED,
+            'default': var(--clue-color-primary-10),
+            'hover': var(--clue-color-primary-100),
+            'active': var(--clue-color-primary-100),
             'disabled': var(--clue-button-field-background-color-disabled)
         ),
         'color': (
@@ -136,9 +136,9 @@
             'disabled': var(--clue-button-field-color-disabled),
         ),
         'border-color': (
-            'default': #D3CFE8,
-            'hover': #D3CFE8,
-            'active': #D3CFE8,
+            'default': var(--clue-color-primary-100),
+            'hover': var(--clue-color-primary-100),
+            'active': var(--clue-color-primary-100),
             'disabled': transparent,
         )
     ));
