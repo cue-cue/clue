@@ -46,9 +46,9 @@
             'disabled': #E8E9ED
         ),
         'color': (
-            'default': #EFEEF7,
-            'hover': #EFEEF7,
-            'active': #EFEEF7,
+            'default': var(--clue-color-primary-10),
+            'hover': var(--clue-color-primary-10),
+            'active': var(--clue-color-primary-10),
             'disabled': var(--clue-color-gray-200)
         ),
         'border-color': (
@@ -104,8 +104,8 @@
     @include button-field-type('ghost', (
         'background-color': (
             'default': transparent,
-            'hover': #EFEEF7,
-            'active': #EFEEF7,
+            'hover': var(--clue-color-primary-10),
+            'active': var(--clue-color-primary-10),
             'disabled': transparent
         ),
         'color': (
@@ -125,8 +125,8 @@
     @include button-field-type('outlined', (
         'background-color': (
             'default': transparent,
-            'hover': #EFEEF7,
-            'active': #EFEEF7,
+            'hover': var(--clue-color-primary-10),
+            'active': var(--clue-color-primary-10),
             'disabled': transparent,
         ),
         'color': (
