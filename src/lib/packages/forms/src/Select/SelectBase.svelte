@@ -109,18 +109,33 @@
 		}
 	}
 
-	const setOpened = (_opened:typeof opened) => {
-		opened = _opened
-		dispatch('toggle')
-		if (opened) {
+	const openedHandler = {
+		auto(_opened:typeof opened) {
+			this.toggle()
+			if (_opened) {
+				this.open()
+			} else {
+				this.close()
+			}
+		},
+		open() {
 			dispatch('open')
 			instancesController.closeAll(id)
 			searchController.start()
-		} else {
+		},
+		close() {
 			dispatch('close')
 			searchController.stop()
 			searchController.clear()
+		},
+		toggle() {
+			dispatch('toggle')
 		}
+	}
+
+	const setOpened = (_opened:typeof opened) => {
+		opened = _opened
+		openedHandler.auto(opened)
 	}
 
 	export const open = () => {
@@ -185,6 +200,8 @@
 	onDestroy(() => {
 		instancesController.remove(id)
 	})
+
+	$: openedHandler.auto(opened)
 </script>
 
 <svelte:document on:keydown={handler.documentKeydown}/>
