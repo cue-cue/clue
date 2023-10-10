@@ -1,27 +1,93 @@
+<script lang="ts" context='module'>
+	interface ISearchController {
+		start: () => void,
+		stop: () => void,
+		clear: () => void
+	}
+
+	interface Instance {
+		id: string
+		close: () => void
+		open: () => void
+		toggle: () => void
+	}
+
+	let instances:Instance[] = []
+
+	const instancesController = {
+		add(instance:Instance) {
+			instances = [...instances, instance]
+		},
+		remove(instanceId:Instance['id']) {
+			instances = instances.filter(({id}) => id !== instanceId)
+		},
+		closeAll(instanceId:Instance['id']) {
+			instances.forEach(({close, id}) => id !== instanceId &&  close())
+		}
+	}
+</script>
+
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames, outclick, randomId} from '@clue/utils'
 	import TextFieldBase from '../TextField/TextFieldBase.svelte'
 	import Input from '../Input/Input.svelte'
-	import type { ComponentProps} from 'svelte'
+	import { tick, type ComponentProps, createEventDispatcher, onMount, onDestroy} from 'svelte'
 	import TextFieldButton from '../TextField/TextFieldButton.svelte'
 	import icon from '@clue/icons/line/angle-down.svg'
+	import clearIcon from '@clue/icons/line/times.svg'
+	import { createAction } from '$lib/packages/utils/src/actions/actionList.js'
 
 	type InputProps = ComponentProps<Input>
+
+	interface $$Events {
+		click: MouseEvent
+		close: CustomEvent<undefined>
+		open: CustomEvent<undefined>
+		toggle: CustomEvent<undefined>
+	}
 
 	interface $$Props {
 		class?:string
 		value?:InputProps['value']
-		inputElement?:InputProps['nodeElement']
 		opened?:boolean
 		readonly?:boolean
+		allowSearch?:boolean
+		searchValue?:string
 	}
 	
 	let className = ''
 	export { className as class }
 	export let value:$$Props['value'] = undefined
-	export let inputElement:$$Props['inputElement'] = undefined
 	export let opened:$$Props['opened'] = false
 	export let readonly:$$Props['readonly'] = true
+	export let allowSearch:$$Props['allowSearch'] = false
+	export let searchValue:$$Props['searchValue'] = ''
+
+	const id = randomId('SelectBase')
+
+	const dispatch = createEventDispatcher()
+
+	let baseNodeElement:ComponentProps<TextFieldBase>['nodeElement'] = undefined
+
+	let searched = false
+	let searchInputElement:InputProps['nodeElement'] = undefined
+
+	const searchController:ISearchController = {
+		start() {
+			if (allowSearch) {
+				searched = true
+				tick().then(() => {
+					searchInputElement?.focus()
+				})
+			}
+		},
+		stop() {
+			searched = false
+		},
+		clear() {
+			searchValue = ''
+		}
+	}
 
 	const inputController = {
 		eventsLocked: false,
@@ -45,6 +111,16 @@
 
 	const setOpened = (_opened:typeof opened) => {
 		opened = _opened
+		dispatch('toggle')
+		if (opened) {
+			dispatch('open')
+			instancesController.closeAll(id)
+			searchController.start()
+		} else {
+			dispatch('close')
+			searchController.stop()
+			searchController.clear()
+		}
 	}
 
 	export const open = () => {
@@ -52,7 +128,9 @@
 	}
 
 	export const close = () => {
-		setOpened(false)
+		if (opened) {
+			setOpened(false)
+		}
 	}
 
 	export const toggle = () => {
@@ -67,32 +145,93 @@
 		},
 		baseClick(e:MouseEvent) {
 			const target = e.target as HTMLElement
-			if (target.classList.contains('ClueSelectBase')) {
+			if (target.contains(baseNodeElement as Node)) {
 				open()
 			}
 		},
-		focus(e:FocusEvent) {
-			inputController.eventCallback(() => open())
+		focus() {
+			inputController.eventCallback(() => {
+				open()
+			})
+		},
+		clearClick() {
+			searchController.clear()
+		},
+		outclick() {
+			searchController.stop()
+		},
+		documentKeydown(e:KeyboardEvent) {
+			if (opened) {
+				const {code} = e
+				switch(code) {
+					case 'Escape': {
+						e.preventDefault()
+						close()
+					}
+				}
+			}
 		}
 	}
+
+	onMount(() => {
+		instancesController.add({
+			id,
+			close,
+			open,
+			toggle
+		})
+	})
+
+	onDestroy(() => {
+		instancesController.remove(id)
+	})
 </script>
-<TextFieldBase focused={opened} on:click class={generateClassNames(['SelectBase', className])} on:click={handler.baseClick}>
-	<Input bind:nodeElement={inputElement} {readonly} bind:value on:focus={handler.focus}/>
+
+<svelte:document on:keydown={handler.documentKeydown}/>
+
+<TextFieldBase
+	class={generateClassNames(['SelectBase', className])}
+	focused={opened}
+	on:click={handler.baseClick}
+	on:click
+	bind:nodeElement={baseNodeElement}
+	use={[
+		createAction('outclick', outclick, {
+			handler: handler.outclick
+		})
+	]}
+>
+	{#if searched}
+		<Input
+			placeholder={value}
+			bind:value={searchValue}
+			bind:nodeElement={searchInputElement}
+		/>
+	{:else}
+		<Input
+			{readonly}
+			bind:value
+			on:focus={handler.focus}
+		/>
+	{/if}
 	<svelte:fragment slot='buttons'>
-		<TextFieldButton {icon} on:click={handler.arrowClick}/>
+		<TextFieldButton {icon} on:click={handler.arrowClick} reverse={opened ? 'y' : undefined}/>
+		{#if searchValue?.length}
+			<TextFieldButton icon={clearIcon} width={20} on:click={handler.clearClick}/>
+		{/if}
 	</svelte:fragment>
 </TextFieldBase>
 
 <style lang='sass'>
 	:global(.ClueSelectBase)
 		cursor: pointer
-		:global(.ClueInput)
+		:global(.ClueInput[readonly])
 			cursor: pointer
-		:global(.ClueTextFieldButton)
-			transition: var(--clue-transition)
-			transition-property: transform
+		:global(.ClueInput)
+			text-overflow: ellipsis
+	:global(.ClueSelectBase:not([data-focused='true']))
+		:global(.ClueInput)
+			pointer-events: none
 	:global(.ClueSelectBase[data-focused='true'])
 		--clue-text-field-base-border-radius: var(--clue-size-border-radius-3) var(--clue-size-border-radius-3) 0 0
-		:global(.ClueTextFieldButton)
-			transform: scaleY(-1)
 </style>

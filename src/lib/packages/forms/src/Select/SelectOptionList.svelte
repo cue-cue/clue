@@ -5,7 +5,7 @@
 	import type { ComponentProps } from 'svelte'
 	import SelectOption from './SelectOption.svelte'
 
-	type T = $$Generic<IOption[]>
+	type T = $$Generic<IOption<any>[]>
 	type U = $$Generic<boolean>
 
 	interface $$Props extends ComponentProps<SelectOptionListCore<T, U>>{
@@ -19,7 +19,7 @@
 	export let value:$$Props['value'] = (multiple ? [] : undefined)
 </script>
 
-<SelectOptionListCore {options} bind:value {multiple} let:data>
+<SelectOptionListCore {options} bind:value {multiple} let:data {...$$restProps}>
 	<ul class={generateClassNames(['SelectOptionList', className])}>
 		{#each data as {key, active, label, clickHandler} (key)}
 			<SelectOption on:click={clickHandler} {active}>{label}</SelectOption>

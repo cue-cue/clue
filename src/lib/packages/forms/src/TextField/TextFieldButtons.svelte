@@ -23,13 +23,19 @@
 			&:not(:last-child)
 				margin-right: 24px
 				&::after
-					content: ''
-					width: 1px
-					height: 16px
-					background: var(--clue-color-border)
-					display: block
-					position: absolute
-					right: -12px
-					top: 50%
-					transform: translateY(-50%)
+					opacity: 1
+			&::after
+				content: ''
+				opacity: 0
+				pointer-events: none
+				width: 1px
+				height: 16px
+				background: var(--clue-color-border)
+				display: block
+				position: absolute
+				right: -12px
+				top: 50%
+				transform: translateY(-50%)
+				transition: var(--clue-transition)
+				transition-property: opacity
 </style>

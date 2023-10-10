@@ -13,15 +13,15 @@
                 },
                 {
                     value: 'test1',
-                    label: 'test'
+                    label: 'test1',
                 },
                 {
                     value: 'test2',
-                    label: 'test'
+                    label: 'test2'
                 },
                 {
                     value: 'test3',
-                    label: 'test',
+                    label: 'test3',
                 }
             ],
         }
@@ -39,7 +39,7 @@
                     <Select {...item}/> 
                 </li>
                 <li>
-                    <Select {...item} multiple value={[]}/>
+                    <Select {...item} multiple value={[]} allowSearch={true}/>
                 </li>
                 <li>
                     <Select options={[{value: 0, label: ''}]} multiple value={[1]}/>

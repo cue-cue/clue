@@ -5,6 +5,7 @@
 	import { context } from './context.js';
 	import { writable } from 'svelte/store';
 	import TextFieldButtons from './TextFieldButtons.svelte';
+	import { actionList, type ActionListParams } from '$lib/packages/utils/src/actions/actionList.js'
 
 	type InputTypes = Extract<ComponentProps<Input>['type'], 'password' | 'email' | 'text' | 'url' | 'tel'>
 
@@ -13,6 +14,8 @@
 		error?:boolean
 		type?:InputTypes
 		focused?:boolean
+		use?:ActionListParams
+		nodeElement?:HTMLElement
 	}
 
 	
@@ -23,6 +26,8 @@
 	export let value:$$Props['value'] = ''
 	export let type:$$Props['type'] = 'text'
 	export let focused:$$Props['focused'] = undefined
+	export let use:$$Props['use'] = undefined
+	export let nodeElement:$$Props['nodeElement'] = undefined
 	
 	const localContext = context.get() || writable({})
 
@@ -46,6 +51,8 @@
 	data-multiline={$$restProps.multiline}
 	data-readonly={$$restProps.readonly}
 	data-focused={focused}
+	bind:this={nodeElement}
+	use:actionList={use}
 	on:click
 	on:dblclick
 >

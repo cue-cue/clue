@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import type { IOption } from "./types.js"
 
-	type OptionsGeneric = $$Generic<IOption[]>
+	type OptionsGeneric = $$Generic<IOption<any>[]>
 	type MultipleGeneric = $$Generic<boolean>
 	
 	type ValueOne = OptionsGeneric[number]['value']
@@ -22,6 +22,7 @@
 		multiple?:MultipleGeneric
 		options:OptionsGeneric
 		value?:Value<MultipleGeneric>
+		filter?:((option:OptionsGeneric[number]) => boolean) | string
 	}
 	
 
@@ -36,6 +37,7 @@
 	export let multiple:$$Props['multiple'] = false as MultipleGeneric
 	export let options:$$Props['options']
 	export let value:$$Props['value'] = (multiple ? [] : undefined) as unknown as $$Props['value']
+	export let filter:$$Props['filter'] = undefined
 
 	const getOptionKey = ({value}:Pick<OptionsGeneric[number], 'value'>) => {
 		const _key = key || 'value'
@@ -104,18 +106,34 @@
 		return isOptionInValue(option, _value)
 	}
 
-	$: data = options.map((option:OptionsGeneric[number]):Data[number] => {
-		const clickHandler = () => {
-			handler.optionClick(option)
+	$: data = (() => {
+		let _options = options
+
+		if (filter) {
+			switch (typeof filter) {
+				case 'function': {
+					_options = _options.filter(filter) as typeof _options
+					break
+				}
+				case 'string': {
+					_options = _options.filter(option => option.label === filter) as typeof _options
+				}
+			}
 		}
-		return {
-			option,
-			clickHandler,
-			label: option.label || '',
-			key: getOptionKey(option),
-			active: isActive(option, value)
-		}
-	})
+
+		return _options.map((option:OptionsGeneric[number]):Data[number] => {
+			const clickHandler = () => {
+				handler.optionClick(option)
+			}
+			return {
+				option,
+				clickHandler,
+				label: option.label || '',
+				key: getOptionKey(option),
+				active: isActive(option, value)
+			}
+		})
+	})()
 
 </script>
 

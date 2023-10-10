@@ -7,6 +7,7 @@
 		class?:string
 		color?:string
 		size?:'small' | 'medium' | 'large'
+		reverse?:'x' | 'y'
 	}
 	
 	let className = ''
@@ -16,6 +17,7 @@
 	export let height:$$Props['height'] = undefined
 	export let color:$$Props['color'] = undefined
 	export let size:$$Props['size'] = undefined
+	export let reverse:$$Props['reverse'] = undefined
 
 	const sizesMap = new Map<typeof size, Pick<ComponentProps<IconUse>, 'width' | 'height'>>([
 		['small', {width: 16, height: 16}],
@@ -31,7 +33,7 @@
 	class={generateClassNames(['Icon', className])}
 	{icon}
 	{...sizes}
-	style={color && `--clue-icon-color: ${color}`}
+	style={`${color ? `--clue-icon-color: ${color};` : ''}${reverse ? `transform: scale${reverse.toUpperCase()}(-1)` : ''}`}
 />
 
 <style lang='sass'>
@@ -39,5 +41,5 @@
 		// --clue-icon-color
 		color: var(--clue-icon-color, var(--clue-color-icon))
 		transition: var(--clue-transition)
-		transition-property: color
+		transition-property: color, transform
 </style>

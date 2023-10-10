@@ -8,13 +8,20 @@
 	import type { ComponentProps } from 'svelte'
 	import SelectOptionList from './SelectOptionList.svelte'
 
-	type SelectBaseProps = ComponentProps<SelectBase>
-
-	type T = $$Generic<IOption[]>
+	
+	type T = $$Generic<IOption<any>[]>
 	type U = $$Generic<boolean>
-	interface $$Props extends ComponentProps<SelectOptionList<T, U>> {
+
+	type SelectBaseProps = ComponentProps<SelectBase>
+	type SelectOptionListProps = ComponentProps<SelectOptionList<T, U>>
+
+	type SearchFilter = (option:T[number], searchValue:string) => boolean
+
+	interface $$Props extends Omit<SelectOptionListProps, 'filter'> {
 		class?:string
 		opened?:boolean
+		allowSearch?:SelectBaseProps['allowSearch']
+		searchFilter?:SearchFilter
 	}
 	
 	let className = ''
@@ -23,6 +30,10 @@
 	export let options:$$Props['options']
 	export let multiple:$$Props['multiple'] = false as U
 	export let value:$$Props['value'] = undefined
+	export let allowSearch:$$Props['allowSearch'] = false
+	export let searchFilter:$$Props['searchFilter'] = undefined
+
+	let searchValue:SelectBaseProps['searchValue'] = ''
 
 	let close:SelectBaseProps['close']
 	let open:SelectBaseProps['open']
@@ -31,7 +42,7 @@
 	const handler = {
 		outclick() {
 			close?.()
-		},
+		}
 	}
 
 	const getInputValue = (value:$$Props['value']) => {
@@ -40,13 +51,24 @@
 		}
 		return value
 	}
-
 	let inputValue = getInputValue(value)
 	$: inputValue = getInputValue(value)
+
+	$: filter = (option:IOption<any>) => {
+		if (!allowSearch) return true
+		if (searchFilter) {
+			return searchFilter(option, searchValue || '')
+		} else if (!searchValue) {
+			return true
+		}
+		return !!option.label?.toLowerCase().includes(searchValue.toLowerCase())
+	}
+
 </script>
 <small>
 	opened: {opened}<br>
 	multiple: {multiple}<br>
+	allowSearch: {allowSearch}<br>
 	value ({typeof value === 'object' ? 'array' : typeof value}): {value}
 </small>
 <div
@@ -54,10 +76,19 @@
 	use:outclick
 	on:outclick={handler.outclick}
 >
-	<SelectBase bind:close bind:open bind:toggle bind:value={inputValue} bind:opened />
+	<SelectBase
+		bind:close
+		bind:open
+		bind:toggle
+		{allowSearch}
+		bind:value={inputValue}
+		bind:searchValue
+		bind:opened
+		on:open
+	/>
 	{#if opened}
 		<div transition:fly={{duration: 200, y: -20}}>
-			<SelectOptionList {options} {multiple} bind:value/>
+			<SelectOptionList {filter} {options} {multiple} bind:value/>
 		</div>
 	{/if}
 </div>
