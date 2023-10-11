@@ -3,6 +3,7 @@
 	import type { SVGAttributes } from 'svelte/elements';
 	import type { ClueSvgIconData } from '../index.js';
 	import { fade, type TransitionConfig } from 'svelte/transition';
+	import { config } from '$lib/packages/config.js'
 
 	interface $$Props extends SVGAttributes<SVGElement> {
 		icon:ClueSvgIconData['default']
@@ -41,6 +42,6 @@
 	on:click
 >
 	{#key icon}
-		<use transition:transition={{duration: 200}} xlink:href={`#${icon}`} />
+		<use transition:transition={$config.transition} xlink:href={`#${icon}`} />
 	{/key}
 </svg>

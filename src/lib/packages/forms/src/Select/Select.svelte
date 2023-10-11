@@ -1,4 +1,10 @@
 <script lang='ts'>
+	import SelectOptionListCore from './SelectOptionListCore.svelte'
+
+	import SelectOptionList from './SelectOptionList.svelte'
+
+	import { config } from '$lib/packages/config.js'
+
 	import { fly } from 'svelte/transition'
 
 	import type { IOption } from './types.js'
@@ -6,21 +12,21 @@
 	import {generateClassNames, outclick} from '@clue/utils'
 	import SelectBase from './SelectBase.svelte'
 	import type { ComponentProps } from 'svelte'
-	import SelectOptionList from './SelectOptionList.svelte'
 
 	
 	type T = $$Generic<IOption<any>[]>
 	type U = $$Generic<boolean>
 
 	type SelectBaseProps = ComponentProps<SelectBase>
-	type SelectOptionListProps = ComponentProps<SelectOptionList<T, U>>
+	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<T, U>>
 
 	type SearchFilter = (option:T[number], searchValue:string) => boolean
 
-	interface $$Props extends Omit<SelectOptionListProps, 'filter'> {
+	interface $$Props extends Omit<SelectOptionListCoreProps, 'filter'> {
 		class?:string
 		opened?:boolean
 		allowSearch?:SelectBaseProps['allowSearch']
+		allowClear?:SelectBaseProps['allowClear']
 		searchFilter?:SearchFilter
 	}
 	
@@ -31,7 +37,9 @@
 	export let multiple:$$Props['multiple'] = false as U
 	export let value:$$Props['value'] = undefined
 	export let allowSearch:$$Props['allowSearch'] = false
+	export let allowClear:$$Props['allowClear'] = true
 	export let searchFilter:$$Props['searchFilter'] = undefined
+	export let clear:$$Props['clear'] = undefined
 
 	let searchValue:SelectBaseProps['searchValue'] = ''
 
@@ -42,6 +50,9 @@
 	const handler = {
 		outclick() {
 			close?.()
+		},
+		clear() {
+			clear?.()
 		}
 	}
 
@@ -77,20 +88,27 @@
 	on:outclick={handler.outclick}
 >
 	<SelectBase
+		{allowSearch}
+		{allowClear}
 		bind:close
 		bind:open
 		bind:toggle
-		{allowSearch}
 		bind:value={inputValue}
 		bind:searchValue
 		bind:opened
 		on:open
+		on:close
+		on:toggle
+		on:clear={handler.clear}
 	/>
-	{#if opened}
-		<div transition:fly={{duration: 200, y: -20}}>
-			<SelectOptionList {filter} {options} {multiple} bind:value/>
-		</div>
-	{/if}
+
+	<SelectOptionListCore {options} {filter} bind:clear bind:value {multiple} {...$$restProps}>
+		{#if opened}
+			<div transition:fly={{...$config.transition, y: -20}}>
+				<SelectOptionList/>
+			</div>
+		{/if}
+	</SelectOptionListCore>
 </div>
 
 <style lang='sass'>

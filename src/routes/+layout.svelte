@@ -17,8 +17,6 @@
 	import { Color } from "@clue/utils"
 	import { browser } from "$app/environment"
 
-    config.setCustomClassNames(['customClass'])
-
     const menuItems:(ComponentProps<Button> & {name:string})[] = [
         {
             name: 'Input',
@@ -76,7 +74,6 @@
 				#{$root}: #{'var(#{$root}-500)'}
 			}
 		`
-
 		const scss = `
 			${colorGeneratorScss}
             body[clue-custom] {

@@ -3,7 +3,7 @@
 	import {Icon} from '@clue/icons'
 	import type { ComponentProps } from 'svelte';
 	import type { TransitionConfig } from 'svelte/transition'
-	import * as easing from 'svelte/easing'
+	import { config } from '$lib/packages/config.js'
 
 	interface $$Props extends ComponentProps<Icon> {
 		class?:string
@@ -22,8 +22,8 @@
 		const marginLeft = parseInt(styles['margin-left'] || '0');
 		const opacity = +styles.opacity
 		return {
-			delay: 0,
-			duration: 100,
+			delay: $config.transition.delay || 0,
+			duration: ($config.transition.duration || 200) / 2,
 			css: (t) => {
 				const eased = t
 				const res = `

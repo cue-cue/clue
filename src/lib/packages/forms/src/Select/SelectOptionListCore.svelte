@@ -1,5 +1,7 @@
 <script lang='ts'>
-	import type { IOption } from "./types.js"
+	import { writable } from "svelte/store"
+	import { selectOptionListCoreContext } from "./context.js"
+	import type { IOption, ISelectOptionListCoreData } from "./types.js"
 
 	type OptionsGeneric = $$Generic<IOption<any>[]>
 	type MultipleGeneric = $$Generic<boolean>
@@ -7,14 +9,6 @@
 	type ValueOne = OptionsGeneric[number]['value']
 
 	type Value<T extends boolean> = T extends true ? ValueOne[] : ValueOne
-
-	type Data = {
-		option:OptionsGeneric[number]
-		active:boolean
-		label:string
-		clickHandler: () => void
-		key:string
-	}[]
 
 	interface $$Props {
 		class?:string
@@ -24,6 +18,8 @@
 		value?:Value<MultipleGeneric>
 		filter?:((option:OptionsGeneric[number]) => boolean) | string
 	}
+
+	type Data = ISelectOptionListCoreData<OptionsGeneric>[]
 	
 
 	interface $$Slots {
@@ -59,34 +55,50 @@
 			return getOptionKey({value}) === getOptionKey(option)
 		}
 		return false
-	} 
-
-	const add = (option:OptionsGeneric[number]) => {
+	}
+	
+	export const set = (newValue:typeof value) => {
 		if (multiple) {
-			if (!value || !Array.isArray(value)) {
-				value = [option.value]
-			} else {
-				value = [...value, option.value]
-			}
+			value = Array.isArray(newValue) ? newValue : [newValue]
 		} else {
-			value = option.value
+			value = newValue
 		}
 	}
 
-	const remove = (option:OptionsGeneric[number]) => {
+	export const clear = () => {
+		if (multiple) {
+			set([])
+		} else {
+			set(undefined)
+		}
+	}
+
+	export const add = (option:OptionsGeneric[number]) => {
+		if (multiple) {
+			if (!value || !Array.isArray(value)) {
+				set(option.value)
+			} else {
+				set([...value, option.value])
+			}
+		} else {
+			set(option.value)
+		}
+	}
+
+	export const remove = (option:OptionsGeneric[number]) => {
 		const optionInValue = isOptionInValue(option, value)
 
 		if (multiple) {
 			if (!value || !Array.isArray(value)) {
-				value = []
+				clear()
 			} else if (Array.isArray(value)) {
 				if (optionInValue) {
-					value = value.filter((val:ValueOne) => getOptionKey({value:val}) !== getOptionKey(option))
+					set(value.filter((val:ValueOne) => getOptionKey({value:val}) !== getOptionKey(option)))
 				}
 			}
 		} else {
 			if (optionInValue) {
-				value = undefined
+				clear()
 			}
 		}
 	}
@@ -134,6 +146,14 @@
 			}
 		})
 	})()
+	
+	const selectOptionListCoreContextStore = selectOptionListCoreContext.set(writable({
+		data
+	}))
+
+	$: selectOptionListCoreContextStore.set({
+		data
+	})
 
 </script>
 

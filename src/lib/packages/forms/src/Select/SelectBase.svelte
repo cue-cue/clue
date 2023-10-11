@@ -44,6 +44,8 @@
 		close: CustomEvent<undefined>
 		open: CustomEvent<undefined>
 		toggle: CustomEvent<undefined>
+		searchClear: CustomEvent<undefined>
+		clear: CustomEvent<undefined>
 	}
 
 	interface $$Props {
@@ -52,6 +54,7 @@
 		opened?:boolean
 		readonly?:boolean
 		allowSearch?:boolean
+		allowClear?:boolean
 		searchValue?:string
 	}
 	
@@ -61,6 +64,7 @@
 	export let opened:$$Props['opened'] = false
 	export let readonly:$$Props['readonly'] = true
 	export let allowSearch:$$Props['allowSearch'] = false
+	export let allowClear:$$Props['allowClear'] = false
 	export let searchValue:$$Props['searchValue'] = ''
 
 	const id = randomId('SelectBase')
@@ -85,6 +89,7 @@
 			searched = false
 		},
 		clear() {
+			dispatch('searchClear')
 			searchValue = ''
 		}
 	}
@@ -170,7 +175,14 @@
 			})
 		},
 		clearClick() {
-			searchController.clear()
+			if (searched) {
+				if (!searchValue?.length && (allowClear && value)) {
+					dispatch('clear')
+				}
+				searchController.clear()
+			} else {
+				dispatch('clear')
+			}
 		},
 		outclick() {
 			searchController.stop()
@@ -233,7 +245,7 @@
 	{/if}
 	<svelte:fragment slot='buttons'>
 		<TextFieldButton {icon} on:click={handler.arrowClick} reverse={opened ? 'y' : undefined}/>
-		{#if searchValue?.length}
+		{#if searchValue?.length || (allowClear && value)}
 			<TextFieldButton icon={clearIcon} width={20} on:click={handler.clearClick}/>
 		{/if}
 	</svelte:fragment>

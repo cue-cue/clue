@@ -1,34 +1,37 @@
 <script lang='ts'>
-	import type { IOption } from './types.js'
+	import { selectOptionListCoreContext } from './context.js'
 	import {generateClassNames} from '@clue/utils'
-	import SelectOptionListCore from './SelectOptionListCore.svelte'
-	import type { ComponentProps } from 'svelte'
 	import SelectOption from './SelectOption.svelte'
-
+	import SelectOptionListBase from './SelectOptionListBase.svelte'
+	import type { ISelectOptionListCoreData, IOption } from './types.js'
 	type T = $$Generic<IOption<any>[]>
-	type U = $$Generic<boolean>
-
-	interface $$Props extends ComponentProps<SelectOptionListCore<T, U>>{
+	interface $$Props {
 		class?:string
+		data?:ISelectOptionListCoreData<T>[]
 	}
 	
 	let className = ''
 	export { className as class }
-	export let options:$$Props['options'] = [] as unknown as T
-	export let multiple:$$Props['multiple'] = undefined
-	export let value:$$Props['value'] = (multiple ? [] : undefined)
+	export let data:$$Props['data'] = []
+
+	const selectOptionListCoreContextStore = selectOptionListCoreContext.get()
+
+	$: if (selectOptionListCoreContextStore) {
+		data = $selectOptionListCoreContextStore.data
+	}
+
 </script>
 
-<SelectOptionListCore {options} bind:value {multiple} let:data {...$$restProps}>
-	<ul class={generateClassNames(['SelectOptionList', className])}>
+<SelectOptionListBase class={generateClassNames(['SelectOptionList', className])}>
+	{#if data}
 		{#each data as {key, active, label, clickHandler} (key)}
 			<SelectOption on:click={clickHandler} {active}>{label}</SelectOption>
 		{/each}
-	</ul>
-</SelectOptionListCore>
+	{/if}
+</SelectOptionListBase>
 
 <style lang='sass'>
-	.ClueSelectOptionList
+	:global(.ClueSelectOptionList)
 		background: var(--clue-color-white)
 		border-radius: 0 0 10px 10px
 		box-shadow: var(--clue-shadow)
