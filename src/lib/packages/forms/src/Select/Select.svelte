@@ -21,9 +21,8 @@
 	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<T, U>>
 
 	type SearchFilter = (option:T[0], searchValue:string) => boolean
-	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'allowSearch' | 'allowClear' | 'error' | 'id' | 'name'> {
+	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'opened' | 'allowSearch' | 'allowClear' | 'error'> {
 		class?:string
-		opened?:boolean
 		searchFilter?:SearchFilter
 	}
 	
@@ -36,6 +35,7 @@
 	export let allowSearch:$$Props['allowSearch'] = false
 	export let disabled:$$Props['disabled'] = false
 	export let readonly:$$Props['readonly'] = false
+	export let error:$$Props['error'] = false
 	export let searchFilter:$$Props['searchFilter'] = undefined
 	export let key:$$Props['key'] = undefined
 
@@ -81,8 +81,8 @@
 	multiple: {multiple}<br>
 	allowSearch: {allowSearch}<br>
 	disabled: {disabled}<br>
-	error: {$$restProps.error || false}<br>
-	key: {$$restProps.key || 'id'}<br>
+	error: {error}<br>
+	key: {key || 'id'}<br>
 	readonly: {readonly}<br>
 	value ({typeof value === 'object' ? 'array' : typeof value}): {value}
 </small>
@@ -95,7 +95,7 @@
 		{allowSearch}
 		{disabled}
 		{readonly}
-		{...$$restProps}
+		{error}
 		bind:close
 		bind:open
 		bind:toggle
