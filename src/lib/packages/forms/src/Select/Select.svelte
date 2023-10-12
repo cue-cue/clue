@@ -20,13 +20,10 @@
 	type SelectBaseProps = ComponentProps<SelectBase>
 	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<T, U>>
 
-	type SearchFilter = (option:T[number], searchValue:string) => boolean
-
-	interface $$Props extends Omit<SelectOptionListCoreProps, 'filter'> {
+	type SearchFilter = (option:T[0], searchValue:string) => boolean
+	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'allowSearch' | 'allowClear' | 'error' | 'id' | 'name'> {
 		class?:string
 		opened?:boolean
-		allowSearch?:SelectBaseProps['allowSearch']
-		allowClear?:SelectBaseProps['allowClear']
 		searchFilter?:SearchFilter
 	}
 	
@@ -37,15 +34,18 @@
 	export let multiple:$$Props['multiple'] = false as U
 	export let value:$$Props['value'] = undefined
 	export let allowSearch:$$Props['allowSearch'] = false
-	export let allowClear:$$Props['allowClear'] = true
+	export let disabled:$$Props['disabled'] = false
+	export let readonly:$$Props['readonly'] = false
 	export let searchFilter:$$Props['searchFilter'] = undefined
-	export let clear:$$Props['clear'] = undefined
+	export let key:$$Props['key'] = undefined
 
 	let searchValue:SelectBaseProps['searchValue'] = ''
 
 	let close:SelectBaseProps['close']
 	let open:SelectBaseProps['open']
 	let toggle:SelectBaseProps['toggle']
+
+	let clear:SelectOptionListCoreProps['clear']
 	
 	const handler = {
 		outclick() {
@@ -67,6 +67,7 @@
 
 	$: filter = (option:IOption<any>) => {
 		if (!allowSearch) return true
+
 		if (searchFilter) {
 			return searchFilter(option, searchValue || '')
 		} else if (!searchValue) {
@@ -74,12 +75,15 @@
 		}
 		return !!option.label?.toLowerCase().includes(searchValue.toLowerCase())
 	}
-
 </script>
 <small>
 	opened: {opened}<br>
 	multiple: {multiple}<br>
 	allowSearch: {allowSearch}<br>
+	disabled: {disabled}<br>
+	error: {$$restProps.error || false}<br>
+	key: {$$restProps.key || 'id'}<br>
+	readonly: {readonly}<br>
 	value ({typeof value === 'object' ? 'array' : typeof value}): {value}
 </small>
 <div
@@ -89,7 +93,9 @@
 >
 	<SelectBase
 		{allowSearch}
-		{allowClear}
+		{disabled}
+		{readonly}
+		{...$$restProps}
 		bind:close
 		bind:open
 		bind:toggle
@@ -102,7 +108,7 @@
 		on:clear={handler.clear}
 	/>
 
-	<SelectOptionListCore {options} {filter} bind:clear bind:value {multiple} {...$$restProps}>
+	<SelectOptionListCore {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
 		{#if opened}
 			<div transition:fly={{...$config.transition, y: -20}}>
 				<SelectOptionList/>
@@ -113,6 +119,13 @@
 
 <style lang='sass'>
 	.ClueSelect
+		position: relative
 		:global(.ClueSelectOptionList)
 			max-height: min(400px, 80vh)
+			width: 100%
+			position: absolute
+			bottom: 0
+			left: 0
+			transform: translateY(100%)
+			z-index: 100
 </style>

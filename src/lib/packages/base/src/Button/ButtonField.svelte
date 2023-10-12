@@ -67,7 +67,7 @@
 		transition-property: color, background, width, height, padding, border, box-shadow
 		@at-root button#{&}, a#{&}
 			cursor: pointer
-		&:not(&[data-disabled], &[disabled])
+		&:not(&[data-disabled='true'], &[disabled])
 			&:hover
 				background-color: var(--background-color-hover)
 				color: var(--color-hover)
@@ -76,7 +76,7 @@
 				background-color: var(--background-color-active)
 				color: var(--color-active)
 				border-color: var(--border-color-active)
-		&[disabled], &[data-disabled]
+		&[disabled], &[data-disabled='true']
 			cursor: not-allowed
 			background-color: var(--background-color-disabled)
 			color: var(--color-disabled)

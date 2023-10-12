@@ -97,22 +97,23 @@
 		border-radius: var(--border-radius)
 		transition: var(--clue-transition)
 		transition-property: background, border-radius
-		&:not(&[data-disabled], &[data-readonly], &[data-error='true'])
+		&:not(&[data-disabled='true'], &[data-readonly='true'], &[data-error='true'])
 			&:hover
 				--box-shadow-color: var(--clue-text-field-base-border-color-hover)
 			&[data-multiline]
 				--box-shadow-size: var(--clue-text-field-base-textarea-border-width)
-		&[data-multiline]
+		&[data-multiline='true']
 			--background-color: var(--clue-text-field-base-textarea-background-color)
-		&[data-readonly]
+		&[data-readonly='true']
 			--background-color: var(--clue-text-field-base-background-color-readonly)
 			--box-shadow-size: var(--clue-text-field-base-border-width-readonly)
-		&[data-error]
+		&[data-error='true']
 			--box-shadow-color: var(--clue-text-field-base-border-color-error)
 			--box-shadow-size: var(--clue-text-field-base-border-width-error)
-		&[data-disabled]
-			--box-shadow-size: var(--clue-text-field-base-border-width-disabled)
-			--box-shadow-color: var(--clue-text-field-base-border-color-disabled)
+		&[data-disabled='true']
+			&:not(&[data-error='true'])
+				--box-shadow-size: var(--clue-text-field-base-border-width-disabled)
+				--box-shadow-color: var(--clue-text-field-base-border-color-disabled)
 			:global(.ClueInput), :global(.ClueTextFieldValue)
 				color: var(--clue-text-field-base-placeholder-color-disabled)
 				--placeholder-color: var(--clue-text-field-base-placeholder-color-disabled)
@@ -130,7 +131,7 @@
 			transition: var(--clue-transition)
 			transition-property: box-shadow, border-radius
 
-		&:not(&[data-disabled])
+		&:not(&[data-disabled='true'])
 			&[data-focused='true']
 				--box-shadow-color: var(--clue-text-field-base-border-color-focus)
 				--box-shadow-size: var(--clue-text-field-base-border-width-focus)
@@ -158,7 +159,7 @@
 				color: var(--placeholder-color)
 		:global(.ClueInput[type='password'])
 			letter-spacing: .18em
-		&:not(&[data-disabled], &[data-readonly])
+		&:not(&[data-disabled='true'], &[data-readonly='true'])
 			:global(.ClueInput), :global(.ClueTextFieldValue)
 				&:hover
 					--placeholder-color: var(--clue-text-field-base-placeholder-color-hover)

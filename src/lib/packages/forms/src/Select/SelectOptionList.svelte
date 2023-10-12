@@ -3,8 +3,9 @@
 	import {generateClassNames} from '@clue/utils'
 	import SelectOption from './SelectOption.svelte'
 	import SelectOptionListBase from './SelectOptionListBase.svelte'
-	import type { ISelectOptionListCoreData, IOption } from './types.js'
-	type T = $$Generic<IOption<any>[]>
+	import type { ISelectOptionListCoreData, IOption, OptionValue } from './types.js'
+
+	type T = $$Generic<IOption<OptionValue>[]>
 	interface $$Props {
 		class?:string
 		data?:ISelectOptionListCoreData<T>[]

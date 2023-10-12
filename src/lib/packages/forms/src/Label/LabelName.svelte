@@ -42,10 +42,10 @@
 		line-height: 125%
 		transition: var(--clue-transition)
 		transition-property: color
-		&[data-disabled]
+		&[data-disabled='true']
 			cursor: not-allowed
 			color: var(--clue-label-name-color-disabled)
-		&:not([data-disabled])
+		&:not([data-disabled='true'])
 			@at-root :global([data-clue-label-name-hover-trigger]):hover &, &:hover
 				color: var(--clue-label-name-color-hover)
 </style>

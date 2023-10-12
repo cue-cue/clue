@@ -38,6 +38,7 @@
 	import { createAction } from '$lib/packages/utils/src/actions/actionList.js'
 
 	type InputProps = ComponentProps<Input>
+	type TextFieldBaseProps = ComponentProps<TextFieldBase>
 
 	interface $$Events {
 		click: MouseEvent
@@ -48,11 +49,10 @@
 		clear: CustomEvent<undefined>
 	}
 
-	interface $$Props {
+	interface $$Props extends Pick<TextFieldBaseProps, 'disabled' | 'readonly' | 'error' | 'name' | 'id'> {
 		class?:string
 		value?:InputProps['value']
 		opened?:boolean
-		readonly?:boolean
 		allowSearch?:boolean
 		allowClear?:boolean
 		searchValue?:string
@@ -62,10 +62,10 @@
 	export { className as class }
 	export let value:$$Props['value'] = undefined
 	export let opened:$$Props['opened'] = false
-	export let readonly:$$Props['readonly'] = true
 	export let allowSearch:$$Props['allowSearch'] = false
 	export let allowClear:$$Props['allowClear'] = false
 	export let searchValue:$$Props['searchValue'] = ''
+	export let disabled:$$Props['disabled'] = undefined
 
 	const id = randomId('SelectBase')
 
@@ -139,6 +139,8 @@
 	}
 
 	const setOpened = (_opened:typeof opened) => {
+		if (disabled) return
+		
 		opened = _opened
 		openedHandler.auto(opened)
 	}
@@ -159,22 +161,30 @@
 
 	const handler = {
 		arrowClick() {
+			if (disabled) return
+
 			inputController.ghostCallback(() => {
 				toggle()
 			})
 		},
 		baseClick(e:MouseEvent) {
+			if (disabled) return
+
 			const target = e.target as HTMLElement
 			if (target.contains(baseNodeElement as Node)) {
 				open()
 			}
 		},
 		focus() {
+			if (disabled) return
+
 			inputController.eventCallback(() => {
 				open()
 			})
 		},
 		clearClick() {
+			if (disabled) return
+
 			if (searched) {
 				if (!searchValue?.length && (allowClear && value)) {
 					dispatch('clear')
@@ -221,30 +231,36 @@
 <TextFieldBase
 	class={generateClassNames(['SelectBase', className])}
 	focused={opened}
-	on:click={handler.baseClick}
-	on:click
-	bind:nodeElement={baseNodeElement}
 	use={[
 		createAction('outclick', outclick, {
 			handler: handler.outclick
 		})
 	]}
+	{disabled}
+	bind:nodeElement={baseNodeElement}
+	on:click={handler.baseClick}
+	on:click
+	{...$$restProps}
 >
 	{#if searched}
 		<Input
 			placeholder={value}
+			{disabled}
 			bind:value={searchValue}
 			bind:nodeElement={searchInputElement}
 		/>
 	{:else}
 		<Input
-			{readonly}
+			readonly
+			{disabled}
 			bind:value
 			on:focus={handler.focus}
 		/>
 	{/if}
 	<svelte:fragment slot='buttons'>
-		<TextFieldButton {icon} on:click={handler.arrowClick} reverse={opened ? 'y' : undefined}/>
+		{#if !disabled}
+			<TextFieldButton {icon} on:click={handler.arrowClick} reverse={opened ? 'y' : undefined}/>
+		{/if}
 		{#if searchValue?.length || (allowClear && value)}
 			<TextFieldButton icon={clearIcon} width={20} on:click={handler.clearClick}/>
 		{/if}
