@@ -66,6 +66,14 @@
                     <Select {...item} readonly error/>
                 </li>
             </ul>
+            <ul>
+                <li>
+                    <Select {...item} label='label'/>
+                </li>
+                <li>
+                    <Select {...item} helper='helper' label='label'/>
+                </li>
+            </ul>
         </li>
     {/each}
 </ul>

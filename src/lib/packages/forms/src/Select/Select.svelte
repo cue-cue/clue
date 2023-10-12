@@ -12,6 +12,7 @@
 	import {generateClassNames, outclick} from '@clue/utils'
 	import SelectBase from './SelectBase.svelte'
 	import type { ComponentProps } from 'svelte'
+	import TextField from '../TextField/TextField.svelte'
 
 	
 	type T = $$Generic<IOption<any>[]>
@@ -19,9 +20,10 @@
 
 	type SelectBaseProps = ComponentProps<SelectBase>
 	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<T, U>>
+	type TextFieldProps = ComponentProps<TextField>
 
 	type SearchFilter = (option:T[0], searchValue:string) => boolean
-	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'opened' | 'allowSearch' | 'allowClear' | 'error'> {
+	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'opened' | 'allowSearch' | 'allowClear' | 'error'>, Pick<TextFieldProps, 'label' | 'helper' | 'hint'> {
 		class?:string
 		searchFilter?:SearchFilter
 	}
@@ -38,6 +40,9 @@
 	export let error:$$Props['error'] = false
 	export let searchFilter:$$Props['searchFilter'] = undefined
 	export let key:$$Props['key'] = undefined
+	export let label:$$Props['label'] = undefined
+	export let helper:$$Props['helper'] = undefined
+	export let hint:$$Props['hint'] = undefined
 
 	let searchValue:SelectBaseProps['searchValue'] = ''
 
@@ -81,9 +86,9 @@
 	multiple: {multiple}<br>
 	allowSearch: {allowSearch}<br>
 	disabled: {disabled}<br>
-	error: {error}<br>
-	key: {key || 'id'}<br>
 	readonly: {readonly}<br>
+	key: {key || 'id'}<br>
+	error: {error}<br>
 	value ({typeof value === 'object' ? 'array' : typeof value}): {value}
 </small>
 <div
@@ -91,22 +96,27 @@
 	use:outclick
 	on:outclick={handler.outclick}
 >
-	<SelectBase
-		{allowSearch}
-		{disabled}
-		{readonly}
-		{error}
-		bind:close
-		bind:open
-		bind:toggle
-		bind:value={inputValue}
-		bind:searchValue
-		bind:opened
-		on:open
-		on:close
-		on:toggle
-		on:clear={handler.clear}
-	/>
+	<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
+		<svelte:fragment slot='base' let:id>
+			<SelectBase
+				{allowSearch}
+				{disabled}
+				{readonly}
+				{error}
+				{id}
+				bind:close
+				bind:open
+				bind:toggle
+				bind:value={inputValue}
+				bind:searchValue
+				bind:opened
+				on:open
+				on:close
+				on:toggle
+				on:clear={handler.clear}
+			/>
+		</svelte:fragment>
+	</TextField>
 
 	<SelectOptionListCore {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
 		{#if opened}

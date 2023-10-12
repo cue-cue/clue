@@ -5,6 +5,7 @@
 	interface $$Props extends HTMLInputAttributes {
 		class?:string
 		nodeElement?:HTMLElement
+		id?:string
 	}
 	
 	let className = ''

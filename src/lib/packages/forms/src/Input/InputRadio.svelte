@@ -5,6 +5,7 @@
 	interface $$Props extends Omit<HTMLInputAttributes, 'type' | 'checked'> {
 		class?:string
 		group?:string | number
+		id?:string
 	}
 	
 	let className = ''

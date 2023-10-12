@@ -5,6 +5,7 @@
 
 	interface $$Props extends Omit<HTMLInputAttributes, 'type' | 'value'> {
 		class?: string
+		id?:string
 		type?: Extract<HTMLInputAttributes['type'], 'checkbox' | 'radio'>
 		group: (string | number)[]
 		value: string

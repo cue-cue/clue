@@ -5,6 +5,7 @@
 	interface $$Props extends HTMLTextareaAttributes {
 		class?:string
 		nodeElement?:HTMLElement
+		id?:string
 	}
 	
 	let className = ''

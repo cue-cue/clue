@@ -49,13 +49,14 @@
 		clear: CustomEvent<undefined>
 	}
 
-	interface $$Props extends Pick<TextFieldBaseProps, 'disabled' | 'readonly' | 'error' | 'name' | 'id'> {
+	interface $$Props extends Pick<TextFieldBaseProps, 'disabled' | 'readonly' | 'error' | 'name'> {
 		class?:string
 		value?:InputProps['value']
 		opened?:boolean
 		allowSearch?:boolean
 		allowClear?:boolean
 		searchValue?:string
+		id?:string
 	}
 	
 	let className = ''
@@ -66,8 +67,7 @@
 	export let allowClear:$$Props['allowClear'] = false
 	export let searchValue:$$Props['searchValue'] = ''
 	export let disabled:$$Props['disabled'] = undefined
-
-	const id = randomId('SelectBase')
+	export let id:Exclude<$$Props['id'], undefined> = randomId('SelectBase')
 
 	const dispatch = createEventDispatcher()
 
@@ -246,6 +246,7 @@
 		<Input
 			placeholder={value}
 			{disabled}
+			{id}
 			bind:value={searchValue}
 			bind:nodeElement={searchInputElement}
 		/>
@@ -253,6 +254,7 @@
 		<Input
 			readonly
 			{disabled}
+			{id}
 			bind:value
 			on:focus={handler.focus}
 		/>
