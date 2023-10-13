@@ -2,14 +2,14 @@
 	import {generateClassNames} from '@clue/utils'
 	import Input from '../Input/Input.svelte';
 	import type { ComponentProps } from 'svelte';
-	import { context } from './context.js';
+	import { context, textFieldBaseContext } from './context.js';
 	import { writable } from 'svelte/store';
 	import TextFieldButtons from './TextFieldButtons.svelte';
 	import { actionList, type ActionListParams } from '$lib/packages/utils/src/actions/actionList.js'
 
 	type InputTypes = Extract<ComponentProps<Input>['type'], 'password' | 'email' | 'text' | 'url' | 'tel'>
 
-	interface $$Props extends Omit<ComponentProps<Input>, 'type'>, Partial<Record<`data-${string}`, string>> {
+	interface $$Props extends Omit<ComponentProps<Input>, 'type' | 'size'>, Partial<Record<`data-${string}`, string>> {
 		class?:string
 		error?:boolean
 		type?:InputTypes
@@ -17,6 +17,7 @@
 		use?:ActionListParams
 		nodeElement?:HTMLElement
 		slots?:Partial<Record<keyof typeof $$slots, boolean>>
+		size?:'small' | 'medium'
 	}
 
 	
@@ -29,6 +30,7 @@
 	export let focused:$$Props['focused'] = undefined
 	export let use:$$Props['use'] = undefined
 	export let nodeElement:$$Props['nodeElement'] = undefined
+	export let size:$$Props['size'] = undefined
 	export let slots:$$Props['slots'] = undefined
 	
 	const localContext = context.get() || writable({})
@@ -42,6 +44,10 @@
 		update: undefined,
 		set: undefined,
 	}
+
+	const textFieldBaseContextStore = textFieldBaseContext.set(writable({size}))
+	$: textFieldBaseContextStore.set({size})
+
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -53,6 +59,7 @@
 	data-multiline={$$restProps.multiline}
 	data-readonly={$$restProps.readonly}
 	data-focused={focused}
+	data-size={size}
 	bind:this={nodeElement}
 	use:actionList={use}
 	on:click
@@ -91,6 +98,8 @@
 		--box-shadow-size: var(--clue-text-field-base-border-width)
 		--background-color: var(--clue-text-field-base-background-color)
 		--border-radius: var(--clue-text-field-base-border-radius)
+		--padding-y: var(--clue-text-field-base-padding-y)
+		--padding-x: var(--clue-text-field-base-padding-x)
 		display: flex
 		position: relative
 		width: auto
@@ -102,6 +111,12 @@
 		border-radius: var(--border-radius)
 		transition: var(--clue-transition)
 		transition-property: background, border-radius
+		&[data-size='small']
+			min-height: var(--clue-text-field-base-s-small-height)
+			--border-radius: var(--clue-text-field-base-s-small-border-radius)
+			--padding-y: var(--clue-text-field-base-s-small-padding-y)
+			--padding-x: var(--clue-text-field-base-s-small-padding-x)
+			font-size: var(--clue-text-field-base-s-small-font-size)
 		&:not(&[data-disabled='true'], &[data-readonly='true'], &[data-error='true'])
 			&:hover
 				--box-shadow-color: var(--clue-text-field-base-border-color-hover)
@@ -148,7 +163,7 @@
 			display: flex
 			align-items: center
 			border-radius: var(--border-radius)
-			padding: var(--clue-text-field-base-padding-y) var(--clue-text-field-base-padding-x)
+			padding: var(--padding-y) var(--padding-x)
 			font-size: inherit
 			font-weight: inherit
 			color: inherit
@@ -174,11 +189,11 @@
 		flex: none
 		align-self: center
 	:global(.ClueTextFieldBase__buttons_start)
-		margin-left: var(--clue-text-field-base-padding-x)
+		margin-left: var(--padding-x)
 	:global(.ClueTextFieldBase__buttons_start[data-hidden='true'])
 		margin-left: 0
 	:global(.ClueTextFieldBase__buttons_end)
-		margin-right: var(--clue-text-field-base-padding-x)
+		margin-right: var(--padding-x)
 	:global(.ClueTextFieldBase__buttons_end[data-hidden='true'])
 		margin-right: 0
 </style>
