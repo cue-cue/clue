@@ -11,7 +11,7 @@
 	import { writable } from 'svelte/store';
 	import TextFieldHint from './TextFieldHint.svelte';
 
-    interface $$Props extends ComponentProps<TextFieldBase> {
+    interface $$Props extends Omit<ComponentProps<TextFieldBase>, 'slots'> {
         class?:string
         label?:string
         hint?:string
@@ -25,6 +25,8 @@
         default: {
             id: $$Props['id']
         }
+        buttons: {}
+        'buttons-start': {}
     }
     
     let className = ''
@@ -51,7 +53,6 @@
     })
     
 </script>
-
 <div
     class={generateClassNames(['TextField', className])}
     data-error={error}
@@ -72,11 +73,21 @@
         </TextFieldHeader>
     {/if}
     <slot name='base' {id}>
-        {#if $$slots.default}
-            <TextFieldBase bind:value {...$$restProps}><TextFieldValue><slot {id}/></TextFieldValue></TextFieldBase>
-        {:else}
-            <TextFieldBase bind:value {...$$restProps}></TextFieldBase>
-        {/if}
+        <TextFieldBase
+            bind:value
+            {...$$restProps}
+            slots={{
+                buttons: $$slots.buttons ?? false,
+                'buttons-start': $$slots['buttons-start'] ?? false
+            }}
+        >
+            <svelte:fragment slot='buttons-start'>
+                <slot name='buttons-start'/>
+            </svelte:fragment>
+            <svelte:fragment slot='buttons'>
+                <slot name='buttons'/>
+            </svelte:fragment>
+        </TextFieldBase>
     </slot>
     {#if helper}
         <TextFieldFooter>

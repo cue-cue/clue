@@ -16,6 +16,7 @@
 		focused?:boolean
 		use?:ActionListParams
 		nodeElement?:HTMLElement
+		slots?:Partial<Record<keyof typeof $$slots, boolean>>
 	}
 
 	
@@ -28,6 +29,7 @@
 	export let focused:$$Props['focused'] = undefined
 	export let use:$$Props['use'] = undefined
 	export let nodeElement:$$Props['nodeElement'] = undefined
+	export let slots:$$Props['slots'] = undefined
 	
 	const localContext = context.get() || writable({})
 
@@ -56,6 +58,9 @@
 	on:click
 	on:dblclick
 >
+	{#if $$slots['buttons-start'] && (slots?.['buttons-start'] ?? true)}
+		<TextFieldButtons class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_start'])}><slot name='buttons-start'/></TextFieldButtons>
+	{/if}
 	<slot>
 		<Input
 			disabled={$localContext?.disabled || disabled}
@@ -71,8 +76,8 @@
 		/>
 	</slot>
 	<span class={generateClassNames(['TextFieldBase__border'])}></span>
-	{#if $$slots.buttons}
-		<TextFieldButtons><slot name='buttons'/></TextFieldButtons>
+	{#if $$slots.buttons && (slots?.buttons ?? true)}
+		<TextFieldButtons class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_end'])}><slot name='buttons'/></TextFieldButtons>
 	{/if}
 </div>
 
@@ -165,8 +170,11 @@
 					--placeholder-color: var(--clue-text-field-base-placeholder-color-hover)
 				&:focus
 					--placeholder-color: var(--clue-text-field-base-placeholder-color-focus)
-		:global(.ClueTextFieldButtons)
-			flex: none
-			align-self: center
-			margin-right: var(--clue-text-field-base-padding-x)
+	:global(.ClueTextFieldBase__buttons)
+		flex: none
+		align-self: center
+	:global(.ClueTextFieldBase__buttons_start)
+		margin-left: var(--clue-text-field-base-padding-x)
+	:global(.ClueTextFieldBase__buttons_end)
+		margin-right: var(--clue-text-field-base-padding-x)
 </style>

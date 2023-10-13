@@ -1,5 +1,7 @@
 <script lang='ts'>
+    import TextFieldButton from '$lib/packages/forms/src/TextField/TextFieldButton.svelte'
     import {Input, PasswordField, TextField, TextFieldBase} from '@clue/forms'
+    import icon from '@clue/icons/line/activity-circle.svg'
 </script>
 
 <h2>Input</h2>
@@ -52,12 +54,6 @@
         <PasswordField/>
     </li>
     <li>
-        base with TextFieldValue<br>
-        <TextField value='value'>
-            Text value (manual)
-        </TextField>
-    </li>
-    <li>
         base with label<br>
         <TextField value='value' label='Label'/>
     </li>
@@ -92,20 +88,12 @@
         base with disabled<br>
         <TextField placeholder='Placeholder' disabled label='Label' helper='Assistive text'/>
         <TextField value="Value" disabled label='Label' helper='Assistive text'/>
-        base with disabled and the TextFieldValue<br>
-        <TextField disabled label='Label' helper='Assistive text'>
-            Text value (manual)
-        </TextField>
     </li>
     <li>
         with readonly<br>
         <TextField placeholder='Placeholder' readonly label='Label' helper='Assistive text'/>
         <TextField value="Value" readonly label='Label' helper='Assistive text'/>
         <TextField multiline value="Value" readonly label='Label' helper='Assistive text'/>
-        base with disabled and the TextFieldValue<br>
-        <TextField readonly label='Label' helper='Assistive text'>
-            Text value (manual)
-        </TextField>
     </li>
     <li>
         textarea
@@ -118,5 +106,28 @@
         <TextField multiline value='Value' disabled/>
         <br>
         <TextField multiline value='Value' error/>
+    </li>
+    <li>
+        Icons
+        <TextField>
+            <svelte:fragment slot='buttons'>
+                <TextFieldButton {icon}/>
+            </svelte:fragment>
+        </TextField>
+        <br>
+        <TextField placeholder='Placeholder'>
+            <svelte:fragment slot='buttons-start'>
+                <TextFieldButton {icon}/>
+            </svelte:fragment>
+        </TextField>
+        <br>
+        <TextField value='Value' rows={6}>
+            <svelte:fragment slot='buttons-start'>
+                <TextFieldButton {icon}/>
+            </svelte:fragment>
+            <svelte:fragment slot='buttons'>
+                <TextFieldButton {icon}/>
+            </svelte:fragment>
+        </TextField>
     </li>
 </ul>
