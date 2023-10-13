@@ -1,21 +1,23 @@
 <script lang='ts'>
 	import { writable } from "svelte/store"
 	import { selectOptionListCoreContext } from "./context.js"
-	import type { IOption, ISelectOptionListCoreData, OptionValue } from "./types.js"
+	import type { IOption, ISelectOptionListCoreData, OptionValue, OptionValueKey } from "./types.js"
+	import {getOptionValueKey as _getOptionValueKey} from './utils.js'
 
 	type OptionsGeneric = $$Generic<IOption<any>[]>
 	type MultipleGeneric = $$Generic<boolean>
+	type ValueTypeGeneric = $$Generic<'key' | 'advanced' | undefined>
+	type KeyGeneric = $$Generic<OptionValueKey<OptionsGeneric[number]['value']>>
 	
-	type OptionGenericValue = OptionsGeneric[number]['value']
-
-	type Key = OptionGenericValue extends object ? keyof OptionGenericValue : Exclude<OptionValue, object>
+	type OptionGenericValue = ValueTypeGeneric extends 'advanced' ? OptionsGeneric[number]['value'] : OptionsGeneric[number]['value'][KeyGeneric]
 
 	type Value<T extends boolean> = T extends true ? OptionGenericValue[] : (OptionGenericValue | undefined)
 	interface $$Props {
 		class?:string
-		key?:Key
+		key?:KeyGeneric
 		multiple?:MultipleGeneric
 		options:OptionsGeneric
+		valueType?:ValueTypeGeneric
 		value?:Value<MultipleGeneric>
 		filter?:((option:OptionsGeneric[number]) => boolean) | string
 		disabled?:boolean
@@ -32,46 +34,57 @@
 		}
 	}
 
-	export let key:$$Props['key'] = 'id' as Key
+	export let key:$$Props['key'] = undefined
 	export let multiple:$$Props['multiple'] = false as MultipleGeneric
 	export let options:$$Props['options']
 	export let value:$$Props['value'] = (multiple ? [] : undefined) as unknown as $$Props['value']
 	export let filter:$$Props['filter'] = undefined
 	export let disabled:$$Props['disabled'] = undefined
 	export let readonly:$$Props['readonly'] = undefined
+	export let valueType:$$Props['valueType'] = undefined
 
-	const getOptionKey = (value:OptionGenericValue):string | number => {
-		if (typeof value === 'object' && !Array.isArray(value)) {
-			if (key) {
-				//@ts-ignore
-				return value[key]
-			} else {
-				//@ts-ignore
-				return value.id
-			}
-		}
-		return value as Exclude<typeof value, object>
+	const getOptionValueKey = (value:OptionValue) => {
+		return _getOptionValueKey(value, key)
 	}
 
-	const isOptionInValue = (option:OptionsGeneric[number], value:$$Props['value']) => {
+	const valueTransformer = <T extends OptionGenericValue>(value:T):ReturnType<typeof getOptionValueKey> | T => {
+		if (value === undefined) return value
+		if (typeof value === 'object') {
+			if (valueType === 'advanced') {
+				return value
+			} else {
+				//@ts-ignore
+				return getOptionValueKey(value)
+			}
+		}
+		//@ts-ignore
+		return getOptionValueKey(value)
+	}
+
+	const isOptionInValue = (option:OptionsGeneric[number], value?:$$Props['value']) => {
 		if (value === undefined) return false
-		const optionKey = getOptionKey(option.value)
+		let optionKey = getOptionValueKey(valueTransformer(option.value))
+		if (typeof optionKey === 'object') {
+			
+		}
 		if (multiple) {
 			if (!(value as Value<true>)?.length) return false
 			if (Array.isArray(value)) {
-				return value.findIndex((val:OptionValue) => getOptionKey(val) === optionKey) !== -1
+				return value.findIndex((val:OptionGenericValue) => {
+					return getOptionValueKey(valueTransformer(val)) === optionKey
+				}) !== -1
 			}
 		} else {
-			return getOptionKey(value) === getOptionKey(option.value)
+			return getOptionValueKey(valueTransformer(value as OptionGenericValue)) === optionKey
 		}
 		return false
 	}
 	
 	export const set = <T extends boolean>(newValue:Value<T>) => {
 		if (multiple) {
-			(value as Value<true>) = Array.isArray(newValue) ? newValue : [newValue]
+			(value as Value<true>) = Array.isArray(newValue) ? newValue.map((val:OptionGenericValue) => valueTransformer(val)) : [valueTransformer(newValue as OptionGenericValue)]
 		} else {
-			(value as Value<false>) = newValue
+			(value as Value<false>) = valueTransformer(newValue as OptionGenericValue) as OptionGenericValue
 		}
 	}
 
@@ -103,7 +116,7 @@
 				clear()
 			} else if (Array.isArray(value)) {
 				if (optionInValue) {
-					set(value.filter((val:OptionValue) => getOptionKey(val) !== getOptionKey(option.value)))
+					set(value.filter((val:OptionGenericValue) => getOptionValueKey(val) !== getOptionValueKey(option.value)))
 				}
 			}
 		} else {
@@ -152,7 +165,7 @@
 				option,
 				clickHandler,
 				label: option.label || '',
-				key: getOptionKey(option.value),
+				key: getOptionValueKey(option.value),
 				active: isActive(option, value)
 			}
 		})

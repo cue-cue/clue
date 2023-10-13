@@ -1,4 +1,6 @@
 <script lang='ts'>
+	import { getOptionValueKey } from './utils.js'
+
 	import SelectOptionListCore from './SelectOptionListCore.svelte'
 
 	import SelectOptionList from './SelectOptionList.svelte'
@@ -7,7 +9,7 @@
 
 	import { fly } from 'svelte/transition'
 
-	import type { IOption } from './types.js'
+	import type { IOption, OptionValue, OptionValueKey } from './types.js'
 
 	import {generateClassNames, outclick} from '@clue/utils'
 	import SelectBase from './SelectBase.svelte'
@@ -15,15 +17,17 @@
 	import TextField from '../TextField/TextField.svelte'
 
 	
-	type T = $$Generic<IOption<any>[]>
-	type U = $$Generic<boolean>
+	type OptionsGeneric = $$Generic<IOption<any>[]>
+	type MultipleGeneric = $$Generic<boolean>
+	type ValueTypeGeneric = $$Generic<'key' | 'advanced'>
+	type KeyGeneric = $$Generic<OptionValueKey<OptionsGeneric[number]['value']>>
 
 	type SelectBaseProps = ComponentProps<SelectBase>
-	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<T, U>>
+	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<OptionsGeneric, MultipleGeneric, ValueTypeGeneric, KeyGeneric>>
 	type TextFieldProps = ComponentProps<TextField>
 
-	type SearchFilter = (option:T[0], searchValue:string) => boolean
-	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'opened' | 'allowSearch' | 'allowClear' | 'error'>, Pick<TextFieldProps, 'label' | 'helper' | 'hint'> {
+	type SearchFilter = (option:OptionsGeneric[number], searchValue:string) => boolean
+	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'valueType' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'opened' | 'allowSearch' | 'allowClear' | 'error'>, Pick<TextFieldProps, 'label' | 'helper' | 'hint'> {
 		class?:string
 		searchFilter?:SearchFilter
 	}
@@ -32,7 +36,7 @@
 	export { className as class }
 	export let opened:$$Props['opened'] = false
 	export let options:$$Props['options']
-	export let multiple:$$Props['multiple'] = false as U
+	export let multiple:$$Props['multiple'] = false as MultipleGeneric
 	export let value:$$Props['value'] = undefined
 	export let allowSearch:$$Props['allowSearch'] = false
 	export let disabled:$$Props['disabled'] = false
@@ -43,6 +47,7 @@
 	export let label:$$Props['label'] = undefined
 	export let helper:$$Props['helper'] = undefined
 	export let hint:$$Props['hint'] = undefined
+	export let valueType:$$Props['valueType'] = undefined
 
 	let searchValue:SelectBaseProps['searchValue'] = ''
 
@@ -62,10 +67,14 @@
 	}
 
 	const getInputValue = (value:$$Props['value']) => {
-		if (Array.isArray(value)) {
-			return value.join(', ')
-		}
-		return value
+		const foundOptions = options.filter(option => {
+			if (Array.isArray(value)) {
+				return value.some((val: OptionsGeneric[number]["value"]) => getOptionValueKey(option.value, key) === getOptionValueKey(val, key))
+			}
+			return getOptionValueKey(option.value, key) === getOptionValueKey(value as OptionValue, key)
+		})
+		const labels = foundOptions.map(({label}) => label)
+		return labels.join(', ')
 	}
 	let inputValue = getInputValue(value)
 	$: inputValue = getInputValue(value)
@@ -85,11 +94,13 @@
 	opened: {opened}<br>
 	multiple: {multiple}<br>
 	allowSearch: {allowSearch}<br>
+	allowClear: {$$restProps.allowClear || true}<br>
 	disabled: {disabled}<br>
 	readonly: {readonly}<br>
 	key: {key || 'id'}<br>
+	valueType: {valueType || 'key'}<br>
 	error: {error}<br>
-	value ({typeof value === 'object' ? 'array' : typeof value}): {value}
+	value {JSON.stringify(value)}
 </small>
 <div
 	class={generateClassNames(['Select', className])}
@@ -118,7 +129,7 @@
 		</svelte:fragment>
 	</TextField>
 
-	<SelectOptionListCore {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
+	<SelectOptionListCore {valueType} {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
 		{#if opened}
 			<div transition:fly={{...$config.transition, y: -20}}>
 				<SelectOptionList/>

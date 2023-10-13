@@ -64,7 +64,7 @@
 	export let value:$$Props['value'] = undefined
 	export let opened:$$Props['opened'] = false
 	export let allowSearch:$$Props['allowSearch'] = false
-	export let allowClear:$$Props['allowClear'] = false
+	export let allowClear:$$Props['allowClear'] = true
 	export let searchValue:$$Props['searchValue'] = ''
 	export let disabled:$$Props['disabled'] = undefined
 	export let id:Exclude<$$Props['id'], undefined> = randomId('SelectBase')

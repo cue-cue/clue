@@ -3,7 +3,7 @@
 	import {Select} from "@clue/forms"
 	import type { ComponentProps } from "svelte"
 
-    const items:(ComponentProps<Select<IOption<string>[], boolean>> & {id: string})[] = [
+    const items:(ComponentProps<Select<IOption<string>[], boolean, any, any>> & {id: string})[] = [
         {
             id: 'Base',
             options: [
@@ -30,7 +30,7 @@
 
 <h2>Select</h2>
 
-<ul>
+<ul class='list'>
     {#each items as {id, ...item} (id)}
         <li>
             <h3>{id}</h3>
@@ -55,7 +55,7 @@
                     <Select {...item} error/>
                 </li>
                 <li>
-                    <Select {...item} multiple value={[]} error/>
+                    <Select {...item} multiple value={['test2', 'test3']} error/>
                 </li>
             </ul>
             <ul>
@@ -74,11 +74,33 @@
                     <Select {...item} helper='helper' label='label'/>
                 </li>
             </ul>
+            <ul>
+                <li>
+                    <Select options={item.options.map(({value,label}, index) => ({
+                        value: {
+                            id: value,
+                            name: (label || '') + index
+                        },
+                        label
+                    }))} key='id' valueType='key' value={['test2']} multiple/>
+                </li>
+                <li>
+                    <Select options={item.options.map(({value,label}, index) => ({
+                        value: {
+                            id: index + value,
+                            name: index
+                        },
+                        label
+                    }))} key='name' valueType='advanced' value={[{id: '1test21', name: 1}]} multiple/>
+                </li>
+            </ul>
         </li>
     {/each}
 </ul>
 
 <style lang="sass">
+    .list
+        margin-bottom: 400px
     ul
         li
             ul

@@ -1,5 +1,7 @@
 export type OptionValue = string | number | object
 
+export type OptionValueKey<T extends OptionValue> = T extends object ? keyof T | symbol : Exclude<OptionValue, object>
+
 export interface IOption<T extends OptionValue> {
     value:T
     label?:string
