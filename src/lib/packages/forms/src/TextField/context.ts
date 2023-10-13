@@ -6,3 +6,5 @@ import type TextField from "./TextField.svelte";
 type Data = Writable<Pick<ComponentProps<TextField>, 'error' | 'disabled' | 'id'>>
 
 export const context = new Context<Data>('TextField')
+
+export const textFieldButtonsContext = new Context<Writable<{count:number, mounted:boolean}>>('TextFieldButtons')

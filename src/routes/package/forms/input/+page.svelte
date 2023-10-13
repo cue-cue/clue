@@ -1,7 +1,10 @@
 <script lang='ts'>
     import TextFieldButton from '$lib/packages/forms/src/TextField/TextFieldButton.svelte'
     import {Input, PasswordField, TextField, TextFieldBase} from '@clue/forms'
-    import icon from '@clue/icons/line/activity-circle.svg'
+    import buttonIcon from '@clue/icons/line/activity-circle.svg'
+
+    const icons = {start: [buttonIcon, buttonIcon], end: [buttonIcon, buttonIcon]}
+
 </script>
 
 <h2>Input</h2>
@@ -111,23 +114,51 @@
         Icons
         <TextField>
             <svelte:fragment slot='buttons'>
-                <TextFieldButton {icon}/>
+                <TextFieldButton icon={buttonIcon}/>
             </svelte:fragment>
         </TextField>
         <br>
         <TextField placeholder='Placeholder'>
             <svelte:fragment slot='buttons-start'>
-                <TextFieldButton {icon}/>
+                <TextFieldButton icon={buttonIcon}/>
             </svelte:fragment>
         </TextField>
         <br>
         <TextField value='Value' rows={6}>
             <svelte:fragment slot='buttons-start'>
-                <TextFieldButton {icon}/>
+                <TextFieldButton icon={buttonIcon}/>
             </svelte:fragment>
             <svelte:fragment slot='buttons'>
-                <TextFieldButton {icon}/>
+                <TextFieldButton icon={buttonIcon}/>
             </svelte:fragment>
         </TextField>
+        <br>
+        {#if true}
+            <pre>
+                {JSON.stringify(icons, null, 2)}
+            </pre>
+            <TextField value='Value' rows={6}>
+                <svelte:fragment slot='buttons-start'>
+                    {#each icons.start as icon, index}
+                        {#if icon}
+                            <TextFieldButton {icon} on:click={() => {
+                                icons.start[index] = undefined
+                                setTimeout(() => icons.start[index] = buttonIcon, 1000)
+                            }}/>
+                        {/if}
+                    {/each}
+                </svelte:fragment>
+                <svelte:fragment slot='buttons'>
+                    {#each icons.end as icon, index}
+                        {#if icon}
+                            <TextFieldButton {icon} on:click={() => {
+                                icons.end[index] = undefined
+                                setTimeout(() => icons.end[index] = buttonIcon, 1000)
+                            }}/>
+                        {/if}
+                    {/each}
+                </svelte:fragment>
+            </TextField>
+        {/if}
     </li>
 </ul>

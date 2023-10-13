@@ -175,6 +175,10 @@
 		align-self: center
 	:global(.ClueTextFieldBase__buttons_start)
 		margin-left: var(--clue-text-field-base-padding-x)
+	:global(.ClueTextFieldBase__buttons_start[data-hidden='true'])
+		margin-left: 0
 	:global(.ClueTextFieldBase__buttons_end)
 		margin-right: var(--clue-text-field-base-padding-x)
+	:global(.ClueTextFieldBase__buttons_end[data-hidden='true'])
+		margin-right: 0
 </style>

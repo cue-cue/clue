@@ -1,9 +1,10 @@
 <script lang='ts'>
 	import {generateClassNames} from '@clue/utils'
 	import {Icon} from '@clue/icons'
-	import type { ComponentProps } from 'svelte';
+	import { onMount, type ComponentProps, onDestroy } from 'svelte';
 	import type { TransitionConfig } from 'svelte/transition'
 	import { config } from '$lib/packages/config.js'
+	import { textFieldButtonsContext } from './context.js'
 
 	interface $$Props extends ComponentProps<Icon> {
 		class?:string
@@ -36,6 +37,16 @@
 			}
 		}
 	}
+
+	const textFieldButtonsContextStore = textFieldButtonsContext.get()
+
+	onMount(() => {
+		$textFieldButtonsContextStore.count += 1
+	})
+
+	onDestroy(() => {
+		$textFieldButtonsContextStore.count -= 1
+	})
 
 </script>
 
