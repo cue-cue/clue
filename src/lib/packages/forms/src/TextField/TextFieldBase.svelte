@@ -120,10 +120,13 @@
 		&:not(&[data-disabled='true'], &[data-readonly='true'], &[data-error='true'])
 			&:hover
 				--box-shadow-color: var(--clue-text-field-base-border-color-hover)
-			&[data-multiline]
+			&[data-multiline='true']
 				--box-shadow-size: var(--clue-text-field-base-textarea-border-width)
 		&[data-multiline='true']
 			--background-color: var(--clue-text-field-base-textarea-background-color)
+			:global(.ClueTextFieldBase__buttons)
+				align-self: start
+				margin-top: calc(var(--padding-y) - 2px)
 		&[data-readonly='true']
 			--background-color: var(--clue-text-field-base-background-color-readonly)
 			--box-shadow-size: var(--clue-text-field-base-border-width-readonly)

@@ -13,6 +13,17 @@
         {
             id: 'Size: small',
             size: 'small'
+        },
+        {
+            id: 'Textarea',
+            rows: 3,
+            multiline: true,
+        },
+        {
+            id: 'Textarea | Size: small',
+            size: 'small',
+            rows: 4,
+            multiline: true,
         }
     ]
 
