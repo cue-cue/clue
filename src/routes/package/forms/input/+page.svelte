@@ -2,190 +2,104 @@
     import TextFieldButton from '$lib/packages/forms/src/TextField/TextFieldButton.svelte'
     import {Input, PasswordField, TextField, TextFieldBase} from '@clue/forms'
     import buttonIcon from '@clue/icons/line/activity-circle.svg'
+	import type { ComponentProps } from 'svelte'
 
-    const icons:Record<'start' | 'end', (typeof buttonIcon | undefined)[]> = {start: [buttonIcon, buttonIcon], end: [buttonIcon, buttonIcon, buttonIcon, buttonIcon, buttonIcon]}
+    const icons:Record<'start' | 'end', (typeof buttonIcon | undefined)[]> = {start: [buttonIcon, buttonIcon], end: [buttonIcon, buttonIcon, buttonIcon]}
+
+    const items:Array<ComponentProps<TextField> & {id: string}> = [
+        {
+            id: 'Base',
+        },
+        {
+            id: 'Size: small',
+            size: 'small'
+        }
+    ]
+
+    const getVariants = <T extends ComponentProps<TextField>>(props:T):Array<T & {id: string}> => {
+        const variants:ComponentProps<TextField>[] = [
+            {value: 'Value'},
+            {placeholder: 'Placeholder'},
+            {value: 'Placeholder', placeholder: 'Placeholder'},
+            {focused: true, placeholder: "Placeholder"},
+            {error: true, placeholder: "Placeholder"},
+            {disabled: true, placeholder: "Placeholder"},
+            {disabled: true, error: true, placeholder: "Placeholder"},
+            {disabled: true, readonly: true, placeholder: "Placeholder"},
+            {readonly: true, placeholder: "Placeholder"},
+            {readonly: true, error: true, placeholder: "Placeholder"},
+            {readonly: true, disabled: true, placeholder: "Placeholder"},
+            {readonly: true, disabled: true, error: true, placeholder: "Placeholder"},
+            {readonly: true, label: 'Label', helper: 'Helper', hint: 'Hint', placeholder: "Placeholder"},
+            {disabled: true, label: 'Label', helper: 'Helper', hint: 'Hint', placeholder: "Placeholder"},
+            {error: true, label: 'Label', helper: 'Helper', hint: 'Hint', placeholder: "Placeholder"},
+            {readonly: true, disabled: true, error: true, label: 'Label', helper: 'Helper', hint: 'Hint', placeholder: "Placeholder"}
+        ]
+
+        return variants.map((variant, i) => ({...props, ...variant, id: `variant-${i}`}))
+    }
 
 </script>
 
 <h2>Input</h2>
-<ul>
-    <li>
-        base without placeholder <br>
-        <Input/>
-    </li>
-    <li>
-        base with placeholder <br>
-        <Input placeholder="Placeholder"/>
-    </li>
-    <li>
-        base with value<br>
-        <Input value='value'/>
-    </li>
+<ul class='item-list'>
+    {#each items as {id,...item} (id)}
+        <li>
+            <h3>{id}</h3>
+            <ul class='variant-list'>
+                {#each getVariants(item) as {id, ...variant} (id)}
+                    <li>
+                        <pre style='font-size: 10px'>{JSON.stringify(variant, null, 2)}</pre>
+                        <TextField {...variant}/>
+                    </li>
+                {/each}
+                <TextField {...item} label='Buttons (start)' placeholder="Buttons">
+                    <svelte:fragment slot='buttons-start'>
+                        <TextFieldButton icon={buttonIcon}/>
+                    </svelte:fragment>
+                </TextField>
+                <TextField {...item} label='Buttons (end)' placeholder="Buttons">
+                    <svelte:fragment slot='buttons'>
+                        <TextFieldButton icon={buttonIcon}/>
+                    </svelte:fragment>
+                </TextField>
+                <TextField {...item} label='Buttons (start + end)' placeholder="Click!!!">
+                    <svelte:fragment slot='buttons-start'>
+                        {#each icons.start as icon, index}
+                            {#if icon}
+                                <TextFieldButton {icon} on:click={() => {
+                                    icons.start[index] = undefined
+                                    setTimeout(() => icons.start[index] = buttonIcon, 2000)
+                                }}/>
+                            {/if}
+                        {/each}
+                    </svelte:fragment>
+                    <svelte:fragment slot='buttons'>
+                        {#each icons.end as icon, index}
+                            {#if icon}
+                                <TextFieldButton {icon} on:click={() => {
+                                    icons.end[index] = undefined
+                                    setTimeout(() => icons.end[index] = buttonIcon, 2000)
+                                }}/>
+                            {/if}
+                        {/each}
+                    </svelte:fragment>
+                </TextField>
+            </ul>
+        </li>
+    {/each}
 </ul>
-<h3>multiline</h3>
-<ul>
-    <li>
-        base without placeholder (rows: 4) <br>
-        <Input multiline rows={4}/>
-    </li>
-    <li>
-        base with placeholder <br>
-        <Input multiline placeholder="Placeholder"/>
-    </li>
-    <li>
-        base with value<br>
-        <Input multiline value='value'/>
-    </li>
-</ul>
-<hr>
-<h2>TextField</h2>
-<ul>
-    <li>
-        base without placeholder <br>
-        <TextField/>
-    </li>
-    <li>
-        base with placeholder <br>
-        <TextField placeholder="Placeholder"/>
-    </li>
-    <li>
-        base with value<br>
-        <TextField value='value'/>
-    </li>
-    <li>
-        PasswordField<br>
-        <PasswordField/>
-    </li>
-    <li>
-        base with label<br>
-        <TextField value='value' label='Label'/>
-    </li>
-    <li>
-        base with hint<br>
-        <TextField value='value' hint='Hint'/>
-    </li>
-    <li>
-        base with label and hint<br>
-        <TextField value='value' label='Label' hint='Hint'/>
-    </li>
-    <li>
-        base with helper<br>
-        <TextField value='value' helper='Assistive text'/>
-    </li>
-    <li>
-        multiple inputs<br>
-        <TextField readonly helper='Assistive text' label='test'>
-            <svelte:fragment slot='base' let:id>
-                <TextFieldBase>
-                    <Input placeholder='first' {id}/>
-                    <Input placeholder='second' id={id + 'second'}/>
-                </TextFieldBase>
-            </svelte:fragment>
-        </TextField>
-    </li>
-    <li>
-        base with error<br>
-        <TextField placeholder='Placeholder' error label='Label' helper='Assistive text'/>
-    </li>
-    <li>
-        base with disabled<br>
-        <TextField placeholder='Placeholder' disabled label='Label' helper='Assistive text'/>
-        <TextField value="Value" disabled label='Label' helper='Assistive text'/>
-    </li>
-    <li>
-        with readonly<br>
-        <TextField placeholder='Placeholder' readonly label='Label' helper='Assistive text'/>
-        <TextField value="Value" readonly label='Label' helper='Assistive text'/>
-        <TextField multiline value="Value" readonly label='Label' helper='Assistive text'/>
-    </li>
-    <li>
-        textarea
-        <TextField multiline/>
-        <br>
-        <TextField multiline placeholder='Placeholder'/>
-        <br>
-        <TextField multiline value='Value' rows={6}/>
-        <br>
-        <TextField multiline value='Value' disabled/>
-        <br>
-        <TextField multiline value='Value' error/>
-    </li>
-    <li>
-        Icons
-        <TextField>
-            <svelte:fragment slot='buttons'>
-                <TextFieldButton icon={buttonIcon}/>
-            </svelte:fragment>
-        </TextField>
-        <br>
-        <TextField placeholder='Placeholder'>
-            <svelte:fragment slot='buttons-start'>
-                <TextFieldButton icon={buttonIcon}/>
-            </svelte:fragment>
-        </TextField>
-        <br>
-        <TextField value='Value'>
-            <svelte:fragment slot='buttons-start'>
-                <TextFieldButton icon={buttonIcon}/>
-            </svelte:fragment>
-            <svelte:fragment slot='buttons'>
-                <TextFieldButton icon={buttonIcon}/>
-            </svelte:fragment>
-        </TextField>
-        <br>
-        <pre>
-            {JSON.stringify(icons, null, 2)}
-        </pre>
-        <TextField value='Value'>
-            <svelte:fragment slot='buttons-start'>
-                {#each icons.start as icon, index}
-                    {#if icon}
-                        <TextFieldButton {icon} on:click={() => {
-                            icons.start[index] = undefined
-                            setTimeout(() => icons.start[index] = buttonIcon, 2000)
-                        }}/>
-                    {/if}
-                {/each}
-            </svelte:fragment>
-            <svelte:fragment slot='buttons'>
-                {#each icons.end as icon, index}
-                    {#if icon}
-                        <TextFieldButton {icon} on:click={() => {
-                            icons.end[index] = undefined
-                            setTimeout(() => icons.end[index] = buttonIcon, 2000)
-                        }}/>
-                    {/if}
-                {/each}
-            </svelte:fragment>
-        </TextField>
-    </li>
-    <li>
-        <h3>Size small</h3>
-        <TextField value='value' label='Base' size='small'/>
-        <br>
-        <TextField value='value' label='Disabled' disabled size='small'/>
-        <br>
-        <TextField value='Value' label='With icons' size='small'>
-            <svelte:fragment slot='buttons-start'>
-                {#each icons.start as icon, index}
-                    {#if icon}
-                        <TextFieldButton {icon} on:click={() => {
-                            icons.start[index] = undefined
-                            setTimeout(() => icons.start[index] = buttonIcon, 2000)
-                        }}/>
-                    {/if}
-                {/each}
-            </svelte:fragment>
-            <svelte:fragment slot='buttons'>
-                {#each icons.end as icon, index}
-                    {#if icon}
-                        <TextFieldButton {icon} on:click={() => {
-                            icons.end[index] = undefined
-                            setTimeout(() => icons.end[index] = buttonIcon, 2000)
-                        }}/>
-                    {/if}
-                {/each}
-            </svelte:fragment>
-        </TextField>
-    </li>
-</ul>
+
+<style lang="sass">
+    .item-list
+        padding-left: 0
+        & > li
+            margin-bottom: 60px
+    .variant-list
+        padding-left: 0
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        gap: 16px
+        align-items: end
+        list-style: none
+</style>
