@@ -19,8 +19,8 @@
 
     const menuItems:(ComponentProps<Button> & {name:string})[] = [
         {
-            name: 'Input',
-            href: '/package/forms/input',
+            name: 'TextField',
+            href: '/package/forms/text-field',
             startIcon: inputIcon
         },
 		{
