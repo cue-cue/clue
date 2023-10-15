@@ -2,7 +2,11 @@
 	import {generateClassNames} from '@clue/utils'
 	import type { HTMLInputAttributes } from 'svelte/elements';
 
-	interface $$Props extends HTMLInputAttributes {
+	type Attributes = {
+		[K in keyof HTMLInputAttributes]: Exclude<HTMLInputAttributes[K], null>
+	}
+
+	interface $$Props extends Attributes {
 		class?:string
 		nodeElement?:HTMLElement
 		id?:string

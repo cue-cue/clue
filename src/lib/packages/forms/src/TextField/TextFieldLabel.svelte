@@ -19,7 +19,7 @@
 
 <style lang='sass'>
     .ClueTextFieldLabel
-        color: #484B5B
+        color: var(--clue-color-gray-700)
         font-weight: 500
         font-size: 12px
         line-height: 150%

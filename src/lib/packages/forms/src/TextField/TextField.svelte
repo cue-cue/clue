@@ -4,7 +4,6 @@
 	import TextFieldHelper from './TextFieldHelper.svelte';
     import TextFieldHeader from './TextFieldHeader.svelte'
 	import TextFieldLabel from './TextFieldLabel.svelte';
-	import TextFieldValue from './TextFieldValue.svelte';
 	import type { ComponentProps } from 'svelte';
 	import TextFieldFooter from './TextFieldFooter.svelte';
 	import { context } from './context.js';
@@ -92,7 +91,7 @@
     {#if helper}
         <TextFieldFooter>
             {#if helper}
-                <TextFieldHelper color={error ? 'error' : disabled ? 'disabled' : undefined}>
+                <TextFieldHelper {error} {disabled} >
                     {helper}
                 </TextFieldHelper>
             {/if}

@@ -4,7 +4,7 @@
 	import InputTextareaElement from './InputTextareaElement.svelte';
 	import InputElement from './InputElement.svelte';
 
-    interface $$Props extends ComponentProps<InputElement>, Pick<ComponentProps<InputTextareaElement>, 'maxlength' | 'rows'> {
+    interface $$Props extends Omit<ComponentProps<InputElement>, 'maxlength' | 'rows'>, Pick<ComponentProps<InputTextareaElement>, 'maxlength' | 'rows'> {
         class?:string
         multiline?:boolean
     }

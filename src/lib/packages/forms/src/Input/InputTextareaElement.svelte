@@ -2,6 +2,9 @@
 	import {generateClassNames} from '@clue/utils'
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 
+	type Attributes = {
+		[K in keyof HTMLTextareaAttributes]: Exclude<HTMLTextareaAttributes[K], null>
+	}
 	interface $$Props extends HTMLTextareaAttributes {
 		class?:string
 		nodeElement?:HTMLElement
