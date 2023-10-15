@@ -42,13 +42,13 @@
         'background-color': (
             'default': var(--clue-color-primary),
             'hover': var(--clue-color-primary-600),
-            'active': var(--clue-color-primary-600),
-            'disabled': var(--clue-color-gray-10)
+            'active': var(--clue-color-primary-700),
+            'disabled': var(--clue-color-gray-50)
         ),
         'color': (
-            'default': var(--clue-color-primary-10),
-            'hover': var(--clue-color-primary-10),
-            'active': var(--clue-color-primary-10),
+            'default': var(--clue-color-white),
+            'hover': var(--clue-color-white),
+            'active': var(--clue-color-white),
             'disabled': var(--clue-color-gray-300)
         ),
         'border-color': (
@@ -63,13 +63,13 @@
         'background-color': (
             'default': var(--clue-color-active),
             'hover': var(--clue-color-active-600),
-            'active': var(--clue-color-active-600),
+            'active': var(--clue-color-active-700),
             'disabled': var(--clue-button-field-background-color-disabled)
         ),
         'color': (
-            'default': var(--clue-color-gray-800),
-            'hover': var(--clue-color-gray-800),
-            'active': var(--clue-color-gray-800),
+            'default': var(--clue-color-gray-900),
+            'hover': var(--clue-color-gray-900),
+            'active': var(--clue-color-gray-900),
             'disabled': var(--clue-button-field-color-disabled)
         ),
         'border-color': (
@@ -82,9 +82,9 @@
 
     @include button-field-type('secondary', (
         'background-color': (
-            'default': var(--clue-color-primary-10),
+            'default': var(--clue-color-primary-50),
             'hover': var(--clue-color-primary-100),
-            'active': var(--clue-color-primary-100),
+            'active': var(--clue-color-primary-200),
             'disabled': var(--clue-button-field-background-color-disabled)
         ),
         'color': (
@@ -104,8 +104,8 @@
     @include button-field-type('ghost', (
         'background-color': (
             'default': transparent,
-            'hover': var(--clue-color-primary-10),
-            'active': var(--clue-color-primary-10),
+            'hover': var(--clue-color-primary-50),
+            'active': var(--clue-color-primary-100),
             'disabled': transparent
         ),
         'color': (
@@ -125,8 +125,8 @@
     @include button-field-type('outlined', (
         'background-color': (
             'default': transparent,
-            'hover': var(--clue-color-primary-10),
-            'active': var(--clue-color-primary-10),
+            'hover': var(--clue-color-primary-50),
+            'active': var(--clue-color-primary-100),
             'disabled': transparent,
         ),
         'color': (
