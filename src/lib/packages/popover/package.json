@@ -8,6 +8,7 @@
 	"author": "Nikita Fedorov",
 	"dependencies": {
 		"@clue/config": "workspace:*",
-		"@clue/utils": "workspace:*"
+		"@clue/utils": "workspace:*",
+		"svelte-floating-ui": "^1.5.4"
 	}
 }

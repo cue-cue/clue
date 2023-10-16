@@ -29,14 +29,13 @@
 		"svelte": "^4.0.0"
 	},
 	"dependencies": {
-		"@clue/base": "./src/lib/packages/base",
-		"@clue/config": "./src/lib/packages/config",
-		"@clue/forms": "./src/lib/packages/forms",
-		"@clue/icons": "./src/lib/packages/icons",
-		"@clue/popover": "./src/lib/packages/popover",
-		"@clue/styles": "./src/lib/packages/styles",
-		"@clue/utils": "./src/lib/packages/utils",
-		"svelte-floating-ui": "^1.5.4"
+		"@clue/base": "workspace:*",
+		"@clue/config": "workspace:*",
+		"@clue/forms": "workspace:*",
+		"@clue/icons": "workspace:*",
+		"@clue/popover": "workspace:*",
+		"@clue/styles": "workspace:*",
+		"@clue/utils": "workspace:*"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
