@@ -5,6 +5,7 @@
 	import { writable } from 'svelte/store'
 	import { createPopoverActions, type IPopoverOptions } from '../actions'
 	import type { ComputeConfig } from 'svelte-floating-ui'
+	import { HoverTrigger } from '../Trigger/hover.js'
 
 	interface $$Props {
 		class?:string
@@ -19,39 +20,33 @@
 	export let placement:$$Props['placement'] = 'top'
 	export let open:$$Props['open'] = false
 
-	let targetElementRef:HTMLElement | undefined = undefined
-	let contentElementRef:HTMLElement | undefined = undefined
+	let targetElementRef = writable<HTMLElement | undefined>(undefined)
+	let contentElementRef = writable<HTMLElement | undefined>(undefined)
 
 	const defOptions:IPopoverOptions = {
 		target: {
 			init(node) {
-				targetElementRef = node
+				targetElementRef.set(node)
 			},
 			destroy() {
-				targetElementRef = undefined
+				targetElementRef.set(undefined)
 			}
 		},
 		content: {
 			init(node) {
-				contentElementRef = node
+				contentElementRef.set(node)
 			},
 			destroy() {
-				contentElementRef = undefined
+				contentElementRef.set(undefined)
 			}
 		},
-		on: {
-			target: {
-				click() {
-					toggle()
-				},
-				mouseover() {
-					setOpen(true)
-				},
-				mouseleave() {
-					setOpen(false)
-				}
-			}
-		}
+		trigger: new HoverTrigger({
+			content: contentElementRef,
+			target: targetElementRef
+		},{
+			open: () => setOpen(true),
+			close: () => setOpen(false)
+		})
 	}
 
 	const setOpen = (_open:typeof open) => {
@@ -80,7 +75,6 @@
 		...defOptions,
 		placement
 	})
-	$: console.log({targetElementRef, contentElementRef})
 </script>
 
 {#if inline}
