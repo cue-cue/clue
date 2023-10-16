@@ -29,16 +29,17 @@
 	},
 	"dependencies": {
 		"@clue/base": "./src/lib/packages/base",
+		"@clue/config": "./src/lib/packages/config",
 		"@clue/forms": "./src/lib/packages/forms",
 		"@clue/icons": "./src/lib/packages/icons",
 		"@clue/popover": "./src/lib/packages/popover",
 		"@clue/styles": "./src/lib/packages/styles",
 		"@clue/utils": "./src/lib/packages/utils",
-		"@clue/config": "./src/lib/packages/config",
 		"svelte-floating-ui": "^1.5.4"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-netlify": "^2.0.8",
 		"@sveltejs/kit": "^1.20.4",
 		"@sveltejs/package": "^2.0.0",
 		"@types/node": "^20.7.1",
