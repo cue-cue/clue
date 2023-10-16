@@ -83,9 +83,9 @@
                 {#each genVariants(item) as {component, label, value, ...props} (value)}
                     <li>
                         <h5 style="margin: 0; margin-bottom: 10px">{value}</h5>
-                        <svelte:component this={component} bind:group={groups[id]} {...props} {value} let:label={labelComponent}>
+                        <svelte:component this={component} bind:group={groups[id]} {...props} {value} let:Label={LabelComponent}>
                             {#if label}
-                                <svelte:component this={labelComponent}>{label}</svelte:component>
+                                <svelte:component this={LabelComponent}>{label}</svelte:component>
                             {/if}
                         </svelte:component>
                     </li>

@@ -13,7 +13,7 @@
 	interface $$Slots {
 		default: {}
 		label: {
-			component: typeof LabelName
+			Component: typeof LabelName
 		}
 		desc: {}
 	}
@@ -28,7 +28,7 @@
 	<div class={generateClassNames(['Label__main'])} data-clue-checkbox-field-hover-trigger data-clue-label-name-hover-trigger>
 		<slot/>
 		{#if $$slots.label && (slots?.label ?? true)}
-			<slot name='label' component={LabelName}/>
+			<slot name='label' Component={LabelName}/>
 		{/if}
 	</div>
 	{#if $$slots.desc && (slots?.desc ?? true)}

@@ -22,9 +22,9 @@
 	on:click
 	on:dblclick
 >
-	<Checkbox manual let:label={labelComponent} checked={active}>
+	<Checkbox manual let:Label={LabelComponent} checked={active}>
 		{#if $$slots.default}
-			<svelte:component this={labelComponent}>
+			<svelte:component this={LabelComponent}>
 				<slot/>
 			</svelte:component>
 		{/if}

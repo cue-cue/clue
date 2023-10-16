@@ -13,7 +13,7 @@
 
 	interface $$Slots {
 		default: {
-			label: typeof LabelName
+			Label: typeof LabelName
 		}
 		desc: {}
 	}
@@ -41,8 +41,8 @@
 	}}
 >
 	<CheckboxBase {value} {disabled} bind:checked bind:group bind:id {name} {...$$restProps}/>
-	<svelte:fragment slot='label' let:component>
-		<slot label={component}/>
+	<svelte:fragment slot='label' let:Component>
+		<slot Label={Component}/>
 	</svelte:fragment>
 	<svelte:fragment slot='desc'>
 		<slot name='desc'/>
