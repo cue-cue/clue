@@ -7,10 +7,10 @@
 	"type": "module",
 	"author": "Nikita Fedorov",
 	"dependencies": {
-		"@clue/icons": "../icons",
-		"@clue/config": "../config",
-		"@clue/base": "../base",
-		"@clue/utils": "../utils",
-		"@clue/popover": "../popover"
+		"@clue/icons": "workspace:*",
+		"@clue/config": "workspace:*",
+		"@clue/base": "workspace:*",
+		"@clue/utils": "workspace:*",
+		"@clue/popover": "workspace:*"
 	}
 }

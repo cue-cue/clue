@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-		"@clue/icons": "../icons",
-		"@clue/utils": "../utils"
+		"@clue/icons": "workspace:*",
+		"@clue/utils": "workspace:*"
 	}
 }
