@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import { selectOptionListCoreContext } from './context.js'
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 	import SelectOption from './SelectOption.svelte'
 	import SelectOptionListBase from './SelectOptionListBase.svelte'
 	import type { ISelectOptionListCoreData, IOption, OptionValue } from './types.js'

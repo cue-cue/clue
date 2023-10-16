@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import { randomId } from '@clue/utils';
-    import {Checkbox, Radio} from '@clue/forms'
+	import { randomId } from '@cluue/utils';
+    import {Checkbox, Radio} from '@cluue/forms'
 	import type { ComponentProps } from 'svelte';
 	import Switch from '$lib/packages/forms/src/Switch/Switch.svelte'
 

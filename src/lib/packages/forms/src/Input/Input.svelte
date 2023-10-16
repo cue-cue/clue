@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import {generateClassNames} from '@clue/utils'
+    import {generateClassNames} from '@cluue/utils'
 	import type { ComponentProps } from 'svelte';
 	import InputTextareaElement from './InputTextareaElement.svelte';
 	import InputElement from './InputElement.svelte';

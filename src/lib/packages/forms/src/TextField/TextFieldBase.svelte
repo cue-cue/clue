@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 	import Input from '../Input/Input.svelte';
 	import type { ComponentProps } from 'svelte';
 	import { context, textFieldBaseContext } from './context.js';

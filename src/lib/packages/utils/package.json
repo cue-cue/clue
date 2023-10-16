@@ -1,5 +1,5 @@
 {
-  "name": "@clue/utils",
+  "name": "@cluue/utils",
   "version": "1.0.0",
   "description": "",
   "private": false,
@@ -11,6 +11,6 @@
   },
   "author": "Nikita Fedorov",
   "dependencies": {
-		"@clue/config": "workspace:*"
+		"@cluue/config": "workspace:*"
 	}
 }

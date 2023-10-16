@@ -1,7 +1,7 @@
 <script lang='ts'>
-	import {Icon} from '@clue/icons'
-    import errorIcon from '@clue/icons/filled/exclamation-circle.svg'
-    import {generateClassNames} from '@clue/utils'
+	import {Icon} from '@cluue/icons'
+    import errorIcon from '@cluue/icons/filled/exclamation-circle.svg'
+    import {generateClassNames} from '@cluue/utils'
     interface $$Props {
         class?:string
         error?:boolean

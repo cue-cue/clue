@@ -1,5 +1,5 @@
 {
-	"name": "@clue/popover",
+	"name": "@cluue/popover",
 	"version": "1.0.0",
 	"private": false,
 	"license": "MIT",
@@ -7,8 +7,8 @@
 	"type": "module",
 	"author": "Nikita Fedorov",
 	"dependencies": {
-		"@clue/config": "workspace:*",
-		"@clue/utils": "workspace:*",
+		"@cluue/config": "workspace:*",
+		"@cluue/utils": "workspace:*",
 		"svelte-floating-ui": "^1.5.4"
 	}
 }

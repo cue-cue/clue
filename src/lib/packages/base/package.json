@@ -1,5 +1,5 @@
 {
-  "name": "@clue/base",
+  "name": "@cluue/base",
   "version": "1.0.0",
   "description": "",
   "private": false,
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-		"@clue/icons": "workspace:*",
-		"@clue/utils": "workspace:*"
+		"@cluue/icons": "workspace:*",
+		"@cluue/utils": "workspace:*"
 	}
 }

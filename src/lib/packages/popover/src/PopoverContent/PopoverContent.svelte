@@ -1,9 +1,9 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 	import { context } from '../context'
 	import type { createPopoverActions } from '../actions'
 	import { fly } from 'svelte/transition'
-	import { config } from '@clue/config'
+	import { config } from '@cluue/config'
 	import type { ComputeConfig } from 'svelte-floating-ui'
 
 	interface $$Props {

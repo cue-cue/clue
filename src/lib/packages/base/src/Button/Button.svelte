@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import {generateClassNames} from '@clue/utils'
+    import {generateClassNames} from '@cluue/utils'
 	import ButtonField from './ButtonField.svelte';
 	import type { ComponentProps } from 'svelte';
 	import ButtonIcon from './ButtonIcon.svelte';

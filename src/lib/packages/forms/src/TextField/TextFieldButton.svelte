@@ -1,9 +1,9 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
-	import {Icon} from '@clue/icons'
+	import {generateClassNames} from '@cluue/utils'
+	import {Icon} from '@cluue/icons'
 	import { onMount, type ComponentProps, onDestroy } from 'svelte';
 	import type { TransitionConfig } from 'svelte/transition'
-	import { config } from '@clue/config'
+	import { config } from '@cluue/config'
 	import { textFieldBaseContext, textFieldButtonsContext } from './context.js'
 	import { writable } from 'svelte/store'
 	interface $$Props extends Omit<ComponentProps<Icon>, 'size' | 'height'> {

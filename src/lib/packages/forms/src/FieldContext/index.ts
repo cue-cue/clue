@@ -1,4 +1,4 @@
-import { Context } from '@clue/utils'
+import { Context } from '@cluue/utils'
 import type { Writable } from 'svelte/store'
 
 interface IData {

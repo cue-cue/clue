@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Context } from "@clue/utils";
+import { Context } from "@cluue/utils";
 import type { ComponentProps } from "svelte";
 import type { Writable } from "svelte/store";
 import type { Select } from "./index.js";

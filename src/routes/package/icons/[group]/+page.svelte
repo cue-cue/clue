@@ -1,6 +1,6 @@
 <script lang='ts'>
-    import {Icon, type ClueSvgIconData} from '@clue/icons'
-	import {TextField} from '@clue/forms';
+    import {Icon, type ClueSvgIconData} from '@cluue/icons'
+	import {TextField} from '@cluue/forms';
     import * as allIconsByList from '../iconsList.js'
     import VirtualScroll from "svelte-virtual-scroll-list"
 	import { page } from '$app/stores';

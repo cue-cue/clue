@@ -1,9 +1,9 @@
 <script lang="ts">
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 	import type { SVGAttributes } from 'svelte/elements';
 	import type { ClueSvgIconData } from '../index.js';
 	import { fade, type TransitionConfig } from 'svelte/transition';
-	import { config } from '@clue/config'
+	import { config } from '@cluue/config'
 
 	interface $$Props extends SVGAttributes<SVGElement> {
 		icon:ClueSvgIconData['default']

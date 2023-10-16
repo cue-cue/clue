@@ -1,9 +1,9 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 	import type { ComponentProps } from 'svelte';
 	import { TextFieldButton, TextFieldBase, TextField } from '../index.js';
-	import icon from '@clue/icons/line/eye.svg'
-	import iconClosed from '@clue/icons/line/eye-closed.svg'
+	import icon from '@cluue/icons/line/eye.svg'
+	import iconClosed from '@cluue/icons/line/eye-closed.svg'
 
 	interface $$Props extends Pick<ComponentProps<TextFieldBase>, 'type'> {
 		class?:string

@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 
 
 	interface $$Props {

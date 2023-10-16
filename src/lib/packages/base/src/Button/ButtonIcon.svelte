@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import { Icon } from '@clue/icons';
-	import {generateClassNames} from '@clue/utils'
+	import { Icon } from '@cluue/icons';
+	import {generateClassNames} from '@cluue/utils'
 	import type { ComponentProps } from 'svelte';
 
 	interface $$Props extends ComponentProps<Icon> {

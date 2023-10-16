@@ -1,6 +1,6 @@
 <script lang='ts'>
 
-	import {generateClassNames, randomId} from '@clue/utils'
+	import {generateClassNames, randomId} from '@cluue/utils'
 	import type { HTMLInputAttributes } from 'svelte/elements'
 	import { fieldContext } from '../FieldContext/index.js'
 

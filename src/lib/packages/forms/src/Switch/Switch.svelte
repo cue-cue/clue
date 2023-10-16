@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 	import type { ComponentProps } from 'svelte';
 	import { Label } from '../Label/index.js'
 	import type LabelName from '../Label/LabelName.svelte'

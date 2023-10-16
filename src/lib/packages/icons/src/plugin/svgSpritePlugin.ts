@@ -49,7 +49,7 @@ const replaceCode = (code:string, path:string, pluginOptions:Options) => {
 
 export const svgSpritePlugin = (options?:Options):Plugin => {
     const include:Exclude<typeof options, undefined>['include'] = [
-        '**/node_modules/**/@clue/icons/**/assets/**/*.svg',
+        '**/node_modules/**/@cluue/icons/**/assets/**/*.svg',
         ...(options?.include ? [options?.include].flat() : ['**/*.svg'])
     ]
 

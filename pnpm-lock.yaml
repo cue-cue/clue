@@ -4,25 +4,25 @@ importers:
 
   .:
     dependencies:
-      '@clue/base':
+      '@cluue/base':
         specifier: workspace:*
         version: link:src/lib/packages/base
-      '@clue/config':
+      '@cluue/config':
         specifier: workspace:*
         version: link:src/lib/packages/config
-      '@clue/forms':
+      '@cluue/forms':
         specifier: workspace:*
         version: link:src/lib/packages/forms
-      '@clue/icons':
-        specifier: ./src/lib/packages/icons
+      '@cluue/icons':
+        specifier: workspace:*
         version: link:src/lib/packages/icons
-      '@clue/popover':
+      '@cluue/popover':
         specifier: workspace:*
         version: link:src/lib/packages/popover
-      '@clue/styles':
+      '@cluue/styles':
         specifier: workspace:*
         version: link:src/lib/packages/styles
-      '@clue/utils':
+      '@cluue/utils':
         specifier: workspace:*
         version: link:src/lib/packages/utils
     devDependencies:
@@ -110,10 +110,10 @@ importers:
 
   src/lib/packages/base:
     dependencies:
-      '@clue/icons':
+      '@cluue/icons':
         specifier: workspace:*
         version: link:../icons
-      '@clue/utils':
+      '@cluue/utils':
         specifier: workspace:*
         version: link:../utils
 
@@ -121,28 +121,28 @@ importers:
 
   src/lib/packages/forms:
     dependencies:
-      '@clue/base':
+      '@cluue/base':
         specifier: workspace:*
         version: link:../base
-      '@clue/config':
+      '@cluue/config':
         specifier: workspace:*
         version: link:../config
-      '@clue/icons':
+      '@cluue/icons':
         specifier: workspace:*
         version: link:../icons
-      '@clue/popover':
+      '@cluue/popover':
         specifier: workspace:*
         version: link:../popover
-      '@clue/utils':
+      '@cluue/utils':
         specifier: workspace:*
         version: link:../utils
 
   src/lib/packages/icons:
     dependencies:
-      '@clue/config':
+      '@cluue/config':
         specifier: workspace:*
         version: link:../config
-      '@clue/utils':
+      '@cluue/utils':
         specifier: workspace:*
         version: link:../utils
     devDependencies:
@@ -152,10 +152,10 @@ importers:
 
   src/lib/packages/popover:
     dependencies:
-      '@clue/config':
+      '@cluue/config':
         specifier: workspace:*
         version: link:../config
-      '@clue/utils':
+      '@cluue/utils':
         specifier: workspace:*
         version: link:../utils
       svelte-floating-ui:
@@ -166,7 +166,7 @@ importers:
 
   src/lib/packages/utils:
     dependencies:
-      '@clue/config':
+      '@cluue/config':
         specifier: workspace:*
         version: link:../config
 

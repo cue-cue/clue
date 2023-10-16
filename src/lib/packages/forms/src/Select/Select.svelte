@@ -9,11 +9,11 @@
 
 	import type { IOption, OptionValue, OptionValueKey } from './types.js'
 
-	import {generateClassNames, outclick, createAction} from '@clue/utils'
+	import {generateClassNames, outclick, createAction} from '@cluue/utils'
 	import SelectBase from './SelectBase.svelte'
 	import type { ComponentProps } from 'svelte'
 	import TextField from '../TextField/TextField.svelte'
-	import {Popover} from '@clue/popover'
+	import {Popover} from '@cluue/popover'
 
 	
 	type OptionsGeneric = $$Generic<IOption<any>[]>

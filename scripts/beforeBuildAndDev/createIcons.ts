@@ -169,12 +169,12 @@ const createGetAllIconsInRoutes = (icons:IconGroups) => {
     const templates = {
         iconImport: (icon:Icon) => {
             const name = getName(icon)
-            return `import * as _${name} from '@clue/icons/${icon.group}/${icon.name}.svg'\nconst ${name} = _${name} as unknown as ClueSvgIconData\n`
+            return `import * as _${name} from '@cluue/icons/${icon.group}/${icon.name}.svg'\nconst ${name} = _${name} as unknown as ClueSvgIconData\n`
         },
         export: (icons:Icon[]) => `export {\n${icons.map(icon => `\t${getName(icon)}`).join(',\n')}\n}` 
     }
     
-    let res = `import type { ClueSvgIconData } from '@clue/icons'\n`
+    let res = `import type { ClueSvgIconData } from '@cluue/icons'\n`
 
     allIcons.forEach(icon => {
         res += templates.iconImport(icon)

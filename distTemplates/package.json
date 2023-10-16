@@ -16,7 +16,7 @@
 		"build:styles": "node scripts/afterBuild/buildStyles.mjs",
 		"build:before": "npm run build:icons",
 		"build:after": "npm run build:styles",
-		"build:WARNING": "npm run build:before && npm run package && vite build && npm run build:after",
+		"build": "npm run build:before && npm run package && vite build && npm run build:after",
 		"build:site": "svelte-kit sync && npm run build:before && vite build"
 	},
 	"author": "Nikita Fedorov",
@@ -27,15 +27,6 @@
 	],
 	"peerDependencies": {
 		"svelte": "^4.0.0"
-	},
-	"dependencies": {
-		"@cluue/base": "workspace:*",
-		"@cluue/config": "workspace:*",
-		"@cluue/forms": "workspace:*",
-		"@cluue/icons": "workspace:*",
-		"@cluue/popover": "workspace:*",
-		"@cluue/styles": "workspace:*",
-		"@cluue/utils": "workspace:*"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",

@@ -26,14 +26,14 @@
 </script>
 
 <script lang='ts'>
-	import {generateClassNames, outclick, randomId, type ActionListParams} from '@clue/utils'
+	import {generateClassNames, outclick, randomId, type ActionListParams} from '@cluue/utils'
 	import TextFieldBase from '../TextField/TextFieldBase.svelte'
 	import Input from '../Input/Input.svelte'
 	import { tick, type ComponentProps, createEventDispatcher, onMount, onDestroy} from 'svelte'
 	import TextFieldButton from '../TextField/TextFieldButton.svelte'
-	import icon from '@clue/icons/line/angle-down.svg'
-	import clearIcon from '@clue/icons/line/times.svg'
-	import { createAction } from '@clue/utils'
+	import icon from '@cluue/icons/line/angle-down.svg'
+	import clearIcon from '@cluue/icons/line/times.svg'
+	import { createAction } from '@cluue/utils'
 
 	type InputProps = ComponentProps<Input>
 	type TextFieldBaseProps = ComponentProps<TextFieldBase>

@@ -37,7 +37,7 @@
         ],
         "PackageInfo":[
             "{",
-                "\t\"name\": \"@clue/<FTName | lowercase>\",",
+                "\t\"name\": \"@cluue/<FTName | lowercase>\",",
                 "\t\"version\": \"1.0.0\",",
                 "\t\"private\": false,",
                 "\t\"license\": \"MIT\",",
@@ -50,7 +50,7 @@
         "PackagePublicApi":"// export * from './<FTName | pascalcase>/index.js'",
         "PackageModule":[
             "<script lang='ts'>",
-            "\timport {generateClassNames} from '@clue/utils'",
+            "\timport {generateClassNames} from '@cluue/utils'",
             "",
             "\tinterface $$Props {",
             "\t\tclass?:string",
@@ -148,6 +148,7 @@
         },
     ],
     "cSpell.words": [
-        "outclick"
+      "cluue",
+      "outclick"
     ],
 }

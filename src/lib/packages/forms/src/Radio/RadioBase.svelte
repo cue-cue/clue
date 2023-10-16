@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import {generateClassNames, randomId} from '@clue/utils'
+	import {generateClassNames, randomId} from '@cluue/utils'
 	import type { ComponentProps } from 'svelte';
 	import InputRadio from '../Input/InputRadio.svelte'
 	import CheckboxField from '../Checkbox/CheckboxField.svelte'

@@ -1,4 +1,4 @@
-import { config } from "@clue/config";
+import { config } from "@cluue/config";
 import { get } from "svelte/store";
 import { generateClassName } from "../index.js";
 

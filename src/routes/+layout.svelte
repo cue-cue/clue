@@ -1,20 +1,20 @@
 <script lang='ts'>
     import "$lib/packages/styles/src/index.scss"
     import "./styles/index.scss"
-	import {Button} from "@clue/base";
-    import textFieldIcon from '@clue/icons/line/eye.svg'
-    import iconsIcon from '@clue/icons/line/papers.svg'
-    import buttonIcon from '@clue/icons/line/bell.svg'
-    import checkboxIcon from '@clue/icons/line/check-square.svg'
-    import colorsIcon from '@clue/icons/line/apple-fruit.svg'
-    import selectIcon from '@clue/icons/line/note-list-square.svg'
-    import popoverIcon from '@clue/icons/line/chat-heart.svg'
+	import {Button} from "@cluue/base";
+    import textFieldIcon from '@cluue/icons/line/eye.svg'
+    import iconsIcon from '@cluue/icons/line/papers.svg'
+    import buttonIcon from '@cluue/icons/line/bell.svg'
+    import checkboxIcon from '@cluue/icons/line/check-square.svg'
+    import colorsIcon from '@cluue/icons/line/apple-fruit.svg'
+    import selectIcon from '@cluue/icons/line/note-list-square.svg'
+    import popoverIcon from '@cluue/icons/line/chat-heart.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
     import { onMount } from "svelte"
     import {compileString} from 'sass'
 	import { colorsStore } from "./stores/colors.js"
-	import { Color } from "@clue/utils"
+	import { Color } from "@cluue/utils"
 	import { browser } from "$app/environment"
 
     const menuItems:(ComponentProps<Button> & {name:string})[] = [

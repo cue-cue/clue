@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import Checkbox from '../Checkbox/Checkbox.svelte'
 
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 
 	interface $$Props {
 		class?:string

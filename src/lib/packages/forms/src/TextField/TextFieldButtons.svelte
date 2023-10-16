@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 	import { textFieldBaseContext, textFieldButtonsContext } from './context.js'
 	import { writable } from 'svelte/store'
 	import { onMount } from 'svelte'

@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import type { IOption, OptionValue } from "$lib/packages/forms/src/Select/types.js"
-	import {Select} from "@clue/forms"
+	import {Select} from "@cluue/forms"
 	import type { ComponentProps } from "svelte"
 
     const items:(ComponentProps<Select<IOption<string>[], boolean, any, any>> & {id: string})[] = [

@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-	import {generateClassNames} from '@clue/utils'
+	import {generateClassNames} from '@cluue/utils'
 
 	interface $$Props extends Pick<HTMLAnchorAttributes, 'rel' | 'href' | 'tabindex' | 'target' | 'style'>, Record<`data-${string}`, string | undefined> {
 		class?:string

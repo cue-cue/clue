@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import {generateClassNames} from '@clue/utils'
-	import { Hint } from '@clue/base';
+	import {generateClassNames} from '@cluue/utils'
+	import { Hint } from '@cluue/base';
 
 	interface $$Props {
 		class?:string

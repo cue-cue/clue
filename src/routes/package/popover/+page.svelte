@@ -1,6 +1,6 @@
 <script lang='ts'>
-    import {Button} from "@clue/base"
-    import { Popover, PopoverContent } from "@clue/popover"
+    import {Button} from "@cluue/base"
+    import { Popover, PopoverContent } from "@cluue/popover"
 	import type { ComponentProps } from "svelte"
 
     const items:Array<ComponentProps<Popover> & {id:string}> = [
