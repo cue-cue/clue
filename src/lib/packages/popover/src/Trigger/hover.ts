@@ -63,7 +63,7 @@ export class HoverTrigger extends Trigger {
     }
 
     getDelay() {
-        let delay = this.options?.delay || [500, 1000]
+        let delay = this.options?.delay || [100, 200]
         if (typeof delay === 'number') {
             delay = [delay, delay]
         }
