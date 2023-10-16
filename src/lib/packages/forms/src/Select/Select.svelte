@@ -1,19 +1,15 @@
 <script lang='ts'>
 	import PopoverContent from '$lib/packages/popover/src/PopoverContent/PopoverContent.svelte'
 
-	import { createAction } from '@clue/utils'
-
 	import { getOptionValueKey } from './utils.js'
 
 	import SelectOptionListCore from './SelectOptionListCore.svelte'
 
 	import SelectOptionList from './SelectOptionList.svelte'
 
-	import { config } from '@clue/config'
-
 	import type { IOption, OptionValue, OptionValueKey } from './types.js'
 
-	import {generateClassNames, outclick} from '@clue/utils'
+	import {generateClassNames, outclick, createAction} from '@clue/utils'
 	import SelectBase from './SelectBase.svelte'
 	import type { ComponentProps } from 'svelte'
 	import TextField from '../TextField/TextField.svelte'

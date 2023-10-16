@@ -1,7 +1,7 @@
 {
 	"name": "@clue/mono",
 	"version": "0.0.1",
-	"private": false,
+	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"preview": "vite preview",
@@ -66,8 +66,5 @@
 		"vite-plugin-svg-sprite": "^0.5.0",
 		"vitest": "^0.34.0"
 	},
-	"type": "module",
-	"workspaces": [
-		"packages/*"
-	]
+	"type": "module"
 }

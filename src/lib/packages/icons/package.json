@@ -10,9 +10,9 @@
     "vite-plugin-svg-sprite": "^0.5.0"
   },
   "dependencies": {
-		"@clue/config": "../config",
-		"@clue/utils": "../utils"
-	},
+    "@clue/config": "../config",
+    "@clue/utils": "../utils"
+  },
   "exports": {
     ".": "./src/index.js",
     "./plugin": "./src/plugin/index.js",
