@@ -2,7 +2,7 @@ import type { ActionReturn } from "svelte/action"
 
 type ActionFunction<T> = (node:HTMLElement, params:T) => Partial<ActionReturn<T>> | undefined
 
-export const createAction = <T, U extends (...args: never[]) => unknown = ActionFunction<T>>(name:string, action:U, params:Parameters<U>[1]) => {
+export const createAction = <T, U extends (...args: never[]) => unknown = ActionFunction<T>>(name:string, action:U, params?:Parameters<U>[1]) => {
     return {
         name,
         action,

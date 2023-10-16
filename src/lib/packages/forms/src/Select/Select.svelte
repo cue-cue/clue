@@ -1,4 +1,8 @@
 <script lang='ts'>
+	import PopoverContent from '$lib/packages/popover/src/PopoverContent/PopoverContent.svelte'
+
+	import { createAction } from '@clue/utils'
+
 	import { getOptionValueKey } from './utils.js'
 
 	import SelectOptionListCore from './SelectOptionListCore.svelte'
@@ -15,6 +19,7 @@
 	import SelectBase from './SelectBase.svelte'
 	import type { ComponentProps } from 'svelte'
 	import TextField from '../TextField/TextField.svelte'
+	import {Popover} from '@clue/popover'
 
 	
 	type OptionsGeneric = $$Generic<IOption<any>[]>
@@ -104,33 +109,39 @@
 	use:outclick
 	on:outclick={handler.outclick}
 >
-	<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
-		<svelte:fragment slot='base' let:id>
-			<SelectBase
-				{allowSearch}
-				{disabled}
-				{readonly}
-				{error}
-				{id}
-				bind:open
-				bind:value={inputValue}
-				bind:searchValue
-				bind:setOpen
-				on:open
-				on:close
-				on:toggle
-				on:clear={handler.clear}
-			/>
+	<Popover let:targetAction placement='bottom' trigger={false} bind:open>
+		<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
+			<svelte:fragment slot='base' let:id>
+				<SelectBase
+					{allowSearch}
+					{disabled}
+					{readonly}
+					{error}
+					{id}
+					use={[
+						createAction('targetAction', targetAction)
+					]}
+					bind:open
+					bind:value={inputValue}
+					bind:searchValue
+					bind:setOpen
+					on:open
+					on:close
+					on:toggle
+					on:clear={handler.clear}
+				/>
+			</svelte:fragment>
+		</TextField>
+		<svelte:fragment slot='content-wrapper' let:open>
+			<SelectOptionListCore {valueType} {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
+				{#if open}
+					<PopoverContent class={generateClassNames(['SelectPopoverContent', className])}>
+						<SelectOptionList/>
+					</PopoverContent>
+				{/if}
+			</SelectOptionListCore>
 		</svelte:fragment>
-	</TextField>
-
-	<SelectOptionListCore {valueType} {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
-		{#if open}
-			<div transition:fly={{...$config.transition, y: -20}}>
-				<SelectOptionList/>
-			</div>
-		{/if}
-	</SelectOptionListCore>
+	</Popover>
 </div>
 
 <style lang='sass'>
@@ -139,9 +150,6 @@
 		:global(.ClueSelectOptionList)
 			max-height: min(400px, 80vh)
 			width: 100%
-			position: absolute
-			bottom: 0
-			left: 0
-			transform: translateY(100%)
-			z-index: 100
+	:global(.ClueSelectPopoverContent)
+		width: 100%
 </style>

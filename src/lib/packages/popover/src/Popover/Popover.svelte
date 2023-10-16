@@ -6,6 +6,7 @@
 	import { HoverTrigger } from '../Trigger/hover.js'
 	import { offset as offsetMiddleware, shift as shiftMiddleware, size as sizeMiddleware, flip as flipMiddleware, type OffsetOptions } from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
+	import type { Trigger } from '../Trigger'
 		
 	interface $$Props {
 		/**
@@ -17,19 +18,24 @@
 		 */
 		placement?:ComputeConfig['placement']
 		/**
-		 * @default 5
+		 * @default 0
 		 */
 		offset?:OffsetOptions
 		/**
 		 * @default false
 		 */
 		open?:boolean
+		/**
+		 * @default 'hover'
+		 */
+		trigger?:'hover' | false
 	}
 	
 	let className = ''
 	export let placement:$$Props['placement'] = 'top'
-	export let offset:$$Props['offset'] = 10
+	export let offset:$$Props['offset'] = 0
 	export let open:$$Props['open'] = false
+	export let trigger:$$Props['trigger'] = 'hover'
 
 	let targetElementRef = writable<HTMLElement | undefined>(undefined)
 	let contentElementRef = writable<HTMLElement | undefined>(undefined)
@@ -68,20 +74,20 @@
 				contentElementRef.set(undefined)
 			}
 		},
-		trigger: new HoverTrigger({
+		trigger: trigger === 'hover' ? new HoverTrigger({
 			content: contentElementRef,
 			target: targetElementRef
 		},{
 			open: () => setOpen(true),
 			close: () => setOpen(false)
-		})
+		}) : undefined
 	}
 
-	const setOpen = (_open:typeof open) => {
+	export const setOpen = (_open:typeof open) => {
 		open = _open
 	}
 
-	const toggle = () => {
+	export const toggle = () => {
 		setOpen(!open)
 	}
 
@@ -93,11 +99,15 @@
 		...defOptions,
 		placement,
 	})
-	context.set(writable({
+
+	const contextStore = context.set(writable({
 		targetAction,
 		contentAction,
-		update
+		update,
+		placement
 	}))
+
+	$: $contextStore.placement = placement
 
 	$: update({
 		...defOptions,
@@ -105,9 +115,9 @@
 	})
 </script>
 
-<slot action={targetAction} {update}/>
+<slot {targetAction} {update}/>
 
-<slot name='content-wrapper' action={contentAction} {update} {open}>
+<slot name='content-wrapper' {contentAction} {update} {open}>
 	{#if $$slots.content && open}
 		<PopoverContent>
 			<slot name='content'/>

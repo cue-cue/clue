@@ -4,6 +4,7 @@
 	import type { createPopoverActions } from '../actions'
 	import { fly } from 'svelte/transition'
 	import { config } from '$lib/packages/config'
+	import type { ComputeConfig } from 'svelte-floating-ui'
 
 	interface $$Props {
 		class?:string
@@ -16,8 +17,27 @@
 
 	const contextStore = context.get()
 
+	const getTransitionParams = (placement?:ComputeConfig['placement']) => {
+		const space = 10
+		const direction = placement?.split('-')[0] || 'bottom'
+		switch (direction) {
+			case 'top': return {
+				y: space
+			}
+			case 'bottom': return {
+				y: -space
+			}
+			case 'left': return {
+				x: space
+			}
+			case 'right': return {
+				x: -space
+			}
+		}
+	}
+
 	$: action = (node:HTMLElement) => {
-		const {destroy, update} = ($contextStore.contentAction || popoverAction)(node) || {}
+		const {destroy, update} = (contextStore ? $contextStore.contentAction : popoverAction)?.(node) || {}
 		return {
 			destroy,
 			update
@@ -26,15 +46,15 @@
 	
 </script>
 
-<div class={generateClassNames(['PopoverContent', className])} use:action transition:fly={{duration: $config.transition.duration, y: 10}}>
+<div
+	class={generateClassNames(['PopoverContent', className])}
+	use:action
+	transition:fly={{duration: $config.transition.duration, ...getTransitionParams(contextStore && $contextStore.placement)}}
+>
 	<slot/>
 </div>
 
 <style lang='sass'>
 	.CluePopoverContent
-		background: #fff
-		border-radius: var(--clue-size-border-radius-2)
-		border: 2px solid var(--clue-color-primary-200)
-		padding: 16px
 		z-index: 9999
 </style>

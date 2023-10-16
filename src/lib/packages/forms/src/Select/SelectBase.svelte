@@ -26,14 +26,14 @@
 </script>
 
 <script lang='ts'>
-	import {generateClassNames, outclick, randomId} from '@clue/utils'
+	import {generateClassNames, outclick, randomId, type ActionListParams} from '@clue/utils'
 	import TextFieldBase from '../TextField/TextFieldBase.svelte'
 	import Input from '../Input/Input.svelte'
 	import { tick, type ComponentProps, createEventDispatcher, onMount, onDestroy} from 'svelte'
 	import TextFieldButton from '../TextField/TextFieldButton.svelte'
 	import icon from '@clue/icons/line/angle-down.svg'
 	import clearIcon from '@clue/icons/line/times.svg'
-	import { createAction } from '$lib/packages/utils/src/actions/actionList.js'
+	import { createAction } from '@clue/utils'
 
 	type InputProps = ComponentProps<Input>
 	type TextFieldBaseProps = ComponentProps<TextFieldBase>
@@ -55,6 +55,7 @@
 		allowClear?:boolean
 		searchValue?:string
 		id?:string
+		use?:ActionListParams
 	}
 	
 	let className = ''
@@ -66,6 +67,7 @@
 	export let searchValue:$$Props['searchValue'] = ''
 	export let disabled:$$Props['disabled'] = undefined
 	export let id:Exclude<$$Props['id'], undefined> = randomId('SelectBase')
+	export let use:$$Props['use'] = undefined
 
 	const dispatch = createEventDispatcher()
 
@@ -137,12 +139,9 @@
 	}
 
 	export const setOpen = (_open:typeof open) => {
-		if (disabled) return
-		
+		if (_open === false && open === false) return
 		open = _open
-		openHandler.auto(open)
 	}
-
 	export const toggle = () => {
 		setOpen(!open)
 	}
@@ -167,7 +166,7 @@
 			if (disabled) return
 
 			inputController.eventCallback(() => {
-				setOpen(false)
+				setOpen(true)
 			})
 		},
 		clearClick() {
@@ -218,6 +217,7 @@
 	class={generateClassNames(['SelectBase', className])}
 	focused={open}
 	use={[
+		...(use || []),
 		createAction('outclick', outclick, {
 			handler: handler.outclick
 		})

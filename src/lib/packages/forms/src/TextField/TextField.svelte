@@ -9,12 +9,14 @@
 	import { context } from './context.js';
 	import { writable } from 'svelte/store';
 	import TextFieldHint from './TextFieldHint.svelte';
+	import { actionList, type ActionListParams } from '$lib/packages/utils/src/actions/actionList'
 
     interface $$Props extends Omit<ComponentProps<TextFieldBase>, 'slots'> {
         class?:string
         label?:string
         hint?:string
         helper?:string
+        use?:ActionListParams
     }
 
     interface $$Slots {
@@ -38,6 +40,7 @@
     export let error:$$Props['error'] = undefined
     export let disabled:$$Props['disabled'] = undefined
     export let value:$$Props['value'] = ''
+    export let use:$$Props['use'] = undefined
 
     const localContext = context.set(writable({
         error,
@@ -56,6 +59,7 @@
     class={generateClassNames(['TextField', className])}
     data-error={error}
     data-disabled={disabled}
+    use:actionList={use}
 >
     {#if label || hint}
         <TextFieldHeader>

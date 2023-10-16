@@ -29,22 +29,22 @@
 
 <h2>Popover</h2>
 
-<ul>
+<ul class='popover-list'>
     {#each items as {id, ...item} (id)}
         <li>
             <h3>{id}</h3>
             <pre>{JSON.stringify(item)}</pre>
-            <Popover let:action {...item}>
-                <div use:action style='display: inline-block'>
+            <Popover let:targetAction {...item}>
+                <div use:targetAction style='display: inline-block'>
                     <Button>Popover</Button>
                 </div>
                 <svelte:fragment slot='content'>
-                    <Popover let:action {...item}>
-                        <div use:action style='display: inline-block'>
-                            <Button>Push me 💜</Button>
+                    <Popover let:targetAction {...item}>
+                        <div use:targetAction style='display: inline-block'>
+                            <Button size='small'>Hovvvver me 💜</Button>
                         </div>
                         <svelte:fragment slot='content'>
-                            <Button size='small'>Cuuuuuueee💜</Button>
+                            <Button size='small'>Cuuue💜</Button>
                         </svelte:fragment>
                     </Popover>
                 </svelte:fragment>
@@ -54,9 +54,14 @@
 </ul>
 
 <style lang="sass">
-    ul
+    .popover-list
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
         gap: 20px
         align-items: end
+        :global(.CluePopoverContent)
+            padding: 10px
+            border-radius: var(--clue-size-border-radius-2)
+            background: var(--clue-color-white)
+            border: 1px solid var(--clue-color-gray-50)
 </style>
