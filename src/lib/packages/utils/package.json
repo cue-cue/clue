@@ -11,6 +11,6 @@
   },
   "author": "Nikita Fedorov",
   "dependencies": {
-		"@clue/config": "../config"
+		"@clue/config": "workspace:*"
 	}
 }
