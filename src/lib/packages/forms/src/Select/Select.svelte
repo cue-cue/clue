@@ -27,14 +27,14 @@
 	type TextFieldProps = ComponentProps<TextField>
 
 	type SearchFilter = (option:OptionsGeneric[number], searchValue:string) => boolean
-	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'valueType' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'opened' | 'allowSearch' | 'allowClear' | 'error'>, Pick<TextFieldProps, 'label' | 'helper' | 'hint'> {
+	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'valueType' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'open' | 'allowSearch' | 'allowClear' | 'error'>, Pick<TextFieldProps, 'label' | 'helper' | 'hint'> {
 		class?:string
 		searchFilter?:SearchFilter
 	}
 	
 	let className = ''
 	export { className as class }
-	export let opened:$$Props['opened'] = false
+	export let open:$$Props['open'] = false
 	export let options:$$Props['options']
 	export let multiple:$$Props['multiple'] = false as MultipleGeneric
 	export let value:$$Props['value'] = undefined
@@ -51,15 +51,12 @@
 
 	let searchValue:SelectBaseProps['searchValue'] = ''
 
-	let close:SelectBaseProps['close']
-	let open:SelectBaseProps['open']
-	let toggle:SelectBaseProps['toggle']
-
+	let setOpen:SelectBaseProps['setOpen']
 	let clear:SelectOptionListCoreProps['clear']
 	
 	const handler = {
 		outclick() {
-			close?.()
+			setOpen?.(false)
 		},
 		clear() {
 			clear?.()
@@ -91,7 +88,7 @@
 	}
 </script>
 <small>
-	opened: {opened}<br>
+	open: {open}<br>
 	multiple: {multiple}<br>
 	allowSearch: {allowSearch}<br>
 	allowClear: {$$restProps.allowClear || true}<br>
@@ -115,12 +112,10 @@
 				{readonly}
 				{error}
 				{id}
-				bind:close
 				bind:open
-				bind:toggle
 				bind:value={inputValue}
 				bind:searchValue
-				bind:opened
+				bind:setOpen
 				on:open
 				on:close
 				on:toggle
@@ -130,7 +125,7 @@
 	</TextField>
 
 	<SelectOptionListCore {valueType} {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
-		{#if opened}
+		{#if open}
 			<div transition:fly={{...$config.transition, y: -20}}>
 				<SelectOptionList/>
 			</div>

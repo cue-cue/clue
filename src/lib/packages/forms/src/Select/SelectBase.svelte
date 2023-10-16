@@ -7,9 +7,7 @@
 
 	interface Instance {
 		id: string
-		close: () => void
-		open: () => void
-		toggle: () => void
+		setOpen: (open:boolean) => void
 	}
 
 	let instances:Instance[] = []
@@ -22,7 +20,7 @@
 			instances = instances.filter(({id}) => id !== instanceId)
 		},
 		closeAll(instanceId:Instance['id']) {
-			instances.forEach(({close, id}) => id !== instanceId &&  close())
+			instances.forEach(({setOpen, id}) => id !== instanceId &&  setOpen(false))
 		}
 	}
 </script>
@@ -52,7 +50,7 @@
 	interface $$Props extends Pick<TextFieldBaseProps, 'disabled' | 'readonly' | 'error' | 'name'> {
 		class?:string
 		value?:InputProps['value']
-		opened?:boolean
+		open?:boolean
 		allowSearch?:boolean
 		allowClear?:boolean
 		searchValue?:string
@@ -62,7 +60,7 @@
 	let className = ''
 	export { className as class }
 	export let value:$$Props['value'] = undefined
-	export let opened:$$Props['opened'] = false
+	export let open:$$Props['open'] = false
 	export let allowSearch:$$Props['allowSearch'] = false
 	export let allowClear:$$Props['allowClear'] = true
 	export let searchValue:$$Props['searchValue'] = ''
@@ -114,10 +112,10 @@
 		}
 	}
 
-	const openedHandler = {
-		auto(_opened:typeof opened) {
+	const openHandler = {
+		auto(_open:typeof open) {
 			this.toggle()
-			if (_opened) {
+			if (_open) {
 				this.open()
 			} else {
 				this.close()
@@ -138,25 +136,15 @@
 		}
 	}
 
-	const setOpened = (_opened:typeof opened) => {
+	export const setOpen = (_open:typeof open) => {
 		if (disabled) return
 		
-		opened = _opened
-		openedHandler.auto(opened)
-	}
-
-	export const open = () => {
-		setOpened(true)
-	}
-
-	export const close = () => {
-		if (opened) {
-			setOpened(false)
-		}
+		open = _open
+		openHandler.auto(open)
 	}
 
 	export const toggle = () => {
-		setOpened(!opened)
+		setOpen(!open)
 	}
 
 	const handler = {
@@ -172,14 +160,14 @@
 
 			const target = e.target as HTMLElement
 			if (target.contains(baseNodeElement as Node)) {
-				open()
+				setOpen(true)
 			}
 		},
 		focus() {
 			if (disabled) return
 
 			inputController.eventCallback(() => {
-				open()
+				setOpen(false)
 			})
 		},
 		clearClick() {
@@ -198,12 +186,12 @@
 			searchController.stop()
 		},
 		documentKeydown(e:KeyboardEvent) {
-			if (opened) {
+			if (open) {
 				const {code} = e
 				switch(code) {
 					case 'Escape': {
 						e.preventDefault()
-						close()
+						setOpen(false)
 					}
 				}
 			}
@@ -213,9 +201,7 @@
 	onMount(() => {
 		instancesController.add({
 			id,
-			close,
-			open,
-			toggle
+			setOpen
 		})
 	})
 
@@ -223,14 +209,14 @@
 		instancesController.remove(id)
 	})
 
-	$: openedHandler.auto(opened)
+	$: openHandler.auto(open)
 </script>
 
 <svelte:document on:keydown={handler.documentKeydown}/>
 
 <TextFieldBase
 	class={generateClassNames(['SelectBase', className])}
-	focused={opened}
+	focused={open}
 	use={[
 		createAction('outclick', outclick, {
 			handler: handler.outclick
@@ -261,7 +247,7 @@
 	{/if}
 	<svelte:fragment slot='buttons'>
 		{#if !disabled}
-			<TextFieldButton {icon} on:click={handler.arrowClick} reverse={opened ? 'y' : undefined}/>
+			<TextFieldButton {icon} on:click={handler.arrowClick} reverse={open ? 'y' : undefined}/>
 		{/if}
 		{#if searchValue?.length || (allowClear && value)}
 			<TextFieldButton icon={clearIcon} width={20} on:click={handler.clearClick}/>

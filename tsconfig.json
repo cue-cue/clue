@@ -11,7 +11,5 @@
 		"declaration": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "NodeNext",
-		"module": "NodeNext"
 	}
 }

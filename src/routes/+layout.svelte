@@ -2,12 +2,13 @@
     import "$lib/packages/styles/src/index.scss"
     import "./styles/index.scss"
 	import {Button} from "@clue/base";
-    import inputIcon from '@clue/icons/line/eye.svg'
+    import textFieldIcon from '@clue/icons/line/eye.svg'
     import iconsIcon from '@clue/icons/line/papers.svg'
     import buttonIcon from '@clue/icons/line/bell.svg'
     import checkboxIcon from '@clue/icons/line/check-square.svg'
     import colorsIcon from '@clue/icons/line/apple-fruit.svg'
     import selectIcon from '@clue/icons/line/note-list-square.svg'
+    import popoverIcon from '@clue/icons/line/chat-heart.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
 	import { config } from "$lib/packages/config.js";
@@ -21,7 +22,7 @@
         {
             name: 'TextField',
             href: '/package/forms/text-field',
-            startIcon: inputIcon
+            startIcon: textFieldIcon
         },
 		{
             name: 'Select',
@@ -47,6 +48,11 @@
             name: 'Colors',
             href: '/package/styles/colors',
             startIcon: colorsIcon
+        },
+        {
+            name: 'Popover',
+            href: '/package/popover',
+            startIcon: popoverIcon
         }
     ]
 

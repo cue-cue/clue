@@ -31,8 +31,10 @@
 		"@clue/base": "./src/lib/packages/base",
 		"@clue/forms": "./src/lib/packages/forms",
 		"@clue/icons": "./src/lib/packages/icons",
+		"@clue/popover": "./src/lib/packages/popover",
 		"@clue/styles": "./src/lib/packages/styles",
-		"@clue/utils": "./src/lib/packages/utils"
+		"@clue/utils": "./src/lib/packages/utils",
+		"svelte-floating-ui": "^1.5.4"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
