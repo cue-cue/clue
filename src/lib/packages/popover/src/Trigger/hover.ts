@@ -28,6 +28,9 @@ export class HoverTrigger extends Trigger {
 				}
 			},
 			content: {
+                mouseenter: () => {
+					this.openWithDelay()
+				},
 				mouseleave: (e) => {
 					{
 						if (e.relatedTarget) {
