@@ -13,6 +13,9 @@ export default defineConfig({
 		),
 		clueIconsPlugin(),
 	],
+	resolve: {
+		preserveSymlinks: true,
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}
