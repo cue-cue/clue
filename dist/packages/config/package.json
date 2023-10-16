@@ -1,9 +1,0 @@
-{
-	"name": "@cluue/config",
-	"version": "1.0.2",
-	"private": false,
-	"license": "MIT",
-	"main": "src/index.js",
-	"type": "module",
-	"author": "Nikita Fedorov"
-}

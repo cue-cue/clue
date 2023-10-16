@@ -42,6 +42,8 @@
                 "\t\"private\": false,",
                 "\t\"license\": \"MIT\",",
                 "\t\"main\": \"src/index.js\",",
+                "\t\"svelte\": \"src/index.js\",",
+                "\t\"types\": \"src/index.d.ts\",",
                 "\t\"type\": \"module\",",
                 "\t\"author\": \"Nikita Fedorov\"",
             "}"
@@ -136,10 +138,10 @@
                 "fileName": "README.md",
                 "template": "PackageReadme"
               },
-              {
-                "fileName": "tsconfig.json",
-                "template": "TSConfig"
-              },
+              // {
+              //   "fileName": "tsconfig.json",
+              //   "template": "TSConfig"
+              // },
               {
                 "fileName": "src/index.ts",
                 "template": "PackagePublicApi"

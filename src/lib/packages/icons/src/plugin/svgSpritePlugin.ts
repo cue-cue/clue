@@ -1,4 +1,5 @@
 import type { Plugin, TransformResult } from 'vite'
+//@ts-ignore
 import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
 
 type Options = Parameters<typeof createSvgSpritePlugin>[0]
@@ -49,8 +50,7 @@ const replaceCode = (code:string, path:string, pluginOptions:Options) => {
 
 export const svgSpritePlugin = (options?:Options):Plugin => {
     const include:Exclude<typeof options, undefined>['include'] = [
-        '**/node_modules/**/@cluue/icons/**/assets/**/*.svg',
-        ...(options?.include ? [options?.include].flat() : ['**/*.svg'])
+        '**/*.svg?clue'
     ]
 
     const resolvedOptions:Options = {

@@ -4,14 +4,24 @@
   "private": false,
   "license": "MIT",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "svelte": "src/index.js",
   "type": "module",
   "author": "Nikita Fedorov",
-  "devDependencies": {
+  "peerDependencies": {
     "vite-plugin-svg-sprite": "^0.5.0"
   },
   "dependencies": {
     "@cluue/config": "workspace:*",
     "@cluue/utils": "workspace:*"
+  },
+  "typesVersions": {
+    "*": {
+      ".": ["src/index.d.ts"],
+      "./plugin": ["./src/plugin/index.d.ts"],
+      "./line/*": ["./svg/types/module.d.ts"],
+      "./filled/*": ["./svg/types/module.d.ts"]
+    }
   },
   "exports": {
     ".": "./src/index.js",
