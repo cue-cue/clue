@@ -12,6 +12,11 @@
                 "\tMain,",
             "}"
         ],
+        "TSConfig":[
+            "{",
+            "\t\"extends\": \"../../../../tsconfig.json\"",
+            "}",
+        ],
         "MainSvelteFile": [
             "<script lang='ts'>",
             "\tinterface $$Props {",
@@ -103,6 +108,20 @@
             ]
         },
         {
+            "name": "Package TSConfig",
+            "omitParentDirectory": true,
+            "omitFTName": true,
+            "openFilesWhenDone": [
+                "./tsconfig.json"
+            ],
+            "structure": [
+              {
+                "fileName": "./tsconfig.json",
+                "template": "TSConfig"
+              }
+            ]
+        },
+        {
             "name": "Package",
             "omitParentDirectory": false,
             "openFilesWhenDone": [
@@ -116,6 +135,10 @@
               {
                 "fileName": "README.md",
                 "template": "PackageReadme"
+              },
+              {
+                "fileName": "tsconfig.json",
+                "template": "TSConfig"
               },
               {
                 "fileName": "src/index.ts",

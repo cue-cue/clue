@@ -3,7 +3,7 @@
 	import { context } from '../context'
 	import type { createPopoverActions } from '../actions'
 	import { fly } from 'svelte/transition'
-	import { config } from '$lib/packages/config'
+	import { config } from '@clue/config'
 	import type { ComputeConfig } from 'svelte-floating-ui'
 
 	interface $$Props {

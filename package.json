@@ -34,6 +34,7 @@
 		"@clue/popover": "./src/lib/packages/popover",
 		"@clue/styles": "./src/lib/packages/styles",
 		"@clue/utils": "./src/lib/packages/utils",
+		"@clue/config": "./src/lib/packages/config",
 		"svelte-floating-ui": "^1.5.4"
 	},
 	"devDependencies": {
@@ -65,5 +66,8 @@
 		"vite-plugin-svg-sprite": "^0.5.0",
 		"vitest": "^0.34.0"
 	},
-	"type": "module"
+	"type": "module",
+	"workspaces": [
+		"packages/*"
+	]
 }

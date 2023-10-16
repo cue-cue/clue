@@ -5,5 +5,12 @@
 	"license": "MIT",
 	"main": "src/index.js",
 	"type": "module",
-	"author": "Nikita Fedorov"
+	"author": "Nikita Fedorov",
+	"dependencies": {
+		"@clue/icons": "../icons",
+		"@clue/config": "../config",
+		"@clue/base": "../base",
+		"@clue/utils": "../utils",
+		"@clue/popover": "../popover"
+	}
 }

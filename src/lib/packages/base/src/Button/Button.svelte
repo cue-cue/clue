@@ -1,7 +1,7 @@
 <script lang='ts'>
     import {generateClassNames} from '@clue/utils'
 	import ButtonField from './ButtonField.svelte';
-	import type { ComponentProps, SvelteComponent } from 'svelte';
+	import type { ComponentProps } from 'svelte';
 	import ButtonIcon from './ButtonIcon.svelte';
 	import type { HTMLLinkAttributes } from 'svelte/elements';
 

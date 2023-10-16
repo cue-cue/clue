@@ -3,7 +3,7 @@
 	import type { SVGAttributes } from 'svelte/elements';
 	import type { ClueSvgIconData } from '../index.js';
 	import { fade, type TransitionConfig } from 'svelte/transition';
-	import { config } from '$lib/packages/config.js'
+	import { config } from '@clue/config'
 
 	interface $$Props extends SVGAttributes<SVGElement> {
 		icon:ClueSvgIconData['default']

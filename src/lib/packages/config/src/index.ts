@@ -10,7 +10,7 @@ interface IConfigData {
 }
 
 const createConfigStore = (data:IConfigData) => {
-    const {subscribe, set, update} = writable(data)
+    const {subscribe, update} = writable(data)
 
     const setPrefix = (prefix:IConfigData['prefix']) => {
         update(data => ({...data, prefix}))

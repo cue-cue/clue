@@ -2,7 +2,6 @@
 	import { Icon } from '@clue/icons';
 	import {generateClassNames} from '@clue/utils'
 	import type { ComponentProps } from 'svelte';
-	import { fade, scale } from 'svelte/transition';
 
 	interface $$Props extends ComponentProps<Icon> {
 		class?:string

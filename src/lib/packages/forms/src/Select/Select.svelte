@@ -9,9 +9,7 @@
 
 	import SelectOptionList from './SelectOptionList.svelte'
 
-	import { config } from '$lib/packages/config.js'
-
-	import { fly } from 'svelte/transition'
+	import { config } from '@clue/config'
 
 	import type { IOption, OptionValue, OptionValueKey } from './types.js'
 

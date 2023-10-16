@@ -6,7 +6,6 @@
 	import { HoverTrigger } from '../Trigger/hover.js'
 	import { offset as offsetMiddleware, shift as shiftMiddleware, size as sizeMiddleware, flip as flipMiddleware, type OffsetOptions } from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
-	import type { Trigger } from '../Trigger'
 		
 	interface $$Props {
 		/**
