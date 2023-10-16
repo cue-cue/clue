@@ -16,7 +16,7 @@
 		"build:styles": "node scripts/afterBuild/buildStyles.mjs",
 		"build:before": "npm run build:icons",
 		"build:after": "npm run build:styles",
-		"build": " npm run build:before && npm run package && npm run build:after",
+		"build": " npm run build:before && npm run package && vite build && npm run build:after",
 		"build:site": " svelte-kit sync && vite build"
 	},
 	"author": "Nikita Fedorov",
