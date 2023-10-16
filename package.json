@@ -17,7 +17,7 @@
 		"build:before": "npm run build:icons",
 		"build:after": "npm run build:styles",
 		"build": " npm run build:before && npm run package && npm run build:after",
-		"build:site": " npm run build:before && vite build"
+		"build:site": " vite build"
 	},
 	"author": "Nikita Fedorov",
 	"files": [
