@@ -32,7 +32,7 @@
 		"@clue/base": "workspace:*",
 		"@clue/config": "workspace:*",
 		"@clue/forms": "workspace:*",
-		"@clue/icons": "workspace:*",
+		"@clue/icons": "./src/lib/packages/icons",
 		"@clue/popover": "workspace:*",
 		"@clue/styles": "workspace:*",
 		"@clue/utils": "workspace:*"

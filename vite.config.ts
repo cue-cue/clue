@@ -13,6 +13,9 @@ export default defineConfig({
 		),
 		clueIconsPlugin(),
 	],
+	optimizeDeps: {
+		exclude: ['svelte-floating-ui/core', 'svelte-floating-ui']	
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}

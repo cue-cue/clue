@@ -11,7 +11,6 @@
     import popoverIcon from '@clue/icons/line/chat-heart.svg'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
-	import { config } from "@clue/config";
     import { onMount } from "svelte"
     import {compileString} from 'sass'
 	import { colorsStore } from "./stores/colors.js"

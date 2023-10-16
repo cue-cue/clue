@@ -14,7 +14,7 @@ importers:
         specifier: workspace:*
         version: link:src/lib/packages/forms
       '@clue/icons':
-        specifier: workspace:*
+        specifier: ./src/lib/packages/icons
         version: link:src/lib/packages/icons
       '@clue/popover':
         specifier: workspace:*
