@@ -1,6 +1,6 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import ButtonField from "../Button/ButtonField.svelte";
-import { Icon } from "@clue/icons";
+import { Icon } from "@cluue/icons";
 let className = "";
 export { className as class };
 export let href = void 0;

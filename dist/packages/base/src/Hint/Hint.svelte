@@ -1,6 +1,6 @@
-<script>import { generateClassNames } from "@clue/utils";
-import { Icon } from "@clue/icons";
-import questionCircle from "@clue/icons/line/question-circle.svg";
+<script>import { generateClassNames } from "@cluue/utils";
+import { Icon } from "@cluue/icons";
+import questionCircle from "@cluue/icons/line/question-circle.svg";
 let className = "";
 export { className as class };
 let slotContent = void 0;

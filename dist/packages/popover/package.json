@@ -1,14 +1,22 @@
 {
-	"name": "@clue/popover",
-	"version": "1.0.0",
+	"name": "@cluue/popover",
+	"version": "1.0.3",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
+	"svelte": "src/index.js",
 	"type": "module",
 	"author": "Nikita Fedorov",
 	"dependencies": {
-		"@clue/config": "workspace:*",
-		"@clue/utils": "workspace:*",
+		"@cluue/config": "workspace:*",
+		"@cluue/utils": "workspace:*",
 		"svelte-floating-ui": "^1.5.4"
-	}
+	},
+	"exports": {
+		".": {
+		  "import": "./src/index.js",
+		  "types": "./src/index.d.ts",
+		  "svelte": "./src/index.js"
+		}
+	  }
 }

@@ -1,17 +1,25 @@
 {
-  "name": "@clue/base",
-  "version": "1.0.0",
+  "name": "@cluue/base",
+  "version": "1.0.4",
   "description": "",
   "private": false,
   "license": "MIT",
   "main": "src/index.js",
+  "svelte": "src/index.js",
   "type": "module",
   "author": "Nikita Fedorov",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-		"@clue/icons": "workspace:*",
-		"@clue/utils": "workspace:*"
-	}
+		"@cluue/icons": "workspace:*",
+		"@cluue/utils": "workspace:*"
+	},
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts",
+      "svelte": "./src/index.js"
+    }
+  }
 }

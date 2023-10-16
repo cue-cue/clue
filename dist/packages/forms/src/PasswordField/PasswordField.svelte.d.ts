@@ -276,7 +276,7 @@ declare const __propDef: {
         error?: boolean | undefined;
         type?: "text" | "tel" | "url" | "email" | "password" | undefined;
         focused?: boolean | undefined;
-        use?: import("@clue/utils").ActionListParams | undefined;
+        use?: import("@cluue/utils").ActionListParams | undefined;
         nodeElement?: HTMLElement | undefined;
         slots?: Partial<Record<"buttons" | "default" | "buttons-start", boolean>> | undefined;
         size?: "small" | "medium" | undefined;

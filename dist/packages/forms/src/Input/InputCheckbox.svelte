@@ -1,4 +1,4 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import { onMount, tick } from "svelte";
 let className = "";
 export { className as class };

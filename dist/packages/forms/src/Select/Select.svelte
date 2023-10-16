@@ -2,10 +2,10 @@
 import { getOptionValueKey } from "./utils.js";
 import SelectOptionListCore from "./SelectOptionListCore.svelte";
 import SelectOptionList from "./SelectOptionList.svelte";
-import { generateClassNames, outclick, createAction } from "@clue/utils";
+import { generateClassNames, outclick, createAction } from "@cluue/utils";
 import SelectBase from "./SelectBase.svelte";
 import TextField from "../TextField/TextField.svelte";
-import { Popover } from "@clue/popover";
+import { Popover } from "@cluue/popover";
 let className = "";
 export { className as class };
 export let open = false;

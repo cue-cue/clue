@@ -1,5 +1,5 @@
 <script>import { selectOptionListCoreContext } from "./context.js";
-import { generateClassNames } from "@clue/utils";
+import { generateClassNames } from "@cluue/utils";
 import SelectOption from "./SelectOption.svelte";
 import SelectOptionListBase from "./SelectOptionListBase.svelte";
 let className = "";

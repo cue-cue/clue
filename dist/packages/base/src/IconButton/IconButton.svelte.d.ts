@@ -1,5 +1,5 @@
 import { SvelteComponent } from "svelte";
-import { Icon } from '@clue/icons';
+import { Icon } from '@cluue/icons';
 import type { ComponentProps } from 'svelte';
 import type { HTMLLinkAttributes } from 'svelte/elements';
 declare const __propDef: {

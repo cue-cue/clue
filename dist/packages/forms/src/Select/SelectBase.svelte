@@ -12,14 +12,14 @@ const instancesController = {
 };
 </script>
 
-<script>import { generateClassNames, outclick, randomId } from "@clue/utils";
+<script>import { generateClassNames, outclick, randomId } from "@cluue/utils";
 import TextFieldBase from "../TextField/TextFieldBase.svelte";
 import Input from "../Input/Input.svelte";
 import { tick, createEventDispatcher, onMount, onDestroy } from "svelte";
 import TextFieldButton from "../TextField/TextFieldButton.svelte";
-import icon from "@clue/icons/line/angle-down.svg";
-import clearIcon from "@clue/icons/line/times.svg";
-import { createAction } from "@clue/utils";
+import icon from "@cluue/icons/line/angle-down.svg";
+import clearIcon from "@cluue/icons/line/times.svg";
+import { createAction } from "@cluue/utils";
 let className = "";
 export { className as class };
 export let value = void 0;

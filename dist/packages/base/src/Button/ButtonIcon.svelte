@@ -1,5 +1,5 @@
-<script>import { Icon } from "@clue/icons";
-import { generateClassNames } from "@clue/utils";
+<script>import { Icon } from "@cluue/icons";
+import { generateClassNames } from "@cluue/utils";
 let className = "";
 export { className as class };
 export let icon;

@@ -1,5 +1,5 @@
 import { SvelteComponent } from "svelte";
-import { type ActionListParams } from '@clue/utils';
+import { type ActionListParams } from '@cluue/utils';
 declare const __propDef: {
     props: {
         setOpen?: ((_open: boolean | undefined) => void) | undefined;

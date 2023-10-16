@@ -1,6 +1,6 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import { fade } from "svelte/transition";
-import { config } from "@clue/config";
+import { config } from "@cluue/config";
 let className = "";
 export { className as class };
 export let icon;

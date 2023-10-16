@@ -1,4 +1,4 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import { context } from "./context.js";
 let className = "";
 export { className as class };

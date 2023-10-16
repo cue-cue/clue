@@ -1,4 +1,4 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import { fieldContext } from "../FieldContext/index.js";
 import { writable } from "svelte/store";
 let className = "";

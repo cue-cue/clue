@@ -1,4 +1,4 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import { Label } from "../Label/index.js";
 import CheckboxBase from "./CheckboxBase.svelte";
 import { fieldContext } from "../FieldContext/index.js";

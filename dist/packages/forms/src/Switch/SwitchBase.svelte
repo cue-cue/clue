@@ -1,4 +1,4 @@
-<script>import { generateClassNames, randomId } from "@clue/utils";
+<script>import { generateClassNames, randomId } from "@cluue/utils";
 import InputCheckbox from "../Input/InputCheckbox.svelte";
 import CheckboxField from "../Checkbox/CheckboxField.svelte";
 let className = "";

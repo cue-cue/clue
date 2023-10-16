@@ -1,4 +1,4 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import InputTextareaElement from "./InputTextareaElement.svelte";
 import InputElement from "./InputElement.svelte";
 let className = "";

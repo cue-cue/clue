@@ -1,4 +1,4 @@
-<script>import { generateClassNames, randomId } from "@clue/utils";
+<script>import { generateClassNames, randomId } from "@cluue/utils";
 import TextFieldBase from "./TextFieldBase.svelte";
 import TextFieldHelper from "./TextFieldHelper.svelte";
 import TextFieldHeader from "./TextFieldHeader.svelte";

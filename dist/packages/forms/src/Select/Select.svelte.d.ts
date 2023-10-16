@@ -291,7 +291,7 @@ declare class __sveltets_Render<OptionsGeneric extends IOption<any>[], MultipleG
         error?: boolean | undefined;
         type?: "text" | "tel" | "url" | "email" | "password" | undefined;
         focused?: boolean | undefined;
-        use?: import("@clue/utils").ActionListParams | undefined;
+        use?: import("@cluue/utils").ActionListParams | undefined;
         nodeElement?: HTMLElement | undefined;
         slots?: Partial<Record<"buttons" | "default" | "buttons-start", boolean>> | undefined;
         size?: "small" | "medium" | undefined;
@@ -303,7 +303,7 @@ declare class __sveltets_Render<OptionsGeneric extends IOption<any>[], MultipleG
         allowClear?: boolean | undefined;
         searchValue?: string | undefined;
         id?: string | undefined;
-        use?: import("@clue/utils").ActionListParams | undefined;
+        use?: import("@cluue/utils").ActionListParams | undefined;
     }, "error" | "open" | "allowSearch" | "allowClear"> & Pick<Omit<{
         inputController?: {
             clear: (() => void) | undefined;
@@ -576,7 +576,7 @@ declare class __sveltets_Render<OptionsGeneric extends IOption<any>[], MultipleG
         error?: boolean | undefined;
         type?: "text" | "tel" | "url" | "email" | "password" | undefined;
         focused?: boolean | undefined;
-        use?: import("@clue/utils").ActionListParams | undefined;
+        use?: import("@cluue/utils").ActionListParams | undefined;
         nodeElement?: HTMLElement | undefined;
         slots?: Partial<Record<"buttons" | "default" | "buttons-start", boolean>> | undefined;
         size?: "small" | "medium" | undefined;
@@ -585,7 +585,7 @@ declare class __sveltets_Render<OptionsGeneric extends IOption<any>[], MultipleG
         label?: string | undefined;
         hint?: string | undefined;
         helper?: string | undefined;
-        use?: import("@clue/utils").ActionListParams | undefined;
+        use?: import("@cluue/utils").ActionListParams | undefined;
     }, "label" | "hint" | "helper"> & {
         class?: string | undefined;
         searchFilter?: ((option: OptionsGeneric[number], searchValue: string) => boolean) | undefined;

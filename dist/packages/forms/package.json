@@ -1,16 +1,24 @@
 {
-	"name": "@clue/forms",
-	"version": "1.0.0",
+	"name": "@cluue/forms",
+	"version": "1.0.2",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
+	"svelte": "src/index.js",
 	"type": "module",
 	"author": "Nikita Fedorov",
 	"dependencies": {
-		"@clue/icons": "workspace:*",
-		"@clue/config": "workspace:*",
-		"@clue/base": "workspace:*",
-		"@clue/utils": "workspace:*",
-		"@clue/popover": "workspace:*"
-	}
+		"@cluue/icons": "workspace:*",
+		"@cluue/config": "workspace:*",
+		"@cluue/base": "workspace:*",
+		"@cluue/utils": "workspace:*",
+		"@cluue/popover": "workspace:*"
+	},
+	"exports": {
+		".": {
+		  "import": "./src/index.js",
+		  "types": "./src/index.d.ts",
+		  "svelte": "./src/index.js"
+		}
+	  }
 }

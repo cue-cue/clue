@@ -2,7 +2,7 @@ import { SvelteComponent } from "svelte";
 import type { TransitionConfig } from 'svelte/transition';
 declare const __propDef: {
     props: Omit<Pick<import("svelte/elements.js").SVGAttributes<SVGElement> & {
-        icon: import("@clue/icons/src/types/index.js").IconNames<"clue-">;
+        icon: import("@cluue/icons/src/types/index.js").IconNames<"clue-">;
         class?: string | undefined;
         width?: number | undefined;
         ratio?: number | undefined;

@@ -38,7 +38,7 @@ const replaceCode = (code, path, pluginOptions) => {
 };
 export const svgSpritePlugin = (options) => {
     const include = [
-        '**/node_modules/**/@clue/icons/**/assets/**/*.svg',
+        '**/node_modules/**/@cluue/icons/**/assets/**/*.svg',
         ...(options?.include ? [options?.include].flat() : ['**/*.svg'])
     ];
     const resolvedOptions = {

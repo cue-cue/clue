@@ -1,7 +1,7 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import { TextFieldButton, TextFieldBase, TextField } from "../index.js";
-import icon from "@clue/icons/line/eye.svg";
-import iconClosed from "@clue/icons/line/eye-closed.svg";
+import icon from "@cluue/icons/line/eye.svg";
+import iconClosed from "@cluue/icons/line/eye-closed.svg";
 let className = "";
 export { className as class };
 export let visible = false;

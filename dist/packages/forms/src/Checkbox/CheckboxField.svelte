@@ -1,4 +1,4 @@
-<script>import { generateClassNames, randomId } from "@clue/utils";
+<script>import { generateClassNames, randomId } from "@cluue/utils";
 import { fieldContext } from "../FieldContext/index.js";
 let className = "";
 export { className as class };

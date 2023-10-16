@@ -1,5 +1,5 @@
-<script>import { generateClassNames } from "@clue/utils";
-import { Hint } from "@clue/base";
+<script>import { generateClassNames } from "@cluue/utils";
+import { Hint } from "@cluue/base";
 let className = "";
 export { className as class };
 </script>

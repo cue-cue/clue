@@ -1,6 +1,6 @@
-<script>import { Icon } from "@clue/icons";
-import errorIcon from "@clue/icons/filled/exclamation-circle.svg";
-import { generateClassNames } from "@clue/utils";
+<script>import { Icon } from "@cluue/icons";
+import errorIcon from "@cluue/icons/filled/exclamation-circle.svg";
+import { generateClassNames } from "@cluue/utils";
 let className = "";
 export { className as class };
 export let error = false;

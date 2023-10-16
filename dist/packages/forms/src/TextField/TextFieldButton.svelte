@@ -1,7 +1,7 @@
-<script>import { generateClassNames } from "@clue/utils";
-import { Icon } from "@clue/icons";
+<script>import { generateClassNames } from "@cluue/utils";
+import { Icon } from "@cluue/icons";
 import { onMount, onDestroy } from "svelte";
-import { config } from "@clue/config";
+import { config } from "@cluue/config";
 import { textFieldBaseContext, textFieldButtonsContext } from "./context.js";
 import { writable } from "svelte/store";
 let className = "";

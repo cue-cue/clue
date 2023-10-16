@@ -1,4 +1,4 @@
-<script>import { generateClassNames } from "@clue/utils";
+<script>import { generateClassNames } from "@cluue/utils";
 import { textFieldBaseContext, textFieldButtonsContext } from "./context.js";
 import { writable } from "svelte/store";
 import { onMount } from "svelte";

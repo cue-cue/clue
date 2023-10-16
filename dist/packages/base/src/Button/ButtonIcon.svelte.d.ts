@@ -1,7 +1,7 @@
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: Pick<import("svelte/elements").SVGAttributes<SVGElement> & {
-        icon: import("@clue/icons/src/types").IconNames<"clue-">;
+        icon: import("@cluue/icons/src/types").IconNames<"clue-">;
         class?: string | undefined;
         width?: number | undefined;
         ratio?: number | undefined;

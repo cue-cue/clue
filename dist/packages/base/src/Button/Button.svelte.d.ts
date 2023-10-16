@@ -9,8 +9,8 @@ declare const __propDef: {
     }, "tag"> & {
         class?: string | undefined;
         href?: HTMLLinkAttributes['href'];
-        startIcon?: import("@clue/icons/src/types").IconNames<"clue-"> | undefined;
-        endIcon?: import("@clue/icons/src/types").IconNames<"clue-"> | undefined;
+        startIcon?: import("@cluue/icons/src/types").IconNames<"clue-"> | undefined;
+        endIcon?: import("@cluue/icons/src/types").IconNames<"clue-"> | undefined;
         size?: "small" | "medium" | "large" | undefined;
     };
     events: {

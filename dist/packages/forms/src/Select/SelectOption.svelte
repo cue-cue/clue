@@ -1,5 +1,5 @@
 <script>import Checkbox from "../Checkbox/Checkbox.svelte";
-import { generateClassNames } from "@clue/utils";
+import { generateClassNames } from "@cluue/utils";
 let className = "";
 export { className as class };
 export let active = false;
