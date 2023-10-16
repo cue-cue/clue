@@ -1,0 +1,12 @@
+{
+  "name": "@clue/styles",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Fedorov"
+}

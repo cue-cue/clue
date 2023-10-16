@@ -1,0 +1,13 @@
+{
+	"name": "@clue/popover",
+	"version": "1.0.0",
+	"private": false,
+	"license": "MIT",
+	"main": "src/index.js",
+	"type": "module",
+	"author": "Nikita Fedorov",
+	"dependencies": {
+		"@clue/config": "../config",
+		"@clue/utils": "../utils"
+	}
+}

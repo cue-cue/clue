@@ -1,0 +1,17 @@
+{
+  "name": "@clue/template",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "license": "MIT",
+  "main": "src/index.js",
+  "type": "module",
+  "author": "Nikita Fedorov",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+		"@clue/icons": "../icons",
+		"@clue/utils": "../utils"
+	}
+}

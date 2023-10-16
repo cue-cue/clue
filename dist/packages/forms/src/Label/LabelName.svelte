@@ -1,0 +1,51 @@
+<script>import { generateClassNames } from "@clue/utils";
+import { fieldContext } from "../FieldContext/index.js";
+import { writable } from "svelte/store";
+let className = "";
+export { className as class };
+const fieldContextData = fieldContext.get() || writable({});
+const handler = {
+  click(e) {
+    if ($fieldContextData.manual)
+      e.preventDefault();
+  }
+};
+</script>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<label
+	class={generateClassNames(['LabelName', className])}
+	for={$fieldContextData.id}
+	data-disabled={$fieldContextData.disabled}
+	on:click={handler.click}
+>
+	<slot/>
+</label>
+
+<style>:global(body) {
+  --clue-label-name-font-size: 16px;
+  --clue-label-name-font-weight: 400;
+  --clue-label-name-color: #484B5B;
+  --clue-label-name-color-hover: #000;
+  --clue-label-name-color-disabled: var(--clue-color-gray-200);
+}
+
+.ClueLabelName {
+  cursor: pointer;
+  color: var(--clue-label-name-color);
+  font-size: var(--clue-label-name-font-size);
+  font-weight: var(--clue-label-name-font-weight);
+  line-height: 125%;
+  transition: var(--clue-transition);
+  transition-property: color;
+}
+
+.ClueLabelName[data-disabled=true] {
+  cursor: not-allowed;
+  color: var(--clue-label-name-color-disabled);
+}
+
+:global([data-clue-label-name-hover-trigger]):hover .ClueLabelName:not([data-disabled=true]), .ClueLabelName:not([data-disabled=true]):hover {
+  color: var(--clue-label-name-color-hover);
+}</style>

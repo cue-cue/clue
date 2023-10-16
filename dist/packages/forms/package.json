@@ -1,0 +1,16 @@
+{
+	"name": "@clue/forms",
+	"version": "1.0.0",
+	"private": false,
+	"license": "MIT",
+	"main": "src/index.js",
+	"type": "module",
+	"author": "Nikita Fedorov",
+	"dependencies": {
+		"@clue/icons": "../icons",
+		"@clue/config": "../config",
+		"@clue/base": "../base",
+		"@clue/utils": "../utils",
+		"@clue/popover": "../popover"
+	}
+}
