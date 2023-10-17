@@ -14,7 +14,7 @@
 
 	import type { IOption, OptionValue } from './types.js'
 
-	import {generateClassNames, outclick, createAction} from '@cluue/utils'
+	import {createAction, generateClassNames, outclick} from '@cluue/utils'
 	import SelectBase from './SelectBase.svelte'
 	import type { ComponentProps } from 'svelte'
 	import TextField from '../TextField/TextField.svelte'
@@ -103,25 +103,30 @@
 	on:outclick={handler.outclick}
 >
 	<Popover placement='bottom' trigger={false} bind:open>
-		<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
-			<svelte:fragment slot='base' let:id>
-				<SelectBase
-					{allowSearch}
-					{disabled}
-					{readonly}
-					{error}
-					{id}
-					bind:open
-					bind:value={inputValue}
-					bind:searchValue
-					bind:setOpen
-					on:open
-					on:close
-					on:toggle
-					on:clear={handler.clear}
-				/>
-			</svelte:fragment>
-		</TextField>
+		<svelte:fragment slot='target' let:targetAction>
+			<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
+				<svelte:fragment slot='base' let:id>
+					<SelectBase
+						{allowSearch}
+						{disabled}
+						{readonly}
+						{error}
+						{id}
+						use={[
+							createAction('targetAction', targetAction)
+						]}
+						bind:open
+						bind:value={inputValue}
+						bind:searchValue
+						bind:setOpen
+						on:open
+						on:close
+						on:toggle
+						on:clear={handler.clear}
+					/>
+				</svelte:fragment>
+			</TextField>
+		</svelte:fragment>
 		<svelte:fragment slot='content-wrapper' let:open>
 			<SelectOptionListCore {valueType} {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
 				{#if open}
