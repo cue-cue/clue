@@ -1,5 +1,14 @@
 # @cluue/base
 
+## 1.0.17
+
+### Patch Changes
+
+- Refactor: $Generic => generics (attr in a script)
+- Updated dependencies
+  - @cluue/icons@1.0.16
+  - @cluue/utils@1.0.11
+
 ## 1.0.16
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @cluue/config
 
+## 1.0.10
+
+### Patch Changes
+
+- Refactor: $Generic => generics (attr in a script)
+
 ## 1.0.9
 
 ### Patch Changes

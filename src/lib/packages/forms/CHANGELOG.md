@@ -1,5 +1,17 @@
 # @cluue/forms
 
+## 1.0.15
+
+### Patch Changes
+
+- Refactor: $Generic => generics (attr in a script)
+- Updated dependencies
+  - @cluue/base@1.0.17
+  - @cluue/config@1.0.10
+  - @cluue/icons@1.0.16
+  - @cluue/popover@1.0.11
+  - @cluue/utils@1.0.11
+
 ## 1.0.14
 
 ### Patch Changes
