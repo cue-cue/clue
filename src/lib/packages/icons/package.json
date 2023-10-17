@@ -4,8 +4,6 @@
   "private": false,
   "license": "MIT",
   "main": "src/index.js",
-  "types": "src/index.d.ts",
-  "svelte": "src/index.js",
   "type": "module",
   "author": "Nikita Fedorov",
   "peerDependencies": {

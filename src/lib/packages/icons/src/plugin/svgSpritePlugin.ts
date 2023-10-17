@@ -1,5 +1,4 @@
 import type { Plugin, TransformResult } from 'vite'
-//@ts-ignore
 import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
 
 type Options = Parameters<typeof createSvgSpritePlugin>[0]
@@ -50,7 +49,8 @@ const replaceCode = (code:string, path:string, pluginOptions:Options) => {
 
 export const svgSpritePlugin = (options?:Options):Plugin => {
     const include:Exclude<typeof options, undefined>['include'] = [
-        '**/*.svg?clue'
+        '**/node_modules/**/@clue/icons/**/assets/**/*.svg',
+        ...(options?.include ? [options?.include].flat() : ['**/*.svg'])
     ]
 
     const resolvedOptions:Options = {
@@ -60,12 +60,10 @@ export const svgSpritePlugin = (options?:Options):Plugin => {
     }
 
     const {transform:defaultTransform, ...defaultPlugin} = createSvgSpritePlugin(resolvedOptions)
-    
     const transform:Plugin['transform'] = async (src, filepath) => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
-        const defaultTransformRes:TransformResult = await defaultTransform?.(src, filepath)
-
+        const defaultTransformRes:TransformResult = await defaultTransform?.(src, filepath.replace('.svg?clue', '.svg'))
         if (defaultTransformRes) {
             defaultTransformRes.code = replaceCode(defaultTransformRes.code, filepath, resolvedOptions)
         }
