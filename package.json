@@ -1,12 +1,12 @@
 {
-	"name": "@cluue/mono",
+	"name": "@cluue/monodev",
 	"version": "0.0.3",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"preview": "vite preview",
 		"prepublish": "npx changeset && npx changeset version && npm run build",
-		"publish": "npx changeset && npx changeset version && npm run build",
+		"publish": "pnpm run -r --filter @cluue/mono publish",
 		"package": "svelte-kit sync && svelte-package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
