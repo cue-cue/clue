@@ -9,5 +9,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nikita Fedorov"
+  "author": "Nikita Fedorov",
+  "exports": {
+    ".": {
+      "import": "./src/index.css",
+      "svelte": "./src/index.css"
+    }
+  }
 }
