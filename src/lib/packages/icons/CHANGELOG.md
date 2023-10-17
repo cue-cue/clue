@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 1.0.12
+
+### Patch Changes
+
+- declarationMap
+
 ## 1.0.11
 
 ### Patch Changes
