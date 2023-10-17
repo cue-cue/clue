@@ -34,7 +34,7 @@ importers:
         version: 2.26.2
       '@cluue/mono':
         specifier: workspace:*
-        version: 'link:'
+        version: link:dist
       '@sveltejs/adapter-auto':
         specifier: ^2.0.0
         version: 2.1.0(@sveltejs/kit@1.25.2)

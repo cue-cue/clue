@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"test": "echo test",
-		"publish": "pnpm -r publish --access public --no-git-checks"
+		"publish": "pnpm install && pnpm -r publish --access public --no-git-checks"
 	},
 	"author": "Nikita Fedorov",
 	"peerDependencies": {
