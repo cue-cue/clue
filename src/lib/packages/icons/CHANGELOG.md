@@ -1,5 +1,14 @@
 # @cluue/icons
 
+## 1.0.15
+
+### Patch Changes
+
+- Update popover
+- Updated dependencies
+  - @cluue/config@1.0.9
+  - @cluue/utils@1.0.10
+
 ## 1.0.14
 
 ### Patch Changes

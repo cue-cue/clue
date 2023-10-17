@@ -1,11 +1,14 @@
-<script lang='ts'>
+<script lang="ts" context='module'>
+	export type OptionGenericType = IOption<OptionValue>[]
+
+</script>
+
+<script lang='ts' generics="T extends OptionGenericType">
 	import { selectOptionListCoreContext } from './context.js'
 	import {generateClassNames} from '@cluue/utils'
 	import SelectOption from './SelectOption.svelte'
 	import SelectOptionListBase from './SelectOptionListBase.svelte'
 	import type { ISelectOptionListCoreData, IOption, OptionValue } from './types.js'
-
-	type T = $$Generic<IOption<OptionValue>[]>
 	interface $$Props {
 		class?:string
 		data?:ISelectOptionListCoreData<T>[]

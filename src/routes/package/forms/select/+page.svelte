@@ -1,9 +1,9 @@
 <script lang='ts'>
-	import type { IOption, OptionValue } from "$lib/packages/forms/src/Select/types.js"
+	import type { IOption } from "$lib/packages/forms/src/Select/types.js"
 	import {Select} from "@cluue/forms"
 	import type { ComponentProps } from "svelte"
 
-    const items:(ComponentProps<Select<IOption<string>[], boolean, any, any>> & {id: string})[] = [
+    const items:(ComponentProps<Select<IOption<string>[], any, any, boolean>> & {id: string})[] = [
         {
             id: 'Base',
             options: [
@@ -82,7 +82,7 @@
                             name: (label || '') + index
                         },
                         label
-                    }))} key='id' valueType='key' value={['test2']} multiple/>
+                    }))} key='name' valueType='key' value={['test2']} multiple/>
                 </li>
                 <li>
                     <Select options={item.options.map(({value,label}, index) => ({
@@ -91,7 +91,7 @@
                             name: index
                         },
                         label
-                    }))} key='name' valueType='advanced' value={[{id: '1test21', name: 1}]} multiple/>
+                    }))} valueType='advanced' value={[{id: '1test21', name: 1}]} multiple/>
                 </li>
             </ul>
         </li>

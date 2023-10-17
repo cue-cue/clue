@@ -1,13 +1,22 @@
-<script lang='ts'>
+<script lang='ts' context='module'>
+	import type { IOption, ISelectOptionListCoreData, OptionValue } from "./types.js"
+
+	export type OptionsGenericType = IOption<any>[]
+	export type MultipleGenericType = boolean
+	export type ValueTypeGenericType = 'key' | 'advanced'
+	export type KeyGenericType = string
+
+</script>
+
+<script lang='ts' generics="
+	OptionsGeneric extends OptionsGenericType,
+	ValueTypeGeneric extends ValueTypeGenericType = 'key',
+	KeyGeneric extends KeyGenericType = 'id',
+	MultipleGeneric extends MultipleGenericType = false
+">
 	import { writable } from "svelte/store"
 	import { selectOptionListCoreContext } from "./context.js"
-	import type { IOption, ISelectOptionListCoreData, OptionValue, OptionValueKey } from "./types.js"
 	import {getOptionValueKey as _getOptionValueKey} from './utils.js'
-
-	type OptionsGeneric = $$Generic<IOption<any>[]>
-	type MultipleGeneric = $$Generic<boolean>
-	type ValueTypeGeneric = $$Generic<'key' | 'advanced' | undefined>
-	type KeyGeneric = $$Generic<OptionValueKey<OptionsGeneric[number]['value']>>
 	
 	type OptionGenericValue = ValueTypeGeneric extends 'advanced' ? OptionsGeneric[number]['value'] : OptionsGeneric[number]['value'][KeyGeneric]
 
@@ -41,7 +50,7 @@
 	export let filter:$$Props['filter'] = undefined
 	export let disabled:$$Props['disabled'] = undefined
 	export let readonly:$$Props['readonly'] = undefined
-	export let valueType:$$Props['valueType'] = undefined
+	export let valueType:$$Props['valueType'] = 'key' as ValueTypeGeneric
 
 	const getOptionValueKey = (value:OptionValue) => {
 		return _getOptionValueKey(value, key)

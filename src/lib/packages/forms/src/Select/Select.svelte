@@ -1,13 +1,18 @@
-<script lang='ts'>
+<script lang='ts' generics="
+	OptionsGeneric extends OptionsGenericType,
+	ValueTypeGeneric extends ValueTypeGenericType = 'key',
+	KeyGeneric extends KeyGenericType = 'id',
+	MultipleGeneric extends MultipleGenericType = false
+">
 	import PopoverContent from '$lib/packages/popover/src/PopoverContent/PopoverContent.svelte'
 
 	import { getOptionValueKey } from './utils.js'
 
-	import SelectOptionListCore from './SelectOptionListCore.svelte'
+	import SelectOptionListCore, {type OptionsGenericType, type ValueTypeGenericType, type KeyGenericType, type MultipleGenericType} from './SelectOptionListCore.svelte'
 
 	import SelectOptionList from './SelectOptionList.svelte'
 
-	import type { IOption, OptionValue, OptionValueKey } from './types.js'
+	import type { IOption, OptionValue } from './types.js'
 
 	import {generateClassNames, outclick, createAction} from '@cluue/utils'
 	import SelectBase from './SelectBase.svelte'
@@ -15,14 +20,8 @@
 	import TextField from '../TextField/TextField.svelte'
 	import {Popover} from '@cluue/popover'
 
-	
-	type OptionsGeneric = $$Generic<IOption<any>[]>
-	type MultipleGeneric = $$Generic<boolean>
-	type ValueTypeGeneric = $$Generic<'key' | 'advanced'>
-	type KeyGeneric = $$Generic<OptionValueKey<OptionsGeneric[number]['value']>>
-
 	type SelectBaseProps = ComponentProps<SelectBase>
-	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<OptionsGeneric, MultipleGeneric, ValueTypeGeneric, KeyGeneric>>
+	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<OptionsGeneric, ValueTypeGeneric, KeyGeneric, MultipleGeneric>>
 	type TextFieldProps = ComponentProps<TextField>
 
 	type SearchFilter = (option:OptionsGeneric[number], searchValue:string) => boolean

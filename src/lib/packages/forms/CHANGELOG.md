@@ -1,5 +1,17 @@
 # @cluue/forms
 
+## 1.0.14
+
+### Patch Changes
+
+- Update popover
+- Updated dependencies
+  - @cluue/base@1.0.16
+  - @cluue/config@1.0.9
+  - @cluue/icons@1.0.15
+  - @cluue/popover@1.0.10
+  - @cluue/utils@1.0.10
+
 ## 1.0.13
 
 ### Patch Changes

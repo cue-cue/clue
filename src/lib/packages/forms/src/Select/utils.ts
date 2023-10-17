@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { OptionValue, OptionValueKey } from "./types.js";
+import type { OptionValue } from "./types.js";
 
-export const getOptionValueKey = <T extends OptionValue>(value:T, key?:OptionValueKey<T>):string | number => {
+export const getOptionValueKey = <T extends OptionValue>(value:T, key?:string):string | number => {
     if (typeof value === 'object' && !Array.isArray(value)) {
         if (key) {
             //@ts-ignore
