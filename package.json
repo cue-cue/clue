@@ -14,9 +14,10 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"build:icons": "npx ts-node --esm scripts/beforeBuildAndDev/createIcons.ts",
 		"build:styles": "node scripts/afterBuild/buildStyles.mjs",
+		"build:moveDistTemplates": "node scripts/afterBuild/moveDistTemplates.mjs",
 		"build:before": "npm run build:icons",
-		"build:after": "npm run build:styles",
-		"build:WARNING": "npm run build:before && npm run package && vite build && npm run build:after",
+		"build:after": "npm run build:styles && npm run build:moveDistTemplates",
+		"build": "npm run build:before && npm run package && npm run build:after",
 		"build:site": "svelte-kit sync && npm run build:before && vite build"
 	},
 	"author": "Nikita Fedorov",
