@@ -1,5 +1,13 @@
 # @cluue/utils
 
+## 1.0.8
+
+### Patch Changes
+
+- Fix exports
+- Updated dependencies
+  - @cluue/config@1.0.7
+
 ## 1.0.7
 
 ### Patch Changes

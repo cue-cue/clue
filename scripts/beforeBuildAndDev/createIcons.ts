@@ -101,6 +101,7 @@ const addExportsInPackageJson = (icons:IconGroups) => {
         //@ts-ignore
         exports[`./${group}/*`] = {
             import: `./src/assets/${group}/*`,
+            svelte: `./src/assets/${group}/*`,
             types: "./svg/types/module.d.ts"
         }
     })
