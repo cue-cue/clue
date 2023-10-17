@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/forms",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
@@ -15,9 +15,9 @@
 	},
 	"exports": {
 		".": {
-		  "import": "./src/index.js",
-		  "default": "./src/index.js",
-		  "types": "./src/index.d.ts"
+			"import": "./src/index.js",
+			"default": "./src/index.js",
+			"types": "./src/index.d.ts"
 		}
 	}
 }

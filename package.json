@@ -40,6 +40,7 @@
 		"svelte-floating-ui": "^1.5.4"
 	},
 	"devDependencies": {
+		"@changesets/cli": "^2.26.2",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-netlify": "^2.0.8",
 		"@sveltejs/kit": "^1.20.4",
