@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import {Icon} from '@cluue/icons'
-    import errorIcon from '@cluue/icons/filled/exclamation-circle.svg'
+    import errorIcon from '@cluue/icons/filled/exclamation-circle.svg?clue'
     import {generateClassNames} from '@cluue/utils'
     interface $$Props {
         class?:string

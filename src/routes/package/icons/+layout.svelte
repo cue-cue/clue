@@ -1,8 +1,8 @@
 <script lang='ts'>
 	import type { ClueSvgIconData } from "$lib/packages/icons/src/index.js";
 	import {Button} from "@cluue/base";
-    import lineIcon from '@cluue/icons/line/bell.svg'
-    import filledIcon from '@cluue/icons/filled/bell.svg'
+    import lineIcon from '@cluue/icons/line/bell.svg?clue'
+    import filledIcon from '@cluue/icons/filled/bell.svg?clue'
 	import { page } from "$app/stores";
 
     const groups:{

@@ -1,7 +1,7 @@
 <script lang='ts'>
     import TextFieldButton from '$lib/packages/forms/src/TextField/TextFieldButton.svelte'
     import {Input, PasswordField, TextField, TextFieldBase} from '@cluue/forms'
-    import buttonIcon from '@cluue/icons/line/activity-circle.svg'
+    import buttonIcon from '@cluue/icons/line/activity-circle.svg?clue'
 	import type { ComponentProps } from 'svelte'
 
     const icons:Record<'start' | 'end', (typeof buttonIcon | undefined)[]> = {start: [buttonIcon, buttonIcon], end: [buttonIcon, buttonIcon, buttonIcon]}

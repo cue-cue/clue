@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import Icon from "$lib/packages/icons/src/components/Icon.svelte"
     import { Color } from "@cluue/utils"
-    import customColorIcon from '@cluue/icons/line/cursor-click.svg'
+    import customColorIcon from '@cluue/icons/line/cursor-click.svg?clue'
 	import { browser } from "$app/environment"
 	import { derived } from "svelte/store"
 	import { colorsStore } from "../../../stores/colors.js"

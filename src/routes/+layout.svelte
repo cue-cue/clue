@@ -2,13 +2,13 @@
     import "$lib/packages/styles/src/index.scss"
     import "./styles/index.scss"
 	import {Button} from "@cluue/base";
-    import textFieldIcon from '@cluue/icons/line/eye.svg'
-    import iconsIcon from '@cluue/icons/line/papers.svg'
-    import buttonIcon from '@cluue/icons/line/bell.svg'
-    import checkboxIcon from '@cluue/icons/line/check-square.svg'
-    import colorsIcon from '@cluue/icons/line/apple-fruit.svg'
-    import selectIcon from '@cluue/icons/line/note-list-square.svg'
-    import popoverIcon from '@cluue/icons/line/chat-heart.svg'
+    import textFieldIcon from '@cluue/icons/line/eye.svg?clue'
+    import iconsIcon from '@cluue/icons/line/papers.svg?clue'
+    import buttonIcon from '@cluue/icons/line/bell.svg?clue'
+    import checkboxIcon from '@cluue/icons/line/check-square.svg?clue'
+    import colorsIcon from '@cluue/icons/line/apple-fruit.svg?clue'
+    import selectIcon from '@cluue/icons/line/note-list-square.svg?clue'
+    import popoverIcon from '@cluue/icons/line/chat-heart.svg?clue'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
     import { onMount } from "svelte"

@@ -1,7 +1,7 @@
 <script lang='ts'>
     import {Button, IconButton} from '@cluue/base'
 	import type { ComponentProps } from 'svelte';
-    import eye from '@cluue/icons/line/eye.svg'
+    import eye from '@cluue/icons/line/eye.svg?clue'
 
     const getButtonStyles = (variantOptions?:ComponentProps<Button>) => {
         const sizes:Exclude<ComponentProps<Button>['size'], undefined>[] = ['large', 'medium', 'small']

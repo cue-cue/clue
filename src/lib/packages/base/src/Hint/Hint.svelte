@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import {generateClassNames} from '@cluue/utils'
 	import {Icon} from '@cluue/icons'
-	import questionCircle from '@cluue/icons/line/question-circle.svg'
+	import questionCircle from '@cluue/icons/line/question-circle.svg?clue'
 
 	interface $$Props {
 		class?:string

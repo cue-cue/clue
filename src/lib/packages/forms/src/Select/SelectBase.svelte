@@ -31,8 +31,8 @@
 	import Input from '../Input/Input.svelte'
 	import { tick, type ComponentProps, createEventDispatcher, onMount, onDestroy} from 'svelte'
 	import TextFieldButton from '../TextField/TextFieldButton.svelte'
-	import icon from '@cluue/icons/line/angle-down.svg'
-	import clearIcon from '@cluue/icons/line/times.svg'
+	import icon from '@cluue/icons/line/angle-down.svg?clue'
+	import clearIcon from '@cluue/icons/line/times.svg?clue'
 	import { createAction } from '@cluue/utils'
 
 	type InputProps = ComponentProps<Input>
