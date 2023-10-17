@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"publish": "echo test"
+		"test": "echo test",
+		"publish": "pnpm -r publish --access public --no-git-checks"
 	},
 	"author": "Nikita Fedorov",
 	"peerDependencies": {

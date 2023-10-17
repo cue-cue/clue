@@ -5,18 +5,18 @@
 	"scripts": {
 		"dev": "vite dev",
 		"preview": "vite preview",
+		"prepublish": "npx changeset && npx changeset version && npm run build",
+		"publish": "npx changeset && npx changeset version && npm run build",
 		"package": "svelte-kit sync && svelte-package && publint",
-		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"build:icons": "npx ts-node --esm scripts/beforeBuildAndDev/createIcons.ts",
 		"build:styles": "node scripts/afterBuild/buildStyles.mjs",
-		"build:moveDistTemplates": "node scripts/afterBuild/moveDistTemplates.mjs",
+		"build:packageTemplates": "node scripts/afterBuild/packageTemplates.mjs",
 		"build:before": "npm run build:icons",
-		"build:after": "npm run build:styles && npm run build:moveDistTemplates",
+		"build:after": "npm run build:styles && npm run build:packageTemplates",
 		"build": "npm run build:before && npm run package && npm run build:after",
 		"build:site": "svelte-kit sync && npm run build:before && vite build"
 	},
@@ -40,6 +40,7 @@
 		"svelte-floating-ui": "^1.5.4"
 	},
 	"devDependencies": {
+		"@cluue/mono": "workspace:*",
 		"@changesets/cli": "^2.26.2",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-netlify": "^2.0.8",
