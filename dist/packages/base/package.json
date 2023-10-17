@@ -1,0 +1,24 @@
+{
+  "name": "@cluue/base",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "license": "MIT",
+  "main": "src/index.js",
+  "type": "module",
+  "author": "Nikita Fedorov",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+		"@cluue/icons": "workspace:*",
+		"@cluue/utils": "workspace:*"
+	},
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "default": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  }
+}

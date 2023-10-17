@@ -1,0 +1,8 @@
+@mixin radio-base-vars(){
+    --clue-radio-base-border-radius: 50%;
+    
+    --clue-radio-base-checked-background-color-disabled: var(--clue-checkbox-field-background-color-disabled);
+
+    --clue-radio-base-thumb-background-color: var(--clue-checkbox-field-checked-thumb-background-color);
+    --clue-radio-base-checked-thumb-background-color-disabled: var(--clue-checkbox-field-checked-thumb-background-color-disabled);
+}

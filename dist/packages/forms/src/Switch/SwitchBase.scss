@@ -1,0 +1,20 @@
+@mixin switch-base-vars() {
+    --clue-switch-base-width: 42px;
+    --clue-switch-base-height: 24px;
+
+    --clue-switch-checked-background-color-disabled: var(--clue-checkbox-field-background-color-disabled);
+    
+    --clue-switch-checked-border-color-disabled: transparent;
+
+    --clue-switch-thumb-width: 16px;
+    --clue-switch-thumb-height: 16px;
+    --clue-switch-thumb-border-radius: 50%;
+
+
+    --clue-switch-thumb-background-color: var(--clue-checkbox-field-thumb-background-color);
+    --clue-switch-thumb-background-color-hover: var(--clue-checkbox-field-thumb-background-color-hover);
+    --clue-switch-thumb-background-color-disabled: var(--clue-checkbox-field-thumb-background-color-disabled);
+
+    --clue-switch-thumb-checked-background-color: var(--clue-checkbox-field-checked-thumb-background-color);
+    --clue-switch-thumb-checked-background-color-disabled: var(--clue-checkbox-field-checked-thumb-background-color-disabled);
+}
