@@ -1,5 +1,11 @@
 # @cluue/styles
 
+## 1.0.8
+
+### Patch Changes
+
+- Fix types
+
 ## 1.0.7
 
 ### Patch Changes

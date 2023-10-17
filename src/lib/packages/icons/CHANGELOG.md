@@ -1,5 +1,14 @@
 # @cluue/icons
 
+## 1.0.13
+
+### Patch Changes
+
+- Fix types
+- Updated dependencies
+  - @cluue/config@1.0.8
+  - @cluue/utils@1.0.9
+
 ## 1.0.12
 
 ### Patch Changes

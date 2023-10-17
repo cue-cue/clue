@@ -1,10 +1,10 @@
 {
   "name": "@cluue/icons",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "private": false,
   "license": "MIT",
   "main": "src/index.js",
-  "types": "desc.d.ts",
+  "types": "src/index.d.ts",
   "type": "module",
   "author": "Nikita Fedorov",
   "peerDependencies": {
@@ -17,7 +17,7 @@
   "typesVersions": {
     "*": {
       ".": [
-        "src/index.d.ts"
+        "./src/index.d.ts"
       ],
       "plugin": [
         "./src/plugin/index.d.ts"
