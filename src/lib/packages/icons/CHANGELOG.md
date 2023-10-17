@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 1.0.14
+
+### Patch Changes
+
+- fix exports
+
 ## 1.0.13
 
 ### Patch Changes

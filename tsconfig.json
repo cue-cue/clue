@@ -10,6 +10,6 @@
 		"skipDefaultLibCheck": true,
 		"declaration": true,
 		"sourceMap": true,
-		"strict": true,
+		"strict": true
 	}
 }

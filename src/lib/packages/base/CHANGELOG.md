@@ -1,5 +1,12 @@
 # @cluue/base
 
+## 1.0.15
+
+### Patch Changes
+
+- Updated dependencies
+  - @cluue/icons@1.0.14
+
 ## 1.0.14
 
 ### Patch Changes

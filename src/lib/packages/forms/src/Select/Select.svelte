@@ -103,7 +103,7 @@
 	use:outclick
 	on:outclick={handler.outclick}
 >
-	<Popover let:targetAction placement='bottom' trigger={false} bind:open>
+	<Popover placement='bottom' trigger={false} bind:open>
 		<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
 			<svelte:fragment slot='base' let:id>
 				<SelectBase
@@ -112,9 +112,6 @@
 					{readonly}
 					{error}
 					{id}
-					use={[
-						createAction('targetAction', targetAction)
-					]}
 					bind:open
 					bind:value={inputValue}
 					bind:searchValue
@@ -143,6 +140,8 @@
 		position: relative
 		:global(.ClueSelectOptionList)
 			max-height: min(400px, 80vh)
+			width: 100%
+		:global(.CluePopoverTarget)
 			width: 100%
 	:global(.ClueSelectPopoverContent)
 		width: 100%

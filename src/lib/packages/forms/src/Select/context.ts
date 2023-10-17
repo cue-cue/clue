@@ -5,7 +5,7 @@ import type { Writable } from "svelte/store";
 import type { Select } from "./index.js";
 import type { ISelectOptionListCoreData } from "./types.js";
 
-type Data = Writable<Pick<ComponentProps<Select<any, any>>, 'opened'>>
+type Data = Writable<Pick<ComponentProps<Select<any, any, any, any>>, 'open'>>
 
 export const context = new Context<Data>('Select')
 

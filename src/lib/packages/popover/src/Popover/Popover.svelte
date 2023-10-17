@@ -6,6 +6,7 @@
 	import { HoverTrigger } from '../Trigger/hover.js'
 	import { offset as offsetMiddleware, shift as shiftMiddleware, size as sizeMiddleware, flip as flipMiddleware, type OffsetOptions } from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
+	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 		
 	interface $$Props {
 		/**
@@ -114,7 +115,12 @@
 	})
 </script>
 
-<slot {targetAction} {update}/>
+<slot name='target' {targetAction} {update}>
+	<PopoverTarget>
+		<slot/>
+	</PopoverTarget>
+</slot>
+
 
 <slot name='content-wrapper' {contentAction} {update} {open}>
 	{#if $$slots.content && open}

@@ -34,15 +34,11 @@
         <li>
             <h3>{id}</h3>
             <pre>{JSON.stringify(item)}</pre>
-            <Popover let:targetAction {...item}>
-                <div use:targetAction style='display: inline-block'>
-                    <Button>Popover</Button>
-                </div>
+            <Popover {...item}>
+                <Button>Popover</Button>
                 <svelte:fragment slot='content'>
-                    <Popover let:targetAction {...item}>
-                        <div use:targetAction style='display: inline-block'>
-                            <Button size='small'>Hovvvver me 💜</Button>
-                        </div>
+                    <Popover {...item}>
+                        <Button size='small'>Hovvvver me 💜</Button>
                         <svelte:fragment slot='content'>
                             <Button size='small'>Cuuue💜</Button>
                         </svelte:fragment>
