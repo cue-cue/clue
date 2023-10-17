@@ -22,7 +22,11 @@
     }
   },
   "exports": {
-    ".": "./src/index.js",
+    ".": {
+      "import": "./src/index.js",
+      "default": "./src/index.js",
+      "types": "./src/index.d.ts"
+    },
     "./plugin": "./src/plugin/index.js",
     "./line/*": {
       "import": "./src/assets/line/*",

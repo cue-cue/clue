@@ -12,5 +12,12 @@
   "author": "Nikita Fedorov",
   "dependencies": {
 		"@cluue/config": "workspace:*"
+	},
+  "exports": {
+		".": {
+		  "import": "./src/index.js",
+		  "default": "./src/index.js",
+		  "types": "./src/index.d.ts"
+		}
 	}
 }

@@ -4,7 +4,6 @@
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
-	"types": "src/index.d.ts",
 	"type": "module",
 	"author": "Nikita Fedorov",
 	"dependencies": {
@@ -13,5 +12,12 @@
 		"@cluue/base": "workspace:*",
 		"@cluue/utils": "workspace:*",
 		"@cluue/popover": "workspace:*"
+	},
+	"exports": {
+		".": {
+		  "import": "./src/index.js",
+		  "default": "./src/index.js",
+		  "types": "./src/index.d.ts"
+		}
 	}
 }

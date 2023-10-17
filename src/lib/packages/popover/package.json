@@ -10,5 +10,12 @@
 		"@cluue/config": "workspace:*",
 		"@cluue/utils": "workspace:*",
 		"svelte-floating-ui": "^1.5.4"
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.js",
+			"default": "./src/index.js",
+			"types": "./src/index.d.ts"
+		}
 	}
 }

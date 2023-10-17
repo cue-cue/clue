@@ -35,7 +35,8 @@
 		"@cluue/icons": "workspace:*",
 		"@cluue/popover": "workspace:*",
 		"@cluue/styles": "workspace:*",
-		"@cluue/utils": "workspace:*"
+		"@cluue/utils": "workspace:*",
+		"svelte-floating-ui": "^1.5.4"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",

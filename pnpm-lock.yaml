@@ -25,6 +25,9 @@ importers:
       '@cluue/utils':
         specifier: workspace:*
         version: link:src/lib/packages/utils
+      svelte-floating-ui:
+        specifier: ^1.5.4
+        version: 1.5.4
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^2.0.0
