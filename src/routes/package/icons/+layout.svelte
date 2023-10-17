@@ -3,7 +3,6 @@
 	import {Button} from "@cluue/base";
     import lineIcon from '@cluue/icons/line/bell.svg?clue'
     import filledIcon from '@cluue/icons/filled/bell.svg?clue'
-    import {clueIconsPlugin} from "@cluue/icons/plugin"
     import test from "@cluue/icons/line/eye.svg?clue"
 	import { page } from "$app/stores";
 

@@ -1,5 +1,13 @@
 # @cluue/forms
 
+## 1.0.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @cluue/icons@1.0.11
+  - @cluue/base@1.0.12
+
 ## 1.0.9
 
 ### Patch Changes
