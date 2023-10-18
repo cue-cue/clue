@@ -1,5 +1,11 @@
 # @cluue/forms
 
+## 1.0.16
+
+### Patch Changes
+
+- Refactor use the popover in the Select
+
 ## 1.0.15
 
 ### Patch Changes
