@@ -5,6 +5,7 @@
 	import { fly } from 'svelte/transition'
 	import { config } from '@cluue/config'
 	import type { ComputeConfig } from 'svelte-floating-ui'
+	import { writable } from 'svelte/store'
 
 	interface $$Props {
 		class?:string
@@ -52,6 +53,7 @@
 	transition:fly={{duration: $config.transition.duration, ...getTransitionParams(contextStore && $contextStore.placement)}}
 >
 	<slot/>
+	<slot name='arrow'/>
 </div>
 
 <style lang='sass'>

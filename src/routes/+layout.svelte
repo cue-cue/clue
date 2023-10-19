@@ -9,6 +9,7 @@
     import colorsIcon from '@cluue/icons/line/apple-fruit.svg?clue'
     import selectIcon from '@cluue/icons/line/note-list-square.svg?clue'
     import popoverIcon from '@cluue/icons/line/chat-heart.svg?clue'
+    import tooltipIcon from '@cluue/icons/line/user-tag.svg?clue'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
     import { onMount } from "svelte"
@@ -52,6 +53,11 @@
             name: 'Popover',
             href: '/package/popover',
             startIcon: popoverIcon
+        },
+        {
+            name: 'Tooltip',
+            href: '/package/base/tooltip',
+            startIcon: tooltipIcon
         }
     ]
 
@@ -106,6 +112,12 @@
 		})
     })
 
+	let headerHeight = 0
+
+	$: if(browser) {
+		document.body.style.setProperty('--header-height', `${headerHeight}px`)
+	}
+
 	$: {
 		loadColorsInStyles()
 		$colorsStore
@@ -113,7 +125,7 @@
 
 </script>
 
-<header>
+<header bind:clientHeight={headerHeight}>
     <nav>
         {#each menuItems as button (button.href)}
             {@const active = $page.url.pathname.startsWith(button.href || '')}

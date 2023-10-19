@@ -31,7 +31,7 @@
     $: _searchValue = searchValue.replace(new RegExp(' ', 'gi'), '-')
     $: icons = allIcons.filter((icon) => icon.groupName === $page.params.group &&  icon.name.includes(_searchValue)).map((icon, id) => ({...icon, id}))
 </script>
-<div style="position: sticky; top: 16px">
+<div style="position: sticky; top: calc(var(--header-height) + 16px)">
     <TextField placeholder='Search' bind:value={searchValue} helper={`${icons.length} icons found`}/>
 </div>
 <br><br>

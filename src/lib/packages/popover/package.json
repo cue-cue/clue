@@ -10,7 +10,7 @@
 	"dependencies": {
 		"@cluue/config": "workspace:*",
 		"@cluue/utils": "workspace:*",
-		"svelte-floating-ui": "^1.5.4"
+		"svelte-floating-ui": "^1.5.5"
 	},
 	"exports": {
 		".": {
