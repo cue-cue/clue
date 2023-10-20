@@ -2,11 +2,12 @@
     import "$lib/packages/styles/src/index.scss"
     import "./styles/index.scss"
 	import {Button} from "@cluue/base";
+    import packageBaseIcon from '@cluue/icons/line/eye.svg?clue'
     import textFieldIcon from '@cluue/icons/line/eye.svg?clue'
     import iconsIcon from '@cluue/icons/line/papers.svg?clue'
     import buttonIcon from '@cluue/icons/line/bell.svg?clue'
     import checkboxIcon from '@cluue/icons/line/check-square.svg?clue'
-    import colorsIcon from '@cluue/icons/line/apple-fruit.svg?clue'
+    import packageColorsIcon from '@cluue/icons/line/apple-fruit.svg?clue'
     import selectIcon from '@cluue/icons/line/note-list-square.svg?clue'
     import popoverIcon from '@cluue/icons/line/chat-heart.svg?clue'
     import tooltipIcon from '@cluue/icons/line/user-tag.svg?clue'
@@ -17,49 +18,65 @@
 	import { colorsStore } from "./stores/colors.js"
 	import { Color } from "@cluue/utils"
 	import { browser } from "$app/environment"
+	import {Tooltip} from "@cluue/base"
 
-    const menuItems:(ComponentProps<Button> & {name:string})[] = [
-        {
-            name: 'TextField',
-            href: '/package/forms/text-field',
-            startIcon: textFieldIcon
-        },
+	type Link = (ComponentProps<Button> & {name:string})
+
+	const packages:(Link & {pages?:Link[]})[] = [
 		{
-            name: 'Select',
-            href: '/package/forms/select',
-            startIcon: selectIcon
-        },
-        {
+			name: 'Base',
+			startIcon: packageBaseIcon,
+			pages: [
+				{
+					name: 'Button',
+					href: '/package/base/button',
+					startIcon: buttonIcon
+				},
+				{
+					name: 'Tooltip',
+					href: '/package/base/tooltip',
+					startIcon: tooltipIcon
+				}
+			]
+		},
+		{
             name: 'Icons',
             href: '/package/icons',
             startIcon: iconsIcon
         },
-        {
-            name: 'Button',
-            href: '/package/base/button',
-            startIcon: buttonIcon
-        },
-        {
-            name: 'Checkbox',
-            href: '/package/forms/checkbox',
-            startIcon: checkboxIcon
-        },
-        {
-            name: 'Colors',
-            href: '/package/styles/colors',
-            startIcon: colorsIcon
-        },
-        {
+		{
+			name: 'Colors',
+			href: '/package/styles/colors',
+			startIcon: packageColorsIcon,
+		},
+		{
+			name: 'Forms',
+			startIcon: packageColorsIcon,
+			pages: [
+				{
+            		name: 'TextField',
+					href: '/package/forms/text-field',
+					startIcon: textFieldIcon
+				},
+				{
+					name: 'Select',
+					href: '/package/forms/select',
+					startIcon: selectIcon
+				},
+				{
+					name: 'Checkbox',
+					href: '/package/forms/checkbox',
+					startIcon: checkboxIcon
+				},
+			]
+		},
+		{
             name: 'Popover',
             href: '/package/popover',
             startIcon: popoverIcon
-        },
-        {
-            name: 'Tooltip',
-            href: '/package/base/tooltip',
-            startIcon: tooltipIcon
         }
-    ]
+	]
+
 
 	const loadColorsInStyles = () => {
 		if (!browser) return
@@ -127,10 +144,32 @@
 
 <header bind:clientHeight={headerHeight}>
     <nav>
-        {#each menuItems as button (button.href)}
+        <!-- {#each menuItems as button (button.href)}
             {@const active = $page.url.pathname.startsWith(button.href || '')}
             <Button {...button} size='small' type={active ? 'primary' : 'ghost'}>{button.name}</Button>
-        {/each}
+        {/each} -->
+		{#each packages as {name, pages, ...packageItem} (name)}
+			<Tooltip placement='bottom-start' theme='light' arrow={false} disabled={!pages?.length}>
+				<Button {...packageItem} size='small' type={packageItem.href && $page.url.pathname.startsWith(packageItem.href) ? 'primary' : 'ghost'}>{name}</Button>
+				<svelte:fragment slot='content'>
+					{#if pages?.length}
+						<ul>
+							{#each pages as {name, ...pageItem} (name)}
+								<li>
+									<Button 
+										size='small'
+										type={pageItem.href && $page.url.pathname.startsWith(pageItem.href) ? 'primary' : 'ghost'}
+										{...pageItem}
+									>
+										{name}
+									</Button>
+								</li>
+							{/each}
+						</ul>
+					{/if}
+				</svelte:fragment>
+			</Tooltip>
+		{/each}
     </nav>
 	<div class='colors'>
 		{#each Object.keys($colorsStore) as color (color)}
@@ -160,6 +199,16 @@
 		nav
 			flex: none
 			max-width: 100%
+			ul
+				margin: 0
+				padding: 0
+				list-style: none
+				li
+					width: 100%
+					&:not(:last-child)
+						margin-bottom: 5px
+					:global(.ClueButton)
+						width: 100%
 	.colors
 		margin-left: auto
 		display: flex

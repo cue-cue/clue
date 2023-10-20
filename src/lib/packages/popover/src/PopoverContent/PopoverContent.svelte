@@ -5,9 +5,9 @@
 	import { fly } from 'svelte/transition'
 	import { config } from '@cluue/config'
 	import type { ComputeConfig } from 'svelte-floating-ui'
-	import { writable } from 'svelte/store'
+	import type { HTMLAttributes } from 'svelte/elements'
 
-	interface $$Props {
+	interface $$Props extends HTMLAttributes<HTMLDivElement>, Partial<Record<`data-${string}`, string>> {
 		class?:string
 		popoverAction?: ReturnType<typeof createPopoverActions>['contentAction']
 	}
@@ -51,6 +51,7 @@
 	class={generateClassNames(['PopoverContent', className])}
 	use:action
 	transition:fly={{duration: $config.transition.duration, ...getTransitionParams(contextStore && $contextStore.placement)}}
+	{...$$restProps}
 >
 	<slot/>
 	<slot name='arrow'/>

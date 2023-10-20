@@ -24,6 +24,10 @@
 		 */
 		open?:boolean
 		/**
+		 * @default false
+		 */
+		disabled?:boolean
+		/**
 		 * @default 'hover'
 		 */
 		trigger?:'hover' | false
@@ -36,6 +40,7 @@
 	export let placement:$$Props['placement'] = 'top'
 	export let offset:$$Props['offset'] = 5
 	export let open:$$Props['open'] = false
+	export let disabled:$$Props['disabled'] = false
 	export let trigger:$$Props['trigger'] = 'hover'
 	export let arrow:$$Props['arrow'] = false
 	
@@ -158,8 +163,8 @@
 			content: contentElementRef,
 			target: targetElementRef
 		},{
-			open: () => setOpen(true),
-			close: () => setOpen(false)
+			open: () => !disabled && setOpen(true),
+			close: () => !disabled && setOpen(false)
 		}) : undefined
 	}
 

@@ -6,12 +6,16 @@
 
 	interface $$Props extends ComponentProps<Popover> {
 		class?:string
+		size?:ComponentProps<TooltipContent>['size']
+		theme?:ComponentProps<TooltipContent>['theme']
 	}
 	
 	let className = ''
 	export { className as class }
 
 	export let arrow:$$Props['arrow'] = true
+	export let size:$$Props['size'] = undefined
+	export let theme:$$Props['theme'] = undefined
 	
 </script>
 
@@ -19,7 +23,7 @@
 	<slot/>
 	<svelte:fragment slot='content-wrapper' let:open>
 		{#if open}
-			<TooltipContent class={generateClassNames(['Tooltip', className])}>
+			<TooltipContent {size} {theme} class={generateClassNames(['Tooltip', className])}>
 				<slot name='content'/>
 			</TooltipContent>
 		{/if}

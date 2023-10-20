@@ -5,7 +5,7 @@
 	import ButtonIcon from './ButtonIcon.svelte';
 	import type { HTMLLinkAttributes } from 'svelte/elements';
 
-    interface $$Props extends Omit<ComponentProps<ButtonField>, 'tag'> {
+    interface $$Props extends Omit<ComponentProps<ButtonField>, 'tag' | 'style'> {
         class?:string
         href?:HTMLLinkAttributes['href']
         startIcon?:ComponentProps<ButtonIcon>['icon']
