@@ -1,0 +1,5 @@
+@mixin popover-arrow-vars() {
+	--clue-popover-arrow-background-color: var(--clue-color-gray-700);
+	--clue-popover-arrow-width: 8px;
+	--clue-popover-arrow-height: 5px;
+}

@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import {generateClassNames} from '@cluue/utils'
 	import { context } from '../context'
-	import { writable } from 'svelte/store'
+	import { onDestroy } from 'svelte'
 
 	interface $$Props {
 		class?:string
@@ -12,25 +12,37 @@
 	export { className as class }
 	export let nodeElement:$$Props['nodeElement'] = undefined
 
-	const contextStore = context.get() || writable({})
+	const contextStore = context.get()
 
-	const arrowStore = $contextStore?.arrowStore
+	const arrowStore = contextStore && $contextStore?.arrowStore
 
 	$: styles = Object.entries(arrowStore ? $arrowStore.styles : {}).map(([name, val]) => `${name}: ${val}`).join('; ')
+	$: arrowStore && ($arrowStore.element.set(nodeElement))
+
+	onDestroy(() => {
+		arrowStore && ($arrowStore.element.set(undefined))
+	})
 </script>
-<div bind:this={nodeElement} style={styles} class={generateClassNames(['PopoverArrow', className])}>
-	<slot><div></div></slot>
-</div>
+{#if !contextStore || $contextStore.arrow}
+	<div bind:this={nodeElement} style={styles} class={generateClassNames(['PopoverArrow', className])}>
+		<slot><div></div></slot>
+	</div>
+{/if}
 
 <style lang='sass'>
+	@import './PopoverArrow'
+	:global(body)
+		+popover-arrow-vars()
 	.CluePopoverArrow
+		--width: calc(var(--clue-popover-arrow-width) - 2px)
+		--height: calc(var(--clue-popover-arrow-height) + 2px)
+		--background-color: var(--clue-popover-arrow-background-color)
 		position: absolute
 		display: inline-block
 		div
-			width: 40px
-			height: 10px
-			background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 5L0 0L8 0L4 5Z' fill='%2332343E'/%3E%3C/svg%3E%0A")
-			background: red
-			background-size: cover
-			background-repeat: no-repeat
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: var(--height) var(--width) 0 var(--width)
+			border-color: var(--background-color) transparent transparent transparent
 </style>

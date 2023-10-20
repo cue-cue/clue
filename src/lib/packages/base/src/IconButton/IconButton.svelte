@@ -34,7 +34,6 @@
 	@import './IconButton'
 	:global(body)
 		+icon-button-vars()
-		
 	:global(.ClueIconButton)
 		--size: var(--clue-icon-button-size)
 		--icon-size: var(--clue-icon-button-icon-size)

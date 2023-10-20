@@ -102,7 +102,7 @@
 	use:outclick
 	on:outclick={handler.outclick}
 >
-	<Popover placement='bottom' trigger={false} bind:open>
+	<Popover placement='bottom' offset={0} trigger={false} bind:open>
 		<svelte:fragment slot='target' let:targetAction>
 			<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
 				<svelte:fragment slot='base' let:id>

@@ -7,7 +7,7 @@ import type { PopoverArrowStore } from "./PopoverArrow/store";
 
 type Data = Writable<ReturnType<
     typeof createPopoverActions> & 
-    Pick<ComponentProps<Popover>, 'placement'> & 
+    Pick<ComponentProps<Popover>, 'placement' | 'arrow'> & 
     {
         arrowStore: PopoverArrowStore
     }

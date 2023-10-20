@@ -1,6 +1,6 @@
 <script lang='ts'>
     import {Button} from "@cluue/base"
-    import { Popover, PopoverContent } from "@cluue/popover"
+    import { Popover } from "@cluue/popover"
 	import type { ComponentProps } from "svelte"
 
     const items:Array<ComponentProps<Popover> & {id:string}> = [
@@ -24,11 +24,9 @@
             placement: 'left'
         }
     ]
-    
 </script>
 
 <h2>Popover</h2>
-
 <ul class='popover-list'>
     {#each items as {id, ...item} (id)}
         <li>
@@ -56,8 +54,9 @@
         gap: 20px
         align-items: end
         :global(.CluePopoverContent)
+            --clue-popover-arrow-background-color: #fff
             padding: 10px
             border-radius: var(--clue-size-border-radius-2)
             background: var(--clue-color-white)
-            border: 1px solid var(--clue-color-gray-50)
+            filter: drop-shadow(0 0 20px var(--clue-color-gray-200))
 </style>
