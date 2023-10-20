@@ -1,5 +1,11 @@
 # @cluue/styles
 
+## 1.0.11
+
+### Patch Changes
+
+- Add the Tooltip and update styles
+
 ## 1.0.10
 
 ### Patch Changes

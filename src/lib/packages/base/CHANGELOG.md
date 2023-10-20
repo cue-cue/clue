@@ -1,5 +1,14 @@
 # @cluue/base
 
+## 1.0.18
+
+### Patch Changes
+
+- Add the Tooltip and update styles
+- Updated dependencies
+  - @cluue/icons@1.0.17
+  - @cluue/utils@1.0.12
+
 ## 1.0.17
 
 ### Patch Changes

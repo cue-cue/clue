@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/forms",
-	"version": "1.0.16",
+	"version": "1.0.17",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",

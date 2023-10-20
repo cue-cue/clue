@@ -1,5 +1,17 @@
 # @cluue/forms
 
+## 1.0.17
+
+### Patch Changes
+
+- Add the Tooltip and update styles
+- Updated dependencies
+  - @cluue/base@1.0.18
+  - @cluue/config@1.0.11
+  - @cluue/icons@1.0.17
+  - @cluue/popover@1.0.12
+  - @cluue/utils@1.0.12
+
 ## 1.0.16
 
 ### Patch Changes
