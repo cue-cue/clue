@@ -1,5 +1,11 @@
 # @cluue/styles
 
+## 1.0.12
+
+### Patch Changes
+
+- Add hsl values in a colors
+
 ## 1.0.11
 
 ### Patch Changes

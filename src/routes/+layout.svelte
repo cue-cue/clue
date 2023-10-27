@@ -88,7 +88,7 @@
 				$percent: math.div(500 - $value, 1000);
 				$colorResult: color.adjust($color, $lightness: math.percentage($percent));
 
-				$colorString: 'hsl(#{math.round(color.hue($colorResult))}, #{math.round(color.saturation($colorResult))}, #{math.round(color.lightness($colorResult))})';
+				$colorString: '#{math.round(color.hue($colorResult))}, #{math.round(color.saturation($colorResult))}, #{math.round(color.lightness($colorResult))}';
 				@return $colorString;
 			}
 
@@ -96,7 +96,9 @@
 				$root: '--clue-color-#{$name}';
 				$lightnessList: 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990;
 				@each $lightnessValue in $lightnessList {
-					$colorString: get-color-by-value($color, $lightnessValue);
+					$hslValue: get-color-by-value($color, $lightnessValue);
+					$colorString: 'hsl(#{$hslValue})';
+					#{$root}-#{$lightnessValue}-hsl: #{$hslValue};
 					#{$root}-#{$lightnessValue}: #{$colorString};
 				}
 				#{$root}: #{'var(#{$root}-500)'}
