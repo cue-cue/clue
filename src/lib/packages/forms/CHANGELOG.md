@@ -1,5 +1,13 @@
 # @cluue/forms
 
+## 1.0.19
+
+### Patch Changes
+
+- Updated dependencies
+  - @cluue/popover@1.0.14
+  - @cluue/base@1.0.19
+
 ## 1.0.18
 
 ### Patch Changes

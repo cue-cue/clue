@@ -9,8 +9,10 @@
 	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
 	import { createPopoverArrowStore } from '../PopoverArrow/store'
+	import { generateClassNames } from '$lib/packages/utils/src'
 		
 	interface $$Props {
+		class?:string
 		/**
 		 * @default 'top'
 		 */
@@ -36,6 +38,9 @@
 		 */
 		arrow?:boolean
 	}
+
+	let className = ''
+	export { className as class }
 	
 	export let placement:$$Props['placement'] = 'top'
 	export let offset:$$Props['offset'] = 5
@@ -208,7 +213,7 @@
 </script>
 
 <slot name='target' {targetAction} {update}>
-	<PopoverTarget>
+	<PopoverTarget class={generateClassNames([className])}>
 		<slot/>
 	</PopoverTarget>
 </slot>

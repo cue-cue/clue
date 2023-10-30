@@ -19,11 +19,11 @@
 	
 </script>
 
-<Popover {...$$restProps} {arrow}>
+<Popover {...$$restProps} {arrow} class={generateClassNames(['Tooltip', className])}>
 	<slot/>
 	<svelte:fragment slot='content-wrapper' let:open>
 		{#if open}
-			<TooltipContent {size} {theme} class={generateClassNames(['Tooltip', className])}>
+			<TooltipContent {size} {theme}>
 				<slot name='content'/>
 			</TooltipContent>
 		{/if}

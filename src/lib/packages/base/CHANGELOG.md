@@ -1,5 +1,11 @@
 # @cluue/base
 
+## 1.0.19
+
+### Patch Changes
+
+- className to target
+
 ## 1.0.18
 
 ### Patch Changes
