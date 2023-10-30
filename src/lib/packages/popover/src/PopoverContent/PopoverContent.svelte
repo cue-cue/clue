@@ -6,6 +6,7 @@
 	import { config } from '@cluue/config'
 	import type { ComputeConfig } from 'svelte-floating-ui'
 	import type { HTMLAttributes } from 'svelte/elements'
+	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement>, Partial<Record<`data-${string}`, string>> {
 		class?:string
@@ -54,7 +55,11 @@
 	{...$$restProps}
 >
 	<slot/>
-	<slot name='arrow'/>
+	<slot name='arrow'>
+		{#if $contextStore.arrow}
+			<PopoverArrow/>
+		{/if}
+	</slot>
 </div>
 
 <style lang='sass'>
