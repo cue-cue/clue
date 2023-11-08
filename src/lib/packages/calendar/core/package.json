@@ -1,0 +1,19 @@
+{
+	"name": "@cluue/calendar-core",
+	"version": "1.0.0",
+	"private": false,
+	"license": "MIT",
+	"main": "src/index.js",
+	"svelte": "src/index.js",
+	"types": "src/index.d.ts",
+	"type": "module",
+	"author": "Nikita Fedorov",
+	"dependencies": {
+		"dayjs": "^1.11.10",
+		"lodash.clonedeep": "^4.5.0",
+		"@cluue/calendar-utils": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/lodash.clonedeep": "^4.5.9"
+	}
+}
