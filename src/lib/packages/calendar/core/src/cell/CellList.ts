@@ -53,7 +53,7 @@ export class CellList {
                 start: Math.max(...cellPeriods.map(({end}) => end)),
                 end: 1440
             })
-            return startPeriod.check(cellDateTo) || endPeriod.check(cellDateTo)
+            return !(startPeriod.check(cellDateTo) || endPeriod.check(cellDateTo))
         })
     }
 
