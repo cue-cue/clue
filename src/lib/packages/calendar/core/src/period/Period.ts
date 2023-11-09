@@ -1,3 +1,5 @@
+import dayjs from 'dayjs'
+import { Disabled } from "../disabled";
 import { dateToDay, dateToDayNum, dayToDate } from "./utils";
 
 export type PeriodDay = Date | string | number
@@ -21,6 +23,13 @@ export class Period {
         this.end = end
     }
 
+    private getDisabledInstance = (date:Date) => {
+        return new Disabled({
+            from: dayjs(date).startOf('day').add(this.start, 'minutes').toDate(),
+            to: dayjs(date).startOf('day').add(this.end, 'minutes').toDate()
+        })
+    }
+
     private anyDayToNum = (day:PeriodDay) => {
         switch (typeof day) {
             case 'number': return day
@@ -34,8 +43,7 @@ export class Period {
     }
 
     checkTime(date:Date) {
-        const dateMinutes = date.getHours() * 60 + date.getMinutes()
-        return dateMinutes >= +this.start && dateMinutes <= +this.end
+        return this.getDisabledInstance(date).isDisabled(date)
     }
 
     check(date:Date) {

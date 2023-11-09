@@ -103,15 +103,15 @@ export class Calendar<T extends Block[] = Block[]> {
         const deadLine = this.isDeadLine(cellOrDate)
         const findDisabledListItem = (options?:Parameters<Disabled['isDisabled']>[1]) => this.disabled.find(d => d.isDisabled(cellOrDate, options))
         const disabledListItem = findDisabledListItem()
-        const workSchedulesDisabled = this.isPeriodDisabled(cellOrDate)
-        const disabled = deadLine || !!disabledListItem || workSchedulesDisabled
+        const periodDisabled = this.isPeriodDisabled(cellOrDate)
+        const disabled = deadLine || !!disabledListItem || periodDisabled
         return {
             disabled,
             deadLine,
             disabledListItem,
             findDisabledListItem,
             disabledList: !!disabledListItem,
-            workSchedulesDisabled
+            periodDisabled
         }
     }
 }

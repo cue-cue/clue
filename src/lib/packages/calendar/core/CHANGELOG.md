@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.9
+
+### Patch Changes
+
+- Upgrade Period check logic
+
 ## 1.0.8
 
 ### Patch Changes
