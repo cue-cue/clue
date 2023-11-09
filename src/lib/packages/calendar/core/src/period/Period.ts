@@ -1,21 +1,21 @@
 import dayjs from "dayjs";
 
 export interface IPeriodParams {
-    dates:Date[]
+    days:Date[]
     start:number
     end:number
 }
 
 export class Period {
-    dates
+    days
     start
     end
     constructor({
-        dates,
+        days,
         start,
         end
     }:IPeriodParams) {
-        this.dates = dates
+        this.days = days
         this.start = start
         this.end = end
     }
@@ -27,7 +27,7 @@ export class Period {
         date = new Date(date)
         const dateDay = this.dateToDayString(date)
         const dateMinutes = date.getHours() * 60 + date.getMinutes()
-        const isDay = this.dates.map(date => this.dateToDayString(date)).includes(dateDay)
+        const isDay = this.days.map(day => this.dateToDayString(day)).includes(dateDay)
         const isTime = dateMinutes >= +this.start && dateMinutes <= +this.end
         return isDay && isTime
     }
