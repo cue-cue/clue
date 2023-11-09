@@ -1,5 +1,6 @@
 import dayjs from "dayjs"
 import { Cell } from "."
+import { Period } from "../period"
 
 export class CellList {
     cells
@@ -7,17 +8,21 @@ export class CellList {
     start
     end
     date
+    periods
     constructor({
         step = 15,
         start =  0,
         end = 1440,
-        date
+        date,
+        periods = []
     }:{
         step?:number
         start?:number
         end?:number
         date:Date
+        periods?:Period[]
     }) {
+        this.periods = periods
         this.step = step
         this.start = start
         this.end = end - (end % this.step) //normalize by step
@@ -28,6 +33,27 @@ export class CellList {
     static sort(cells:Cell[]) {
         return cells.sort((a,b) => {
             return +a.from - +b.from
+        })
+    }
+
+    static cutByPeriods(cells:Cell[], periods:Period[]) {
+        if (!periods.length) return cells
+        return cells.filter(cell => {
+            const cellPeriods = periods.filter((period) => period.checkDay(cell.to))
+            const cellDateTo = new Date(+cell.to - 1)
+            
+            const startPeriod = new Period({
+                days: [cell.from],
+                start: 0,
+                end: Math.min(...cellPeriods.map(({start}) => start))
+            })
+
+            const endPeriod = new Period({
+                days: [cell.from],
+                start: Math.max(...cellPeriods.map(({end}) => end)),
+                end: 1440
+            })
+            return startPeriod.check(cellDateTo) || endPeriod.check(cellDateTo)
         })
     }
 
@@ -47,6 +73,6 @@ export class CellList {
         for (let i = this.start; i < this.end; i += this.step) {
             cells.push(this.genCell(i))
         }
-        return CellList.sort(cells)
+        return CellList.sort(CellList.cutByPeriods(cells, this.periods))
     }
 }

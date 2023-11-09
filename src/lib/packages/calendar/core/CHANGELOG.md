@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.7
+
+### Patch Changes
+
+- Feat cut method into CellList
+
 ## 1.0.6
 
 ### Patch Changes
