@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import { Disabled } from "../disabled";
 import { dateToDay, dateToDayNum, dayToDate } from "./utils";
+import type { Cell } from '../cell';
 
 export type PeriodDay = Date | string | number
 export interface IPeriodParams {
@@ -23,10 +24,10 @@ export class Period {
         this.end = end
     }
 
-    private getDisabledInstance = (date:Date) => {
+    private getDisabledInstance = (cellOrDate:Cell | Date) => {
         return new Disabled({
-            from: dayjs(date).startOf('day').add(this.start, 'minutes').toDate(),
-            to: dayjs(date).startOf('day').add(this.end, 'minutes').toDate()
+            from: cellOrDate instanceof Date ? cellOrDate : dayjs(cellOrDate.from).startOf('day').add(this.start, 'minutes').toDate(),
+            to: cellOrDate instanceof Date ? cellOrDate : dayjs(cellOrDate.to).startOf('day').add(this.end, 'minutes').toDate()
         })
     }
 
@@ -38,19 +39,24 @@ export class Period {
         }
     }
 
-    checkDay(date:Date) {
-        return this.days.map(day => this.anyDayToNum(day)).includes(this.anyDayToNum(date))
+    checkDay(cellOrDate:Cell | Date) {
+        const dayNumbers = this.days.map(day => this.anyDayToNum(day))
+        const check = (date:Date) => dayNumbers.includes(this.anyDayToNum(date))
+        if (cellOrDate instanceof Date) {
+            return check(cellOrDate)
+        }
+        return check(cellOrDate.from) || check(cellOrDate.to)
     }
 
-    checkTime(date:Date) {
-        return this.getDisabledInstance(date).isDisabled(date)
+    checkTime(cellOrDate:Cell | Date) {
+        return this.getDisabledInstance(cellOrDate).isDisabled(cellOrDate)
     }
 
-    check(date:Date) {
-        return this.checkDay(date) && this.checkTime(date)
+    check(cellOrDate:Cell | Date) {
+        return this.checkDay(cellOrDate) && this.checkTime(cellOrDate)
     }
     
-    checkMany(dates:Date[]) {
-        return dates.every(date => this.check(date))
+    checkMany(cellOrDate:(Cell | Date)[]) {
+        return cellOrDate.every(c => this.check(c))
     }
 }

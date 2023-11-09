@@ -57,12 +57,7 @@ export class Calendar<T extends Block[] = Block[]> {
 
     isPeriodDisabled(cellOrDate:ICellParams | Date) {
         if (this.periods && this.periods?.length) {
-            const isDate = cellOrDate instanceof Date
-            let dateTo = isDate ? cellOrDate : cellOrDate.to
-            dateTo = new Date(+dateTo - 1) //What? Надо для того, чтобы втягивать в себя крайние слоты справа
-            const periodFrom = this.periods.some(period => period.check(isDate ? dateTo : cellOrDate.from))
-            const periodTo = this.periods.some(period => period.check(dateTo))
-            return !periodFrom || !periodTo
+            return this.periods.some(period => period.check(cellOrDate))
         }
         return false
     }
