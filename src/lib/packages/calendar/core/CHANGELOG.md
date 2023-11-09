@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.4
+
+### Patch Changes
+
+- feat: any formats into days
+
 ## 1.0.3
 
 ### Patch Changes
