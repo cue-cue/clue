@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.6
+
+### Patch Changes
+
+- Add new methods in the Period
+
 ## 1.0.5
 
 ### Patch Changes

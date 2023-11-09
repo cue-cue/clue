@@ -29,17 +29,17 @@ export class Period {
         }
     }
 
-    check(date:Date) {
-        if (!date) return false
+    checkDay(date:Date) {
+        return this.days.map(day => this.anyDayToNum(day)).includes(this.anyDayToNum(date))
+    }
 
-        date = new Date(date)
-
-        const dateNum = this.anyDayToNum(date)
+    checkTime(date:Date) {
         const dateMinutes = date.getHours() * 60 + date.getMinutes()
-        const isDay = this.days.map(day => this.anyDayToNum(day)).includes(dateNum)
-        const isTime = dateMinutes >= +this.start && dateMinutes <= +this.end
+        return dateMinutes >= +this.start && dateMinutes <= +this.end
+    }
 
-        return isDay && isTime
+    check(date:Date) {
+        return this.checkDay(date) && this.checkTime(date)
     }
     
     checkMany(dates:Date[]) {

@@ -51,8 +51,8 @@ export class Calendar<T extends Block[] = Block[]> {
         return this.disabled = disabled.map(item => new Disabled(item))
     }
 
-    setPeriods(workSchedules:Calendar['periods']) {
-        return this.periods = workSchedules
+    setPeriods(periods:Calendar['periods']) {
+        return this.periods = periods
     }
 
     isPeriodDisabled(cellOrDate:ICellParams | Date) {
@@ -60,9 +60,9 @@ export class Calendar<T extends Block[] = Block[]> {
             const isDate = cellOrDate instanceof Date
             let dateTo = isDate ? cellOrDate : cellOrDate.to
             dateTo = new Date(+dateTo - 1) //What? Надо для того, чтобы втягивать в себя крайние слоты справа
-            const scheduleFrom = this.periods.some(schedule => schedule.check(isDate ? dateTo : cellOrDate.from))
-            const scheduleTo = this.periods.some(schedule => schedule.check(dateTo))
-            return !scheduleFrom || !scheduleTo
+            const periodFrom = this.periods.some(period => period.check(isDate ? dateTo : cellOrDate.from))
+            const periodTo = this.periods.some(period => period.check(dateTo))
+            return !periodFrom || !periodTo
         }
         return false
     }

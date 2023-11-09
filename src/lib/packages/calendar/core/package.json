@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/calendar-core",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
@@ -8,6 +8,9 @@
 	"types": "src/index.d.ts",
 	"type": "module",
 	"author": "Nikita Fedorov",
+	"scripts": {
+		"test": "jest"
+	},
 	"dependencies": {
 		"dayjs": "^1.11.10",
 		"lodash.clonedeep": "^4.5.0",
