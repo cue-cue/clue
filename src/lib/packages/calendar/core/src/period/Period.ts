@@ -1,6 +1,6 @@
 import { dateToDay, dateToDayNum, dayToDate } from "./utils";
 import type { Cell } from '../cell';
-import { getAllMinutesByDate } from '$lib/packages/calendar/utils/src';
+import { getAllMinutesByDate } from '@cluue/calendar-utils';
 
 export type PeriodDay = Date | string | number
 export interface IPeriodParams {

@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { getAllMinutesByDate } from "$lib/packages/calendar/utils/src";
+import { getAllMinutesByDate } from "@cluue/calendar-utils";
 import { CellList, type Cell } from "../cell";
 import type { Period } from "./Period";
 
