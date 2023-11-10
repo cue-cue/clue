@@ -157,6 +157,10 @@
 
 </script>
 
+<svelte:head>
+	<title>Clue</title>
+</svelte:head>
+
 <header bind:clientHeight={headerHeight}>
     <nav>
         <!-- {#each menuItems as button (button.href)}

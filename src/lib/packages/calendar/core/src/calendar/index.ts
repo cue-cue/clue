@@ -62,10 +62,7 @@ export class Calendar<T extends Block[] = Block[]> {
         return this.periods
     }
 
-    isPeriodDisabled(cellOrDate:ICellParams | Date, hard = true) {
-        if (hard) {
-            return this.#periodList.check(cellOrDate, this.step)
-        }
+    isPeriodDisabled(cellOrDate:ICellParams | Date) {
         return this.#periodList.isExclude(cellOrDate)
     }
 

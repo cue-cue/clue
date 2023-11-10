@@ -40,13 +40,23 @@ export class Period {
         return check(cellOrDate.from) || check(cellOrDate.to)
     }
 
-    isTimeDisabled(date:Date) {
-        const dateMinutes = getAllMinutesByDate(date)
+    isTimeExclude(time:Date) {
+        const dateMinutes = getAllMinutesByDate(time)
         return dateMinutes >= +this.start && dateMinutes <= +this.end
     }
 
+    isTimeInclude(time:Date) {
+        const dateMinutes = getAllMinutesByDate(time)
+        return this.start <= dateMinutes && this.end >= dateMinutes
+    }
+
+    isDateInclude(date:Date) {
+        if (!this.checkDay(date)) return false
+        return this.isTimeInclude(date)
+    }
+
     check(date: Date) {
-        const isTime = this.isTimeDisabled(date)
+        const isTime = this.isTimeExclude(date)
         if (!isTime) return false
 
         const isDay = this.checkDay(date)

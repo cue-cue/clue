@@ -74,11 +74,11 @@
 <Button on:click={onClick}>Test Calendar (console)</Button>
 
 <ul style="display: flex">
-    {#each [-1, 0, 1,2,3,4] as day}
+    {#each [-1,0,1,2,3,4,5] as day}
         {@const date = dayjs().startOf('day').add(day, 'day').toDate()}
         <li>
             <h5>{date.toDateString()}</h5>
-            <ul>
+            <ul style='list-style: none; padding: 0'>
                 {#each calendar.createCellList({
                     date
                 }).cells as cell}
