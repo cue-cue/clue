@@ -1,11 +1,12 @@
 import { Timezone } from '@cluue/calendar-utils'
-import type { Cell, ICellParams } from "../cell";
+import { CellList, type Cell, type ICellParams } from "../cell";
 import type { Block } from "../block";
 import { DisabledList, Disabled, type IDisabledParams } from "../disabled";
-import type { Period } from '../period';
+import { PeriodList, type Period } from '../period';
 
 interface ICalendarParams<T extends Block[] = Block[]> {
     disabled?:Parameters<Calendar['setDisabled']>[0]
+    step?:number
     deadLine?:'current'
     timezone?:string
     deadLineOptions?:{
@@ -18,21 +19,25 @@ interface ICalendarParams<T extends Block[] = Block[]> {
 }
 export class Calendar<T extends Block[] = Block[]> {
     disabled:Disabled[] = []
+    step
     timezone
     deadLine
     deadLineOptions
     periods!: Period[]
+    #periodList!: PeriodList
     blocks!: T
     #blocksDisabledList!: DisabledList<T>
 
     constructor({
         disabled = [],
+        step = 5,
         timezone,
         deadLine,
         deadLineOptions,
         periods = [],
         blocks,
     }:ICalendarParams<T> = {}) {
+        this.step = step
         this.deadLine = deadLine
         this.timezone = timezone
         this.deadLineOptions = deadLineOptions
@@ -52,14 +57,23 @@ export class Calendar<T extends Block[] = Block[]> {
     }
 
     setPeriods(periods:Calendar['periods']) {
-        return this.periods = periods
+        this.periods = periods
+        this.#periodList = new PeriodList(this.periods)
+        return this.periods
     }
 
-    isPeriodDisabled(cellOrDate:ICellParams | Date) {
-        if (this.periods && this.periods?.length) {
-            return this.periods.some(period => period.check(cellOrDate))
+    isPeriodDisabled(cellOrDate:ICellParams | Date, hard = true) {
+        if (hard) {
+            return this.#periodList.check(cellOrDate, this.step)
         }
-        return false
+        return this.#periodList.isExclude(cellOrDate)
+    }
+
+    createCellList(data:Omit<ConstructorParameters<typeof CellList>[0], 'step'>) {
+        return new CellList({
+            step: this.step,
+            ...data
+        })
     }
 
     getDeadLineDate() {

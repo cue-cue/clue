@@ -1,5 +1,13 @@
 # @cluue/calendar-core
 
+## 1.0.11
+
+### Patch Changes
+
+- Period upgrade
+- Updated dependencies
+  - @cluue/calendar-utils@1.0.3
+
 ## 1.0.10
 
 ### Patch Changes

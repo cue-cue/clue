@@ -40,6 +40,7 @@
 		"@cluue/popover": "workspace:*",
 		"@cluue/styles": "workspace:*",
 		"@cluue/utils": "workspace:*",
+		"dayjs": "^1.11.10",
 		"svelte-floating-ui": "^1.5.5"
 	},
 	"devDependencies": {

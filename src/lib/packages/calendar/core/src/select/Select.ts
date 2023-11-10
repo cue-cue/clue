@@ -112,6 +112,7 @@ export class Select {
     set(newSelected:Cell | undefined, options?:Parameters<Select['setMiddleware']>[1]) {
         this.selected = this.setMiddleware(newSelected, options)
         this.on?.set?.(this.selected)
+        return this.selected
     }
 
     pushMiddleware({from, to}:Partial<Cell>) {
@@ -122,7 +123,6 @@ export class Select {
         if (to && +new Date(to) > +newSelected.to) newSelected.to = to
 
         const isDisallow = from && to && (this.calendar.isDisabled(newSelected).disabled || this.calendar.isBlockDisabled(newSelected).result)
-
         if (isDisallow) return {from, to}
 
         return newSelected
@@ -132,9 +132,15 @@ export class Select {
         if (!this.selected) return
         const newSelected = this.pushMiddleware({from, to})
 
-        this.set(newSelected, {
+        const setResult = this.set(newSelected, {
             disableMinTimeLength: true
         })
+
+        if (!setResult && from && to) {
+            this.set({from,to}, {
+                disableMinTimeLength: true
+            })
+        }
     }
     
 

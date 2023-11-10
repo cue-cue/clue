@@ -1,7 +1,6 @@
-import dayjs from 'dayjs'
-import { Disabled } from "../disabled";
 import { dateToDay, dateToDayNum, dayToDate } from "./utils";
 import type { Cell } from '../cell';
+import { getAllMinutesByDate } from '$lib/packages/calendar/utils/src';
 
 export type PeriodDay = Date | string | number
 export interface IPeriodParams {
@@ -24,13 +23,6 @@ export class Period {
         this.end = end
     }
 
-    private getDisabledInstance = (cellOrDate:Cell | Date) => {
-        return new Disabled({
-            from: cellOrDate instanceof Date ? cellOrDate : dayjs(cellOrDate.from).startOf('day').add(this.start, 'minutes').toDate(),
-            to: cellOrDate instanceof Date ? cellOrDate : dayjs(cellOrDate.to).startOf('day').add(this.end, 'minutes').toDate()
-        })
-    }
-
     private anyDayToNum = (day:PeriodDay) => {
         switch (typeof day) {
             case 'number': return day
@@ -48,15 +40,21 @@ export class Period {
         return check(cellOrDate.from) || check(cellOrDate.to)
     }
 
-    checkTime(cellOrDate:Cell | Date) {
-        return this.getDisabledInstance(cellOrDate).isDisabled(cellOrDate)
+    isTimeDisabled(date:Date) {
+        const dateMinutes = getAllMinutesByDate(date)
+        return dateMinutes >= +this.start && dateMinutes <= +this.end
     }
 
-    check(cellOrDate:Cell | Date) {
-        return this.checkDay(cellOrDate) && this.checkTime(cellOrDate)
+    check(date: Date) {
+        const isTime = this.isTimeDisabled(date)
+        if (!isTime) return false
+
+        const isDay = this.checkDay(date)
+
+        return isDay && isTime
     }
     
-    checkMany(cellOrDate:(Cell | Date)[]) {
-        return cellOrDate.every(c => this.check(c))
+    checkMany(dates:Date[]) {
+        return dates.every(date => this.check(date))
     }
 }

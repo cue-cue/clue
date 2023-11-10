@@ -11,6 +11,8 @@
     import selectIcon from '@cluue/icons/line/note-list-square.svg?clue'
     import popoverIcon from '@cluue/icons/line/chat-heart.svg?clue'
     import tooltipIcon from '@cluue/icons/line/user-tag.svg?clue'
+    import calendarIcon from '@cluue/icons/line/calendar.svg?clue'
+    import calendarCoreIcon from '@cluue/icons/line/calendar-heart.svg?clue'
     import {page} from '$app/stores'
 	import type { ComponentProps } from "svelte";
     import { onMount } from "svelte"
@@ -74,7 +76,18 @@
             name: 'Popover',
             href: '/package/popover',
             startIcon: popoverIcon
-        }
+        },
+		{
+			name: 'Calendar',
+			startIcon: calendarIcon,
+			pages: [
+				{
+					name: 'Core',
+					href: '/package/calendar/core',
+					startIcon: calendarCoreIcon
+				}
+			]
+		}
 	]
 
 

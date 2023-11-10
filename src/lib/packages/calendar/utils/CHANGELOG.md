@@ -1,5 +1,11 @@
 # @cluue/calendar-utils
 
+## 1.0.3
+
+### Patch Changes
+
+- Period upgrade
+
 ## 1.0.2
 
 ### Patch Changes
