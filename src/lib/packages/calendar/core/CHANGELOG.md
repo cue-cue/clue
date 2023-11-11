@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.16
+
+### Patch Changes
+
+- Fix problem
+
 ## 1.0.15
 
 ### Patch Changes

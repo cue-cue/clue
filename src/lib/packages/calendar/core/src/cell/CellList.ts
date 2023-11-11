@@ -26,7 +26,7 @@ export class CellList {
         this.step = step
         this.start = start
         this.end = end - (end % this.step) //normalize by step
-        this.date = dayjs(date).startOf('day')
+        this.date = dayjs(date).startOf('day').toDate()
         this.cells = this.genCells()
     }
 
