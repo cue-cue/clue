@@ -38,11 +38,20 @@ export class CellList {
 
     static cutByPeriods(cells:Cell[], periods:Period[]) {
         if (!periods.length) return cells
-        return cells.filter(cell => {
-            const cellDateTo = new Date(+cell.to - 1)
-            const {end, start} = new PeriodList(periods).getSides([cell.to])
 
-            return !(start.isExclude(cellDateTo) || end.isExclude(cellDateTo))
+        const sidesMap = new Map<number, ReturnType<PeriodList['getSides']>>()
+
+        return cells.filter(cell => {
+            const cellDay = dayjs(cell.from).startOf('day').toDate()
+            const sideFromMap = sidesMap.get(+cellDay)
+
+            const {start, end} = sideFromMap ?? new PeriodList(periods).getSides([cellDay])
+
+            if (!sideFromMap) {
+                sidesMap.set(+cellDay, {start, end})
+            }
+
+            return !(start.isCellInclude(cell) || end.isCellInclude(cell))
         })
     }
 

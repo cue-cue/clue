@@ -76,6 +76,7 @@ export class Calendar<T extends Block[] = Block[]> {
 
     getDeadLineDate() {
         let date = new Date()
+        
         if (this.timezone) {
             date = new Timezone(date, this.timezone).apply()
         }

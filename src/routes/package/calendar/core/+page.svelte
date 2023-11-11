@@ -34,15 +34,48 @@
         }),
     ]
 
+    const platformPeriods:Period[] = [
+        {
+            "days": [
+                "Sa"
+            ],
+            "start": 480,
+            "end": 1080
+        },
+        {
+            "days": [
+                "Fr"
+            ],
+            "start": 900,
+            "end": 1425
+        },
+        {
+            "days": [
+                "Th",
+                "We"
+            ],
+            "start": 195,
+            "end": 1260
+        },
+        {
+            "days": [
+                "Mo",
+                "Tu"
+            ],
+            "start": 90,
+            "end": 1380
+        }
+    ].map(data => new Period(data))
+
     const calendar = new Calendar({
         step: 30,
-        periods,
-        disabled: [
-            new Disabled({
-                from: dayjs().startOf('day').add(23.5, 'hours').toDate(),
-                to: dayjs().startOf('day').add(24, 'hours').toDate()
-            })
-        ]
+        periods: platformPeriods,
+        // disabled: [
+        //     new Disabled({
+        //         from: dayjs().startOf('day').add(23.5, 'hours').toDate(),
+        //         to: dayjs().startOf('day').add(24, 'hours').toDate()
+        //     })
+        // ]
     })
 
     const select = new Select({
@@ -102,4 +135,4 @@
 </ul>
 
 <h5>periods</h5>
-<pre>{JSON.stringify(periods, null, 2)}</pre>
+<pre>{JSON.stringify(calendar.periods, null, 2)}</pre>

@@ -46,6 +46,7 @@ export class Period {
     }
 
     isTimeInclude(time:Date) {
+        if (this.start === this.end) return false
         const dateMinutes = getAllMinutesByDate(time)
         return this.start <= dateMinutes && this.end >= dateMinutes
     }
@@ -53,6 +54,10 @@ export class Period {
     isDateInclude(date:Date) {
         if (!this.checkDay(date)) return false
         return this.isTimeInclude(date)
+    }
+
+    isCellInclude(cell:Cell) {
+        return this.isDateInclude(cell.from) || this.isDateInclude(new Date(+cell.to - 1))
     }
 
     isExclude(date: Date) {
