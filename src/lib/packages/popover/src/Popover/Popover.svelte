@@ -9,7 +9,7 @@
 	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
 	import { createPopoverArrowStore } from '../PopoverArrow/store'
-	import { generateClassNames } from '$lib/packages/utils/src'
+	import { generateClassNames } from '@cluue/utils'
 		
 	interface $$Props {
 		class?:string

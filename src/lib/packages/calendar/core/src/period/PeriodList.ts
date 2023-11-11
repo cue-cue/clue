@@ -1,6 +1,6 @@
 import { getDatesBetweenRange } from "@cluue/calendar-utils";
-import type { Cell } from "../cell";
-import { Period } from "./Period";
+import type { Cell } from "../cell/index.js";
+import { Period } from "./Period.js";
 
 export class PeriodList {
     items

@@ -10,6 +10,9 @@ const config = {
 			return `clue-${t.hash(t.css + t.name + t.filename)}`
 		},
 	},
+	vitePlugin: {
+		prebundleSvelteLibraries: true
+	},
 	preprocess: [
 		vitePreprocess()
 	],

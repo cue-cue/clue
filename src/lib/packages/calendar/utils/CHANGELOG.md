@@ -1,5 +1,11 @@
 # @cluue/calendar-utils
 
+## 1.0.5
+
+### Patch Changes
+
+- Upgrade perfomance
+
 ## 1.0.4
 
 ### Patch Changes

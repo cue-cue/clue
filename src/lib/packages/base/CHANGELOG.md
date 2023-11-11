@@ -1,5 +1,11 @@
 # @cluue/base
 
+## 1.0.20
+
+### Patch Changes
+
+- Upgrade perfomance
+
 ## 1.0.19
 
 ### Patch Changes

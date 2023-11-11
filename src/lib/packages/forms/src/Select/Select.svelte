@@ -4,7 +4,7 @@
 	KeyGeneric extends KeyGenericType = 'id',
 	MultipleGeneric extends MultipleGenericType = false
 ">
-	import PopoverContent from '$lib/packages/popover/src/PopoverContent/PopoverContent.svelte'
+	import {PopoverContent} from '@cluue/popover'
 
 	import { getOptionValueKey } from './utils.js'
 

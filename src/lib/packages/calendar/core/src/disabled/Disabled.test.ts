@@ -1,5 +1,5 @@
 import dayjs from "dayjs"
-import { Disabled, type IDisabledParams } from "./Disabled"
+import { Disabled, type IDisabledParams } from "./Disabled.js"
 
 describe('Disabled.parseInclude', () => {
     test('[]', () => {

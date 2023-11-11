@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import Popover from '$lib/packages/popover/src/Popover/Popover.svelte'
+	import {Popover} from '@cluue/popover'
 	import {generateClassNames} from '@cluue/utils'
 	import TooltipContent from './TooltipContent.svelte'
 	import type { ComponentProps } from 'svelte'

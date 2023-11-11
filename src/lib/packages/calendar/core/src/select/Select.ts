@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { Calendar } from '../calendar'
-import type { Cell } from '../cell'
+import type { Calendar } from '../calendar/index.js'
+import type { Cell } from '../cell/index.js'
 import dayjs from 'dayjs'
-import { PeriodList } from '../period'
 
 interface ISelectOptions {
     allowBetweenDays?:boolean

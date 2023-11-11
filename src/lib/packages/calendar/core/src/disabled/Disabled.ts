@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
-import type { Cell } from "../cell"
+import type { Cell } from "../cell/index.js"
 
 export interface IDisabledParams extends Partial<Pick<Cell, 'from' | 'to'>> {
     include?:Disabled['include']

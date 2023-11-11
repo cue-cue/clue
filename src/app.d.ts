@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { OutclickEvent } from "$lib/packages/utils/src/actions/outclick.ts";
+import type { OutclickEvent } from "@cluue/utils";
 
 // for information about these interfaces
 declare global {

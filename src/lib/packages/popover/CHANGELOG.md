@@ -1,5 +1,11 @@
 # @cluue/popover
 
+## 1.0.15
+
+### Patch Changes
+
+- Upgrade perfomance
+
 ## 1.0.14
 
 ### Patch Changes

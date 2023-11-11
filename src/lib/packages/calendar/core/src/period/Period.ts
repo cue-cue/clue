@@ -1,5 +1,5 @@
-import { dateToDay, dateToDayNum, dayToDate } from "./utils";
-import type { Cell } from '../cell';
+import { dateToDay, dateToDayNum, dayToDate } from "./utils.js";
+import type { Cell } from '../cell/index.js';
 import { getAllMinutesByDate } from '@cluue/calendar-utils';
 
 export type PeriodDay = Date | string | number

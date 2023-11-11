@@ -1,5 +1,5 @@
 import cloneDeep from 'lodash.clonedeep'
-import { Cell, CellList } from "../cell";
+import { Cell, CellList } from "../cell/index.js";
 
 export interface IBlockParams extends Cell {
     drift?: {

@@ -1,2 +1,2 @@
-export * from './Period'
-export * from './PeriodList'
+export * from './Period.js'
+export * from './PeriodList.js'

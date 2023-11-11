@@ -1,3 +1,3 @@
-export * from './Timezone'
-export * from './getAllMinutesByDate'
-export * from './getDatesBetweenRange'
+export * from './Timezone/index.js'
+export * from './getAllMinutesByDate/index.js'
+export * from './getDatesBetweenRange/index.js'

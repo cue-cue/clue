@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/calendar-utils",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
@@ -10,5 +10,12 @@
 	"author": "Nikita Fedorov",
 	"dependencies": {
 		"dayjs": "^1.11.10"
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.js",
+			"svelte": "./src/index.js",
+			"types": "./src/index.d.ts"
+		}
 	}
 }

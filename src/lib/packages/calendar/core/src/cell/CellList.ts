@@ -1,6 +1,6 @@
 import dayjs from "dayjs"
-import { Cell } from "."
-import { Period, PeriodList } from "../period"
+import { Cell } from "./Cell.js"
+import { Period, PeriodList } from "../period/index.js"
 
 export class CellList {
     cells

@@ -1,2 +1,2 @@
-export * from './Disabled'
-export * from './DisabledList'
+export * from './Disabled.js'
+export * from './DisabledList.js'

@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import {generateClassNames, randomId} from '@cluue/utils'
+    import {generateClassNames, randomId, actionList, type ActionListParams } from '@cluue/utils'
 	import TextFieldBase from './TextFieldBase.svelte';
 	import TextFieldHelper from './TextFieldHelper.svelte';
     import TextFieldHeader from './TextFieldHeader.svelte'
@@ -9,7 +9,6 @@
 	import { context } from './context.js';
 	import { writable } from 'svelte/store';
 	import TextFieldHint from './TextFieldHint.svelte';
-	import { actionList, type ActionListParams } from '$lib/packages/utils/src/actions/actionList'
 
     interface $$Props extends Omit<ComponentProps<TextFieldBase>, 'slots'> {
         class?:string

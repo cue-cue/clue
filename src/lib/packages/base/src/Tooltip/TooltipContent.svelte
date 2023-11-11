@@ -1,6 +1,5 @@
 <script lang='ts'>
-	import PopoverArrow from "$lib/packages/popover/src/PopoverArrow/PopoverArrow.svelte"
-    import PopoverContent from "$lib/packages/popover/src/PopoverContent/PopoverContent.svelte"
+	import {PopoverArrow, PopoverContent} from "@cluue/popover"
 
     interface $$Props {
         class?:string

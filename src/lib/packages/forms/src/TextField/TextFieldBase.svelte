@@ -1,11 +1,10 @@
 <script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
+	import {generateClassNames, actionList, type ActionListParams} from '@cluue/utils'
 	import Input from '../Input/Input.svelte';
 	import type { ComponentProps } from 'svelte';
 	import { context, textFieldBaseContext } from './context.js';
 	import { writable } from 'svelte/store';
 	import TextFieldButtons from './TextFieldButtons.svelte';
-	import { actionList, type ActionListParams } from '$lib/packages/utils/src/actions/actionList.js'
 
 	type InputTypes = Extract<ComponentProps<Input>['type'], 'password' | 'email' | 'text' | 'url' | 'tel'>
 

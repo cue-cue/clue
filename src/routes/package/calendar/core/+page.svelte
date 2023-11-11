@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import { Cell, Select, Period, Disabled, Calendar } from "$lib/packages/calendar/core/src"
-	import { getAllMinutesByDate } from "$lib/packages/calendar/utils/src"
+	import { Period, Calendar, Disabled, Select, Cell } from "@cluue/calendar-core"
+	import { getAllMinutesByDate } from "@cluue/calendar-utils"
 	import {Button} from "@cluue/base"
     import dayjs from 'dayjs'
     
