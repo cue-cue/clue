@@ -55,7 +55,7 @@ export class Period {
         return this.isTimeInclude(date)
     }
 
-    check(date: Date) {
+    isExclude(date: Date) {
         const isTime = this.isTimeExclude(date)
         if (!isTime) return false
 
@@ -64,7 +64,7 @@ export class Period {
         return isDay && isTime
     }
     
-    checkMany(dates:Date[]) {
-        return dates.every(date => this.check(date))
+    isExcludeMany(dates:Date[]) {
+        return dates.every(date => this.isExclude(date))
     }
 }

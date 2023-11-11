@@ -69,6 +69,7 @@ export class Calendar<T extends Block[] = Block[]> {
     createCellList(data:Omit<ConstructorParameters<typeof CellList>[0], 'step'>) {
         return new CellList({
             step: this.step,
+            periods: this.periods,
             ...data
         })
     }

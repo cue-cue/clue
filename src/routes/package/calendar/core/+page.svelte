@@ -1,39 +1,42 @@
 <script lang='ts'>
-	import { Cell, CellList, Select, Block, Period, Disabled, Calendar } from "$lib/packages/calendar/core/src"
+	import { Cell, Select, Period, Disabled, Calendar } from "$lib/packages/calendar/core/src"
+	import { getAllMinutesByDate } from "$lib/packages/calendar/utils/src"
 	import {Button} from "@cluue/base"
     import dayjs from 'dayjs'
     
     let selected:any = undefined
 
+    const periods:Period[] = [
+        new Period({
+            days: [0,1,2,3],
+            start: 30 * 5,
+            end: 30 * 12
+        }),
+        new Period({
+            days: [0,1,2,3],
+            start: 30 * 18,
+            end: 30 * 30
+        }),
+        new Period({
+            days: [4],
+            start: 0,
+            end: 1440
+        }),
+        new Period({
+            days: [5],
+            start: 0,
+            end: 600
+        }),
+        new Period({
+            days: [5],
+            start: 1200,
+            end: 1440
+        }),
+    ]
+
     const calendar = new Calendar({
         step: 30,
-        periods: [
-            new Period({
-                days: [0,1,2,3],
-                start: 30 * 5,
-                end: 30 * 12
-            }),
-            new Period({
-                days: [0,1,2,3],
-                start: 30 * 18,
-                end: 30 * 30
-            }),
-            new Period({
-                days: [4],
-                start: 0,
-                end: 1440
-            }),
-            new Period({
-                days: [5],
-                start: 0,
-                end: 600
-            }),
-            new Period({
-                days: [5],
-                start: 1200,
-                end: 1440
-            })
-        ],
+        periods,
         disabled: [
             new Disabled({
                 from: dayjs().startOf('day').add(23.5, 'hours').toDate(),
@@ -89,7 +92,7 @@
                             type={selected && select.check(cell) ? 'primary' : 'ghost'}
                             disabled={calendar.isDisabled(cell).disabled}
                         >
-                            {dayjs(cell.from).format('HH:mm')} - {dayjs(cell.to).format('HH:mm')}
+                            <small>{getAllMinutesByDate(cell.from)}</small> {dayjs(cell.from).format('HH:mm')} - <small>{getAllMinutesByDate(cell.to)}</small> {dayjs(cell.to).format('HH:mm')}
                         </Button>
                     </li>
                 {/each}
@@ -97,3 +100,6 @@
         </li>
     {/each}
 </ul>
+
+<h5>periods</h5>
+<pre>{JSON.stringify(periods, null, 2)}</pre>

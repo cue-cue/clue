@@ -1,11 +1,32 @@
 import { getDatesBetweenRange } from "@cluue/calendar-utils";
 import type { Cell } from "../cell";
-import type { Period } from "./Period";
+import { Period } from "./Period";
 
 export class PeriodList {
     items
     constructor(items:Period[]) {
         this.items = items
+    }
+
+    getSides(days:Date[]) {
+        const periods = this.items.filter((period) => days.findIndex(day => period.checkDay(day)) !== -1)
+        
+        const start = new Period({
+            days,
+            start: 0,
+            end: Math.min(...periods.map(({start}) => start))
+        })
+
+        const end = new Period({
+            days,
+            start: Math.max(...periods.map(({end}) => end)),
+            end: 1440
+        })
+
+        return {
+            start,
+            end
+        }
     }
 
     findExcludeInRange(cell:Cell) {
@@ -36,6 +57,7 @@ export class PeriodList {
             this.items.forEach(period => {
                 const isDate = period.checkDay(date)
                 const isInclude = period.isDateInclude(cell.from) || period.isDateInclude(cell.to)
+
                 if (isDate && isInclude) {
                     periods.push(period)
                 }
@@ -61,9 +83,12 @@ export class PeriodList {
         if (this.items && this.items?.length) {
             const isDate = cellOrDate instanceof Date
             let dateTo = isDate ? cellOrDate : cellOrDate.to
+
             dateTo = new Date(+dateTo - 1) //What? Надо для того, чтобы втягивать в себя крайние слоты справа
-            const periodFrom = this.items.some(period => period.check(isDate ? dateTo : cellOrDate.from))
-            const periodTo = this.items.some(period => period.check(dateTo))
+
+            const periodFrom = this.items.some(period => period.isExclude(isDate ? dateTo : cellOrDate.from))
+            const periodTo = this.items.some(period => period.isExclude(dateTo))
+
             return !periodFrom || !periodTo
         }
         return false
@@ -71,6 +96,7 @@ export class PeriodList {
 
     isExcludeCell(cell:Cell) { //Сложная версия для проверки. Подходят для больших и маленьких слотов (Для маленьких лучше использовать isExcludeLite)
         if (this.isExcludeLite(cell)) return true
+
         return this.findExcludeInRange(cell)
     }
 

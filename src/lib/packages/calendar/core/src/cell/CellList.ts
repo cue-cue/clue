@@ -1,6 +1,6 @@
 import dayjs from "dayjs"
 import { Cell } from "."
-import { Period } from "../period"
+import { Period, PeriodList } from "../period"
 
 export class CellList {
     cells
@@ -39,21 +39,10 @@ export class CellList {
     static cutByPeriods(cells:Cell[], periods:Period[]) {
         if (!periods.length) return cells
         return cells.filter(cell => {
-            const cellPeriods = periods.filter((period) => period.checkDay(cell.to))
             const cellDateTo = new Date(+cell.to - 1)
-            
-            const startPeriod = new Period({
-                days: [cell.from],
-                start: 0,
-                end: Math.min(...cellPeriods.map(({start}) => start))
-            })
+            const {end, start} = new PeriodList(periods).getSides([cell.to])
 
-            const endPeriod = new Period({
-                days: [cell.from],
-                start: Math.max(...cellPeriods.map(({end}) => end)),
-                end: 1440
-            })
-            return !(startPeriod.check(cellDateTo) || endPeriod.check(cellDateTo))
+            return !(start.isExclude(cellDateTo) || end.isExclude(cellDateTo))
         })
     }
 
