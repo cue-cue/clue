@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
-import cloneDeep from 'lodash.clonedeep'
-import { Cell, CellList } from "../cell/index.js";
+import { Cell } from "../cell/index.js";
+import { addToCellList } from './utils.js';
 
 export interface IBlockParams extends Cell {
     drift?: {
@@ -16,41 +16,7 @@ export class Block extends Cell {
         this.drift = this.createDrift(drift)
         
     }
-    static addToCellList(eventCells:Block[], cellList:Cell[]):Array<typeof eventCells[number] | typeof cellList[number]> {
-        const replacedEvents:typeof eventCells = []
-
-        const cellListDates = {
-            min: new Date(Math.min(...cellList.map(({from}) => +from))),
-            max: new Date(Math.max(...cellList.map(({to}) => +to))),
-        }
-
-        const normalizedEventCells = eventCells.map(eventCell => {
-            const clone = cloneDeep(eventCell)
-            if (+clone.from < +cellListDates.min) {
-                clone.from = cellListDates.min
-            }
-            if (+clone.to > +cellListDates.max) {
-                clone.to = cellListDates.max
-            }
-            return clone
-        })
-
-        const result = cellList.filter(cell => {
-            const event = normalizedEventCells.find(event => {
-                return +cell.from >= +event.from && +cell.to <= +event.to
-            })
-
-            if (event) {
-                if (replacedEvents.findIndex(replacedEvent => replacedEvent === event) === -1) {
-                    replacedEvents.push(event)
-                }
-            }
-
-            return !event
-        })
-
-        return CellList.sort([...result, ...replacedEvents])
-    }
+    static addToCellList = addToCellList
 
     private createDrift(driftData:IBlockParams['drift']) {
         const {before, after} = driftData || {}
