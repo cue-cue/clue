@@ -1,10 +1,11 @@
+import dayjs from 'dayjs'
 import cloneDeep from 'lodash.clonedeep'
 import { Cell, CellList } from "../cell/index.js";
 
 export interface IBlockParams extends Cell {
     drift?: {
-        before?: Date,
-        after?: Date
+        before?: Date | number,
+        after?: Date | number
     }
 }
 
@@ -53,9 +54,13 @@ export class Block extends Cell {
 
     private createDrift(driftData:IBlockParams['drift']) {
         const {before, after} = driftData || {}
+
+        const beforeDate = before ? before instanceof Date ? before : dayjs(this.from).add(-before, 'minutes').toDate() : undefined
+        const afterDate = after ? after instanceof Date ? after : dayjs(this.to).add(after, 'minutes').toDate() : undefined
+        
         return {
-            before: before && new Cell({from: before, to: this.from}),
-            after: after && new Cell({from: this.to, to: after})
+            before: beforeDate && new Cell({from: beforeDate, to: this.from}),
+            after: afterDate && new Cell({from: this.to, to: afterDate})
         }
     }
     
