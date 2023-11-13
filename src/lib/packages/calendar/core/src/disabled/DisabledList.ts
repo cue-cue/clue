@@ -1,7 +1,7 @@
 import type{ Cell } from "../cell/index.js";
 import { Disabled } from "./Disabled.js";
 
-export class DisabledList<T extends Cell[]> {
+export class DisabledList<T extends Cell[] = Cell[]> {
     list
     items
 

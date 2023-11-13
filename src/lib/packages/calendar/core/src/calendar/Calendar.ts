@@ -26,7 +26,7 @@ export class Calendar<T extends Block[] = Block[]> {
     periods!: Period[]
     #periodList!: PeriodList
     blocks!: T
-    #blocksDisabledList!: DisabledList<T>
+    #blocksDisabledList!: DisabledList
 
     constructor({
         disabled = [],
@@ -48,7 +48,7 @@ export class Calendar<T extends Block[] = Block[]> {
 
     setBlocks(blocks:ICalendarParams<T>['blocks']) {
         this.blocks = blocks || ([] as unknown as T)
-        this.#blocksDisabledList = new DisabledList(this.blocks)
+        this.#blocksDisabledList = new DisabledList(this.blocks.map(block => block.getDatesWithDrift()))
         return this.blocks
     }
 

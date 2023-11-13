@@ -30,10 +30,10 @@ export class Block extends Cell {
         }
     }
     
-    getDatesWithDrift() {
+    getDatesWithDrift():Cell {
         let {from, to} = this
 
-        if (!this.drift) return
+        if (!this.drift) return this
 
         if (this.drift.before && +from > +this.drift.before.from) {
             from = new Date(+this.drift.before)
