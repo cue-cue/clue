@@ -1,7 +1,7 @@
 import { Timezone } from '@cluue/calendar-utils'
 import { CellList, type Cell, type ICellParams } from "../cell/index.js";
 import type { Block } from "../block/index.js";
-import { DisabledList, Disabled, type IDisabledParams } from "../disabled/index.js";
+import { DisabledList, Disabled } from "../disabled/index.js";
 import { PeriodList, type Period } from '../period/index.js';
 
 interface ICalendarParams<T extends Block[] = Block[]> {
@@ -19,6 +19,7 @@ interface ICalendarParams<T extends Block[] = Block[]> {
 }
 export class Calendar<T extends Block[] = Block[]> {
     disabled:Disabled[] = []
+    #disabledList!:DisabledList<Disabled[]>
     step
     timezone
     deadLine
@@ -52,8 +53,11 @@ export class Calendar<T extends Block[] = Block[]> {
         return this.blocks
     }
 
-    setDisabled(disabled:IDisabledParams[]) {
-        return this.disabled = disabled.map(item => new Disabled(item))
+    setDisabled(disabled:Disabled[]) {
+        this.disabled = disabled
+        this.#disabledList = new DisabledList(this.disabled)
+
+        return this.disabled
     }
 
     setPeriods(periods:Calendar['periods']) {
@@ -109,16 +113,29 @@ export class Calendar<T extends Block[] = Block[]> {
     
     isDisabled(cellOrDate:Parameters<Disabled['isDisabled']>[0]) {
         const deadLine = this.isDeadLine(cellOrDate)
-        const findDisabledListItem = (options?:Parameters<Disabled['isDisabled']>[1]) => this.disabled.find(d => d.isDisabled(cellOrDate, options))
-        const disabledListItem = findDisabledListItem()
+
+        const disabledListResult = this.#disabledList.isDisabled(cellOrDate)
+        const findDisabledListItem = disabledListResult.findItem
+        const disabledListItem = disabledListResult.item
+
+        const blockResult = this.#blocksDisabledList.isDisabled(cellOrDate)
+        const findBlockItem = blockResult.findItem
+        const blockItem = blockResult.item
+
         const periodDisabled = this.isPeriodDisabled(cellOrDate)
-        const disabled = deadLine || !!disabledListItem || periodDisabled
+        const disabled = deadLine || disabledListResult.result || periodDisabled || blockResult.result
         return {
             disabled,
             deadLine,
+
             disabledListItem,
             findDisabledListItem,
-            disabledList: !!disabledListItem,
+            disabledList: disabledListResult.result,
+
+            findBlockItem,
+            blockItem,
+            block: blockResult.result,
+
             periodDisabled
         }
     }

@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.21
+
+### Patch Changes
+
+- Upgrade isDisabled method in Calendar
+
 ## 1.0.20
 
 ### Patch Changes

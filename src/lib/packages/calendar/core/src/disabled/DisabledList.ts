@@ -1,7 +1,7 @@
 import type{ Cell } from "../cell/index.js";
 import { Disabled } from "./Disabled.js";
 
-export class DisabledList<T extends Cell[] = Cell[]> {
+export class DisabledList<T extends (Cell | Disabled)[] = Cell[]> {
     list
     items
 
@@ -14,13 +14,13 @@ export class DisabledList<T extends Cell[] = Cell[]> {
         return items.map(item => {
             return {
                 item,
-                disabled: new Disabled(item)
+                disabled: item instanceof Disabled ? item : new Disabled(item)
             }
         })
     }
 
     isDisabled(cellOrDate:Parameters<Disabled['isDisabled']>[0]) {
-        const findItem = () => this.list.find(({disabled}) => disabled.isDisabled(cellOrDate))
+        const findItem = (options?:Parameters<Disabled['isDisabled']>[1]) => this.list.find(({disabled}) => disabled.isDisabled(cellOrDate, options))
         const {item} = findItem() || {}
         return {
             result: !!item,
