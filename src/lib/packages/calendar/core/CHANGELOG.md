@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.19
+
+### Patch Changes
+
+- Upgrade Period. Moved to vitest. Upgrade a drift in Period
+
 ## 1.0.18
 
 ### Patch Changes

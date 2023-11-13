@@ -1,6 +1,7 @@
 import dayjs from "dayjs"
 import { Cell } from "./Cell.js"
-import { Period, PeriodList } from "../period/index.js"
+import { type Period, PeriodList } from "../period/index.js"
+import { sortCells } from "./utils.js"
 
 export class CellList {
     cells
@@ -30,11 +31,7 @@ export class CellList {
         this.cells = this.genCells()
     }
 
-    static sort(cells:Cell[]) {
-        return cells.sort((a,b) => {
-            return +a.from - +b.from
-        })
-    }
+    static sort = sortCells
 
     static cutByPeriods(cells:Cell[], periods:Period[]) {
         if (!periods.length) return cells

@@ -1,15 +1,15 @@
-export interface ICellParams<T extends Date = Date> {
-    from:T
-    to:T
+export interface ICellParams{
+    from:Date
+    to:Date
 }
 
-export class Cell<T extends Date = Date> {
+export class Cell {
     from
     to
     constructor({
         from,
         to
-    }:ICellParams<T>) {
+    }:ICellParams) {
         this.from = from
         this.to = to
     }

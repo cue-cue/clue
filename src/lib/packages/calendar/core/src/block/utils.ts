@@ -1,36 +1,21 @@
 import cloneDeep from "lodash.clonedeep";
-import { Cell, CellList } from "../cell";
-import type { Block } from "./Block";
-import { DisabledList } from "../disabled";
+import type { Cell } from "../cell/index.js";
+import type { Block } from "./Block.js";
+import { DisabledList } from "../disabled/index.js";
+import { mergeCells } from "../cell/utils.js";
 
-export const addToCellList = (blocks:Block[], cellList:Cell[]) => {
-    const cellListDates = {
-        min: new Date(Math.min(...cellList.map(({ from }) => +from))),
-        max: new Date(Math.max(...cellList.map(({ to }) => +to))),
-    };
+export type AddToCellList = <T extends Block[], U extends Cell[]>(blocks:T, cells:U, options?:{
+    driftReplacer: (data:{
+        cell:Cell,
+    }) => Cell
+}) => Array<T[number] | U[number]>
 
-    const cutSides = (cell:Cell) => {
-        const clone = cloneDeep(cell)
-        if (+clone.from < +cellListDates.min) {
-            clone.from = cellListDates.min;
-        }
-        if (+clone.to > +cellListDates.max) {
-            clone.to = cellListDates.max;
-        }
-        return clone
-    }
+export const addToCellList:AddToCellList = (blocks, cells, options) => {
+    const blocksDisabledList = new DisabledList(blocks)
 
-    const normalizedBlocks = blocks.map(block => {
-        return cutSides(block);
-    });
-
-    const blocksDisabledList = new DisabledList(normalizedBlocks)
-
-    const driftList = blocks.map(({drift}) => drift)
-
-    const normalizedDriftList = driftList.map(({before, after}) => {
-        const beforeClone = cloneDeep(before)
-        const afterClone = cloneDeep(after)
+    const normalizedDriftList = blocks.map(({drift}) => {
+        const beforeClone = cloneDeep(drift.before)
+        const afterClone = cloneDeep(drift.after)
 
         if (beforeClone) {
             const block = blocksDisabledList.isDisabled(beforeClone)
@@ -50,35 +35,17 @@ export const addToCellList = (blocks:Block[], cellList:Cell[]) => {
             before: beforeClone,
             after: afterClone
         }
-    }).map(({before, after}) => ({
-        before: before && cutSides(before),
-        after: after && cutSides(after)
-    }))
+    })
 
     const driftCells = normalizedDriftList.reduce<Cell[]>((val, drift) => {
         Object.values(drift).forEach(cell => {
             if (cell) {
-                val.push(cell)
+                const replacedCell = options?.driftReplacer?.({cell}) ?? cell
+                val.push(replacedCell)
             }
         })
         return val
     }, [])
 
-    const replacedCells:Cell[] = [];
-
-    const cells = cellList.filter(cell => {
-        const block = [...normalizedBlocks, ...driftCells].find(block => {
-            return +cell.from >= +block.from && +cell.to <= +block.to;
-        });
-        if (block) {
-            if (replacedCells.findIndex(replacedCell => replacedCell === block) === -1) {
-                replacedCells.push(block);
-            }
-        }
-        return !block;
-    });
-
-    const result = CellList.sort([...cells, ...replacedCells])
-
-    return result
+    return mergeCells([...blocks, ...driftCells], cells)
 }

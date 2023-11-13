@@ -1,5 +1,7 @@
 import dayjs from "dayjs"
-import { Cell, CellList } from "."
+import {describe, test, expect, beforeAll} from 'vitest'
+import { Cell } from "./Cell.js"
+import { CellList } from "./CellList.js"
 
 const startDate = dayjs().startOf('day').toDate()
 
