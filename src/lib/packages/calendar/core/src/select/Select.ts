@@ -5,7 +5,8 @@ import dayjs from 'dayjs'
 
 interface ISelectOptions {
     allowBetweenDays?:boolean
-    minTimeLength?:number //ms
+    minTimeLength?:number //minutes
+    fixTimeLength?:number //minutes
 }
 
 interface ISelectEvents {
@@ -24,7 +25,8 @@ export class Select {
     on
     #defOptions:ISelectOptions = {
         allowBetweenDays: false,
-        minTimeLength: 0
+        minTimeLength: undefined,
+        fixTimeLength: undefined
     }
 
     constructor({
@@ -38,6 +40,14 @@ export class Select {
             ...this.#defOptions,
             ...options
         }
+    }
+
+    get minTimeLength() { //Return ms
+        return this.options.minTimeLength && this.options.minTimeLength * 1000 * 60
+    }
+
+    get fixTimeLength() { //Return ms
+        return this.options.fixTimeLength && this.options.fixTimeLength * 1000 * 60
     }
     
     updateCalendar(calendar:ISelectParams['calendar']) {
@@ -74,34 +84,31 @@ export class Select {
 
         const duration = +to - +from
 
-        if (!options?.disableMinTimeLength && this.options.minTimeLength && duration < this.options.minTimeLength) {
-            to = dayjs(to).add(this.options.minTimeLength - duration, 'ms').toDate()
-            const isBetweenDays = this.#isBetweenDays({from, to})
-            if (isBetweenDays.isError) {
-                to = dayjs(from).add(1, 'day').startOf('day').toDate()
+        if (this.fixTimeLength) {
+            to = dayjs(from).add(this.fixTimeLength, 'ms').toDate()
+        } else {
+            if (!options?.disableMinTimeLength && this.minTimeLength && duration < this.minTimeLength) {
+                to = dayjs(to).add(this.minTimeLength - duration, 'ms').toDate()
+                const isBetweenDays = this.#isBetweenDays({from, to})
+                if (isBetweenDays.isError) {
+                    to = dayjs(from).add(1, 'day').startOf('day').toDate()
+                }
             }
         }
 
-        const {disabledListItem} = this.calendar.isDisabled({from, to})
+        const {disabledListItem, blockItem} = this.calendar.isDisabled({from, to})
 
         if (disabledListItem?.from) {
             to = disabledListItem.from
         }
 
-        const {disabled} = this.calendar.isDisabled({from, to})
-
-        if (disabled) {
-            return
-        } else {
-            const {item} =  this.calendar.isBlockDisabled({from, to})
-
-            if (item?.from) {
-                to = item.from
-            }
-
-            if (this.calendar.isBlockDisabled({from, to}).result) return
+        if (blockItem?.from && +to < +blockItem.from) {
+            to = blockItem?.from
         }
 
+        const {disabled} = this.calendar.isDisabled({from, to})
+
+        if (disabled) return
 
         return {
             from,
@@ -217,9 +224,10 @@ export class Select {
             })
         } else {
             const {isEqual, isIn, isDouble, isInset, betweenDays} = this.validate<true>({from, to})
-
             if (isDouble) { //Если селекты равны, то сбрасываем значение
                 this.clear()
+            } else if (this.fixTimeLength) { //Если у нас есть this.fixTimeLength, то мы должны остановить логику и просто сделать set на текущих данных
+                this.set({from,to})
             } else if (isInset) { //Если выбран слот между краями селекта, то ставим этот слот
                 this.set({from, to})
             } else if (Object.values(isEqual).concat(Object.values(isIn)).every(v => !v)) {

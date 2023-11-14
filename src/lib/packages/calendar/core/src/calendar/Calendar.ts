@@ -107,8 +107,8 @@ export class Calendar<T extends Block[] = Block[]> {
     }
 
     
-    isBlockDisabled(cell:Cell) {
-        return this.#blocksDisabledList.isDisabled(cell)
+    isBlockDisabled(cellOrDate:Cell | Date) {
+        return this.#blocksDisabledList.isDisabled(cellOrDate)
     }
     
     isDisabled(cellOrDate:Parameters<Disabled['isDisabled']>[0]) {
@@ -118,7 +118,7 @@ export class Calendar<T extends Block[] = Block[]> {
         const findDisabledListItem = disabledListResult.findItem
         const disabledListItem = disabledListResult.item
 
-        const blockResult = this.#blocksDisabledList.isDisabled(cellOrDate)
+        const blockResult = this.isBlockDisabled(cellOrDate)
         const findBlockItem = blockResult.findItem
         const blockItem = blockResult.item
 

@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import { Period, Calendar, Disabled, Select, Cell } from "@cluue/calendar-core"
+	import { Period, Calendar, Disabled, Select, Cell, Block } from "@cluue/calendar-core"
 	import { getAllMinutesByDate } from "@cluue/calendar-utils"
 	import {Button} from "@cluue/base"
     import dayjs from 'dayjs'
@@ -69,6 +69,12 @@
 
     const calendar = new Calendar({
         step: 30,
+        blocks: [
+            new Block({
+                from: dayjs().startOf('day').add(4, 'hours').toDate(),
+                to: dayjs().startOf('day').add(6, 'hours').toDate()
+            })
+        ],
         periods: platformPeriods,
         // disabled: [
         //     new Disabled({
@@ -86,7 +92,9 @@
             }
         },
         options: {
-            allowBetweenDays: true
+            allowBetweenDays: true,
+            minTimeLength: 60,
+            fixTimeLength: 120
         }
     })
 
