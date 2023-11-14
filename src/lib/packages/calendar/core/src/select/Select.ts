@@ -227,7 +227,11 @@ export class Select {
             if (isDouble) { //Если селекты равны, то сбрасываем значение
                 this.clear()
             } else if (this.fixTimeLength) { //Если у нас есть this.fixTimeLength, то мы должны остановить логику и просто сделать set на текущих данных
-                this.set({from,to})
+                if (isIn.from && !isIn.fromInset) {
+                    this.clear()
+                } else {
+                    this.set({from,to})
+                }
             } else if (isInset) { //Если выбран слот между краями селекта, то ставим этот слот
                 this.set({from, to})
             } else if (Object.values(isEqual).concat(Object.values(isIn)).every(v => !v)) {
