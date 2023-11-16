@@ -74,7 +74,7 @@ export class Select {
     }
     
     setMiddleware(newSelected:Cell | undefined, options?:{
-        disableMinTimeLength:boolean
+        disableMinTimeLength?:boolean
     }) {
         if (!newSelected) return
 
@@ -116,8 +116,15 @@ export class Select {
         }
     }
 
-    set(newSelected:Cell | undefined, options?:Parameters<Select['setMiddleware']>[1]) {
-        this.selected = this.setMiddleware(newSelected, options)
+    set(newSelected:Cell | undefined, options?:Parameters<Select['setMiddleware']>[1] & {
+        force?:boolean //Ignore disabled
+    }) {
+        const {force, ...middlewareOptions} = options || {}
+
+        if (!force) {
+            this.selected = this.setMiddleware(newSelected, middlewareOptions)
+        }
+
         this.on?.set?.(this.selected)
         return this.selected
     }

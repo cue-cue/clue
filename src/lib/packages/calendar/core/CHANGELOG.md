@@ -1,5 +1,11 @@
 # @cluue/calendar-core
 
+## 1.0.27
+
+### Patch Changes
+
+- `force` option (Select)
+
 ## 1.0.26
 
 ### Patch Changes
