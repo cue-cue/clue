@@ -121,7 +121,9 @@ export class Select {
     }) {
         const {force, ...middlewareOptions} = options || {}
 
-        if (!force) {
+        if (force) {
+            this.selected = newSelected
+        } else {
             this.selected = this.setMiddleware(newSelected, middlewareOptions)
         }
 
