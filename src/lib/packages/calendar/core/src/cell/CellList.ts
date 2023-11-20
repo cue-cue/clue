@@ -47,6 +47,7 @@ export class CellList {
             if (!sideFromMap) {
                 sidesMap.set(+cellDay, {start, end})
             }
+            console.log({cell, sidesMap, start: start.isCellInclude(cell)})
 
             return !(start.isCellInclude(cell) || end.isCellInclude(cell))
         })

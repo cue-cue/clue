@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import { dateToDay, dateToDayNum, dayToDate } from "./utils.js";
 import type { Cell } from '../cell/index.js';
 import { getAllMinutesByDate } from '@cluue/calendar-utils';
@@ -45,10 +46,10 @@ export class Period {
         return dateMinutes >= +this.start && dateMinutes <= +this.end
     }
 
-    isTimeInclude(time:Date) {
+    isTimeInclude(time:Date, ) {
         if (this.start === this.end) return false
         const dateMinutes = getAllMinutesByDate(time)
-        return this.start <= dateMinutes && this.end >= dateMinutes
+        return this.start < dateMinutes && this.end > dateMinutes
     }
 
     isDateInclude(date:Date) {

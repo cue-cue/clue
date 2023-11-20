@@ -8,30 +8,30 @@
 
     const periods:Period[] = [
         new Period({
-            days: [0,1,2,3],
-            start: 30 * 5,
+            days: [0,1,2,3,4,5,6],
+            start: 30 * 6,
             end: 30 * 12
         }),
-        new Period({
-            days: [0,1,2,3],
-            start: 30 * 18,
-            end: 30 * 30
-        }),
-        new Period({
-            days: [4],
-            start: 0,
-            end: 1440
-        }),
-        new Period({
-            days: [5],
-            start: 0,
-            end: 600
-        }),
-        new Period({
-            days: [5],
-            start: 1200,
-            end: 1440
-        }),
+        // new Period({
+        //     days: [0,1,2,3],
+        //     start: 30 * 18,
+        //     end: 30 * 30
+        // }),
+        // new Period({
+        //     days: [4],
+        //     start: 0,
+        //     end: 1440
+        // }),
+        // new Period({
+        //     days: [5],
+        //     start: 0,
+        //     end: 600
+        // }),
+        // new Period({
+        //     days: [5],
+        //     start: 1200,
+        //     end: 1440
+        // }),
     ]
 
     const platformPeriods:Period[] = [
@@ -93,8 +93,8 @@
         },
         options: {
             allowBetweenDays: true,
-            minTimeLength: 60,
-            fixTimeLength: 120
+            // minTimeLength: 60,
+            // fixTimeLength: 120
         }
     })
 
