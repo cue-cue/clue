@@ -63,6 +63,18 @@
 			new Block({
 				from: dayjs().startOf('day').add(4, 'hours').toDate(),
 				to: dayjs().startOf('day').add(6, 'hours').toDate()
+			}),
+			new Block({
+				from: dayjs().startOf('day').add(8, 'hours').toDate(),
+				to: dayjs().startOf('day').add(10, 'hours').toDate()
+			}),
+			new Block({
+				from: dayjs().startOf('day').add(1, 'day').add(4, 'hours').toDate(),
+				to: dayjs().startOf('day').add(1, 'day').add(9, 'hours').toDate()
+			}),
+			new Block({
+				from: dayjs().startOf('day').add(1, 'day').add(11, 'hours').toDate(),
+				to: dayjs().startOf('day').add(1, 'day').add(26, 'hours').toDate()
 			})
 		],
 		periods: periods
@@ -99,6 +111,11 @@
 			mode: event.shiftKey ? 'range' : 'single'
 		})
 	}
+
+	$: cells = (date: Date) => {
+		const cells = calendar.createCellList({ date }).cells
+		return Block.addToCellList(calendar.blocks, cells)
+	}
 </script>
 
 <h2>Calendar Core</h2>
@@ -111,7 +128,7 @@
 		<li>
 			<h5>{date.toDateString()}</h5>
 			<ul style="list-style: none; padding: 0">
-				{#each calendar.createCellList({ date }).cells as cell}
+				{#each cells(date) as cell}
 					<li>
 						<Button
 							size="small"
@@ -132,3 +149,6 @@
 
 <h5>periods</h5>
 <pre>{JSON.stringify(calendar.periods, null, 2)}</pre>
+
+<h5>blocks</h5>
+<pre>{JSON.stringify(calendar.blocks, null, 2)}</pre>

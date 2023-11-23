@@ -1,5 +1,23 @@
 # @cluue/icons
 
+## 1.0.20
+
+### Patch Changes
+
+- Upgrade
+
+## 1.0.19
+
+### Patch Changes
+
+- Upgrade
+
+## 1.0.18
+
+### Patch Changes
+
+- Upgrade
+
 ## 1.0.17
 
 ### Patch Changes

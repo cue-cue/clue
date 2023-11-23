@@ -1,5 +1,28 @@
 # @cluue/base
 
+## 1.0.23
+
+### Patch Changes
+
+- Upgrade
+- Updated dependencies
+  - @cluue/icons@1.0.20
+
+## 1.0.22
+
+### Patch Changes
+
+- Upgrade
+- Updated dependencies
+  - @cluue/icons@1.0.19
+
+## 1.0.21
+
+### Patch Changes
+
+- Updated dependencies
+  - @cluue/icons@1.0.18
+
 ## 1.0.20
 
 ### Patch Changes

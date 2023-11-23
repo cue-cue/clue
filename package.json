@@ -16,7 +16,7 @@
 		"build:icons": "npx ts-node --esm scripts/beforeBuildAndDev/createIcons.ts",
 		"build:styles": "node scripts/afterBuild/buildStyles.mjs",
 		"build:packageTemplates": "node scripts/afterBuild/packageTemplates.mjs",
-		"build:before": "npm run lint && npm run format && npm run test && npm run build:icons",
+		"build:before": "npm run lint && npm run test && npm run build:icons",
 		"build:after": "npm run build:styles && npm run build:packageTemplates",
 		"build": "npm run build:before && npm run package && npm run build:after",
 		"build:site": "svelte-kit sync && npm run build:before && vite build"
