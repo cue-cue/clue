@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { OutclickEvent } from "@cluue/utils";
+import type { OutclickEvent } from '@cluue/utils'
 
 // for information about these interfaces
 declare global {
@@ -15,9 +15,9 @@ declare global {
 	}
 	namespace svelteHTML {
 		interface HTMLAttributes {
-			'on:outclick'?: (event: OutclickEvent) => void;
+			'on:outclick'?: (event: OutclickEvent) => void
 		}
 	}
 }
 
-export {};
+export {}

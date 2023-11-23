@@ -1,40 +1,38 @@
-<script lang="ts" context='module'>
+<script lang="ts" context="module">
 	export type OptionGenericType = IOption<OptionValue>[]
-
 </script>
 
-<script lang='ts' generics="T extends OptionGenericType">
+<script lang="ts" generics="T extends OptionGenericType">
 	import { selectOptionListCoreContext } from './context.js'
-	import {generateClassNames} from '@cluue/utils'
+	import { generateClassNames } from '@cluue/utils'
 	import SelectOption from './SelectOption.svelte'
 	import SelectOptionListBase from './SelectOptionListBase.svelte'
 	import type { ISelectOptionListCoreData, IOption, OptionValue } from './types.js'
 	interface $$Props {
-		class?:string
-		data?:ISelectOptionListCoreData<T>[]
+		class?: string
+		data?: ISelectOptionListCoreData<T>[]
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let data:$$Props['data'] = []
+	export let data: $$Props['data'] = []
 
 	const selectOptionListCoreContextStore = selectOptionListCoreContext.get()
 
 	$: if (selectOptionListCoreContextStore) {
 		data = $selectOptionListCoreContextStore.data
 	}
-
 </script>
 
 <SelectOptionListBase class={generateClassNames(['SelectOptionList', className])}>
 	{#if data}
-		{#each data as {key, active, label, clickHandler} (key)}
+		{#each data as { key, active, label, clickHandler } (key)}
 			<SelectOption on:click={clickHandler} {active}>{label}</SelectOption>
 		{/each}
 	{/if}
 </SelectOptionListBase>
 
-<style lang='sass'>
+<style lang="sass">
 	:global(.ClueSelectOptionList)
 		background: var(--clue-color-white)
 		border-radius: 0 0 10px 10px

@@ -1,27 +1,27 @@
 <script lang="ts">
-	import {generateClassNames} from '@cluue/utils'
-	import type { SVGAttributes } from 'svelte/elements';
-	import type { ClueSvgIconData } from '../index.js';
-	import { fade, type TransitionConfig } from 'svelte/transition';
+	import { generateClassNames } from '@cluue/utils'
+	import type { SVGAttributes } from 'svelte/elements'
+	import type { ClueSvgIconData } from '../index.js'
+	import { fade, type TransitionConfig } from 'svelte/transition'
 	import { config } from '@cluue/config'
 
 	interface $$Props extends SVGAttributes<SVGElement> {
-		icon:ClueSvgIconData['default']
-		class?:string
-		width?:number
-		ratio?:number
-		height?:number
-		nodeElement?:HTMLOrSVGElement
-		transitionFn?:(node:Element, params:unknown) => TransitionConfig
+		icon: ClueSvgIconData['default']
+		class?: string
+		width?: number
+		ratio?: number
+		height?: number
+		nodeElement?: HTMLOrSVGElement
+		transitionFn?: (node: Element, params: unknown) => TransitionConfig
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let icon:$$Props['icon']
-	export let width:$$Props['width'] = undefined
-	export let height:$$Props['height'] = undefined
-	export let nodeElement:$$Props['nodeElement'] = undefined
-	export let transitionFn:$$Props['transitionFn'] = undefined
+	export let icon: $$Props['icon']
+	export let width: $$Props['width'] = undefined
+	export let height: $$Props['height'] = undefined
+	export let nodeElement: $$Props['nodeElement'] = undefined
+	export let transitionFn: $$Props['transitionFn'] = undefined
 
 	$: sizes = {
 		width: width ?? 24,
@@ -35,7 +35,7 @@
 <svg
 	bind:this={nodeElement}
 	class={generateClassNames(['IconUse', className])}
-	role='img'
+	role="img"
 	{...$$restProps}
 	{...sizes}
 	viewBox={`0 0 ${sizes.width} ${sizes.height}`}

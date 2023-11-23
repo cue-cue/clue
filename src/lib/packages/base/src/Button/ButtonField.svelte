@@ -1,27 +1,32 @@
-<script lang='ts'>
-	import type { HTMLAnchorAttributes } from 'svelte/elements';
+<script lang="ts">
+	import type { HTMLAnchorAttributes } from 'svelte/elements'
 
-	import {generateClassNames} from '@cluue/utils'
+	import { generateClassNames } from '@cluue/utils'
 
-	interface $$Props extends Pick<HTMLAnchorAttributes, 'rel' | 'href' | 'tabindex' | 'target' | 'style'>, Record<`data-${string}`, string | undefined> {
-		class?:string
-		tag?:'button' | 'div' | 'a'
-		disabled?:boolean
-		type?:'action' | 'primary' | 'secondary' | 'ghost' | 'outlined'
+	interface $$Props
+		extends Pick<HTMLAnchorAttributes, 'rel' | 'href' | 'tabindex' | 'target' | 'style'>,
+			Record<`data-${string}`, string | undefined> {
+		class?: string
+		tag?: 'button' | 'div' | 'a'
+		disabled?: boolean
+		type?: 'action' | 'primary' | 'secondary' | 'ghost' | 'outlined'
 	}
 
 	let className = ''
 	export { className as class }
 
-	export let tag:$$Props['tag'] = 'button'
-	export let disabled:$$Props['disabled'] = undefined
-	export let type:$$Props['type'] = 'primary'
+	export let tag: $$Props['tag'] = 'button'
+	export let disabled: $$Props['disabled'] = undefined
+	export let type: $$Props['type'] = 'primary'
 
-	$: disabledAttributes = tag === 'button' ? {
-		disabled
-	} : {
-		['data-disabled']: disabled
-	}
+	$: disabledAttributes =
+		tag === 'button'
+			? {
+					disabled
+			  }
+			: {
+					['data-disabled']: disabled
+			  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -43,10 +48,10 @@
 	{...$$restProps}
 	{...disabledAttributes}
 >
-	<slot/>
+	<slot />
 </svelte:element>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './ButtonField'
 	:global(body)
 		+button-field-vars()

@@ -1,35 +1,42 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
 	import { context } from '../context'
 	import { onDestroy } from 'svelte'
 
 	interface $$Props {
-		class?:string
-		nodeElement?:HTMLElement
+		class?: string
+		nodeElement?: HTMLElement
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let nodeElement:$$Props['nodeElement'] = undefined
+	export let nodeElement: $$Props['nodeElement'] = undefined
 
 	const contextStore = context.get()
 
 	const arrowStore = contextStore && $contextStore?.arrowStore
 
-	$: styles = Object.entries(arrowStore ? $arrowStore.styles : {}).map(([name, val]) => `${name}: ${val}`).join('; ')
-	$: arrowStore && ($arrowStore.element.set(nodeElement))
+	$: styles = Object.entries(arrowStore ? $arrowStore.styles : {})
+		.map(([name, val]) => `${name}: ${val}`)
+		.join('; ')
+	$: arrowStore && $arrowStore.element.set(nodeElement)
 
 	onDestroy(() => {
-		arrowStore && ($arrowStore.element.set(undefined))
+		arrowStore && $arrowStore.element.set(undefined)
 	})
 </script>
+
 {#if !contextStore || $contextStore.arrow}
-	<div bind:this={nodeElement} style={styles} class={generateClassNames(['PopoverArrow', className])}>
-		<slot><div></div></slot>
+	<div
+		bind:this={nodeElement}
+		style={styles}
+		class={generateClassNames(['PopoverArrow', className])}
+	>
+		<slot><div /></slot>
 	</div>
 {/if}
 
-<style lang='sass'>
+<style lang="sass">
 	@import './PopoverArrow'
 	:global(body)
 		+popover-arrow-vars()

@@ -1,5 +1,3 @@
 import PopoverContent from './PopoverContent.svelte'
 
-export {
-	PopoverContent
-}
+export { PopoverContent }

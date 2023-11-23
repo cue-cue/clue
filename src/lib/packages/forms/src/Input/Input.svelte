@@ -1,57 +1,57 @@
-<script lang='ts'>
-    import {generateClassNames} from '@cluue/utils'
-	import type { ComponentProps } from 'svelte';
-	import InputTextareaElement from './InputTextareaElement.svelte';
-	import InputElement from './InputElement.svelte';
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
+	import type { ComponentProps } from 'svelte'
+	import InputTextareaElement from './InputTextareaElement.svelte'
+	import InputElement from './InputElement.svelte'
 
-    interface $$Props extends Omit<ComponentProps<InputElement>, 'maxlength' | 'rows'>, Pick<ComponentProps<InputTextareaElement>, 'maxlength' | 'rows'> {
-        class?:string
-        multiline?:boolean
-    }
-    
-    let className = ''
-    export { className as class }
-    
-    export let value:$$Props['value'] = ''
-    export let multiline:$$Props['multiline'] = false
-    export let nodeElement:$$Props['nodeElement'] = undefined
+	interface $$Props
+		extends Omit<ComponentProps<InputElement>, 'maxlength' | 'rows'>,
+			Pick<ComponentProps<InputTextareaElement>, 'maxlength' | 'rows'> {
+		class?: string
+		multiline?: boolean
+	}
 
-    const elementsMap = new Map<typeof multiline, typeof InputElement | typeof InputTextareaElement>([
-        [false, InputElement],
-        [true, InputTextareaElement],
-    ])
+	let className = ''
+	export { className as class }
 
-    
-    export const set = (newValue:typeof value) => {
-        value = newValue
-    }
+	export let value: $$Props['value'] = ''
+	export let multiline: $$Props['multiline'] = false
+	export let nodeElement: $$Props['nodeElement'] = undefined
 
-    export const update = (callback:(currentValue:typeof value) => typeof value) => {
-        set(callback(value))
-    }
+	const elementsMap = new Map<typeof multiline, typeof InputElement | typeof InputTextareaElement>([
+		[false, InputElement],
+		[true, InputTextareaElement]
+	])
 
-    export const clear = () => {
-        value = ''
-    }
-    
+	export const set = (newValue: typeof value) => {
+		value = newValue
+	}
+
+	export const update = (callback: (currentValue: typeof value) => typeof value) => {
+		set(callback(value))
+	}
+
+	export const clear = () => {
+		value = ''
+	}
 </script>
 
 <svelte:component
-    this={elementsMap.get(multiline)}
-    bind:nodeElement
-    class={generateClassNames(['Input', className])}
-    on:input
-    on:change
-    on:keydown
-    on:keyup
-    on:click
-    on:focus
-    on:blur
-    bind:value
-    {...$$restProps}
+	this={elementsMap.get(multiline)}
+	bind:nodeElement
+	class={generateClassNames(['Input', className])}
+	on:input
+	on:change
+	on:keydown
+	on:keyup
+	on:click
+	on:focus
+	on:blur
+	bind:value
+	{...$$restProps}
 />
 
-<style lang='sass'>
+<style lang="sass">
     :global(.ClueInput)
         border: none
         outline: none

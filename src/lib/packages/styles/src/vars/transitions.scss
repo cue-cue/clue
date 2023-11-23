@@ -1,5 +1,5 @@
 @mixin vars-transitions() {
-    --clue-transition-duration: .2s;
-    --clue-transition-timing-function: ease-in-out;
-    --clue-transition: var(--clue-transition-duration) var(--clue-transition-timing-function);
+	--clue-transition-duration: 0.2s;
+	--clue-transition-timing-function: ease-in-out;
+	--clue-transition: var(--clue-transition-duration) var(--clue-transition-timing-function);
 }

@@ -1,31 +1,30 @@
-<script lang='ts'>
-	import {generateClassNames, randomId} from '@cluue/utils'
+<script lang="ts">
+	import { generateClassNames, randomId } from '@cluue/utils'
 	import InputCheckbox from '../Input/InputCheckbox.svelte'
 	import CheckboxField from '../Checkbox/CheckboxField.svelte'
 	import type { ComponentProps } from 'svelte'
 
 	interface $$Props extends Omit<ComponentProps<InputCheckbox>, 'group' | 'value'> {
-		class?:string
-		group?:ComponentProps<InputCheckbox>['group']
-		value?:ComponentProps<InputCheckbox>['value']
+		class?: string
+		group?: ComponentProps<InputCheckbox>['group']
+		value?: ComponentProps<InputCheckbox>['value']
 	}
-	
+
 	let className = ''
 	export { className as class }
 
-	export let checked:$$Props['checked'] = undefined
-	export let disabled:$$Props['disabled'] = undefined
-	export let id:$$Props['id'] = randomId('checkbox')
-	export let group:Exclude<$$Props['group'], undefined> = []
-	export let value:Exclude<$$Props['value'], undefined> = ''
-	
+	export let checked: $$Props['checked'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let id: $$Props['id'] = randomId('checkbox')
+	export let group: Exclude<$$Props['group'], undefined> = []
+	export let value: Exclude<$$Props['value'], undefined> = ''
 </script>
 
 <CheckboxField {id} class={generateClassNames(['SwitchBase', className])}>
-	<InputCheckbox bind:group bind:value {id} bind:checked {disabled} {...$$restProps}/>
+	<InputCheckbox bind:group bind:value {id} bind:checked {disabled} {...$$restProps} />
 </CheckboxField>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './SwitchBase'
 	:global(body)
 		+switch-base-vars()

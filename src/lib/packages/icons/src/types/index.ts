@@ -10,17 +10,13 @@ type IconNames<T extends string = 'clue-'> = `${T}line-youtube` | `${T}line-xbox
 //IconNames-template
 
 type ClueSvgIconData = {
-    default: IconNames,
-    size: {
-        width: number
-        height: number
-    }
-    groupName: keyof IconGroups
-    name:IconNames<''>
+	default: IconNames
+	size: {
+		width: number
+		height: number
+	}
+	groupName: keyof IconGroups
+	name: IconNames<''>
 }
 
-export {
-    type IconNames,
-    type IconGroups,
-    type ClueSvgIconData
-}
+export { type IconNames, type IconGroups, type ClueSvgIconData }

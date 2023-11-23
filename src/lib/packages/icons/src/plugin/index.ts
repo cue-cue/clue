@@ -1,1 +1,1 @@
-export {svgSpritePlugin as clueIconsPlugin} from './svgSpritePlugin.js'
+export { svgSpritePlugin as clueIconsPlugin } from './svgSpritePlugin.js'

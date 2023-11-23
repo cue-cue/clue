@@ -8,6 +8,6 @@
 
 ```css
 body {
-    --any-vars: any-vals
+	--any-vars: any-vals;
 }
 ```

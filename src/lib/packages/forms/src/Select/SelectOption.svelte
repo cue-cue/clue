@@ -1,16 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
 	import Checkbox from '../Checkbox/Checkbox.svelte'
 
-	import {generateClassNames} from '@cluue/utils'
+	import { generateClassNames } from '@cluue/utils'
 
 	interface $$Props {
-		class?:string
-		active?:boolean
+		class?: string
+		active?: boolean
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let active:$$Props['active'] = false
+	export let active: $$Props['active'] = false
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -25,7 +25,7 @@
 	<Checkbox manual let:Label={LabelComponent} checked={active}>
 		{#if $$slots.default}
 			<svelte:component this={LabelComponent}>
-				<slot/>
+				<slot />
 			</svelte:component>
 		{/if}
 	</Checkbox>
@@ -34,7 +34,7 @@
 	</span> -->
 </li>
 
-<style lang='sass'>
+<style lang="sass">
 	.ClueSelectOption
 		margin: 0
 		padding: 12px

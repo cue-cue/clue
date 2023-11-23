@@ -1,37 +1,35 @@
-<script lang='ts'>
-
-	import {generateClassNames, randomId} from '@cluue/utils'
+<script lang="ts">
+	import { generateClassNames, randomId } from '@cluue/utils'
 	import type { HTMLInputAttributes } from 'svelte/elements'
 	import { fieldContext } from '../FieldContext/index.js'
 
 	interface $$Props extends Pick<HTMLInputAttributes, 'id'> {
-		class?:string
-		manual?:boolean
+		class?: string
+		manual?: boolean
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let id:$$Props['id'] = undefined
-	export let manual:$$Props['manual'] = undefined
+	export let id: $$Props['id'] = undefined
+	export let manual: $$Props['manual'] = undefined
 
 	const fieldContextStore = fieldContext.get()
 
 	const handler = {
-		click(e:MouseEvent) {
+		click(e: MouseEvent) {
 			if ($fieldContextStore.manual || manual) e.preventDefault()
 		}
 	}
-	
-	
 </script>
+
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <label for={id} on:click={handler.click} class={generateClassNames(['CheckboxField', className])}>
-	<slot/>
-	<span class={generateClassNames(['CheckboxField__label'])}></span>
+	<slot />
+	<span class={generateClassNames(['CheckboxField__label'])} />
 </label>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './CheckboxField'
 	:global(body)
 		+checkbox-field-vars()

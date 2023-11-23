@@ -5,9 +5,9 @@
 @import './shadows';
 
 :root {
-    @include vars-colors();
-    @include vars-sizes();
-    @include vars-transitions();
-    @include vars-fonts();
-    @include vars-shadows();
+	@include vars-colors();
+	@include vars-sizes();
+	@include vars-transitions();
+	@include vars-fonts();
+	@include vars-shadows();
 }

@@ -1,29 +1,33 @@
-<script lang='ts'>
-	import {Icon} from '@cluue/icons'
-    import errorIcon from '@cluue/icons/filled/exclamation-circle.svg?clue'
-    import {generateClassNames} from '@cluue/utils'
-    interface $$Props {
-        class?:string
-        error?:boolean
-        disabled?:boolean
-    }
-    
-    let className = ''
-    export { className as class }
-    export let error:$$Props['error'] = false
-    export let disabled:$$Props['disabled'] = false
+<script lang="ts">
+	import { Icon } from '@cluue/icons'
+	import errorIcon from '@cluue/icons/filled/exclamation-circle.svg?clue'
+	import { generateClassNames } from '@cluue/utils'
+	interface $$Props {
+		class?: string
+		error?: boolean
+		disabled?: boolean
+	}
+
+	let className = ''
+	export { className as class }
+	export let error: $$Props['error'] = false
+	export let disabled: $$Props['disabled'] = false
 </script>
 
-<div class={generateClassNames(['TextFieldHelper', className])} data-disabled={disabled} data-error={error}>
-    {#if error}
-        <Icon width={16} icon={errorIcon}/>
-    {/if}
-    <span>
-        <slot></slot>
-    </span>
+<div
+	class={generateClassNames(['TextFieldHelper', className])}
+	data-disabled={disabled}
+	data-error={error}
+>
+	{#if error}
+		<Icon width={16} icon={errorIcon} />
+	{/if}
+	<span>
+		<slot />
+	</span>
 </div>
 
-<style lang='sass'>
+<style lang="sass">
     .ClueTextFieldHelper
         font-weight: 400
         color: var(--clue-color-gray-700)

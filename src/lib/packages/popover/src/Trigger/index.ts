@@ -1,43 +1,49 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { Writable } from "svelte/store";
-import type { PopoverEvents } from "../actions";
+import type { Writable } from 'svelte/store'
+import type { PopoverEvents } from '../actions'
 
 export class Trigger {
-    handlers!:{
+	handlers!: {
 		target?: Partial<PopoverEvents>
 		content?: Partial<PopoverEvents>
 	}
 	elements
-    events
-    constructor(elements:Record<'target' | 'content', Writable<HTMLElement | undefined>>, events:{
-        open?:VoidFunction,
-        close?:VoidFunction
-    }) {
+	events
+	constructor(
+		elements: Record<'target' | 'content', Writable<HTMLElement | undefined>>,
+		events: {
+			open?: VoidFunction
+			close?: VoidFunction
+		}
+	) {
 		this.elements = elements
-        this.events = events
-    }
-    setHandlers(handlers:Trigger['handlers']) {
-        this.handlers = handlers
-    }
-    open() {
-        this.events?.open?.()
-    }
-    close() {
-        this.events?.close?.()
-    }
+		this.events = events
+	}
+	setHandlers(handlers: Trigger['handlers']) {
+		this.handlers = handlers
+	}
+	open() {
+		this.events?.open?.()
+	}
+	close() {
+		this.events?.close?.()
+	}
 }
 
 export class TriggerCombinator {
 	trigger
-	handlers:Trigger['handlers']
-	constructor(trigger:Trigger | Trigger[]) {
+	handlers: Trigger['handlers']
+	constructor(trigger: Trigger | Trigger[]) {
 		this.trigger = [trigger].flat()
 		this.handlers = this.createHandlers(this.trigger)
 	}
-	createHandlers(trigger = this.trigger):TriggerCombinator['handlers'] {
-		type ReduceResult = Record<'target' | 'content', Partial<{
-			[K in keyof PopoverEvents]: Array<PopoverEvents[K]>
-		}>>
+	createHandlers(trigger = this.trigger): TriggerCombinator['handlers'] {
+		type ReduceResult = Record<
+			'target' | 'content',
+			Partial<{
+				[K in keyof PopoverEvents]: Array<PopoverEvents[K]>
+			}>
+		>
 		const res = trigger.reduce<Partial<ReduceResult>>((val, trigger) => {
 			Object.entries(trigger.handlers).forEach(([_name, handlers]) => {
 				const name = _name as keyof typeof val
@@ -57,7 +63,7 @@ export class TriggerCombinator {
 			})
 			return val
 		}, {})
-		
+
 		return Object.entries(res).reduce<TriggerCombinator['handlers']>((val, [_name, handlers]) => {
 			const name = _name as keyof typeof val
 			Object.entries(handlers).forEach(([eventName, handlers]) => {

@@ -1,25 +1,25 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
-	import {Icon} from '@cluue/icons'
-	import { onMount, type ComponentProps, onDestroy } from 'svelte';
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
+	import { Icon } from '@cluue/icons'
+	import { onMount, type ComponentProps, onDestroy } from 'svelte'
 	import type { TransitionConfig } from 'svelte/transition'
 	import { config } from '@cluue/config'
 	import { textFieldBaseContext, textFieldButtonsContext } from './context.js'
 	import { writable } from 'svelte/store'
 	interface $$Props extends Omit<ComponentProps<Icon>, 'size' | 'height'> {
-		class?:string
+		class?: string
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let icon:$$Props['icon']
-	export let width:$$Props['width'] = undefined
+	export let icon: $$Props['icon']
+	export let width: $$Props['width'] = undefined
 
-	const transitionFunction = (node:HTMLElement):TransitionConfig => {
+	const transitionFunction = (node: HTMLElement): TransitionConfig => {
 		const styles = getComputedStyle(node) as unknown as Record<string, string>
-		const width = parseInt(styles.width);
-		const marginRight = parseInt(styles['margin-right'] || '0');
-		const marginLeft = parseInt(styles['margin-left'] || '0');
+		const width = parseInt(styles.width)
+		const marginRight = parseInt(styles['margin-right'] || '0')
+		const marginLeft = parseInt(styles['margin-left'] || '0')
 		const opacity = +styles.opacity
 		return {
 			delay: $config.transition.delay || 0,
@@ -40,7 +40,7 @@
 	const iconSizeMap = new Map<typeof $textFieldBaseContextStore.size, number>([
 		['small', 20],
 		['medium', 24],
-		[undefined, 24],
+		[undefined, 24]
 	])
 
 	const textFieldBaseContextStore = textFieldBaseContext.get() || writable({})
@@ -58,14 +58,17 @@
 			$textFieldButtonsContextStore.count -= 1
 		}
 	})
-
 </script>
 
-<button on:click class={generateClassNames(['TextFieldButton', className])} transition:transitionFunction>
-	<Icon {icon} width={width ?? iconSizeMap.get($textFieldBaseContextStore.size)} {...$$restProps}/>
+<button
+	on:click
+	class={generateClassNames(['TextFieldButton', className])}
+	transition:transitionFunction
+>
+	<Icon {icon} width={width ?? iconSizeMap.get($textFieldBaseContextStore.size)} {...$$restProps} />
 </button>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './TextFieldButton'
 	:global(body)
 		+text-field-button-vars()

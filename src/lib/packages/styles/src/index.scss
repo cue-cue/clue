@@ -3,7 +3,7 @@
 
 @include fonts-inter();
 
-*[class^="Clue"] {
-    box-sizing: border-box;
-    font-family: var(--clue-font-family);
+*[class^='Clue'] {
+	box-sizing: border-box;
+	font-family: var(--clue-font-family);
 }

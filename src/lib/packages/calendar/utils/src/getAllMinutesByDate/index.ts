@@ -1,1 +1,1 @@
-export const getAllMinutesByDate = (date:Date) => date.getMinutes() + date.getHours() * 60
+export const getAllMinutesByDate = (date: Date) => date.getMinutes() + date.getHours() * 60

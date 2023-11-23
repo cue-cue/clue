@@ -1,9 +1,7 @@
-<script lang='ts'>
+<script lang="ts">
 </script>
 
-<h1>
-    Hello World
-</h1>
+<h1>Hello World</h1>
 
 <style lang="sass">
     h1

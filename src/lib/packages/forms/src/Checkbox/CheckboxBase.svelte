@@ -1,37 +1,44 @@
-<script lang='ts'>
+<script lang="ts">
 	import InputCheckbox from '../Input/InputCheckbox.svelte'
 
-	import {generateClassNames, randomId} from '@cluue/utils'
-	import type { ComponentProps } from 'svelte';
+	import { generateClassNames, randomId } from '@cluue/utils'
+	import type { ComponentProps } from 'svelte'
 	import CheckboxField from './CheckboxField.svelte'
 	import { fieldContext } from '../FieldContext/index.js'
 	interface $$Props extends Omit<ComponentProps<InputCheckbox>, 'group' | 'value'> {
-		class?:string
-		group?:ComponentProps<InputCheckbox>['group']
-		value?:ComponentProps<InputCheckbox>['value']
+		class?: string
+		group?: ComponentProps<InputCheckbox>['group']
+		value?: ComponentProps<InputCheckbox>['value']
 	}
-	
+
 	let className = ''
 	export { className as class }
 
-	export let checked:$$Props['checked'] = undefined
-	export let disabled:$$Props['disabled'] = undefined
-	export let id:$$Props['id'] = randomId('checkbox')
-	export let group:Exclude<$$Props['group'], undefined> = []
-	export let value:Exclude<$$Props['value'], undefined> = ''
-	export let manual:$$Props['manual'] = undefined
+	export let checked: $$Props['checked'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let id: $$Props['id'] = randomId('checkbox')
+	export let group: Exclude<$$Props['group'], undefined> = []
+	export let value: Exclude<$$Props['value'], undefined> = ''
+	export let manual: $$Props['manual'] = undefined
 
 	const fieldContextStore = fieldContext.get()
-	
-	$: _manual = $fieldContextStore.manual || manual
 
+	$: _manual = $fieldContextStore.manual || manual
 </script>
 
 <CheckboxField manual={_manual} {id} class={generateClassNames(['CheckboxBase', className])}>
-	<InputCheckbox manual={_manual} bind:group bind:value {id} bind:checked {disabled} {...$$restProps}/>
+	<InputCheckbox
+		manual={_manual}
+		bind:group
+		bind:value
+		{id}
+		bind:checked
+		{disabled}
+		{...$$restProps}
+	/>
 </CheckboxField>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './CheckboxBase'
 	:global(body)
 		+checkbox-base-vars()

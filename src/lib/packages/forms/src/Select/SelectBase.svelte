@@ -1,35 +1,35 @@
-<script lang="ts" context='module'>
+<script lang="ts" context="module">
 	interface ISearchController {
-		start: () => void,
-		stop: () => void,
+		start: () => void
+		stop: () => void
 		clear: () => void
 	}
 
 	interface Instance {
 		id: string
-		setOpen: (open:boolean) => void
+		setOpen: (open: boolean) => void
 	}
 
-	let instances:Instance[] = []
+	let instances: Instance[] = []
 
 	const instancesController = {
-		add(instance:Instance) {
+		add(instance: Instance) {
 			instances = [...instances, instance]
 		},
-		remove(instanceId:Instance['id']) {
-			instances = instances.filter(({id}) => id !== instanceId)
+		remove(instanceId: Instance['id']) {
+			instances = instances.filter(({ id }) => id !== instanceId)
 		},
-		closeAll(instanceId:Instance['id']) {
-			instances.forEach(({setOpen, id}) => id !== instanceId &&  setOpen(false))
+		closeAll(instanceId: Instance['id']) {
+			instances.forEach(({ setOpen, id }) => id !== instanceId && setOpen(false))
 		}
 	}
 </script>
 
-<script lang='ts'>
-	import {generateClassNames, outclick, randomId, type ActionListParams} from '@cluue/utils'
+<script lang="ts">
+	import { generateClassNames, outclick, randomId, type ActionListParams } from '@cluue/utils'
 	import TextFieldBase from '../TextField/TextFieldBase.svelte'
 	import Input from '../Input/Input.svelte'
-	import { tick, type ComponentProps, createEventDispatcher, onMount, onDestroy} from 'svelte'
+	import { tick, type ComponentProps, createEventDispatcher, onMount, onDestroy } from 'svelte'
 	import TextFieldButton from '../TextField/TextFieldButton.svelte'
 	import icon from '@cluue/icons/line/angle-down.svg?clue'
 	import clearIcon from '@cluue/icons/line/times.svg?clue'
@@ -48,35 +48,35 @@
 	}
 
 	interface $$Props extends Pick<TextFieldBaseProps, 'disabled' | 'readonly' | 'error' | 'name'> {
-		class?:string
-		value?:InputProps['value']
-		open?:boolean
-		allowSearch?:boolean
-		allowClear?:boolean
-		searchValue?:string
-		id?:string
-		use?:ActionListParams
+		class?: string
+		value?: InputProps['value']
+		open?: boolean
+		allowSearch?: boolean
+		allowClear?: boolean
+		searchValue?: string
+		id?: string
+		use?: ActionListParams
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let value:$$Props['value'] = undefined
-	export let open:$$Props['open'] = false
-	export let allowSearch:$$Props['allowSearch'] = false
-	export let allowClear:$$Props['allowClear'] = true
-	export let searchValue:$$Props['searchValue'] = ''
-	export let disabled:$$Props['disabled'] = undefined
-	export let id:Exclude<$$Props['id'], undefined> = randomId('SelectBase')
-	export let use:$$Props['use'] = undefined
+	export let value: $$Props['value'] = undefined
+	export let open: $$Props['open'] = false
+	export let allowSearch: $$Props['allowSearch'] = false
+	export let allowClear: $$Props['allowClear'] = true
+	export let searchValue: $$Props['searchValue'] = ''
+	export let disabled: $$Props['disabled'] = undefined
+	export let id: Exclude<$$Props['id'], undefined> = randomId('SelectBase')
+	export let use: $$Props['use'] = undefined
 
 	const dispatch = createEventDispatcher()
 
-	let baseNodeElement:ComponentProps<TextFieldBase>['nodeElement'] = undefined
+	let baseNodeElement: ComponentProps<TextFieldBase>['nodeElement'] = undefined
 
 	let searched = false
-	let searchInputElement:InputProps['nodeElement'] = undefined
+	let searchInputElement: InputProps['nodeElement'] = undefined
 
-	const searchController:ISearchController = {
+	const searchController: ISearchController = {
 		start() {
 			if (allowSearch) {
 				searched = true
@@ -102,20 +102,20 @@
 		unlockEvents() {
 			this.eventsLocked = false
 		},
-		ghostCallback(callback:Function) {
+		ghostCallback(callback: VoidFunction) {
 			this.lockEvents()
 			const res = callback()
 			this.unlockEvents()
 			return res
 		},
-		eventCallback(callback:Function) {
+		eventCallback(callback: VoidFunction) {
 			if (this.eventsLocked) return
 			return callback()
 		}
 	}
 
 	const openHandler = {
-		auto(_open:typeof open) {
+		auto(_open: typeof open) {
 			this.toggle()
 			if (_open) {
 				this.open()
@@ -138,7 +138,7 @@
 		}
 	}
 
-	export const setOpen = (_open:typeof open) => {
+	export const setOpen = (_open: typeof open) => {
 		if (_open === false && open === false) return
 		open = _open
 	}
@@ -154,7 +154,7 @@
 				toggle()
 			})
 		},
-		baseClick(e:MouseEvent) {
+		baseClick(e: MouseEvent) {
 			if (disabled) return
 
 			const target = e.target as HTMLElement
@@ -173,7 +173,7 @@
 			if (disabled) return
 
 			if (searched) {
-				if (!searchValue?.length && (allowClear && value)) {
+				if (!searchValue?.length && allowClear && value) {
 					dispatch('clear')
 				}
 				searchController.clear()
@@ -184,10 +184,10 @@
 		outclick() {
 			searchController.stop()
 		},
-		documentKeydown(e:KeyboardEvent) {
+		documentKeydown(e: KeyboardEvent) {
 			if (open) {
-				const {code} = e
-				switch(code) {
+				const { code } = e
+				switch (code) {
 					case 'Escape': {
 						e.preventDefault()
 						setOpen(false)
@@ -211,7 +211,7 @@
 	$: openHandler.auto(open)
 </script>
 
-<svelte:document on:keydown={handler.documentKeydown}/>
+<svelte:document on:keydown={handler.documentKeydown} />
 
 <TextFieldBase
 	class={generateClassNames(['SelectBase', className])}
@@ -237,25 +237,19 @@
 			bind:nodeElement={searchInputElement}
 		/>
 	{:else}
-		<Input
-			readonly
-			{disabled}
-			{id}
-			bind:value
-			on:focus={handler.focus}
-		/>
+		<Input readonly {disabled} {id} bind:value on:focus={handler.focus} />
 	{/if}
-	<svelte:fragment slot='buttons'>
+	<svelte:fragment slot="buttons">
 		{#if !disabled}
-			<TextFieldButton {icon} on:click={handler.arrowClick} reverse={open ? 'y' : undefined}/>
+			<TextFieldButton {icon} on:click={handler.arrowClick} reverse={open ? 'y' : undefined} />
 		{/if}
 		{#if searchValue?.length || (allowClear && value)}
-			<TextFieldButton icon={clearIcon} width={20} on:click={handler.clearClick}/>
+			<TextFieldButton icon={clearIcon} width={20} on:click={handler.clearClick} />
 		{/if}
 	</svelte:fragment>
 </TextFieldBase>
 
-<style lang='sass'>
+<style lang="sass">
 	:global(.ClueSelectBase)
 		cursor: pointer
 		:global(.ClueInput[readonly])

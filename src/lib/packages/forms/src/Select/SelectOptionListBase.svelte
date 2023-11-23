@@ -1,22 +1,21 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
+<svelte:options accessors />
 
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
 
 	interface $$Props {
-		class?:string
+		class?: string
 	}
-	
+
 	let className = ''
 	export { className as class }
-
 </script>
-<svelte:options accessors/>
 
 <ul class={generateClassNames(['SelectOptionListBase', className])}>
-	<slot/>
+	<slot />
 </ul>
 
-<style lang='sass'>
+<style lang="sass">
 	.ClueSelectOptionList
 		background: var(--clue-color-white)
 		border-radius: 0 0 10px 10px

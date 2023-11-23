@@ -1,30 +1,29 @@
-<script lang='ts'>
-	import {generateClassNames, randomId} from '@cluue/utils'
-	import type { ComponentProps } from 'svelte';
+<script lang="ts">
+	import { generateClassNames, randomId } from '@cluue/utils'
+	import type { ComponentProps } from 'svelte'
 	import InputRadio from '../Input/InputRadio.svelte'
 	import CheckboxField from '../Checkbox/CheckboxField.svelte'
 
 	interface $$Props extends Omit<ComponentProps<InputRadio>, 'group' | 'value'> {
-		class?:string
-		group?:ComponentProps<InputRadio>['group']
-		value?:ComponentProps<InputRadio>['value']
+		class?: string
+		group?: ComponentProps<InputRadio>['group']
+		value?: ComponentProps<InputRadio>['value']
 	}
-	
+
 	let className = ''
 	export { className as class }
 
-	export let disabled:$$Props['disabled'] = undefined
-	export let id:$$Props['id'] = randomId('checkbox')
-	export let group:$$Props['group'] = undefined
-	export let value:$$Props['value'] = undefined
-	
+	export let disabled: $$Props['disabled'] = undefined
+	export let id: $$Props['id'] = randomId('checkbox')
+	export let group: $$Props['group'] = undefined
+	export let value: $$Props['value'] = undefined
 </script>
 
 <CheckboxField {id} class={generateClassNames(['RadioBase', className])}>
-	<InputRadio bind:group {value} {id} {disabled} {...$$restProps}/>
+	<InputRadio bind:group {value} {id} {disabled} {...$$restProps} />
 </CheckboxField>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './RadioBase'
 	:global(body)
 		+radio-base-vars()

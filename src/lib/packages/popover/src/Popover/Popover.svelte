@@ -1,72 +1,83 @@
-<script lang='ts'>
+<script lang="ts">
 	import { context } from '../context'
 	import { get, writable } from 'svelte/store'
 	import { createPopoverActions, type IPopoverOptions } from '../actions'
 	import { arrow as arrowMiddleware, type ComputeConfig } from 'svelte-floating-ui'
 	import { HoverTrigger } from '../Trigger/hover.js'
-	import { offset as offsetMiddleware, shift as shiftMiddleware, size as sizeMiddleware, flip as flipMiddleware, type OffsetOptions, type Middleware } from 'svelte-floating-ui/core'
+	import {
+		offset as offsetMiddleware,
+		shift as shiftMiddleware,
+		size as sizeMiddleware,
+		flip as flipMiddleware,
+		type OffsetOptions,
+		type Middleware
+	} from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
 	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
 	import { createPopoverArrowStore } from '../PopoverArrow/store'
 	import { generateClassNames } from '@cluue/utils'
-		
+
 	interface $$Props {
-		class?:string
+		class?: string
 		/**
 		 * @default 'top'
 		 */
-		placement?:ComputeConfig['placement']
+		placement?: ComputeConfig['placement']
 		/**
 		 * @default 5
 		 */
-		offset?:OffsetOptions
+		offset?: OffsetOptions
 		/**
 		 * @default false
 		 */
-		open?:boolean
+		open?: boolean
 		/**
 		 * @default false
 		 */
-		disabled?:boolean
+		disabled?: boolean
 		/**
 		 * @default 'hover'
 		 */
-		trigger?:'hover' | false
+		trigger?: 'hover' | false
 		/**
 		 * @default false
 		 */
-		arrow?:boolean
+		arrow?: boolean
 	}
 
 	let className = ''
 	export { className as class }
-	
-	export let placement:$$Props['placement'] = 'top'
-	export let offset:$$Props['offset'] = 5
-	export let open:$$Props['open'] = false
-	export let disabled:$$Props['disabled'] = false
-	export let trigger:$$Props['trigger'] = 'hover'
-	export let arrow:$$Props['arrow'] = false
-	
+
+	export let placement: $$Props['placement'] = 'top'
+	export let offset: $$Props['offset'] = 5
+	export let open: $$Props['open'] = false
+	export let disabled: $$Props['disabled'] = false
+	export let trigger: $$Props['trigger'] = 'hover'
+	export let arrow: $$Props['arrow'] = false
+
 	let targetElementRef = writable<HTMLElement | undefined>(undefined)
 	let contentElementRef = writable<HTMLElement | undefined>(undefined)
 
 	const arrowStore = createPopoverArrowStore()
 
-	const arrowOptions:{
+	const arrowOptions: {
 		middleware: Middleware[]
-		onComputed:NonNullable<IPopoverOptions['onComputed']>
+		onComputed: NonNullable<IPopoverOptions['onComputed']>
 	} = {
-		middleware: arrow ? [arrowMiddleware({
-			element: $arrowStore.element
-		})] : [],
-		onComputed({placement,middlewareData}) {
+		middleware: arrow
+			? [
+					arrowMiddleware({
+						element: $arrowStore.element
+					})
+			  ]
+			: [],
+		onComputed({ placement, middlewareData }) {
 			if (!arrow) {
 				return
 			}
 			const arrowElement = get($arrowStore.element)
-			const { x, y} = middlewareData.arrow || {};
+			const { x, y } = middlewareData.arrow || {}
 
 			const arrowData = {
 				height: arrowElement?.clientHeight || 0,
@@ -77,45 +88,49 @@
 				top: 'bottom',
 				right: 'left',
 				bottom: 'top',
-				left: 'right',
+				left: 'right'
 			}
 
-			const arrowRotateMap:Record<keyof typeof arrowSideMap, `${string}deg`> = {
-				'top': '0deg',
-				'right': '90deg',
-				'bottom': '180deg',
-				'left': '-90deg',
+			const arrowRotateMap: Record<keyof typeof arrowSideMap, `${string}deg`> = {
+				top: '0deg',
+				right: '90deg',
+				bottom: '180deg',
+				left: '-90deg'
 			}
 
-			const contentPlacement = (placement.split('-')[0] || 'bottom') as unknown as keyof typeof arrowSideMap
+			const contentPlacement = (placement.split('-')[0] ||
+				'bottom') as unknown as keyof typeof arrowSideMap
 
 			const arrowSide = arrowSideMap[contentPlacement]
 			const rotate = arrowRotateMap[contentPlacement]
 
-			const styles:Record<string, string> = {
+			const styles: Record<string, string> = {
 				left: x != null ? `${x}px` : '',
 				top: y != null ? `${y}px` : '',
 				transform: `rotate(${rotate})`
 			}
 
-			styles[arrowSide] = `-${['bottom', 'top'].includes(contentPlacement) ? arrowData.height : ((arrowData.width + arrowData.height) / 2)}px`,
-
-			$arrowStore.styles = styles
+			;(styles[arrowSide] = `-${
+				['bottom', 'top'].includes(contentPlacement)
+					? arrowData.height
+					: (arrowData.width + arrowData.height) / 2
+			}px`),
+				($arrowStore.styles = styles)
 		}
 	}
 
-	const defOptions:IPopoverOptions = {
+	const defOptions: IPopoverOptions = {
 		middleware: [
 			sizeMiddleware({
-				apply({availableHeight, elements}) {
+				apply({ availableHeight, elements }) {
 					if (availableHeight < 150) {
 						availableHeight = 150
 					} else if (availableHeight > 350) {
 						availableHeight = 350
-					} 
+					}
 					Object.assign(elements.floating.style, {
-						maxHeight: `${availableHeight}px`,
-					});
+						maxHeight: `${availableHeight}px`
+					})
 				}
 			}),
 			offsetMiddleware((data) => {
@@ -125,12 +140,16 @@
 				const arrowElement = get($arrowStore.element)
 
 				const arrowData = {
-					height: arrowElement?.clientHeight || 0,
+					height: arrowElement?.clientHeight || 0
 				}
-				
+
 				if (arrow) {
 					if (typeof offset === 'object') {
-						return Object.fromEntries(Object.entries(offset).map(([key, val]) => val ? [key, val = val + arrowData.height] : [key]))
+						return Object.fromEntries(
+							Object.entries(offset).map(([key, val]) =>
+								val ? [key, (val = val + arrowData.height)] : [key]
+							)
+						)
 					} else if (offset) {
 						return offset + arrowData.height
 					} else {
@@ -142,8 +161,7 @@
 			}),
 			shiftMiddleware(),
 			flipMiddleware(),
-			...(arrowOptions.middleware)
-
+			...arrowOptions.middleware
 		],
 		onComputed(computed) {
 			arrowOptions.onComputed(computed)
@@ -164,16 +182,22 @@
 				contentElementRef.set(undefined)
 			}
 		},
-		trigger: trigger === 'hover' ? new HoverTrigger({
-			content: contentElementRef,
-			target: targetElementRef
-		},{
-			open: () => !disabled && setOpen(true),
-			close: () => !disabled && setOpen(false)
-		}) : undefined
+		trigger:
+			trigger === 'hover'
+				? new HoverTrigger(
+						{
+							content: contentElementRef,
+							target: targetElementRef
+						},
+						{
+							open: () => !disabled && setOpen(true),
+							close: () => !disabled && setOpen(false)
+						}
+				  )
+				: undefined
 	}
 
-	export const setOpen = (_open:typeof open) => {
+	export const setOpen = (_open: typeof open) => {
 		open = _open
 	}
 
@@ -181,23 +205,21 @@
 		setOpen(!open)
 	}
 
-	const {
-		targetAction,
-		contentAction,
-		update
-	} = createPopoverActions({
+	const { targetAction, contentAction, update } = createPopoverActions({
 		...defOptions,
-		placement,
+		placement
 	})
 
-	const contextStore = context.set(writable({
-		targetAction,
-		contentAction,
-		update,
-		arrow,
-		arrowStore,
-		placement,
-	}))
+	const contextStore = context.set(
+		writable({
+			targetAction,
+			contentAction,
+			update,
+			arrow,
+			arrowStore,
+			placement
+		})
+	)
 
 	$: $contextStore.arrow = arrow
 	$: $contextStore.placement = placement
@@ -209,24 +231,22 @@
 		})
 		arrow
 	}
-
 </script>
 
-<slot name='target' {targetAction} {update}>
+<slot name="target" {targetAction} {update}>
 	<PopoverTarget class={generateClassNames([className])}>
-		<slot/>
+		<slot />
 	</PopoverTarget>
 </slot>
 
-
-<slot name='content-wrapper' {contentAction} {update} {open}>
+<slot name="content-wrapper" {contentAction} {update} {open}>
 	{#if $$slots.content && open}
 		<PopoverContent>
-			<slot name='content'/>
-			<svelte:fragment slot='arrow'>
-				<slot name='arrow'>
+			<slot name="content" />
+			<svelte:fragment slot="arrow">
+				<slot name="arrow">
 					{#if arrow}
-						<PopoverArrow/>
+						<PopoverArrow />
 					{/if}
 				</slot>
 			</svelte:fragment>

@@ -1,8 +1,8 @@
 @mixin label-name-vars() {
-    //label
-    --clue-label-name-font-size: 16px;
-    --clue-label-name-font-weight: 400;
-    --clue-label-name-color: #484B5B;
-    --clue-label-name-color-hover: #000;
-    --clue-label-name-color-disabled: var(--clue-color-gray-200);
+	//label
+	--clue-label-name-font-size: 16px;
+	--clue-label-name-font-weight: 400;
+	--clue-label-name-color: #484b5b;
+	--clue-label-name-color-hover: #000;
+	--clue-label-name-color-disabled: var(--clue-color-gray-200);
 }

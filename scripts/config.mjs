@@ -1,3 +1,3 @@
 export default {
-    buildDir: 'dist'
+	buildDir: 'dist'
 }

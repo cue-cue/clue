@@ -1,19 +1,19 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
 	import { fieldContext } from '../FieldContext/index.js'
 	import { writable } from 'svelte/store'
 
 	interface $$Props {
-		class?:string
+		class?: string
 	}
-	
+
 	let className = ''
 	export { className as class }
 
 	const fieldContextData = fieldContext.get() || writable({})
 
 	const handler = {
-		click(e:MouseEvent) {
+		click(e: MouseEvent) {
 			if ($fieldContextData.manual) e.preventDefault()
 		}
 	}
@@ -27,7 +27,7 @@
 	data-disabled={$fieldContextData.disabled}
 	on:click={handler.click}
 >
-	<slot/>
+	<slot />
 </label>
 
 <style lang="sass">

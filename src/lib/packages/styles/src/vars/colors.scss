@@ -1,23 +1,23 @@
 @import '../generators/color';
 
 @mixin vars-colors() {
-    --clue-color-white: #fff;
-    @include color-primary-generator(#5B4C9F);
-    @include color-active-generator(#EECD47);
-    @include color-positive-generator(#839E44);
-    @include color-negative-generator(#D15A45);
-    @include color-generator('gray', #5F6377);
-    @include color-generator('blue', #C9E2EE);
+	--clue-color-white: #fff;
+	@include color-primary-generator(#5b4c9f);
+	@include color-active-generator(#eecd47);
+	@include color-positive-generator(#839e44);
+	@include color-negative-generator(#d15a45);
+	@include color-generator('gray', #5f6377);
+	@include color-generator('blue', #c9e2ee);
 
-    --clue-color-txt-placeholder: var(--clue-color-gray-200);
+	--clue-color-txt-placeholder: var(--clue-color-gray-200);
 
-    --clue-color-button-action-bg-disabled: #E8E9ED;
+	--clue-color-button-action-bg-disabled: #e8e9ed;
 
-    --clue-color-border-disabled: #E8E9ED;
-    --clue-color-border: var(--clue-color-gray-200);
+	--clue-color-border-disabled: #e8e9ed;
+	--clue-color-border: var(--clue-color-gray-200);
 
-    --clue-color-icon: #32343F;
-    --clue-color-icon-secondary: #5F6377;
+	--clue-color-icon: #32343f;
+	--clue-color-icon-secondary: #5f6377;
 
-    --clue-color-bg-secondary: #F3F3F7;
+	--clue-color-bg-secondary: #f3f3f7;
 }

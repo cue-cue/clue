@@ -1,25 +1,24 @@
-<script lang='ts'>
-	import {PopoverArrow, PopoverContent} from "@cluue/popover"
+<script lang="ts">
+	import { PopoverArrow, PopoverContent } from '@cluue/popover'
 
-    interface $$Props {
-        class?:string
-        size?:'small' | 'medium'
-        theme?:'light' | 'dark'
-    }
-    
-    let className = ''
-    export { className as class }
-    export let size:$$Props['size'] = undefined
-    export let theme:$$Props['theme'] = undefined
-    
+	interface $$Props {
+		class?: string
+		size?: 'small' | 'medium'
+		theme?: 'light' | 'dark'
+	}
+
+	let className = ''
+	export { className as class }
+	export let size: $$Props['size'] = undefined
+	export let theme: $$Props['theme'] = undefined
 </script>
 
 <PopoverContent class={`TooltipContent ${className}`} data-size={size} data-theme={theme}>
-    <slot/>
-    <PopoverArrow/>
+	<slot />
+	<PopoverArrow />
 </PopoverContent>
 
-<style lang='sass'>
+<style lang="sass">
     :global(.ClueTooltipContent)
         --background-color: var(--clue-color-gray-700)
         --clue-popover-arrow-background-color: var(--background-color)

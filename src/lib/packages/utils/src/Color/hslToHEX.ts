@@ -7,11 +7,11 @@ export const hslToHEX: ColorTransferHEX = (hsl: string) => {
 		.split(',')
 		.map((val) => parseFloat(val))
 
-    if (l > 100) {
-        l = 100
-    } else if (l < 0) {
-        l = 0
-    }
+	if (l > 100) {
+		l = 100
+	} else if (l < 0) {
+		l = 0
+	}
 
 	s /= 100
 	l /= 100

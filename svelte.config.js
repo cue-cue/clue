@@ -1,20 +1,17 @@
-import adapter from '@sveltejs/adapter-netlify';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import adapter from '@sveltejs/adapter-netlify'
+import { vitePreprocess } from '@sveltejs/kit/vite'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	compilerOptions: {
 		cssHash: (t) => {
 			return `clue-${t.hash(t.css + t.name + t.filename)}`
-		},
+		}
 	},
-	preprocess: [
-		vitePreprocess()
-	],
+	preprocess: [vitePreprocess()],
 	kit: {
-		adapter: adapter(),
-		
+		adapter: adapter()
 	}
-};
+}
 
-export default config;
+export default config

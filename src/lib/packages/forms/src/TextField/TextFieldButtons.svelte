@@ -1,38 +1,44 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
 	import { textFieldBaseContext, textFieldButtonsContext } from './context.js'
 	import { writable } from 'svelte/store'
 	import { onMount } from 'svelte'
 
 	interface $$Props {
-		class?:string
-		autoHide?:boolean
-		size?:'small' | 'medium' | 'large'
+		class?: string
+		autoHide?: boolean
+		size?: 'small' | 'medium' | 'large'
 	}
-	
+
 	let className = ''
 	export { className as class }
-	export let autoHide:$$Props['autoHide'] = true
-	export let size:$$Props['size'] = undefined
-
+	export let autoHide: $$Props['autoHide'] = true
+	export let size: $$Props['size'] = undefined
 
 	const textFieldBaseContextStore = textFieldBaseContext.get()
-	const textFieldButtonsContextStore = textFieldButtonsContext.set(writable({count: 0, mounted: false}))
+	const textFieldButtonsContextStore = textFieldButtonsContext.set(
+		writable({ count: 0, mounted: false })
+	)
 
-	$: isHidden = autoHide && $textFieldButtonsContextStore.count <= 0 && $textFieldButtonsContextStore.mounted
+	$: isHidden =
+		autoHide && $textFieldButtonsContextStore.count <= 0 && $textFieldButtonsContextStore.mounted
 
 	$: if (textFieldBaseContextStore) {
 		size = $textFieldBaseContextStore.size
 	}
 
-	onMount(() => $textFieldButtonsContextStore.mounted = true)
+	onMount(() => ($textFieldButtonsContextStore.mounted = true))
 </script>
 
-<div class={generateClassNames(['TextFieldButtons', className])} data-hidden={isHidden} data-size={size}>
-	<slot/>
+<div
+	class={generateClassNames(['TextFieldButtons', className])}
+	data-hidden={isHidden}
+	data-size={size}
+>
+	<slot />
 </div>
 
-<style lang='sass'>
+<style lang="sass">
 	.ClueTextFieldButtons
 		--gap: 24px
 		display: flex

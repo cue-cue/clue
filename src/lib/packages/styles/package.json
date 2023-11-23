@@ -1,19 +1,19 @@
 {
-  "name": "@cluue/styles",
-  "version": "1.0.12",
-  "description": "",
-  "private": false,
-  "license": "MIT",
-  "type": "module",
-  "main": "src/index.css",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Nikita Fedorov",
-  "exports": {
-    ".": {
-      "import": "./src/index.css",
-      "svelte": "./src/index.css"
-    }
-  }
+	"name": "@cluue/styles",
+	"version": "1.0.12",
+	"description": "",
+	"private": false,
+	"license": "MIT",
+	"type": "module",
+	"main": "src/index.css",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Nikita Fedorov",
+	"exports": {
+		".": {
+			"import": "./src/index.css",
+			"svelte": "./src/index.css"
+		}
+	}
 }

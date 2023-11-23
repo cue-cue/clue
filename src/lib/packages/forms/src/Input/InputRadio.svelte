@@ -1,34 +1,35 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
-	import type { HTMLInputAttributes } from 'svelte/elements';
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
+	import type { HTMLInputAttributes } from 'svelte/elements'
 
 	interface $$Props extends Omit<HTMLInputAttributes, 'type' | 'checked'> {
-		class?:string
-		group?:string | number
-		id?:string
+		class?: string
+		group?: string | number
+		id?: string
 	}
-	
+
 	let className = ''
 	export { className as class }
 
-	export let group:$$Props['group'] = undefined
-	export let value:$$Props['value'] = undefined
-	export let checked:boolean = false
+	export let group: $$Props['group'] = undefined
+	export let value: $$Props['value'] = undefined
+	export let checked = false
 	checked = false
 </script>
+
 <input
 	class={generateClassNames(['InputRadio', className])}
 	type="radio"
 	bind:group
-	on:keyup 
-	on:keydown 
-	on:keypress 
-	on:focus 
-	on:blur 
-	on:click 
-	on:mouseover 
-	on:mouseenter 
-	on:mouseleave 
+	on:keyup
+	on:keydown
+	on:keypress
+	on:focus
+	on:blur
+	on:click
+	on:mouseover
+	on:mouseenter
+	on:mouseleave
 	on:paste
 	on:change
 	{value}

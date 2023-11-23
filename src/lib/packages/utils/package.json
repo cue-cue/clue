@@ -1,24 +1,24 @@
 {
-  "name": "@cluue/utils",
-  "version": "1.0.12",
-  "description": "",
-  "private": false,
-  "license": "MIT",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Nikita Fedorov",
-  "dependencies": {
-    "@cluue/config": "workspace:*"
-  },
-  "exports": {
-    ".": {
-      "import": "./src/index.js",
-      "svelte": "./src/index.js",
-      "types": "./src/index.d.ts"
-    }
-  }
+	"name": "@cluue/utils",
+	"version": "1.0.12",
+	"description": "",
+	"private": false,
+	"license": "MIT",
+	"main": "src/index.js",
+	"types": "src/index.d.ts",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Nikita Fedorov",
+	"dependencies": {
+		"@cluue/config": "workspace:*"
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.js",
+			"svelte": "./src/index.js",
+			"types": "./src/index.d.ts"
+		}
+	}
 }

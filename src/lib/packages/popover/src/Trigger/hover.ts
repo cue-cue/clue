@@ -1,16 +1,20 @@
-import { get } from "svelte/store"
-import { Trigger } from "."
+import { get } from 'svelte/store'
+import { Trigger } from '.'
 
 export interface IHoverTriggerOptions {
-    delay: [number, number] | number
+	delay: [number, number] | number
 }
 
 export class HoverTrigger extends Trigger {
 	options
-    constructor(elements:Trigger['elements'], events:Trigger['events'], options?:IHoverTriggerOptions) {
-        super(elements, events)
-        this.options = options
-        this.setHandlers({
+	constructor(
+		elements: Trigger['elements'],
+		events: Trigger['events'],
+		options?: IHoverTriggerOptions
+	) {
+		super(elements, events)
+		this.options = options
+		this.setHandlers({
 			target: {
 				mouseenter: () => {
 					this.openWithDelay()
@@ -28,7 +32,7 @@ export class HoverTrigger extends Trigger {
 				}
 			},
 			content: {
-                mouseenter: () => {
+				mouseenter: () => {
 					this.openWithDelay()
 				},
 				mouseleave: (e) => {
@@ -44,32 +48,32 @@ export class HoverTrigger extends Trigger {
 				}
 			}
 		})
-    }
+	}
 
-    openWithDelayTimeout?:ReturnType<typeof setTimeout>
-    openWithDelay() {
-        clearTimeout(this.closeWithDelayTimeout)
-        this.openWithDelayTimeout = setTimeout(() => {
-            this.open()
-        }, this.getDelay().open)
-    }
+	openWithDelayTimeout?: ReturnType<typeof setTimeout>
+	openWithDelay() {
+		clearTimeout(this.closeWithDelayTimeout)
+		this.openWithDelayTimeout = setTimeout(() => {
+			this.open()
+		}, this.getDelay().open)
+	}
 
-    closeWithDelayTimeout?:ReturnType<typeof setTimeout>
-    closeWithDelay() {
-        clearTimeout(this.openWithDelayTimeout)
-        this.closeWithDelayTimeout = setTimeout(() => {
-            this.close()
-        }, this.getDelay().close)
-    }
+	closeWithDelayTimeout?: ReturnType<typeof setTimeout>
+	closeWithDelay() {
+		clearTimeout(this.openWithDelayTimeout)
+		this.closeWithDelayTimeout = setTimeout(() => {
+			this.close()
+		}, this.getDelay().close)
+	}
 
-    getDelay() {
-        let delay = this.options?.delay || [100, 200]
-        if (typeof delay === 'number') {
-            delay = [delay, delay]
-        }
-        return {
-            open: delay[0],
-            close: delay[1],
-        }
-    }
+	getDelay() {
+		let delay = this.options?.delay || [100, 200]
+		if (typeof delay === 'number') {
+			delay = [delay, delay]
+		}
+		return {
+			open: delay[0],
+			close: delay[1]
+		}
+	}
 }

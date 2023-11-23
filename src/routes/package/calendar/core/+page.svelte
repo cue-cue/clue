@@ -1,145 +1,133 @@
-<script lang='ts'>
-	import { Period, Calendar, Disabled, Select, Cell, Block } from "@cluue/calendar-core"
-	import { getAllMinutesByDate } from "@cluue/calendar-utils"
-	import {Button} from "@cluue/base"
-    import dayjs from 'dayjs'
-    
-    let selected:any = undefined
+<script lang="ts">
+	import { Period, Calendar, Disabled, Select, Cell, Block } from '@cluue/calendar-core'
+	import { getAllMinutesByDate } from '@cluue/calendar-utils'
+	import { Button } from '@cluue/base'
+	import dayjs from 'dayjs'
 
-    const periods:Period[] = [
-        new Period({
-            days: [0,1,2,3,4,5,6],
-            start: 30 * 6,
-            end: 30 * 12
-        }),
-        // new Period({
-        //     days: [0,1,2,3],
-        //     start: 30 * 18,
-        //     end: 30 * 30
-        // }),
-        // new Period({
-        //     days: [4],
-        //     start: 0,
-        //     end: 1440
-        // }),
-        // new Period({
-        //     days: [5],
-        //     start: 0,
-        //     end: 600
-        // }),
-        // new Period({
-        //     days: [5],
-        //     start: 1200,
-        //     end: 1440
-        // }),
-    ]
+	let selected: Select['selected'] = undefined
 
-    const platformPeriods:Period[] = [
-        {
-            "days": [
-                "Sa"
-            ],
-            "start": 480,
-            "end": 1080
-        },
-        {
-            "days": [
-                "Fr"
-            ],
-            "start": 900,
-            "end": 1425
-        },
-        {
-            "days": [
-                "Th",
-                "We"
-            ],
-            "start": 195,
-            "end": 1260
-        },
-        {
-            "days": [
-                "Mo",
-                "Tu"
-            ],
-            "start": 90,
-            "end": 1380
-        }
-    ].map(data => new Period(data))
+	const periods: Period[] = [
+		new Period({
+			days: [0, 1, 2, 3, 4, 5, 6],
+			start: 30 * 6,
+			end: 30 * 12
+		})
+		// new Period({
+		//     days: [0,1,2,3],
+		//     start: 30 * 18,
+		//     end: 30 * 30
+		// }),
+		// new Period({
+		//     days: [4],
+		//     start: 0,
+		//     end: 1440
+		// }),
+		// new Period({
+		//     days: [5],
+		//     start: 0,
+		//     end: 600
+		// }),
+		// new Period({
+		//     days: [5],
+		//     start: 1200,
+		//     end: 1440
+		// }),
+	]
 
-    const calendar = new Calendar({
-        step: 30,
-        blocks: [
-            new Block({
-                from: dayjs().startOf('day').add(4, 'hours').toDate(),
-                to: dayjs().startOf('day').add(6, 'hours').toDate()
-            })
-        ],
-        periods: platformPeriods,
-        // disabled: [
-        //     new Disabled({
-        //         from: dayjs().startOf('day').add(23.5, 'hours').toDate(),
-        //         to: dayjs().startOf('day').add(24, 'hours').toDate()
-        //     })
-        // ]
-    })
+	const platformPeriods: Period[] = [
+		{
+			days: ['Sa'],
+			start: 480,
+			end: 1080
+		},
+		{
+			days: ['Fr'],
+			start: 900,
+			end: 1425
+		},
+		{
+			days: ['Th', 'We'],
+			start: 195,
+			end: 1260
+		},
+		{
+			days: ['Mo', 'Tu'],
+			start: 90,
+			end: 1380
+		}
+	].map((data) => new Period(data))
 
-    const select = new Select({
-        calendar,
-        on: {
-            set(value) {
-                selected = value
-            }
-        },
-        options: {
-            allowBetweenDays: true,
-            // minTimeLength: 60,
-            // fixTimeLength: 120
-        }
-    })
+	const calendar = new Calendar({
+		step: 30,
+		blocks: [
+			new Block({
+				from: dayjs().startOf('day').add(4, 'hours').toDate(),
+				to: dayjs().startOf('day').add(6, 'hours').toDate()
+			})
+		],
+		periods: periods
+		// disabled: [
+		//     new Disabled({
+		//         from: dayjs().startOf('day').add(23.5, 'hours').toDate(),
+		//         to: dayjs().startOf('day').add(24, 'hours').toDate()
+		//     })
+		// ]
+	})
 
-    const onClick = () => {
-        console.log({
-            // cellList
-        })
-    }
+	const select = new Select({
+		calendar,
+		on: {
+			set(value) {
+				selected = value
+			}
+		},
+		options: {
+			allowBetweenDays: true
+			// minTimeLength: 60,
+			// fixTimeLength: 120
+		}
+	})
 
-    const onCellClick = (event:MouseEvent, cell:Cell) => {
-        
-        select.select(cell, {
-            mode: event.shiftKey ? 'range' : 'single'
-        })
-    }
+	const onClick = () => {
+		console.log({
+			// cellList
+		})
+	}
 
+	const onCellClick = (event: MouseEvent, cell: Cell) => {
+		select.select(cell, {
+			mode: event.shiftKey ? 'range' : 'single'
+		})
+	}
 </script>
 
 <h2>Calendar Core</h2>
-{JSON.stringify(selected)} <br>
+{JSON.stringify(selected)} <br />
 <Button on:click={onClick}>Test Calendar (console)</Button>
 
 <ul style="display: flex">
-    {#each [-1,0,1,2,3,4,5] as day}
-        {@const date = dayjs().startOf('day').add(day, 'day').toDate()}
-        <li>
-            <h5>{date.toDateString()}</h5>
-            <ul style='list-style: none; padding: 0'>
-                {#each calendar.createCellList({
-                    date
-                }).cells as cell}
-                    <li>
-                        <Button
-                            size='small'
-                            on:click={(e) => onCellClick(e, cell)}
-                            type={selected && select.check(cell) ? 'primary' : 'ghost'}
-                            disabled={calendar.isDisabled(cell).disabled}
-                        >
-                            <small>{getAllMinutesByDate(cell.from)}</small> {dayjs(cell.from).format('HH:mm')} - <small>{getAllMinutesByDate(cell.to)}</small> {dayjs(cell.to).format('HH:mm')}
-                        </Button>
-                    </li>
-                {/each}
-            </ul>
-        </li>
-    {/each}
+	{#each [-1, 0, 1, 2, 3, 4, 5] as day}
+		{@const date = dayjs().startOf('day').add(day, 'day').toDate()}
+		<li>
+			<h5>{date.toDateString()}</h5>
+			<ul style="list-style: none; padding: 0">
+				{#each calendar.createCellList({ date }).cells as cell}
+					<li>
+						<Button
+							size="small"
+							on:click={(e) => onCellClick(e, cell)}
+							type={selected && select.check(cell) ? 'primary' : 'ghost'}
+							disabled={calendar.isDisabled(cell).disabled}
+						>
+							<small>{getAllMinutesByDate(cell.from)}</small>
+							{dayjs(cell.from).format('HH:mm')} - <small>{getAllMinutesByDate(cell.to)}</small>
+							{dayjs(cell.to).format('HH:mm')}
+						</Button>
+					</li>
+				{/each}
+			</ul>
+		</li>
+	{/each}
 </ul>
 
 <h5>periods</h5>

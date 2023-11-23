@@ -1,50 +1,50 @@
-<script lang='ts'>
-    import {Button} from "@cluue/base"
-    import { Popover } from "@cluue/popover"
-	import type { ComponentProps } from "svelte"
+<script lang="ts">
+	import { Button } from '@cluue/base'
+	import { Popover } from '@cluue/popover'
+	import type { ComponentProps } from 'svelte'
 
-    const items:Array<ComponentProps<Popover> & {id:string}> = [
-        {
-            id: 'Base'
-        },
-        {
-            id: 'Placement: top',
-            placement: 'top'
-        },
-        {
-            id: 'Placement: bottom',
-            placement: 'bottom'
-        },
-        {
-            id: 'Placement: right',
-            placement: 'right'
-        },
-        {
-            id: 'Placement: left',
-            placement: 'left'
-        }
-    ]
+	const items: Array<ComponentProps<Popover> & { id: string }> = [
+		{
+			id: 'Base'
+		},
+		{
+			id: 'Placement: top',
+			placement: 'top'
+		},
+		{
+			id: 'Placement: bottom',
+			placement: 'bottom'
+		},
+		{
+			id: 'Placement: right',
+			placement: 'right'
+		},
+		{
+			id: 'Placement: left',
+			placement: 'left'
+		}
+	]
 </script>
 
 <h2>Popover</h2>
-<ul class='popover-list'>
-    {#each items as {id, ...item} (id)}
-        <li>
-            <h3>{id}</h3>
-            <pre>{JSON.stringify(item)}</pre>
-            <Popover {...item}>
-                <Button>Popover</Button>
-                <svelte:fragment slot='content'>
-                    <Popover {...item}>
-                        <Button size='small'>Hovvvver me 💜</Button>
-                        <svelte:fragment slot='content'>
-                            <Button size='small'>Cuuue💜</Button>
-                        </svelte:fragment>
-                    </Popover>
-                </svelte:fragment>
-            </Popover>
-        </li>
-    {/each}
+<ul class="popover-list">
+	{#each items as { id, ...item } (id)}
+		<li>
+			<h3>{id}</h3>
+			<pre>{JSON.stringify(item)}</pre>
+			<Popover {...item}>
+				<Button>Popover</Button>
+				<svelte:fragment slot="content">
+					<Popover {...item}>
+						<Button size="small">Hovvvver me 💜</Button>
+						<svelte:fragment slot="content">
+							<Button size="small">Cuuue💜</Button>
+						</svelte:fragment>
+					</Popover>
+				</svelte:fragment>
+			</Popover>
+		</li>
+	{/each}
 </ul>
 
 <style lang="sass">

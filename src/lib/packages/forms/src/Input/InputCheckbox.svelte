@@ -5,11 +5,11 @@
 
 	interface $$Props extends Omit<HTMLInputAttributes, 'type' | 'value'> {
 		class?: string
-		id?:string
+		id?: string
 		type?: Extract<HTMLInputAttributes['type'], 'checkbox' | 'radio'>
 		group: (string | number)[]
 		value: string
-		manual?:boolean
+		manual?: boolean
 	}
 
 	let className = ''
@@ -39,7 +39,7 @@
 		}
 	}
 
-	const onClick = (e:MouseEvent) => {
+	const onClick = (e: MouseEvent) => {
 		if (manual) e.preventDefault()
 	}
 

@@ -1,20 +1,19 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
 
 	interface $$Props {
-		class?:string
+		class?: string
 	}
-	
+
 	let className = ''
 	export { className as class }
-	
 </script>
 
 <div class={generateClassNames(['TextFieldFooter', className])}>
-	<slot/>
+	<slot />
 </div>
 
-<style lang='sass'>
+<style lang="sass">
 	.ClueTextFieldFooter
 		display: flex
 		align-items: center

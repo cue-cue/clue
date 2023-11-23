@@ -1,144 +1,149 @@
-<script lang='ts'>
-	import Icon from "$lib/packages/icons/src/components/Icon.svelte"
-    import { Color } from "@cluue/utils"
-    import customColorIcon from '@cluue/icons/line/cursor-click.svg?clue'
-	import { browser } from "$app/environment"
-	import { derived } from "svelte/store"
-	import { colorsStore } from "../../../stores/colors.js"
+<script lang="ts">
+	import Icon from '$lib/packages/icons/src/components/Icon.svelte'
+	import { Color } from '@cluue/utils'
+	import customColorIcon from '@cluue/icons/line/cursor-click.svg?clue'
+	import { browser } from '$app/environment'
+	import { derived } from 'svelte/store'
+	import { colorsStore } from '../../../stores/colors.js'
 
-    const colors = ['primary', 'gray', 'active', 'blue', 'positive', 'negative']
-    const values = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990]
+	const colors = ['primary', 'gray', 'active', 'blue', 'positive', 'negative']
+	const values = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990]
 
-    const getVariants = (color:string) => {
-        return values.map(value => {
-            return {
-                color,
-                value,
-                cssVar: `--clue-color-${color}-${value}`
-            }
-        })
-    }
+	const getVariants = (color: string) => {
+		return values.map((value) => {
+			return {
+				color,
+				value,
+				cssVar: `--clue-color-${color}-${value}`
+			}
+		})
+	}
 
-    const getVariantsFromHSL = ({data}:ReturnType<typeof Color.hexToHSL>) => {
-        return values.map(value => {
-            let l = data.l + ((500 - value) / 10)
-            if (l > 100) {
-                l = 100
-            } else if (l < 0) {
-                l = 0
-            }
-            const hsl = `hsl(${data.h}, ${data.s}%, ${l}%)`
-            return {
-                value,
-                hsl,
-                hex: Color.hslToHEX(hsl).color
-            }
-        })
-    }
+	const getVariantsFromHSL = ({ data }: ReturnType<typeof Color.hexToHSL>) => {
+		return values.map((value) => {
+			let l = data.l + (500 - value) / 10
+			if (l > 100) {
+				l = 100
+			} else if (l < 0) {
+				l = 0
+			}
+			const hsl = `hsl(${data.h}, ${data.s}%, ${l}%)`
+			return {
+				value,
+				hsl,
+				hex: Color.hslToHEX(hsl).color
+			}
+		})
+	}
 
-    const cssVarColorValue = derived(colorsStore, () => {
-        return {
-            get(cssVar:string) {
-                if (browser) {
-                    const bodyColor = getComputedStyle(document.body).getPropertyValue(cssVar)
-                    const color = bodyColor || getComputedStyle(document.documentElement).getPropertyValue(cssVar)
-                    let hsl = ''
-                    let hex = ''
-                    if (color.includes('hsl(')) {
-                        hsl = color
-                        hex = Color.hslToHEX(color).color
-                    } else {
-                        hex = color
-                        hsl = Color.hexToHSL(color).color
-                    }
-                    return {
-                        hsl,
-                        hex
-                    }
-                }
-                return undefined
-            }
-        }
-    })
+	const cssVarColorValue = derived(colorsStore, () => {
+		return {
+			get(cssVar: string) {
+				if (browser) {
+					const bodyColor = getComputedStyle(document.body).getPropertyValue(cssVar)
+					const color =
+						bodyColor || getComputedStyle(document.documentElement).getPropertyValue(cssVar)
+					let hsl = ''
+					let hex = ''
+					if (color.includes('hsl(')) {
+						hsl = color
+						hex = Color.hslToHEX(color).color
+					} else {
+						hex = color
+						hsl = Color.hexToHSL(color).color
+					}
+					return {
+						hsl,
+						hex
+					}
+				}
+				return undefined
+			}
+		}
+	})
 
-    const copyAction = (node:HTMLElement, val?:string) => {
-        let text = val
-        let timeout:ReturnType<typeof setTimeout>
-        const attr = 'data-copying'
-        const handleClick = () => {
-            if (text) {
-                navigator.clipboard.writeText(text)
-                clearTimeout(timeout)
-                node.setAttribute(attr, '')
-                timeout = setTimeout(() => {
-                    node.removeAttribute(attr)
-                }, 400)
-            }
-        }
+	const copyAction = (node: HTMLElement, val?: string) => {
+		let text = val
+		let timeout: ReturnType<typeof setTimeout>
+		const attr = 'data-copying'
+		const handleClick = () => {
+			if (text) {
+				navigator.clipboard.writeText(text)
+				clearTimeout(timeout)
+				node.setAttribute(attr, '')
+				timeout = setTimeout(() => {
+					node.removeAttribute(attr)
+				}, 400)
+			}
+		}
 
-        node.addEventListener('click', handleClick)
+		node.addEventListener('click', handleClick)
 
-        return {
-            update(val:typeof text) {
-                text = val
-            },
-            destroy() {
-                node.removeEventListener('click', handleClick)
-            }
-        }
-    }
+		return {
+			update(val: typeof text) {
+				text = val
+			},
+			destroy() {
+				node.removeEventListener('click', handleClick)
+			}
+		}
+	}
 
-    let customColor = '#cda7cd'
-    $: customHSLResult = Color.hexToHSL(customColor)
+	let customColor = '#cda7cd'
+	$: customHSLResult = Color.hexToHSL(customColor)
 </script>
 
 <h2>Colors</h2>
-<div class='custom-color' style:--color={customHSLResult.color}>
-    <!-- svelte-ignore a11y-label-has-associated-control -->
-    <label class='color-picker' style={`box-shadow: ${customColor.toLowerCase() === '#ffffff' ? '0 0 0 5px var(--clue-color-primary-100)' : 'none'}`}>
-        <Icon icon={customColorIcon}/>
-        <input type='color' bind:value={customColor}/>
-        <span>{customColor}</span>
-    </label>
-    <ul class='color-list'>
-        <li>
-            <h3>Custom color: {customColor}</h3>
-            <ul class='variant-list'>
-                {#each getVariantsFromHSL(customHSLResult) as data (data.value)}
-                    <li style:--color={data.hex} data-value={data.value}>
-                        <button use:copyAction={data.hsl}>
-                            <span>
-                                <b>{data.hex}</b>
-                                <small>{data.hsl.replace(/[\s(hsl)]/gi, '')}</small>
-                            </span>
-                        </button>
-                    </li>
-                {/each}
-            </ul>
-        </li>
-    </ul>
+<div class="custom-color" style:--color={customHSLResult.color}>
+	<label
+		class="color-picker"
+		style={`box-shadow: ${
+			customColor.toLowerCase() === '#ffffff' ? '0 0 0 5px var(--clue-color-primary-100)' : 'none'
+		}`}
+	>
+		<Icon icon={customColorIcon} />
+		<input type="color" bind:value={customColor} />
+		<span>{customColor}</span>
+	</label>
+	<ul class="color-list">
+		<li>
+			<h3>Custom color: {customColor}</h3>
+			<ul class="variant-list">
+				{#each getVariantsFromHSL(customHSLResult) as data (data.value)}
+					<li style:--color={data.hex} data-value={data.value}>
+						<button use:copyAction={data.hsl}>
+							<span>
+								<b>{data.hex}</b>
+								<small>{data.hsl.replace(/[\s(hsl)]/gi, '')}</small>
+							</span>
+						</button>
+					</li>
+				{/each}
+			</ul>
+		</li>
+	</ul>
 </div>
-<ul class='color-list'>
-    {#each colors as color (color)}
-        <li>
-            <h3>{color}</h3>
-            <ul class='variant-list'>
-                {#each getVariants(color) as data (data.value)}
-                    {@const cssVarValue = $cssVarColorValue.get(data.cssVar)}
-                    <li style:--color={`var(${data.cssVar})`} data-value={data.value}>
-                        <button use:copyAction={cssVarValue?.hsl}>
-                            {#if cssVarValue}
-                                <span>
-                                    <b>{cssVarValue.hex}</b>
-                                    <small>{cssVarValue.hsl.replace(/[\s(hsl)deg]/gi, '')}</small>
-                                </span>
-                            {/if}
-                        </button>
-                    </li>
-                {/each}
-            </ul>
-        </li>
-    {/each}
+<ul class="color-list">
+	{#each colors as color (color)}
+		<li>
+			<h3>{color}</h3>
+			<ul class="variant-list">
+				{#each getVariants(color) as data (data.value)}
+					{@const cssVarValue = $cssVarColorValue.get(data.cssVar)}
+					<li style:--color={`var(${data.cssVar})`} data-value={data.value}>
+						<button use:copyAction={cssVarValue?.hsl}>
+							{#if cssVarValue}
+								<span>
+									<b>{cssVarValue.hex}</b>
+									<small>{cssVarValue.hsl.replace(/[\s(hsl)deg]/gi, '')}</small>
+								</span>
+							{/if}
+						</button>
+					</li>
+				{/each}
+			</ul>
+		</li>
+	{/each}
 </ul>
 
 <style lang="sass">

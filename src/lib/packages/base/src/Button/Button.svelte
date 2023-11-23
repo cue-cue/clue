@@ -1,33 +1,33 @@
-<script lang='ts'>
-    import {generateClassNames} from '@cluue/utils'
-	import ButtonField from './ButtonField.svelte';
-	import type { ComponentProps } from 'svelte';
-	import ButtonIcon from './ButtonIcon.svelte';
-	import type { HTMLLinkAttributes } from 'svelte/elements';
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
+	import ButtonField from './ButtonField.svelte'
+	import type { ComponentProps } from 'svelte'
+	import ButtonIcon from './ButtonIcon.svelte'
+	import type { HTMLLinkAttributes } from 'svelte/elements'
 
-    interface $$Props extends Omit<ComponentProps<ButtonField>, 'tag' | 'style'> {
-        class?:string
-        href?:HTMLLinkAttributes['href']
-        startIcon?:ComponentProps<ButtonIcon>['icon']
-        endIcon?:ComponentProps<ButtonIcon>['icon']
-        size?:'small' | 'medium' | 'large'
-    }
-    
-    let className = ''
-    export { className as class }
+	interface $$Props extends Omit<ComponentProps<ButtonField>, 'tag' | 'style'> {
+		class?: string
+		href?: HTMLLinkAttributes['href']
+		startIcon?: ComponentProps<ButtonIcon>['icon']
+		endIcon?: ComponentProps<ButtonIcon>['icon']
+		size?: 'small' | 'medium' | 'large'
+	}
 
-    export let href:$$Props['href'] = undefined
-    export let startIcon:$$Props['startIcon'] = undefined
-    export let endIcon:$$Props['endIcon'] = undefined
-    export let size:$$Props['size'] = undefined
+	let className = ''
+	export { className as class }
+
+	export let href: $$Props['href'] = undefined
+	export let startIcon: $$Props['startIcon'] = undefined
+	export let endIcon: $$Props['endIcon'] = undefined
+	export let size: $$Props['size'] = undefined
 </script>
 
 <ButtonField
-    class={generateClassNames(['Button', className])}
-    tag={href ? 'a' : 'button'}
-    {href}
-    data-size={size}
-    on:click
+	class={generateClassNames(['Button', className])}
+	tag={href ? 'a' : 'button'}
+	{href}
+	data-size={size}
+	on:click
 	on:dblclick
 	on:mousedown
 	on:mouseenter
@@ -37,18 +37,18 @@
 	on:mouseover
 	on:mouseup
 	on:contextmenu
-    {...$$restProps}
+	{...$$restProps}
 >
-    {#if startIcon}
-        <ButtonIcon icon={startIcon} class={generateClassNames(['Button__icon_start'])}/>
-    {/if}
-    <span><slot/></span>
-    {#if endIcon}
-        <ButtonIcon icon={endIcon} class={generateClassNames(['Button__icon_end'])}/>
-    {/if}
+	{#if startIcon}
+		<ButtonIcon icon={startIcon} class={generateClassNames(['Button__icon_start'])} />
+	{/if}
+	<span><slot /></span>
+	{#if endIcon}
+		<ButtonIcon icon={endIcon} class={generateClassNames(['Button__icon_end'])} />
+	{/if}
 </ButtonField>
 
-<style lang='sass'>
+<style lang="sass">
     @import './Button'
     :global(body)
         +button-vars()

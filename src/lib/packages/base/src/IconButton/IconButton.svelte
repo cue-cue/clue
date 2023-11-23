@@ -1,23 +1,23 @@
-<script lang='ts'>
-	import {generateClassNames} from '@cluue/utils'
-	import ButtonField from '../Button/ButtonField.svelte';
-	import { Icon } from '@cluue/icons';
-	import type { ComponentProps } from 'svelte';
-	import type { HTMLLinkAttributes } from 'svelte/elements';
+<script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
+	import ButtonField from '../Button/ButtonField.svelte'
+	import { Icon } from '@cluue/icons'
+	import type { ComponentProps } from 'svelte'
+	import type { HTMLLinkAttributes } from 'svelte/elements'
 
 	interface $$Props extends Omit<ComponentProps<ButtonField>, 'tag'> {
-		class?:string
-		href?:HTMLLinkAttributes['href']
-		icon:ComponentProps<Icon>['icon']
-		size?:'small' | 'medium' | 'large'
+		class?: string
+		href?: HTMLLinkAttributes['href']
+		icon: ComponentProps<Icon>['icon']
+		size?: 'small' | 'medium' | 'large'
 	}
-	
+
 	let className = ''
 	export { className as class }
 
-	export let href:$$Props['href'] = undefined
-	export let size:$$Props['size'] = 'medium'
-	export let icon:$$Props['icon']
+	export let href: $$Props['href'] = undefined
+	export let size: $$Props['size'] = 'medium'
+	export let icon: $$Props['icon']
 </script>
 
 <ButtonField
@@ -27,10 +27,10 @@
 	{href}
 	{...$$restProps}
 >
-	<Icon {icon}/>
+	<Icon {icon} />
 </ButtonField>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './IconButton'
 	:global(body)
 		+icon-button-vars()

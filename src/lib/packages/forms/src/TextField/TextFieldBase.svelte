@@ -1,52 +1,55 @@
-<script lang='ts'>
-	import {generateClassNames, actionList, type ActionListParams} from '@cluue/utils'
-	import Input from '../Input/Input.svelte';
-	import type { ComponentProps } from 'svelte';
-	import { context, textFieldBaseContext } from './context.js';
-	import { writable } from 'svelte/store';
-	import TextFieldButtons from './TextFieldButtons.svelte';
+<script lang="ts">
+	import { generateClassNames, actionList, type ActionListParams } from '@cluue/utils'
+	import Input from '../Input/Input.svelte'
+	import type { ComponentProps } from 'svelte'
+	import { context, textFieldBaseContext } from './context.js'
+	import { writable } from 'svelte/store'
+	import TextFieldButtons from './TextFieldButtons.svelte'
 
-	type InputTypes = Extract<ComponentProps<Input>['type'], 'password' | 'email' | 'text' | 'url' | 'tel'>
+	type InputTypes = Extract<
+		ComponentProps<Input>['type'],
+		'password' | 'email' | 'text' | 'url' | 'tel'
+	>
 
-	interface $$Props extends Omit<ComponentProps<Input>, 'type' | 'size'>, Partial<Record<`data-${string}`, string>> {
-		class?:string
-		error?:boolean
-		type?:InputTypes
-		focused?:boolean
-		use?:ActionListParams
-		nodeElement?:HTMLElement
-		slots?:Partial<Record<keyof typeof $$slots, boolean>>
-		size?:'small' | 'medium'
+	interface $$Props
+		extends Omit<ComponentProps<Input>, 'type' | 'size'>,
+			Partial<Record<`data-${string}`, string>> {
+		class?: string
+		error?: boolean
+		type?: InputTypes
+		focused?: boolean
+		use?: ActionListParams
+		nodeElement?: HTMLElement
+		slots?: Partial<Record<keyof typeof $$slots, boolean>>
+		size?: 'small' | 'medium'
 	}
 
-	
 	let className = ''
 	export { className as class }
-	export let error:$$Props['error'] = undefined
-	export let disabled:$$Props['disabled'] = undefined
-	export let value:$$Props['value'] = ''
-	export let type:$$Props['type'] = 'text'
-	export let focused:$$Props['focused'] = undefined
-	export let use:$$Props['use'] = undefined
-	export let nodeElement:$$Props['nodeElement'] = undefined
-	export let size:$$Props['size'] = undefined
-	export let slots:$$Props['slots'] = undefined
-	
+	export let error: $$Props['error'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let value: $$Props['value'] = ''
+	export let type: $$Props['type'] = 'text'
+	export let focused: $$Props['focused'] = undefined
+	export let use: $$Props['use'] = undefined
+	export let nodeElement: $$Props['nodeElement'] = undefined
+	export let size: $$Props['size'] = undefined
+	export let slots: $$Props['slots'] = undefined
+
 	const localContext = context.get() || writable({})
 
-	export const inputController:{
-		clear:ComponentProps<Input>['clear']
-		update:ComponentProps<Input>['update']
-		set:ComponentProps<Input>['set']
+	export const inputController: {
+		clear: ComponentProps<Input>['clear']
+		update: ComponentProps<Input>['update']
+		set: ComponentProps<Input>['set']
 	} = {
 		clear: undefined,
 		update: undefined,
-		set: undefined,
+		set: undefined
 	}
 
-	const textFieldBaseContextStore = textFieldBaseContext.set(writable({size}))
-	$: textFieldBaseContextStore.set({size})
-
+	const textFieldBaseContextStore = textFieldBaseContext.set(writable({ size }))
+	$: textFieldBaseContextStore.set({ size })
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -65,7 +68,10 @@
 	on:dblclick
 >
 	{#if $$slots['buttons-start'] && (slots?.['buttons-start'] ?? true)}
-		<TextFieldButtons class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_start'])}><slot name='buttons-start'/></TextFieldButtons>
+		<TextFieldButtons
+			class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_start'])}
+			><slot name="buttons-start" /></TextFieldButtons
+		>
 	{/if}
 	<slot>
 		<Input
@@ -81,13 +87,16 @@
 			{...$$restProps}
 		/>
 	</slot>
-	<span class={generateClassNames(['TextFieldBase__border'])}></span>
+	<span class={generateClassNames(['TextFieldBase__border'])} />
 	{#if $$slots.buttons && (slots?.buttons ?? true)}
-		<TextFieldButtons class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_end'])}><slot name='buttons'/></TextFieldButtons>
+		<TextFieldButtons
+			class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_end'])}
+			><slot name="buttons" /></TextFieldButtons
+		>
 	{/if}
 </div>
 
-<style lang='sass'>
+<style lang="sass">
 	@import './TextFieldBase'
 	:global(body)
 		+text-field-base-vars()
