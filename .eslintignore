@@ -5,6 +5,7 @@ node_modules
 /package
 /dist
 /.netlify
+/.changeset
 /src/**/*.test.*
 /src/**/*.spec.*
 .env
