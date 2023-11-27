@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 1.0.21
+
+### Patch Changes
+
+- Fix bugs
+
 ## 1.0.20
 
 ### Patch Changes

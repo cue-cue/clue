@@ -6,16 +6,18 @@ import { DisabledList } from '../index.js'
 export const sortCells = (cells: Cell[]) => cells.sort((a, b) => +a.from - +b.from)
 
 export const cutCellsByMinMax = (cells: Cell[], min: Date, max: Date) => {
-	return cells.map((cell: Cell) => {
-		const clone = cloneDeep(cell)
-		if (+clone.from < +min) {
-			clone.from = min
-		}
-		if (+clone.to > +max) {
-			clone.to = max
-		}
-		return clone
-	})
+	return cells
+		.map((cell: Cell) => {
+			const clone = cloneDeep(cell)
+			if (+clone.from < +min) {
+				clone.from = min
+			}
+			if (+clone.to > +max) {
+				clone.to = max
+			}
+			return clone
+		})
+		.filter(({ from, to }) => +to - +from > 0) //Filter - Для исключения крайних положений дат. Если их длительность меньше нуля, либо равна ему, то мы исключаем эти слоты
 }
 
 export const cutCellsBySides = (cells: Cell[], dates: Date[]) => {
@@ -44,12 +46,12 @@ export const cutCellsBySides = (cells: Cell[], dates: Date[]) => {
 export const mergeCells = <T extends Cell[], U extends Cell[]>(fromCells: T, toCells: U) => {
 	const croppedFromCells = cutCellsBySides(
 		fromCells,
-		toCells.map(({ from, to }) => [from, to]).flat()
+		toCells.map(({ from, to }) => [from, new Date(+to - 1)]).flat()
 	)
 
 	const croppedFromCellsDisabled = new DisabledList(croppedFromCells)
 
-	const cells = toCells.filter((toCell) => !croppedFromCellsDisabled.isDisabled(toCell).result)
+	const cells = toCells.filter((cell) => !croppedFromCellsDisabled.isDisabled(cell).result)
 
 	return sortCells([...croppedFromCells, ...cells]) as unknown as Array<T[number] | U[number]>
 }

@@ -3,6 +3,7 @@
 	import { getAllMinutesByDate } from '@cluue/calendar-utils'
 	import { Button } from '@cluue/base'
 	import dayjs from 'dayjs'
+	import { BLOCKS } from './blocks.js'
 
 	let selected: Select['selected'] = undefined
 
@@ -59,25 +60,30 @@
 
 	const calendar = new Calendar({
 		step: 30,
-		blocks: [
-			new Block({
-				from: dayjs().startOf('day').add(4, 'hours').toDate(),
-				to: dayjs().startOf('day').add(6, 'hours').toDate()
-			}),
-			new Block({
-				from: dayjs().startOf('day').add(8, 'hours').toDate(),
-				to: dayjs().startOf('day').add(10, 'hours').toDate()
-			}),
-			new Block({
-				from: dayjs().startOf('day').add(1, 'day').add(4, 'hours').toDate(),
-				to: dayjs().startOf('day').add(1, 'day').add(9, 'hours').toDate()
-			}),
-			new Block({
-				from: dayjs().startOf('day').add(1, 'day').add(11, 'hours').toDate(),
-				to: dayjs().startOf('day').add(1, 'day').add(26, 'hours').toDate()
-			})
-		],
-		periods: periods
+		blocks: BLOCKS.map((block) => new Block({ from: new Date(block.from), to: new Date(block.to) }))
+		// blocks: [
+		// 	new Block({
+		// 		from: dayjs().startOf('day').add(20, 'hours').toDate(),
+		// 		to: dayjs().startOf('day').add(24, 'hours').toDate()
+		// 	}),
+		// 	// new Block({
+		// 	// 	from: dayjs().startOf('day').add(4, 'hours').toDate(),
+		// 	// 	to: dayjs().startOf('day').add(6, 'hours').toDate()
+		// 	// }),
+		// 	// new Block({
+		// 	// 	from: dayjs().startOf('day').add(8, 'hours').toDate(),
+		// 	// 	to: dayjs().startOf('day').add(10, 'hours').toDate()
+		// 	// }),
+		// 	// new Block({
+		// 	// 	from: dayjs().startOf('day').add(1, 'day').add(4, 'hours').toDate(),
+		// 	// 	to: dayjs().startOf('day').add(1, 'day').add(9, 'hours').toDate()
+		// 	// }),
+		// 	new Block({
+		// 		from: dayjs().startOf('day').add(1, 'day').add(11, 'hours').toDate(),
+		// 		to: dayjs().startOf('day').add(1, 'day').add(26, 'hours').toDate()
+		// 	})
+		// ],
+		// periods: periods
 		// disabled: [
 		//     new Disabled({
 		//         from: dayjs().startOf('day').add(23.5, 'hours').toDate(),
@@ -107,6 +113,7 @@
 	}
 
 	const onCellClick = (event: MouseEvent, cell: Cell) => {
+		console.log(cell, calendar, calendar.isDisabled(cell))
 		select.select(cell, {
 			mode: event.shiftKey ? 'range' : 'single'
 		})
@@ -132,9 +139,11 @@
 					<li>
 						<Button
 							size="small"
-							on:click={(e) => onCellClick(e, cell)}
-							type={selected && select.check(cell) ? 'primary' : 'ghost'}
-							disabled={calendar.isDisabled(cell).disabled}
+							on:click={(e) => {
+								onCellClick(e, cell)
+								console.log(cells(date))
+							}}
+							type={calendar.isBlockDisabled(cell).result ? 'primary' : 'ghost'}
 						>
 							<small>{getAllMinutesByDate(cell.from)}</small>
 							{dayjs(cell.from).format('HH:mm')} - <small>{getAllMinutesByDate(cell.to)}</small>
