@@ -60,29 +60,29 @@
 
 	const calendar = new Calendar({
 		step: 30,
-		blocks: BLOCKS.map((block) => new Block({ from: new Date(block.from), to: new Date(block.to) }))
-		// blocks: [
-		// 	new Block({
-		// 		from: dayjs().startOf('day').add(20, 'hours').toDate(),
-		// 		to: dayjs().startOf('day').add(24, 'hours').toDate()
-		// 	}),
-		// 	// new Block({
-		// 	// 	from: dayjs().startOf('day').add(4, 'hours').toDate(),
-		// 	// 	to: dayjs().startOf('day').add(6, 'hours').toDate()
-		// 	// }),
-		// 	// new Block({
-		// 	// 	from: dayjs().startOf('day').add(8, 'hours').toDate(),
-		// 	// 	to: dayjs().startOf('day').add(10, 'hours').toDate()
-		// 	// }),
-		// 	// new Block({
-		// 	// 	from: dayjs().startOf('day').add(1, 'day').add(4, 'hours').toDate(),
-		// 	// 	to: dayjs().startOf('day').add(1, 'day').add(9, 'hours').toDate()
-		// 	// }),
-		// 	new Block({
-		// 		from: dayjs().startOf('day').add(1, 'day').add(11, 'hours').toDate(),
-		// 		to: dayjs().startOf('day').add(1, 'day').add(26, 'hours').toDate()
-		// 	})
-		// ],
+		// blocks: BLOCKS.map((block) => new Block({ from: new Date(block.from), to: new Date(block.to) }))
+		blocks: [
+			// new Block({
+			// 	from: dayjs().startOf('day').add(20, 'hours').toDate(),
+			// 	to: dayjs().startOf('day').add(24, 'hours').toDate()
+			// }),
+			// new Block({
+			// 	from: dayjs().startOf('day').add(4, 'hours').toDate(),
+			// 	to: dayjs().startOf('day').add(6, 'hours').toDate()
+			// }),
+			// new Block({
+			// 	from: dayjs().startOf('day').add(8, 'hours').toDate(),
+			// 	to: dayjs().startOf('day').add(10, 'hours').toDate()
+			// }),
+			// new Block({
+			// 	from: dayjs().startOf('day').add(1, 'day').add(4, 'hours').toDate(),
+			// 	to: dayjs().startOf('day').add(1, 'day').add(9, 'hours').toDate()
+			// }),
+			new Block({
+				from: dayjs().startOf('day').add(1, 'day').add(1, 'hours').toDate(),
+				to: dayjs().startOf('day').add(1, 'day').add(66, 'hours').toDate()
+			})
+		]
 		// periods: periods
 		// disabled: [
 		//     new Disabled({

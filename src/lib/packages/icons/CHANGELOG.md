@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 1.0.22
+
+### Patch Changes
+
+- Upgrade features
+
 ## 1.0.21
 
 ### Patch Changes
