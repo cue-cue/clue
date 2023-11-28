@@ -11,6 +11,8 @@ node_modules
 .env
 .env.*
 !.env.example
+/src/lib/packages/icons/src/types
+/src/lib/packages/icons/src/assets
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml

@@ -1,5 +1,17 @@
 # @cluue/calendar-core
 
+## 1.0.37
+
+### Patch Changes
+
+- Fix: drift cells
+
+## 1.0.36
+
+### Patch Changes
+
+- Fix: drift cell
+
 ## 1.0.35
 
 ### Patch Changes

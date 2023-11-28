@@ -41,10 +41,11 @@ export const addToCellList: AddToCellList = (blocks, cells, options) => {
 
 	const driftCells = normalizedDriftList.reduce<Cell[]>((val, drift) => {
 		Object.values(drift).forEach((cell) => {
-			if (cell) {
-				const replacedCell = options?.driftReplacer?.({ cell }) ?? cell
-				val.push(replacedCell)
-			}
+			if (!cell) return val
+			if (val.some(({ from, to }) => +cell.from === +from && +cell.to === +to)) return val
+
+			const replacedCell = options?.driftReplacer?.({ cell }) ?? cell
+			val.push(replacedCell)
 		})
 		return val
 	}, [])

@@ -66,10 +66,22 @@
 			// 	from: dayjs().startOf('day').add(20, 'hours').toDate(),
 			// 	to: dayjs().startOf('day').add(24, 'hours').toDate()
 			// }),
-			// new Block({
-			// 	from: dayjs().startOf('day').add(4, 'hours').toDate(),
-			// 	to: dayjs().startOf('day').add(6, 'hours').toDate()
-			// }),
+			new Block({
+				drift: {
+					before: 60,
+					after: 60
+				},
+				from: dayjs().startOf('day').add(4, 'hours').toDate(),
+				to: dayjs().startOf('day').add(6, 'hours').toDate()
+			}),
+			new Block({
+				drift: {
+					before: 60,
+					after: 60
+				},
+				from: dayjs().startOf('day').add(7, 'hours').toDate(),
+				to: dayjs().startOf('day').add(10, 'hours').toDate()
+			}),
 			// new Block({
 			// 	from: dayjs().startOf('day').add(8, 'hours').toDate(),
 			// 	to: dayjs().startOf('day').add(10, 'hours').toDate()
@@ -142,6 +154,7 @@
 							on:click={(e) => {
 								onCellClick(e, cell)
 								console.log(cells(date))
+								console.log(cell)
 							}}
 							type={calendar.isBlockDisabled(cell).result ? 'primary' : 'ghost'}
 						>
