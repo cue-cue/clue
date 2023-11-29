@@ -1,5 +1,5 @@
 import { get } from 'svelte/store'
-import { Trigger } from '.'
+import { Trigger } from './index.js'
 
 export interface IHoverTriggerOptions {
 	delay: [number, number] | number

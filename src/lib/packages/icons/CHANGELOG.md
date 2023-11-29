@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 1.0.24
+
+### Patch Changes
+
+- Fix boundary
+
 ## 1.0.23
 
 ### Patch Changes

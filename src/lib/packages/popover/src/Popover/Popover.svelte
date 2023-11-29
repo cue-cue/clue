@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { context } from '../context'
+	import { context } from '../context.js'
 	import { get, writable } from 'svelte/store'
-	import { createPopoverActions, type IPopoverOptions } from '../actions'
+	import { createPopoverActions, type IPopoverOptions } from '../actions/index.js'
 	import { arrow as arrowMiddleware, type ComputeConfig } from 'svelte-floating-ui'
 	import { HoverTrigger } from '../Trigger/hover.js'
 	import {
@@ -10,13 +10,15 @@
 		size as sizeMiddleware,
 		flip as flipMiddleware,
 		type OffsetOptions,
-		type Middleware
+		type Middleware,
+		detectOverflow
 	} from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
 	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
-	import { createPopoverArrowStore } from '../PopoverArrow/store'
+	import { createPopoverArrowStore } from '../PopoverArrow/store.js'
 	import { generateClassNames } from '@cluue/utils'
+	import { browser } from '$app/environment'
 
 	interface $$Props {
 		class?: string
@@ -72,6 +74,8 @@
 					})
 			  ]
 			: [],
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		//@ts-ignore
 		onComputed({ placement, middlewareData }) {
 			if (!arrow) {
 				return
@@ -122,16 +126,7 @@
 	const defOptions: IPopoverOptions = {
 		middleware: [
 			sizeMiddleware({
-				apply({ availableHeight, elements }) {
-					if (availableHeight < 150) {
-						availableHeight = 150
-					} else if (availableHeight > 350) {
-						availableHeight = 350
-					}
-					Object.assign(elements.floating.style, {
-						maxHeight: `${availableHeight}px`
-					})
-				}
+				altBoundary: true
 			}),
 			offsetMiddleware((data) => {
 				if (typeof offset === 'function') {
@@ -159,10 +154,16 @@
 					return offset || 0
 				}
 			}),
-			shiftMiddleware(),
-			flipMiddleware(),
+			shiftMiddleware({
+				altBoundary: true
+			}),
+			flipMiddleware({
+				altBoundary: true
+			}),
 			...arrowOptions.middleware
 		],
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		//@ts-ignore
 		onComputed(computed) {
 			arrowOptions.onComputed(computed)
 		},

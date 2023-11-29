@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Writable } from 'svelte/store'
-import type { PopoverEvents } from '../actions'
+import type { PopoverEvents } from '../actions/index.js'
 
 export class Trigger {
 	handlers!: {

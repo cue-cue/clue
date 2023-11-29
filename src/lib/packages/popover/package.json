@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/popover",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
@@ -10,7 +10,7 @@
 	"dependencies": {
 		"@cluue/config": "workspace:*",
 		"@cluue/utils": "workspace:*",
-		"svelte-floating-ui": "^1.5.5"
+		"svelte-floating-ui": "^1.5.8"
 	},
 	"exports": {
 		".": {
