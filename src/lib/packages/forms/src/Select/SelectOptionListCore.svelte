@@ -19,7 +19,7 @@
 >
 	import { writable } from 'svelte/store'
 	import { selectOptionListCoreContext } from './context.js'
-	import { getOptionValueKey as _getOptionValueKey } from './utils.js'
+	import _getOptionValueKey from './utils/getOptionValueKey.js'
 
 	type OptionGenericValue = ValueTypeGeneric extends 'advanced'
 		? OptionsGeneric[number]['value']

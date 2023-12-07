@@ -79,6 +79,7 @@
 		},
 		{
 			name: 'Calendar',
+			href: '/package/calendar',
 			startIcon: calendarIcon,
 			pages: [
 				{

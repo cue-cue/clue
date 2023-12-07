@@ -1,3 +1,12 @@
+<script lang="ts" context="module">
+	import type {
+		OptionsGenericType,
+		ValueTypeGenericType,
+		KeyGenericType,
+		MultipleGenericType
+	} from './SelectOptionListCore.svelte'
+</script>
+
 <script
 	lang="ts"
 	generics="
@@ -7,16 +16,11 @@
 	MultipleGeneric extends MultipleGenericType = false
 "
 >
-	import { PopoverContent } from '@cluue/popover'
+	import getOptionValueKey from './utils/getOptionValueKey.js'
 
-	import { getOptionValueKey } from './utils.js'
+	import { PopoverContent, Popover } from '@cluue/popover'
 
-	import SelectOptionListCore, {
-		type OptionsGenericType,
-		type ValueTypeGenericType,
-		type KeyGenericType,
-		type MultipleGenericType
-	} from './SelectOptionListCore.svelte'
+	import SelectOptionListCore from './SelectOptionListCore.svelte'
 
 	import SelectOptionList from './SelectOptionList.svelte'
 
@@ -26,7 +30,6 @@
 	import SelectBase from './SelectBase.svelte'
 	import type { ComponentProps } from 'svelte'
 	import TextField from '../TextField/TextField.svelte'
-	import { Popover } from '@cluue/popover'
 
 	type SelectBaseProps = ComponentProps<SelectBase>
 	type SelectOptionListCoreProps = ComponentProps<
