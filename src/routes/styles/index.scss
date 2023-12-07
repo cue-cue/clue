@@ -1,11 +1,20 @@
 body {
-	--dot-bg: #fffffe;
-	--dot-color: #2c210018;
+	--dot-bg: #f9f7f4;
+	--dot-color: #2c21002a;
 	--dot-size: 2px;
 	--dot-space: 24px;
-	padding: 0 20px;
+	padding: 0;
+	margin: 0;
 	font-family: var(--clue-font-family);
 	background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--dot-color);
+}
+
+html {
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box
 }
 
 hr {

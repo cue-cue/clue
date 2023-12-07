@@ -38,6 +38,10 @@
 		 * @default false
 		 */
 		arrow?: boolean
+		/**
+		 * @default false
+		 */
+		autoSize?:boolean
 	}
 
 	let className = ''
@@ -49,6 +53,7 @@
 	export let disabled: $$Props['disabled'] = false
 	export let trigger: $$Props['trigger'] = 'hover'
 	export let arrow: $$Props['arrow'] = false
+	export let autoSize: $$Props['autoSize'] = false
 
 	let targetElementRef = writable<HTMLElement | undefined>(undefined)
 	let contentElementRef = writable<HTMLElement | undefined>(undefined)
@@ -143,6 +148,7 @@
 			sizeMiddleware({
 				altBoundary: true,
 				apply({availableWidth, availableHeight, elements}) {
+					if (!autoSize) return
 					const floating = elements.floating as HTMLElement
 					floating.style.setProperty('--available-width', `${availableWidth}px`)
 					floating.style.setProperty('--available-height', `${availableHeight}px`)

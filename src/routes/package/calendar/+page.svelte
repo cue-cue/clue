@@ -1,13 +1,15 @@
 <script lang="ts">
+	import dayjs from 'dayjs'
 	import Button from '$lib/packages/base/src/Button/Button.svelte'
 	import Tooltip from '$lib/packages/base/src/Tooltip/Tooltip.svelte'
+	import {Cell} from '@cluue/calendar'
 	import {CellList} from '@cluue/calendar-core'
 
 	const days = new CellList({
 		date: new Date(),
 		start: 0,
 		step: 1,
-		end: 31,
+		end: 7 * 6,//cols * rows
 		unitType: 'day'
 	})
 
@@ -27,4 +29,33 @@
 		<pre><code>{JSON.stringify(time, null, 2)}</code></pre>
 	</svelte:fragment>
 </Tooltip>
+
+<h2>Days</h2>
+<ul>
+	<li>
+		<h3>base</h3>
+		<div class='days-grid'>
+			{#each days.cells as day (+day.from)}
+				<Cell>{dayjs(day.from).format('DD')}</Cell>
+			{/each}
+		</div>
+	</li>
+	<li>
+		<h3>disabled</h3>
+		<div class='days-grid'>
+			{#each days.cells as day (+day.from)}
+				<Cell disabled>{dayjs(day.from).format('DD')}</Cell>
+			{/each}
+		</div>
+	</li>
+</ul>
+
+
+<style lang='sass'>
+	.days-grid
+		display: grid
+		width: fit-content
+		grid-template-columns: repeat(7, 1fr)
+		gap: 10px
+</style>
 	

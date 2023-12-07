@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { generateClassNames } from '$lib/packages/utils/src/index.js'
-	import { PopoverArrow, PopoverContent } from '@cluue/popover'
+	import { generateClassNames } from '@cluue/utils'
+	import { PopoverContent } from '@cluue/popover'
 
 	interface $$Props {
 		class?: string

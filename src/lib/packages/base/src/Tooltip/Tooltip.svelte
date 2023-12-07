@@ -18,7 +18,7 @@
 	export let theme: $$Props['theme'] = undefined
 </script>
 
-<Popover {...$$restProps} {arrow} class={generateClassNames(['Tooltip', className])}>
+<Popover {...$$restProps} {arrow} class={generateClassNames(['Tooltip', className])} autoSize={true}>
 	<slot />
 	<svelte:fragment slot="content-wrapper" let:open>
 		{#if open}
