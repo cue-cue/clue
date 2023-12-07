@@ -9,9 +9,7 @@ export class PeriodList {
 	}
 
 	getSides(days: Date[]) {
-		const periods = this.items.filter(
-			(period) => days.findIndex((day) => period.checkDay(day)) !== -1
-		)
+		const periods = this.items.filter((period) => days.findIndex((day) => period.checkDay(day)) !== -1)
 
 		const start = new Period({
 			days,
@@ -92,9 +90,7 @@ export class PeriodList {
 
 			dateTo = new Date(+dateTo - 1) //What? Надо для того, чтобы втягивать в себя крайние слоты справа
 
-			const periodFrom = this.items.some((period) =>
-				period.isExclude(isDate ? dateTo : cellOrDate.from)
-			)
+			const periodFrom = this.items.some((period) => period.isExclude(isDate ? dateTo : cellOrDate.from))
 			const periodTo = this.items.some((period) => period.isExclude(dateTo))
 
 			return !periodFrom || !periodTo

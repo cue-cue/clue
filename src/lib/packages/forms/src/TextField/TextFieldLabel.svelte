@@ -12,11 +12,7 @@
 	export let color: $$Props['color'] = undefined
 </script>
 
-<label
-	{...$$restProps}
-	class={generateClassNames(['TextFieldLabel', className])}
-	data-color={color}
->
+<label {...$$restProps} class={generateClassNames(['TextFieldLabel', className])} data-color={color}>
 	<slot />
 </label>
 

@@ -15,13 +15,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<li
-	class={generateClassNames(['SelectOption', className])}
-	data-clue-checkbox-field-hover-trigger
-	data-clue-label-name-hover-trigger
-	on:click
-	on:dblclick
->
+<li class={generateClassNames(['SelectOption', className])} data-clue-checkbox-field-hover-trigger data-clue-label-name-hover-trigger on:click on:dblclick>
 	<Checkbox manual let:Label={LabelComponent} checked={active}>
 		{#if $$slots.default}
 			<svelte:component this={LabelComponent}>

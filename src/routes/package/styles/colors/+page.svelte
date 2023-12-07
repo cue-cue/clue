@@ -41,8 +41,7 @@
 			get(cssVar: string) {
 				if (browser) {
 					const bodyColor = getComputedStyle(document.body).getPropertyValue(cssVar)
-					const color =
-						bodyColor || getComputedStyle(document.documentElement).getPropertyValue(cssVar)
+					const color = bodyColor || getComputedStyle(document.documentElement).getPropertyValue(cssVar)
 					let hsl = ''
 					let hex = ''
 					if (color.includes('hsl(')) {
@@ -95,12 +94,7 @@
 
 <h2>Colors</h2>
 <div class="custom-color" style:--color={customHSLResult.color}>
-	<label
-		class="color-picker"
-		style={`box-shadow: ${
-			customColor.toLowerCase() === '#ffffff' ? '0 0 0 5px var(--clue-color-primary-100)' : 'none'
-		}`}
-	>
+	<label class="color-picker" style={`box-shadow: ${customColor.toLowerCase() === '#ffffff' ? '0 0 0 5px var(--clue-color-primary-100)' : 'none'}`}>
 		<Icon icon={customColorIcon} />
 		<input type="color" bind:value={customColor} />
 		<span>{customColor}</span>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { generateClassNames } from '@cluue/utils'
-	import { context } from '../context'
+	import { context } from '../context.js'
 	import { onDestroy } from 'svelte'
 
 	interface $$Props {
@@ -27,11 +27,7 @@
 </script>
 
 {#if !contextStore || $contextStore.arrow}
-	<div
-		bind:this={nodeElement}
-		style={styles}
-		class={generateClassNames(['PopoverArrow', className])}
-	>
+	<div bind:this={nodeElement} style={styles} class={generateClassNames(['PopoverArrow', className])}>
 		<slot><div /></slot>
 	</div>
 {/if}

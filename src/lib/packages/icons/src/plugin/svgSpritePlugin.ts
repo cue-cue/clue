@@ -48,10 +48,7 @@ const replaceCode = (code: string, path: string, pluginOptions: Options) => {
 }
 
 export const svgSpritePlugin = (options?: Options): Plugin => {
-	const include: Exclude<typeof options, undefined>['include'] = [
-		'**/node_modules/**/@clue/icons/**/assets/**/*.svg',
-		...(options?.include ? [options?.include].flat() : ['**/*.svg'])
-	]
+	const include: Exclude<typeof options, undefined>['include'] = ['**/node_modules/**/@clue/icons/**/assets/**/*.svg', ...(options?.include ? [options?.include].flat() : ['**/*.svg'])]
 
 	const resolvedOptions: Options = {
 		symbolId: 'clue-[name]',
@@ -63,10 +60,7 @@ export const svgSpritePlugin = (options?: Options): Plugin => {
 	const transform: Plugin['transform'] = async (src, filepath) => {
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		//@ts-ignore
-		const defaultTransformRes: TransformResult = await defaultTransform?.(
-			src,
-			filepath.replace('.svg?clue', '.svg')
-		)
+		const defaultTransformRes: TransformResult = await defaultTransform?.(src, filepath.replace('.svg?clue', '.svg'))
 		if (defaultTransformRes) {
 			defaultTransformRes.code = replaceCode(defaultTransformRes.code, filepath, resolvedOptions)
 		}

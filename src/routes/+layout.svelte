@@ -79,6 +79,7 @@
 		},
 		{
 			name: 'Calendar',
+			href: '/package/calendar',
 			startIcon: calendarIcon,
 			pages: [
 				{
@@ -140,9 +141,7 @@
 		Object.keys($colorsStore).forEach((colorKey) => {
 			const color = rootStyles.getPropertyValue(`--clue-color-${colorKey}`)
 			const isHSL = color.includes('hsl(')
-			$colorsStore[colorKey] = isHSL
-				? Color.hslToHEX(rootStyles.getPropertyValue(`--clue-color-${colorKey}`)).color
-				: color
+			$colorsStore[colorKey] = isHSL ? Color.hslToHEX(rootStyles.getPropertyValue(`--clue-color-${colorKey}`)).color : color
 		})
 	})
 
@@ -170,25 +169,13 @@
         {/each} -->
 		{#each packages as { name, pages, ...packageItem } (name)}
 			<Tooltip placement="bottom-start" theme="light" arrow={false} disabled={!pages?.length}>
-				<Button
-					{...packageItem}
-					size="small"
-					type={packageItem.href && $page.url.pathname.startsWith(packageItem.href)
-						? 'primary'
-						: 'ghost'}>{name}</Button
-				>
+				<Button {...packageItem} size="small" type={packageItem.href && $page.url.pathname.startsWith(packageItem.href) ? 'primary' : 'ghost'}>{name}</Button>
 				<svelte:fragment slot="content">
 					{#if pages?.length}
 						<ul>
 							{#each pages as { name, ...pageItem } (name)}
 								<li>
-									<Button
-										size="small"
-										type={pageItem.href && $page.url.pathname.startsWith(pageItem.href)
-											? 'primary'
-											: 'ghost'}
-										{...pageItem}
-									>
+									<Button size="small" type={pageItem.href && $page.url.pathname.startsWith(pageItem.href) ? 'primary' : 'ghost'} {...pageItem}>
 										{name}
 									</Button>
 								</li>
@@ -216,14 +203,15 @@
 	header
 		width: 100%
 		display: flex
-		border-bottom: 2px solid var(--clue-color-gray-100)
+		border-bottom: 1px solid var(--clue-color-primary-100)
 		align-items: center
 		flex-wrap: wrap
-		padding: 10px 0
+		padding: 10px 20px
 		background: var(--clue-color-white)
 		position: sticky
 		z-index: 10
 		top: 0
+		left: 0
 		nav
 			flex: none
 			max-width: 100%
@@ -237,6 +225,8 @@
 						margin-bottom: 5px
 					:global(.ClueButton)
 						width: 100%
+	main
+		padding: 40px 20px
 	.colors
 		margin-left: auto
 		display: flex

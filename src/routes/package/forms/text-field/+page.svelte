@@ -1,6 +1,5 @@
 <script lang="ts">
-	import TextFieldButton from '$lib/packages/forms/src/TextField/TextFieldButton.svelte'
-	import { Input, PasswordField, TextField, TextFieldBase } from '@cluue/forms'
+	import { TextField, TextFieldButton } from '@cluue/forms'
 	import buttonIcon from '@cluue/icons/line/activity-circle.svg?clue'
 	import type { ComponentProps } from 'svelte'
 
@@ -30,9 +29,7 @@
 		}
 	]
 
-	const getVariants = <T extends ComponentProps<TextField>>(
-		props: T
-	): Array<T & { id: string }> => {
+	const getVariants = <T extends ComponentProps<TextField>>(props: T): Array<T & { id: string }> => {
 		const variants: ComponentProps<TextField>[] = [
 			{ value: 'Value' },
 			{ placeholder: 'Placeholder' },

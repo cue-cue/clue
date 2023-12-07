@@ -9,25 +9,15 @@ export class CellList {
 	start
 	end
 	date
+	unitType
 	periods
-	constructor({
-		step = 15,
-		start = 0,
-		end = 1440,
-		date,
-		periods = []
-	}: {
-		step?: number
-		start?: number
-		end?: number
-		date: Date
-		periods?: Period[]
-	}) {
+	constructor({ step = 15, start = 0, end = 1440, unitType = 'minutes', date, periods = [] }: { step?: number; start?: number; end?: number; date: Date; unitType?: dayjs.ManipulateType; periods?: Period[] }) {
 		this.periods = periods
 		this.step = step
 		this.start = start
 		this.end = end - (end % this.step) //normalize by step
 		this.date = dayjs(date).startOf('day').toDate()
+		this.unitType = unitType
 		this.cells = this.genCells()
 	}
 
@@ -45,21 +35,24 @@ export class CellList {
 			const { start, end } = sideFromMap ?? new PeriodList(periods).getSides([cellDay])
 
 			if (!sideFromMap) {
-				sidesMap.set(+cellDay, { start, end })
+				sidesMap.set(+cellDay, {
+					start,
+					end
+				})
 			}
 
 			return !(start.isCellInclude(cell) || end.isCellInclude(cell))
 		})
 	}
 
-	applyDate(minutes: number) {
-		return new Date(+this.date + minutes * 60000)
+	applyDate(add: number) {
+		return dayjs(this.date).add(add, this.unitType).toDate()
 	}
 
-	genCell(minutes: number) {
+	genCell(add: number) {
 		return new Cell({
-			from: this.applyDate(minutes),
-			to: this.applyDate(minutes + this.step)
+			from: this.applyDate(add),
+			to: this.applyDate(add + this.step)
 		})
 	}
 

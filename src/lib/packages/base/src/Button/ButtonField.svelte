@@ -3,9 +3,7 @@
 
 	import { generateClassNames } from '@cluue/utils'
 
-	interface $$Props
-		extends Pick<HTMLAnchorAttributes, 'rel' | 'href' | 'tabindex' | 'target' | 'style'>,
-			Record<`data-${string}`, string | undefined> {
+	interface $$Props extends Pick<HTMLAnchorAttributes, 'rel' | 'href' | 'tabindex' | 'target' | 'style'>, Record<`data-${string}`, string | undefined> {
 		class?: string
 		tag?: 'button' | 'div' | 'a'
 		disabled?: boolean
@@ -31,23 +29,7 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<svelte:element
-	this={tag}
-	class={generateClassNames(['ButtonField', className])}
-	data-type={type}
-	on:click
-	on:dblclick
-	on:mousedown
-	on:mouseenter
-	on:mouseleave
-	on:mousemove
-	on:mouseout
-	on:mouseover
-	on:mouseup
-	on:contextmenu
-	{...$$restProps}
-	{...disabledAttributes}
->
+<svelte:element this={tag} class={generateClassNames(['ButtonField', className])} data-type={type} on:click on:dblclick on:mousedown on:mouseenter on:mouseleave on:mousemove on:mouseout on:mouseover on:mouseup on:contextmenu {...$$restProps} {...disabledAttributes}>
 	<slot />
 </svelte:element>
 

@@ -7,11 +7,7 @@ export interface IHoverTriggerOptions {
 
 export class HoverTrigger extends Trigger {
 	options
-	constructor(
-		elements: Trigger['elements'],
-		events: Trigger['events'],
-		options?: IHoverTriggerOptions
-	) {
+	constructor(elements: Trigger['elements'], events: Trigger['events'], options?: IHoverTriggerOptions) {
 		super(elements, events)
 		this.options = options
 		this.setHandlers({

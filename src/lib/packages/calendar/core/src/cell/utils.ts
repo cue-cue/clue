@@ -40,10 +40,7 @@ export const cutCellsBySides = (cells: Cell[], dates: Date[]) => {
 }
 
 export const mergeCells = <T extends Cell[], U extends Cell[]>(fromCells: T, toCells: U) => {
-	const croppedFromCells = cutCellsBySides(
-		fromCells,
-		toCells.map(({ from, to }) => [from, new Date(+to - 1)]).flat()
-	)
+	const croppedFromCells = cutCellsBySides(fromCells, toCells.map(({ from, to }) => [from, new Date(+to - 1)]).flat())
 
 	const croppedFromCellsDisabled = new DisabledList(croppedFromCells)
 

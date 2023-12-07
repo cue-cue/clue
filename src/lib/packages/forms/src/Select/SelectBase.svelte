@@ -229,13 +229,7 @@
 	{...$$restProps}
 >
 	{#if searched}
-		<Input
-			placeholder={value}
-			{disabled}
-			{id}
-			bind:value={searchValue}
-			bind:nodeElement={searchInputElement}
-		/>
+		<Input placeholder={value} {disabled} {id} bind:value={searchValue} bind:nodeElement={searchInputElement} />
 	{:else}
 		<Input readonly {disabled} {id} bind:value on:focus={handler.focus} />
 	{/if}

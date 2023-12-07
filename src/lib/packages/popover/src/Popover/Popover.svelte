@@ -4,15 +4,7 @@
 	import { createPopoverActions, type IPopoverOptions } from '../actions/index.js'
 	import { arrow as arrowMiddleware, type ComputeConfig } from 'svelte-floating-ui'
 	import { HoverTrigger } from '../Trigger/hover.js'
-	import {
-		offset as offsetMiddleware,
-		shift as shiftMiddleware,
-		size as sizeMiddleware,
-		flip as flipMiddleware,
-		type OffsetOptions,
-		type Middleware,
-		detectOverflow
-	} from 'svelte-floating-ui/core'
+	import { offset as offsetMiddleware, shift as shiftMiddleware, size as sizeMiddleware, flip as flipMiddleware, type OffsetOptions, type Middleware, detectOverflow } from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
 	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
@@ -46,6 +38,10 @@
 		 * @default false
 		 */
 		arrow?: boolean
+		/**
+		 * @default false
+		 */
+		autoSize?:boolean
 	}
 
 	let className = ''
@@ -57,6 +53,7 @@
 	export let disabled: $$Props['disabled'] = false
 	export let trigger: $$Props['trigger'] = 'hover'
 	export let arrow: $$Props['arrow'] = false
+	export let autoSize: $$Props['autoSize'] = false
 
 	let targetElementRef = writable<HTMLElement | undefined>(undefined)
 	let contentElementRef = writable<HTMLElement | undefined>(undefined)
@@ -102,8 +99,7 @@
 				left: '-90deg'
 			}
 
-			const contentPlacement = (placement.split('-')[0] ||
-				'bottom') as unknown as keyof typeof arrowSideMap
+			const contentPlacement = (placement.split('-')[0] || 'bottom') as unknown as keyof typeof arrowSideMap
 
 			const arrowSide = arrowSideMap[contentPlacement]
 			const rotate = arrowRotateMap[contentPlacement]
@@ -114,20 +110,12 @@
 				transform: `rotate(${rotate})`
 			}
 
-			;(styles[arrowSide] = `-${
-				['bottom', 'top'].includes(contentPlacement)
-					? arrowData.height
-					: (arrowData.width + arrowData.height) / 2
-			}px`),
-				($arrowStore.styles = styles)
+			;(styles[arrowSide] = `-${['bottom', 'top'].includes(contentPlacement) ? arrowData.height : (arrowData.width + arrowData.height) / 2}px`), ($arrowStore.styles = styles)
 		}
 	}
 
 	const defOptions: IPopoverOptions = {
 		middleware: [
-			sizeMiddleware({
-				altBoundary: true
-			}),
 			offsetMiddleware((data) => {
 				if (typeof offset === 'function') {
 					return offset(data)
@@ -140,11 +128,7 @@
 
 				if (arrow) {
 					if (typeof offset === 'object') {
-						return Object.fromEntries(
-							Object.entries(offset).map(([key, val]) =>
-								val ? [key, (val = val + arrowData.height)] : [key]
-							)
-						)
+						return Object.fromEntries(Object.entries(offset).map(([key, val]) => (val ? [key, (val = val + arrowData.height)] : [key])))
 					} else if (offset) {
 						return offset + arrowData.height
 					} else {
@@ -160,7 +144,20 @@
 			flipMiddleware({
 				altBoundary: true
 			}),
-			...arrowOptions.middleware
+			...arrowOptions.middleware,
+			sizeMiddleware({
+				altBoundary: true,
+				apply({availableWidth, availableHeight, elements}) {
+					if (!autoSize) return
+					const floating = elements.floating as HTMLElement
+					floating.style.setProperty('--available-width', `${availableWidth}px`)
+					floating.style.setProperty('--available-height', `${availableHeight}px`)
+					Object.assign(elements.floating.style, {
+						maxWidth: `${availableWidth}px`,
+						maxHeight: `${availableHeight}px`,
+					});
+				}
+			}),
 		],
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		//@ts-ignore

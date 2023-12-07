@@ -15,8 +15,7 @@
 	const contextStore = context.get()
 
 	$: action = (node: HTMLElement) => {
-		const { destroy, update } =
-			(contextStore ? $contextStore.targetAction : popoverAction)?.(node) || {}
+		const { destroy, update } = (contextStore ? $contextStore.targetAction : popoverAction)?.(node) || {}
 		return {
 			destroy,
 			update

@@ -27,9 +27,7 @@ export class Disabled {
 		this.parsedInclude = this.parseInclude()
 	}
 
-	#genAvailability(
-		value: IDisabledParams['availability']
-	): Required<Exclude<typeof value, undefined>> {
+	#genAvailability(value: IDisabledParams['availability']): Required<Exclude<typeof value, undefined>> {
 		let { occupied, free, total = 0 } = value || {}
 
 		if (total < 0) total = 0
@@ -56,9 +54,7 @@ export class Disabled {
 	}
 
 	parseInclude() {
-		const [from, to] = this.include
-			? (this.include.split('') as ['(' | '[' | undefined, ']' | ')' | undefined])
-			: []
+		const [from, to] = this.include ? (this.include.split('') as ['(' | '[' | undefined, ']' | ')' | undefined]) : []
 		return {
 			from,
 			to
@@ -137,10 +133,7 @@ export class Disabled {
 			includeCheck?: boolean
 		}) => {
 			date = new Date(date)
-			return (
-				this.check(date, checker.from, '>', includeCheck) &&
-				this.check(date, checker.to, '<', includeCheck)
-			)
+			return this.check(date, checker.from, '>', includeCheck) && this.check(date, checker.to, '<', includeCheck)
 		}
 
 		if (cellOrDate instanceof Date) {
