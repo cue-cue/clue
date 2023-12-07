@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { randomId } from '@cluue/utils'
-	import { Checkbox, Radio } from '@cluue/forms'
+	import { Checkbox, Radio, Switch } from '@cluue/forms'
 	import type { ComponentProps, ComponentType } from 'svelte'
-	import Switch from '$lib/packages/forms/src/Switch/Switch.svelte'
 
 	const items: (Omit<ComponentProps<Checkbox>, 'value' | 'id' | 'group'> & {
 		component: ComponentType

@@ -13,7 +13,8 @@
 	},
 	"dependencies": {
 		"@cluue/icons": "workspace:*",
-		"@cluue/utils": "workspace:*"
+		"@cluue/utils": "workspace:*",
+		"@cluue/popover": "workspace:*"
 	},
 	"exports": {
 		".": {
