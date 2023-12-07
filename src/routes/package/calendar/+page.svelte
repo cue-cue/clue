@@ -41,10 +41,34 @@
 		</div>
 	</li>
 	<li>
-		<h3>disabled</h3>
+		<h3>base:disabled</h3>
 		<div class='days-grid'>
 			{#each days.cells as day (+day.from)}
 				<Cell disabled>{dayjs(day.from).format('DD')}</Cell>
+			{/each}
+		</div>
+	</li>
+	<li>
+		<h3>base:active</h3>
+		<div class='days-grid'>
+			{#each days.cells as day (+day.from)}
+				<Cell active>{dayjs(day.from).format('DD')}</Cell>
+			{/each}
+		</div>
+	</li>
+	<li>
+		<h3>negative</h3>
+		<div class='days-grid'>
+			{#each days.cells as day (+day.from)}
+				<Cell type='negative'>{dayjs(day.from).format('DD')}</Cell>
+			{/each}
+		</div>
+	</li>
+	<li>
+		<h3>negative: active</h3>
+		<div class='days-grid'>
+			{#each days.cells as day (+day.from)}
+				<Cell type='negative' active>{dayjs(day.from).format('DD')}</Cell>
 			{/each}
 		</div>
 	</li>
@@ -52,6 +76,10 @@
 
 
 <style lang='sass'>
+	ul
+		display: flex
+		flex-wrap: wrap
+		gap: 40px
 	.days-grid
 		display: grid
 		width: fit-content
