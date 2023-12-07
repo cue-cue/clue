@@ -56,12 +56,7 @@
 	})
 </script>
 
-<div
-	class={generateClassNames(['TextField', className])}
-	data-error={error}
-	data-disabled={disabled}
-	use:actionList={use}
->
+<div class={generateClassNames(['TextField', className])} data-error={error} data-disabled={disabled} use:actionList={use}>
 	{#if label || hint}
 		<TextFieldHeader>
 			{#if label}

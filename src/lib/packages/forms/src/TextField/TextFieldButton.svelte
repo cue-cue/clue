@@ -60,11 +60,7 @@
 	})
 </script>
 
-<button
-	on:click
-	class={generateClassNames(['TextFieldButton', className])}
-	transition:transitionFunction
->
+<button on:click class={generateClassNames(['TextFieldButton', className])} transition:transitionFunction>
 	<Icon {icon} width={width ?? iconSizeMap.get($textFieldBaseContextStore.size)} {...$$restProps} />
 </button>
 

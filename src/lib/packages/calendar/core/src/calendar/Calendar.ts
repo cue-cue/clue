@@ -29,15 +29,7 @@ export class Calendar<T extends Block[] = Block[]> {
 	blocks!: T
 	#blocksDisabledList!: DisabledList
 
-	constructor({
-		disabled = [],
-		step = 5,
-		timezone,
-		deadLine,
-		deadLineOptions,
-		periods = [],
-		blocks
-	}: ICalendarParams<T> = {}) {
+	constructor({ disabled = [], step = 5, timezone, deadLine, deadLineOptions, periods = [], blocks }: ICalendarParams<T> = {}) {
 		this.step = step
 		this.deadLine = deadLine
 		this.timezone = timezone
@@ -49,9 +41,7 @@ export class Calendar<T extends Block[] = Block[]> {
 
 	setBlocks(blocks: ICalendarParams<T>['blocks']) {
 		this.blocks = blocks || ([] as unknown as T)
-		this.#blocksDisabledList = new DisabledList(
-			this.blocks.map((block) => block.getCellWithDrift())
-		)
+		this.#blocksDisabledList = new DisabledList(this.blocks.map((block) => block.getCellWithDrift()))
 		return this.blocks
 	}
 

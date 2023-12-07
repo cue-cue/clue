@@ -77,10 +77,7 @@ const replaceColor = (icons: IconGroups) => {
 			const svg = readFileSync(icon.path, {
 				encoding: 'utf8'
 			})
-			writeFileSync(
-				icon.path,
-				svg.replace(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`)
-			)
+			writeFileSync(icon.path, svg.replace(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`))
 		})
 }
 
@@ -124,15 +121,9 @@ const genTypes = {
 		const groupsType = this.genGroups(icons).type
 		const namesType = this.genNames(icons).type
 
-		let newFile = file.replace(
-			/(?<=\/\/IconGroups-template)([\s\S]+?)(?=\/\/IconGroups-template)/gi,
-			`\n${tab}${groupsType.replace('\n', `\n${tab}`).replace('}', `${tab}}`)}\n${tab}`
-		)
+		let newFile = file.replace(/(?<=\/\/IconGroups-template)([\s\S]+?)(?=\/\/IconGroups-template)/gi, `\n${tab}${groupsType.replace('\n', `\n${tab}`).replace('}', `${tab}}`)}\n${tab}`)
 		if (namesType) {
-			newFile = newFile.replace(
-				/(?<=\/\/IconNames-template)([\s\S]+?)(?=\/\/IconNames-template)/gi,
-				`\n${tab}${namesType}\n${tab}`
-			)
+			newFile = newFile.replace(/(?<=\/\/IconNames-template)([\s\S]+?)(?=\/\/IconNames-template)/gi, `\n${tab}${namesType}\n${tab}`)
 		}
 
 		return newFile
@@ -180,8 +171,7 @@ const createGetAllIconsInRoutes = (icons: IconGroups) => {
 			const name = getName(icon)
 			return `import * as _${name} from '@cluue/icons/${icon.group}/${icon.name}.svg'\nconst ${name} = _${name} as unknown as ClueSvgIconData\n`
 		},
-		export: (icons: Icon[]) =>
-			`export {\n${icons.map((icon) => `\t${getName(icon)}`).join(',\n')}\n}`
+		export: (icons: Icon[]) => `export {\n${icons.map((icon) => `\t${getName(icon)}`).join(',\n')}\n}`
 	}
 
 	let res = `import type { ClueSvgIconData } from '@cluue/icons'\n`

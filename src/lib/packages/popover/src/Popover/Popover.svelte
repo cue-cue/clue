@@ -4,15 +4,7 @@
 	import { createPopoverActions, type IPopoverOptions } from '../actions/index.js'
 	import { arrow as arrowMiddleware, type ComputeConfig } from 'svelte-floating-ui'
 	import { HoverTrigger } from '../Trigger/hover.js'
-	import {
-		offset as offsetMiddleware,
-		shift as shiftMiddleware,
-		size as sizeMiddleware,
-		flip as flipMiddleware,
-		type OffsetOptions,
-		type Middleware,
-		detectOverflow
-	} from 'svelte-floating-ui/core'
+	import { offset as offsetMiddleware, shift as shiftMiddleware, size as sizeMiddleware, flip as flipMiddleware, type OffsetOptions, type Middleware, detectOverflow } from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
 	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
@@ -102,8 +94,7 @@
 				left: '-90deg'
 			}
 
-			const contentPlacement = (placement.split('-')[0] ||
-				'bottom') as unknown as keyof typeof arrowSideMap
+			const contentPlacement = (placement.split('-')[0] || 'bottom') as unknown as keyof typeof arrowSideMap
 
 			const arrowSide = arrowSideMap[contentPlacement]
 			const rotate = arrowRotateMap[contentPlacement]
@@ -114,12 +105,7 @@
 				transform: `rotate(${rotate})`
 			}
 
-			;(styles[arrowSide] = `-${
-				['bottom', 'top'].includes(contentPlacement)
-					? arrowData.height
-					: (arrowData.width + arrowData.height) / 2
-			}px`),
-				($arrowStore.styles = styles)
+			;(styles[arrowSide] = `-${['bottom', 'top'].includes(contentPlacement) ? arrowData.height : (arrowData.width + arrowData.height) / 2}px`), ($arrowStore.styles = styles)
 		}
 	}
 
@@ -140,11 +126,7 @@
 
 				if (arrow) {
 					if (typeof offset === 'object') {
-						return Object.fromEntries(
-							Object.entries(offset).map(([key, val]) =>
-								val ? [key, (val = val + arrowData.height)] : [key]
-							)
-						)
+						return Object.fromEntries(Object.entries(offset).map(([key, val]) => (val ? [key, (val = val + arrowData.height)] : [key])))
 					} else if (offset) {
 						return offset + arrowData.height
 					} else {

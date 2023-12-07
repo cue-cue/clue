@@ -21,12 +21,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<label
-	class={generateClassNames(['LabelName', className])}
-	for={$fieldContextData.id}
-	data-disabled={$fieldContextData.disabled}
-	on:click={handler.click}
->
+<label class={generateClassNames(['LabelName', className])} for={$fieldContextData.id} data-disabled={$fieldContextData.disabled} on:click={handler.click}>
 	<slot />
 </label>
 

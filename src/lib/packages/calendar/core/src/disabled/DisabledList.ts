@@ -20,8 +20,7 @@ export class DisabledList<T extends (Cell | Disabled)[] = Cell[]> {
 	}
 
 	isDisabled(cellOrDate: Parameters<Disabled['isDisabled']>[0]) {
-		const findItem = (options?: Parameters<Disabled['isDisabled']>[1]) =>
-			this.list.find(({ disabled }) => disabled.isDisabled(cellOrDate, options))
+		const findItem = (options?: Parameters<Disabled['isDisabled']>[1]) => this.list.find(({ disabled }) => disabled.isDisabled(cellOrDate, options))
 		const { item } = findItem() || {}
 		return {
 			result: !!item,

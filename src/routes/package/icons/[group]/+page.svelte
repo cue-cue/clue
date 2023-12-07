@@ -29,9 +29,7 @@
 	}
 
 	$: _searchValue = searchValue.replace(new RegExp(' ', 'gi'), '-')
-	$: icons = allIcons
-		.filter((icon) => icon.groupName === $page.params.group && icon.name.includes(_searchValue))
-		.map((icon, id) => ({ ...icon, id }))
+	$: icons = allIcons.filter((icon) => icon.groupName === $page.params.group && icon.name.includes(_searchValue)).map((icon, id) => ({ ...icon, id }))
 </script>
 
 <div style="position: sticky; top: calc(var(--header-height) + 16px)">
@@ -42,10 +40,7 @@
 	{#if icons.length}
 		<VirtualScroll data={icons} key="id" let:data={icon} pageMode={true}>
 			<h4>
-				{@html icon.name.replace(
-					new RegExp(_searchValue, 'gi'),
-					`<span style='color: var(--clue-color-primary)'>${_searchValue}</span>`
-				)}
+				{@html icon.name.replace(new RegExp(_searchValue, 'gi'), `<span style='color: var(--clue-color-primary)'>${_searchValue}</span>`)}
 			</h4>
 			<ul style="display: flex; gap: 10px; list-style: none">
 				{#each generateMoreSizeIcon(icon) as { icon: data, size }}

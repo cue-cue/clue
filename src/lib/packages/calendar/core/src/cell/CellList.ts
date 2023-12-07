@@ -11,21 +11,7 @@ export class CellList {
 	date
 	unitType
 	periods
-	constructor({
-		step = 15,
-		start = 0,
-		end = 1440,
-		unitType = 'minutes',
-		date,
-		periods = []
-	}: {
-		step?: number
-		start?: number
-		end?: number
-		date: Date
-		unitType?: dayjs.ManipulateType
-		periods?: Period[]
-	}) {
+	constructor({ step = 15, start = 0, end = 1440, unitType = 'minutes', date, periods = [] }: { step?: number; start?: number; end?: number; date: Date; unitType?: dayjs.ManipulateType; periods?: Period[] }) {
 		this.periods = periods
 		this.step = step
 		this.start = start

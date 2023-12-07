@@ -4,8 +4,14 @@
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
-	"svelte": "src/index.js",
 	"types": "src/index.d.ts",
 	"type": "module",
-	"author": "Nikita Fedorov"
+	"author": "Nikita Fedorov",
+	"exports": {
+		".": {
+			"import": "./src/index.js",
+			"svelte": "./src/index.js",
+			"types": "./src/index.d.ts"
+		}
+	}
 }

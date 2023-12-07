@@ -24,11 +24,7 @@
 </script>
 
 <div class={generateClassNames(['Label', className])}>
-	<div
-		class={generateClassNames(['Label__main'])}
-		data-clue-checkbox-field-hover-trigger
-		data-clue-label-name-hover-trigger
-	>
+	<div class={generateClassNames(['Label__main'])} data-clue-checkbox-field-hover-trigger data-clue-label-name-hover-trigger>
 		<slot />
 		{#if $$slots.label && (slots?.label ?? true)}
 			<slot name="label" Component={LabelName} />

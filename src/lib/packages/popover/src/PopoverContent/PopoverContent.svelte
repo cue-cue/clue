@@ -8,9 +8,7 @@
 	import type { HTMLAttributes } from 'svelte/elements'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
 
-	interface $$Props
-		extends HTMLAttributes<HTMLDivElement>,
-			Partial<Record<`data-${string}`, string>> {
+	interface $$Props extends HTMLAttributes<HTMLDivElement>, Partial<Record<`data-${string}`, string>> {
 		class?: string
 		popoverAction?: ReturnType<typeof createPopoverActions>['contentAction']
 	}
@@ -45,8 +43,7 @@
 	}
 
 	$: action = (node: HTMLElement) => {
-		const { destroy, update } =
-			(contextStore ? $contextStore.contentAction : popoverAction)?.(node) || {}
+		const { destroy, update } = (contextStore ? $contextStore.contentAction : popoverAction)?.(node) || {}
 		return {
 			destroy,
 			update

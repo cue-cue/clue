@@ -29,9 +29,7 @@
 		}
 	]
 
-	const getVariants = <T extends ComponentProps<TextField>>(
-		props: T
-	): Array<T & { id: string }> => {
+	const getVariants = <T extends ComponentProps<TextField>>(props: T): Array<T & { id: string }> => {
 		const variants: ComponentProps<TextField>[] = [
 			{ value: 'Value' },
 			{ placeholder: 'Placeholder' },

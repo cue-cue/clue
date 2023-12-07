@@ -143,11 +143,7 @@ export class Select {
 		if (from && +new Date(from) < +newSelected.from) newSelected.from = from
 		if (to && +new Date(to) > +newSelected.to) newSelected.to = to
 
-		const isDisallow =
-			from &&
-			to &&
-			(this.calendar.isDisabled(newSelected).disabled ||
-				this.calendar.isBlockDisabled(newSelected).result)
+		const isDisallow = from && to && (this.calendar.isDisabled(newSelected).disabled || this.calendar.isBlockDisabled(newSelected).result)
 		if (isDisallow) return { from, to }
 
 		return newSelected

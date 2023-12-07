@@ -5,9 +5,7 @@
 
 	const getButtonStyles = (variantOptions?: ComponentProps<Button>) => {
 		const sizes: Exclude<ComponentProps<Button>['size'], undefined>[] = ['large', 'medium', 'small']
-		return sizes.reduce<
-			Record<(typeof sizes)[number], (ComponentProps<Button> & { id: string })[]>
-		>(
+		return sizes.reduce<Record<(typeof sizes)[number], (ComponentProps<Button> & { id: string })[]>>(
 			(val, size) => {
 				val[size] = [
 					{

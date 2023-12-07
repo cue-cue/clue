@@ -846,8 +846,7 @@ export const BLOCKS = [
 														prepayment: 'main',
 														timeLength: 0,
 														copyVersion: 1,
-														description:
-															'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
+														description: 'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
 														paymentType: 'time',
 														sortPosition: 34,
 														breakIsEnable: false,
@@ -943,12 +942,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -1115,8 +1112,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -2029,12 +2025,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -2201,8 +2195,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -3190,12 +3183,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -3362,8 +3353,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -4130,8 +4120,7 @@ export const BLOCKS = [
 														prepayment: 'main',
 														timeLength: 0,
 														copyVersion: 1,
-														description:
-															'Маски Гобо предоставляются бесплатно. Они прекрасно работают с постоянными источниками света или с прямым солнечным светом.',
+														description: 'Маски Гобо предоставляются бесплатно. Они прекрасно работают с постоянными источниками света или с прямым солнечным светом.',
 														paymentType: 'piece',
 														sortPosition: 24,
 														breakIsEnable: false,
@@ -4393,12 +4382,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -4565,8 +4552,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -5431,12 +5417,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -5603,8 +5587,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -6474,12 +6457,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -6646,8 +6627,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -6727,8 +6707,7 @@ export const BLOCKS = [
 							orders: [
 								{
 									id: 57832,
-									comment:
-										'источники не нужны \n(нужна покраска циклорамы)\nгрузовой лифт в 10.00 и в 19.40',
+									comment: 'источники не нужны \n(нужна покраска циклорамы)\nгрузовой лифт в 10.00 и в 19.40',
 									price: '20000',
 									orderSource: 'subclient',
 									sale: 0,
@@ -7518,12 +7497,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -7690,8 +7667,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -8569,12 +8545,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -8741,8 +8715,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -9675,12 +9648,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -9847,8 +9818,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -10836,12 +10806,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -11008,8 +10976,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -11790,8 +11757,7 @@ export const BLOCKS = [
 														prepayment: 'main',
 														timeLength: 0,
 														copyVersion: 1,
-														description:
-															'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
+														description: 'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
 														paymentType: 'time',
 														sortPosition: 1,
 														breakIsEnable: false,
@@ -11888,12 +11854,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -12060,8 +12024,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -12939,12 +12902,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -13111,8 +13072,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -14000,12 +13960,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -14172,8 +14130,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -14995,12 +14952,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -15167,8 +15122,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -16121,12 +16075,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -16293,8 +16245,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -17279,12 +17230,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -17451,8 +17400,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -18274,12 +18222,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -18446,8 +18392,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -19264,12 +19209,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -19436,8 +19379,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -20250,12 +20192,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -20422,8 +20362,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -21231,12 +21170,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -21403,8 +21340,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -21484,8 +21420,7 @@ export const BLOCKS = [
 							orders: [
 								{
 									id: 57125,
-									comment:
-										'привезут свет с собой, будут нужны только стойки, октобокс 90 с сотами, рефлектор',
+									comment: 'привезут свет с собой, будут нужны только стойки, октобокс 90 с сотами, рефлектор',
 									price: '8000',
 									orderSource: 'subclient',
 									sale: 0,
@@ -22263,12 +22198,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -22435,8 +22368,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -23244,12 +23176,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -23416,8 +23346,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -24225,12 +24154,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -24397,8 +24324,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
@@ -25211,12 +25137,10 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription:
-											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
 										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey:
-											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -25383,8 +25307,7 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription:
-										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
 									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
 									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CellList } from '$lib/packages/calendar/core/src/index.js'
+	import {CellList} from '@cluue/calendar-core'
 
 	const days = new CellList({
 		date: new Date(),
