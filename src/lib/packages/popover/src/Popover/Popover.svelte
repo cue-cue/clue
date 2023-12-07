@@ -111,9 +111,6 @@
 
 	const defOptions: IPopoverOptions = {
 		middleware: [
-			sizeMiddleware({
-				altBoundary: true
-			}),
 			offsetMiddleware((data) => {
 				if (typeof offset === 'function') {
 					return offset(data)
@@ -142,7 +139,19 @@
 			flipMiddleware({
 				altBoundary: true
 			}),
-			...arrowOptions.middleware
+			...arrowOptions.middleware,
+			sizeMiddleware({
+				altBoundary: true,
+				apply({availableWidth, availableHeight, elements}) {
+					const floating = elements.floating as HTMLElement
+					floating.style.setProperty('--available-width', `${availableWidth}px`)
+					floating.style.setProperty('--available-height', `${availableHeight}px`)
+					Object.assign(elements.floating.style, {
+						maxWidth: `${availableWidth}px`,
+						maxHeight: `${availableHeight}px`,
+					});
+				}
+			}),
 		],
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		//@ts-ignore

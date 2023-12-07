@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { generateClassNames } from '@cluue/utils'
-	import { context } from '../context'
+	import { context } from '../context.js'
 	import { onDestroy } from 'svelte'
 
 	interface $$Props {

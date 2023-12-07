@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { generateClassNames } from '@cluue/utils'
-	import { context } from '../context'
-	import type { createPopoverActions } from '../actions'
+	import { context } from '../context.js'
+	import type { createPopoverActions } from '../actions/index.js'
 	import { fly } from 'svelte/transition'
 	import { config } from '@cluue/config'
 	import type { ComputeConfig } from 'svelte-floating-ui'
