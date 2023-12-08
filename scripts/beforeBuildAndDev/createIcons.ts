@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //ts-ignore
-import { camelize } from '../../src/lib/packages/utils/src/index.js'
-import { SvgSpriteIcon } from '../../src/lib/packages/icons/src/plugin/svgSpritePlugin.js'
+import { camelize } from '../../src/lib/packages/utils/src/index.ts'
+import { SvgSpriteIcon } from '../../src/lib/packages/icons/src/plugin/svgSpritePlugin.ts'
 import { readFileSync, renameSync, writeFileSync } from 'fs'
 import { globSync } from 'glob'
 // import {clearDirectory} from '../clearDirectory.mjs'
 import packageJson from '../../src/lib/packages/icons/package.json' assert { type: 'json' }
-import { ViteWatcher } from '../viteWatcher.js'
+import { ViteWatcher } from '../viteWatcher.ts'
 import { optimize } from 'svgo'
 
 const paths = {
