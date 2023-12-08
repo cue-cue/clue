@@ -41,7 +41,7 @@
 		/**
 		 * @default false
 		 */
-		autoSize?:boolean
+		autoSize?: boolean
 	}
 
 	let className = ''
@@ -147,17 +147,17 @@
 			...arrowOptions.middleware,
 			sizeMiddleware({
 				altBoundary: true,
-				apply({availableWidth, availableHeight, elements}) {
+				apply({ availableWidth, availableHeight, elements }) {
 					if (!autoSize) return
 					const floating = elements.floating as HTMLElement
 					floating.style.setProperty('--available-width', `${availableWidth}px`)
 					floating.style.setProperty('--available-height', `${availableHeight}px`)
 					Object.assign(elements.floating.style, {
 						maxWidth: `${availableWidth}px`,
-						maxHeight: `${availableHeight}px`,
-					});
+						maxHeight: `${availableHeight}px`
+					})
 				}
-			}),
+			})
 		],
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		//@ts-ignore

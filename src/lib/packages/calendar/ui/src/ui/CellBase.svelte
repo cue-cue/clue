@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { generateClassNames } from "@cluue/utils"
+	import { generateClassNames } from '@cluue/utils'
 
 	interface $$Props {
 		class?: string
@@ -11,20 +11,13 @@
 
 	let className = ''
 	export { className as class }
-	export let disabled:$$Props['disabled'] = undefined
-	export let type:$$Props['type'] = undefined
-	export let active:$$Props['active'] = undefined
-	export let variant:$$Props['variant'] = undefined
-
+	export let disabled: $$Props['disabled'] = undefined
+	export let type: $$Props['type'] = undefined
+	export let active: $$Props['active'] = undefined
+	export let variant: $$Props['variant'] = undefined
 </script>
 
-<button	
-	class={generateClassNames(['CalendarCellBase', className])}
-	{disabled}
-	data-active={active}
-	data-type={type}
-	data-variant={variant}
->
+<button class={generateClassNames(['CalendarCellBase', className])} {disabled} data-active={active} data-type={type} data-variant={variant}>
 	<slot />
 </button>
 

@@ -1,32 +1,31 @@
-<script lang='ts'>
-    import {CellList} from '@cluue/calendar-core'
+<script lang="ts">
+	import { CellList } from '@cluue/calendar-core'
 	import Cell from '../Cell.svelte'
 
-    interface $$Props {
-        class?:string
-    }
-    
-    let className = ''
-    export { className as class }
+	interface $$Props {
+		class?: string
+	}
 
-    const cellList = new CellList({
-        date: new Date(),
-        step: 1,
-        end: 4 * 7,
-        unitType: 'day'
-    })
-    
+	let className = ''
+	export { className as class }
+
+	const cellList = new CellList({
+		date: new Date(),
+		step: 1,
+		end: 4 * 7,
+		unitType: 'day'
+	})
 </script>
 
 <div class={`PickerDays ${className}`}>
-    <div class="PickerDays__grid">
-        {#each cellList.cells as cell (+cell.from)}
-            <Cell date={cell.from}/>
-        {/each}
-    </div>
+	<div class="PickerDays__grid">
+		{#each cellList.cells as cell (+cell.from)}
+			<Cell date={cell.from} />
+		{/each}
+	</div>
 </div>
 
-<style lang='sass'>
+<style lang="sass">
     .PickerDays
         &__grid
             width: 100%

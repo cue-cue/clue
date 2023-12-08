@@ -15,9 +15,9 @@
 </script>
 
 <PopoverContent class={generateClassNames(['TooltipContent', className])} data-size={size} data-theme={theme}>
-    <div class={generateClassNames(['TooltipContent__container'])}>
-        <slot />
-    </div>
+	<div class={generateClassNames(['TooltipContent__container'])}>
+		<slot />
+	</div>
 </PopoverContent>
 
 <style lang="sass">
