@@ -1,23 +1,22 @@
-<script lang='ts'>
-	import {Icon} from "@cluue/icons"
-	import arrowIcon from "@cluue/icons/line/arrow-left.svg?clue"
+<script lang="ts">
+	import { Icon } from '@cluue/icons'
+	import arrowIcon from '@cluue/icons/line/arrow-left.svg?clue'
 
-    interface $$Props {
-        class?:string
-        type?: 'prev' | 'next'
-    }
-    
-    let className = ''
-    export { className as class }
-    export let type:$$Props['type'] = 'prev'
-    
+	interface $$Props {
+		class?: string
+		type?: 'prev' | 'next'
+	}
+
+	let className = ''
+	export { className as class }
+	export let type: $$Props['type'] = 'prev'
 </script>
 
 <button class={`PickerNavigatorArrow ${className}`} data-type={type}>
-    <Icon width={20} icon={arrowIcon}/>
+	<Icon width={20} icon={arrowIcon} />
 </button>
 
-<style lang='sass'>
+<style lang="sass">
     .PickerNavigatorArrow
         border: none
         background: none

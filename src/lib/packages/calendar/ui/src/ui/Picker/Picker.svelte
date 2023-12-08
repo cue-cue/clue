@@ -1,24 +1,24 @@
-<script lang='ts'>
-	import PickerDays from "./PickerDays.svelte"
-    import PickerNavigator from "./PickerNavigator.svelte"
-    import PickerContainer from "./PickerContainer.svelte"
+<script lang="ts">
+	import PickerDays from './PickerDays.svelte'
+	import PickerNavigator from './PickerNavigator.svelte'
+	import PickerContainer from './PickerContainer.svelte'
 
-    interface $$Props {
-        class?:string
-    }
-    
-    let className = ''
-    export { className as class }
+	interface $$Props {
+		class?: string
+	}
+
+	let className = ''
+	export { className as class }
 </script>
 
 <div class={`Picker ${className}`}>
-    <PickerContainer>
-        <PickerNavigator/>
-        <PickerDays/>
-    </PickerContainer>
+	<PickerContainer>
+		<PickerNavigator />
+		<PickerDays />
+	</PickerContainer>
 </div>
 
-<style lang='sass'>
+<style lang="sass">
     .Picker
         background: var(--clue-color-white)
         box-shadow: 2px 2px 12px 4px rgba(0, 0, 0, .16)
