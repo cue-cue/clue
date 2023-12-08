@@ -2,7 +2,7 @@
 	import dayjs from 'dayjs'
 	import Button from '$lib/packages/base/src/Button/Button.svelte'
 	import Tooltip from '$lib/packages/base/src/Tooltip/Tooltip.svelte'
-	import {Cell} from '@cluue/calendar'
+	import {Cell, Picker} from '@cluue/calendar'
 	import {CellList} from '@cluue/calendar-core'
 	import type { ComponentProps } from 'svelte'
 
@@ -14,7 +14,7 @@
 		unitType: 'day'
 	})
 
-	const cellTypes:Array<ComponentProps<Cell> & {id: string}> = [
+	const cellTypes:Array<Omit<ComponentProps<Cell>, 'date'> & {id: string}> = [
 		{
 			id: 'base',
 		},
@@ -60,6 +60,9 @@
 	</svelte:fragment>
 </Tooltip>
 
+<h2>Picker</h2>
+<Picker/>
+
 <h2>Days</h2>
 <ul>
 	{#each cellTypes as {id, ...props} (id)}
@@ -67,7 +70,7 @@
 			<h3>{id}</h3>
 			<div class='days-grid'>
 				{#each days.cells as day (+day.from)}
-					<Cell {...props}>{dayjs(day.from).format('DD')}</Cell>
+					<Cell date={day.from} {...props}>{dayjs(day.from).format('DD')}</Cell>
 				{/each}
 			</div>
 		</li>
@@ -82,7 +85,7 @@
 			<div class='days-grid'>
 				{#each time.cells as day (+day.from)}
 					<Tooltip>
-						<Cell {...props} variant='time'>{dayjs(day.from).format('HH:mm')}</Cell>
+						<Cell date={day.from} {...props} variant='time'>{dayjs(day.from).format('HH:mm')}</Cell>
 						<svelte:fragment slot='content'>
 							<span>{dayjs(day.from).format('HH:mm')} - {dayjs(day.to).format('HH:mm')}</span>
 						</svelte:fragment>
@@ -96,9 +99,9 @@
 
 <style lang='sass'>
 	ul
-		display: grid
-		grid-template-columns: repeat(3, 1fr)
-		width: fit-content
+		display: flex
+		flex-wrap: wrap
+		width: 100%
 		gap: 40px
 	.days-grid
 		display: grid
