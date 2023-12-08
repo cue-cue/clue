@@ -68,6 +68,8 @@ export const svgSpritePlugin = (options?: Options): Plugin => {
 		return defaultTransformRes
 	}
 
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	//@ts-ignore
 	return {
 		...defaultPlugin,
 		transform,
