@@ -7,6 +7,13 @@
 	"types": "src/index.d.ts",
 	"type": "module",
 	"author": "Nikita Fedorov",
+	"dependencies": {
+		"dayjs": "^1.11.10",
+		"@cluue/icons": "workspace:*",
+		"@cluue/popover": "workspace:*",
+		"@cluue/forms": "workspace:*",
+		"@cluue/calendar-core": "workspace:*"
+	},
 	"exports": {
 		".": {
 			"import": "./src/index.js",

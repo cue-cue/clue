@@ -161,7 +161,17 @@ importers:
         specifier: ^4.5.9
         version: 4.5.9
 
-  src/lib/packages/calendar/ui: {}
+  src/lib/packages/calendar/ui:
+    dependencies:
+      '@cluue/forms':
+        specifier: workspace:*
+        version: link:../../forms
+      '@cluue/icons':
+        specifier: workspace:*
+        version: link:../../icons
+      '@cluue/popover':
+        specifier: workspace:*
+        version: link:../../popover
 
   src/lib/packages/calendar/utils:
     dependencies:

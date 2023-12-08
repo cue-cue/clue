@@ -6,7 +6,7 @@
 		disabled?: boolean
 		active?: boolean
 		type?: 'negative'
-		variant?: 'time'
+		variant?: 'day' | 'time'
 	}
 
 	let className = ''
@@ -106,7 +106,7 @@
 			--calendar-cell-base-color-active: var(--calendar-cell-base-t-negative-color-active)
 			--calendar-cell-base-color-active-hover: var(--calendar-cell-base-t-negative-color-active-hover)
 		&[data-variant='time']
-			--calendar-cell-base-width: auto
+			--calendar-cell-base-width: 100%
 			--calendar-cell-base-height: auto
 			padding: 12px 7px
 			--calendar-cell-base-border-color: var(--clue-color-gray-400)
