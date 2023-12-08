@@ -4,6 +4,7 @@
 	import Tooltip from '$lib/packages/base/src/Tooltip/Tooltip.svelte'
 	import {Cell} from '@cluue/calendar'
 	import {CellList} from '@cluue/calendar-core'
+	import type { ComponentProps } from 'svelte'
 
 	const days = new CellList({
 		date: new Date(),
@@ -13,8 +14,37 @@
 		unitType: 'day'
 	})
 
+	const cellTypes:Array<ComponentProps<Cell> & {id: string}> = [
+		{
+			id: 'base',
+		},
+		{
+			id: 'base:disabled',
+			disabled: true
+		},
+		{
+			id: 'base:active',
+			active: true
+		},
+		{
+			id: 'negative',
+			type: 'negative'
+		},
+		{
+			id: 'negative:disabled',
+			type: 'negative',
+			disabled: true
+		},
+		{
+			id: 'negative:active',
+			type: 'negative',
+			active: true
+		}
+	]
+
 	const time = new CellList({
 		date: new Date(),
+		end: 15 * 4 * 7
 	})
 </script>
 <Tooltip>
@@ -32,53 +62,43 @@
 
 <h2>Days</h2>
 <ul>
-	<li>
-		<h3>base</h3>
-		<div class='days-grid'>
-			{#each days.cells as day (+day.from)}
-				<Cell>{dayjs(day.from).format('DD')}</Cell>
-			{/each}
-		</div>
-	</li>
-	<li>
-		<h3>base:disabled</h3>
-		<div class='days-grid'>
-			{#each days.cells as day (+day.from)}
-				<Cell disabled>{dayjs(day.from).format('DD')}</Cell>
-			{/each}
-		</div>
-	</li>
-	<li>
-		<h3>base:active</h3>
-		<div class='days-grid'>
-			{#each days.cells as day (+day.from)}
-				<Cell active>{dayjs(day.from).format('DD')}</Cell>
-			{/each}
-		</div>
-	</li>
-	<li>
-		<h3>negative</h3>
-		<div class='days-grid'>
-			{#each days.cells as day (+day.from)}
-				<Cell type='negative'>{dayjs(day.from).format('DD')}</Cell>
-			{/each}
-		</div>
-	</li>
-	<li>
-		<h3>negative: active</h3>
-		<div class='days-grid'>
-			{#each days.cells as day (+day.from)}
-				<Cell type='negative' active>{dayjs(day.from).format('DD')}</Cell>
-			{/each}
-		</div>
-	</li>
+	{#each cellTypes as {id, ...props} (id)}
+		<li>
+			<h3>{id}</h3>
+			<div class='days-grid'>
+				{#each days.cells as day (+day.from)}
+					<Cell {...props}>{dayjs(day.from).format('DD')}</Cell>
+				{/each}
+			</div>
+		</li>
+	{/each}
+</ul>
+
+<h2>Time</h2>
+<ul>
+	{#each cellTypes as {id, ...props} (id)}
+		<li>
+			<h3>{id}</h3>
+			<div class='days-grid'>
+				{#each time.cells as day (+day.from)}
+					<Tooltip>
+						<Cell {...props} variant='time'>{dayjs(day.from).format('HH:mm')}</Cell>
+						<svelte:fragment slot='content'>
+							<span>{dayjs(day.from).format('HH:mm')} - {dayjs(day.to).format('HH:mm')}</span>
+						</svelte:fragment>
+					</Tooltip>
+				{/each}
+			</div>
+		</li>
+	{/each}
 </ul>
 
 
 <style lang='sass'>
 	ul
-		display: flex
-		flex-wrap: wrap
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		width: fit-content
 		gap: 40px
 	.days-grid
 		display: grid
