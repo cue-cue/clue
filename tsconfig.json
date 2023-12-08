@@ -4,7 +4,7 @@
 		"compilerOptions": {
 			"allowImportingTsExtensions": true,
 			"moduleResolution": "node"
-		}	
+		}
 	},
 	"compilerOptions": {
 		"allowJs": true,
