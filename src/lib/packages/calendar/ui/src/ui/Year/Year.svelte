@@ -27,7 +27,7 @@
 			{#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as value}
 				<li>
 					<button on:click={(e) => handler.click(e, value)}>
-						{dayjs(value).set(value, 'year').format('YYYY')}
+						{dayjs(value).set('year', value).format('YYYY')}
 					</button>
 				</li>
 			{/each}
