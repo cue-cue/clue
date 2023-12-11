@@ -8,7 +8,6 @@
 
 	interface $$Props {
 		class?: string
-		date:Date
 	}
 
 	let className = ''

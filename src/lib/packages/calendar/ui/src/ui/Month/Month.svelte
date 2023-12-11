@@ -6,24 +6,29 @@
 
 	interface $$Props {
 		class?: string
-		value?: Date
 	}
 
 	let className = ''
 	export { className as class }
-	export let value: $$Props['value'] = new Date()
 
-    const context = new CalendarContext().get()
+    const {store} = new CalendarContext().get()
+
+    const handler = {
+        click(e:MouseEvent, value:number) {
+            console.log('test')
+            store.navigator.set('month', value)
+        }
+    }
 </script>
 
 <Select class={generateClassNames(['CalendarMonth', className])}>
-	{dayjs(value).format('MMMM')}
+	{dayjs($store.navigatorDate).format('MMMM')}
 	<svelte:fragment slot="content">
 		<ul>
-			{#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as el}
+			{#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as value}
 				<li>
-					<button on:click={() => (value = dayjs(value).set('month', el).toDate())}>
-						{dayjs(value).set('month', el).format('MMMM')}
+					<button on:click={(e) => handler.click(e, value)}>
+						{dayjs(value).set('month', value).format('MMMM')}
 					</button>
 				</li>
 			{/each}
