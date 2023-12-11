@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
+
 	interface $$Props {
 		class?: string
 	}
@@ -7,12 +9,12 @@
 	export { className as class }
 </script>
 
-<div class={`PickerContainer ${className}`}>
+<div class={generateClassNames(['CalendarPickerContainer', className])}>
 	<slot />
 </div>
 
 <style lang="sass">
-    .PickerContainer
-        padding-left: 20px
-        padding-right: 20px
+    .ClueCalendarPickerContainer
+        padding-left: 16px
+        padding-right: 16px
 </style>

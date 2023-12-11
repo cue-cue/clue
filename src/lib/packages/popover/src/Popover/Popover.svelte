@@ -10,7 +10,8 @@
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
 	import { createPopoverArrowStore } from '../PopoverArrow/store.js'
 	import { generateClassNames } from '@cluue/utils'
-	import { browser } from '$app/environment'
+	import type { Trigger } from '../Trigger/index.js'
+	import { ClickTrigger } from '../Trigger/click.js'
 
 	interface $$Props {
 		class?: string
@@ -33,7 +34,7 @@
 		/**
 		 * @default 'hover'
 		 */
-		trigger?: 'hover' | false
+		trigger?: 'hover' | 'click' | false
 		/**
 		 * @default false
 		 */
@@ -114,6 +115,12 @@
 		}
 	}
 
+	const triggerMap = new Map<typeof trigger, typeof Trigger | undefined>([
+		['hover', HoverTrigger],
+		['click', ClickTrigger],
+		[false, undefined]
+	])
+
 	const defOptions: IPopoverOptions = {
 		middleware: [
 			offsetMiddleware((data) => {
@@ -180,19 +187,21 @@
 				contentElementRef.set(undefined)
 			}
 		},
-		trigger:
-			trigger === 'hover'
-				? new HoverTrigger(
-						{
-							content: contentElementRef,
-							target: targetElementRef
-						},
-						{
-							open: () => !disabled && setOpen(true),
-							close: () => !disabled && setOpen(false)
-						}
-				  )
-				: undefined
+		trigger: (() => {
+			const Constructor = triggerMap.get(trigger)
+			if (Constructor) {
+				return new Constructor(
+					{
+						content: contentElementRef,
+						target: targetElementRef
+					},
+					{
+						open: () => !disabled && setOpen(true),
+						close: () => !disabled && setOpen(false)
+					}
+				)
+			}
+		})()
 	}
 
 	export const setOpen = (_open: typeof open) => {

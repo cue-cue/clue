@@ -4,52 +4,52 @@
 
 ### Patch Changes
 
-- Add hsl values in a colors
+-   Add hsl values in a colors
 
 ## 1.0.11
 
 ### Patch Changes
 
-- Add the Tooltip and update styles
+-   Add the Tooltip and update styles
 
 ## 1.0.10
 
 ### Patch Changes
 
-- Refactor: $Generic => generics (attr in a script)
+-   Refactor: $Generic => generics (attr in a script)
 
 ## 1.0.9
 
 ### Patch Changes
 
-- Update popover
+-   Update popover
 
 ## 1.0.8
 
 ### Patch Changes
 
-- Fix types
+-   Fix types
 
 ## 1.0.7
 
 ### Patch Changes
 
-- Fix exports
+-   Fix exports
 
 ## 1.0.6
 
 ### Patch Changes
 
-- Fix template
+-   Fix template
 
 ## 1.0.5
 
 ### Patch Changes
 
-- Fix publish
+-   Fix publish
 
 ## 1.0.4
 
 ### Patch Changes
 
-- Move to monorepo
+-   Move to monorepo

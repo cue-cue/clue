@@ -1,4 +1,7 @@
 {
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
 	"folderTemplates.fileTemplates": {
 		"PublicApiFile": ["export {", "\tMain as <FTName>,", "} from './ui'"],
 		"PublicApiUIFile": ["import Main from './Main/index.svelte'", "\t", "export {", "\tMain,", "}"],

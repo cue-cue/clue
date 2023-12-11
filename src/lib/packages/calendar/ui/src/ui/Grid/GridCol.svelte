@@ -1,19 +1,22 @@
 <script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
 	interface $$Props {
 		class?: string
+		tag?: string
 	}
 
 	let className = ''
 	export { className as class }
+	export let tag: $$Props['tag'] = 'div'
 </script>
 
-<div class={`GridCol ${className}`}>
+<svelte:element this={tag} class={generateClassNames(['CalendarGridCol', className])}>
 	<slot />
-</div>
+</svelte:element>
 
 <style lang="sass">
-    .GridCol
+    .ClueCalendarGridCol
         display: grid
         grid-template-columns: 1fr
-        gap: 8px
+        gap: 12px
 </style>
