@@ -16,7 +16,12 @@
 	export let variant: $$Props['variant'] = 'day'
 </script>
 
-<CellBase class={generateClassNames(['CalendarCell', className])} {variant} {...$$restProps}>
+<CellBase
+	class={generateClassNames(['CalendarCell', className])}
+	{variant}
+	{...$$restProps}
+	on:click
+>
 	{#if date instanceof Date}
 		{#if variant === 'time'}
 			{dayjs(date).format('HH:mm')}

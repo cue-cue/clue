@@ -1,17 +1,21 @@
 <script lang="ts">
 	import { generateClassNames } from '@cluue/utils'
-	import Days from '../Days/Days.svelte'
 	import PickerNavigator from './PickerNavigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
 	import { CalendarContext } from '../../lib/context.js'
 	import { createCalendarStore } from '../../lib/store.js'
+	import DaysNavigator from '../Days/DaysNavigator.svelte'
+	import Days from '../Days/Days.svelte'
+	import Time from '../Time/Time.svelte'
 
 	interface $$Props {
 		class?: string
+		time?: boolean
 	}
 
 	let className = ''
 	export { className as class }
+	export let time:$$Props['time'] = false
 
 	const calendarStore = createCalendarStore()
 
@@ -20,12 +24,16 @@
 	})
 
 </script>
-
+<pre>{JSON.stringify($calendarStore, null, 2)}</pre>
 <div class={generateClassNames(['CalendarPicker', className])}>
 	<PickerContainer>
 		<PickerNavigator />
-		<Days />
-		<!-- <Time /> -->
+		{#if time}
+			<DaysNavigator />
+			<Time />
+		{:else}
+			<Days />
+		{/if}
 	</PickerContainer>
 </div>
 

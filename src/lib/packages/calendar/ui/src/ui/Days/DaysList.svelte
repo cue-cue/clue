@@ -2,7 +2,6 @@
 	import { generateClassNames } from '@cluue/utils'
 	import { CellList } from '@cluue/calendar-core'
 	import GridRow from '../Grid/GridRow.svelte'
-	import Cell from '../Cell.svelte'
 
 	interface $$Props {
 		class?: string
@@ -25,6 +24,6 @@
 
 <GridRow class={generateClassNames(['CalendarDaysList', className])} columns={`repeat(${cols}, 1fr)`}>
 	{#each cellList.cells as cell (+cell.from)}
-		<Cell date={cell.from} />
+		<slot {cell} {rows} {cols} date={cell.from}/>
 	{/each}
 </GridRow>
