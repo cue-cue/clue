@@ -8,24 +8,41 @@
 	import Days from '../Days/Days.svelte'
 	import Time from '../Time/Time.svelte'
 	import DaysNames from '../Days/DaysNames.svelte'
+	import { afterUpdate, beforeUpdate, tick } from 'svelte'
 
 	interface $$Props {
 		class?: string
+		value?: Date
 		time?: boolean
 	}
 
 	let className = ''
 	export { className as class }
+	export let value:$$Props['value'] = undefined
 	export let time:$$Props['time'] = false
 
-	const calendarStore = createCalendarStore()
+	const calendarStore = createCalendarStore({
+		initData: {
+			date: value
+		},
+		on: {
+			set(date) {
+				value = date
+			}
+		}
+	})
 
 	$: new CalendarContext().set({
 		store: calendarStore
 	})
 
+	beforeUpdate(() => {
+		if (value && $calendarStore.date && +value === +$calendarStore.date) return
+		calendarStore.select(value)
+	})
+
 </script>
-<pre>{JSON.stringify($calendarStore, null, 2)}</pre>
+<pre style='height: 100px'>{JSON.stringify($calendarStore, null, 2)}</pre>
 <div class={generateClassNames(['CalendarPicker', className])}>
 	<PickerContainer>
 		<PickerNavigator />

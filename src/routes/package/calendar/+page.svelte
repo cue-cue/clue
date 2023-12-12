@@ -46,6 +46,8 @@
 		date: new Date(),
 		end: 15 * 4 * 7
 	})
+
+	let pickerValue:ComponentProps<Picker>['value'] = new Date()
 </script>
 
 <Tooltip>
@@ -62,7 +64,14 @@
 </Tooltip>
 
 <h2>Picker</h2>
-<Picker />
+<ul class='picker-list'>
+	<li>
+		<Picker bind:value={pickerValue} />
+	</li>
+	<li>
+		<Picker bind:value={pickerValue} />
+	</li>
+</ul>
 
 <h2>Days</h2>
 <ul>
@@ -98,6 +107,10 @@
 </ul>
 
 <style lang="sass">
+	.picker-list
+		display: flex
+		align-items: flex-start
+		gap: 20px
 	ul
 		display: flex
 		flex-wrap: wrap

@@ -8,7 +8,7 @@
 	import { derived } from 'svelte/store'
 	import { isToday } from '@cluue/calendar-utils'
 
-	interface $$Props extends ComponentProps<DaysList> {
+	interface $$Props extends Omit<ComponentProps<DaysList>, 'date'> {
 		class?: string
 	}
 
@@ -32,11 +32,12 @@
 
 </script>
 
-<DaysList class={generateClassNames(['CalendarDays', className])} cols={7} rows={4} let:date>
+<DaysList class={generateClassNames(['CalendarDays', className])} date={$store.navigatorDate} let:date let:isExclude>
 	<Cell
 		{date}
 		active={$isActiveDay(date)}
 		type={isToday(date) ? 'negative' : undefined}
+		ghost={isExclude}
 		on:click={() => handler.dayClick(date)}
 	/>
 </DaysList>

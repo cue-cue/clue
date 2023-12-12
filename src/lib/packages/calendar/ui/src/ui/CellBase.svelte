@@ -5,6 +5,7 @@
 		class?: string
 		disabled?: boolean
 		active?: boolean
+		ghost?: boolean
 		type?: 'negative'
 		variant?: 'day' | 'time'
 	}
@@ -14,12 +15,14 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let type: $$Props['type'] = undefined
 	export let active: $$Props['active'] = undefined
+	export let ghost: $$Props['ghost'] = undefined
 	export let variant: $$Props['variant'] = undefined
 </script>
 
 <button
 	class={generateClassNames(['CalendarCellBase', className])}
 	{disabled}
+	data-ghost={ghost}
 	data-active={active}
 	data-type={type}
 	data-variant={variant}
@@ -44,6 +47,7 @@
 		--calendar-cell-base-color-active-hover: var(--clue-color-white)
 		--calendar-cell-base-color-active: var(--clue-color-white)
 		--calendar-cell-base-color-disabled: var(--clue-color-gray-700)
+		--calendar-cell-base-color-ghost: var(--clue-color-gray-200)
 
 		--calendar-cell-base-border-color: transparent
 		--calendar-cell-base-border-color-hover: transparent
@@ -114,4 +118,7 @@
 			&[data-type='negative']
 				--calendar-cell-base-border-color-hover: transparent
 				--calendar-cell-base-border-color: transparent
+		&:not([data-active='true'], [data-type='negative'])
+			&[data-ghost='true']
+				color: var(--calendar-cell-base-color-ghost)
 </style>

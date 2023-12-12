@@ -34,7 +34,7 @@
 
 <div class={generateClassNames(['DaysNavigator', className])}>
 	<DaysNames/>
-	<DaysList rows={1} let:date>
+	<DaysList rows={1} date={$store.navigatorDate} let:date>
 		<Cell
 			{date}
 			active={$isActiveDate(date)}

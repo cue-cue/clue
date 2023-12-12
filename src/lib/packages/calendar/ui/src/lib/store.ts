@@ -5,12 +5,20 @@ import dayjs from 'dayjs'
 interface ICalendarStoreData {
     date?:Date
     navigatorDate:Date
-} 
+}
 
-export const createCalendarStore = () => {
+interface ICalendarStoreOptions {
+    initData?:Partial<ICalendarStoreData>
+    on?: Partial<{
+        set: (date:ICalendarStoreData['date']) => void
+    }>
+}
+
+export const createCalendarStore = (options?:ICalendarStoreOptions) => {
     const {subscribe, update} = writable<ICalendarStoreData>({
         date: undefined,
-        navigatorDate: new Date()
+        navigatorDate: new Date(),
+        ...options?.initData
     })
 
     const calendar = new Calendar()
@@ -26,7 +34,10 @@ export const createCalendarStore = () => {
         calendar,
         on: {
             set(selected) {
-                setDate(selected?.from)
+                const newDate = selected?.from
+                
+                options?.on?.set?.(newDate)
+                setDate(newDate)
             },
         }
     })
@@ -59,7 +70,9 @@ export const createCalendarStore = () => {
         }
     }
 
-    const select = (date:Date) => {
+    const select = (date?:Date) => {
+        if (!date) return selectInstance.clear()
+        
         selectInstance.select(new Cell({
             from: date,
             to: date
