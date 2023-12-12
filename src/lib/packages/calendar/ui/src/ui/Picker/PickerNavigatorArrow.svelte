@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { generateClassNames } from '@cluue/utils'
 	import { Icon } from '@cluue/icons'
 	import arrowIcon from '@cluue/icons/line/arrow-left.svg?clue'
 
@@ -12,15 +13,17 @@
 	export let type: $$Props['type'] = 'prev'
 </script>
 
-<button class={`PickerNavigatorArrow ${className}`} data-type={type}>
+<button class={generateClassNames(['CalendarPickerNavigatorArrow', className])} data-type={type} on:click>
 	<Icon width={20} icon={arrowIcon} />
 </button>
 
 <style lang="sass">
-    .PickerNavigatorArrow
-        border: none
-        background: none
-        cursor: pointer
-        &[data-type='next']
-            transform: scaleX(-1)
+	.ClueCalendarPickerNavigatorArrow
+		border: none
+		background: none
+		cursor: pointer
+		&:hover
+			--clue-icon-color: var(--clue-color-primary)
+		&[data-type='next']
+			transform: scaleX(-1)
 </style>

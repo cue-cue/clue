@@ -4,28 +4,28 @@
 
 ### Patch Changes
 
-- Upgrade perfomance
+-   Upgrade perfomance
 
 ## 1.0.4
 
 ### Patch Changes
 
-- Upgrate and Perf Periods
+-   Upgrate and Perf Periods
 
 ## 1.0.3
 
 ### Patch Changes
 
-- Period upgrade
+-   Period upgrade
 
 ## 1.0.2
 
 ### Patch Changes
 
-- Fix test
+-   Fix test
 
 ## 1.0.1
 
 ### Patch Changes
 
-- Create a calendar packages
+-   Create a calendar packages

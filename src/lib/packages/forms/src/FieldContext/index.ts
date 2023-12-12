@@ -10,7 +10,7 @@ interface IData {
 
 export class FieldContext extends Context<Writable<IData>> {
 	constructor() {
-		super('clueFieldContext')
+		super('fieldContext')
 	}
 }
 

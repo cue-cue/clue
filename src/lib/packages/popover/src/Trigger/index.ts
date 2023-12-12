@@ -2,10 +2,11 @@
 import type { Writable } from 'svelte/store'
 import type { PopoverEvents } from '../actions/index.js'
 
+type TriggerHandlers = Partial<PopoverEvents & { init: VoidFunction; destroy: VoidFunction }>
 export class Trigger {
 	handlers!: {
-		target?: Partial<PopoverEvents>
-		content?: Partial<PopoverEvents>
+		target?: TriggerHandlers
+		content?: TriggerHandlers
 	}
 	elements
 	events

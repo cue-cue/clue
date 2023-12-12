@@ -26,6 +26,8 @@ const events = (action: 'add' | 'remove', node: HTMLElement, handlers: Partial<P
 	const method = methodMap.get(action) || 'removeEventListener'
 
 	Object.entries(handlers).forEach(([eventName, handler]) => {
+		if (['destroy', 'init'].includes(eventName)) return
+
 		node[method](eventName, handler as EventListenerOrEventListenerObject)
 	})
 }
@@ -37,16 +39,17 @@ export const createPopoverActions = (options: IPopoverOptions) => {
 
 	const targetAction = (node: HTMLElement): ActionReturn => {
 		const rootActionResult = _targetAction(node) as unknown as Partial<ActionReturn<unknown>>
+		const targetHandlers = triggerCombinator?.handlers.target || {}
 
 		options?.target?.init?.(node)
-
-		const targetHandlers = triggerCombinator?.handlers.target || {}
+		targetHandlers.init?.()
 
 		events('add', node, targetHandlers)
 
 		const destroy = () => {
 			events('remove', node, targetHandlers)
 
+			targetHandlers.destroy?.()
 			options?.target?.destroy?.()
 			rootActionResult?.destroy?.()
 		}
@@ -63,16 +66,17 @@ export const createPopoverActions = (options: IPopoverOptions) => {
 
 	const contentAction = (node: HTMLElement): ActionReturn => {
 		const rootActionResult = _contentAction(node) as unknown as Partial<ActionReturn<unknown>>
+		const contentHandlers = triggerCombinator?.handlers.content || {}
 
 		options?.content?.init?.(node)
-
-		const contentHandlers = triggerCombinator?.handlers.content || {}
+		contentHandlers.init?.()
 
 		events('add', node, contentHandlers)
 
 		const destroy = () => {
 			events('remove', node, contentHandlers)
 
+			contentHandlers.destroy?.()
 			options?.content?.destroy?.()
 			rootActionResult?.destroy?.()
 		}
