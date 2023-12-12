@@ -1,21 +1,19 @@
 <script lang="ts">
 	import dayjs from 'dayjs'
 	import { generateClassNames } from '@cluue/utils'
-	import DaysNames from './DaysNames.svelte'
 	import DaysList from './DaysList.svelte'
 	import type { ComponentProps } from 'svelte'
 	import Cell from '../Cell.svelte'
 	import { CalendarContext } from '../../lib/context.js'
 	import { derived } from 'svelte/store'
+	import { isToday } from '@cluue/calendar-utils'
 
 	interface $$Props extends ComponentProps<DaysList> {
 		class?: string
-		names?: boolean
 	}
 
 	let className = ''
 	export { className as class }
-	export let names: $$Props['names'] = true
 
 	const { store } = new CalendarContext().get()
 
@@ -34,15 +32,11 @@
 
 </script>
 
-<div class={generateClassNames(['CalendarDays', className])}>
-	{#if names}
-		<DaysNames />
-	{/if}
-	<DaysList cols={7} rows={4} let:date>
-		<Cell
-			{date}
-			active={$isActiveDay(date)}
-			on:click={() => handler.dayClick(date)}
-		/>
-	</DaysList>
-</div>
+<DaysList class={generateClassNames(['CalendarDays', className])} cols={7} rows={4} let:date>
+	<Cell
+		{date}
+		active={$isActiveDay(date)}
+		type={isToday(date) ? 'negative' : undefined}
+		on:click={() => handler.dayClick(date)}
+	/>
+</DaysList>

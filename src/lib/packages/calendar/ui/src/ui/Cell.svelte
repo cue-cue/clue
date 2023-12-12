@@ -14,6 +14,7 @@
 	export { className as class }
 	export let date: $$Props['date']
 	export let variant: $$Props['variant'] = 'day'
+
 </script>
 
 <CellBase
@@ -22,11 +23,13 @@
 	{...$$restProps}
 	on:click
 >
-	{#if date instanceof Date}
-		{#if variant === 'time'}
-			{dayjs(date).format('HH:mm')}
-		{:else}
-			{dayjs(date).format('DD')}
+	<slot>
+		{#if date instanceof Date}
+			{#if variant === 'time'}
+				{dayjs(date).format('HH:mm')}
+			{:else}
+				{dayjs(date).format('DD')}
+			{/if}
 		{/if}
-	{/if}
+	</slot>
 </CellBase>

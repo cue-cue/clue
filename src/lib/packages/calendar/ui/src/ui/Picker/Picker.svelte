@@ -7,6 +7,7 @@
 	import DaysNavigator from '../Days/DaysNavigator.svelte'
 	import Days from '../Days/Days.svelte'
 	import Time from '../Time/Time.svelte'
+	import DaysNames from '../Days/DaysNames.svelte'
 
 	interface $$Props {
 		class?: string
@@ -19,7 +20,7 @@
 
 	const calendarStore = createCalendarStore()
 
-	const context = new CalendarContext().set({
+	$: new CalendarContext().set({
 		store: calendarStore
 	})
 
@@ -30,10 +31,16 @@
 		<PickerNavigator />
 		{#if time}
 			<DaysNavigator />
-			<Time />
 		{:else}
-			<Days />
+			<DaysNames />
 		{/if}
+		<div class={generateClassNames(['CalendarPicker__main'])}>
+			{#if time}
+				<Time />
+			{:else}
+				<Days />
+			{/if}
+		</div>
 	</PickerContainer>
 </div>
 
@@ -44,6 +51,8 @@
 		padding: 10px 0 20px 0
 		border-radius: 20px
 		width: fit-content
-		:global(.PickerDays)
-			width: 100%
+		&__main
+			border-top: 1px solid var(--clue-color-gray-10)
+			padding-top: 24px
+			margin-top: 8px
 </style>
