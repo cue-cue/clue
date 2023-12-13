@@ -1,57 +1,85 @@
-import { writable } from "svelte/store"
+import { writable, get } from "svelte/store"
 import { Calendar, Cell, Select } from '@cluue/calendar-core'
 import dayjs from 'dayjs'
 
-interface ICalendarStoreData {
-    date?:Date
+export interface ICalendarStoreData<TOptions extends Pick<ICalendarStoreOptions, 'range'>> {
+    date?:TOptions['range'] extends true ? Cell : Date
     navigatorDate:Date
 }
 
-interface ICalendarStoreOptions {
-    initData?:Partial<ICalendarStoreData>
+export interface ICalendarStoreOptions<TRange extends boolean | undefined = boolean> {
+    time?:boolean
+    range?:TRange
+    initData?:Partial<ICalendarStoreData<{range: TRange}>>
     on?: Partial<{
-        set: (date:ICalendarStoreData['date']) => void
+        set: (date:ICalendarStoreData<{range: TRange}>['date']) => void
     }>
 }
 
-export const createCalendarStore = (options?:ICalendarStoreOptions) => {
-    const {subscribe, update} = writable<ICalendarStoreData>({
+export const createCalendarStore = <TRange extends ICalendarStoreOptions['range'] = boolean>(_options?:ICalendarStoreOptions<TRange>) => {
+    type Options = ICalendarStoreOptions<TRange>
+    type Data = ICalendarStoreData<Options>
+    
+    const options = writable({
+        range: false,
+        time: false,
+        ..._options
+    } as Options)
+
+    const {subscribe, update} = writable<Data>({
         date: undefined,
         navigatorDate: new Date(),
-        ...options?.initData
+        ...get(options)?.initData as Options['initData']
     })
 
     const calendar = new Calendar()
 
-    const setDate = (date:ICalendarStoreData['date']) => {
-        update(data => {
-            data.date = date
-            return data
-        })
-    }
-
     const selectInstance = new Select({
         calendar,
+        options: {
+            allowBetweenDays: true,
+        },
         on: {
             set(selected) {
-                const newDate = selected?.from
+                const newDate = (get(options).range ? selected : selected?.from) as Data['date']
                 
-                options?.on?.set?.(newDate)
+                get(options)?.on?.set?.(newDate)
+                
                 setDate(newDate)
             },
         }
     })
 
+    const setDate = (date:Data['date']) => {
+        update(data => {
+            data.date = date
+            if (date && date instanceof Date) {
+                data.navigatorDate = date
+            }
+            return data
+        })
+    }
+
+    const updateOptions = (newOptions:Partial<ICalendarStoreOptions>) => {
+        options.update(data =>({
+            ...data,
+            ...newOptions
+        } as Options))
+    }
+
     const navigator = {
+        getStepUnit() {
+            return get(options).time ? 'week' : 'month'
+        },
         next() {
             update(data => {
-                data.navigatorDate = dayjs(data.navigatorDate).add(1, 'month').toDate()
+                data.navigatorDate = dayjs(data.navigatorDate).add(1, this.getStepUnit()).toDate()
                 return data
             })
         },
         prev() {
             update(data => {
-                data.navigatorDate = dayjs(data.navigatorDate).add(-1, 'month').toDate()
+                data.navigatorDate = dayjs(data.navigatorDate).add(-1, this.getStepUnit()).toDate()
                 return data
             })
         },
@@ -70,18 +98,37 @@ export const createCalendarStore = (options?:ICalendarStoreOptions) => {
         }
     }
 
-    const select = (date?:Date) => {
-        if (!date) return selectInstance.clear()
+    const select = (value?:Data['date'], selectOptions?:Parameters<typeof selectInstance.select>[1]) => {
+        if (!value) return selectInstance.clear()
         
-        selectInstance.select(new Cell({
-            from: date,
-            to: date
-        }))
+        const _selectOptions:typeof selectOptions = {
+            new: !get(options).range,
+            ...selectOptions
+        } 
+
+        console.log(value)
+
+        if (value instanceof Date) {
+            selectInstance.select(new Cell({
+                from: value,
+                to: value
+            }), _selectOptions)
+        } else {
+            selectInstance.select(value, _selectOptions)
+            console.log('CELL', {selectInstance})
+        }
+
     }
 
     return {
         subscribe,
         select,
-        navigator
+        navigator,
+        calendar,
+        selector: selectInstance,
+        options: {
+            update: updateOptions,
+            subscribe: options.subscribe
+        }
     }
 }

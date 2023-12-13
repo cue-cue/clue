@@ -233,13 +233,16 @@ export class Select {
 	select(
 		{ from, to }: Cell,
 		_options?: {
+			new?: boolean
 			mode?: 'single' | 'range'
 		}
 	) {
 		const options: typeof _options = {
 			mode: 'single',
+			new: false,
 			..._options
 		}
+		
 		if (this.selected === undefined) {
 			this.set({
 				//Если пусто, то ставим "как есть"
@@ -251,6 +254,8 @@ export class Select {
 			if (isDouble) {
 				//Если селекты равны, то сбрасываем значение
 				this.clear()
+			} else if (options.new) { //Ставим всегда новое значение
+				this.set({ from, to })
 			} else if (this.fixTimeLength) {
 				//Если у нас есть this.fixTimeLength, то мы должны остановить логику и просто сделать set на текущих данных
 				if (isIn.from && !isIn.fromInset) {

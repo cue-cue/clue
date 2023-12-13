@@ -15,7 +15,6 @@
 
     const handler = {
         click(e:MouseEvent, value:number) {
-            console.log('test')
             store.navigator.set('month', value)
         }
     }

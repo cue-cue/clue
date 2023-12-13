@@ -4,6 +4,7 @@
 	import DaysList from './DaysList.svelte'
 	import type { ComponentProps } from 'svelte'
 	import Cell from '../Cell.svelte'
+	import type {Cell as CellType} from '@cluue/calendar-core'
 	import { CalendarContext } from '../../lib/context.js'
 	import { derived } from 'svelte/store'
 	import { isToday } from '@cluue/calendar-utils'
@@ -18,26 +19,26 @@
 	const { store } = new CalendarContext().get()
 
 	const handler = {
-		dayClick(date:Date) {
-			store.select(date)
+		dayClick(cell:CellType) {
+			store.select(cell)
 		}
 	}
 
 	const isActiveDay = derived(store, $store => {
-		return (date:Date) => {
-			if (!date || !$store.date) return false
-			return +dayjs(date).startOf('day') === +dayjs($store.date).startOf('day')
+		return (cell:CellType) => {
+			if (!cell || !$store.date) return false
+
+			return store.selector.check(cell)
 		}
 	})
 
 </script>
-
-<DaysList class={generateClassNames(['CalendarDays', className])} date={$store.navigatorDate} let:date let:isExclude>
+<DaysList class={generateClassNames(['CalendarDays', className])} date={$store.navigatorDate} let:date let:cell let:isExclude>
 	<Cell
 		{date}
-		active={$isActiveDay(date)}
+		active={$isActiveDay(cell)}
 		type={isToday(date) ? 'negative' : undefined}
 		ghost={isExclude}
-		on:click={() => handler.dayClick(date)}
+		on:click={() => handler.dayClick(cell)}
 	/>
 </DaysList>

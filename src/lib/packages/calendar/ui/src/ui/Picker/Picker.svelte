@@ -1,48 +1,73 @@
-<script lang="ts">
+<script lang="ts" generics="TRange extends boolean = false">
 	import { generateClassNames } from '@cluue/utils'
+	import { Cell as CalendarCoreCell } from '@cluue/calendar-core'
 	import PickerNavigator from './PickerNavigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
-	import { CalendarContext } from '../../lib/context.js'
-	import { createCalendarStore } from '../../lib/store.js'
+	import { CalendarContext, type ICalendarContextData } from '../../lib/context.js'
+	import { createCalendarStore, type ICalendarStoreData, type ICalendarStoreOptions } from '../../lib/store.js'
 	import DaysNavigator from '../Days/DaysNavigator.svelte'
 	import Days from '../Days/Days.svelte'
 	import Time from '../Time/Time.svelte'
 	import DaysNames from '../Days/DaysNames.svelte'
-	import { afterUpdate, beforeUpdate, tick } from 'svelte'
+	import { beforeUpdate } from 'svelte'
 
+	type CalendarStoreOptions = ICalendarStoreOptions<TRange>
 	interface $$Props {
 		class?: string
-		value?: Date
-		time?: boolean
+		value?: ICalendarStoreData<{range: TRange}>['date']
+		time?: CalendarStoreOptions['time']
+		range?: CalendarStoreOptions['range']
 	}
 
 	let className = ''
 	export { className as class }
 	export let value:$$Props['value'] = undefined
 	export let time:$$Props['time'] = false
+	export let range:$$Props['range'] = false as TRange
 
 	const calendarStore = createCalendarStore({
+		time,
+		range,
 		initData: {
 			date: value
 		},
 		on: {
 			set(date) {
+				if (date instanceof Date) {
+					value 
+				}
 				value = date
 			}
 		}
 	})
 
+	$: calendarStore.options.update({
+		time,
+		range
+	})
+
 	$: new CalendarContext().set({
-		store: calendarStore
+		store: calendarStore as ICalendarContextData['store']
 	})
 
 	beforeUpdate(() => {
-		if (value && $calendarStore.date && +value === +$calendarStore.date) return
+		if ($calendarStore.date && value) {
+			if (range && !(value instanceof Date) && !($calendarStore.date instanceof Date)) {
+				if (new CalendarCoreCell(value).isSame($calendarStore.date)) return
+			} else {
+				if (+value === +$calendarStore.date) return
+			}
+		}
+		
 		calendarStore.select(value)
 	})
 
+	$: console.log($calendarStore)
+
 </script>
 <pre style='height: 100px'>{JSON.stringify($calendarStore, null, 2)}</pre>
+<button on:click={() => time = !time}>toggle time ({time})</button>
+<button on:click={() => range = !range}>toggle range ({range})</button>
 <div class={generateClassNames(['CalendarPicker', className])}>
 	<PickerContainer>
 		<PickerNavigator />
@@ -51,14 +76,16 @@
 		{:else}
 			<DaysNames />
 		{/if}
-		<div class={generateClassNames(['CalendarPicker__main'])}>
+	</PickerContainer>
+	<div class={generateClassNames(['CalendarPicker__main', className])}>
+		<PickerContainer>
 			{#if time}
 				<Time />
 			{:else}
 				<Days />
 			{/if}
-		</div>
-	</PickerContainer>
+		</PickerContainer>
+	</div>
 </div>
 
 <style lang="sass">

@@ -12,18 +12,26 @@
 	let className = ''
 	export { className as class }
 
-	const { store } = new CalendarContext().get()
+	const { store: {options, ...store} } = new CalendarContext().get()
 
-	$: dateList = [1, 2, 3, 4, 5, 6, 7].map((day) => ({
-		date: dayjs($store.navigatorDate).set('day', day),
-		day
-	}))
+	$: dateList = [1, 2, 3, 4, 5, 6, 7].map((day) => {
+		let date = dayjs($store.navigatorDate)
+		if (!$options.time) {
+			date = date.date(14)
+		}
+		return {
+			date: date.day(day),
+			day
+		}
+	})
 
 </script>
 
 <GridRow tag="ul" class={generateClassNames(['CalendarDaysNames', className])} columns={`repeat(${dateList.length}, 1fr)`}>
 	{#each dateList as {date, day} (day)}
-		<li data-today={isToday(date.toDate())}>
+		<li data-today={isToday(date.toDate(), {
+			anyWeek: !$options.time
+		})}>
 			{date.format('dd')}
 		</li>
 	{/each}

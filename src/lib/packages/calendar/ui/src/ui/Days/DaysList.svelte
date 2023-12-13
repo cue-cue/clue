@@ -7,6 +7,7 @@
 	interface $$Props {
 		class?: string
 		date: Date
+		normalize?: boolean
 		cols?: number
 		rows?: number
 	}
@@ -14,19 +15,26 @@
 	let className = ''
 	export { className as class }
 	export let date:$$Props['date']
+	export let normalize: $$Props['normalize'] = true
 	export let cols: Exclude<$$Props['cols'], undefined> = 7
 	export let rows: Exclude<$$Props['rows'], undefined> = 5
 
-	const getStartDate = (baseDate:Date) => {
-		return dayjs(baseDate).startOf('month').startOf('week').add(1, 'day').toDate()
+	const getStartDate = (baseDate:Date, options:{normalize:typeof normalize}) => {
+		if (options.normalize) {
+			return dayjs(baseDate).startOf('month').startOf('week').add(1, 'day').toDate()
+		} else {
+			return dayjs(baseDate).add(-1, 'day').startOf('week').add(1, 'day').toDate()
+		}
 	}
 
 	const isExclude = (cellDate:Date) => {
-		return +dayjs(cellDate).startOf('month') !== +dayjs(date).startOf('month')
+ 		return +dayjs(cellDate).startOf('month') !== +dayjs(date).startOf('month')
 	}
 
 	$: cellList = new CellList({
-		date: getStartDate(date),
+		date: getStartDate(date, {
+			normalize
+		}),
 		step: 1,
 		end: cols * rows,
 		unitType: 'day'
