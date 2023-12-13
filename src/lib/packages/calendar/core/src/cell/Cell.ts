@@ -10,7 +10,7 @@ export class Cell {
 		this.from = from
 		this.to = to
 	}
-	isSame(cell:Cell) {
-		return +cell.from === +this.from && +cell.to === +this.to
+	static isSame(a:Cell, b:Cell) {
+		return +a.from === +b.from && +a.to === +b.to
 	}
 }

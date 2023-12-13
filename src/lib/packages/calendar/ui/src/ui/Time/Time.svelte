@@ -16,13 +16,15 @@
 
 	const { store } = new CalendarContext().get()
 
-	const cellList = new CellList({
-		date: new Date()
+	$: cellList = new CellList({
+		date: $store.navigatorDate
 	})
 
 	const handler = {
-		cellClick(cell:CellType) {
-			store.select(cell)
+		cellClick(event:MouseEvent, cell:CellType) {
+			store.select(cell, {
+				mode: event.shiftKey ? 'range' : 'single'
+			})
 		}
 	}
 
@@ -33,13 +35,13 @@
 	})
 </script>
 
-<GridRow class={generateClassNames(['CalendarTime', className])} columns={`repeat(auto-fit, minmax(55px, 1fr))`}>
+<GridRow class={generateClassNames(['CalendarTime', className])} gap='medium' columns={`repeat(auto-fit, minmax(55px, 1fr))`}>
 	{#each cellList.cells as cell (+cell.from)}
 		<Cell
 			date={cell.from}
 			variant="time"
 			active={$isActive(cell)}
-			on:click={() => handler.cellClick(cell)}
+			on:click={e => handler.cellClick(e, cell)}
 		/>
 	{/each}
 </GridRow>

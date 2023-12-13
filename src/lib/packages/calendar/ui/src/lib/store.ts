@@ -106,16 +106,13 @@ export const createCalendarStore = <TRange extends ICalendarStoreOptions['range'
             ...selectOptions
         } 
 
-        console.log(value)
-
         if (value instanceof Date) {
             selectInstance.select(new Cell({
                 from: value,
-                to: value
+                to: dayjs(value).endOf('day').add(1, 'ms').toDate() //+ 1ms для того, чтобы это было начало следующего дня. Как при генерации ячеек (CellList)
             }), _selectOptions)
         } else {
             selectInstance.select(value, _selectOptions)
-            console.log('CELL', {selectInstance})
         }
 
     }

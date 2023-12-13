@@ -65,9 +65,9 @@
 
 <h2>Picker</h2>
 <ul class='picker-list'>
-	<!-- <li>
+	<li>
 		<Picker bind:value={pickerValue} />
-	</li> -->
+	</li>
 	<li>
 		<Picker bind:value={pickerValue} />
 	</li>

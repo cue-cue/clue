@@ -1,5 +1,5 @@
 <script lang="ts" generics="TRange extends boolean = false">
-	import { generateClassNames } from '@cluue/utils'
+	import { generateClassNames, randomId } from '@cluue/utils'
 	import { Cell as CalendarCoreCell } from '@cluue/calendar-core'
 	import PickerNavigator from './PickerNavigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
@@ -9,7 +9,7 @@
 	import Days from '../Days/Days.svelte'
 	import Time from '../Time/Time.svelte'
 	import DaysNames from '../Days/DaysNames.svelte'
-	import { beforeUpdate } from 'svelte'
+	import { afterUpdate, beforeUpdate } from 'svelte'
 
 	type CalendarStoreOptions = ICalendarStoreOptions<TRange>
 	interface $$Props {
@@ -46,23 +46,22 @@
 		range
 	})
 
-	$: new CalendarContext().set({
+	new CalendarContext().set({
 		store: calendarStore as ICalendarContextData['store']
 	})
 
 	beforeUpdate(() => {
 		if ($calendarStore.date && value) {
 			if (range && !(value instanceof Date) && !($calendarStore.date instanceof Date)) {
-				if (new CalendarCoreCell(value).isSame($calendarStore.date)) return
+				if (CalendarCoreCell.isSame(new CalendarCoreCell(value), $calendarStore.date)) return
 			} else {
 				if (+value === +$calendarStore.date) return
 			}
 		}
-		
-		calendarStore.select(value)
+		calendarStore.select(value, {
+			new: true
+		})
 	})
-
-	$: console.log($calendarStore)
 
 </script>
 <pre style='height: 100px'>{JSON.stringify($calendarStore, null, 2)}</pre>
@@ -92,11 +91,17 @@
 	.ClueCalendarPicker
 		background: var(--clue-color-white)
 		box-shadow: 2px 2px 12px 4px rgba(0, 0, 0, .16)
-		padding: 10px 0 20px 0
+		padding-top: 10px
 		border-radius: 20px
 		width: fit-content
 		&__main
+			--padding-top: 24px
+			--padding-bottom: 20px
+			--margin-top: 8px
 			border-top: 1px solid var(--clue-color-gray-10)
-			padding-top: 24px
-			margin-top: 8px
+			padding-top: var(--padding-top)
+			padding-bottom: var(--padding-bottom)
+			margin-top: var(--margin-top)
+			max-height: 400px
+			overflow: auto
 </style>

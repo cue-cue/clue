@@ -10,13 +10,16 @@
 	export let tag: $$Props['tag'] = 'div'
 </script>
 
-<svelte:element this={tag} class={generateClassNames(['CalendarGridCol', className])}>
+<svelte:element
+	this={tag}
+	class={generateClassNames(['CalendarGridCol', className])}
+>
 	<slot />
 </svelte:element>
 
 <style lang="sass">
-    .ClueCalendarGridCol
-        display: grid
-        grid-template-columns: 1fr
-        gap: 12px
+	.ClueCalendarGridCol
+		display: grid
+		grid-template-columns: 1fr
+		gap: 12px
 </style>
