@@ -19,10 +19,10 @@
         }
     }
 
-	const start = $options.min?.getFullYear() ?? 1900
-	const end = $options.max?.getFullYear() ?? 2200
+	$: start = $options.min?.getFullYear() ?? 1900
+	$: end = $options.max?.getFullYear() ?? 2200
 
-	const years = new Array(end - start).fill(undefined).map((_, index) => index + start)
+	$: years = new Array(end - start).fill(undefined).map((_, index) => index + start)
 </script>
 
 <Select class={generateClassNames(['CalendarYear', className])}>
