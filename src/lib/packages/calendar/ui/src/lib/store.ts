@@ -10,6 +10,8 @@ export interface ICalendarStoreData<TOptions extends Pick<ICalendarStoreOptions,
 export interface ICalendarStoreOptions<TRange extends boolean | undefined = boolean> {
     time?:boolean
     range?:TRange
+    min?:Date
+    max?:Date
     initData?:Partial<ICalendarStoreData<{range: TRange}>>
     on?: Partial<{
         set: (date:ICalendarStoreData<{range: TRange}>['date']) => void
@@ -23,6 +25,8 @@ export const createCalendarStore = <TRange extends ICalendarStoreOptions['range'
     const options = writable({
         range: false,
         time: false,
+        min: new Date(0),
+        max: dayjs().add(201, 'year').startOf('year').toDate(),
         ..._options
     } as Options)
 
@@ -91,7 +95,6 @@ export const createCalendarStore = <TRange extends ICalendarStoreOptions['range'
         },
         set(unit:dayjs.UnitType, value:number) {
             update(data => {
-                dayjs().set
                 data.navigatorDate = dayjs(data.navigatorDate).set(unit, value).toDate()
                 return data
             })
