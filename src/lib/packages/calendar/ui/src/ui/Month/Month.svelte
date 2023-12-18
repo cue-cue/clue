@@ -15,7 +15,6 @@
 
     const handler = {
         click(e:MouseEvent, value:number) {
-            console.log('test')
             store.navigator.set('month', value)
         }
     }
@@ -25,7 +24,7 @@
 	{dayjs($store.navigatorDate).format('MMMM')}
 	<svelte:fragment slot="content">
 		<ul>
-			{#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as value}
+			{#each [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as value (value)}
 				<li>
 					<button on:click={(e) => handler.click(e, value)}>
 						{dayjs(value).set('month', value).format('MMMM')}

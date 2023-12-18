@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
 import type { Cell } from '../cell/index.js'
+import { mergeDisabled } from './lib.js'
 
 export interface IDisabledParams extends Partial<Pick<Cell, 'from' | 'to'>> {
 	include?: Disabled['include']
@@ -26,6 +27,8 @@ export class Disabled {
 		this.type = this.getType()
 		this.parsedInclude = this.parseInclude()
 	}
+
+	static merge = mergeDisabled
 
 	#genAvailability(value: IDisabledParams['availability']): Required<Exclude<typeof value, undefined>> {
 		let { occupied, free, total = 0 } = value || {}

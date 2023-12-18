@@ -34,16 +34,13 @@
 
 <div class={generateClassNames(['DaysNavigator', className])}>
 	<DaysNames/>
-	<DaysList rows={1} let:date>
+	<DaysList rows={1} date={$store.navigatorDate} normalize={false} let:date let:isExclude>
 		<Cell
 			{date}
 			active={$isActiveDate(date)}
+			ghost={isExclude}
 			type={isToday(date) ? 'negative' : undefined}
 			on:click={() => handler.dayClick(date)}
 		/>
 	</DaysList>
 </div>
-
-<style lang='sass'>
-	.ClueDaysNavigator
-</style>

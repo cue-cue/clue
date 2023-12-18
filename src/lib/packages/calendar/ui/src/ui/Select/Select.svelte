@@ -39,4 +39,6 @@
         padding: 0
         margin: 0
         width: 160px
+        max-height: 300px
+        overflow: auto
 </style>
