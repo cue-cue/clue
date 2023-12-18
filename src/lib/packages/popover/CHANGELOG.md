@@ -1,5 +1,14 @@
 # @cluue/popover
 
+## 1.0.17
+
+### Patch Changes
+
+-   Calendar
+-   Updated dependencies
+    -   @cluue/config@1.0.12
+    -   @cluue/utils@1.0.13
+
 ## 1.0.16
 
 ### Patch Changes

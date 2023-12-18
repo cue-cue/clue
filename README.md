@@ -2,7 +2,7 @@
 
 ## Materials
 
-+ ux patterns: [shadcn ui kit](https://www.shadcn-svelte.com/docs)
+-   ux patterns: [shadcn ui kit](https://www.shadcn-svelte.com/docs)
 
 ## Dev
 

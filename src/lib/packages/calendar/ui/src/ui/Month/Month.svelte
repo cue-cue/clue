@@ -11,13 +11,13 @@
 	let className = ''
 	export { className as class }
 
-    const {store} = new CalendarContext().get()
+	const { store } = new CalendarContext().get()
 
-    const handler = {
-        click(e:MouseEvent, value:number) {
-            store.navigator.set('month', value)
-        }
-    }
+	const handler = {
+		click(e: MouseEvent, value: number) {
+			store.navigator.set('month', value)
+		}
+	}
 </script>
 
 <Select class={generateClassNames(['CalendarMonth', className])}>

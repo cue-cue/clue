@@ -47,7 +47,7 @@
 		end: 15 * 4 * 7
 	})
 
-	let pickerValue:ComponentProps<Picker>['value'] = new Date()
+	let pickerValue: ComponentProps<Picker>['value'] = new Date()
 </script>
 
 <Tooltip>
@@ -64,7 +64,7 @@
 </Tooltip>
 
 <h2>Picker</h2>
-<ul class='picker-list'>
+<ul class="picker-list">
 	<li>
 		<Picker bind:value={pickerValue} />
 	</li>

@@ -1,5 +1,11 @@
 # @cluue/calendar-utils
 
+## 1.0.6
+
+### Patch Changes
+
+-   Calendar
+
 ## 1.0.5
 
 ### Patch Changes

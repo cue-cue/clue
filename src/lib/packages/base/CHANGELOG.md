@@ -1,5 +1,15 @@
 # @cluue/base
 
+## 1.0.28
+
+### Patch Changes
+
+-   Calendar
+-   Updated dependencies
+    -   @cluue/icons@1.0.25
+    -   @cluue/popover@1.0.17
+    -   @cluue/utils@1.0.13
+
 ## 1.0.27
 
 ### Patch Changes

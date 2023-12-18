@@ -4,7 +4,7 @@
 		class?: string
 		tag?: string
 		columns?: string
-		gap?:'medium'
+		gap?: 'medium'
 	}
 
 	let className = ''
@@ -14,12 +14,7 @@
 	export let columns: $$Props['columns'] = undefined
 </script>
 
-<svelte:element
-	this={tag}
-	class={generateClassNames(['CalendarGridRow', className])}
-	style:--columns={columns}
-	data-gap={gap}
->
+<svelte:element this={tag} class={generateClassNames(['CalendarGridRow', className])} style:--columns={columns} data-gap={gap}>
 	<slot />
 </svelte:element>
 

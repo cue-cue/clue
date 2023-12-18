@@ -14,15 +14,9 @@
 	export { className as class }
 	export let date: $$Props['date']
 	export let variant: $$Props['variant'] = 'day'
-
 </script>
 
-<CellBase
-	class={generateClassNames(['CalendarCell', className])}
-	{variant}
-	{...$$restProps}
-	on:click
->
+<CellBase class={generateClassNames(['CalendarCell', className])} {variant} {...$$restProps} on:click>
 	<slot>
 		{#if date instanceof Date}
 			{#if variant === 'time'}

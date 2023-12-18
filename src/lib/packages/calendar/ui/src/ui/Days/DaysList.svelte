@@ -14,12 +14,12 @@
 
 	let className = ''
 	export { className as class }
-	export let date:$$Props['date']
+	export let date: $$Props['date']
 	export let normalize: $$Props['normalize'] = true
 	export let cols: Exclude<$$Props['cols'], undefined> = 7
 	export let rows: Exclude<$$Props['rows'], undefined> = 5
 
-	const getStartDate = (baseDate:Date, options:{normalize:typeof normalize}) => {
+	const getStartDate = (baseDate: Date, options: { normalize: typeof normalize }) => {
 		if (options.normalize) {
 			return dayjs(baseDate).startOf('month').startOf('week').add(1, 'day').toDate()
 		} else {
@@ -27,8 +27,8 @@
 		}
 	}
 
-	const isExclude = (cellDate:Date) => {
- 		return +dayjs(cellDate).startOf('month') !== +dayjs(date).startOf('month')
+	const isExclude = (cellDate: Date) => {
+		return +dayjs(cellDate).startOf('month') !== +dayjs(date).startOf('month')
 	}
 
 	$: cellList = new CellList({
@@ -43,6 +43,6 @@
 
 <GridRow class={generateClassNames(['CalendarDaysList', className])} columns={`repeat(${cols}, 1fr)`}>
 	{#each cellList.cells as cell (+cell.from)}
-		<slot {cell} {rows} {cols} date={cell.from} isExclude={isExclude(cell.from)}/>
+		<slot {cell} {rows} {cols} date={cell.from} isExclude={isExclude(cell.from)} />
 	{/each}
 </GridRow>

@@ -14,16 +14,16 @@
 	type CalendarStoreOptions = ICalendarStoreOptions<TRange>
 	interface $$Props {
 		class?: string
-		value?: ICalendarStoreData<{range: TRange}>['date']
+		value?: ICalendarStoreData<{ range: TRange }>['date']
 		time?: CalendarStoreOptions['time']
 		range?: CalendarStoreOptions['range']
 	}
 
 	let className = ''
 	export { className as class }
-	export let value:$$Props['value'] = undefined
-	export let time:$$Props['time'] = false
-	export let range:$$Props['range'] = false as TRange
+	export let value: $$Props['value'] = undefined
+	export let time: $$Props['time'] = false
+	export let range: $$Props['range'] = false as TRange
 
 	const calendarStore = createCalendarStore({
 		time,
@@ -34,7 +34,7 @@
 		on: {
 			set(date) {
 				if (date instanceof Date) {
-					value 
+					value
 				}
 				value = date
 			}
@@ -62,11 +62,11 @@
 			new: true
 		})
 	})
-
 </script>
-<pre style='height: 100px'>{JSON.stringify($calendarStore, null, 2)}</pre>
-<button on:click={() => time = !time}>toggle time ({time})</button>
-<button on:click={() => range = !range}>toggle range ({range})</button>
+
+<pre style="height: 100px">{JSON.stringify($calendarStore, null, 2)}</pre>
+<button on:click={() => (time = !time)}>toggle time ({time})</button>
+<button on:click={() => (range = !range)}>toggle range ({range})</button>
 <div class={generateClassNames(['CalendarPicker', className])}>
 	<PickerContainer>
 		<PickerNavigator />

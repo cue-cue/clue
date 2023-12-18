@@ -10,10 +10,7 @@
 	export let tag: $$Props['tag'] = 'div'
 </script>
 
-<svelte:element
-	this={tag}
-	class={generateClassNames(['CalendarGridCol', className])}
->
+<svelte:element this={tag} class={generateClassNames(['CalendarGridCol', className])}>
 	<slot />
 </svelte:element>
 

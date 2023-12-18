@@ -3,7 +3,7 @@
 	import { CellList } from '@cluue/calendar-core'
 	import GridRow from '../Grid/GridRow.svelte'
 	import Cell from '../Cell.svelte'
-	import type {Cell as CellType} from '@cluue/calendar-core'
+	import type { Cell as CellType } from '@cluue/calendar-core'
 	import { CalendarContext } from '../../lib/context.js'
 	import { derived } from 'svelte/store'
 
@@ -21,7 +21,7 @@
 	})
 
 	const handler = {
-		cellClick(event:MouseEvent, cell:CellType) {
+		cellClick(event: MouseEvent, cell: CellType) {
 			store.select(cell, {
 				mode: event.shiftKey ? 'range' : 'single'
 			})
@@ -29,19 +29,14 @@
 	}
 
 	const isActive = derived(store, () => {
-		return (cell:CellType) => {
+		return (cell: CellType) => {
 			return store.selector.check(cell)
 		}
 	})
 </script>
 
-<GridRow class={generateClassNames(['CalendarTime', className])} gap='medium' columns={`repeat(auto-fit, minmax(55px, 1fr))`}>
+<GridRow class={generateClassNames(['CalendarTime', className])} gap="medium" columns={`repeat(auto-fit, minmax(55px, 1fr))`}>
 	{#each cellList.cells as cell (+cell.from)}
-		<Cell
-			date={cell.from}
-			variant="time"
-			active={$isActive(cell)}
-			on:click={e => handler.cellClick(e, cell)}
-		/>
+		<Cell date={cell.from} variant="time" active={$isActive(cell)} on:click={(e) => handler.cellClick(e, cell)} />
 	{/each}
 </GridRow>

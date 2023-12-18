@@ -19,15 +19,7 @@
 	export let variant: $$Props['variant'] = undefined
 </script>
 
-<button
-	class={generateClassNames(['CalendarCellBase', className])}
-	{disabled}
-	data-ghost={ghost}
-	data-active={active}
-	data-type={type}
-	data-variant={variant}
-	on:click
->
+<button class={generateClassNames(['CalendarCellBase', className])} {disabled} data-ghost={ghost} data-active={active} data-type={type} data-variant={variant} on:click>
 	<slot />
 </button>
 

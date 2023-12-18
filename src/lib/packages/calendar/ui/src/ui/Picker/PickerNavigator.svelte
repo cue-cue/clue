@@ -22,7 +22,6 @@
 	const next = () => {
 		context.store.navigator.next()
 	}
-
 </script>
 
 <div class={generateClassNames(['CalendarPickerNavigator', className])}>

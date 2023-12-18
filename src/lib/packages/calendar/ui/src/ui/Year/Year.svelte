@@ -11,13 +11,15 @@
 	let className = ''
 	export { className as class }
 
-    const {store: {options, ...store}} = new CalendarContext().get()
+	const {
+		store: { options, ...store }
+	} = new CalendarContext().get()
 
-    const handler = {
-        click(e:MouseEvent, value:number) {
-            store.navigator.set('year', value)
-        }
-    }
+	const handler = {
+		click(e: MouseEvent, value: number) {
+			store.navigator.set('year', value)
+		}
+	}
 
 	$: start = $options.min?.getFullYear() ?? 1900
 	$: end = $options.max?.getFullYear() ?? 2200

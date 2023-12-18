@@ -1,5 +1,14 @@
 # @cluue/icons
 
+## 1.0.25
+
+### Patch Changes
+
+-   Calendar
+-   Updated dependencies
+    -   @cluue/config@1.0.12
+    -   @cluue/utils@1.0.13
+
 ## 1.0.24
 
 ### Patch Changes
