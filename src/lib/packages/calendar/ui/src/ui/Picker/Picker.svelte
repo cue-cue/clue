@@ -1,5 +1,5 @@
 <script lang="ts" generics="TRange extends boolean = false">
-	import { generateClassNames, randomId } from '@cluue/utils'
+	import { generateClassNames } from '@cluue/utils'
 	import { Cell as CalendarCoreCell } from '@cluue/calendar-core'
 	import PickerNavigator from './PickerNavigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
@@ -9,7 +9,7 @@
 	import Days from '../Days/Days.svelte'
 	import Time from '../Time/Time.svelte'
 	import DaysNames from '../Days/DaysNames.svelte'
-	import { afterUpdate, beforeUpdate } from 'svelte'
+	import { beforeUpdate } from 'svelte'
 
 	type CalendarStoreOptions = ICalendarStoreOptions<TRange>
 	interface $$Props {
@@ -57,10 +57,11 @@
 			} else {
 				if (+value === +$calendarStore.date) return
 			}
+		} else {
+			calendarStore.select(value, {
+				new: true
+			})
 		}
-		calendarStore.select(value, {
-			new: true
-		})
 	})
 </script>
 

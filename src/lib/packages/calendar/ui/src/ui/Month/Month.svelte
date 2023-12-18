@@ -11,17 +11,19 @@
 	let className = ''
 	export { className as class }
 
-	const { store } = new CalendarContext().get()
+	const {
+		store: { navigator }
+	} = new CalendarContext().get()
 
 	const handler = {
 		click(e: MouseEvent, value: number) {
-			store.navigator.set('month', value)
+			navigator.set('month', value)
 		}
 	}
 </script>
 
 <Select class={generateClassNames(['CalendarMonth', className])}>
-	{dayjs($store.navigatorDate).format('MMMM')}
+	{dayjs($navigator.date).format('MMMM')}
 	<svelte:fragment slot="content">
 		<ul>
 			{#each [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as value (value)}

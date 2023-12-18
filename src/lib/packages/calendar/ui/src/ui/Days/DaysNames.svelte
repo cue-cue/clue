@@ -13,11 +13,11 @@
 	export { className as class }
 
 	const {
-		store: { options, ...store }
+		store: { options, navigator }
 	} = new CalendarContext().get()
 
 	$: dateList = [1, 2, 3, 4, 5, 6, 7].map((day) => {
-		let date = dayjs($store.navigatorDate)
+		let date = dayjs($navigator.date)
 		if (!$options.time) {
 			date = date.date(14)
 		}

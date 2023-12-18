@@ -12,12 +12,12 @@
 	export { className as class }
 
 	const {
-		store: { options, ...store }
+		store: { options, navigator }
 	} = new CalendarContext().get()
 
 	const handler = {
 		click(e: MouseEvent, value: number) {
-			store.navigator.set('year', value)
+			navigator.set('year', value)
 		}
 	}
 
@@ -28,7 +28,7 @@
 </script>
 
 <Select class={generateClassNames(['CalendarYear', className])}>
-	{dayjs($store.navigatorDate).format('YYYY')}
+	{dayjs($navigator.date).format('YYYY')}
 	<svelte:fragment slot="content">
 		<ul>
 			{#each years as year (year)}

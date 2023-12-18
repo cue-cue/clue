@@ -13,14 +13,16 @@
 	let className = ''
 	export { className as class }
 
-	const context = new CalendarContext().get()
+	const {
+		store: { navigator }
+	} = new CalendarContext().get()
 
 	const prev = () => {
-		context.store.navigator.prev()
+		navigator.prev()
 	}
 
 	const next = () => {
-		context.store.navigator.next()
+		navigator.next()
 	}
 </script>
 
