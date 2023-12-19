@@ -1,4 +1,8 @@
 <script lang="ts" generics="TRange extends boolean = false">
+	import { config } from '@cluue/config'
+
+	import { slide } from 'svelte/transition'
+
 	import Year from '../Year/Year.svelte'
 
 	import { createCalendarStore, type ICalendarStoreData, type ICalendarStoreOptionsData } from '../../lib/index.js'
@@ -80,10 +84,10 @@
 <div class={generateClassNames(['CalendarPicker', className])}>
 	<PickerContainer>
 		<Navigator />
-		{#if time}
-			<DaysNavigator />
-		{:else}
-			<DaysNames />
+		{#if $navigator.unit === 'date'}
+			<div transition:slide={$config.transition} class={generateClassNames(['CalendarPicker__days'])}>
+				<DaysNavigator />
+			</div>
 		{/if}
 	</PickerContainer>
 	<div class={generateClassNames(['CalendarPicker__main'])}>
@@ -107,15 +111,14 @@
 		box-shadow: 2px 2px 12px 4px rgba(0, 0, 0, .16)
 		padding-top: 10px
 		border-radius: 20px
-		width: fit-content
+		width: 384px
+		&__days
+			width: 100%
+			padding-bottom: 8px
+			border-bottom: 1px solid var(--clue-color-gray-10)
 		&__main
-			--padding-top: 24px
-			--padding-bottom: 20px
-			--margin-top: 8px
-			border-top: 1px solid var(--clue-color-gray-10)
-			padding-top: var(--padding-top)
-			padding-bottom: var(--padding-bottom)
-			margin-top: var(--margin-top)
+			padding-top: 24px
+			padding-bottom: 20px
 			max-height: 400px
 			overflow: auto
 
