@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { generateClassNames } from '@cluue/utils'
 	import dayjs from 'dayjs'
-	import Select from '../Select/Select.svelte'
 	import { CalendarContext } from '../../lib/context.js'
+	import GridRow from '../Grid/GridRow.svelte'
+	import Cell from '../Cell.svelte'
+	import { derived } from 'svelte/store'
 
 	interface $$Props {
 		class?: string
@@ -16,28 +18,29 @@
 	} = new CalendarContext().get()
 
 	const handler = {
-		click(e: MouseEvent, value: number) {
-			navigator.set('year', value)
+		click(year: number) {
+			navigator.set('year', year)
+			navigator.goto('date')
 		}
 	}
 
-	$: start = $options.min?.getFullYear() ?? 1900
-	$: end = $options.max?.getFullYear() ?? 2200
+	const isActive = derived(navigator, ($navigator) => {
+		return (year: number) => {
+			return $navigator.date.getFullYear() === year
+		}
+	})
 
-	$: years = new Array(end - start).fill(undefined).map((_, index) => index + start)
+	const isDisabled = derived([navigator, options], ([$navigator, $options]) => {
+		return (year: number) => $options.isDateExclude(dayjs($navigator.date).year(year).toDate()).result
+	})
+
+	$: years = new Array($navigator.year.step).fill(undefined).map((_, index) => index + $navigator.year.current)
 </script>
 
-<Select class={generateClassNames(['CalendarYear', className])}>
-	{dayjs($navigator.date).format('YYYY')}
-	<svelte:fragment slot="content">
-		<ul>
-			{#each years as year (year)}
-				<li>
-					<button on:click={(e) => handler.click(e, year)}>
-						{dayjs(year).set('year', year).format('YYYY')}
-					</button>
-				</li>
-			{/each}
-		</ul>
-	</svelte:fragment>
-</Select>
+<GridRow class={generateClassNames(['CalendarYear', className])} gap="medium" columns="repeat(3, 1fr)">
+	{#each years as year (year)}
+		<Cell variant="unit" on:click={() => handler.click(year)} active={$isActive(year)} disabled={$isDisabled(year)}>
+			{dayjs().year(year).format($options.formats?.year)}
+		</Cell>
+	{/each}
+</GridRow>

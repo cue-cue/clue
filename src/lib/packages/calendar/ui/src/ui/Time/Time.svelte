@@ -14,10 +14,12 @@
 	let className = ''
 	export { className as class }
 
-	const { store } = new CalendarContext().get()
+	const {
+		store: { navigator, ...store }
+	} = new CalendarContext().get()
 
 	$: cellList = new CellList({
-		date: $store.navigatorDate
+		date: $navigator.date
 	})
 
 	const handler = {

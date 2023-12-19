@@ -1,5 +1,5 @@
 import { Context } from '@cluue/utils'
-import type { createCalendarStore } from './store.js'
+import type { createCalendarStore } from './index.js'
 
 export interface ICalendarContextData {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any

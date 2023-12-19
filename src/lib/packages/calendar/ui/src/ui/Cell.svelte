@@ -7,12 +7,12 @@
 
 	interface $$Props extends ComponentProps<CellBase> {
 		class?: string
-		date: Date | Cell
+		date?: Date | Cell
 	}
 
 	let className = ''
 	export { className as class }
-	export let date: $$Props['date']
+	export let date: $$Props['date'] = undefined
 	export let variant: $$Props['variant'] = 'day'
 </script>
 

@@ -7,7 +7,7 @@
 		active?: boolean
 		ghost?: boolean
 		type?: 'negative'
-		variant?: 'day' | 'time'
+		variant?: 'day' | 'time' | 'unit'
 	}
 
 	let className = ''
@@ -56,6 +56,8 @@
 		--calendar-cell-base-t-negative-color-hover: var(--clue-color-negative-600)
 		--calendar-cell-base-t-negative-color-active: var(--clue-color-white)
 		--calendar-cell-base-t-negative-color-active-hover: var(--clue-color-white)
+		//v-unit
+		--calendar-cell-base-v-unit-border-radius: 5px
 
 		display: flex
 		align-items: center
@@ -101,6 +103,11 @@
 			--calendar-cell-base-color-hover: var(--calendar-cell-base-t-negative-color-hover)
 			--calendar-cell-base-color-active: var(--calendar-cell-base-t-negative-color-active)
 			--calendar-cell-base-color-active-hover: var(--calendar-cell-base-t-negative-color-active-hover)
+		&[data-variant='unit']
+			padding: 6px 7px
+			--calendar-cell-base-width: 100%
+			--calendar-cell-base-height: auto
+			--calendar-cell-base-border-radius: var(--calendar-cell-base-v-unit-border-radius)
 		&[data-variant='time']
 			--calendar-cell-base-width: 100%
 			--calendar-cell-base-height: auto

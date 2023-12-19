@@ -28,7 +28,7 @@
 	})
 </script>
 
-<GridRow tag="ul" class={generateClassNames(['CalendarDaysNames', className])} columns={`repeat(${dateList.length}, 1fr)`}>
+<GridRow tag="ul" class={generateClassNames(['CalendarDaysNames', className])} columns={`repeat(${dateList.length}, 40px)`}>
 	{#each dateList as { date, day } (day)}
 		<li
 			data-today={isToday(date.toDate(), {
