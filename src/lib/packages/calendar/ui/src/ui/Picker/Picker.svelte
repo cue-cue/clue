@@ -1,17 +1,20 @@
 <script lang="ts" generics="TRange extends boolean = false">
-	import { generateClassNames, randomId } from '@cluue/utils'
+	import Year from '../Year/Year.svelte'
+
+	import { createCalendarStore, type ICalendarStoreData, type ICalendarStoreOptionsData } from '../../lib/index.js'
+	import { generateClassNames } from '@cluue/utils'
 	import { Cell as CalendarCoreCell } from '@cluue/calendar-core'
-	import PickerNavigator from './PickerNavigator.svelte'
+	import Navigator from '../Navigator/Navigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
 	import { CalendarContext, type ICalendarContextData } from '../../lib/context.js'
-	import { createCalendarStore, type ICalendarStoreData, type ICalendarStoreOptions } from '../../lib/store.js'
 	import DaysNavigator from '../Days/DaysNavigator.svelte'
 	import Days from '../Days/Days.svelte'
 	import Time from '../Time/Time.svelte'
 	import DaysNames from '../Days/DaysNames.svelte'
-	import { afterUpdate, beforeUpdate } from 'svelte'
+	import { beforeUpdate } from 'svelte'
+	import Month from '../Month/Month.svelte'
 
-	type CalendarStoreOptions = ICalendarStoreOptions<TRange>
+	type CalendarStoreOptions = ICalendarStoreOptionsData<TRange>
 	interface $$Props {
 		class?: string
 		value?: ICalendarStoreData<{ range: TRange }>['date']
@@ -28,7 +31,7 @@
 	const calendarStore = createCalendarStore({
 		time,
 		range,
-		initData: {
+		initialData: {
 			date: value
 		},
 		on: {
@@ -40,6 +43,8 @@
 			}
 		}
 	})
+
+	const navigator = calendarStore.navigator
 
 	$: calendarStore.options.update({
 		time,
@@ -57,28 +62,37 @@
 			} else {
 				if (+value === +$calendarStore.date) return
 			}
+		} else {
+			calendarStore.select(value, {
+				new: true
+			})
 		}
-		calendarStore.select(value, {
-			new: true
-		})
 	})
+
+	const toggleRange = () => (range = !range as TRange)
+	const toggleTime = () => (time = !time)
 </script>
 
 <pre style="height: 100px">{JSON.stringify($calendarStore, null, 2)}</pre>
-<button on:click={() => (time = !time)}>toggle time ({time})</button>
-<button on:click={() => (range = !range)}>toggle range ({range})</button>
+<pre style="height: 120px">{JSON.stringify($navigator, null, 2)}</pre>
+<button on:click={toggleTime}>toggle time ({time})</button>
+<button on:click={toggleRange}>toggle range ({range})</button>
 <div class={generateClassNames(['CalendarPicker', className])}>
 	<PickerContainer>
-		<PickerNavigator />
+		<Navigator />
 		{#if time}
 			<DaysNavigator />
 		{:else}
 			<DaysNames />
 		{/if}
 	</PickerContainer>
-	<div class={generateClassNames(['CalendarPicker__main', className])}>
+	<div class={generateClassNames(['CalendarPicker__main'])}>
 		<PickerContainer>
-			{#if time}
+			{#if $navigator.unit === 'month'}
+				<Month />
+			{:else if $navigator.unit === 'year'}
+				<Year />
+			{:else if time}
 				<Time />
 			{:else}
 				<Days />
@@ -104,4 +118,5 @@
 			margin-top: var(--margin-top)
 			max-height: 400px
 			overflow: auto
+
 </style>

@@ -17,7 +17,7 @@
 	export { className as class }
 
 	const {
-		store: { options, ...store }
+		store: { options, navigator, selector, ...store }
 	} = new CalendarContext().get()
 
 	const handler = {
@@ -32,7 +32,7 @@
 		return (cell: CellType) => {
 			if (!cell || !$store.date) return false
 			if ($options.range) {
-				return new Disabled(store.selector.selected).isDisabled(cell)
+				return new Disabled(selector.selected).isDisabled(cell)
 			} else if ($store.date instanceof Date) {
 				return +dayjs(cell.from).startOf('day') === +dayjs($store.date).startOf('day')
 			}
@@ -41,6 +41,6 @@
 	})
 </script>
 
-<DaysList class={generateClassNames(['CalendarDays', className])} date={$store.navigatorDate} let:date let:cell let:isExclude>
+<DaysList class={generateClassNames(['CalendarDays', className])} date={$navigator.date} let:date let:cell let:isExclude>
 	<Cell {date} active={$isActiveDay(cell)} type={isToday(date) ? 'negative' : undefined} ghost={isExclude} on:click={(e) => handler.dayClick(e, cell)} />
 </DaysList>

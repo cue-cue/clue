@@ -15,25 +15,27 @@
 	let className = ''
 	export { className as class }
 
-	const { store } = new CalendarContext().get()
+	const {
+		store: { navigator }
+	} = new CalendarContext().get()
 
-	const isActiveDate = derived(store, ($store) => {
+	const isActiveDate = derived(navigator, ($navigator) => {
 		return (date: Date) => {
-			if (!date || !$store.navigatorDate) return false
-			return +dayjs(date).startOf('day') === +dayjs($store.navigatorDate).startOf('day')
+			if (!date || !$navigator.date) return false
+			return +dayjs(date).startOf('day') === +dayjs($navigator.date).startOf('day')
 		}
 	})
 
 	const handler = {
 		dayClick(date: Date) {
-			store.navigator.setDate(date)
+			navigator.setDate(date)
 		}
 	}
 </script>
 
 <div class={generateClassNames(['DaysNavigator', className])}>
 	<DaysNames />
-	<DaysList rows={1} date={$store.navigatorDate} normalize={false} let:date let:isExclude>
+	<DaysList rows={1} date={$navigator.date} normalize={false} let:date let:isExclude>
 		<Cell {date} active={$isActiveDate(date)} ghost={isExclude} type={isToday(date) ? 'negative' : undefined} on:click={() => handler.dayClick(date)} />
 	</DaysList>
 </div>
