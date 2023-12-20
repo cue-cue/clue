@@ -39,13 +39,11 @@
 		}
 	}
 
-	$: isShowArrow = ['date', 'year'].includes($navigator.unit)
+	$: isArrowHidden = !['date', 'year'].includes($navigator.unit)
 </script>
 
 <div class={generateClassNames(['CalendarNavigator', className])}>
-	{#if isShowArrow}
-		<NavigatorArrow on:click={handler.arrowPrev} />
-	{/if}
+	<NavigatorArrow on:click={handler.arrowPrev} hidden={isArrowHidden} />
 	<div>
 		<NavigatorControl on:click={handler.month} active={$navigator.unit === 'month'}>
 			{dayjs($navigator.date).format($options.formats?.month)}
@@ -54,9 +52,7 @@
 			{dayjs($navigator.date).format($options.formats?.year)}
 		</NavigatorControl>
 	</div>
-	{#if isShowArrow}
-		<NavigatorArrow type="next" on:click={handler.arrowNext} />
-	{/if}
+	<NavigatorArrow type="next" on:click={handler.arrowNext} hidden={isArrowHidden} />
 </div>
 
 <style lang="sass">

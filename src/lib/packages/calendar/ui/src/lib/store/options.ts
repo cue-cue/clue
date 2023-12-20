@@ -22,7 +22,11 @@ export interface ICalendarStoreOptionsReactiveMethods {
 	}
 }
 
-export const createCalendarOptionsStore = <TRange extends boolean = boolean>(data?: ICalendarStoreOptionsData<TRange>) => {
+export interface ICalendarStoreOptionsEvents<TRange extends boolean> {
+	update: (data: ICalendarStoreOptionsData<TRange>) => void
+}
+
+export const createCalendarOptionsStore = <TRange extends boolean = boolean>(data?: ICalendarStoreOptionsData<TRange>, on?: Partial<ICalendarStoreOptionsEvents<TRange>>) => {
 	const {
 		set,
 		update: updateStore,
@@ -49,10 +53,14 @@ export const createCalendarOptionsStore = <TRange extends boolean = boolean>(dat
 	} as ICalendarStoreOptionsReactiveMethods & typeof data)
 
 	const update = (newData: Partial<typeof data>) => {
-		updateStore((data) => ({
-			...data,
-			...newData
-		}))
+		updateStore((data) => {
+			const mergedData: typeof data = {
+				...data,
+				...newData
+			}
+			on?.update?.(mergedData)
+			return mergedData
+		})
 	}
 
 	return {

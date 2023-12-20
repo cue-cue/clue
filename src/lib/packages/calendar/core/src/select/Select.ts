@@ -4,6 +4,7 @@ import type { Cell } from '../cell/index.js'
 import dayjs from 'dayjs'
 
 interface ISelectOptions {
+	range?: boolean
 	allowBetweenDays?: boolean
 	minTimeLength?: number //minutes
 	fixTimeLength?: number //minutes
@@ -24,10 +25,12 @@ export class Select {
 	options: ISelectOptions
 	on
 	#defOptions: ISelectOptions = {
+		range: false,
 		allowBetweenDays: false,
 		minTimeLength: undefined,
 		fixTimeLength: undefined
 	}
+	#selectCount = 0
 
 	constructor({ calendar, options, on }: ISelectParams) {
 		this.calendar = calendar
@@ -46,6 +49,13 @@ export class Select {
 	get fixTimeLength() {
 		//Return ms
 		return this.options.fixTimeLength && this.options.fixTimeLength * 1000 * 60
+	}
+
+	#selectCountIncrement() {
+		this.#selectCount += 1
+	}
+	#selectCountReset() {
+		this.#selectCount = 0
 	}
 
 	updateCalendar(calendar: ISelectParams['calendar']) {
@@ -132,6 +142,12 @@ export class Select {
 			this.selected = this.setMiddleware(newSelected, middlewareOptions)
 		}
 
+		if (this.selected === undefined) {
+			this.#selectCountReset()
+		} else {
+			this.#selectCountIncrement()
+		}
+
 		this.on?.set?.(this.selected)
 		return this.selected
 	}
@@ -194,6 +210,7 @@ export class Select {
 				isIn: Record<'from' | 'fromInset' | 'to' | 'toInset', boolean>
 				isDouble: boolean
 				isInset: boolean
+				isAnotherTime: boolean
 				betweenDays: {
 					isBetween: boolean
 					isAllow: boolean
@@ -220,12 +237,14 @@ export class Select {
 			from: new Date(Math.min(+this.selected.from, +from)),
 			to: new Date(Math.max(+this.selected.to, +to))
 		})
+		const isAnotherTime = Object.values({ ...isEqual, ...isIn }).every((v) => !v)
 		//@ts-ignore
 		return {
 			isEqual,
 			isIn,
 			isDouble,
 			isInset,
+			isAnotherTime,
 			betweenDays
 		}
 	}
@@ -233,7 +252,14 @@ export class Select {
 	select(
 		{ from, to }: Cell,
 		_options?: {
+			/**
+			 * Если true, то мы всегда будем ставить новую дату
+			 */
 			new?: boolean
+			/**
+			 * single: используем обычную логику добавления слотов
+			 * range: всегда стараемся ДОБАВИТЬ новые слоты к выбранным
+			 */
 			mode?: 'single' | 'range'
 		}
 	) {
@@ -243,6 +269,27 @@ export class Select {
 			..._options
 		}
 
+		const { isEqual, isIn, isDouble, isInset, betweenDays, isAnotherTime } = this.validate<true>({ from, to }) || {}
+
+		if (this.options.range) {
+			if (options.mode !== 'range') {
+				//Если range поставил пользователь, то тогда нам не надо набрасывать свою логику
+				options.mode = 'range'
+				if (this.#selectCount >= 2) {
+					options.new = true
+				}
+			}
+		} else {
+			//Если range == false, то мы ВСЕГДА будем ставить новый слот, независимо от того, что хочет пользователь
+			options.new = true
+			options.mode = 'single'
+		}
+
+		if (options.new) {
+			//Сбрасываем #selectCount, если у нас ставится новая дата
+			this.#selectCountReset()
+		}
+
 		if (this.selected === undefined) {
 			this.set({
 				//Если пусто, то ставим "как есть"
@@ -250,7 +297,6 @@ export class Select {
 				to
 			})
 		} else {
-			const { isEqual, isIn, isDouble, isInset, betweenDays } = this.validate<true>({ from, to })
 			if (isDouble) {
 				//Если селекты равны, то сбрасываем значение
 				this.clear()
@@ -267,11 +313,7 @@ export class Select {
 			} else if (isInset) {
 				//Если выбран слот между краями селекта, то ставим этот слот
 				this.set({ from, to })
-			} else if (
-				Object.values(isEqual)
-					.concat(Object.values(isIn))
-					.every((v) => !v)
-			) {
+			} else if (isAnotherTime) {
 				switch (options.mode) {
 					case 'range': {
 						if (betweenDays.isError) {

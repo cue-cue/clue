@@ -53,7 +53,7 @@
 			text-transform: capitalize
 			font-weight: 500
 			font-size: 14px
-			transition: .3s ease-in-out
+			transition: var(--clue-transition)
 			transition-property: color
 			&[data-today='true']
 				color: var(--clue-color-negative-600)

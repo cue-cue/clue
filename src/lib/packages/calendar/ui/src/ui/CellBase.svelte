@@ -73,7 +73,7 @@
 		border: 1px solid var(--calendar-cell-base-border-color)
 		font-weight: 500
 		font-size: 14px
-		transition: .3s ease-in-out
+		transition: var(--clue-transition)
 		transition-property: color, background, border, border-radius
 		&:disabled
 			background-color: var(--calendar-cell-base-background-color-disabled)

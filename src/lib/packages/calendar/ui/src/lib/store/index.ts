@@ -9,7 +9,13 @@ export interface ICalendarStoreData<TOptions extends Pick<ICalendarStoreOptionsD
 }
 
 export const createCalendarStore = <TRange extends boolean>(options?: Parameters<typeof createCalendarOptionsStore<TRange>>[0]) => {
-	const optionsStore = createCalendarOptionsStore(options)
+	const optionsStore = createCalendarOptionsStore(options, {
+		update(data) {
+			selectInstance.updateOptions({
+				range: data.range
+			})
+		}
+	})
 
 	const navigator = createCalendarNavigatorStore({
 		options: optionsStore
@@ -28,6 +34,7 @@ export const createCalendarStore = <TRange extends boolean>(options?: Parameters
 	const selectInstance = new Select({
 		calendar,
 		options: {
+			range: get(optionsStore).range,
 			allowBetweenDays: true
 		},
 		on: {
@@ -55,7 +62,6 @@ export const createCalendarStore = <TRange extends boolean>(options?: Parameters
 		if (!value) return selectInstance.clear()
 
 		const _selectOptions: typeof selectOptions = {
-			new: !get(optionsStore).range,
 			...selectOptions
 		}
 

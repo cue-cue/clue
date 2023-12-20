@@ -7,15 +7,17 @@
 		class?: string
 		size?: 'small'
 		active?: boolean
+		hidden?: boolean
 	}
 
 	let className = ''
 	export { className as class }
 	export let size: $$Props['size'] = undefined
 	export let active: $$Props['active'] = undefined
+	export let hidden: $$Props['hidden'] = undefined
 </script>
 
-<button class={generateClassNames(['CalendarNavigatorControl', className])} data-active={active} data-size={size} transition:fade={$config.transition} on:click>
+<button class={generateClassNames(['CalendarNavigatorControl', className])} data-hidden={hidden} data-active={active} data-size={size} transition:fade={$config.transition} on:click>
 	<slot />
 </button>
 
@@ -37,12 +39,15 @@
 		font-weight: 500
 		font-size: 16px
 		color: var(--clue-color-gray-700)
-		transition: .3s ease-in-out
-		transition-property: background
+		transition: var(--clue-transition)
+		transition-property: background, opacity
 		&:hover
 			background: var(--clue-color-gray-10)
 		&:active, &[data-active='true']
 			background: var(--clue-color-gray-50)
 		&[data-size='small']
 			--clue-calendar-navigator-control-padding-y: 6px
+		&[data-hidden='true']
+			opacity: 0
+			pointer-events: none
 </style>

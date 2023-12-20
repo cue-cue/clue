@@ -3,8 +3,9 @@
 	import { Icon } from '@cluue/icons'
 	import arrowIcon from '@cluue/icons/line/arrow-left.svg?clue'
 	import NavigatorControl from './NavigatorControl.svelte'
+	import type { ComponentProps } from 'svelte'
 
-	interface $$Props {
+	interface $$Props extends ComponentProps<NavigatorControl> {
 		class?: string
 		type?: 'prev' | 'next'
 	}
@@ -14,7 +15,7 @@
 	export let type: $$Props['type'] = 'prev'
 </script>
 
-<NavigatorControl class={generateClassNames(['CalendarNavigatorArrow', className])} size="small" on:click>
+<NavigatorControl class={generateClassNames(['CalendarNavigatorArrow', className])} size="small" {...$$restProps} on:click>
 	<Icon width={20} icon={arrowIcon} reverse={type === 'next' ? 'x' : undefined} />
 </NavigatorControl>
 
