@@ -34,11 +34,13 @@
 	const isActiveDay = derived([store, options], ([$store, $options]) => {
 		return (cell: CellType) => {
 			if (!cell || !$store.date) return false
+
 			if ($options.range) {
 				return new Disabled(selector.selected).isDisabled(cell)
 			} else if ($store.date instanceof Date) {
 				return +dayjs(cell.from).startOf('day') === +dayjs($store.date).startOf('day')
 			}
+
 			return false
 		}
 	})
