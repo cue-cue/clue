@@ -68,7 +68,7 @@
 			}
 		} else {
 			calendarStore.select(value, {
-				new: true
+				overload: true
 			})
 		}
 	})

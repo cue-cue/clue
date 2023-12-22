@@ -3,7 +3,7 @@ import type { createCalendarStore } from './index.js'
 
 export interface ICalendarContextData {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	store: ReturnType<typeof createCalendarStore>
+	store: ReturnType<typeof createCalendarStore<any>>
 }
 
 export class CalendarContext extends Context<ICalendarContextData> {

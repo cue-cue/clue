@@ -219,24 +219,33 @@ export class Select {
 		  } {
 		//@ts-ignore
 		if (!this.selected) return
+
+		from = new Date(from)
+		to = new Date(to)
+
 		const isEqual = {
-			from: +new Date(from) === +this.selected.from,
-			to: +new Date(to) === +this.selected.to,
-			tail: +new Date(to) === +this.selected.from,
-			head: +new Date(from) === +this.selected.to
+			from: +from === +this.selected.from,
+			to: +to === +this.selected.to,
+			tail: +to === +this.selected.from,
+			head: +from === +this.selected.to
 		}
+
 		const isIn = {
-			from: +new Date(from) >= +this.selected.from && +new Date(from) <= +this.selected.to,
-			fromInset: +new Date(from) > +this.selected.from && +new Date(from) < +this.selected.to,
-			to: +new Date(to) >= +this.selected.from && +new Date(to) <= +this.selected.to,
-			toInset: +new Date(to) > +this.selected.from && +new Date(to) < +this.selected.to
+			from: +from >= +this.selected.from && +from <= +this.selected.to,
+			fromInset: +from > +this.selected.from && +from < +this.selected.to,
+			to: +to >= +this.selected.from && +to <= +this.selected.to,
+			toInset: +to > +this.selected.from && +to < +this.selected.to
 		}
+
 		const isDouble = isEqual.from && isEqual.to
+
 		const isInset = !isEqual.from && !isEqual.to && isIn.fromInset && isIn.toInset
+
 		const betweenDays = this.#isBetweenDays({
 			from: new Date(Math.min(+this.selected.from, +from)),
 			to: new Date(Math.max(+this.selected.to, +to))
 		})
+
 		const isAnotherTime = Object.values({ ...isEqual, ...isIn }).every((v) => !v)
 		//@ts-ignore
 		return {
@@ -255,7 +264,7 @@ export class Select {
 			/**
 			 * Если true, то мы всегда будем ставить новую дату
 			 */
-			new?: boolean
+			overload?: boolean
 			/**
 			 * single: используем обычную логику добавления слотов
 			 * range: всегда стараемся ДОБАВИТЬ новые слоты к выбранным
@@ -265,7 +274,7 @@ export class Select {
 	) {
 		const options: typeof _options = {
 			mode: 'single',
-			new: false,
+			overload: false,
 			..._options
 		}
 
@@ -275,17 +284,18 @@ export class Select {
 			if (options.mode !== 'range') {
 				//Если range поставил пользователь, то тогда нам не надо набрасывать свою логику
 				options.mode = 'range'
+				//Если выбор был сделан >= 2 раз, то мы всегда ставим overload = true
 				if (this.#selectCount >= 2) {
-					options.new = true
+					options.overload = true
 				}
 			}
 		} else {
 			//Если range == false, то мы ВСЕГДА будем ставить новый слот, независимо от того, что хочет пользователь
-			options.new = true
+			options.overload = true
 			options.mode = 'single'
 		}
 
-		if (options.new) {
+		if (options.overload) {
 			//Сбрасываем #selectCount, если у нас ставится новая дата
 			this.#selectCountReset()
 		}
@@ -300,7 +310,7 @@ export class Select {
 			if (isDouble) {
 				//Если селекты равны, то сбрасываем значение
 				this.clear()
-			} else if (options.new) {
+			} else if (options.overload) {
 				//Ставим всегда новое значение
 				this.set({ from, to })
 			} else if (this.fixTimeLength) {
