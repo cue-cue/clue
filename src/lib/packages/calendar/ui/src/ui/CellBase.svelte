@@ -130,18 +130,22 @@
 				color: var(--calendar-cell-base-color-ghost)
 		&:not([data-range-end='true'])
 			&[data-range-start='true']
+				&:not([data-range-end-of-week='true'])
+					&::before
+						right: -6px
+						width: calc(100% + 6px)
 				&::before
 					border-top-right-radius: 0px
 					border-bottom-right-radius: 0px
-					right: -6px
-					width: calc(100% + 6px)
 		&:not([data-range-start='true'])
 			&[data-range-end='true']
+				&:not([data-range-start-of-week='true'])
+					&::before
+						left: -6px
+						width: calc(100% + 6px)
 				&::before
 					border-top-left-radius: 0px
 					border-bottom-left-radius: 0px
-					left: -6px
-					width: calc(100% + 6px)
 		&[data-range-in='true']
 			--border-radius: 0
 			--color: var(--calendar-cell-base-color)
