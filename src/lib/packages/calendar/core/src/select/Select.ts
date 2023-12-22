@@ -200,7 +200,7 @@ export class Select {
 		return +from >= +this.selected.from && +to <= +this.selected.to
 	}
 
-	validate<T extends boolean = boolean>({
+	getPosition<T extends boolean = boolean>({
 		from,
 		to
 	}: Cell): T extends false
@@ -312,7 +312,7 @@ export class Select {
 				to
 			})
 		} else {
-			const { isEqual, isIn, isDouble, isInset, betweenDays, isAnotherTime } = this.validate<true>({ from, to })
+			const { isEqual, isIn, isDouble, isInset, betweenDays, isAnotherTime } = this.getPosition<true>({ from, to })
 			if (isDouble) {
 				//Если селекты равны, то сбрасываем значение
 				this.clear()

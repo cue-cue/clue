@@ -8,7 +8,6 @@
 	import { CalendarContext } from '../../lib/context.js'
 	import { derived } from 'svelte/store'
 	import { isToday } from '@cluue/calendar-utils'
-	import Tooltip from '$lib/packages/base/src/Tooltip/Tooltip.svelte'
 
 	interface $$Props extends Omit<ComponentProps<DaysList>, 'date'> {
 		class?: string
@@ -45,18 +44,22 @@
 		}
 	})
 
-	const getDayPositionBySelected = derived([store], ([$store]) => {
-		return (cell: CellType) => {
+	const getRangePropsByCell = derived([store], ([$store]) => {
+		return (cell: CellType): ComponentProps<Cell>['range'] | undefined => {
 			if (!$store.date || $store.date instanceof Date || !selector.check(cell)) return
-			return selector.validate(cell)
+			const position = selector.getPosition(cell)
+			const day = dayjs(cell.from).day()
+			return {
+				startOfWeek: day === 1,
+				endOfWeek: day === 0,
+				start: position?.isEqual.from,
+				end: position?.isEqual.to,
+				in: position?.isInset
+			}
 		}
 	})
 </script>
 
 <DaysList class={generateClassNames(['CalendarDays', className])} date={$navigator.date} let:date let:cell let:isExclude>
-	{@const position = $getDayPositionBySelected(cell)}
-	<Tooltip trigger="click">
-		<Cell {date} active={$isActiveDay(cell)} type={isToday(date) ? 'negative' : undefined} ghost={isExclude} on:click={(e) => handler.dayClick(e, cell)} />
-		<svelte:fragment slot="content"><pre><code>{JSON.stringify(position, null, 2)}</code></pre></svelte:fragment>
-	</Tooltip>
+	<Cell {date} active={$isActiveDay(cell)} range={$getRangePropsByCell(cell)} type={isToday(date) ? 'negative' : undefined} ghost={isExclude} on:click={(e) => handler.dayClick(e, cell)} />
 </DaysList>

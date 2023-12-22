@@ -8,6 +8,7 @@
 		ghost?: boolean
 		type?: 'negative'
 		variant?: 'day' | 'time' | 'unit'
+		range?: Partial<Record<'end' | 'endOfWeek' | 'start' | 'startOfWeek' | 'in', boolean>>
 	}
 
 	let className = ''
@@ -17,9 +18,10 @@
 	export let active: $$Props['active'] = undefined
 	export let ghost: $$Props['ghost'] = undefined
 	export let variant: $$Props['variant'] = undefined
+	export let range: $$Props['range'] = undefined
 </script>
 
-<button class={generateClassNames(['CalendarCellBase', className])} {disabled} data-ghost={ghost} data-active={active} data-type={type} data-variant={variant} on:click>
+<button class={generateClassNames(['CalendarCellBase', className])} {disabled} data-ghost={ghost} data-active={active} data-type={type} data-variant={variant} data-range-start={range?.start} data-range-start-of-week={range?.startOfWeek} data-range-in={range?.in} data-range-end={range?.end} data-range-end-of-week={range?.endOfWeek} on:click>
 	<slot />
 </button>
 
@@ -59,41 +61,47 @@
 		//v-unit
 		--calendar-cell-base-v-unit-border-radius: 5px
 
+		--border-radius: var(--calendar-cell-base-border-radius)
+		--background-color: var(--calendar-cell-base-background-color)
+		--border-color: var(--calendar-cell-base-border-color)
+		--color: var(--calendar-cell-base-color)
+
+		position: relative
+		isolation: isolate
 		display: flex
 		align-items: center
 		justify-content: center
 		text-align: center
 		border: none
-		background: var(--calendar-cell-base-background-color)
-		color: var(--calendar-cell-base-color)
-		border-radius: var(--calendar-cell-base-border-radius)
+		background: none
+		color: var(--color)
 		cursor: pointer
 		width: var(--calendar-cell-base-width)
 		height: var(--calendar-cell-base-height)
-		border: 1px solid var(--calendar-cell-base-border-color)
+		outline: var(--calendar-cell-base-border-color)
 		font-weight: 500
 		font-size: 14px
 		transition: var(--clue-transition)
-		transition-property: color, background, border, border-radius
+		transition-property: color
 		&:disabled
-			background-color: var(--calendar-cell-base-background-color-disabled)
-			color: var(--calendar-cell-base-color-disabled)
-			border-color: var(--calendar-cell-base-border-color-disabled)
+			--background-color: var(--calendar-cell-base-background-color-disabled)
+			--border-color: var(--calendar-cell-base-border-color-disabled)
+			--color: var(--calendar-cell-base-color-disabled)
 			cursor: default
 		&:not(:disabled)
 			&:hover
-				background-color: var(--calendar-cell-base-background-color-hover)
-				color: var(--calendar-cell-base-color-hover)
-				border-color: var(--calendar-cell-base-border-color-hover)
+				--background-color: var(--calendar-cell-base-background-color-hover)
+				--border-color: var(--calendar-cell-base-border-color-hover)
+				--color: var(--calendar-cell-base-color-hover)
 		&[data-active='true']
-			background-color: var(--calendar-cell-base-background-color-active)
-			color: var(--calendar-cell-base-color-active)
-			border-color: var(--calendar-cell-base-border-color-active)
+			--background-color: var(--calendar-cell-base-background-color-active)
+			--border-color: var(--calendar-cell-base-border-color-active)
+			--color: var(--calendar-cell-base-color-active)
 			&:not(:disabled)
 				&:hover
-					background-color: var(--calendar-cell-base-background-color-active-hover)
-					color: var(--calendar-cell-base-color-active-hover)
-					border-color: var(--calendar-cell-base-border-color-active-hover)
+					--background-color: var(--calendar-cell-base-background-color-active-hover)
+					--border-color: var(--calendar-cell-base-border-color-active-hover)
+					--color: var(--calendar-cell-base-color-active-hover)
 		&[data-type='negative']
 			--calendar-cell-base-background-color: var(--calendar-cell-base-t-negative-background-color)
 			--calendar-cell-base-background-color-hover: var(--calendar-cell-base-t-negative-background-color-hover)
@@ -120,4 +128,49 @@
 		&:not([data-active='true'], [data-type='negative'])
 			&[data-ghost='true']
 				color: var(--calendar-cell-base-color-ghost)
+		&:not([data-range-end='true'])
+			&[data-range-start='true']
+				&::before
+					border-top-right-radius: 0px
+					border-bottom-right-radius: 0px
+					right: -6px
+					width: calc(100% + 6px)
+		&:not([data-range-start='true'])
+			&[data-range-end='true']
+				&::before
+					border-top-left-radius: 0px
+					border-bottom-left-radius: 0px
+					left: -6px
+					width: calc(100% + 6px)
+		&[data-range-in='true']
+			--border-radius: 0
+			--color: var(--calendar-cell-base-color)
+			--background-color: var(--calendar-cell-base-background-color-disabled)
+			&::before
+				left: -6px
+				width: calc(100% + 12px)
+			&[data-range-start-of-week='true']
+				&::before
+					left: 0
+					right: -6px
+					width: calc(100% + 6px)
+			&[data-range-end-of-week='true']
+				&::before
+					right: 0
+					left: -6px
+					width: calc(100% + 6px)
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: var(--border-radius)
+			background: var(--background-color)
+			outline: 1px solid var(--border-color)
+			transition: var(--clue-transition)
+			transition-property: background, outline, border-radius, left, width
 </style>
