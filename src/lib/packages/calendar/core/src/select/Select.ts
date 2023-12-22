@@ -270,29 +270,34 @@ export class Select {
 			 * range: всегда стараемся ДОБАВИТЬ новые слоты к выбранным
 			 */
 			mode?: 'single' | 'range'
+			/**
+			 * Включает, либо отключает поведение options.range
+			 */
+			manualRange?: boolean
 		}
 	) {
 		const options: typeof _options = {
 			mode: 'single',
 			overload: false,
+			manualRange: false,
 			..._options
 		}
 
-		const { isEqual, isIn, isDouble, isInset, betweenDays, isAnotherTime } = this.validate<true>({ from, to }) || {}
-
-		if (this.options.range) {
-			if (options.mode !== 'range') {
-				//Если range поставил пользователь, то тогда нам не надо набрасывать свою логику
-				options.mode = 'range'
-				//Если выбор был сделан >= 2 раз, то мы всегда ставим overload = true
-				if (this.#selectCount >= 2) {
-					options.overload = true
+		if (!options.manualRange) {
+			if (this.options.range) {
+				if (options.mode !== 'range') {
+					//Если range поставил пользователь, то тогда нам не надо набрасывать свою логику
+					options.mode = 'range'
+					//Если выбор был сделан >= 2 раз, то мы всегда ставим overload = true
+					if (this.#selectCount >= 2) {
+						options.overload = true
+					}
 				}
+			} else {
+				//Если range == false, то мы ВСЕГДА будем ставить новый слот, независимо от того, что хочет пользователь
+				options.overload = true
+				options.mode = 'single'
 			}
-		} else {
-			//Если range == false, то мы ВСЕГДА будем ставить новый слот, независимо от того, что хочет пользователь
-			options.overload = true
-			options.mode = 'single'
 		}
 
 		if (options.overload) {
@@ -307,6 +312,7 @@ export class Select {
 				to
 			})
 		} else {
+			const { isEqual, isIn, isDouble, isInset, betweenDays, isAnotherTime } = this.validate<true>({ from, to })
 			if (isDouble) {
 				//Если селекты равны, то сбрасываем значение
 				this.clear()

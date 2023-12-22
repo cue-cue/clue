@@ -15,7 +15,7 @@
 	export { className as class }
 
 	const {
-		store: { navigator, ...store }
+		store: { navigator, options, ...store }
 	} = new CalendarContext().get()
 
 	$: cellList = new CellList({
@@ -25,7 +25,9 @@
 	const handler = {
 		cellClick(event: MouseEvent, cell: CellType) {
 			store.select(cell, {
-				mode: event.shiftKey ? 'range' : 'single'
+				mode: event.shiftKey ? 'range' : 'single',
+				manualRange: true,
+				overload: !$options.range
 			})
 		}
 	}
