@@ -172,5 +172,5 @@
 			background: var(--background-color)
 			outline: 1px solid var(--border-color)
 			transition: var(--clue-transition)
-			transition-property: background, outline, border-radius, left, width
+			transition-property: background, outline, border-radius, right, left, width
 </style>
