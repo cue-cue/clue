@@ -55,7 +55,7 @@
 
 <DaysList class={generateClassNames(['CalendarDays', className])} date={$navigator.date} let:date let:cell let:isExclude>
 	{@const position = $getDayPositionBySelected(cell)}
-	<Tooltip>
+	<Tooltip trigger="click">
 		<Cell {date} active={$isActiveDay(cell)} type={isToday(date) ? 'negative' : undefined} ghost={isExclude} on:click={(e) => handler.dayClick(e, cell)} />
 		<svelte:fragment slot="content"><pre><code>{JSON.stringify(position, null, 2)}</code></pre></svelte:fragment>
 	</Tooltip>
