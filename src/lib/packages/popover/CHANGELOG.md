@@ -1,5 +1,32 @@
 # @cluue/popover
 
+## 1.0.20
+
+### Patch Changes
+
+-   Cell disabled and perfomance
+-   Updated dependencies
+    -   @cluue/config@1.0.15
+    -   @cluue/utils@1.0.16
+
+## 1.0.19
+
+### Patch Changes
+
+-   Cell disabled and perfomance
+-   Updated dependencies
+    -   @cluue/config@1.0.14
+    -   @cluue/utils@1.0.15
+
+## 1.0.18
+
+### Patch Changes
+
+-   Calendar
+-   Updated dependencies
+    -   @cluue/config@1.0.13
+    -   @cluue/utils@1.0.14
+
 ## 1.0.17
 
 ### Patch Changes

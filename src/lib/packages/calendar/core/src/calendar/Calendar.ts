@@ -4,7 +4,7 @@ import type { Block } from '../block/index.js'
 import { DisabledList, Disabled } from '../disabled/index.js'
 import { PeriodList, type Period } from '../period/index.js'
 
-interface ICalendarParams<T extends Block[] = Block[]> {
+export interface ICalendarParams<T extends Block[] = Block[]> {
 	disabled?: Parameters<Calendar['setDisabled']>[0]
 	step?: number
 	deadLine?: 'current'
@@ -45,15 +45,15 @@ export class Calendar<T extends Block[] = Block[]> {
 		return this.blocks
 	}
 
-	setDisabled(disabled: Disabled[]) {
-		this.disabled = disabled
+	setDisabled(disabled?: Disabled[]) {
+		this.disabled = disabled || []
 		this.#disabledList = new DisabledList(this.disabled)
 
 		return this.disabled
 	}
 
-	setPeriods(periods: Calendar['periods']) {
-		this.periods = periods
+	setPeriods(periods?: Calendar['periods']) {
+		this.periods = periods || []
 		this.#periodList = new PeriodList(this.periods)
 		return this.periods
 	}

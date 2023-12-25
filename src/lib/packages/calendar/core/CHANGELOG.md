@@ -1,5 +1,29 @@
 # @cluue/calendar-core
 
+## 1.0.41
+
+### Patch Changes
+
+-   Cell disabled and perfomance
+-   Updated dependencies
+    -   @cluue/calendar-utils@1.0.9
+
+## 1.0.40
+
+### Patch Changes
+
+-   Cell disabled and perfomance
+-   Updated dependencies
+    -   @cluue/calendar-utils@1.0.8
+
+## 1.0.39
+
+### Patch Changes
+
+-   Calendar
+-   Updated dependencies
+    -   @cluue/calendar-utils@1.0.7
+
 ## 1.0.38
 
 ### Patch Changes

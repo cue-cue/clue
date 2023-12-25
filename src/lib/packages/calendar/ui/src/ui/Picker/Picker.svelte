@@ -7,23 +7,23 @@
 
 	import { createCalendarStore, type ICalendarStoreData, type ICalendarStoreOptionsData } from '../../lib/index.js'
 	import { generateClassNames } from '@cluue/utils'
-	import { Cell as CalendarCoreCell } from '@cluue/calendar-core'
+	import { Cell as CalendarCoreCell, type ICalendarParams, type ISelectOptions, type ISelectParams } from '@cluue/calendar-core'
 	import Navigator from '../Navigator/Navigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
 	import { CalendarContext, type ICalendarContextData } from '../../lib/context.js'
 	import DaysNavigator from '../Days/DaysNavigator.svelte'
 	import Days from '../Days/Days.svelte'
 	import Time from '../Time/Time.svelte'
-	import DaysNames from '../Days/DaysNames.svelte'
 	import { beforeUpdate } from 'svelte'
 	import Month from '../Month/Month.svelte'
 
 	type CalendarStoreOptions = ICalendarStoreOptionsData<TRange>
-	interface $$Props {
+	interface $$Props extends ICalendarParams {
 		class?: string
 		value?: ICalendarStoreData<{ range: TRange }>['date']
 		time?: CalendarStoreOptions['time']
 		range?: CalendarStoreOptions['range']
+		select?: CalendarStoreOptions['select']
 	}
 
 	let className = ''
@@ -31,18 +31,23 @@
 	export let value: $$Props['value'] = undefined
 	export let time: $$Props['time'] = false
 	export let range: $$Props['range'] = false as TRange
+	export let periods: $$Props['periods'] = undefined
+	export let blocks: $$Props['blocks'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let select: $$Props['select'] = undefined
 
 	const calendarStore = createCalendarStore({
 		time,
 		range,
-		initialData: {
-			date: value
+		select,
+		calendar: {
+			blocks,
+			disabled,
+			periods
 		},
+		initialDate: value,
 		on: {
 			set(date) {
-				if (date instanceof Date) {
-					value
-				}
 				value = date
 			}
 		}
@@ -51,9 +56,14 @@
 	const navigator = calendarStore.navigator
 
 	$: calendarStore.options.update({
+		select,
 		time,
 		range
 	})
+
+	$: calendarStore.calendar.setBlocks(blocks)
+	$: calendarStore.calendar.setPeriods(periods)
+	$: calendarStore.calendar.setDisabled(disabled)
 
 	new CalendarContext().set({
 		store: calendarStore as ICalendarContextData['store']

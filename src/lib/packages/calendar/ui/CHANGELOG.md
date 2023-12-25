@@ -1,5 +1,41 @@
 # @cluue/calendar
 
+## 1.0.6
+
+### Patch Changes
+
+-   Cell disabled and perfomance
+-   Updated dependencies
+    -   @cluue/calendar-core@1.0.41
+    -   @cluue/popover@1.0.20
+    -   @cluue/config@1.0.15
+    -   @cluue/forms@1.0.31
+    -   @cluue/icons@1.0.28
+
+## 1.0.5
+
+### Patch Changes
+
+-   Cell disabled and perfomance
+-   Updated dependencies
+    -   @cluue/calendar-core@1.0.40
+    -   @cluue/popover@1.0.19
+    -   @cluue/config@1.0.14
+    -   @cluue/forms@1.0.30
+    -   @cluue/icons@1.0.27
+
+## 1.0.4
+
+### Patch Changes
+
+-   Calendar
+-   Updated dependencies
+    -   @cluue/calendar-core@1.0.39
+    -   @cluue/config@1.0.13
+    -   @cluue/forms@1.0.29
+    -   @cluue/icons@1.0.26
+    -   @cluue/popover@1.0.18
+
 ## 1.0.3
 
 ### Patch Changes

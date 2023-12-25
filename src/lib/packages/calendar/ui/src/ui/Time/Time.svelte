@@ -15,7 +15,7 @@
 	export { className as class }
 
 	const {
-		store: { navigator, options, ...store }
+		store: { navigator, options, isDisabled, ...store }
 	} = new CalendarContext().get()
 
 	$: cellList = new CellList({
@@ -41,6 +41,6 @@
 
 <GridRow class={generateClassNames(['CalendarTime', className])} gap="medium" columns={`repeat(auto-fit, minmax(55px, 1fr))`}>
 	{#each cellList.cells as cell (+cell.from)}
-		<Cell date={cell.from} variant="time" active={$isActive(cell)} on:click={(e) => handler.cellClick(e, cell)} />
+		<Cell date={cell.from} disabled={$isDisabled(cell).disabled} variant="time" active={$isActive(cell)} on:click={(e) => handler.cellClick(e, cell)} />
 	{/each}
 </GridRow>

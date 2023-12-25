@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/calendar",
-	"version": "1.0.3",
+	"version": "1.0.6",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
@@ -8,12 +8,13 @@
 	"type": "module",
 	"author": "Nikita Fedorov",
 	"dependencies": {
-		"dayjs": "^1.11.10",
-		"@cluue/icons": "workspace:*",
+		"@cluue/calendar-core": "workspace:*",
 		"@cluue/config": "workspace:*",
-		"@cluue/popover": "workspace:*",
 		"@cluue/forms": "workspace:*",
-		"@cluue/calendar-core": "workspace:*"
+		"@cluue/icons": "workspace:*",
+		"@cluue/popover": "workspace:*",
+		"dayjs": "^1.11.10",
+		"lodash.merge": "^4.6.2"
 	},
 	"exports": {
 		".": {
@@ -21,5 +22,8 @@
 			"svelte": "./src/index.js",
 			"types": "./src/index.d.ts"
 		}
+	},
+	"devDependencies": {
+		"@types/lodash.merge": "^4.6.9"
 	}
 }

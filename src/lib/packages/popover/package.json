@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/popover",
-	"version": "1.0.17",
+	"version": "1.0.20",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",

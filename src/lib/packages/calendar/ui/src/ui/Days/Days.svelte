@@ -4,7 +4,7 @@
 	import DaysList from './DaysList.svelte'
 	import type { ComponentProps } from 'svelte'
 	import Cell from '../Cell.svelte'
-	import { Disabled, Cell as CellType } from '@cluue/calendar-core'
+	import { Disabled, Cell as CellType, Calendar } from '@cluue/calendar-core'
 	import { CalendarContext } from '../../lib/context.js'
 	import { derived } from 'svelte/store'
 	import { isToday } from '@cluue/calendar-utils'
@@ -17,7 +17,7 @@
 	export { className as class }
 
 	const {
-		store: { options, navigator, selector, ...store }
+		store: { options, navigator, isDisabled, selector, ...store }
 	} = new CalendarContext().get()
 
 	$store.date
@@ -61,5 +61,5 @@
 </script>
 
 <DaysList class={generateClassNames(['CalendarDays', className])} date={$navigator.date} let:date let:cell let:isExclude>
-	<Cell {date} active={$isActiveDay(cell)} range={$getRangePropsByCell(cell)} type={isToday(date) ? 'negative' : undefined} ghost={isExclude} on:click={(e) => handler.dayClick(e, cell)} />
+	<Cell {date} disabled={$isDisabled(cell).disabled} active={$isActiveDay(cell)} range={$getRangePropsByCell(cell)} type={isToday(date) ? 'negative' : undefined} ghost={isExclude} on:click={(e) => handler.dayClick(e, cell)} />
 </DaysList>

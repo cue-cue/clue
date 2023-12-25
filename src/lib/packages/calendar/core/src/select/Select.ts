@@ -3,7 +3,7 @@ import type { Calendar } from '../calendar/index.js'
 import type { Cell } from '../cell/index.js'
 import dayjs from 'dayjs'
 
-interface ISelectOptions {
+export interface ISelectOptions {
 	range?: boolean
 	allowBetweenDays?: boolean
 	minTimeLength?: number //minutes
@@ -13,7 +13,7 @@ interface ISelectOptions {
 interface ISelectEvents {
 	set: (selected: Select['selected']) => void
 }
-interface ISelectParams {
+export interface ISelectParams {
 	calendar: Calendar
 	options?: ISelectOptions
 	on?: Partial<ISelectEvents>
