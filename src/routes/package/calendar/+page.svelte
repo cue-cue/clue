@@ -49,6 +49,10 @@
 	})
 
 	const blocks = [
+		new Block({
+			from: new Date('2023-12-25T14:00:00.000Z'),
+			to: new Date('2023-12-25T17:00:00.000Z')
+		}),
 		// new Block({
 		// 	from: dayjs().startOf('day').add(20, 'hours').toDate(),
 		// 	to: dayjs().startOf('day').add(24, 'hours').toDate()
@@ -108,10 +112,10 @@
 <h2>Picker</h2>
 <ul class="picker-list">
 	<li>
-		<Picker {blocks} bind:value={pickerValue} />
+		<Picker step={30} {blocks} bind:value={pickerValue} />
 	</li>
 	<li>
-		<Picker {blocks} bind:value={pickerValue} />
+		<Picker step={30} {blocks} bind:value={pickerValue} />
 	</li>
 </ul>
 

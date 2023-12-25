@@ -15,10 +15,10 @@
 	export { className as class }
 
 	const {
-		store: { navigator, options, isDisabled, ...store }
+		store: { navigator, options, isDisabled, calendar, ...store }
 	} = new CalendarContext().get()
 
-	$: cellList = new CellList({
+	$: cellList = calendar.createCellList({
 		date: $navigator.date
 	})
 

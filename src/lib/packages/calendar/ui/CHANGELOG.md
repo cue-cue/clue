@@ -1,5 +1,71 @@
 # @cluue/calendar
 
+## 2.0.3
+
+### Patch Changes
+
+-   fix
+-   Updated dependencies
+    -   @cluue/forms@2.0.3
+    -   @cluue/icons@2.0.3
+
+## 2.0.2
+
+### Patch Changes
+
+-   fix
+-   Updated dependencies
+    -   @cluue/forms@2.0.2
+    -   @cluue/icons@2.0.2
+
+## 2.0.1
+
+### Patch Changes
+
+-   fix
+-   Updated dependencies
+    -   @cluue/forms@2.0.1
+    -   @cluue/icons@2.0.1
+
+## 2.0.0
+
+### Major Changes
+
+-   Fix
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @cluue/forms@2.0.0
+    -   @cluue/icons@2.0.0
+
+## 1.0.10
+
+### Patch Changes
+
+-   Step
+-   Updated dependencies
+    -   @cluue/icons@1.0.29
+    -   @cluue/forms@1.0.32
+
+## 1.0.9
+
+### Patch Changes
+
+-   Step
+
+## 1.0.8
+
+### Patch Changes
+
+-   Step
+
+## 1.0.7
+
+### Patch Changes
+
+-   Step
+
 ## 1.0.6
 
 ### Patch Changes
