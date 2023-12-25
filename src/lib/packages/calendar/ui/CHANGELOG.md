@@ -1,5 +1,20 @@
 # @cluue/calendar
 
+## 2.0.6
+
+### Patch Changes
+
+-   remove logs
+-   Updated dependencies
+    -   @cluue/icons@2.0.5
+    -   @cluue/forms@2.0.5
+
+## 2.0.5
+
+### Patch Changes
+
+-   remove logs
+
 ## 2.0.4
 
 ### Patch Changes

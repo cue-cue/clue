@@ -83,15 +83,8 @@
 			})
 		}
 	})
-
-	const toggleRange = () => (range = !range as TRange)
-	const toggleTime = () => (time = !time)
 </script>
 
-<pre style="height: 100px">{JSON.stringify($calendarStore, null, 2)}</pre>
-<pre style="height: 120px">{JSON.stringify($navigator, null, 2)}</pre>
-<button on:click={toggleTime}>toggle time ({time})</button>
-<button on:click={toggleRange}>toggle range ({range})</button>
 <div class={generateClassNames(['CalendarPicker', className])}>
 	<PickerContainer>
 		<Navigator />

@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 2.0.5
+
+### Patch Changes
+
+-   remove logs
+
 ## 2.0.4
 
 ### Patch Changes

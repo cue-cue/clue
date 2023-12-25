@@ -86,8 +86,6 @@
 			to: dayjs().startOf('day').add(1, 'day').add(66, 'hours').toDate()
 		})
 	]
-
-	let pickerValue: ComponentProps<Picker>['value'] = new Date()
 </script>
 
 <Tooltip>
@@ -112,10 +110,13 @@
 <h2>Picker</h2>
 <ul class="picker-list">
 	<li>
-		<Picker step={30} {blocks} bind:value={pickerValue} />
+		<Picker step={60} time {blocks} />
 	</li>
 	<li>
-		<Picker step={30} {blocks} bind:value={pickerValue} />
+		<Picker time range {blocks} />
+	</li>
+	<li>
+		<Picker range step={30} {blocks} />
 	</li>
 </ul>
 
