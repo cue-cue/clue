@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 2.0.4
+
+### Patch Changes
+
+-   rest calendar options
+
 ## 2.0.3
 
 ### Patch Changes

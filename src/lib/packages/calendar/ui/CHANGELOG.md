@@ -1,5 +1,14 @@
 # @cluue/calendar
 
+## 2.0.4
+
+### Patch Changes
+
+-   rest calendar options
+-   Updated dependencies
+    -   @cluue/icons@2.0.4
+    -   @cluue/forms@2.0.4
+
 ## 2.0.3
 
 ### Patch Changes

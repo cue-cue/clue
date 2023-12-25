@@ -35,14 +35,13 @@
 	export let blocks: $$Props['blocks'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 	export let select: $$Props['select'] = undefined
-	export let step: $$Props['step'] = 5
 
 	const calendarStore = createCalendarStore({
 		time,
 		range,
 		select,
 		calendar: {
-			step,
+			...$$restProps,
 			blocks,
 			disabled,
 			periods
