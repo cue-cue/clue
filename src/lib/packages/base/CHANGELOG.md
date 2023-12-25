@@ -1,5 +1,13 @@
 # @cluue/base
 
+## 2.0.6
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @cluue/popover@1.0.21
+    -   @cluue/icons@2.0.6
+
 ## 2.0.5
 
 ### Patch Changes

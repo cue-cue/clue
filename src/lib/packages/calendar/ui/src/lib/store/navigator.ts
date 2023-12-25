@@ -30,7 +30,6 @@ export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({
 
 	const setYearCurrent = (year: number) => {
 		const options = getOptionsData()
-		console.log(options)
 		update((data) => {
 			const min = options.min?.getFullYear()
 			const max = options.max?.getFullYear()

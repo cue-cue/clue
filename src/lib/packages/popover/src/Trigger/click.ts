@@ -1,8 +1,24 @@
 import { get } from 'svelte/store'
 import { Trigger } from './index.js'
+import { outclick } from '$lib/packages/utils/src/index.js'
 
 export interface IClickTriggerOptions {
 	delay: [number, number] | number
+}
+
+const createOutClickHandler = () => {
+	let initResult: ReturnType<typeof outclick>
+	const init = (node: HTMLElement) => {
+		initResult = outclick(node)
+	}
+	const destroy = () => {
+		initResult?.destroy?.()
+	}
+
+	return {
+		destroy,
+		init
+	}
 }
 
 export class ClickTrigger extends Trigger {
@@ -10,6 +26,8 @@ export class ClickTrigger extends Trigger {
 	constructor(elements: Trigger['elements'], events: Trigger['events'], options?: IClickTriggerOptions) {
 		super(elements, events)
 		this.options = options
+
+		const outclick = createOutClickHandler()
 
 		this.setHandlers({
 			target: {
@@ -29,6 +47,15 @@ export class ClickTrigger extends Trigger {
 				}
 			},
 			content: {
+				init: () => {
+					const element = get(this.elements.content)
+					if (element) {
+						outclick.init(element)
+					}
+				},
+				destroy: () => {
+					outclick.destroy()
+				},
 				mouseenter: () => {
 					this.openWithoutDelay()
 				},

@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 2.0.6
+
+### Patch Changes
+
+-   Upgrade popover and perf calendar
+
 ## 2.0.5
 
 ### Patch Changes

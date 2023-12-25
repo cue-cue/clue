@@ -46,6 +46,26 @@
 		</li>
 	{/each}
 </ul>
+<h2>Popover: click trigger</h2>
+<ul class="popover-list">
+	{#each items as { id, ...item } (id)}
+		<li>
+			<h3>{id}</h3>
+			<pre>{JSON.stringify(item)}</pre>
+			<Popover trigger={'click'} {...item}>
+				<Button>Popover</Button>
+				<svelte:fragment slot="content">
+					<Popover trigger={'click'} {...item}>
+						<Button size="small">Hovvvver me 💜</Button>
+						<svelte:fragment slot="content">
+							<Button size="small">Cuuue💜</Button>
+						</svelte:fragment>
+					</Popover>
+				</svelte:fragment>
+			</Popover>
+		</li>
+	{/each}
+</ul>
 
 <div class="scroll">
 	<ul class="popover-list">

@@ -1,6 +1,6 @@
 {
   "name": "@cluue/icons",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "private": false,
   "license": "MIT",
   "main": "src/index.js",
