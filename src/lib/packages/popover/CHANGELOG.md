@@ -1,5 +1,11 @@
 # @cluue/popover
 
+## 1.0.22
+
+### Patch Changes
+
+-   refactor: click trigger
+
 ## 1.0.21
 
 ### Patch Changes

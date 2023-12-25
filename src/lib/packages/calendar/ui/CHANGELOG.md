@@ -1,5 +1,14 @@
 # @cluue/calendar
 
+## 2.0.8
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @cluue/popover@1.0.22
+    -   @cluue/icons@2.0.7
+    -   @cluue/forms@2.0.7
+
 ## 2.0.7
 
 ### Patch Changes

@@ -6,10 +6,12 @@ export interface IClickTriggerOptions {
 	delay: [number, number] | number
 }
 
-const createOutClickHandler = () => {
+const createOutClickHandler = (handler: VoidFunction) => {
 	let initResult: ReturnType<typeof outclick>
 	const init = (node: HTMLElement) => {
-		initResult = outclick(node)
+		initResult = outclick(node, {
+			handler
+		})
 	}
 	const destroy = () => {
 		initResult?.destroy?.()
@@ -27,23 +29,14 @@ export class ClickTrigger extends Trigger {
 		super(elements, events)
 		this.options = options
 
-		const outclick = createOutClickHandler()
+		const outclick = createOutClickHandler(() => {
+			this.closeWithDelay(0)
+		})
 
 		this.setHandlers({
 			target: {
 				click: () => {
 					this.openWithoutDelay()
-				},
-				mouseleave: (e) => {
-					{
-						if (e.relatedTarget) {
-							if (!get(this.elements.content)?.contains(e.relatedTarget as Node)) {
-								this.closeWithDelay()
-							}
-						} else {
-							this.closeWithDelay()
-						}
-					}
 				}
 			},
 			content: {
@@ -55,20 +48,6 @@ export class ClickTrigger extends Trigger {
 				},
 				destroy: () => {
 					outclick.destroy()
-				},
-				mouseenter: () => {
-					this.openWithoutDelay()
-				},
-				mouseleave: (e) => {
-					{
-						if (e.relatedTarget) {
-							if (!get(this.elements.target)?.contains(e.relatedTarget as Node)) {
-								this.closeWithDelay()
-							}
-						} else {
-							this.closeWithDelay()
-						}
-					}
 				}
 			}
 		})
@@ -80,11 +59,11 @@ export class ClickTrigger extends Trigger {
 	}
 
 	closeWithDelayTimeout?: ReturnType<typeof setTimeout>
-	closeWithDelay() {
+	closeWithDelay(delay = this.getDelay().close) {
 		clearTimeout(this.closeWithDelayTimeout)
 		this.closeWithDelayTimeout = setTimeout(() => {
 			this.close()
-		}, this.getDelay().close)
+		}, delay)
 	}
 
 	getDelay() {

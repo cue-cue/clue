@@ -1,5 +1,11 @@
 # @cluue/icons
 
+## 2.0.7
+
+### Patch Changes
+
+-   refactor: click trigger
+
 ## 2.0.6
 
 ### Patch Changes
