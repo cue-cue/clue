@@ -1,55 +1,55 @@
 {
-  "name": "@cluue/icons",
-  "version": "2.0.8",
-  "private": false,
-  "license": "MIT",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
-  "type": "module",
-  "author": "Nikita Fedorov",
-  "peerDependencies": {
-    "vite-plugin-svg-sprite": "^0.5.0"
-  },
-  "dependencies": {
-    "@cluue/config": "workspace:*",
-    "@cluue/utils": "workspace:*"
-  },
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./src/index.d.ts"
-      ],
-      "plugin": [
-        "./src/plugin/index.d.ts"
-      ],
-      "line/*": [
-        "./svg/types/module.d.ts"
-      ],
-      "filled/*": [
-        "./svg/types/module.d.ts"
-      ]
-    }
-  },
-  "exports": {
-    ".": {
-      "import": "./src/index.js",
-      "svelte": "./src/index.js",
-      "types": "./src/index.d.ts"
-    },
-    "./plugin": {
-      "import": "./src/plugin/index.js",
-      "node": "./src/plugin/index.js",
-      "types": "./src/plugin/index.d.ts"
-    },
-    "./line/*": {
-      "import": "./src/assets/line/*",
-      "svelte": "./src/assets/line/*",
-      "types": "./svg/types/module.d.ts"
-    },
-    "./filled/*": {
-      "import": "./src/assets/filled/*",
-      "svelte": "./src/assets/filled/*",
-      "types": "./svg/types/module.d.ts"
-    }
-  }
+	"name": "@cluue/icons",
+	"version": "2.0.8",
+	"private": false,
+	"license": "MIT",
+	"main": "src/index.js",
+	"types": "src/index.d.ts",
+	"type": "module",
+	"author": "Nikita Fedorov",
+	"peerDependencies": {
+		"vite-plugin-svg-sprite": "^0.5.0"
+	},
+	"dependencies": {
+		"@cluue/config": "workspace:*",
+		"@cluue/utils": "workspace:*"
+	},
+	"typesVersions": {
+		"*": {
+			".": [
+				"./src/index.d.ts"
+			],
+			"plugin": [
+				"./src/plugin/index.d.ts"
+			],
+			"line/*": [
+				"./svg/types/module.d.ts"
+			],
+			"filled/*": [
+				"./svg/types/module.d.ts"
+			]
+		}
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.js",
+			"svelte": "./src/index.js",
+			"types": "./src/index.d.ts"
+		},
+		"./plugin": {
+			"import": "./src/plugin/index.js",
+			"node": "./src/plugin/index.js",
+			"types": "./src/plugin/index.d.ts"
+		},
+		"./line/*": {
+			"import": "./src/assets/line/*",
+			"svelte": "./src/assets/line/*",
+			"types": "./svg/types/module.d.ts"
+		},
+		"./filled/*": {
+			"import": "./src/assets/filled/*",
+			"svelte": "./src/assets/filled/*",
+			"types": "./svg/types/module.d.ts"
+		}
+	}
 }
