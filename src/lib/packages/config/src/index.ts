@@ -20,7 +20,7 @@ const createConfigStore = (data: IConfigData) => {
 		update((data) => {
 			data.transition = {
 				...(data.transition || {}),
-				...transition
+				...transition,
 			}
 			return data
 		})
@@ -33,7 +33,7 @@ const createConfigStore = (data: IConfigData) => {
 	return {
 		subscribe,
 		setCustomClassNames,
-		setTransition
+		setTransition,
 	}
 }
 
@@ -42,6 +42,6 @@ export const config = createConfigStore({
 	customClassNames: [],
 	transition: {
 		delay: 0,
-		duration: 200
-	}
+		duration: 200,
+	},
 })

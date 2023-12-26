@@ -21,6 +21,6 @@ export const viteWatchers = (watchers: ViteWatcher[]): PluginOption => {
 			watchers.forEach((watcher) => {
 				watcher.call(hmrContext)
 			})
-		}
+		},
 	}
 }

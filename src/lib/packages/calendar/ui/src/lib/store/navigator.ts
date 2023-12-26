@@ -12,14 +12,18 @@ export interface ICalendarNavigatorStoreData {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({ options }: { options: ReturnType<typeof createCalendarOptionsStore<TRange>> }) => {
+export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({
+	options,
+}: {
+	options: ReturnType<typeof createCalendarOptionsStore<TRange>>
+}) => {
 	const { update, subscribe } = writable<ICalendarNavigatorStoreData>({
 		date: new Date(),
 		year: {
 			current: new Date().getFullYear(),
-			step: 3 * 4
+			step: 3 * 4,
 		},
-		unit: 'date'
+		unit: 'date',
 	})
 
 	const getOptionsData = () => get(options)
@@ -37,7 +41,9 @@ export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({
 			if (min && year < min) year = min
 			if (max && year > max) year = max
 
-			const isDateExclude = options.isDateExclude(dayjs(dayjs(data.date).year(year).toDate()).year(year).toDate())
+			const isDateExclude = options.isDateExclude(
+				dayjs(dayjs(data.date).year(year).toDate()).year(year).toDate(),
+			)
 
 			if (isDateExclude.min) {
 				year += 1
@@ -116,6 +122,6 @@ export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({
 		prev,
 		set,
 		setDate,
-		goto
+		goto,
 	}
 }

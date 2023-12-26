@@ -52,11 +52,31 @@
 		onChange()
 
 		return {
-			update
+			update,
 		}
 	}
 
 	onChange()
 </script>
 
-<input class={generateClassNames(['InputCheckbox', className])} use:init={group} type="checkbox" bind:checked on:keyup on:keydown on:keypress on:focus on:blur on:click={onClick} on:click on:mouseover on:mouseenter on:mouseleave on:paste on:change={onChange} on:change {value} {...$$restProps} />
+<input
+	class={generateClassNames(['InputCheckbox', className])}
+	use:init={group}
+	type="checkbox"
+	bind:checked
+	on:keyup
+	on:keydown
+	on:keypress
+	on:focus
+	on:blur
+	on:click={onClick}
+	on:click
+	on:mouseover
+	on:mouseenter
+	on:mouseleave
+	on:paste
+	on:change={onChange}
+	on:change
+	{value}
+	{...$$restProps}
+/>

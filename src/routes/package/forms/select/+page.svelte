@@ -4,29 +4,30 @@
 	import type { ComponentProps } from 'svelte'
 
 	/* eslint-disable @typescript-eslint/no-explicit-any */
-	const items: (ComponentProps<Select<IOption<string>[], any, any, boolean>> & { id: string })[] = [
-		{
-			id: 'Base',
-			options: [
-				{
-					value: 'test',
-					label: 'test'
-				},
-				{
-					value: 'test1',
-					label: 'test1'
-				},
-				{
-					value: 'test2',
-					label: 'test2'
-				},
-				{
-					value: 'test3',
-					label: 'test3'
-				}
-			]
-		}
-	]
+	const items: (ComponentProps<Select<IOption<string>[], any, any, boolean>> & { id: string })[] =
+		[
+			{
+				id: 'Base',
+				options: [
+					{
+						value: 'test',
+						label: 'test',
+					},
+					{
+						value: 'test1',
+						label: 'test1',
+					},
+					{
+						value: 'test2',
+						label: 'test2',
+					},
+					{
+						value: 'test3',
+						label: 'test3',
+					},
+				],
+			},
+		]
 </script>
 
 <h2>Select</h2>
@@ -81,9 +82,9 @@
 						options={item.options.map(({ value, label }, index) => ({
 							value: {
 								id: value,
-								name: (label || '') + index
+								name: (label || '') + index,
 							},
-							label
+							label,
 						}))}
 						key="name"
 						valueType="key"
@@ -96,9 +97,9 @@
 						options={item.options.map(({ value, label }, index) => ({
 							value: {
 								id: index + value,
-								name: index
+								name: index,
 							},
-							label
+							label,
 						}))}
 						valueType="advanced"
 						value={[{ id: '1test21', name: 1 }]}

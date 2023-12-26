@@ -9,23 +9,25 @@ export class PeriodList {
 	}
 
 	getSides(days: Date[]) {
-		const periods = this.items.filter((period) => days.findIndex((day) => period.checkDay(day)) !== -1)
+		const periods = this.items.filter(
+			(period) => days.findIndex((day) => period.checkDay(day)) !== -1,
+		)
 
 		const start = new Period({
 			days,
 			start: 0,
-			end: Math.min(...periods.map(({ start }) => start))
+			end: Math.min(...periods.map(({ start }) => start)),
 		})
 
 		const end = new Period({
 			days,
 			start: Math.max(...periods.map(({ end }) => end)),
-			end: 1440
+			end: 1440,
 		})
 
 		return {
 			start,
-			end
+			end,
 		}
 	}
 
@@ -90,7 +92,9 @@ export class PeriodList {
 
 			dateTo = new Date(+dateTo - 1) //What? Надо для того, чтобы втягивать в себя крайние слоты справа
 
-			const periodFrom = this.items.some((period) => period.isExclude(isDate ? dateTo : cellOrDate.from))
+			const periodFrom = this.items.some((period) =>
+				period.isExclude(isDate ? dateTo : cellOrDate.from),
+			)
 			const periodTo = this.items.some((period) => period.isExclude(dateTo))
 
 			return !periodFrom || !periodTo

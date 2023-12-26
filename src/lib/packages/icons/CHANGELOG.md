@@ -1,5 +1,14 @@
 # @cluue/icons
 
+## 2.0.8
+
+### Patch Changes
+
+-   Refactor and Perf
+-   Updated dependencies
+    -   @cluue/config@1.0.16
+    -   @cluue/utils@1.0.17
+
 ## 2.0.7
 
 ### Patch Changes

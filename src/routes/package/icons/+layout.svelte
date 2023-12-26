@@ -14,20 +14,22 @@
 		{
 			name: 'Line',
 			href: '/package/icons/line',
-			icon: lineIcon
+			icon: lineIcon,
 		},
 		{
 			name: 'Filled',
 			href: '/package/icons/filled',
-			icon: filledIcon
-		}
+			icon: filledIcon,
+		},
 	]
 </script>
 
 <div style="display: flex; gap: 30px; justify-content: center; margin-top: 20px">
 	{#each groups as { href, icon, name } (href)}
 		{@const active = $page.url.pathname.startsWith(href)}
-		<Button {href} startIcon={icon} type={active ? 'primary' : 'ghost'} size="small">{name}</Button>
+		<Button {href} startIcon={icon} type={active ? 'primary' : 'ghost'} size="small"
+			>{name}</Button
+		>
 	{/each}
 </div>
 <div style="margin-top: 20px">

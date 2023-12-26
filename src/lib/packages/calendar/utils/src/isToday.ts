@@ -7,7 +7,7 @@ export const isToday = (
 	date: Date,
 	options?: {
 		anyWeek?: boolean
-	}
+	},
 ) => {
 	const dayjsInstance = dayjs(date)
 

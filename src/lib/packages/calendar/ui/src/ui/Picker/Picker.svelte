@@ -5,9 +5,18 @@
 
 	import Year from '../Year/Year.svelte'
 
-	import { createCalendarStore, type ICalendarStoreData, type ICalendarStoreOptionsData } from '../../lib/index.js'
+	import {
+		createCalendarStore,
+		type ICalendarStoreData,
+		type ICalendarStoreOptionsData,
+	} from '../../lib/index.js'
 	import { generateClassNames } from '@cluue/utils'
-	import { Cell as CalendarCoreCell, type ICalendarParams, type ISelectOptions, type ISelectParams } from '@cluue/calendar-core'
+	import {
+		Cell as CalendarCoreCell,
+		type ICalendarParams,
+		type ISelectOptions,
+		type ISelectParams,
+	} from '@cluue/calendar-core'
 	import Navigator from '../Navigator/Navigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
 	import { CalendarContext, type ICalendarContextData } from '../../lib/context.js'
@@ -44,14 +53,14 @@
 			...$$restProps,
 			blocks,
 			disabled,
-			periods
+			periods,
 		},
 		initialDate: value,
 		on: {
 			set(date) {
 				value = date
-			}
-		}
+			},
+		},
 	})
 
 	const navigator = calendarStore.navigator
@@ -59,7 +68,7 @@
 	$: calendarStore.options.update({
 		select,
 		time,
-		range
+		range,
 	})
 
 	$: calendarStore.calendar.setBlocks(blocks)
@@ -67,19 +76,20 @@
 	$: calendarStore.calendar.setDisabled(disabled)
 
 	new CalendarContext().set({
-		store: calendarStore as ICalendarContextData['store']
+		store: calendarStore as ICalendarContextData['store'],
 	})
 
 	beforeUpdate(() => {
 		if ($calendarStore.date && value) {
 			if (range && !(value instanceof Date) && !($calendarStore.date instanceof Date)) {
-				if (CalendarCoreCell.isSame(new CalendarCoreCell(value), $calendarStore.date)) return
+				if (CalendarCoreCell.isSame(new CalendarCoreCell(value), $calendarStore.date))
+					return
 			} else {
 				if (+value === +$calendarStore.date) return
 			}
 		} else {
 			calendarStore.select(value, {
-				overload: true
+				overload: true,
 			})
 		}
 	})
@@ -89,7 +99,10 @@
 	<PickerContainer>
 		<Navigator />
 		{#if $navigator.unit === 'date'}
-			<div transition:slide={$config.transition} class={generateClassNames(['CalendarPicker__days'])}>
+			<div
+				transition:slide={$config.transition}
+				class={generateClassNames(['CalendarPicker__days'])}
+			>
 				<DaysNavigator />
 			</div>
 		{/if}

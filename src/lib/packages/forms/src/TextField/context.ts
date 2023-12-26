@@ -8,7 +8,9 @@ type Data = Writable<Pick<ComponentProps<TextField>, 'error' | 'disabled' | 'id'
 
 export const context = new Context<Data>('TextField')
 
-export const textFieldButtonsContext = new Context<Writable<{ count: number; mounted: boolean }>>('TextFieldButtons')
+export const textFieldButtonsContext = new Context<Writable<{ count: number; mounted: boolean }>>(
+	'TextFieldButtons',
+)
 
 export const textFieldBaseContext = new Context<
 	Writable<{

@@ -1,5 +1,10 @@
 <script lang="ts" context="module">
-	import type { OptionsGenericType, ValueTypeGenericType, KeyGenericType, MultipleGenericType } from './SelectOptionListCore.svelte'
+	import type {
+		OptionsGenericType,
+		ValueTypeGenericType,
+		KeyGenericType,
+		MultipleGenericType,
+	} from './SelectOptionListCore.svelte'
 </script>
 
 <script
@@ -27,11 +32,19 @@
 	import TextField from '../TextField/TextField.svelte'
 
 	type SelectBaseProps = ComponentProps<SelectBase>
-	type SelectOptionListCoreProps = ComponentProps<SelectOptionListCore<OptionsGeneric, ValueTypeGeneric, KeyGeneric, MultipleGeneric>>
+	type SelectOptionListCoreProps = ComponentProps<
+		SelectOptionListCore<OptionsGeneric, ValueTypeGeneric, KeyGeneric, MultipleGeneric>
+	>
 	type TextFieldProps = ComponentProps<TextField>
 
 	type SearchFilter = (option: OptionsGeneric[number], searchValue: string) => boolean
-	interface $$Props extends Pick<SelectOptionListCoreProps, 'options' | 'valueType' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'>, Pick<SelectBaseProps, 'open' | 'allowSearch' | 'allowClear' | 'error'>, Pick<TextFieldProps, 'label' | 'helper' | 'hint'> {
+	interface $$Props
+		extends Pick<
+				SelectOptionListCoreProps,
+				'options' | 'valueType' | 'multiple' | 'value' | 'disabled' | 'readonly' | 'key'
+			>,
+			Pick<SelectBaseProps, 'open' | 'allowSearch' | 'allowClear' | 'error'>,
+			Pick<TextFieldProps, 'label' | 'helper' | 'hint'> {
 		class?: string
 		searchFilter?: SearchFilter
 	}
@@ -64,15 +77,21 @@
 		},
 		clear() {
 			clear?.()
-		}
+		},
 	}
 
 	const getInputValue = (value: $$Props['value']) => {
 		const foundOptions = options.filter((option) => {
 			if (Array.isArray(value)) {
-				return value.some((val: OptionsGeneric[number]['value']) => getOptionValueKey(option.value, key) === getOptionValueKey(val, key))
+				return value.some(
+					(val: OptionsGeneric[number]['value']) =>
+						getOptionValueKey(option.value, key) === getOptionValueKey(val, key),
+				)
 			}
-			return getOptionValueKey(option.value, key) === getOptionValueKey(value as OptionValue, key)
+			return (
+				getOptionValueKey(option.value, key) ===
+				getOptionValueKey(value as OptionValue, key)
+			)
 		})
 		const labels = foundOptions.map(({ label }) => label)
 		return labels.join(', ')
@@ -109,12 +128,37 @@
 		<svelte:fragment slot="target" let:targetAction>
 			<TextField {disabled} {error} {readonly} {label} {helper} {hint}>
 				<svelte:fragment slot="base" let:id>
-					<SelectBase {allowSearch} {disabled} {readonly} {error} {id} use={[createAction('targetAction', targetAction)]} bind:open bind:value={inputValue} bind:searchValue bind:setOpen on:open on:close on:toggle on:clear={handler.clear} />
+					<SelectBase
+						{allowSearch}
+						{disabled}
+						{readonly}
+						{error}
+						{id}
+						use={[createAction('targetAction', targetAction)]}
+						bind:open
+						bind:value={inputValue}
+						bind:searchValue
+						bind:setOpen
+						on:open
+						on:close
+						on:toggle
+						on:clear={handler.clear}
+					/>
 				</svelte:fragment>
 			</TextField>
 		</svelte:fragment>
 		<svelte:fragment slot="content-wrapper" let:open>
-			<SelectOptionListCore {valueType} {options} {readonly} {disabled} {key} {filter} {multiple} bind:clear bind:value>
+			<SelectOptionListCore
+				{valueType}
+				{options}
+				{readonly}
+				{disabled}
+				{key}
+				{filter}
+				{multiple}
+				bind:clear
+				bind:value
+			>
 				{#if open}
 					<PopoverContent class={generateClassNames(['SelectPopoverContent', className])}>
 						<SelectOptionList />

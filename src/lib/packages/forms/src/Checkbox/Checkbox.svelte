@@ -36,7 +36,7 @@
 	class={generateClassNames(['Checkbox', className])}
 	slots={{
 		label: $$slots.default,
-		desc: $$slots.desc
+		desc: $$slots.desc,
 	}}
 >
 	<CheckboxBase {value} {disabled} bind:checked bind:group bind:id {name} {...$$restProps} />

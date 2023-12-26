@@ -1,5 +1,15 @@
 # @cluue/base
 
+## 2.0.8
+
+### Patch Changes
+
+-   Refactor and Perf
+-   Updated dependencies
+    -   @cluue/popover@1.0.23
+    -   @cluue/icons@2.0.8
+    -   @cluue/utils@1.0.17
+
 ## 2.0.7
 
 ### Patch Changes

@@ -14,7 +14,7 @@ const run = async () => {
 			console.log(`start ${path}`)
 
 			const styles = sass.compile(path, {
-				style: 'compressed'
+				style: 'compressed',
 			})
 
 			let css = styles.css
@@ -23,7 +23,7 @@ const run = async () => {
 
 			return {
 				path,
-				css
+				css,
 			}
 		})
 		.forEach(({ path, css }) => {

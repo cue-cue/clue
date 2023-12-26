@@ -27,7 +27,15 @@
 </script>
 
 <CheckboxField manual={_manual} {id} class={generateClassNames(['CheckboxBase', className])}>
-	<InputCheckbox manual={_manual} bind:group bind:value {id} bind:checked {disabled} {...$$restProps} />
+	<InputCheckbox
+		manual={_manual}
+		bind:group
+		bind:value
+		{id}
+		bind:checked
+		{disabled}
+		{...$$restProps}
+	/>
 </CheckboxField>
 
 <style lang="sass">

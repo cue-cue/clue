@@ -10,7 +10,7 @@ const createOutClickHandler = (handler: VoidFunction) => {
 	let initResult: ReturnType<typeof outclick>
 	const init = (node: HTMLElement) => {
 		initResult = outclick(node, {
-			handler
+			handler,
 		})
 	}
 	const destroy = () => {
@@ -19,13 +19,17 @@ const createOutClickHandler = (handler: VoidFunction) => {
 
 	return {
 		destroy,
-		init
+		init,
 	}
 }
 
 export class ClickTrigger extends Trigger {
 	options
-	constructor(elements: Trigger['elements'], events: Trigger['events'], options?: IClickTriggerOptions) {
+	constructor(
+		elements: Trigger['elements'],
+		events: Trigger['events'],
+		options?: IClickTriggerOptions,
+	) {
 		super(elements, events)
 		this.options = options
 
@@ -37,7 +41,7 @@ export class ClickTrigger extends Trigger {
 			target: {
 				click: () => {
 					this.openWithoutDelay()
-				}
+				},
 			},
 			content: {
 				init: () => {
@@ -48,8 +52,8 @@ export class ClickTrigger extends Trigger {
 				},
 				destroy: () => {
 					outclick.destroy()
-				}
-			}
+				},
+			},
 		})
 	}
 
@@ -73,7 +77,7 @@ export class ClickTrigger extends Trigger {
 		}
 		return {
 			open: delay[0],
-			close: delay[1]
+			close: delay[1],
 		}
 	}
 }

@@ -18,9 +18,12 @@ export interface IPopoverOptions extends ComputeConfig {
 
 const events = (action: 'add' | 'remove', node: HTMLElement, handlers: Partial<PopoverEvents>) => {
 	if (!Object.keys(handlers).length) return
-	const methodMap = new Map<typeof action, Extract<keyof typeof node, 'addEventListener' | 'removeEventListener'>>([
+	const methodMap = new Map<
+		typeof action,
+		Extract<keyof typeof node, 'addEventListener' | 'removeEventListener'>
+	>([
 		['add', 'addEventListener'],
-		['remove', 'removeEventListener']
+		['remove', 'removeEventListener'],
 	])
 
 	const method = methodMap.get(action) || 'removeEventListener'
@@ -60,7 +63,7 @@ export const createPopoverActions = (options: IPopoverOptions) => {
 
 		return {
 			destroy,
-			update
+			update,
 		}
 	}
 
@@ -87,13 +90,13 @@ export const createPopoverActions = (options: IPopoverOptions) => {
 
 		return {
 			destroy,
-			update
+			update,
 		}
 	}
 
 	return {
 		targetAction,
 		contentAction,
-		update
+		update,
 	}
 }

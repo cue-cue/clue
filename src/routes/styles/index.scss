@@ -6,7 +6,15 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: var(--clue-font-family);
-	background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--dot-color);
+	background: linear-gradient(
+				90deg,
+				var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+				transparent 1%
+			)
+			center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
+			center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
 }
 
 html {

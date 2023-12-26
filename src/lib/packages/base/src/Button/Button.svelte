@@ -22,7 +22,23 @@
 	export let size: $$Props['size'] = undefined
 </script>
 
-<ButtonField class={generateClassNames(['Button', className])} tag={href ? 'a' : 'button'} {href} data-size={size} on:click on:dblclick on:mousedown on:mouseenter on:mouseleave on:mousemove on:mouseout on:mouseover on:mouseup on:contextmenu {...$$restProps}>
+<ButtonField
+	class={generateClassNames(['Button', className])}
+	tag={href ? 'a' : 'button'}
+	{href}
+	data-size={size}
+	on:click
+	on:dblclick
+	on:mousedown
+	on:mouseenter
+	on:mouseleave
+	on:mousemove
+	on:mouseout
+	on:mouseover
+	on:mouseup
+	on:contextmenu
+	{...$$restProps}
+>
 	{#if startIcon}
 		<ButtonIcon icon={startIcon} class={generateClassNames(['Button__icon_start'])} />
 	{/if}

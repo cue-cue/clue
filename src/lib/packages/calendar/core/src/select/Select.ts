@@ -28,7 +28,7 @@ export class Select {
 		range: false,
 		allowBetweenDays: false,
 		minTimeLength: undefined,
-		fixTimeLength: undefined
+		fixTimeLength: undefined,
 	}
 	#selectCount = 0
 
@@ -37,7 +37,7 @@ export class Select {
 		this.on = on
 		this.options = {
 			...this.#defOptions,
-			...options
+			...options,
 		}
 	}
 
@@ -66,7 +66,7 @@ export class Select {
 		this.options = {
 			...this.#defOptions,
 			...this.options,
-			...options
+			...options,
 		}
 	}
 
@@ -76,7 +76,7 @@ export class Select {
 		return {
 			isBetween,
 			isAllow,
-			isError: !isAllow && isBetween
+			isError: !isAllow && isBetween,
 		}
 	}
 
@@ -84,7 +84,7 @@ export class Select {
 		newSelected: Cell | undefined,
 		options?: {
 			disableMinTimeLength?: boolean
-		}
+		},
 	) {
 		if (!newSelected) return
 
@@ -97,7 +97,11 @@ export class Select {
 		if (this.fixTimeLength) {
 			to = dayjs(from).add(this.fixTimeLength, 'ms').toDate()
 		} else {
-			if (!options?.disableMinTimeLength && this.minTimeLength && duration < this.minTimeLength) {
+			if (
+				!options?.disableMinTimeLength &&
+				this.minTimeLength &&
+				duration < this.minTimeLength
+			) {
 				to = dayjs(to)
 					.add(this.minTimeLength - duration, 'ms')
 					.toDate()
@@ -124,7 +128,7 @@ export class Select {
 
 		return {
 			from,
-			to
+			to,
 		}
 	}
 
@@ -132,7 +136,7 @@ export class Select {
 		newSelected: Cell | undefined,
 		options?: Parameters<Select['setMiddleware']>[1] & {
 			force?: boolean //Ignore disabled
-		}
+		},
 	) {
 		const { force, ...middlewareOptions } = options || {}
 
@@ -159,7 +163,11 @@ export class Select {
 		if (from && +new Date(from) < +newSelected.from) newSelected.from = from
 		if (to && +new Date(to) > +newSelected.to) newSelected.to = to
 
-		const isDisallow = from && to && (this.calendar.isDisabled(newSelected).disabled || this.calendar.isBlockDisabled(newSelected).result)
+		const isDisallow =
+			from &&
+			to &&
+			(this.calendar.isDisabled(newSelected).disabled ||
+				this.calendar.isBlockDisabled(newSelected).result)
 		if (isDisallow) return { from, to }
 
 		return newSelected
@@ -170,15 +178,15 @@ export class Select {
 		const newSelected = this.pushMiddleware({ from, to })
 
 		const setResult = this.set(newSelected, {
-			disableMinTimeLength: true
+			disableMinTimeLength: true,
 		})
 
 		if (!setResult && from && to) {
 			this.set(
 				{ from, to },
 				{
-					disableMinTimeLength: true
-				}
+					disableMinTimeLength: true,
+				},
 			)
 		}
 	}
@@ -191,7 +199,7 @@ export class Select {
 		if (to && +new Date(to) < +newSelected.to) newSelected.to = to
 
 		this.set(newSelected, {
-			disableMinTimeLength: true
+			disableMinTimeLength: true,
 		})
 	}
 
@@ -202,7 +210,7 @@ export class Select {
 
 	getPosition<T extends boolean = boolean>({
 		from,
-		to
+		to,
 	}: Cell): T extends false
 		? undefined
 		: {
@@ -227,14 +235,14 @@ export class Select {
 			from: +from === +this.selected.from,
 			to: +to === +this.selected.to,
 			tail: +to === +this.selected.from,
-			head: +from === +this.selected.to
+			head: +from === +this.selected.to,
 		}
 
 		const isIn = {
 			from: +from >= +this.selected.from && +from <= +this.selected.to,
 			fromInset: +from > +this.selected.from && +from < +this.selected.to,
 			to: +to >= +this.selected.from && +to <= +this.selected.to,
-			toInset: +to > +this.selected.from && +to < +this.selected.to
+			toInset: +to > +this.selected.from && +to < +this.selected.to,
 		}
 
 		const isDouble = isEqual.from && isEqual.to
@@ -243,7 +251,7 @@ export class Select {
 
 		const betweenDays = this.#isBetweenDays({
 			from: new Date(Math.min(+this.selected.from, +from)),
-			to: new Date(Math.max(+this.selected.to, +to))
+			to: new Date(Math.max(+this.selected.to, +to)),
 		})
 
 		const isAnotherTime = Object.values({ ...isEqual, ...isIn }).every((v) => !v)
@@ -254,7 +262,7 @@ export class Select {
 			isDouble,
 			isInset,
 			isAnotherTime,
-			betweenDays
+			betweenDays,
 		}
 	}
 
@@ -274,13 +282,13 @@ export class Select {
 			 * Включает, либо отключает поведение options.range
 			 */
 			manualRange?: boolean
-		}
+		},
 	) {
 		const options: typeof _options = {
 			mode: 'single',
 			overload: false,
 			manualRange: false,
-			..._options
+			..._options,
 		}
 
 		if (!options.manualRange) {
@@ -309,10 +317,11 @@ export class Select {
 			this.set({
 				//Если пусто, то ставим "как есть"
 				from,
-				to
+				to,
 			})
 		} else {
-			const { isEqual, isIn, isDouble, isInset, betweenDays, isAnotherTime } = this.getPosition<true>({ from, to })
+			const { isEqual, isIn, isDouble, isInset, betweenDays, isAnotherTime } =
+				this.getPosition<true>({ from, to })
 			if (isDouble) {
 				//Если селекты равны, то сбрасываем значение
 				this.clear()
@@ -354,12 +363,12 @@ export class Select {
 					if (isEqual.from && isIn.to) {
 						//Если выбран крайний слот - обрезаем
 						this.shift({
-							from: to
+							from: to,
 						})
 					} else if (isEqual.to && isIn.from) {
 						//Если выбран крайний слот - обрезаем
 						this.shift({
-							to: from
+							to: from,
 						})
 					}
 				}

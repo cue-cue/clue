@@ -20,12 +20,20 @@ export class Block extends Cell {
 	private createDrift(driftData: IBlockParams['drift']) {
 		const { before, after } = driftData || {}
 
-		const beforeDate = before ? (before instanceof Date ? before : dayjs(this.from).add(-before, 'minutes').toDate()) : undefined
-		const afterDate = after ? (after instanceof Date ? after : dayjs(this.to).add(after, 'minutes').toDate()) : undefined
+		const beforeDate = before
+			? before instanceof Date
+				? before
+				: dayjs(this.from).add(-before, 'minutes').toDate()
+			: undefined
+		const afterDate = after
+			? after instanceof Date
+				? after
+				: dayjs(this.to).add(after, 'minutes').toDate()
+			: undefined
 
 		return {
 			before: beforeDate && new Cell({ from: beforeDate, to: this.from }),
-			after: afterDate && new Cell({ from: this.to, to: afterDate })
+			after: afterDate && new Cell({ from: this.to, to: afterDate }),
 		}
 	}
 
@@ -35,7 +43,7 @@ export class Block extends Cell {
 		if (!this.drift)
 			return new Cell({
 				from,
-				to
+				to,
 			})
 
 		if (this.drift.before && +from > +this.drift.before.from) {
@@ -48,7 +56,7 @@ export class Block extends Cell {
 
 		return new Cell({
 			from,
-			to
+			to,
 		})
 	}
 }

@@ -44,20 +44,20 @@
 				'default': var(--clue-color-primary),
 				'hover': var(--clue-color-primary-600),
 				'active': var(--clue-color-primary-700),
-				'disabled': var(--clue-color-gray-50)
+				'disabled': var(--clue-color-gray-50),
 			),
 			'color': (
 				'default': var(--clue-color-white),
 				'hover': var(--clue-color-white),
 				'active': var(--clue-color-white),
-				'disabled': var(--clue-color-gray-300)
+				'disabled': var(--clue-color-gray-300),
 			),
 			'border-color': (
 				'default': transparent,
 				'hover': transparent,
 				'active': transparent,
-				'disabled': transparent
-			)
+				'disabled': transparent,
+			),
 		)
 	);
 
@@ -68,20 +68,20 @@
 				'default': var(--clue-color-active),
 				'hover': var(--clue-color-active-600),
 				'active': var(--clue-color-active-700),
-				'disabled': var(--clue-button-field-background-color-disabled)
+				'disabled': var(--clue-button-field-background-color-disabled),
 			),
 			'color': (
 				'default': var(--clue-color-gray-900),
 				'hover': var(--clue-color-gray-900),
 				'active': var(--clue-color-gray-900),
-				'disabled': var(--clue-button-field-color-disabled)
+				'disabled': var(--clue-button-field-color-disabled),
 			),
 			'border-color': (
 				'default': transparent,
 				'hover': transparent,
 				'active': transparent,
-				'disabled': transparent
-			)
+				'disabled': transparent,
+			),
 		)
 	);
 
@@ -92,20 +92,20 @@
 				'default': var(--clue-color-primary-50),
 				'hover': var(--clue-color-primary-100),
 				'active': var(--clue-color-primary-200),
-				'disabled': var(--clue-button-field-background-color-disabled)
+				'disabled': var(--clue-button-field-background-color-disabled),
 			),
 			'color': (
 				'default': var(--clue-color-primary),
 				'hover': var(--clue-color-primary),
 				'active': var(--clue-color-primary),
-				'disabled': var(--clue-button-field-color-disabled)
+				'disabled': var(--clue-button-field-color-disabled),
 			),
 			'border-color': (
 				'default': transparent,
 				'hover': transparent,
 				'active': transparent,
-				'disabled': transparent
-			)
+				'disabled': transparent,
+			),
 		)
 	);
 
@@ -116,20 +116,20 @@
 				'default': transparent,
 				'hover': var(--clue-color-primary-50),
 				'active': var(--clue-color-primary-100),
-				'disabled': transparent
+				'disabled': transparent,
 			),
 			'color': (
 				'default': var(--clue-color-primary),
 				'hover': var(--clue-color-primary),
 				'active': var(--clue-color-primary),
-				'disabled': var(--clue-button-field-color-disabled)
+				'disabled': var(--clue-button-field-color-disabled),
 			),
 			'border-color': (
 				'default': transparent,
 				'hover': transparent,
 				'active': transparent,
-				'disabled': transparent
-			)
+				'disabled': transparent,
+			),
 		)
 	);
 
@@ -140,20 +140,20 @@
 				'default': transparent,
 				'hover': var(--clue-color-primary-50),
 				'active': var(--clue-color-primary-100),
-				'disabled': transparent
+				'disabled': transparent,
 			),
 			'color': (
 				'default': var(--clue-color-primary),
 				'hover': var(--clue-color-primary),
 				'active': var(--clue-color-primary),
-				'disabled': var(--clue-button-field-color-disabled)
+				'disabled': var(--clue-button-field-color-disabled),
 			),
 			'border-color': (
 				'default': var(--clue-color-primary-100),
 				'hover': var(--clue-color-primary-100),
 				'active': var(--clue-color-primary-100),
-				'disabled': transparent
-			)
+				'disabled': transparent,
+			),
 		)
 	);
 }

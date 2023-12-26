@@ -18,4 +18,16 @@
 	export let nodeElement: $$Props['nodeElement'] = undefined
 </script>
 
-<textarea bind:value bind:this={nodeElement} class={generateClassNames([className])} on:input on:change on:keydown on:keyup on:click on:focus on:blur {...$$restProps} />
+<textarea
+	bind:value
+	bind:this={nodeElement}
+	class={generateClassNames([className])}
+	on:input
+	on:change
+	on:keydown
+	on:keyup
+	on:click
+	on:focus
+	on:blur
+	{...$$restProps}
+/>

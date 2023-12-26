@@ -10,7 +10,7 @@ import { resolve } from 'path'
 const createAlias = (include: string[]) => {
 	const allPackages = globSync('./src/**/package.json').map((packagePath) => ({
 		...JSON.parse(readFileSync(packagePath, 'utf8')),
-		path: packagePath
+		path: packagePath,
 	})) as { name: string; path: string; main: string }[]
 
 	return Object.keys(dependencies).reduce<Alias[]>((val, dependencyName) => {
@@ -21,7 +21,7 @@ const createAlias = (include: string[]) => {
 			if (indexPath) {
 				val.push({
 					find: dependencyName,
-					replacement: resolve(indexPath)
+					replacement: resolve(indexPath),
 				})
 			}
 		}
@@ -32,12 +32,12 @@ const createAlias = (include: string[]) => {
 const buildSiteConfig = (): UserConfig => {
 	return {
 		resolve: {
-			alias: createAlias(['@cluue/calendar'])
-		}
+			alias: createAlias(['@cluue/calendar']),
+		},
 	}
 }
 
 export default defineConfig({
 	plugins: [sveltekit(), clueIconsPlugin()],
-	...(env.npm_lifecycle_event === 'build:site' ? buildSiteConfig() : {})
+	...(env.npm_lifecycle_event === 'build:site' ? buildSiteConfig() : {}),
 })

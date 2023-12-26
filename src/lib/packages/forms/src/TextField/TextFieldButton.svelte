@@ -33,14 +33,14 @@
 					margin-left: ${eased * marginLeft}px;
 				`
 				return res
-			}
+			},
 		}
 	}
 
 	const iconSizeMap = new Map<typeof $textFieldBaseContextStore.size, number>([
 		['small', 20],
 		['medium', 24],
-		[undefined, 24]
+		[undefined, 24],
 	])
 
 	const textFieldBaseContextStore = textFieldBaseContext.get() || writable({})
@@ -60,8 +60,16 @@
 	})
 </script>
 
-<button on:click class={generateClassNames(['TextFieldButton', className])} transition:transitionFunction>
-	<Icon {icon} width={width ?? iconSizeMap.get($textFieldBaseContextStore.size)} {...$$restProps} />
+<button
+	on:click
+	class={generateClassNames(['TextFieldButton', className])}
+	transition:transitionFunction
+>
+	<Icon
+		{icon}
+		width={width ?? iconSizeMap.get($textFieldBaseContextStore.size)}
+		{...$$restProps}
+	/>
 </button>
 
 <style lang="sass">

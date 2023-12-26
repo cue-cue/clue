@@ -21,7 +21,7 @@
 		},
 		closeAll(instanceId: Instance['id']) {
 			instances.forEach(({ setOpen, id }) => id !== instanceId && setOpen(false))
-		}
+		},
 	}
 </script>
 
@@ -91,7 +91,7 @@
 		clear() {
 			dispatch('searchClear')
 			searchValue = ''
-		}
+		},
 	}
 
 	const inputController = {
@@ -111,7 +111,7 @@
 		eventCallback(callback: VoidFunction) {
 			if (this.eventsLocked) return
 			return callback()
-		}
+		},
 	}
 
 	const openHandler = {
@@ -135,7 +135,7 @@
 		},
 		toggle() {
 			dispatch('toggle')
-		}
+		},
 	}
 
 	export const setOpen = (_open: typeof open) => {
@@ -194,13 +194,13 @@
 					}
 				}
 			}
-		}
+		},
 	}
 
 	onMount(() => {
 		instancesController.add({
 			id,
-			setOpen
+			setOpen,
 		})
 	})
 
@@ -219,8 +219,8 @@
 	use={[
 		...(use || []),
 		createAction('outclick', outclick, {
-			handler: handler.outclick
-		})
+			handler: handler.outclick,
+		}),
 	]}
 	{disabled}
 	bind:nodeElement={baseNodeElement}
@@ -229,13 +229,23 @@
 	{...$$restProps}
 >
 	{#if searched}
-		<Input placeholder={value} {disabled} {id} bind:value={searchValue} bind:nodeElement={searchInputElement} />
+		<Input
+			placeholder={value}
+			{disabled}
+			{id}
+			bind:value={searchValue}
+			bind:nodeElement={searchInputElement}
+		/>
 	{:else}
 		<Input readonly {disabled} {id} bind:value on:focus={handler.focus} />
 	{/if}
 	<svelte:fragment slot="buttons">
 		{#if !disabled}
-			<TextFieldButton {icon} on:click={handler.arrowClick} reverse={open ? 'y' : undefined} />
+			<TextFieldButton
+				{icon}
+				on:click={handler.arrowClick}
+				reverse={open ? 'y' : undefined}
+			/>
 		{/if}
 		{#if searchValue?.length || (allowClear && value)}
 			<TextFieldButton icon={clearIcon} width={20} on:click={handler.clearClick} />

@@ -52,8 +52,8 @@ export const hexToHSL: ColorTransferHSL = (hex: string) => {
 		data: {
 			h,
 			s,
-			l
+			l,
 		},
-		color: `hsl(${String(h)}, ${String(s)}%, ${String(l)}%)`
+		color: `hsl(${String(h)}, ${String(s)}%, ${String(l)}%)`,
 	}
 }

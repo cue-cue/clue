@@ -15,7 +15,7 @@ export class Trigger {
 		events: {
 			open?: VoidFunction
 			close?: VoidFunction
-		}
+		},
 	) {
 		this.elements = elements
 		this.events = events
@@ -65,16 +65,19 @@ export class TriggerCombinator {
 			return val
 		}, {})
 
-		return Object.entries(res).reduce<TriggerCombinator['handlers']>((val, [_name, handlers]) => {
-			const name = _name as keyof typeof val
-			Object.entries(handlers).forEach(([eventName, handlers]) => {
-				if (!val[name]) {
-					val[name] = {}
-				}
-				//@ts-ignore
-				val[name][eventName] = (e) => handlers.forEach((handler) => handler(e))
-			})
-			return val
-		}, {})
+		return Object.entries(res).reduce<TriggerCombinator['handlers']>(
+			(val, [_name, handlers]) => {
+				const name = _name as keyof typeof val
+				Object.entries(handlers).forEach(([eventName, handlers]) => {
+					if (!val[name]) {
+						val[name] = {}
+					}
+					//@ts-ignore
+					val[name][eventName] = (e) => handlers.forEach((handler) => handler(e))
+				})
+				return val
+			},
+			{},
+		)
 	}
 }

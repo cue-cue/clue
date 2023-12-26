@@ -18,7 +18,7 @@
 	export { className as class }
 
 	const {
-		store: { navigator, options }
+		store: { navigator, options },
 	} = new CalendarContext().get()
 
 	const isActiveDate = derived(navigator, ($navigator) => {
@@ -31,7 +31,7 @@
 	const handler = {
 		dayClick(date: Date) {
 			navigator.setDate(date)
-		}
+		},
 	}
 </script>
 
@@ -40,7 +40,13 @@
 	{#if $options.time}
 		<div transition:slide={$config.transition}>
 			<DaysList rows={1} date={$navigator.date} normalize={false} let:date let:isExclude>
-				<Cell {date} active={$isActiveDate(date)} ghost={isExclude} type={isToday(date) ? 'negative' : undefined} on:click={() => handler.dayClick(date)} />
+				<Cell
+					{date}
+					active={$isActiveDate(date)}
+					ghost={isExclude}
+					type={isToday(date) ? 'negative' : undefined}
+					on:click={() => handler.dayClick(date)}
+				/>
 			</DaysList>
 		</div>
 	{/if}

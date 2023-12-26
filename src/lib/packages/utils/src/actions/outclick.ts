@@ -6,7 +6,10 @@ type OutclickParams = {
 	handler?: VoidFunction
 }
 
-export const outclick = (node: HTMLElement, _params?: OutclickParams): ActionReturn<OutclickParams> => {
+export const outclick = (
+	node: HTMLElement,
+	_params?: OutclickParams,
+): ActionReturn<OutclickParams> => {
 	let params = _params
 	const handleClick = (event: MouseEvent) => {
 		const target = event.target as HTMLElement
@@ -24,6 +27,6 @@ export const outclick = (node: HTMLElement, _params?: OutclickParams): ActionRet
 		},
 		destroy() {
 			document.removeEventListener('click', handleClick, true)
-		}
+		},
 	}
 }

@@ -6,12 +6,12 @@ const config = {
 	compilerOptions: {
 		cssHash: (t) => {
 			return `clue-${t.hash(t.css + t.name + t.filename)}`
-		}
+		},
 	},
 	preprocess: [vitePreprocess()],
 	kit: {
-		adapter: adapter()
-	}
+		adapter: adapter(),
+	},
 }
 
 export default config

@@ -16,9 +16,14 @@
 	export let size: $$Props['size'] = undefined
 
 	const textFieldBaseContextStore = textFieldBaseContext.get()
-	const textFieldButtonsContextStore = textFieldButtonsContext.set(writable({ count: 0, mounted: false }))
+	const textFieldButtonsContextStore = textFieldButtonsContext.set(
+		writable({ count: 0, mounted: false }),
+	)
 
-	$: isHidden = autoHide && $textFieldButtonsContextStore.count <= 0 && $textFieldButtonsContextStore.mounted
+	$: isHidden =
+		autoHide &&
+		$textFieldButtonsContextStore.count <= 0 &&
+		$textFieldButtonsContextStore.mounted
 
 	$: if (textFieldBaseContextStore) {
 		size = $textFieldBaseContextStore.size
@@ -27,7 +32,11 @@
 	onMount(() => ($textFieldButtonsContextStore.mounted = true))
 </script>
 
-<div class={generateClassNames(['TextFieldButtons', className])} data-hidden={isHidden} data-size={size}>
+<div
+	class={generateClassNames(['TextFieldButtons', className])}
+	data-hidden={isHidden}
+	data-size={size}
+>
 	<slot />
 </div>
 

@@ -35,7 +35,7 @@
 	class={generateClassNames(['Switch', className])}
 	slots={{
 		label: $$slots.default,
-		desc: $$slots.desc
+		desc: $$slots.desc,
 	}}
 >
 	<SwitchBase {disabled} {value} bind:checked bind:group bind:id {name} {...$$restProps} />

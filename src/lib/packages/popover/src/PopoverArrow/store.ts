@@ -10,6 +10,6 @@ export type PopoverArrowStore = Writable<PopoverArrowStoreData>
 export const createPopoverArrowStore = (): PopoverArrowStore => {
 	return writable<PopoverArrowStoreData>({
 		styles: {},
-		element: writable(undefined)
+		element: writable(undefined),
 	})
 }

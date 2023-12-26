@@ -29,7 +29,7 @@
 	const handler = {
 		changeClick() {
 			toggle()
-		}
+		},
 	}
 </script>
 
@@ -37,7 +37,10 @@
 	<svelte:fragment slot="base">
 		<TextFieldBase type={visible ? 'text' : 'password'} {...$$restProps}>
 			<svelte:fragment slot="buttons">
-				<TextFieldButton icon={visible ? icon : iconClosed} on:click={handler.changeClick} />
+				<TextFieldButton
+					icon={visible ? icon : iconClosed}
+					on:click={handler.changeClick}
+				/>
 			</svelte:fragment>
 		</TextFieldBase>
 	</svelte:fragment>

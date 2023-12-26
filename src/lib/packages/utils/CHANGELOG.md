@@ -1,5 +1,13 @@
 # @cluue/utils
 
+## 1.0.17
+
+### Patch Changes
+
+-   Refactor and Perf
+-   Updated dependencies
+    -   @cluue/config@1.0.16
+
 ## 1.0.16
 
 ### Patch Changes

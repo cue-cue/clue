@@ -16,7 +16,7 @@
 @mixin button-size-vars($map, $name: '') {
 	$root: get-root(
 		(
-			'size': $name
+			'size': $name,
 		)
 	);
 
@@ -35,7 +35,7 @@
 	$root: get-root();
 	$sizeRoot: get-root(
 		(
-			'size': $size
+			'size': $size,
 		)
 	);
 	#{$root}-padding-x: #{'var(#{$sizeRoot}-padding-x)'};
@@ -69,7 +69,7 @@
 			'border-radius': #{'var(#{$root}-border-radius)'},
 			'font-size': 14px,
 			'gap': #{'var(#{$root}-gap)'},
-			'icon-size': 20px
+			'icon-size': 20px,
 		),
 		'small'
 	);
@@ -81,7 +81,7 @@
 			'border-radius': #{'var(#{$root}-border-radius)'},
 			'font-size': #{'var(#{$root}-font-size)'},
 			'gap': #{'var(#{$root}-gap)'},
-			'icon-size': #{'var(#{$root}-icon-size)'}
+			'icon-size': #{'var(#{$root}-icon-size)'},
 		),
 		'large'
 	);

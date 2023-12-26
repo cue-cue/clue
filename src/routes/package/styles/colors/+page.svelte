@@ -14,7 +14,7 @@
 			return {
 				color,
 				value,
-				cssVar: `--clue-color-${color}-${value}`
+				cssVar: `--clue-color-${color}-${value}`,
 			}
 		})
 	}
@@ -31,7 +31,7 @@
 			return {
 				value,
 				hsl,
-				hex: Color.hslToHEX(hsl).color
+				hex: Color.hslToHEX(hsl).color,
 			}
 		})
 	}
@@ -41,7 +41,9 @@
 			get(cssVar: string) {
 				if (browser) {
 					const bodyColor = getComputedStyle(document.body).getPropertyValue(cssVar)
-					const color = bodyColor || getComputedStyle(document.documentElement).getPropertyValue(cssVar)
+					const color =
+						bodyColor ||
+						getComputedStyle(document.documentElement).getPropertyValue(cssVar)
 					let hsl = ''
 					let hex = ''
 					if (color.includes('hsl(')) {
@@ -53,11 +55,11 @@
 					}
 					return {
 						hsl,
-						hex
+						hex,
 					}
 				}
 				return undefined
-			}
+			},
 		}
 	})
 
@@ -84,7 +86,7 @@
 			},
 			destroy() {
 				node.removeEventListener('click', handleClick)
-			}
+			},
 		}
 	}
 
@@ -94,7 +96,14 @@
 
 <h2>Colors</h2>
 <div class="custom-color" style:--color={customHSLResult.color}>
-	<label class="color-picker" style={`box-shadow: ${customColor.toLowerCase() === '#ffffff' ? '0 0 0 5px var(--clue-color-primary-100)' : 'none'}`}>
+	<label
+		class="color-picker"
+		style={`box-shadow: ${
+			customColor.toLowerCase() === '#ffffff'
+				? '0 0 0 5px var(--clue-color-primary-100)'
+				: 'none'
+		}`}
+	>
 		<Icon icon={customColorIcon} />
 		<input type="color" bind:value={customColor} />
 		<span>{customColor}</span>

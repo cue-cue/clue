@@ -7,7 +7,11 @@ export interface IHoverTriggerOptions {
 
 export class HoverTrigger extends Trigger {
 	options
-	constructor(elements: Trigger['elements'], events: Trigger['events'], options?: IHoverTriggerOptions) {
+	constructor(
+		elements: Trigger['elements'],
+		events: Trigger['events'],
+		options?: IHoverTriggerOptions,
+	) {
 		super(elements, events)
 		this.options = options
 		this.setHandlers({
@@ -25,7 +29,7 @@ export class HoverTrigger extends Trigger {
 							this.closeWithDelay()
 						}
 					}
-				}
+				},
 			},
 			content: {
 				mouseenter: () => {
@@ -41,8 +45,8 @@ export class HoverTrigger extends Trigger {
 							this.closeWithDelay()
 						}
 					}
-				}
-			}
+				},
+			},
 		})
 	}
 
@@ -69,7 +73,7 @@ export class HoverTrigger extends Trigger {
 		}
 		return {
 			open: delay[0],
-			close: delay[1]
+			close: delay[1],
 		}
 	}
 }

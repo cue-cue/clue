@@ -14,7 +14,11 @@
 	export let disabled: $$Props['disabled'] = false
 </script>
 
-<div class={generateClassNames(['TextFieldHelper', className])} data-disabled={disabled} data-error={error}>
+<div
+	class={generateClassNames(['TextFieldHelper', className])}
+	data-disabled={disabled}
+	data-error={error}
+>
 	{#if error}
 		<Icon width={16} icon={errorIcon} />
 	{/if}

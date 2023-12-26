@@ -16,7 +16,7 @@ const paths = {
 	importsFileDirectory: `src/lib/packages/icons/src/icons`,
 	mainType: `src/lib/packages/icons/src/types/index.ts`,
 	moduleType: `src/lib/packages/icons/src/types/module.d.ts`,
-	iconsList: `src/routes/package/icons/iconsList.ts`
+	iconsList: `src/routes/package/icons/iconsList.ts`,
 }
 
 class Icon extends SvgSpriteIcon {
@@ -75,9 +75,12 @@ const replaceColor = (icons: IconGroups) => {
 		.flat()
 		.forEach((icon) => {
 			const svg = readFileSync(icon.path, {
-				encoding: 'utf8'
+				encoding: 'utf8',
 			})
-			writeFileSync(icon.path, svg.replace(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`))
+			writeFileSync(
+				icon.path,
+				svg.replace(/(?<=<path\b[^<>]*)\s*\bfill=(["']).*?\1/g, ` fill="currentColor"`),
+			)
 		})
 }
 
@@ -86,7 +89,10 @@ const replaceFileNames = (icons: IconGroups) => {
 		.flat()
 		.forEach((icon) => {
 			const oldPath = icon.path
-			const newPath = oldPath.replace(`${icon.fileName}.svg`, `${icon.name}.svg`.toLowerCase())
+			const newPath = oldPath.replace(
+				`${icon.fileName}.svg`,
+				`${icon.name}.svg`.toLowerCase(),
+			)
 			renameSync(oldPath, newPath)
 		})
 }
@@ -97,7 +103,7 @@ const addExportsInPackageJson = (icons: IconGroups) => {
 
 	const exports = {
 		'.': packageJson.exports['.'],
-		'./plugin': packageJson.exports['./plugin']
+		'./plugin': packageJson.exports['./plugin'],
 	} as typeof packageJson.exports
 
 	Object.keys(icons).forEach((group) => {
@@ -105,7 +111,7 @@ const addExportsInPackageJson = (icons: IconGroups) => {
 		exports[`./${group}/*`] = {
 			import: `./src/assets/${group}/*`,
 			svelte: `./src/assets/${group}/*`,
-			types: './svg/types/module.d.ts'
+			types: './svg/types/module.d.ts',
 		}
 	})
 
@@ -121,9 +127,15 @@ const genTypes = {
 		const groupsType = this.genGroups(icons).type
 		const namesType = this.genNames(icons).type
 
-		let newFile = file.replace(/(?<=\/\/IconGroups-template)([\s\S]+?)(?=\/\/IconGroups-template)/gi, `\n${tab}${groupsType.replace('\n', `\n${tab}`).replace('}', `${tab}}`)}\n${tab}`)
+		let newFile = file.replace(
+			/(?<=\/\/IconGroups-template)([\s\S]+?)(?=\/\/IconGroups-template)/gi,
+			`\n${tab}${groupsType.replace('\n', `\n${tab}`).replace('}', `${tab}}`)}\n${tab}`,
+		)
 		if (namesType) {
-			newFile = newFile.replace(/(?<=\/\/IconNames-template)([\s\S]+?)(?=\/\/IconNames-template)/gi, `\n${tab}${namesType}\n${tab}`)
+			newFile = newFile.replace(
+				/(?<=\/\/IconNames-template)([\s\S]+?)(?=\/\/IconNames-template)/gi,
+				`\n${tab}${namesType}\n${tab}`,
+			)
 		}
 
 		return newFile
@@ -146,7 +158,10 @@ const genTypes = {
 		})
 		return {
 			groups: res,
-			type: `type IconGroups = ${JSON.stringify(res, null, 2).replace(new RegExp('"', 'gi'), '')}`
+			type: `type IconGroups = ${JSON.stringify(res, null, 2).replace(
+				new RegExp('"', 'gi'),
+				'',
+			)}`,
 		}
 	},
 	genNames(icons: IconGroups) {
@@ -156,9 +171,9 @@ const genTypes = {
 		})
 		return {
 			names: res,
-			type: `type IconNames<T extends string = 'clue-'> = ${res.join(' | ')}`
+			type: `type IconNames<T extends string = 'clue-'> = ${res.join(' | ')}`,
 		}
-	}
+	},
 }
 
 const createGetAllIconsInRoutes = (icons: IconGroups) => {
@@ -171,7 +186,8 @@ const createGetAllIconsInRoutes = (icons: IconGroups) => {
 			const name = getName(icon)
 			return `import * as _${name} from '@cluue/icons/${icon.group}/${icon.name}.svg'\nconst ${name} = _${name} as unknown as ClueSvgIconData\n`
 		},
-		export: (icons: Icon[]) => `export {\n${icons.map((icon) => `\t${getName(icon)}`).join(',\n')}\n}`
+		export: (icons: Icon[]) =>
+			`export {\n${icons.map((icon) => `\t${getName(icon)}`).join(',\n')}\n}`,
 	}
 
 	let res = `import type { ClueSvgIconData } from '@cluue/icons'\n`
@@ -193,7 +209,7 @@ const optimizeIcons = (icons: IconGroups) => {
 		.forEach((icon) => {
 			const res = optimize(readFileSync(icon.path, 'utf8'), {
 				path: icon.path,
-				multipass: true
+				multipass: true,
 			})
 			writeFileSync(icon.path, res.data)
 		})
@@ -204,7 +220,7 @@ const init = () => {
 	console.log(
 		`Start createIcons (length:${Object.entries(icons)
 			.map(([group, icons]) => `${group}: ${icons.length}`)
-			.join(' | ')})`
+			.join(' | ')})`,
 	)
 	replaceFileNames(icons)
 	icons = getAllIcons()

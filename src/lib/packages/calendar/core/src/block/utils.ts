@@ -9,7 +9,7 @@ export type AddToCellList = <T extends Block[], U extends Cell[]>(
 	cells: U,
 	options?: {
 		driftReplacer: (data: { cell: Cell }) => Cell
-	}
+	},
 ) => Array<T[number] | U[number]>
 
 export const addToCellList: AddToCellList = (blocks, cells, options) => {
@@ -35,7 +35,7 @@ export const addToCellList: AddToCellList = (blocks, cells, options) => {
 
 		return {
 			before: beforeClone,
-			after: afterClone
+			after: afterClone,
 		}
 	})
 

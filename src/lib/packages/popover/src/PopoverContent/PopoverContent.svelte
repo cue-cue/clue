@@ -8,7 +8,9 @@
 	import type { HTMLAttributes } from 'svelte/elements'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement>, Partial<Record<`data-${string}`, string>> {
+	interface $$Props
+		extends HTMLAttributes<HTMLDivElement>,
+			Partial<Record<`data-${string}`, string>> {
 		class?: string
 		popoverAction?: ReturnType<typeof createPopoverActions>['contentAction']
 	}
@@ -25,28 +27,29 @@
 		switch (direction) {
 			case 'top':
 				return {
-					y: space
+					y: space,
 				}
 			case 'bottom':
 				return {
-					y: -space
+					y: -space,
 				}
 			case 'left':
 				return {
-					x: space
+					x: space,
 				}
 			case 'right':
 				return {
-					x: -space
+					x: -space,
 				}
 		}
 	}
 
 	$: action = (node: HTMLElement) => {
-		const { destroy, update } = (contextStore ? $contextStore.contentAction : popoverAction)?.(node) || {}
+		const { destroy, update } =
+			(contextStore ? $contextStore.contentAction : popoverAction)?.(node) || {}
 		return {
 			destroy,
-			update
+			update,
 		}
 	}
 </script>
@@ -56,7 +59,7 @@
 	use:action
 	transition:fly={{
 		duration: $config.transition.duration,
-		...getTransitionParams(contextStore && $contextStore.placement)
+		...getTransitionParams(contextStore && $contextStore.placement),
 	}}
 	{...$$restProps}
 >

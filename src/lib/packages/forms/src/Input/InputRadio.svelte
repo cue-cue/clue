@@ -17,4 +17,21 @@
 	checked = false
 </script>
 
-<input class={generateClassNames(['InputRadio', className])} type="radio" bind:group on:keyup on:keydown on:keypress on:focus on:blur on:click on:mouseover on:mouseenter on:mouseleave on:paste on:change {value} {...$$restProps} />
+<input
+	class={generateClassNames(['InputRadio', className])}
+	type="radio"
+	bind:group
+	on:keyup
+	on:keydown
+	on:keypress
+	on:focus
+	on:blur
+	on:click
+	on:mouseover
+	on:mouseenter
+	on:mouseleave
+	on:paste
+	on:change
+	{value}
+	{...$$restProps}
+/>

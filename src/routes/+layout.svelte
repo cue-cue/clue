@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '$lib/packages/styles/src/index.scss'
+	import colorGeneratorScss from '$lib/packages/styles/src/generators/color.scss?raw'
 	import './styles/index.scss'
 	import { Button } from '@cluue/base'
 	import packageBaseIcon from '@cluue/icons/line/eye.svg?clue'
@@ -32,24 +33,24 @@
 				{
 					name: 'Button',
 					href: '/package/base/button',
-					startIcon: buttonIcon
+					startIcon: buttonIcon,
 				},
 				{
 					name: 'Tooltip',
 					href: '/package/base/tooltip',
-					startIcon: tooltipIcon
-				}
-			]
+					startIcon: tooltipIcon,
+				},
+			],
 		},
 		{
 			name: 'Icons',
 			href: '/package/icons',
-			startIcon: iconsIcon
+			startIcon: iconsIcon,
 		},
 		{
 			name: 'Colors',
 			href: '/package/styles/colors',
-			startIcon: packageColorsIcon
+			startIcon: packageColorsIcon,
 		},
 		{
 			name: 'Forms',
@@ -58,24 +59,24 @@
 				{
 					name: 'TextField',
 					href: '/package/forms/text-field',
-					startIcon: textFieldIcon
+					startIcon: textFieldIcon,
 				},
 				{
 					name: 'Select',
 					href: '/package/forms/select',
-					startIcon: selectIcon
+					startIcon: selectIcon,
 				},
 				{
 					name: 'Checkbox',
 					href: '/package/forms/checkbox',
-					startIcon: checkboxIcon
-				}
-			]
+					startIcon: checkboxIcon,
+				},
+			],
 		},
 		{
 			name: 'Popover',
 			href: '/package/popover',
-			startIcon: popoverIcon
+			startIcon: popoverIcon,
 		},
 		{
 			name: 'Calendar',
@@ -85,38 +86,14 @@
 				{
 					name: 'Core',
 					href: '/package/calendar/core',
-					startIcon: calendarCoreIcon
-				}
-			]
-		}
+					startIcon: calendarCoreIcon,
+				},
+			],
+		},
 	]
 
 	const loadColorsInStyles = () => {
 		if (!browser) return
-		const colorGeneratorScss = `
-			@use 'sass:color';
-			@use 'sass:math';
-
-			@function get-color-by-value($color, $value: 500) {
-				$percent: math.div(500 - $value, 1000);
-				$colorResult: color.adjust($color, $lightness: math.percentage($percent));
-
-				$colorString: '#{math.round(color.hue($colorResult))}, #{math.round(color.saturation($colorResult))}, #{math.round(color.lightness($colorResult))}';
-				@return $colorString;
-			}
-
-			@mixin color-generator($name, $color) {
-				$root: '--clue-color-#{$name}';
-				$lightnessList: 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 990;
-				@each $lightnessValue in $lightnessList {
-					$hslValue: get-color-by-value($color, $lightnessValue);
-					$colorString: 'hsl(#{$hslValue})';
-					#{$root}-#{$lightnessValue}-hsl: #{$hslValue};
-					#{$root}-#{$lightnessValue}: #{$colorString};
-				}
-				#{$root}: #{'var(#{$root}-500)'}
-			}
-		`
 		const scss = `
 			${colorGeneratorScss}
             body[clue-custom] {
@@ -141,7 +118,9 @@
 		Object.keys($colorsStore).forEach((colorKey) => {
 			const color = rootStyles.getPropertyValue(`--clue-color-${colorKey}`)
 			const isHSL = color.includes('hsl(')
-			$colorsStore[colorKey] = isHSL ? Color.hslToHEX(rootStyles.getPropertyValue(`--clue-color-${colorKey}`)).color : color
+			$colorsStore[colorKey] = isHSL
+				? Color.hslToHEX(rootStyles.getPropertyValue(`--clue-color-${colorKey}`)).color
+				: color
 		})
 	})
 
@@ -169,13 +148,26 @@
         {/each} -->
 		{#each packages as { name, pages, ...packageItem } (name)}
 			<Tooltip placement="bottom-start" theme="light" arrow={false} disabled={!pages?.length}>
-				<Button {...packageItem} size="small" type={packageItem.href && $page.url.pathname.startsWith(packageItem.href) ? 'primary' : 'ghost'}>{name}</Button>
+				<Button
+					{...packageItem}
+					size="small"
+					type={packageItem.href && $page.url.pathname.startsWith(packageItem.href)
+						? 'primary'
+						: 'ghost'}>{name}</Button
+				>
 				<svelte:fragment slot="content">
 					{#if pages?.length}
 						<ul>
 							{#each pages as { name, ...pageItem } (name)}
 								<li>
-									<Button size="small" type={pageItem.href && $page.url.pathname.startsWith(pageItem.href) ? 'primary' : 'ghost'} {...pageItem}>
+									<Button
+										size="small"
+										type={pageItem.href &&
+										$page.url.pathname.startsWith(pageItem.href)
+											? 'primary'
+											: 'ghost'}
+										{...pageItem}
+									>
 										{name}
 									</Button>
 								</li>

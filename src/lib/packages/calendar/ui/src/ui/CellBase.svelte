@@ -21,7 +21,20 @@
 	export let range: $$Props['range'] = undefined
 </script>
 
-<button class={generateClassNames(['CalendarCellBase', className])} {disabled} data-ghost={ghost} data-active={active} data-type={type} data-variant={variant} data-range-start={range?.start} data-range-start-of-week={range?.startOfWeek} data-range-in={range?.in} data-range-end={range?.end} data-range-end-of-week={range?.endOfWeek} on:click>
+<button
+	class={generateClassNames(['CalendarCellBase', className])}
+	{disabled}
+	data-ghost={ghost}
+	data-active={active}
+	data-type={type}
+	data-variant={variant}
+	data-range-start={range?.start}
+	data-range-start-of-week={range?.startOfWeek}
+	data-range-in={range?.in}
+	data-range-end={range?.end}
+	data-range-end-of-week={range?.endOfWeek}
+	on:click
+>
 	<slot />
 </button>
 
@@ -40,7 +53,7 @@
 		--calendar-cell-base-color-hover:  var(--clue-color-gray-700)
 		--calendar-cell-base-color-active-hover: var(--clue-color-white)
 		--calendar-cell-base-color-active: var(--clue-color-white)
-		--calendar-cell-base-color-disabled: var(--clue-color-gray-700)
+		--calendar-cell-base-color-disabled: var(--clue-color-gray-300)
 		--calendar-cell-base-color-ghost: var(--clue-color-gray-200)
 
 		--calendar-cell-base-border-color: transparent
@@ -65,6 +78,8 @@
 		--background-color: var(--calendar-cell-base-background-color)
 		--border-color: var(--calendar-cell-base-border-color)
 		--color: var(--calendar-cell-base-color)
+
+		--space: calc(var(--gap-x) / 2)
 
 		position: relative
 		isolation: isolate
@@ -132,8 +147,8 @@
 			&[data-range-start='true']
 				&:not([data-range-end-of-week='true'])
 					&::before
-						right: -6px
-						width: calc(100% + 6px)
+						right: calc(var(--space) * -1)
+						width: calc(100% + var(--space))
 				&::before
 					border-top-right-radius: 0px
 					border-bottom-right-radius: 0px
@@ -141,8 +156,8 @@
 			&[data-range-end='true']
 				&:not([data-range-start-of-week='true'])
 					&::before
-						left: -6px
-						width: calc(100% + 6px)
+						left: calc(var(--space) * -1)
+						width: calc(100% + var(--space))
 				&::before
 					border-top-left-radius: 0px
 					border-bottom-left-radius: 0px
@@ -151,18 +166,18 @@
 			--color: var(--calendar-cell-base-color)
 			--background-color: var(--calendar-cell-base-background-color-disabled)
 			&::before
-				left: -6px
-				width: calc(100% + 12px)
+				left: calc(var(--space) * -1)
+				width: calc(100% + calc(var(--space) * 2))
 			&[data-range-start-of-week='true']
 				&::before
 					left: 0
-					right: -6px
-					width: calc(100% + 6px)
+					right: calc(var(--space) * -1)
+					width: calc(100% + var(--space))
 			&[data-range-end-of-week='true']
 				&::before
 					right: 0
-					left: -6px
-					width: calc(100% + 6px)
+					left: calc(var(--space) * -1)
+					width: calc(100% + var(--space))
 		&::before
 			content: ''
 			display: block

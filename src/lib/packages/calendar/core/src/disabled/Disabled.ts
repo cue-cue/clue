@@ -30,7 +30,9 @@ export class Disabled {
 
 	static merge = mergeDisabled
 
-	#genAvailability(value: IDisabledParams['availability']): Required<Exclude<typeof value, undefined>> {
+	#genAvailability(
+		value: IDisabledParams['availability'],
+	): Required<Exclude<typeof value, undefined>> {
 		let { occupied, free, total = 0 } = value || {}
 
 		if (total < 0) total = 0
@@ -48,7 +50,7 @@ export class Disabled {
 		return {
 			total,
 			occupied,
-			free
+			free,
 		}
 	}
 
@@ -57,10 +59,12 @@ export class Disabled {
 	}
 
 	parseInclude() {
-		const [from, to] = this.include ? (this.include.split('') as ['(' | '[' | undefined, ']' | ')' | undefined]) : []
+		const [from, to] = this.include
+			? (this.include.split('') as ['(' | '[' | undefined, ']' | ')' | undefined])
+			: []
 		return {
 			from,
-			to
+			to,
 		}
 	}
 
@@ -124,9 +128,9 @@ export class Disabled {
 			date,
 			checker = {
 				from: this.from!,
-				to: this.to!
+				to: this.to!,
 			},
-			includeCheck = true
+			includeCheck = true,
 		}: {
 			date: Date | string
 			checker?: {
@@ -136,31 +140,34 @@ export class Disabled {
 			includeCheck?: boolean
 		}) => {
 			date = new Date(date)
-			return this.check(date, checker.from, '>', includeCheck) && this.check(date, checker.to, '<', includeCheck)
+			return (
+				this.check(date, checker.from, '>', includeCheck) &&
+				this.check(date, checker.to, '<', includeCheck)
+			)
 		}
 
 		if (cellOrDate instanceof Date) {
 			return _isBetween({
-				date: cellOrDate
+				date: cellOrDate,
 			})
 		} else {
 			const include = // Слоты входят в заблокированное пространство
 				_isBetween({
-					date: cellOrDate.from
+					date: cellOrDate.from,
 				}) &&
 				_isBetween({
-					date: cellOrDate.to
+					date: cellOrDate.to,
 				})
 			const disableInclude = // Заблокированное пространство входит в слоты
 				_isBetween({
 					date: this.from,
 					checker: cellOrDate,
-					includeCheck: false
+					includeCheck: false,
 				}) ||
 				_isBetween({
 					date: this.to,
 					checker: cellOrDate,
-					includeCheck: false
+					includeCheck: false,
 				})
 			return include || disableInclude
 		}
@@ -170,11 +177,11 @@ export class Disabled {
 		cellOrDate: Cell | Date,
 		_options?: {
 			checkAvailability?: boolean
-		}
+		},
 	): boolean {
 		const options: Required<typeof _options> = {
 			checkAvailability: true,
-			..._options
+			..._options,
 		}
 
 		if (options.checkAvailability && this.availability?.free > 0) return false

@@ -1,29 +1,41 @@
 <script lang="ts">
 	import { Button } from '@cluue/base'
 	import { Popover } from '@cluue/popover'
-	import type { ComponentProps } from 'svelte'
+	import dayjs from 'dayjs'
+	import { onMount, type ComponentProps, onDestroy } from 'svelte'
 
 	const items: Array<ComponentProps<Popover> & { id: string }> = [
 		{
-			id: 'Base'
+			id: 'Base',
 		},
 		{
 			id: 'Placement: top',
-			placement: 'top'
+			placement: 'top',
 		},
 		{
 			id: 'Placement: bottom',
-			placement: 'bottom'
+			placement: 'bottom',
 		},
 		{
 			id: 'Placement: right',
-			placement: 'right'
+			placement: 'right',
 		},
 		{
 			id: 'Placement: left',
-			placement: 'left'
-		}
+			placement: 'left',
+		},
 	]
+
+	let currentDate = new Date()
+	$: time = dayjs(currentDate).format('HH:mm:ss')
+
+	let interval: ReturnType<typeof setInterval>
+	onMount(() => {
+		interval = setInterval(() => (currentDate = new Date()), 1000)
+	})
+	onDestroy(() => {
+		clearInterval(interval)
+	})
 </script>
 
 <h2>Popover</h2>
@@ -33,12 +45,12 @@
 			<h3>{id}</h3>
 			<pre>{JSON.stringify(item)}</pre>
 			<Popover {...item}>
-				<Button>Popover</Button>
+				<Button>Popover{time}</Button>
 				<svelte:fragment slot="content">
 					<Popover {...item}>
-						<Button size="small">Hovvvver me 💜</Button>
+						<Button size="small">Hovvvver me 💜{time}</Button>
 						<svelte:fragment slot="content">
-							<Button size="small">Cuuue💜</Button>
+							<Button size="small">Cuuue💜{time}</Button>
 						</svelte:fragment>
 					</Popover>
 				</svelte:fragment>
@@ -53,12 +65,12 @@
 			<h3>{id}</h3>
 			<pre>{JSON.stringify(item)}</pre>
 			<Popover trigger={'click'} {...item}>
-				<Button>Popover</Button>
+				<Button>Popover{time}</Button>
 				<svelte:fragment slot="content">
 					<Popover trigger={'click'} {...item}>
-						<Button size="small">Hovvvver me 💜</Button>
+						<Button size="small">Hovvvver me 💜{time}</Button>
 						<svelte:fragment slot="content">
-							<Button size="small">Cuuue💜</Button>
+							<Button size="small">Cuuue💜{time}</Button>
 						</svelte:fragment>
 					</Popover>
 				</svelte:fragment>

@@ -15,11 +15,11 @@
 	export { className as class }
 
 	const {
-		store: { navigator, options, isDisabled, calendar, ...store }
+		store: { navigator, options, isDisabled, calendar, ...store },
 	} = new CalendarContext().get()
 
 	$: cellList = calendar.createCellList({
-		date: $navigator.date
+		date: $navigator.date,
 	})
 
 	const handler = {
@@ -27,9 +27,9 @@
 			store.select(cell, {
 				mode: event.shiftKey ? 'range' : 'single',
 				manualRange: true,
-				overload: !$options.range
+				overload: !$options.range,
 			})
-		}
+		},
 	}
 
 	const isActive = derived(store, () => {
@@ -39,8 +39,18 @@
 	})
 </script>
 
-<GridRow class={generateClassNames(['CalendarTime', className])} gap="medium" columns={`repeat(auto-fit, minmax(55px, 1fr))`}>
+<GridRow
+	class={generateClassNames(['CalendarTime', className])}
+	gap="medium"
+	columns={`repeat(auto-fit, minmax(55px, 1fr))`}
+>
 	{#each cellList.cells as cell (+cell.from)}
-		<Cell date={cell.from} disabled={$isDisabled(cell).disabled} variant="time" active={$isActive(cell)} on:click={(e) => handler.cellClick(e, cell)} />
+		<Cell
+			date={cell.from}
+			disabled={$isDisabled(cell).disabled}
+			variant="time"
+			active={$isActive(cell)}
+			on:click={(e) => handler.cellClick(e, cell)}
+		/>
 	{/each}
 </GridRow>

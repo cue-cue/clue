@@ -30,19 +30,22 @@ export interface ICalendarStoreOptionsEvents<TRange extends boolean> {
 	update: (data: ICalendarStoreOptionsData<TRange>) => void
 }
 
-export const createCalendarOptionsStore = <TRange extends boolean = boolean>(data?: ICalendarStoreOptionsData<TRange>, on?: Partial<ICalendarStoreOptionsEvents<TRange>>) => {
+export const createCalendarOptionsStore = <TRange extends boolean = boolean>(
+	data?: ICalendarStoreOptionsData<TRange>,
+	on?: Partial<ICalendarStoreOptionsEvents<TRange>>,
+) => {
 	const defaultData: ICalendarStoreOptionsData = {
 		range: false,
 		time: false,
 		min: dayjs().year(1900).startOf('year').toDate(),
 		max: dayjs().add(201, 'year').endOf('year').toDate(),
 		select: {
-			allowBetweenDays: true
+			allowBetweenDays: true,
 		},
 		formats: {
 			month: 'MMMM',
-			year: 'YYYY'
-		}
+			year: 'YYYY',
+		},
 	}
 
 	const storeData = {
@@ -53,9 +56,9 @@ export const createCalendarOptionsStore = <TRange extends boolean = boolean>(dat
 			return {
 				result: min || max,
 				min,
-				max
+				max,
 			}
-		}
+		},
 	} as ICalendarStoreOptionsReactiveMethods & typeof data
 
 	const { update: updateStore, subscribe } = writable(storeData)
@@ -70,6 +73,6 @@ export const createCalendarOptionsStore = <TRange extends boolean = boolean>(dat
 
 	return {
 		subscribe,
-		update
+		update,
 	}
 }

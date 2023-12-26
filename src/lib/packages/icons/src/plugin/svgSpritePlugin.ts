@@ -38,7 +38,8 @@ const replaceCode = (code: string, path: string, pluginOptions: Options) => {
 	}
 
 	const symbolId = pluginOptions?.symbolId?.replace('[name]', icon.name) || ''
-	const newSymbolId = pluginOptions?.symbolId?.replace('[name]', `${icon.group}-${icon.name}`) || ''
+	const newSymbolId =
+		pluginOptions?.symbolId?.replace('[name]', `${icon.group}-${icon.name}`) || ''
 
 	if (symbolId && newSymbolId) {
 		newCode = newCode.replaceAll(symbolId, newSymbolId)
@@ -48,21 +49,31 @@ const replaceCode = (code: string, path: string, pluginOptions: Options) => {
 }
 
 export const svgSpritePlugin = (options?: Options): Plugin => {
-	const include: Exclude<typeof options, undefined>['include'] = ['**/node_modules/**/@clue/icons/**/assets/**/*.svg', ...(options?.include ? [options?.include].flat() : ['**/*.svg'])]
+	const include: Exclude<typeof options, undefined>['include'] = [
+		'**/node_modules/**/@clue/icons/**/assets/**/*.svg',
+		...(options?.include ? [options?.include].flat() : ['**/*.svg']),
+	]
 
 	const resolvedOptions: Options = {
 		symbolId: 'clue-[name]',
 		...options,
-		include
+		include,
 	}
 
 	const { transform: defaultTransform, ...defaultPlugin } = createSvgSpritePlugin(resolvedOptions)
 	const transform: Plugin['transform'] = async (src, filepath) => {
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		//@ts-ignore
-		const defaultTransformRes: TransformResult = await defaultTransform?.(src, filepath.replace('.svg?clue', '.svg'))
+		const defaultTransformRes: TransformResult = await defaultTransform?.(
+			src,
+			filepath.replace('.svg?clue', '.svg'),
+		)
 		if (defaultTransformRes) {
-			defaultTransformRes.code = replaceCode(defaultTransformRes.code, filepath, resolvedOptions)
+			defaultTransformRes.code = replaceCode(
+				defaultTransformRes.code,
+				filepath,
+				resolvedOptions,
+			)
 		}
 
 		return defaultTransformRes
@@ -73,6 +84,6 @@ export const svgSpritePlugin = (options?: Options): Plugin => {
 	return {
 		...defaultPlugin,
 		transform,
-		name: 'clue-icons-plugin'
+		name: 'clue-icons-plugin',
 	}
 }

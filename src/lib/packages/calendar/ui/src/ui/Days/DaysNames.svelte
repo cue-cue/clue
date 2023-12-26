@@ -13,7 +13,7 @@
 	export { className as class }
 
 	const {
-		store: { options, navigator }
+		store: { options, navigator },
 	} = new CalendarContext().get()
 
 	$: dateList = [1, 2, 3, 4, 5, 6, 7].map((day) => {
@@ -23,16 +23,20 @@
 		}
 		return {
 			date: date.day(day),
-			day
+			day,
 		}
 	})
 </script>
 
-<GridRow tag="ul" class={generateClassNames(['CalendarDaysNames', className])} columns={`repeat(${dateList.length}, 1fr)`}>
+<GridRow
+	tag="ul"
+	class={generateClassNames(['CalendarDaysNames', className])}
+	columns={`repeat(${dateList.length}, 1fr)`}
+>
 	{#each dateList as { date, day } (day)}
 		<li
 			data-today={isToday(date.toDate(), {
-				anyWeek: !$options.time
+				anyWeek: !$options.time,
 			})}
 		>
 			{date.format('dd')}

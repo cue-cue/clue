@@ -1,5 +1,14 @@
 # @cluue/popover
 
+## 1.0.23
+
+### Patch Changes
+
+-   Refactor and Perf
+-   Updated dependencies
+    -   @cluue/config@1.0.16
+    -   @cluue/utils@1.0.17
+
 ## 1.0.22
 
 ### Patch Changes

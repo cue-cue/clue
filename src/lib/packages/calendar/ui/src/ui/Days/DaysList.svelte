@@ -33,15 +33,18 @@
 
 	$: cellList = new CellList({
 		date: getStartDate(date, {
-			normalize
+			normalize,
 		}),
 		step: 1,
 		end: cols * rows,
-		unitType: 'day'
+		unitType: 'day',
 	})
 </script>
 
-<GridRow class={generateClassNames(['CalendarDaysList', className])} columns={`repeat(${cols}, 1fr)`}>
+<GridRow
+	class={generateClassNames(['CalendarDaysList', className])}
+	columns={`repeat(${cols}, 1fr)`}
+>
 	{#each cellList.cells as cell (+cell.from)}
 		<slot {cell} {rows} {cols} date={cell.from} isExclude={isExclude(cell.from)} />
 	{/each}

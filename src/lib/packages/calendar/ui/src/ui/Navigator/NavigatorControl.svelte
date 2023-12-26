@@ -17,7 +17,14 @@
 	export let hidden: $$Props['hidden'] = undefined
 </script>
 
-<button class={generateClassNames(['CalendarNavigatorControl', className])} data-hidden={hidden} data-active={active} data-size={size} transition:fade={$config.transition} on:click>
+<button
+	class={generateClassNames(['CalendarNavigatorControl', className])}
+	data-hidden={hidden}
+	data-active={active}
+	data-size={size}
+	transition:fade={$config.transition}
+	on:click
+>
 	<slot />
 </button>
 

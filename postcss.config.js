@@ -1,7 +1,7 @@
 import autoprefixer from 'autoprefixer'
 
 const config = {
-	plugins: [autoprefixer()]
+	plugins: [autoprefixer()],
 }
 
 export default config

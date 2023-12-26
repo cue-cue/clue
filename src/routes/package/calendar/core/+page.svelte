@@ -11,8 +11,8 @@
 		new Period({
 			days: [0, 1, 2, 3, 4, 5, 6],
 			start: 30 * 6,
-			end: 30 * 12
-		})
+			end: 30 * 12,
+		}),
 		// new Period({
 		//     days: [0,1,2,3],
 		//     start: 30 * 18,
@@ -39,23 +39,23 @@
 		{
 			days: ['Sa'],
 			start: 480,
-			end: 1080
+			end: 1080,
 		},
 		{
 			days: ['Fr'],
 			start: 900,
-			end: 1425
+			end: 1425,
 		},
 		{
 			days: ['Th', 'We'],
 			start: 195,
-			end: 1260
+			end: 1260,
 		},
 		{
 			days: ['Mo', 'Tu'],
 			start: 90,
-			end: 1380
-		}
+			end: 1380,
+		},
 	].map((data) => new Period(data))
 
 	const calendar = new Calendar({
@@ -69,18 +69,18 @@
 			new Block({
 				drift: {
 					before: 60,
-					after: 60
+					after: 60,
 				},
 				from: dayjs().startOf('day').add(4, 'hours').toDate(),
-				to: dayjs().startOf('day').add(6, 'hours').toDate()
+				to: dayjs().startOf('day').add(6, 'hours').toDate(),
 			}),
 			new Block({
 				drift: {
 					before: 60,
-					after: 60
+					after: 60,
 				},
 				from: dayjs().startOf('day').add(7, 'hours').toDate(),
-				to: dayjs().startOf('day').add(10, 'hours').toDate()
+				to: dayjs().startOf('day').add(10, 'hours').toDate(),
 			}),
 			// new Block({
 			// 	from: dayjs().startOf('day').add(8, 'hours').toDate(),
@@ -92,9 +92,9 @@
 			// }),
 			new Block({
 				from: dayjs().startOf('day').add(1, 'day').add(1, 'hours').toDate(),
-				to: dayjs().startOf('day').add(1, 'day').add(66, 'hours').toDate()
-			})
-		]
+				to: dayjs().startOf('day').add(1, 'day').add(66, 'hours').toDate(),
+			}),
+		],
 		// periods: periods
 		// disabled: [
 		//     new Disabled({
@@ -109,13 +109,13 @@
 		on: {
 			set(value) {
 				selected = value
-			}
+			},
 		},
 		options: {
-			allowBetweenDays: true
+			allowBetweenDays: true,
 			// minTimeLength: 60,
 			// fixTimeLength: 120
-		}
+		},
 	})
 
 	const onClick = () => {
@@ -127,7 +127,7 @@
 	const onCellClick = (event: MouseEvent, cell: Cell) => {
 		console.log(cell, calendar, calendar.isDisabled(cell))
 		select.select(cell, {
-			mode: event.shiftKey ? 'range' : 'single'
+			mode: event.shiftKey ? 'range' : 'single',
 		})
 	}
 
@@ -159,7 +159,8 @@
 							type={calendar.isBlockDisabled(cell).result ? 'primary' : 'ghost'}
 						>
 							<small>{getAllMinutesByDate(cell.from)}</small>
-							{dayjs(cell.from).format('HH:mm')} - <small>{getAllMinutesByDate(cell.to)}</small>
+							{dayjs(cell.from).format('HH:mm')} -
+							<small>{getAllMinutesByDate(cell.to)}</small>
 							{dayjs(cell.to).format('HH:mm')}
 						</Button>
 					</li>

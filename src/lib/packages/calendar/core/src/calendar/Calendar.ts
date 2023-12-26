@@ -29,7 +29,15 @@ export class Calendar<T extends Block[] = Block[]> {
 	blocks!: T
 	#blocksDisabledList!: DisabledList
 
-	constructor({ disabled = [], step = 5, timezone, deadLine, deadLineOptions, periods = [], blocks }: ICalendarParams<T> = {}) {
+	constructor({
+		disabled = [],
+		step = 5,
+		timezone,
+		deadLine,
+		deadLineOptions,
+		periods = [],
+		blocks,
+	}: ICalendarParams<T> = {}) {
 		this.step = step
 		this.deadLine = deadLine
 		this.timezone = timezone
@@ -41,7 +49,9 @@ export class Calendar<T extends Block[] = Block[]> {
 
 	setBlocks(blocks: ICalendarParams<T>['blocks']) {
 		this.blocks = blocks || ([] as unknown as T)
-		this.#blocksDisabledList = new DisabledList(this.blocks.map((block) => block.getCellWithDrift()))
+		this.#blocksDisabledList = new DisabledList(
+			this.blocks.map((block) => block.getCellWithDrift()),
+		)
 		return this.blocks
 	}
 
@@ -66,7 +76,7 @@ export class Calendar<T extends Block[] = Block[]> {
 		return new CellList({
 			step: this.step,
 			periods: this.periods,
-			...data
+			...data,
 		})
 	}
 
@@ -87,7 +97,7 @@ export class Calendar<T extends Block[] = Block[]> {
 			case 'current': {
 				const disabled = new Disabled({
 					to: this.getDeadLineDate(),
-					include: this.deadLineOptions?.include || '[]'
+					include: this.deadLineOptions?.include || '[]',
 				})
 				if (this.deadLineOptions?.lazy && !(cellOrDate instanceof Date)) {
 					return disabled.isDisabled(cellOrDate.to)
@@ -115,7 +125,8 @@ export class Calendar<T extends Block[] = Block[]> {
 		const blockItem = blockResult.item
 
 		const periodDisabled = this.isPeriodDisabled(cellOrDate)
-		const disabled = deadLine || disabledListResult.result || periodDisabled || blockResult.result
+		const disabled =
+			deadLine || disabledListResult.result || periodDisabled || blockResult.result
 		return {
 			disabled,
 			deadLine,
@@ -128,7 +139,7 @@ export class Calendar<T extends Block[] = Block[]> {
 			blockItem,
 			block: blockResult.result,
 
-			periodDisabled
+			periodDisabled,
 		}
 	}
 }

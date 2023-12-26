@@ -7,14 +7,14 @@ type MergeDisabled<T = Disabled[]> = (
 	calendar: Calendar,
 	options?: {
 		minLength?: number
-	}
+	},
 ) => T
 
 export const mergeDisabled: MergeDisabled = (disabledArray, cells, calendar, options) => {
 	const add: typeof disabledArray = []
 	const _options: Required<typeof options> = {
 		minLength: 0,
-		...options
+		...options,
 	}
 	let bubble: Cell | undefined = undefined
 	let isNew = true

@@ -4,7 +4,9 @@
 	import InputTextareaElement from './InputTextareaElement.svelte'
 	import InputElement from './InputElement.svelte'
 
-	interface $$Props extends Omit<ComponentProps<InputElement>, 'maxlength' | 'rows'>, Pick<ComponentProps<InputTextareaElement>, 'maxlength' | 'rows'> {
+	interface $$Props
+		extends Omit<ComponentProps<InputElement>, 'maxlength' | 'rows'>,
+			Pick<ComponentProps<InputTextareaElement>, 'maxlength' | 'rows'> {
 		class?: string
 		multiline?: boolean
 	}
@@ -16,9 +18,12 @@
 	export let multiline: $$Props['multiline'] = false
 	export let nodeElement: $$Props['nodeElement'] = undefined
 
-	const elementsMap = new Map<typeof multiline, typeof InputElement | typeof InputTextareaElement>([
+	const elementsMap = new Map<
+		typeof multiline,
+		typeof InputElement | typeof InputTextareaElement
+	>([
 		[false, InputElement],
-		[true, InputTextareaElement]
+		[true, InputTextareaElement],
 	])
 
 	export const set = (newValue: typeof value) => {
@@ -34,7 +39,20 @@
 	}
 </script>
 
-<svelte:component this={elementsMap.get(multiline)} bind:nodeElement class={generateClassNames(['Input', className])} on:input on:change on:keydown on:keyup on:click on:focus on:blur bind:value {...$$restProps} />
+<svelte:component
+	this={elementsMap.get(multiline)}
+	bind:nodeElement
+	class={generateClassNames(['Input', className])}
+	on:input
+	on:change
+	on:keydown
+	on:keyup
+	on:click
+	on:focus
+	on:blur
+	bind:value
+	{...$$restProps}
+/>
 
 <style lang="sass">
     :global(.ClueInput)

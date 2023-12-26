@@ -52,7 +52,7 @@ export const hslToHEX: ColorTransferHEX = (hsl: string) => {
 	const colorData = {
 		r: Math.round((r + m) * 255).toString(16),
 		g: Math.round((g + m) * 255).toString(16),
-		b: Math.round((b + m) * 255).toString(16)
+		b: Math.round((b + m) * 255).toString(16),
 	}
 
 	Object.entries(colorData).forEach(([key, value]) => {
@@ -63,6 +63,6 @@ export const hslToHEX: ColorTransferHEX = (hsl: string) => {
 
 	return {
 		data: colorData,
-		color: `#${colorData.r}${colorData.g}${colorData.b}`
+		color: `#${colorData.r}${colorData.g}${colorData.b}`,
 	}
 }

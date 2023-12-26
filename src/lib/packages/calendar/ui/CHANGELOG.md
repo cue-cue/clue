@@ -1,5 +1,17 @@
 # @cluue/calendar
 
+## 2.0.9
+
+### Patch Changes
+
+-   Refactor and Perf
+-   Updated dependencies
+    -   @cluue/calendar-core@1.0.42
+    -   @cluue/popover@1.0.23
+    -   @cluue/config@1.0.16
+    -   @cluue/forms@2.0.8
+    -   @cluue/icons@2.0.8
+
 ## 2.0.8
 
 ### Patch Changes

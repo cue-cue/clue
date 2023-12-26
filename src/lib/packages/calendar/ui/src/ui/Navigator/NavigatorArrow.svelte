@@ -15,7 +15,12 @@
 	export let type: $$Props['type'] = 'prev'
 </script>
 
-<NavigatorControl class={generateClassNames(['CalendarNavigatorArrow', className])} size="small" {...$$restProps} on:click>
+<NavigatorControl
+	class={generateClassNames(['CalendarNavigatorArrow', className])}
+	size="small"
+	{...$$restProps}
+	on:click
+>
 	<Icon width={20} icon={arrowIcon} reverse={type === 'next' ? 'x' : undefined} />
 </NavigatorControl>
 

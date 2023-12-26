@@ -7,7 +7,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-01T07:00:00.000Z',
-				to: '2023-12-01T10:00:00.000Z'
+				to: '2023-12-01T10:00:00.000Z',
 			},
 			caption: '₽5 300',
 			content: 'Светлана Клепова',
@@ -69,7 +69,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -78,7 +78,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -87,7 +87,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -96,8 +96,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -121,7 +121,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -132,16 +133,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -167,72 +176,120 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1380',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '480',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '480',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1380',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1380',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '480',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '480',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1380',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
+														unimportantTarget: true,
 													},
 													{
 														action: 'from',
@@ -242,72 +299,120 @@ export const BLOCKS = [
 															{
 																amount: '1900',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 5,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 1,
-														unimportantTarget: true
+														unimportantTarget: true,
 													},
 													{
 														action: 'from',
@@ -317,94 +422,158 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -429,7 +598,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 15,
@@ -442,7 +611,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 16,
@@ -455,7 +624,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 21,
@@ -468,7 +637,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 22,
@@ -481,7 +650,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 25,
@@ -494,7 +663,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 27,
@@ -507,7 +676,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 30,
@@ -520,7 +689,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 31,
@@ -533,7 +702,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 32,
@@ -546,7 +715,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 35,
@@ -559,7 +728,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 36,
@@ -572,7 +741,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 37,
@@ -585,7 +754,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 38,
@@ -598,7 +767,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 120,
@@ -611,7 +780,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 393,
@@ -624,7 +793,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 125,
@@ -637,7 +806,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 39,
@@ -650,7 +819,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 33,
@@ -663,7 +832,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 29,
@@ -676,7 +845,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 28,
@@ -689,7 +858,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 18,
@@ -702,7 +871,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 20,
@@ -715,7 +884,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 34,
@@ -728,7 +897,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 176,
@@ -741,7 +910,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 26,
@@ -754,7 +923,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 1660,
@@ -767,7 +936,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 19,
@@ -780,7 +949,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 1767,
@@ -793,7 +962,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 23,
@@ -806,13 +975,13 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
-													}
+														customerCanView: true,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -846,7 +1015,8 @@ export const BLOCKS = [
 														prepayment: 'main',
 														timeLength: 0,
 														copyVersion: 1,
-														description: 'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
+														description:
+															'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
 														paymentType: 'time',
 														sortPosition: 34,
 														breakIsEnable: false,
@@ -867,12 +1037,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -893,7 +1063,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -904,7 +1074,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3481534780',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/pNosWK8F',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/pNosWK8F',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -915,8 +1086,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-07T19:25:23.259Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 1197,
@@ -931,21 +1102,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -959,10 +1133,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -1011,7 +1185,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -1019,10 +1201,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -1030,10 +1220,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -1041,10 +1239,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -1052,10 +1258,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -1063,10 +1277,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -1074,10 +1296,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -1085,10 +1315,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -1096,13 +1334,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -1112,10 +1350,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -1129,8 +1370,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -1152,17 +1393,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'f616642d-a7af-4e1f-b7b8-2814a15690c3'
+		id: 'f616642d-a7af-4e1f-b7b8-2814a15690c3',
 	},
 	{
 		from: '2023-11-27T07:00:00.000Z',
@@ -1172,7 +1413,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-27T07:00:00.000Z',
-				to: '2023-11-27T08:00:00.000Z'
+				to: '2023-11-27T08:00:00.000Z',
 			},
 			caption: '₽3 300',
 			content: 'Елизавета  Асташина ',
@@ -1234,7 +1475,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -1243,7 +1484,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -1252,7 +1493,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -1261,8 +1502,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -1286,7 +1527,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -1297,16 +1539,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -1332,95 +1582,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -1447,7 +1761,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -1461,7 +1775,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -1475,7 +1789,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -1489,7 +1803,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -1503,7 +1817,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -1517,7 +1831,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -1531,7 +1845,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -1545,7 +1859,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -1559,7 +1873,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -1573,7 +1887,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -1587,7 +1901,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -1601,7 +1915,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -1615,7 +1929,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -1629,7 +1943,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -1643,7 +1957,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -1657,7 +1971,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -1671,7 +1985,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -1685,7 +1999,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -1699,7 +2013,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -1713,7 +2027,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -1727,7 +2041,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -1741,7 +2055,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -1755,7 +2069,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -1769,7 +2083,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -1783,7 +2097,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -1797,7 +2111,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -1811,7 +2125,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -1825,7 +2139,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -1839,7 +2153,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -1853,13 +2167,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -1883,8 +2197,8 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												},
 												{
 													id: 27769,
@@ -1906,8 +2220,8 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												},
 												{
 													id: 27767,
@@ -1929,12 +2243,12 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
-												}
+														startTimeOffset: 0,
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -1955,7 +2269,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -1966,7 +2280,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3561555659',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/76iCojnD',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/76iCojnD',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -1977,7 +2292,7 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-24T20:50:34.244Z',
-											deletedAt: null
+											deletedAt: null,
 										},
 										{
 											id: 52779,
@@ -1998,8 +2313,8 @@ export const BLOCKS = [
 											method: 'terminal',
 											type: 'additional',
 											created: '2023-11-27T09:05:12.457Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 19566,
@@ -2014,21 +2329,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -2042,10 +2360,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -2094,7 +2412,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -2102,10 +2428,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -2113,10 +2447,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -2124,10 +2466,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -2135,10 +2485,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -2146,10 +2504,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -2157,10 +2523,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -2168,10 +2542,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -2179,13 +2561,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -2195,10 +2577,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -2212,8 +2597,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -2235,17 +2620,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'b75fb83e-f7e5-48f1-b222-00d550c2f180'
+		id: 'b75fb83e-f7e5-48f1-b222-00d550c2f180',
 	},
 	{
 		from: '2023-12-03T05:00:00.000Z',
@@ -2255,7 +2640,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-03T05:00:00.000Z',
-				to: '2023-12-03T10:00:00.000Z'
+				to: '2023-12-03T10:00:00.000Z',
 			},
 			caption: '₽14 500',
 			content: 'Елена  Нор ',
@@ -2317,7 +2702,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -2326,7 +2711,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -2335,7 +2720,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -2344,8 +2729,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -2369,7 +2754,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -2380,16 +2766,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -2415,95 +2809,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -2530,7 +2988,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 15,
@@ -2544,7 +3002,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -2558,7 +3016,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -2572,7 +3030,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -2586,7 +3044,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -2600,7 +3058,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -2614,7 +3072,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -2628,7 +3086,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -2642,7 +3100,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -2656,7 +3114,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -2670,7 +3128,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -2684,7 +3142,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 37,
@@ -2698,7 +3156,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -2712,7 +3170,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -2726,7 +3184,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -2740,7 +3198,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -2754,7 +3212,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -2768,7 +3226,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -2782,7 +3240,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -2796,7 +3254,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -2810,7 +3268,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -2824,7 +3282,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -2838,7 +3296,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -2852,7 +3310,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -2866,7 +3324,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -2880,7 +3338,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -2894,7 +3352,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -2908,7 +3366,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -2922,7 +3380,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -2936,13 +3394,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -2998,8 +3456,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 26432,
@@ -3053,8 +3511,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 26433,
@@ -3108,12 +3566,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -3134,7 +3592,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -3145,7 +3603,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3532459212',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/e3CSm5dG',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/e3CSm5dG',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -3156,8 +3615,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-18T14:23:55.283Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 17169,
@@ -3172,21 +3631,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -3200,10 +3662,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -3252,7 +3714,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -3260,10 +3730,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -3271,10 +3749,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -3282,10 +3768,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -3293,10 +3787,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -3304,10 +3806,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -3315,10 +3825,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -3326,10 +3844,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -3337,13 +3863,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -3353,10 +3879,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -3370,8 +3899,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -3393,17 +3922,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '89ad3556-09a5-4284-885d-b8be57e39323'
+		id: '89ad3556-09a5-4284-885d-b8be57e39323',
 	},
 	{
 		from: '2023-11-29T14:00:00.000Z',
@@ -3413,7 +3942,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-29T14:00:00.000Z',
-				to: '2023-11-29T16:00:00.000Z'
+				to: '2023-11-29T16:00:00.000Z',
 			},
 			caption: '₽4 200',
 			content: 'Алиса Кузнецова ',
@@ -3475,7 +4004,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -3484,7 +4013,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -3493,7 +4022,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -3502,8 +4031,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -3527,7 +4056,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -3538,16 +4068,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -3573,95 +4111,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -3688,7 +4290,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -3702,7 +4304,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -3716,7 +4318,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -3730,7 +4332,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -3744,7 +4346,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -3758,7 +4360,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -3772,7 +4374,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -3786,7 +4388,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -3800,7 +4402,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -3814,7 +4416,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -3828,7 +4430,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -3842,7 +4444,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -3856,7 +4458,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -3870,7 +4472,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -3884,7 +4486,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -3898,7 +4500,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -3912,7 +4514,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -3926,7 +4528,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -3940,7 +4542,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -3954,7 +4556,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -3968,7 +4570,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -3982,7 +4584,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -3996,7 +4598,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -4010,7 +4612,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -4024,7 +4626,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -4038,7 +4640,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -4052,7 +4654,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -4066,7 +4668,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -4080,13 +4682,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -4120,7 +4722,8 @@ export const BLOCKS = [
 														prepayment: 'main',
 														timeLength: 0,
 														copyVersion: 1,
-														description: 'Маски Гобо предоставляются бесплатно. Они прекрасно работают с постоянными источниками света или с прямым солнечным светом.',
+														description:
+															'Маски Гобо предоставляются бесплатно. Они прекрасно работают с постоянными источниками света или с прямым солнечным светом.',
 														paymentType: 'piece',
 														sortPosition: 24,
 														breakIsEnable: false,
@@ -4142,8 +4745,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 26677,
@@ -4197,8 +4800,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 26678,
@@ -4252,8 +4855,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 26679,
@@ -4307,12 +4910,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -4333,7 +4936,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -4344,7 +4947,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3538086906',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/wirwJJig',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/wirwJJig',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -4355,8 +4959,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-19T21:07:16.006Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 4289,
@@ -4371,21 +4975,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'alisakuznetsovva'
-													}
-												}
-											]
-										}
+														username: 'alisakuznetsovva',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -4399,10 +5006,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -4451,7 +5058,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -4459,10 +5074,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -4470,10 +5093,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -4481,10 +5112,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -4492,10 +5131,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -4503,10 +5150,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -4514,10 +5169,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -4525,10 +5188,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -4536,13 +5207,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -4552,10 +5223,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -4569,8 +5243,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -4592,17 +5266,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'bd9c7ae5-9ec6-4971-9682-f97a4c3c8f82'
+		id: 'bd9c7ae5-9ec6-4971-9682-f97a4c3c8f82',
 	},
 	{
 		from: '2023-12-04T05:00:00.000Z',
@@ -4612,7 +5286,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-04T05:00:00.000Z',
-				to: '2023-12-04T11:00:00.000Z'
+				to: '2023-12-04T11:00:00.000Z',
 			},
 			caption: '₽9 950',
 			content: 'Анастасия Терехова',
@@ -4632,7 +5306,8 @@ export const BLOCKS = [
 							orders: [
 								{
 									id: 57780,
-									comment: 'Фотодень с доберманом (с Администратором согласовано) \n',
+									comment:
+										'Фотодень с доберманом (с Администратором согласовано) \n',
 									price: '9950',
 									orderSource: 'subclient',
 									sale: 0,
@@ -4674,7 +5349,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -4683,7 +5358,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -4692,7 +5367,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -4701,8 +5376,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -4726,7 +5401,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -4737,16 +5413,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -4772,95 +5456,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -4887,7 +5635,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -4901,7 +5649,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -4915,7 +5663,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -4929,7 +5677,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -4943,7 +5691,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -4957,7 +5705,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -4971,7 +5719,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -4985,7 +5733,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -4999,7 +5747,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -5013,7 +5761,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -5027,7 +5775,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -5041,7 +5789,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -5055,7 +5803,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -5069,7 +5817,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -5083,7 +5831,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -5097,7 +5845,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -5111,7 +5859,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -5125,7 +5873,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -5139,7 +5887,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -5153,7 +5901,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -5167,7 +5915,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -5181,7 +5929,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -5195,7 +5943,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -5209,7 +5957,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -5223,7 +5971,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -5237,7 +5985,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -5251,7 +5999,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -5265,7 +6013,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -5279,13 +6027,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -5341,12 +6089,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -5367,7 +6115,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -5378,7 +6126,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3540498048',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/FgFkYE2T',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/FgFkYE2T',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -5389,8 +6138,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-20T11:24:48.729Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 15576,
@@ -5405,22 +6154,25 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'terekhova_anastasiaa'
+														username: 'terekhova_anastasiaa',
 													},
-													jsId: '1700899726486'
-												}
-											]
-										}
+													jsId: '1700899726486',
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -5434,10 +6186,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -5486,7 +6238,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -5494,10 +6254,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -5505,10 +6273,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -5516,10 +6292,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -5527,10 +6311,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -5538,10 +6330,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -5549,10 +6349,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -5560,10 +6368,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -5571,13 +6387,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -5587,10 +6403,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -5604,8 +6423,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -5627,17 +6446,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '97f2334b-a4c8-4c78-95ff-2160149a0424'
+		id: '97f2334b-a4c8-4c78-95ff-2160149a0424',
 	},
 	{
 		from: '2023-11-29T06:00:00.000Z',
@@ -5647,7 +6466,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-29T06:00:00.000Z',
-				to: '2023-11-29T09:00:00.000Z'
+				to: '2023-11-29T09:00:00.000Z',
 			},
 			caption: '₽6 700',
 			content: 'Яна Хомуха',
@@ -5709,7 +6528,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -5718,7 +6537,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -5727,7 +6546,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -5736,8 +6555,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -5761,7 +6580,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -5772,16 +6592,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -5807,95 +6635,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -5922,7 +6814,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -5936,7 +6828,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -5950,7 +6842,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -5964,7 +6856,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -5978,7 +6870,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -5992,7 +6884,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -6006,7 +6898,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -6020,7 +6912,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -6034,7 +6926,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -6048,7 +6940,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -6062,7 +6954,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -6076,7 +6968,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -6090,7 +6982,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -6104,7 +6996,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -6118,7 +7010,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -6132,7 +7024,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -6146,7 +7038,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -6160,7 +7052,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -6174,7 +7066,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -6188,7 +7080,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -6202,7 +7094,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -6216,7 +7108,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -6230,7 +7122,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -6244,7 +7136,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -6258,7 +7150,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -6272,7 +7164,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -6286,7 +7178,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -6300,7 +7192,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -6314,7 +7206,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -6329,13 +7221,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -6359,8 +7251,8 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												},
 												{
 													id: 28243,
@@ -6382,12 +7274,12 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
-												}
+														startTimeOffset: 0,
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -6408,7 +7300,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -6419,7 +7311,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3541886647',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/1bk0E283',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/1bk0E283',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -6430,8 +7323,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-20T16:07:36.429Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 18977,
@@ -6446,21 +7339,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'alm_y'
-													}
-												}
-											]
-										}
+														username: 'alm_y',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -6474,10 +7370,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -6526,7 +7422,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -6534,10 +7438,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -6545,10 +7457,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -6556,10 +7476,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -6567,10 +7495,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -6578,10 +7514,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -6589,10 +7533,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -6600,10 +7552,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -6611,13 +7571,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -6627,10 +7587,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -6644,8 +7607,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -6667,17 +7630,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '707fec27-6b6b-4b1f-8b58-d9c9c4283ae8'
+		id: '707fec27-6b6b-4b1f-8b58-d9c9c4283ae8',
 	},
 	{
 		from: '2023-11-28T06:00:00.000Z',
@@ -6687,7 +7650,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-28T06:00:00.000Z',
-				to: '2023-11-28T16:00:00.000Z'
+				to: '2023-11-28T16:00:00.000Z',
 			},
 			caption: '₽20 000',
 			content: 'Надежда Бунда',
@@ -6707,7 +7670,8 @@ export const BLOCKS = [
 							orders: [
 								{
 									id: 57832,
-									comment: 'источники не нужны \n(нужна покраска циклорамы)\nгрузовой лифт в 10.00 и в 19.40',
+									comment:
+										'источники не нужны \n(нужна покраска циклорамы)\nгрузовой лифт в 10.00 и в 19.40',
 									price: '20000',
 									orderSource: 'subclient',
 									sale: 0,
@@ -6749,7 +7713,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -6758,7 +7722,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -6767,7 +7731,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -6776,8 +7740,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -6801,7 +7765,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -6812,16 +7777,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -6847,95 +7820,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -6962,7 +7999,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -6976,7 +8013,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -6990,7 +8027,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -7004,7 +8041,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -7018,7 +8055,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -7032,7 +8069,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -7046,7 +8083,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -7060,7 +8097,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -7074,7 +8111,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -7088,7 +8125,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -7102,7 +8139,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -7116,7 +8153,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -7130,7 +8167,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -7144,7 +8181,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -7158,7 +8195,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -7172,7 +8209,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -7186,7 +8223,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -7200,7 +8237,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -7214,7 +8251,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -7228,7 +8265,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -7242,7 +8279,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -7256,7 +8293,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -7270,7 +8307,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -7284,7 +8321,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -7298,7 +8335,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -7312,7 +8349,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -7326,7 +8363,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -7340,7 +8377,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -7354,7 +8391,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -7369,13 +8406,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -7399,8 +8436,8 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												},
 												{
 													id: 159,
@@ -7422,12 +8459,12 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
-												}
+														startTimeOffset: 0,
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -7448,7 +8485,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -7459,7 +8496,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3541084857',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/OPppyLso',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/OPppyLso',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -7470,8 +8508,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-20T13:20:21.167Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 18948,
@@ -7486,21 +8524,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -7514,10 +8555,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -7566,7 +8607,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -7574,10 +8623,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -7585,10 +8642,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -7596,10 +8661,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -7607,10 +8680,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -7618,10 +8699,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -7629,10 +8718,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -7640,10 +8737,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -7651,13 +8756,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -7667,10 +8772,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -7684,8 +8792,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -7707,17 +8815,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '46ffe403-bde6-4674-ac65-3ffcbc0293c9'
+		id: '46ffe403-bde6-4674-ac65-3ffcbc0293c9',
 	},
 	{
 		from: '2023-12-04T11:00:00.000Z',
@@ -7727,7 +8835,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-04T11:00:00.000Z',
-				to: '2023-12-04T14:00:00.000Z'
+				to: '2023-12-04T14:00:00.000Z',
 			},
 			caption: '₽6 400',
 			content: 'Вероника  Вагапова',
@@ -7789,7 +8897,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -7798,7 +8906,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -7807,7 +8915,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -7816,8 +8924,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -7841,7 +8949,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -7852,16 +8961,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -7887,95 +9004,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -8002,7 +9183,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -8016,7 +9197,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -8030,7 +9211,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -8044,7 +9225,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -8058,7 +9239,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -8072,7 +9253,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -8086,7 +9267,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -8100,7 +9281,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -8114,7 +9295,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -8128,7 +9309,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -8142,7 +9323,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -8156,7 +9337,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -8170,7 +9351,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -8184,7 +9365,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -8198,7 +9379,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -8212,7 +9393,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -8226,7 +9407,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -8240,7 +9421,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -8254,7 +9435,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -8268,7 +9449,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -8282,7 +9463,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -8296,7 +9477,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -8310,7 +9491,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -8324,7 +9505,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -8338,7 +9519,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -8352,7 +9533,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -8366,7 +9547,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -8380,7 +9561,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -8394,7 +9575,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -8408,13 +9589,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -8470,12 +9651,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -8496,7 +9677,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -8507,7 +9688,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3554555362',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/Mwuc3hGC',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/Mwuc3hGC',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -8518,8 +9700,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-23T12:17:57.408Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 12974,
@@ -8534,21 +9716,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'vvagapovaa'
-													}
-												}
-											]
-										}
+														username: 'vvagapovaa',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -8562,10 +9747,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -8614,7 +9799,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -8622,10 +9815,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -8633,10 +9834,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -8644,10 +9853,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -8655,10 +9872,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -8666,10 +9891,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -8677,10 +9910,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -8688,10 +9929,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -8699,13 +9948,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -8715,10 +9964,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -8732,8 +9984,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -8755,17 +10007,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '0d9450f3-91d2-40ba-8613-9b657ebe39ae'
+		id: '0d9450f3-91d2-40ba-8613-9b657ebe39ae',
 	},
 	{
 		from: '2023-11-30T11:00:00.000Z',
@@ -8775,7 +10027,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-30T11:00:00.000Z',
-				to: '2023-11-30T13:00:00.000Z'
+				to: '2023-11-30T13:00:00.000Z',
 			},
 			caption: '₽4 000',
 			content: 'Давид  Колчин ',
@@ -8837,7 +10089,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -8846,7 +10098,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -8855,7 +10107,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -8864,8 +10116,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -8889,7 +10141,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -8900,16 +10153,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -8935,95 +10196,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -9050,7 +10375,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -9064,7 +10389,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -9078,7 +10403,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -9092,7 +10417,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -9106,7 +10431,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -9120,7 +10445,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -9134,7 +10459,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -9148,7 +10473,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -9162,7 +10487,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -9176,7 +10501,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -9190,7 +10515,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -9204,7 +10529,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -9218,7 +10543,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -9232,7 +10557,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -9246,7 +10571,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -9260,7 +10585,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -9274,7 +10599,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -9288,7 +10613,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -9302,7 +10627,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -9316,7 +10641,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -9330,7 +10655,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -9344,7 +10669,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -9358,7 +10683,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -9372,7 +10697,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -9386,7 +10711,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -9400,7 +10725,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -9414,7 +10739,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -9428,7 +10753,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -9442,7 +10767,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -9456,13 +10781,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -9518,8 +10843,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 27720,
@@ -9573,12 +10898,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -9599,7 +10924,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -9610,7 +10935,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3560509805',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/HBrRo6r4',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/HBrRo6r4',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -9621,8 +10947,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-24T16:14:28.214Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 19532,
@@ -9637,21 +10963,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'Kolchin_David'
-													}
-												}
-											]
-										}
+														username: 'Kolchin_David',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -9665,10 +10994,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -9717,7 +11046,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -9725,10 +11062,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -9736,10 +11081,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -9747,10 +11100,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -9758,10 +11119,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -9769,10 +11138,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -9780,10 +11157,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -9791,10 +11176,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -9802,13 +11195,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -9818,10 +11211,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -9835,8 +11231,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -9858,17 +11254,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'c0c86dce-e556-4260-ae9e-d16edd45475b'
+		id: 'c0c86dce-e556-4260-ae9e-d16edd45475b',
 	},
 	{
 		from: '2023-11-30T08:00:00.000Z',
@@ -9878,7 +11274,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-30T08:00:00.000Z',
-				to: '2023-11-30T09:00:00.000Z'
+				to: '2023-11-30T09:00:00.000Z',
 			},
 			caption: '₽3 700',
 			content: 'Мария Соловьева ',
@@ -9940,7 +11336,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -9949,7 +11345,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -9958,7 +11354,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -9967,8 +11363,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -9992,7 +11388,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -10003,16 +11400,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -10038,95 +11443,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -10153,7 +11622,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -10167,7 +11636,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -10181,7 +11650,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -10195,7 +11664,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -10209,7 +11678,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -10223,7 +11692,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -10237,7 +11706,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -10251,7 +11720,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -10265,7 +11734,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -10279,7 +11748,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -10293,7 +11762,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -10307,7 +11776,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -10321,7 +11790,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -10335,7 +11804,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -10349,7 +11818,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -10363,7 +11832,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -10377,7 +11846,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -10391,7 +11860,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -10405,7 +11874,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -10419,7 +11888,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -10433,7 +11902,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -10447,7 +11916,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -10461,7 +11930,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -10475,7 +11944,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -10489,7 +11958,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -10503,7 +11972,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -10517,7 +11986,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -10531,7 +12000,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -10545,7 +12014,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -10559,13 +12028,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -10621,8 +12090,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 27873,
@@ -10676,8 +12145,8 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
+														additionalSeatsPaymentType: '',
+													},
 												},
 												{
 													id: 27874,
@@ -10731,12 +12200,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -10757,7 +12226,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -10768,7 +12237,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3564941174',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/0BnPD1Cg',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/0BnPD1Cg',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -10779,8 +12249,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-25T14:11:55.789Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 3130,
@@ -10795,21 +12265,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'mary.baker.ph '
-													}
-												}
-											]
-										}
+														username: 'mary.baker.ph ',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -10823,10 +12296,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -10875,7 +12348,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -10883,10 +12364,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -10894,10 +12383,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -10905,10 +12402,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -10916,10 +12421,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -10927,10 +12440,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -10938,10 +12459,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -10949,10 +12478,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -10960,13 +12497,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -10976,10 +12513,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -10993,8 +12533,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -11016,17 +12556,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'd35d5ebb-6613-455e-83d0-0627f5b73443'
+		id: 'd35d5ebb-6613-455e-83d0-0627f5b73443',
 	},
 	{
 		from: '2023-11-30T09:00:00.000Z',
@@ -11036,7 +12576,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-30T09:00:00.000Z',
-				to: '2023-11-30T10:00:00.000Z'
+				to: '2023-11-30T10:00:00.000Z',
 			},
 			caption: '₽3 000',
 			content: 'Полина Пономарева',
@@ -11098,7 +12638,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -11107,7 +12647,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -11116,7 +12656,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -11125,8 +12665,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -11150,7 +12690,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -11161,16 +12702,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -11196,95 +12745,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -11311,7 +12924,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -11325,7 +12938,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -11339,7 +12952,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -11353,7 +12966,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -11367,7 +12980,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -11381,7 +12994,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -11395,7 +13008,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -11409,7 +13022,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -11423,7 +13036,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -11437,7 +13050,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -11451,7 +13064,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -11465,7 +13078,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -11479,7 +13092,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -11493,7 +13106,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -11507,7 +13120,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -11521,7 +13134,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -11535,7 +13148,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -11549,7 +13162,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -11563,7 +13176,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -11577,7 +13190,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -11591,7 +13204,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -11605,7 +13218,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -11619,7 +13232,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -11633,7 +13246,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -11647,7 +13260,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -11661,7 +13274,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -11675,7 +13288,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -11689,7 +13302,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -11703,7 +13316,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -11717,13 +13330,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -11757,7 +13370,8 @@ export const BLOCKS = [
 														prepayment: 'main',
 														timeLength: 0,
 														copyVersion: 1,
-														description: 'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
+														description:
+															'Пожалуйста укажите в комментарии со скольки вам понадобится гримерная зона. Аренда на 1,5 часа так же возможна',
 														paymentType: 'time',
 														sortPosition: 1,
 														breakIsEnable: false,
@@ -11779,12 +13393,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -11805,7 +13419,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -11816,7 +13430,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3566221567',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/Tjx9rwvh',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/Tjx9rwvh',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -11827,8 +13442,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-25T19:35:41.519Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 19651,
@@ -11843,21 +13458,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: '@vvatokat'
-													}
-												}
-											]
-										}
+														username: '@vvatokat',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -11871,10 +13489,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -11923,7 +13541,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -11931,10 +13557,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -11942,10 +13576,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -11953,10 +13595,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -11964,10 +13614,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -11975,10 +13633,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -11986,10 +13652,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -11997,10 +13671,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -12008,13 +13690,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -12024,10 +13706,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -12041,8 +13726,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -12064,17 +13749,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '4fa52e9e-f427-44c2-b8ad-878d87dae9d2'
+		id: '4fa52e9e-f427-44c2-b8ad-878d87dae9d2',
 	},
 	{
 		from: '2023-11-28T16:00:00.000Z',
@@ -12084,7 +13769,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-28T16:00:00.000Z',
-				to: '2023-11-28T17:00:00.000Z'
+				to: '2023-11-28T17:00:00.000Z',
 			},
 			caption: '₽2 350',
 			content: 'Ирина  Королева',
@@ -12104,7 +13789,8 @@ export const BLOCKS = [
 							orders: [
 								{
 									id: 59808,
-									comment: 'Добрый день - мне нужен еще ортбокс насадка большая и стрип бокс ',
+									comment:
+										'Добрый день - мне нужен еще ортбокс насадка большая и стрип бокс ',
 									price: '2350',
 									orderSource: 'subclient',
 									sale: 0,
@@ -12146,7 +13832,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -12155,7 +13841,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -12164,7 +13850,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -12173,8 +13859,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -12198,7 +13884,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -12209,16 +13896,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -12244,95 +13939,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -12359,7 +14118,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -12373,7 +14132,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -12387,7 +14146,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -12401,7 +14160,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -12415,7 +14174,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -12429,7 +14188,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -12443,7 +14202,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -12457,7 +14216,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -12471,7 +14230,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -12485,7 +14244,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -12499,7 +14258,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -12513,7 +14272,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -12527,7 +14286,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -12541,7 +14300,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -12555,7 +14314,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -12569,7 +14328,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -12583,7 +14342,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -12597,7 +14356,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -12611,7 +14370,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -12625,7 +14384,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -12639,7 +14398,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -12653,7 +14412,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -12667,7 +14426,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -12681,7 +14440,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -12695,7 +14454,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -12709,7 +14468,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -12723,7 +14482,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -12737,7 +14496,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -12751,7 +14510,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -12765,13 +14524,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -12827,12 +14586,12 @@ export const BLOCKS = [
 														blockBookingIsEnable: false,
 														additionalSeatsAmount: 0,
 														additionalSeatsIsEnable: false,
-														additionalSeatsPaymentType: ''
-													}
-												}
+														additionalSeatsPaymentType: '',
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -12853,7 +14612,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -12864,7 +14623,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3568510117',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/tYduDL4K',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/tYduDL4K',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -12875,8 +14635,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-26T10:52:40.807Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 15215,
@@ -12891,21 +14651,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -12919,10 +14682,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -12971,7 +14734,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -12979,10 +14750,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -12990,10 +14769,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -13001,10 +14788,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -13012,10 +14807,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -13023,10 +14826,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -13034,10 +14845,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -13045,10 +14864,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -13056,13 +14883,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -13072,10 +14899,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -13089,8 +14919,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -13112,17 +14942,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '88d35967-4f70-46db-a360-50fb886483d6'
+		id: '88d35967-4f70-46db-a360-50fb886483d6',
 	},
 	{
 		from: '2023-11-27T13:00:00.000Z',
@@ -13132,7 +14962,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-27T13:00:00.000Z',
-				to: '2023-11-27T14:00:00.000Z'
+				to: '2023-11-27T14:00:00.000Z',
 			},
 			caption: '₽2 350',
 			content: 'Селима Шаипова ',
@@ -13194,7 +15024,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -13203,7 +15033,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -13212,7 +15042,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -13221,8 +15051,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -13246,7 +15076,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -13257,16 +15088,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -13292,95 +15131,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -13407,7 +15310,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -13421,7 +15324,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -13435,7 +15338,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -13449,7 +15352,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -13463,7 +15366,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -13477,7 +15380,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -13491,7 +15394,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -13505,7 +15408,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -13519,7 +15422,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -13533,7 +15436,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -13547,7 +15450,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -13561,7 +15464,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -13575,7 +15478,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -13589,7 +15492,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -13603,7 +15506,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -13617,7 +15520,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -13631,7 +15534,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -13645,7 +15548,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -13659,7 +15562,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -13673,7 +15576,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -13687,7 +15590,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -13701,7 +15604,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -13715,7 +15618,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -13729,7 +15632,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -13743,7 +15646,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -13757,7 +15660,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -13771,7 +15674,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -13785,7 +15688,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -13799,7 +15702,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -13813,13 +15716,13 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [
@@ -13843,12 +15746,12 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
-												}
+														startTimeOffset: 0,
+													},
+												},
 											],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -13869,7 +15772,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -13880,7 +15783,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3570395563',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/my8r1mbh',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/my8r1mbh',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -13891,7 +15795,7 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-26T17:54:58.096Z',
-											deletedAt: null
+											deletedAt: null,
 										},
 										{
 											id: 52895,
@@ -13912,7 +15816,7 @@ export const BLOCKS = [
 											method: 'cash',
 											type: 'additional',
 											created: '2023-11-27T14:04:40.132Z',
-											deletedAt: null
+											deletedAt: null,
 										},
 										{
 											id: 52896,
@@ -13933,8 +15837,8 @@ export const BLOCKS = [
 											method: 'terminal',
 											type: 'additional',
 											created: '2023-11-27T14:04:40.132Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 19752,
@@ -13949,21 +15853,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'mommys.lovee'
-													}
-												}
-											]
-										}
+														username: 'mommys.lovee',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -13977,10 +15884,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -14029,7 +15936,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -14037,10 +15952,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -14048,10 +15971,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -14059,10 +15990,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -14070,10 +16009,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -14081,10 +16028,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -14092,10 +16047,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -14103,10 +16066,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -14114,13 +16085,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -14130,10 +16101,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -14147,8 +16121,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -14170,17 +16144,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'd60078ed-a819-4b5e-9852-e173871a2bb8'
+		id: 'd60078ed-a819-4b5e-9852-e173871a2bb8',
 	},
 	{
 		from: '2023-12-02T08:00:00.000Z',
@@ -14190,7 +16164,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-02T08:00:00.000Z',
-				to: '2023-12-02T09:00:00.000Z'
+				to: '2023-12-02T09:00:00.000Z',
 			},
 			caption: '₽2 000',
 			content: 'Ксения Афтений',
@@ -14252,7 +16226,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -14261,7 +16235,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -14270,7 +16244,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -14279,8 +16253,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -14304,7 +16278,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -14315,16 +16290,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -14350,95 +16333,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -14465,7 +16512,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -14479,7 +16526,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -14493,7 +16540,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -14507,7 +16554,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -14521,7 +16568,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -14535,7 +16582,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -14549,7 +16596,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -14563,7 +16610,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -14577,7 +16624,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -14591,7 +16638,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -14605,7 +16652,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -14619,7 +16666,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -14633,7 +16680,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -14647,7 +16694,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -14661,7 +16708,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -14675,7 +16722,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -14689,7 +16736,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -14703,7 +16750,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -14717,7 +16764,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -14731,7 +16778,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -14745,7 +16792,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -14759,7 +16806,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -14773,7 +16820,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -14787,7 +16834,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -14801,7 +16848,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -14815,7 +16862,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -14829,7 +16876,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -14843,7 +16890,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -14857,7 +16904,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -14871,18 +16918,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -14903,7 +16950,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -14914,7 +16961,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3556382774',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/rBjjpSDC',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/rBjjpSDC',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -14925,8 +16973,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-23T20:09:24.234Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 19427,
@@ -14941,21 +16989,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'ksuint'
-													}
-												}
-											]
-										}
+														username: 'ksuint',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -14969,10 +17020,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -15021,7 +17072,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -15029,10 +17088,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -15040,10 +17107,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -15051,10 +17126,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -15062,10 +17145,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -15073,10 +17164,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -15084,10 +17183,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -15095,10 +17202,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -15106,13 +17221,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -15122,10 +17237,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -15139,8 +17257,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -15162,17 +17280,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'ddef5189-4b0e-4b45-9c1f-af8ba9eec911'
+		id: 'ddef5189-4b0e-4b45-9c1f-af8ba9eec911',
 	},
 	{
 		from: '2023-12-02T09:00:00.000Z',
@@ -15182,7 +17300,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-02T09:00:00.000Z',
-				to: '2023-12-02T11:00:00.000Z'
+				to: '2023-12-02T11:00:00.000Z',
 			},
 			caption: '₽3 200',
 			content: 'Екатерина Анисимова',
@@ -15244,7 +17362,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -15253,7 +17371,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -15262,7 +17380,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -15271,8 +17389,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -15296,7 +17414,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -15307,16 +17426,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -15342,72 +17469,120 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1380',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '480',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '480',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1380',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1380',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '480',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '480',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1380',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
+														unimportantTarget: true,
 													},
 													{
 														action: 'from',
@@ -15417,72 +17592,120 @@ export const BLOCKS = [
 															{
 																amount: '1900',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 5,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 1,
-														unimportantTarget: true
+														unimportantTarget: true,
 													},
 													{
 														action: 'from',
@@ -15492,94 +17715,158 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -15604,7 +17891,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 15,
@@ -15617,7 +17904,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 16,
@@ -15630,7 +17917,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 21,
@@ -15643,7 +17930,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 22,
@@ -15656,7 +17943,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 23,
@@ -15669,7 +17956,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 25,
@@ -15682,7 +17969,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 27,
@@ -15695,7 +17982,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 30,
@@ -15708,7 +17995,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 31,
@@ -15721,7 +18008,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 32,
@@ -15734,7 +18021,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 35,
@@ -15747,7 +18034,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 36,
@@ -15760,7 +18047,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 37,
@@ -15773,7 +18060,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 38,
@@ -15786,7 +18073,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 120,
@@ -15799,7 +18086,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 393,
@@ -15812,7 +18099,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 125,
@@ -15825,7 +18112,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 39,
@@ -15838,7 +18125,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 33,
@@ -15851,7 +18138,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 29,
@@ -15864,7 +18151,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 28,
@@ -15877,7 +18164,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 18,
@@ -15890,7 +18177,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 20,
@@ -15903,7 +18190,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 34,
@@ -15916,7 +18203,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 176,
@@ -15929,7 +18216,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 26,
@@ -15942,7 +18229,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 1660,
@@ -15955,7 +18242,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
+														customerCanView: true,
 													},
 													{
 														id: 19,
@@ -15968,7 +18255,7 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 1110,
@@ -15981,7 +18268,7 @@ export const BLOCKS = [
 														paymentType: 'time',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 1767,
@@ -15994,18 +18281,18 @@ export const BLOCKS = [
 														paymentType: 'piece',
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: true
-													}
+														customerCanView: true,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -16026,7 +18313,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -16037,7 +18324,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3456583864',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/WqfzMMEf',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/WqfzMMEf',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -16048,8 +18336,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-02T09:29:11.161Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 1461,
@@ -16064,21 +18352,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -16092,10 +18383,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -16144,7 +18435,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -16152,10 +18451,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -16163,10 +18470,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -16174,10 +18489,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -16185,10 +18508,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -16196,10 +18527,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -16207,10 +18546,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -16218,10 +18565,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -16229,13 +18584,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -16245,10 +18600,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -16262,8 +18620,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -16285,17 +18643,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '14997a5c-44ad-4554-befc-324f00ed929d'
+		id: '14997a5c-44ad-4554-befc-324f00ed929d',
 	},
 	{
 		from: '2023-11-29T11:00:00.000Z',
@@ -16305,7 +18663,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-29T11:00:00.000Z',
-				to: '2023-11-29T12:00:00.000Z'
+				to: '2023-11-29T12:00:00.000Z',
 			},
 			caption: '₽2 000',
 			content: 'Елизавета Сотскова',
@@ -16367,7 +18725,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -16376,7 +18734,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -16385,7 +18743,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -16394,8 +18752,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -16419,7 +18777,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -16430,16 +18789,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												isDeleted: false,
 												isRequire: false,
@@ -16464,72 +18831,120 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1380',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '480',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '480',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1380',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1380',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '480',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '480',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1380',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
+														unimportantTarget: true,
 													},
 													{
 														action: 'from',
@@ -16539,72 +18954,120 @@ export const BLOCKS = [
 															{
 																amount: '1900',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1900',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2300',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 5,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 1,
-														unimportantTarget: true
+														unimportantTarget: true,
 													},
 													{
 														action: 'from',
@@ -16614,94 +19077,158 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												parentServices: [],
@@ -16728,7 +19255,7 @@ export const BLOCKS = [
 														sortPosition: 8,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 16,
@@ -16742,7 +19269,7 @@ export const BLOCKS = [
 														sortPosition: 9,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 18,
@@ -16756,7 +19283,7 @@ export const BLOCKS = [
 														sortPosition: 15,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 19,
@@ -16770,7 +19297,7 @@ export const BLOCKS = [
 														sortPosition: 10,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 20,
@@ -16784,7 +19311,7 @@ export const BLOCKS = [
 														sortPosition: 11,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 21,
@@ -16798,7 +19325,7 @@ export const BLOCKS = [
 														sortPosition: 12,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 22,
@@ -16812,7 +19339,7 @@ export const BLOCKS = [
 														sortPosition: 13,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 23,
@@ -16826,7 +19353,7 @@ export const BLOCKS = [
 														sortPosition: 14,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 25,
@@ -16840,7 +19367,7 @@ export const BLOCKS = [
 														sortPosition: 25,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 26,
@@ -16854,7 +19381,7 @@ export const BLOCKS = [
 														sortPosition: 17,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 27,
@@ -16868,7 +19395,7 @@ export const BLOCKS = [
 														sortPosition: 19,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 28,
@@ -16882,7 +19409,7 @@ export const BLOCKS = [
 														sortPosition: 20,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 29,
@@ -16896,7 +19423,7 @@ export const BLOCKS = [
 														sortPosition: 21,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 30,
@@ -16910,7 +19437,7 @@ export const BLOCKS = [
 														sortPosition: 22,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 31,
@@ -16924,7 +19451,7 @@ export const BLOCKS = [
 														sortPosition: 23,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 32,
@@ -16938,7 +19465,7 @@ export const BLOCKS = [
 														sortPosition: 24,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 33,
@@ -16952,7 +19479,7 @@ export const BLOCKS = [
 														sortPosition: 26,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 34,
@@ -16966,7 +19493,7 @@ export const BLOCKS = [
 														sortPosition: 27,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 35,
@@ -16980,7 +19507,7 @@ export const BLOCKS = [
 														sortPosition: 28,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 36,
@@ -16994,7 +19521,7 @@ export const BLOCKS = [
 														sortPosition: 29,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 37,
@@ -17008,7 +19535,7 @@ export const BLOCKS = [
 														sortPosition: 30,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 38,
@@ -17022,7 +19549,7 @@ export const BLOCKS = [
 														sortPosition: 31,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 39,
@@ -17036,7 +19563,7 @@ export const BLOCKS = [
 														sortPosition: 32,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 120,
@@ -17050,7 +19577,7 @@ export const BLOCKS = [
 														sortPosition: 33,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 125,
@@ -17064,7 +19591,7 @@ export const BLOCKS = [
 														sortPosition: 34,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 126,
@@ -17078,7 +19605,7 @@ export const BLOCKS = [
 														sortPosition: 35,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 176,
@@ -17092,7 +19619,7 @@ export const BLOCKS = [
 														sortPosition: 7,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 393,
@@ -17106,7 +19633,7 @@ export const BLOCKS = [
 														sortPosition: 5,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 1110,
@@ -17120,7 +19647,7 @@ export const BLOCKS = [
 														sortPosition: 4,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 1660,
@@ -17134,7 +19661,7 @@ export const BLOCKS = [
 														sortPosition: 18,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
+														customerCanView: false,
 													},
 													{
 														id: 1767,
@@ -17148,18 +19675,18 @@ export const BLOCKS = [
 														sortPosition: 0,
 														paymentAmount: '60',
 														additionalType: 'requisite',
-														customerCanView: false
-													}
+														customerCanView: false,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -17180,7 +19707,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -17202,8 +19729,8 @@ export const BLOCKS = [
 											method: 'other',
 											type: 'prepayment',
 											created: '2023-11-03T10:08:16.797Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 805,
@@ -17218,22 +19745,25 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
+														username: '',
 													},
-													jsId: '1698591630014'
-												}
-											]
-										}
+													jsId: '1698591630014',
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -17247,10 +19777,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -17299,7 +19829,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -17307,10 +19845,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -17318,10 +19864,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -17329,10 +19883,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -17340,10 +19902,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -17351,10 +19921,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -17362,10 +19940,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -17373,10 +19959,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -17384,13 +19978,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -17400,10 +19994,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -17417,8 +20014,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -17440,17 +20037,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '3d89bb42-bb7a-431d-9bd3-4facb6ab04e5'
+		id: '3d89bb42-bb7a-431d-9bd3-4facb6ab04e5',
 	},
 	{
 		from: '2023-12-02T12:00:00.000Z',
@@ -17460,7 +20057,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-02T12:00:00.000Z',
-				to: '2023-12-02T15:00:00.000Z'
+				to: '2023-12-02T15:00:00.000Z',
 			},
 			caption: '₽4 800',
 			content: 'Екатерина  Тащева ',
@@ -17522,7 +20119,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -17531,7 +20128,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -17540,7 +20137,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -17549,8 +20146,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -17574,7 +20171,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -17585,16 +20183,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -17620,95 +20226,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -17735,7 +20405,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -17749,7 +20419,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -17763,7 +20433,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -17777,7 +20447,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -17791,7 +20461,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -17805,7 +20475,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -17819,7 +20489,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -17833,7 +20503,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -17847,7 +20517,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -17861,7 +20531,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -17875,7 +20545,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -17889,7 +20559,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -17903,7 +20573,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -17917,7 +20587,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -17931,7 +20601,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -17945,7 +20615,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -17959,7 +20629,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -17973,7 +20643,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -17987,7 +20657,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -18001,7 +20671,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -18015,7 +20685,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -18029,7 +20699,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -18043,7 +20713,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -18057,7 +20727,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -18071,7 +20741,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -18085,7 +20755,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -18099,7 +20769,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -18113,7 +20783,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -18127,7 +20797,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -18141,18 +20811,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -18173,7 +20843,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -18184,7 +20854,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3564667434',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/ZPOsteiD',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/ZPOsteiD',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -18195,8 +20866,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-25T13:13:10.480Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 19609,
@@ -18211,21 +20882,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 't__catherine '
-													}
-												}
-											]
-										}
+														username: 't__catherine ',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -18239,10 +20913,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -18291,7 +20965,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -18299,10 +20981,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -18310,10 +21000,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -18321,10 +21019,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -18332,10 +21038,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -18343,10 +21057,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -18354,10 +21076,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -18365,10 +21095,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -18376,13 +21114,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -18392,10 +21130,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -18409,8 +21150,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -18432,17 +21173,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '0ca24bba-a724-4b73-8e9a-fc984d4bce2a'
+		id: '0ca24bba-a724-4b73-8e9a-fc984d4bce2a',
 	},
 	{
 		from: '2023-11-29T09:00:00.000Z',
@@ -18452,7 +21193,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-29T09:00:00.000Z',
-				to: '2023-11-29T11:00:00.000Z'
+				to: '2023-11-29T11:00:00.000Z',
 			},
 			caption: '₽3 200',
 			content: 'Денис ООО БИОПРОДУКТ',
@@ -18514,7 +21255,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -18523,7 +21264,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -18532,7 +21273,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -18541,8 +21282,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -18566,7 +21307,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -18577,16 +21319,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -18612,95 +21362,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												parentServices: [],
@@ -18729,7 +21543,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -18744,7 +21558,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -18759,7 +21573,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -18774,7 +21588,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -18789,7 +21603,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -18804,7 +21618,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -18819,7 +21633,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -18834,7 +21648,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -18849,7 +21663,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -18864,7 +21678,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -18879,7 +21693,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -18894,7 +21708,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -18909,7 +21723,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -18924,7 +21738,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -18939,7 +21753,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -18954,7 +21768,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -18969,7 +21783,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -18984,7 +21798,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -18999,7 +21813,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -19014,7 +21828,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -19029,7 +21843,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -19044,7 +21858,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -19059,7 +21873,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -19074,7 +21888,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -19089,7 +21903,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -19104,7 +21918,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -19119,7 +21933,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -19134,7 +21948,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -19149,18 +21963,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -19181,7 +21995,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [],
 									customer: {
@@ -19197,22 +22011,25 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
+														username: '',
 													},
-													jsId: '1682085101890'
-												}
-											]
-										}
+													jsId: '1682085101890',
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -19226,10 +22043,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -19278,7 +22095,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -19286,10 +22111,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -19297,10 +22130,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -19308,10 +22149,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -19319,10 +22168,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -19330,10 +22187,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -19341,10 +22206,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -19352,10 +22225,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -19363,13 +22244,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -19379,10 +22260,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -19396,8 +22280,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -19419,17 +22303,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'ed4944e9-4adb-4691-994b-68d3d682ae71'
+		id: 'ed4944e9-4adb-4691-994b-68d3d682ae71',
 	},
 	{
 		from: '2023-11-26T20:00:00.000Z',
@@ -19439,7 +22323,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-26T20:00:00.000Z',
-				to: '2023-11-27T06:00:00.000Z'
+				to: '2023-11-27T06:00:00.000Z',
 			},
 			caption: 'Тех. Бронь',
 			content: '',
@@ -19501,7 +22385,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -19510,7 +22394,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -19519,7 +22403,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -19528,8 +22412,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -19553,7 +22437,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -19564,16 +22449,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -19599,95 +22492,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												parentServices: [],
@@ -19716,7 +22673,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -19731,7 +22688,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -19746,7 +22703,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -19761,7 +22718,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -19776,7 +22733,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -19791,7 +22748,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -19806,7 +22763,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -19821,7 +22778,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -19836,7 +22793,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -19851,7 +22808,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -19866,7 +22823,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -19881,7 +22838,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -19896,7 +22853,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -19911,7 +22868,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -19926,7 +22883,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -19941,7 +22898,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -19956,7 +22913,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -19971,7 +22928,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -19986,7 +22943,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -20001,7 +22958,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -20016,7 +22973,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -20031,7 +22988,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -20046,7 +23003,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -20061,7 +23018,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -20076,7 +23033,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -20091,7 +23048,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -20106,7 +23063,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -20121,7 +23078,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -20136,7 +23093,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -20151,18 +23108,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -20183,7 +23140,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [],
 									customer: null,
@@ -20192,10 +23149,13 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -20209,10 +23169,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -20261,7 +23221,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -20269,10 +23237,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -20280,10 +23256,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -20291,10 +23275,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -20302,10 +23294,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -20313,10 +23313,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -20324,10 +23332,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -20335,10 +23351,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -20346,13 +23370,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -20362,10 +23386,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -20379,8 +23406,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -20402,17 +23429,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '9291bc59-b477-4e5a-b7af-ce11091bf53d'
+		id: '9291bc59-b477-4e5a-b7af-ce11091bf53d',
 	},
 	{
 		from: '2023-12-01T10:00:00.000Z',
@@ -20422,7 +23449,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-01T10:00:00.000Z',
-				to: '2023-12-01T12:00:00.000Z'
+				to: '2023-12-01T12:00:00.000Z',
 			},
 			caption: '₽3 200',
 			content: 'Дарья Тарнопольская',
@@ -20484,7 +23511,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -20493,7 +23520,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -20502,7 +23529,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -20511,8 +23538,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -20536,7 +23563,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -20547,16 +23575,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -20582,95 +23618,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -20697,7 +23797,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -20711,7 +23811,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -20725,7 +23825,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -20739,7 +23839,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -20753,7 +23853,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -20767,7 +23867,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -20781,7 +23881,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -20795,7 +23895,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -20809,7 +23909,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -20823,7 +23923,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -20837,7 +23937,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -20851,7 +23951,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -20865,7 +23965,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -20879,7 +23979,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -20893,7 +23993,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -20907,7 +24007,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -20921,7 +24021,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -20935,7 +24035,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -20949,7 +24049,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -20963,7 +24063,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -20977,7 +24077,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -20991,7 +24091,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -21005,7 +24105,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -21019,7 +24119,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -21033,7 +24133,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -21047,7 +24147,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -21061,7 +24161,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -21075,7 +24175,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -21089,18 +24189,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -21121,7 +24221,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -21132,7 +24232,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3546342991',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/Bqsn83sY',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/Bqsn83sY',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -21143,8 +24244,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-21T15:15:46.203Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 1699,
@@ -21159,21 +24260,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -21187,10 +24291,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -21239,7 +24343,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -21247,10 +24359,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -21258,10 +24378,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -21269,10 +24397,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -21280,10 +24416,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -21291,10 +24435,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -21302,10 +24454,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -21313,10 +24473,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -21324,13 +24492,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -21340,10 +24508,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -21357,8 +24528,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -21380,17 +24551,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'afda28d2-f062-4ee3-903b-4bd5b33afd23'
+		id: 'afda28d2-f062-4ee3-903b-4bd5b33afd23',
 	},
 	{
 		from: '2023-11-27T08:00:00.000Z',
@@ -21400,7 +24571,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-27T08:00:00.000Z',
-				to: '2023-11-27T13:00:00.000Z'
+				to: '2023-11-27T13:00:00.000Z',
 			},
 			caption: '₽8 000',
 			content: 'Екатерина Строцева',
@@ -21420,7 +24591,8 @@ export const BLOCKS = [
 							orders: [
 								{
 									id: 57125,
-									comment: 'привезут свет с собой, будут нужны только стойки, октобокс 90 с сотами, рефлектор',
+									comment:
+										'привезут свет с собой, будут нужны только стойки, октобокс 90 с сотами, рефлектор',
 									price: '8000',
 									orderSource: 'subclient',
 									sale: 0,
@@ -21462,7 +24634,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -21471,7 +24643,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -21480,7 +24652,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -21489,8 +24661,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -21514,7 +24686,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -21525,16 +24698,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -21560,95 +24741,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -21675,7 +24920,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 15,
@@ -21689,7 +24934,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -21703,7 +24948,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -21717,7 +24962,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -21731,7 +24976,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -21745,7 +24990,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -21759,7 +25004,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -21773,7 +25018,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -21787,7 +25032,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -21801,7 +25046,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -21815,7 +25060,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -21829,7 +25074,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 37,
@@ -21843,7 +25088,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -21857,7 +25102,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -21871,7 +25116,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -21885,7 +25130,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -21899,7 +25144,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -21913,7 +25158,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -21927,7 +25172,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -21941,7 +25186,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -21955,7 +25200,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -21969,7 +25214,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -21983,7 +25228,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -21997,7 +25242,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -22011,7 +25256,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -22025,7 +25270,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -22039,7 +25284,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -22053,7 +25298,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -22067,7 +25312,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -22081,7 +25326,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -22096,18 +25341,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -22128,7 +25373,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -22139,7 +25384,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3532366346',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/4S8REIJL',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/4S8REIJL',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -22150,7 +25396,7 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-18T14:02:27.236Z',
-											deletedAt: null
+											deletedAt: null,
 										},
 										{
 											id: 52780,
@@ -22171,8 +25417,8 @@ export const BLOCKS = [
 											method: 'terminal',
 											type: 'additional',
 											created: '2023-11-27T09:07:31.989Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 2628,
@@ -22187,21 +25433,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -22215,10 +25464,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -22267,7 +25516,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -22275,10 +25532,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -22286,10 +25551,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -22297,10 +25570,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -22308,10 +25589,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -22319,10 +25608,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -22330,10 +25627,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -22341,10 +25646,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -22352,13 +25665,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -22368,10 +25681,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -22385,8 +25701,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -22408,17 +25724,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'f7be17bd-c0da-46b7-992b-012dbc410f76'
+		id: 'f7be17bd-c0da-46b7-992b-012dbc410f76',
 	},
 	{
 		from: '2023-12-03T10:00:00.000Z',
@@ -22428,7 +25744,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-03T10:00:00.000Z',
-				to: '2023-12-03T12:00:00.000Z'
+				to: '2023-12-03T12:00:00.000Z',
 			},
 			caption: '₽3 200',
 			content: 'валерия  ильина ',
@@ -22490,7 +25806,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -22499,7 +25815,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -22508,7 +25824,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -22517,8 +25833,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -22542,7 +25858,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -22553,16 +25870,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -22588,95 +25913,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -22703,7 +26092,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -22717,7 +26106,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -22731,7 +26120,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -22745,7 +26134,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -22759,7 +26148,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -22773,7 +26162,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -22787,7 +26176,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -22801,7 +26190,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -22815,7 +26204,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -22829,7 +26218,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -22843,7 +26232,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -22857,7 +26246,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -22871,7 +26260,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -22885,7 +26274,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -22899,7 +26288,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -22913,7 +26302,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -22927,7 +26316,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -22941,7 +26330,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -22955,7 +26344,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -22969,7 +26358,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -22983,7 +26372,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -22997,7 +26386,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -23011,7 +26400,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -23025,7 +26414,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -23039,7 +26428,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -23053,7 +26442,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -23067,7 +26456,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -23081,7 +26470,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -23095,18 +26484,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -23127,7 +26516,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -23138,7 +26527,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3542310200',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/t7uCIwE8',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/t7uCIwE8',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -23149,8 +26539,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-20T17:40:04.402Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 1311,
@@ -23165,21 +26555,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: 'gerbel.film'
-													}
-												}
-											]
-										}
+														username: 'gerbel.film',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -23193,10 +26586,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -23245,7 +26638,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -23253,10 +26654,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -23264,10 +26673,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -23275,10 +26692,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -23286,10 +26711,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -23297,10 +26730,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -23308,10 +26749,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -23319,10 +26768,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -23330,13 +26787,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -23346,10 +26803,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -23363,8 +26823,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -23386,17 +26846,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '1e84e28e-1344-4120-979f-9bcf8793f8b8'
+		id: '1e84e28e-1344-4120-979f-9bcf8793f8b8',
 	},
 	{
 		from: '2023-12-02T07:00:00.000Z',
@@ -23406,7 +26866,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-12-02T07:00:00.000Z',
-				to: '2023-12-02T08:00:00.000Z'
+				to: '2023-12-02T08:00:00.000Z',
 			},
 			caption: '₽2 000',
 			content: 'Виктория Чернышова Чернышова',
@@ -23468,7 +26928,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -23477,7 +26937,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -23486,7 +26946,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -23495,8 +26955,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -23520,7 +26980,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -23531,16 +26992,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -23566,95 +27035,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												prepaymentType: 'percent',
@@ -23681,7 +27214,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -23695,7 +27228,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -23709,7 +27242,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -23723,7 +27256,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -23737,7 +27270,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -23751,7 +27284,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -23765,7 +27298,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -23779,7 +27312,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -23793,7 +27326,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -23807,7 +27340,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -23821,7 +27354,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -23835,7 +27368,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -23849,7 +27382,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -23863,7 +27396,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -23877,7 +27410,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -23891,7 +27424,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -23905,7 +27438,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -23919,7 +27452,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -23933,7 +27466,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -23947,7 +27480,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -23961,7 +27494,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -23975,7 +27508,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -23989,7 +27522,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -24003,7 +27536,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -24017,7 +27550,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -24031,7 +27564,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -24045,7 +27578,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: true,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -24059,7 +27592,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -24073,18 +27606,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -24105,7 +27638,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [
 										{
@@ -24116,7 +27649,8 @@ export const BLOCKS = [
 											status: 'paid',
 											provider: 'tinkoff',
 											providerPaymentId: '3542804194',
-											providerPaymentURL: 'https://securepayments.tinkoff.ru/gMIzjTj0',
+											providerPaymentURL:
+												'https://securepayments.tinkoff.ru/gMIzjTj0',
 											providerPaymentDetails: '',
 											providerPaymentStatusCode: '',
 											providerPaymentStatusComment: '',
@@ -24127,8 +27661,8 @@ export const BLOCKS = [
 											method: 'onlinePayment',
 											type: 'prepayment',
 											created: '2023-11-20T20:17:49.717Z',
-											deletedAt: null
-										}
+											deletedAt: null,
+										},
 									],
 									customer: {
 										id: 19013,
@@ -24143,21 +27677,24 @@ export const BLOCKS = [
 												{
 													key: 'instagram',
 													value: {
-														username: ''
-													}
-												}
-											]
-										}
+														username: '',
+													},
+												},
+											],
+										},
 									},
 									client: {
 										id: 5,
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -24171,10 +27708,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -24223,7 +27760,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -24231,10 +27776,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -24242,10 +27795,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -24253,10 +27814,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -24264,10 +27833,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -24275,10 +27852,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -24286,10 +27871,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -24297,10 +27890,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -24308,13 +27909,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -24324,10 +27925,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -24341,8 +27945,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -24364,17 +27968,17 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: '221ba3bd-cec9-4390-962b-e0abdf07bb4d'
+		id: '221ba3bd-cec9-4390-962b-e0abdf07bb4d',
 	},
 	{
 		from: '2023-11-26T16:00:00.000Z',
@@ -24384,7 +27988,7 @@ export const BLOCKS = [
 			type: 'event',
 			dates: {
 				from: '2023-11-26T16:00:00.000Z',
-				to: '2023-11-26T20:00:00.000Z'
+				to: '2023-11-26T20:00:00.000Z',
 			},
 			caption: 'Тех. Бронь',
 			content: '',
@@ -24446,7 +28050,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940859365IMG_0332.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 859,
@@ -24455,7 +28059,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569940963165IMG_1305.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 860,
@@ -24464,7 +28068,7 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941001465IMG_1287.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
+														sortPosition: 0,
 													},
 													{
 														id: 861,
@@ -24473,8 +28077,8 @@ export const BLOCKS = [
 														created: '2023-06-02T09:50:10.472Z',
 														fullPath: '168569941022765IMG_1280.jpg',
 														mimetype: 'image/jpeg',
-														sortPosition: 0
-													}
+														sortPosition: 0,
+													},
 												],
 												price: '0',
 												seats: 40,
@@ -24498,7 +28102,8 @@ export const BLOCKS = [
 														geoLon: 0,
 														office: '',
 														street: '',
-														country: 'Москва, Бережковская набережная, 20с5 ',
+														country:
+															'Москва, Бережковская набережная, 20с5 ',
 														created: '2023-01-06T13:44:16.186Z',
 														deleted: null,
 														isActive: true,
@@ -24509,16 +28114,24 @@ export const BLOCKS = [
 														workingTime: [
 															{
 																id: 3,
-																day: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																day: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																options: [],
 																timeEnd: '1440',
 																timeStart: '0',
-																sortPosition: 0
-															}
+																sortPosition: 0,
+															},
 														],
 														sortPosition: 0,
-														countryIsoCode: ''
-													}
+														countryIsoCode: '',
+													},
 												],
 												deletedAt: null,
 												isDeleted: false,
@@ -24544,95 +28157,159 @@ export const BLOCKS = [
 															{
 																amount: '2000',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 0,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1600',
 																timeEnd: '1320',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '540',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 1,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2500',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 2,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2100',
 																timeEnd: '300',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '0',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 3,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 4,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '540',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '300',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 5,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '2350',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '1',
 																sortPosition: 6,
-																durationMinutes: '0'
+																durationMinutes: '0',
 															},
 															{
 																amount: '1950',
 																timeEnd: '1440',
-																weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+																weekDays: [
+																	'Fr',
+																	'Mo',
+																	'Sa',
+																	'Su',
+																	'Th',
+																	'Tu',
+																	'We',
+																],
 																timeStart: '1320',
 																isDisabled: false,
 																amountPeople: 0,
 																durationHour: '2',
 																sortPosition: 7,
-																durationMinutes: '0'
-															}
+																durationMinutes: '0',
+															},
 														],
 														sortPosition: 0,
-														unimportantTarget: true
-													}
+														unimportantTarget: true,
+													},
 												],
 												additionalType: null,
 												parentServices: [],
@@ -24661,7 +28338,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 25,
@@ -24676,7 +28353,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 27,
@@ -24691,7 +28368,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 30,
@@ -24706,7 +28383,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 32,
@@ -24721,7 +28398,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 35,
@@ -24736,7 +28413,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 38,
@@ -24751,7 +28428,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 393,
@@ -24766,7 +28443,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 28,
@@ -24781,7 +28458,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 18,
@@ -24796,7 +28473,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 176,
@@ -24811,7 +28488,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 26,
@@ -24826,7 +28503,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1660,
@@ -24841,7 +28518,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 120,
@@ -24856,7 +28533,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 1767,
@@ -24871,7 +28548,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 16,
@@ -24886,7 +28563,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 19,
@@ -24901,7 +28578,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 20,
@@ -24916,7 +28593,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 21,
@@ -24931,7 +28608,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 22,
@@ -24946,7 +28623,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 2070,
@@ -24961,7 +28638,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 23,
@@ -24976,7 +28653,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 29,
@@ -24991,7 +28668,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 31,
@@ -25006,7 +28683,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 33,
@@ -25021,7 +28698,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 34,
@@ -25036,7 +28713,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 36,
@@ -25051,7 +28728,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 39,
@@ -25066,7 +28743,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 125,
@@ -25081,7 +28758,7 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
+														startTimeOffset: 0,
 													},
 													{
 														id: 126,
@@ -25096,18 +28773,18 @@ export const BLOCKS = [
 														paymentAmount: '60',
 														additionalType: 'requisite',
 														customerCanView: false,
-														startTimeOffset: 0
-													}
+														startTimeOffset: 0,
+													},
 												],
 												blockBookingIsEnable: false,
 												additionalSeatsAmount: 100,
 												additionalSeatsIsEnable: false,
-												additionalSeatsPaymentType: 'time'
+												additionalSeatsPaymentType: 'time',
 											},
 											freeAdditionalServices: [],
 											additionalServices: [],
-											target: null
-										}
+											target: null,
+										},
 									],
 									address: {
 										id: 3,
@@ -25128,7 +28805,7 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
+										deleted: null,
 									},
 									payments: [],
 									customer: null,
@@ -25137,10 +28814,13 @@ export const BLOCKS = [
 										deletedAt: null,
 										idAlias: 'dvenadzat',
 										clientName: "Dvenadzat' Studio",
-										clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+										clientDescription:
+											'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 										clientUrl: 'https://dvenadzat.ru/',
-										secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-										testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+										secretKey:
+											'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+										testSecretKey:
+											'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 										isEnable: true,
 										isTest: false,
 										timezone: 'Europe/Moscow',
@@ -25154,10 +28834,10 @@ export const BLOCKS = [
 											email: 'my12photo@yandex.ru',
 											phone: '+7 495 260 02 12',
 											phoneIso: 'RU',
-											phoneIsCompleted: true
-										}
-									}
-								}
+											phoneIsCompleted: true,
+										},
+									},
+								},
 							],
 							service: {
 								id: 41,
@@ -25206,7 +28886,15 @@ export const BLOCKS = [
 										action: 'from',
 										parameters: [
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '1',
@@ -25214,10 +28902,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2000',
 												isDisabled: false,
-												sortPosition: 0
+												sortPosition: 0,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '540',
 												timeEnd: '1320',
 												durationHour: '2',
@@ -25225,10 +28921,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1600',
 												isDisabled: false,
-												sortPosition: 1
+												sortPosition: 1,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '1',
@@ -25236,10 +28940,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2500',
 												isDisabled: false,
-												sortPosition: 2
+												sortPosition: 2,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '0',
 												timeEnd: '300',
 												durationHour: '2',
@@ -25247,10 +28959,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2100',
 												isDisabled: false,
-												sortPosition: 3
+												sortPosition: 3,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '1',
@@ -25258,10 +28978,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 4
+												sortPosition: 4,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '300',
 												timeEnd: '540',
 												durationHour: '2',
@@ -25269,10 +28997,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 5
+												sortPosition: 5,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '1',
@@ -25280,10 +29016,18 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '2350',
 												isDisabled: false,
-												sortPosition: 6
+												sortPosition: 6,
 											},
 											{
-												weekDays: ['Fr', 'Mo', 'Sa', 'Su', 'Th', 'Tu', 'We'],
+												weekDays: [
+													'Fr',
+													'Mo',
+													'Sa',
+													'Su',
+													'Th',
+													'Tu',
+													'We',
+												],
 												timeStart: '1320',
 												timeEnd: '1440',
 												durationHour: '2',
@@ -25291,13 +29035,13 @@ export const BLOCKS = [
 												amountPeople: 0,
 												amount: '1950',
 												isDisabled: false,
-												sortPosition: 7
-											}
+												sortPosition: 7,
+											},
 										],
 										dateStart: '2023-10-29T21:00:00.000Z',
 										dateEnd: null,
-										sortPosition: 0
-									}
+										sortPosition: 0,
+									},
 								],
 								prepaymentParams: [],
 								capacity: false,
@@ -25307,10 +29051,13 @@ export const BLOCKS = [
 									deletedAt: null,
 									idAlias: 'dvenadzat',
 									clientName: "Dvenadzat' Studio",
-									clientDescription: 'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
+									clientDescription:
+										'Идеальное пространство для больших коммерческих, рекламных и творческих съемок, модельных тестов, индивидуальных фотосессий, лекций и мастер классов, а также других камерных атмосферных мероприятий!',
 									clientUrl: 'https://dvenadzat.ru/',
-									secretKey: 'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
-									testSecretKey: 'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
+									secretKey:
+										'pb$2b$13$9ExturPLInC4QWki9Ao8iOJ1M9FEQl8Q3YzA0lhSTXq0mk2gt8/3G',
+									testSecretKey:
+										'test$2b$13$d05vQhKXCfEKLQEEZ2v44uJ1JuWsV.6XxOOmPvCVr5Or5GIl9L8va',
 									isEnable: true,
 									isTest: false,
 									timezone: 'Europe/Moscow',
@@ -25324,8 +29071,8 @@ export const BLOCKS = [
 										email: 'my12photo@yandex.ru',
 										phone: '+7 495 260 02 12',
 										phoneIso: 'RU',
-										phoneIsCompleted: true
-									}
+										phoneIsCompleted: true,
+									},
 								},
 								addresses: [
 									{
@@ -25347,16 +29094,16 @@ export const BLOCKS = [
 										isOnline: false,
 										sortPosition: 0,
 										created: '2023-01-06T13:44:16.186Z',
-										deleted: null
-									}
-								]
-							}
-						}
-					}
-				}
-			}
+										deleted: null,
+									},
+								],
+							},
+						},
+					},
+				},
+			},
 		},
 		on: {},
-		id: 'e98a0e79-08a1-457d-851d-88b1b78c74cc'
-	}
+		id: 'e98a0e79-08a1-457d-851d-88b1b78c74cc',
+	},
 ]

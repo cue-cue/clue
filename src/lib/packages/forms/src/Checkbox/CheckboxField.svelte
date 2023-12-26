@@ -18,7 +18,7 @@
 	const handler = {
 		click(e: MouseEvent) {
 			if ($fieldContextStore.manual || manual) e.preventDefault()
-		}
+		},
 	}
 </script>
 

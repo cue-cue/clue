@@ -11,7 +11,21 @@ export class CellList {
 	date
 	unitType
 	periods
-	constructor({ step = 15, start = 0, end = 1440, unitType = 'minutes', date, periods = [] }: { step?: number; start?: number; end?: number; date: Date; unitType?: dayjs.ManipulateType; periods?: Period[] }) {
+	constructor({
+		step = 15,
+		start = 0,
+		end = 1440,
+		unitType = 'minutes',
+		date,
+		periods = [],
+	}: {
+		step?: number
+		start?: number
+		end?: number
+		date: Date
+		unitType?: dayjs.ManipulateType
+		periods?: Period[]
+	}) {
 		this.periods = periods
 		this.step = step
 		this.start = start
@@ -37,7 +51,7 @@ export class CellList {
 			if (!sideFromMap) {
 				sidesMap.set(+cellDay, {
 					start,
-					end
+					end,
 				})
 			}
 
@@ -52,7 +66,7 @@ export class CellList {
 	genCell(add: number) {
 		return new Cell({
 			from: this.applyDate(add),
-			to: this.applyDate(add + this.step)
+			to: this.applyDate(add + this.step),
 		})
 	}
 

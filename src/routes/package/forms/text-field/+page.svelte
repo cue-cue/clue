@@ -5,31 +5,33 @@
 
 	const icons: Record<'start' | 'end', (typeof buttonIcon | undefined)[]> = {
 		start: [buttonIcon, buttonIcon],
-		end: [buttonIcon, buttonIcon, buttonIcon]
+		end: [buttonIcon, buttonIcon, buttonIcon],
 	}
 
 	const items: Array<ComponentProps<TextField> & { id: string }> = [
 		{
-			id: 'Base'
+			id: 'Base',
 		},
 		{
 			id: 'Size: small',
-			size: 'small'
+			size: 'small',
 		},
 		{
 			id: 'Textarea',
 			rows: 3,
-			multiline: true
+			multiline: true,
 		},
 		{
 			id: 'Textarea | Size: small',
 			size: 'small',
 			rows: 4,
-			multiline: true
-		}
+			multiline: true,
+		},
 	]
 
-	const getVariants = <T extends ComponentProps<TextField>>(props: T): Array<T & { id: string }> => {
+	const getVariants = <T extends ComponentProps<TextField>>(
+		props: T,
+	): Array<T & { id: string }> => {
 		const variants: ComponentProps<TextField>[] = [
 			{ value: 'Value' },
 			{ placeholder: 'Placeholder' },
@@ -48,16 +50,22 @@
 				label: 'Label',
 				helper: 'Helper',
 				hint: 'Hint',
-				placeholder: 'Placeholder'
+				placeholder: 'Placeholder',
 			},
 			{
 				disabled: true,
 				label: 'Label',
 				helper: 'Helper',
 				hint: 'Hint',
-				placeholder: 'Placeholder'
+				placeholder: 'Placeholder',
 			},
-			{ error: true, label: 'Label', helper: 'Helper', hint: 'Hint', placeholder: 'Placeholder' },
+			{
+				error: true,
+				label: 'Label',
+				helper: 'Helper',
+				hint: 'Hint',
+				placeholder: 'Placeholder',
+			},
 			{
 				readonly: true,
 				disabled: true,
@@ -65,8 +73,8 @@
 				label: 'Label',
 				helper: 'Helper',
 				hint: 'Hint',
-				placeholder: 'Placeholder'
-			}
+				placeholder: 'Placeholder',
+			},
 		]
 
 		return variants.map((variant, i) => ({ ...props, ...variant, id: `variant-${i}` }))

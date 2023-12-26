@@ -1,5 +1,11 @@
 # @cluue/config
 
+## 1.0.16
+
+### Patch Changes
+
+-   Refactor and Perf
+
 ## 1.0.15
 
 ### Patch Changes

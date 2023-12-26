@@ -27,7 +27,11 @@
 </script>
 
 {#if !contextStore || $contextStore.arrow}
-	<div bind:this={nodeElement} style={styles} class={generateClassNames(['PopoverArrow', className])}>
+	<div
+		bind:this={nodeElement}
+		style={styles}
+		class={generateClassNames(['PopoverArrow', className])}
+	>
 		<slot><div /></slot>
 	</div>
 {/if}

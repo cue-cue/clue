@@ -20,7 +20,13 @@
 	export let icon: $$Props['icon']
 </script>
 
-<ButtonField tag={href ? 'a' : 'button'} class={generateClassNames(['IconButton', className])} data-size={size} {href} {...$$restProps}>
+<ButtonField
+	tag={href ? 'a' : 'button'}
+	class={generateClassNames(['IconButton', className])}
+	data-size={size}
+	{href}
+	{...$$restProps}
+>
 	<Icon {icon} />
 </ButtonField>
 

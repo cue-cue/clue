@@ -4,39 +4,45 @@
 	import eye from '@cluue/icons/line/eye.svg?clue'
 
 	const getButtonStyles = (variantOptions?: ComponentProps<Button>) => {
-		const sizes: Exclude<ComponentProps<Button>['size'], undefined>[] = ['large', 'medium', 'small']
-		return sizes.reduce<Record<(typeof sizes)[number], (ComponentProps<Button> & { id: string })[]>>(
+		const sizes: Exclude<ComponentProps<Button>['size'], undefined>[] = [
+			'large',
+			'medium',
+			'small',
+		]
+		return sizes.reduce<
+			Record<(typeof sizes)[number], (ComponentProps<Button> & { id: string })[]>
+		>(
 			(val, size) => {
 				val[size] = [
 					{
 						id: 'All icons',
 						size,
 						startIcon: eye,
-						endIcon: eye
+						endIcon: eye,
 					},
 					{
 						id: 'Start icon',
 						size,
-						startIcon: eye
+						startIcon: eye,
 					},
 					{
 						id: 'End icon',
 						size,
-						endIcon: eye
+						endIcon: eye,
 					},
 					{
 						id: 'Disabled',
 						size,
 						startIcon: eye,
 						endIcon: eye,
-						disabled: true
+						disabled: true,
 					},
 					{
 						id: 'Link',
 						size,
 						startIcon: eye,
 						endIcon: eye,
-						href: './'
+						href: './',
 					},
 					{
 						id: 'Disabled Link',
@@ -44,16 +50,16 @@
 						startIcon: eye,
 						endIcon: eye,
 						href: './',
-						disabled: true
-					}
+						disabled: true,
+					},
 				].map((props) => ({ ...(variantOptions || {}), ...props }))
 				return val
 			},
 			{
 				small: [],
 				medium: [],
-				large: []
-			}
+				large: [],
+			},
 		)
 	}
 
@@ -63,32 +69,32 @@
 	}[] = [
 		{
 			name: 'Default (Primary)',
-			styles: getButtonStyles()
+			styles: getButtonStyles(),
 		},
 		{
 			name: 'Action',
 			styles: getButtonStyles({
-				type: 'action'
-			})
+				type: 'action',
+			}),
 		},
 		{
 			name: 'Secondary',
 			styles: getButtonStyles({
-				type: 'secondary'
-			})
+				type: 'secondary',
+			}),
 		},
 		{
 			name: 'Ghost',
 			styles: getButtonStyles({
-				type: 'ghost'
-			})
+				type: 'ghost',
+			}),
 		},
 		{
 			name: 'Outlined',
 			styles: getButtonStyles({
-				type: 'outlined'
-			})
-		}
+				type: 'outlined',
+			}),
+		},
 	]
 </script>
 

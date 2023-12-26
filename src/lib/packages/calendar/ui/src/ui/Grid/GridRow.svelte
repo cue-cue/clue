@@ -14,19 +14,26 @@
 	export let columns: $$Props['columns'] = undefined
 </script>
 
-<svelte:element this={tag} class={generateClassNames(['CalendarGridRow', className])} style:--columns={columns} data-gap={gap}>
+<svelte:element
+	this={tag}
+	class={generateClassNames(['CalendarGridRow', className])}
+	style:--columns={columns}
+	data-gap={gap}
+>
 	<slot />
 </svelte:element>
 
 <style lang="sass">
 	.ClueCalendarGridRow
-		--gap: 8px 12px
+		--gap-y: 8px
+		--gap-x: 12px
 		--columns: repeat(auto-fit, minmax(0, 1fr))
 		display: grid
 		grid-template-columns: var(--columns)
-		gap: var(--gap)
+		gap: var(--gap-y) var(--gap-x)
 		align-items: center
 		justify-items: center
 		&[data-gap='medium']
-			gap: 24px 12px
+			--gap-y: 24px
+			--gap-x: 12px
 </style>

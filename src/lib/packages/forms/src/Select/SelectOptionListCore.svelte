@@ -21,9 +21,13 @@
 	import { selectOptionListCoreContext } from './context.js'
 	import _getOptionValueKey from './utils/getOptionValueKey.js'
 
-	type OptionGenericValue = ValueTypeGeneric extends 'advanced' ? OptionsGeneric[number]['value'] : OptionsGeneric[number]['value'][KeyGeneric]
+	type OptionGenericValue = ValueTypeGeneric extends 'advanced'
+		? OptionsGeneric[number]['value']
+		: OptionsGeneric[number]['value'][KeyGeneric]
 
-	type Value<T extends boolean> = T extends true ? OptionGenericValue[] : OptionGenericValue | undefined
+	type Value<T extends boolean> = T extends true
+		? OptionGenericValue[]
+		: OptionGenericValue | undefined
 	interface $$Props {
 		class?: string
 		key?: KeyGeneric
@@ -58,7 +62,9 @@
 		return _getOptionValueKey(value, key)
 	}
 
-	const valueTransformer = <T extends OptionGenericValue>(value: T): ReturnType<typeof getOptionValueKey> | T => {
+	const valueTransformer = <T extends OptionGenericValue>(
+		value: T,
+	): ReturnType<typeof getOptionValueKey> | T => {
 		if (value === undefined) return value
 		if (typeof value === 'object') {
 			if (valueType === 'advanced') {
@@ -92,9 +98,13 @@
 
 	export const set = <T extends boolean>(newValue: Value<T>) => {
 		if (multiple) {
-			;(value as Value<true>) = Array.isArray(newValue) ? newValue.map((val: OptionGenericValue) => valueTransformer(val)) : [valueTransformer(newValue as OptionGenericValue)]
+			;(value as Value<true>) = Array.isArray(newValue)
+				? newValue.map((val: OptionGenericValue) => valueTransformer(val))
+				: [valueTransformer(newValue as OptionGenericValue)]
 		} else {
-			;(value as Value<false>) = valueTransformer(newValue as OptionGenericValue) as OptionGenericValue
+			;(value as Value<false>) = valueTransformer(
+				newValue as OptionGenericValue,
+			) as OptionGenericValue
 		}
 	}
 
@@ -126,7 +136,12 @@
 				clear()
 			} else if (Array.isArray(value)) {
 				if (optionInValue) {
-					set(value.filter((val: OptionGenericValue) => getOptionValueKey(val) !== getOptionValueKey(option.value)))
+					set(
+						value.filter(
+							(val: OptionGenericValue) =>
+								getOptionValueKey(val) !== getOptionValueKey(option.value),
+						),
+					)
 				}
 			}
 		} else {
@@ -145,7 +160,7 @@
 			} else {
 				add(option)
 			}
-		}
+		},
 	}
 
 	const isActive = (option: OptionsGeneric[number], _value: typeof value): boolean => {
@@ -162,7 +177,9 @@
 					break
 				}
 				case 'string': {
-					_options = _options.filter((option) => option.label === filter) as typeof _options
+					_options = _options.filter(
+						(option) => option.label === filter,
+					) as typeof _options
 				}
 			}
 		}
@@ -176,19 +193,19 @@
 				clickHandler,
 				label: option.label || '',
 				key: getOptionValueKey(option.value),
-				active: isActive(option, value)
+				active: isActive(option, value),
 			}
 		})
 	})()
 
 	const selectOptionListCoreContextStore = selectOptionListCoreContext.set(
 		writable({
-			data
-		})
+			data,
+		}),
 	)
 
 	$: selectOptionListCoreContextStore.set({
-		data
+		data,
 	})
 </script>
 

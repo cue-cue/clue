@@ -2,7 +2,9 @@ export type ColorTransferResult<T extends object, U extends string> = {
 	data: T
 	color: U
 }
-export type ColorTransfer<T extends object, U extends string> = (color: string) => ColorTransferResult<T, U>
+export type ColorTransfer<T extends object, U extends string> = (
+	color: string,
+) => ColorTransferResult<T, U>
 
 export type ColorTransferHSL = ColorTransfer<
 	{

@@ -8,25 +8,27 @@ export interface ICalendarStoreData<TOptions extends Pick<ICalendarStoreOptionsD
 	date?: TOptions['range'] extends true ? Cell : Date
 }
 
-export const createCalendarStore = <TRange extends boolean>(options?: Parameters<typeof createCalendarOptionsStore<TRange>>[0]) => {
+export const createCalendarStore = <TRange extends boolean>(
+	options?: Parameters<typeof createCalendarOptionsStore<TRange>>[0],
+) => {
 	const optionsStore = createCalendarOptionsStore(options, {
 		update(data) {
 			selectInstance.updateOptions({
 				...(data.select || {}),
-				range: data.range
+				range: data.range,
 			})
-		}
+		},
 	})
 
 	const navigator = createCalendarNavigatorStore({
-		options: optionsStore
+		options: optionsStore,
 	})
 
 	type Options = StoresValues<typeof optionsStore>
 	type Data = ICalendarStoreData<Options>
 
 	const { subscribe, update } = writable<Data>({
-		date: undefined
+		date: undefined,
 	})
 
 	const calendar = new Calendar(get(optionsStore).calendar)
@@ -35,17 +37,19 @@ export const createCalendarStore = <TRange extends boolean>(options?: Parameters
 		calendar,
 		options: {
 			...(get(optionsStore).select || {}),
-			range: get(optionsStore).range
+			range: get(optionsStore).range,
 		},
 		on: {
 			set(selected) {
-				const newDate = (get(optionsStore).range ? selected : selected?.from) as Data['date']
+				const newDate = (
+					get(optionsStore).range ? selected : selected?.from
+				) as Data['date']
 
 				get(optionsStore)?.on?.set?.(newDate)
 
 				setDate(newDate)
-			}
-		}
+			},
+		},
 	})
 
 	const setDate = (date: Data['date']) => {
@@ -58,23 +62,28 @@ export const createCalendarStore = <TRange extends boolean>(options?: Parameters
 		})
 	}
 
-	const select = (value?: Data['date'] | Cell, selectOptions?: Parameters<typeof selectInstance.select>[1]) => {
+	const select = (
+		value?: Data['date'] | Cell,
+		selectOptions?: Parameters<typeof selectInstance.select>[1],
+	) => {
 		if (!value) return selectInstance.clear()
 
 		const _selectOptions: typeof selectOptions = {
-			...selectOptions
+			...selectOptions,
 		}
 
 		if (value instanceof Date) {
 			selectInstance.select(
 				new Cell({
 					from: dayjs(value).startOf('day').toDate(),
-					to: dayjs(value).endOf('day').add(1, 'ms').toDate() //+ 1ms для того, чтобы это было начало следующего дня. Как при генерации ячеек (CellList)
+					to: dayjs(value).endOf('day').add(1, 'ms').toDate(), //+ 1ms для того, чтобы это было начало следующего дня. Как при генерации ячеек (CellList)
 				}),
-				_selectOptions
+				_selectOptions,
 			)
+			navigator.setDate(value)
 		} else {
 			selectInstance.select(value, _selectOptions)
+			navigator.setDate(value.from)
 		}
 	}
 
@@ -93,7 +102,7 @@ export const createCalendarStore = <TRange extends boolean>(options?: Parameters
 		navigator,
 		calendar,
 		selector: selectInstance,
-		options: optionsStore
+		options: optionsStore,
 	}
 }
 

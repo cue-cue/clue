@@ -25,14 +25,22 @@
 
 	$: sizes = {
 		width: width ?? 24,
-		height: height ?? width ?? 24
+		height: height ?? width ?? 24,
 	}
 
 	$: transition = transitionFn ?? fade
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<svg bind:this={nodeElement} class={generateClassNames(['IconUse', className])} role="img" {...$$restProps} {...sizes} viewBox={`0 0 ${sizes.width} ${sizes.height}`} on:click>
+<svg
+	bind:this={nodeElement}
+	class={generateClassNames(['IconUse', className])}
+	role="img"
+	{...$$restProps}
+	{...sizes}
+	viewBox={`0 0 ${sizes.width} ${sizes.height}`}
+	on:click
+>
 	{#key icon}
 		<use transition:transition={$config.transition} xlink:href={`#${icon}`} />
 	{/key}

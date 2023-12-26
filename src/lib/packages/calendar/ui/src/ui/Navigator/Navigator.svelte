@@ -13,7 +13,7 @@
 	export { className as class }
 
 	const {
-		store: { navigator, options }
+		store: { navigator, options },
 	} = new CalendarContext().get()
 
 	const handler = {
@@ -36,7 +36,7 @@
 			} else {
 				navigator.goto('year')
 			}
-		}
+		},
 	}
 
 	$: isArrowHidden = !['date', 'year'].includes($navigator.unit)

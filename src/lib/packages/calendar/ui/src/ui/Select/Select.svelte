@@ -10,7 +10,11 @@
 	export { className as class }
 </script>
 
-<Popover class={generateClassNames(['CalendarSelect', className])} trigger="click" placement="bottom">
+<Popover
+	class={generateClassNames(['CalendarSelect', className])}
+	trigger="click"
+	placement="bottom"
+>
 	<button>
 		<slot />
 	</button>

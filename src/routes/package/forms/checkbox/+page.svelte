@@ -10,31 +10,31 @@
 	})[] = [
 		{
 			id: 'Base',
-			component: Checkbox
+			component: Checkbox,
 		},
 		{
 			id: 'Label',
 			label: 'Lorem ipsum',
-			component: Checkbox
+			component: Checkbox,
 		},
 		{
 			id: 'Radio',
-			component: Radio
+			component: Radio,
 		},
 		{
 			id: 'Radio + label',
 			label: 'Lorem ipsum',
-			component: Radio
+			component: Radio,
 		},
 		{
 			id: 'Switch',
-			component: Switch
+			component: Switch,
 		},
 		{
 			id: 'Switch + label',
 			label: 'Lorem ipsum',
-			component: Switch
-		}
+			component: Switch,
+		},
 	]
 
 	const genVariants = (params: Omit<(typeof items)[0], 'id'>) => {
@@ -43,34 +43,37 @@
 			{
 				...params,
 				name,
-				value: 'default'
+				value: 'default',
 			},
 			{
 				...params,
 				name,
 				value: 'checked',
-				checked: true
+				checked: true,
 			},
 			{
 				...params,
 				name,
 				value: 'disabled',
-				disabled: true
+				disabled: true,
 			},
 			{
 				...params,
 				name,
 				value: 'checked + disabled',
 				// checked: true,
-				disabled: true
-			}
+				disabled: true,
+			},
 		]
 	}
 
-	let groups = items.reduce<Partial<Record<string, string[] | string>>>((val, { id, component, ...all }) => {
-		val[id] = component.name === Radio.name ? 'checked + disabled' : ['checked + disabled']
-		return val
-	}, {})
+	let groups = items.reduce<Partial<Record<string, string[] | string>>>(
+		(val, { id, component, ...all }) => {
+			val[id] = component.name === Radio.name ? 'checked + disabled' : ['checked + disabled']
+			return val
+		},
+		{},
+	)
 </script>
 
 <ul>
@@ -81,7 +84,13 @@
 				{#each genVariants(item) as { component, label, value, ...props } (value)}
 					<li>
 						<h5 style="margin: 0; margin-bottom: 10px">{value}</h5>
-						<svelte:component this={component} bind:group={groups[id]} {...props} {value} let:Label={LabelComponent}>
+						<svelte:component
+							this={component}
+							bind:group={groups[id]}
+							{...props}
+							{value}
+							let:Label={LabelComponent}
+						>
 							{#if label}
 								<svelte:component this={LabelComponent}>{label}</svelte:component>
 							{/if}

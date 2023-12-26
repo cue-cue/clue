@@ -4,7 +4,15 @@
 	import { createPopoverActions, type IPopoverOptions } from '../actions/index.js'
 	import { arrow as arrowMiddleware, type ComputeConfig } from 'svelte-floating-ui'
 	import { HoverTrigger } from '../Trigger/hover.js'
-	import { offset as offsetMiddleware, shift as shiftMiddleware, size as sizeMiddleware, flip as flipMiddleware, type OffsetOptions, type Middleware, detectOverflow } from 'svelte-floating-ui/core'
+	import {
+		offset as offsetMiddleware,
+		shift as shiftMiddleware,
+		size as sizeMiddleware,
+		flip as flipMiddleware,
+		type OffsetOptions,
+		type Middleware,
+		detectOverflow,
+	} from 'svelte-floating-ui/core'
 	import PopoverContent from '../PopoverContent/PopoverContent.svelte'
 	import PopoverTarget from '../PopoverTarget/PopoverTarget.svelte'
 	import PopoverArrow from '../PopoverArrow/PopoverArrow.svelte'
@@ -68,8 +76,8 @@
 		middleware: arrow
 			? [
 					arrowMiddleware({
-						element: $arrowStore.element
-					})
+						element: $arrowStore.element,
+					}),
 			  ]
 			: [],
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -83,24 +91,25 @@
 
 			const arrowData = {
 				height: arrowElement?.clientHeight || 0,
-				width: arrowElement?.clientWidth || 0
+				width: arrowElement?.clientWidth || 0,
 			}
 
 			const arrowSideMap = {
 				top: 'bottom',
 				right: 'left',
 				bottom: 'top',
-				left: 'right'
+				left: 'right',
 			}
 
 			const arrowRotateMap: Record<keyof typeof arrowSideMap, `${string}deg`> = {
 				top: '0deg',
 				right: '90deg',
 				bottom: '180deg',
-				left: '-90deg'
+				left: '-90deg',
 			}
 
-			const contentPlacement = (placement.split('-')[0] || 'bottom') as unknown as keyof typeof arrowSideMap
+			const contentPlacement = (placement.split('-')[0] ||
+				'bottom') as unknown as keyof typeof arrowSideMap
 
 			const arrowSide = arrowSideMap[contentPlacement]
 			const rotate = arrowRotateMap[contentPlacement]
@@ -108,17 +117,22 @@
 			const styles: Record<string, string> = {
 				left: x != null ? `${x}px` : '',
 				top: y != null ? `${y}px` : '',
-				transform: `rotate(${rotate})`
+				transform: `rotate(${rotate})`,
 			}
 
-			;(styles[arrowSide] = `-${['bottom', 'top'].includes(contentPlacement) ? arrowData.height : (arrowData.width + arrowData.height) / 2}px`), ($arrowStore.styles = styles)
-		}
+			;(styles[arrowSide] = `-${
+				['bottom', 'top'].includes(contentPlacement)
+					? arrowData.height
+					: (arrowData.width + arrowData.height) / 2
+			}px`),
+				($arrowStore.styles = styles)
+		},
 	}
 
 	const triggerMap = new Map<typeof trigger, typeof Trigger | undefined>([
 		['hover', HoverTrigger],
 		['click', ClickTrigger],
-		[false, undefined]
+		[false, undefined],
 	])
 
 	const defOptions: IPopoverOptions = {
@@ -130,12 +144,16 @@
 				const arrowElement = get($arrowStore.element)
 
 				const arrowData = {
-					height: arrowElement?.clientHeight || 0
+					height: arrowElement?.clientHeight || 0,
 				}
 
 				if (arrow) {
 					if (typeof offset === 'object') {
-						return Object.fromEntries(Object.entries(offset).map(([key, val]) => (val ? [key, (val = val + arrowData.height)] : [key])))
+						return Object.fromEntries(
+							Object.entries(offset).map(([key, val]) =>
+								val ? [key, (val = val + arrowData.height)] : [key],
+							),
+						)
 					} else if (offset) {
 						return offset + arrowData.height
 					} else {
@@ -146,10 +164,10 @@
 				}
 			}),
 			shiftMiddleware({
-				altBoundary: true
+				altBoundary: true,
 			}),
 			flipMiddleware({
-				altBoundary: true
+				altBoundary: true,
 			}),
 			...arrowOptions.middleware,
 			sizeMiddleware({
@@ -161,10 +179,10 @@
 					floating.style.setProperty('--available-height', `${availableHeight}px`)
 					Object.assign(elements.floating.style, {
 						maxWidth: `${availableWidth}px`,
-						maxHeight: `${availableHeight}px`
+						maxHeight: `${availableHeight}px`,
 					})
-				}
-			})
+				},
+			}),
 		],
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		//@ts-ignore
@@ -177,7 +195,7 @@
 			},
 			destroy() {
 				targetElementRef.set(undefined)
-			}
+			},
 		},
 		content: {
 			init(node) {
@@ -185,7 +203,7 @@
 			},
 			destroy() {
 				contentElementRef.set(undefined)
-			}
+			},
 		},
 		trigger: (() => {
 			const Constructor = triggerMap.get(trigger)
@@ -193,15 +211,15 @@
 				return new Constructor(
 					{
 						content: contentElementRef,
-						target: targetElementRef
+						target: targetElementRef,
 					},
 					{
 						open: () => !disabled && setOpen(true),
-						close: () => !disabled && setOpen(false)
-					}
+						close: () => !disabled && setOpen(false),
+					},
 				)
 			}
-		})()
+		})(),
 	}
 
 	export const setOpen = (_open: typeof open) => {
@@ -214,7 +232,7 @@
 
 	const { targetAction, contentAction, update } = createPopoverActions({
 		...defOptions,
-		placement
+		placement,
 	})
 
 	const contextStore = context.set(
@@ -224,8 +242,8 @@
 			update,
 			arrow,
 			arrowStore,
-			placement
-		})
+			placement,
+		}),
 	)
 
 	$: $contextStore.arrow = arrow
@@ -234,7 +252,7 @@
 	$: {
 		update({
 			...defOptions,
-			placement
+			placement,
 		})
 		arrow
 	}

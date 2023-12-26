@@ -45,18 +45,23 @@
 		writable({
 			error,
 			disabled,
-			id
-		})
+			id,
+		}),
 	)
 
 	$: localContext.set({
 		error,
 		disabled,
-		id
+		id,
 	})
 </script>
 
-<div class={generateClassNames(['TextField', className])} data-error={error} data-disabled={disabled} use:actionList={use}>
+<div
+	class={generateClassNames(['TextField', className])}
+	data-error={error}
+	data-disabled={disabled}
+	use:actionList={use}
+>
 	{#if label || hint}
 		<TextFieldHeader>
 			{#if label}
@@ -77,7 +82,7 @@
 			{...$$restProps}
 			slots={{
 				buttons: $$slots.buttons ?? false,
-				'buttons-start': $$slots['buttons-start'] ?? false
+				'buttons-start': $$slots['buttons-start'] ?? false,
 			}}
 		>
 			<svelte:fragment slot="buttons-start">

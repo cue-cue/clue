@@ -2,17 +2,24 @@ import type { ActionReturn } from 'svelte/action'
 
 type ActionFunction<T> = (node: HTMLElement, params: T) => Partial<ActionReturn<T>> | undefined
 
-export const createAction = <T, U extends (...args: never[]) => unknown = ActionFunction<T>>(name: string, action: U, params?: Parameters<U>[1]) => {
+export const createAction = <T, U extends (...args: never[]) => unknown = ActionFunction<T>>(
+	name: string,
+	action: U,
+	params?: Parameters<U>[1],
+) => {
 	return {
 		name,
 		action,
-		params
+		params,
 	}
 }
 
 export type ActionListParams = Array<ReturnType<typeof createAction>>
 
-export type ActionList = <T extends ActionListParams>(node: HTMLElement, actions?: T) => ActionReturn<T>
+export type ActionList = <T extends ActionListParams>(
+	node: HTMLElement,
+	actions?: T,
+) => ActionReturn<T>
 
 export const actionList: ActionList = (node, actions) => {
 	let isInit = false
@@ -50,6 +57,6 @@ export const actionList: ActionList = (node, actions) => {
 		},
 		destroy() {
 			destroyHandlers.forEach((handler) => handler?.())
-		}
+		},
 	}
 }

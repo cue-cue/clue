@@ -9,4 +9,6 @@ type Data = Writable<Pick<ComponentProps<Select<any, any, any, any>>, 'open'>>
 
 export const context = new Context<Data>('Select')
 
-export const selectOptionListCoreContext = new Context<Writable<{ data: ISelectOptionListCoreData<any>[] }>>('SelectOptionListCore')
+export const selectOptionListCoreContext = new Context<
+	Writable<{ data: ISelectOptionListCoreData<any>[] }>
+>('SelectOptionListCore')

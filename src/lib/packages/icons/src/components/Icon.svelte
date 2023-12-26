@@ -23,13 +23,20 @@
 		['small', { width: 16, height: 16 }],
 		['medium', { width: 24, height: 24 }],
 		['large', { width: 32, height: 32 }],
-		[undefined, { width, height }]
+		[undefined, { width, height }],
 	])
 
 	$: sizes = sizesMap.get(size)
 </script>
 
-<IconUse class={generateClassNames(['Icon', className])} {icon} {...sizes} style={`${color ? `--clue-icon-color: ${color};` : ''}${reverse ? `transform: scale${reverse.toUpperCase()}(-1)` : ''}`} />
+<IconUse
+	class={generateClassNames(['Icon', className])}
+	{icon}
+	{...sizes}
+	style={`${color ? `--clue-icon-color: ${color};` : ''}${
+		reverse ? `transform: scale${reverse.toUpperCase()}(-1)` : ''
+	}`}
+/>
 
 <style lang="sass">
 	:global(.ClueIcon)

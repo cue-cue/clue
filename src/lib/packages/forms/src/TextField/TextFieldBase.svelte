@@ -6,9 +6,14 @@
 	import { writable } from 'svelte/store'
 	import TextFieldButtons from './TextFieldButtons.svelte'
 
-	type InputTypes = Extract<ComponentProps<Input>['type'], 'password' | 'email' | 'text' | 'url' | 'tel'>
+	type InputTypes = Extract<
+		ComponentProps<Input>['type'],
+		'password' | 'email' | 'text' | 'url' | 'tel'
+	>
 
-	interface $$Props extends Omit<ComponentProps<Input>, 'type' | 'size'>, Partial<Record<`data-${string}`, string>> {
+	interface $$Props
+		extends Omit<ComponentProps<Input>, 'type' | 'size'>,
+			Partial<Record<`data-${string}`, string>> {
 		class?: string
 		error?: boolean
 		type?: InputTypes
@@ -40,7 +45,7 @@
 	} = {
 		clear: undefined,
 		update: undefined,
-		set: undefined
+		set: undefined,
 	}
 
 	const textFieldBaseContextStore = textFieldBaseContext.set(writable({ size }))
@@ -49,16 +54,45 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class={generateClassNames(['TextFieldBase', className])} data-error={$localContext?.error || error} data-disabled={$localContext?.disabled || disabled} data-multiline={$$restProps.multiline} data-readonly={$$restProps.readonly} data-focused={focused} data-size={size} bind:this={nodeElement} use:actionList={use} on:click on:dblclick>
+<div
+	class={generateClassNames(['TextFieldBase', className])}
+	data-error={$localContext?.error || error}
+	data-disabled={$localContext?.disabled || disabled}
+	data-multiline={$$restProps.multiline}
+	data-readonly={$$restProps.readonly}
+	data-focused={focused}
+	data-size={size}
+	bind:this={nodeElement}
+	use:actionList={use}
+	on:click
+	on:dblclick
+>
 	{#if $$slots['buttons-start'] && (slots?.['buttons-start'] ?? true)}
-		<TextFieldButtons class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_start'])}><slot name="buttons-start" /></TextFieldButtons>
+		<TextFieldButtons
+			class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_start'])}
+			><slot name="buttons-start" /></TextFieldButtons
+		>
 	{/if}
 	<slot>
-		<Input disabled={$localContext?.disabled || disabled} id={$localContext?.id} {type} on:focus on:blur bind:value bind:clear={inputController.clear} bind:update={inputController.update} bind:set={inputController.set} {...$$restProps} />
+		<Input
+			disabled={$localContext?.disabled || disabled}
+			id={$localContext?.id}
+			{type}
+			on:focus
+			on:blur
+			bind:value
+			bind:clear={inputController.clear}
+			bind:update={inputController.update}
+			bind:set={inputController.set}
+			{...$$restProps}
+		/>
 	</slot>
 	<span class={generateClassNames(['TextFieldBase__border'])} />
 	{#if $$slots.buttons && (slots?.buttons ?? true)}
-		<TextFieldButtons class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_end'])}><slot name="buttons" /></TextFieldButtons>
+		<TextFieldButtons
+			class={generateClassNames(['TextFieldBase__buttons', 'TextFieldBase__buttons_end'])}
+			><slot name="buttons" /></TextFieldButtons
+		>
 	{/if}
 </div>
 

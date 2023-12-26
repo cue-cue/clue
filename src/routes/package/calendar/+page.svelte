@@ -12,46 +12,46 @@
 		start: 0,
 		step: 1,
 		end: 7 * 6, //cols * rows
-		unitType: 'day'
+		unitType: 'day',
 	})
 
 	const cellTypes: Array<Omit<ComponentProps<Cell>, 'date'> & { id: string }> = [
 		{
-			id: 'base'
+			id: 'base',
 		},
 		{
 			id: 'base:disabled',
-			disabled: true
+			disabled: true,
 		},
 		{
 			id: 'base:active',
-			active: true
+			active: true,
 		},
 		{
 			id: 'negative',
-			type: 'negative'
+			type: 'negative',
 		},
 		{
 			id: 'negative:disabled',
 			type: 'negative',
-			disabled: true
+			disabled: true,
 		},
 		{
 			id: 'negative:active',
 			type: 'negative',
-			active: true
-		}
+			active: true,
+		},
 	]
 
 	const time = new CellList({
 		date: new Date(),
-		end: 15 * 4 * 7
+		end: 15 * 4 * 7,
 	})
 
 	const blocks = [
 		new Block({
 			from: new Date('2023-12-25T14:00:00.000Z'),
-			to: new Date('2023-12-25T17:00:00.000Z')
+			to: new Date('2023-12-25T17:00:00.000Z'),
 		}),
 		// new Block({
 		// 	from: dayjs().startOf('day').add(20, 'hours').toDate(),
@@ -60,18 +60,18 @@
 		new Block({
 			drift: {
 				before: 60,
-				after: 60
+				after: 60,
 			},
 			from: dayjs().startOf('day').add(4, 'hours').toDate(),
-			to: dayjs().startOf('day').add(6, 'hours').toDate()
+			to: dayjs().startOf('day').add(6, 'hours').toDate(),
 		}),
 		new Block({
 			drift: {
 				before: 60,
-				after: 60
+				after: 60,
 			},
 			from: dayjs().startOf('day').add(7, 'hours').toDate(),
-			to: dayjs().startOf('day').add(10, 'hours').toDate()
+			to: dayjs().startOf('day').add(10, 'hours').toDate(),
 		}),
 		// new Block({
 		// 	from: dayjs().startOf('day').add(8, 'hours').toDate(),
@@ -83,8 +83,8 @@
 		// }),
 		new Block({
 			from: dayjs().startOf('day').add(1, 'day').add(1, 'hours').toDate(),
-			to: dayjs().startOf('day').add(1, 'day').add(66, 'hours').toDate()
-		})
+			to: dayjs().startOf('day').add(1, 'day').add(66, 'hours').toDate(),
+		}),
 	]
 </script>
 
@@ -142,9 +142,15 @@
 			<div class="days-grid">
 				{#each time.cells as day (+day.from)}
 					<Tooltip>
-						<Cell date={day.from} {...props} variant="time">{dayjs(day.from).format('HH:mm')}</Cell>
+						<Cell date={day.from} {...props} variant="time"
+							>{dayjs(day.from).format('HH:mm')}</Cell
+						>
 						<svelte:fragment slot="content">
-							<span>{dayjs(day.from).format('HH:mm')} - {dayjs(day.to).format('HH:mm')}</span>
+							<span
+								>{dayjs(day.from).format('HH:mm')} - {dayjs(day.to).format(
+									'HH:mm',
+								)}</span
+							>
 						</svelte:fragment>
 					</Tooltip>
 				{/each}

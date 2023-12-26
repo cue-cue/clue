@@ -15,7 +15,7 @@
 	export { className as class }
 
 	const {
-		store: { navigator, options }
+		store: { navigator, options },
 	} = new CalendarContext().get()
 
 	const months = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -24,7 +24,7 @@
 		click(month: number) {
 			navigator.set('month', month)
 			navigator.goto('date')
-		}
+		},
 	}
 
 	const isActive = derived(navigator, ($navigator) => {
@@ -34,7 +34,11 @@
 	})
 </script>
 
-<GridRow class={generateClassNames(['CalendarMonth', className])} gap="medium" columns="repeat(3, 1fr)">
+<GridRow
+	class={generateClassNames(['CalendarMonth', className])}
+	gap="medium"
+	columns="repeat(3, 1fr)"
+>
 	{#each months as month (month)}
 		<Cell variant="unit" on:click={() => handler.click(month)} active={$isActive(month)}>
 			{dayjs().month(month).format($options.formats?.month)}

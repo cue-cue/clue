@@ -34,7 +34,7 @@
 	class={generateClassNames(['Checkbox', className])}
 	slots={{
 		label: $$slots.default,
-		desc: $$slots.desc
+		desc: $$slots.desc,
 	}}
 >
 	<RadioBase {disabled} {value} bind:group bind:id {name} {...$$restProps} />

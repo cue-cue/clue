@@ -17,7 +17,7 @@
 	export { className as class }
 
 	const {
-		store: { options, navigator, isDisabled, selector, ...store }
+		store: { options, navigator, isDisabled, selector, ...store },
 	} = new CalendarContext().get()
 
 	$store.date
@@ -25,9 +25,9 @@
 	const handler = {
 		dayClick(event: MouseEvent, cell: CellType) {
 			store.select(cell, {
-				mode: event.shiftKey ? 'range' : 'single'
+				mode: event.shiftKey ? 'range' : 'single',
 			})
-		}
+		},
 	}
 
 	const isActiveDay = derived([store, options], ([$store, $options]) => {
@@ -54,12 +54,26 @@
 				endOfWeek: day === 0,
 				start: position?.isEqual.from,
 				end: position?.isEqual.to,
-				in: position?.isInset
+				in: position?.isInset,
 			}
 		}
 	})
 </script>
 
-<DaysList class={generateClassNames(['CalendarDays', className])} date={$navigator.date} let:date let:cell let:isExclude>
-	<Cell {date} disabled={$isDisabled(cell).disabled} active={$isActiveDay(cell)} range={$getRangePropsByCell(cell)} type={isToday(date) ? 'negative' : undefined} ghost={isExclude} on:click={(e) => handler.dayClick(e, cell)} />
+<DaysList
+	class={generateClassNames(['CalendarDays', className])}
+	date={$navigator.date}
+	let:date
+	let:cell
+	let:isExclude
+>
+	<Cell
+		{date}
+		disabled={$isDisabled(cell).disabled}
+		active={$isActiveDay(cell)}
+		range={$getRangePropsByCell(cell)}
+		type={isToday(date) ? 'negative' : undefined}
+		ghost={isExclude}
+		on:click={(e) => handler.dayClick(e, cell)}
+	/>
 </DaysList>
