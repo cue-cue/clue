@@ -46,7 +46,6 @@ export const createCalendarStore = <TRange extends boolean>(
 				) as Data['date']
 
 				get(optionsStore)?.on?.set?.(newDate)
-
 				setDate(newDate)
 			},
 		},
@@ -55,9 +54,6 @@ export const createCalendarStore = <TRange extends boolean>(
 	const setDate = (date: Data['date']) => {
 		update((data) => {
 			data.date = date
-			if (date && date instanceof Date) {
-				navigator.setDate(date)
-			}
 			return data
 		})
 	}
@@ -80,10 +76,10 @@ export const createCalendarStore = <TRange extends boolean>(
 				}),
 				_selectOptions,
 			)
-			navigator.setDate(value)
+			navigator.set(value)
 		} else {
 			selectInstance.select(value, _selectOptions)
-			navigator.setDate(value.from)
+			navigator.set(value.from)
 		}
 	}
 

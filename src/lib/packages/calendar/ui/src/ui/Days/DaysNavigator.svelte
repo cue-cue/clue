@@ -30,7 +30,7 @@
 
 	const handler = {
 		dayClick(date: Date) {
-			navigator.setDate(date)
+			navigator.set(date)
 		},
 	}
 </script>
@@ -39,7 +39,7 @@
 	<DaysNames />
 	{#if $options.time}
 		<div transition:slide={$config.transition}>
-			<DaysList rows={1} date={$navigator.date} normalize={false} let:date let:isExclude>
+			<DaysList rows={1} date={$navigator.viewDate} normalize={false} let:date let:isExclude>
 				<Cell
 					{date}
 					active={$isActiveDate(date)}

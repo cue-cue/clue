@@ -11,12 +11,7 @@
 		type ICalendarStoreOptionsData,
 	} from '../../lib/index.js'
 	import { generateClassNames } from '@cluue/utils'
-	import {
-		Cell as CalendarCoreCell,
-		type ICalendarParams,
-		type ISelectOptions,
-		type ISelectParams,
-	} from '@cluue/calendar-core'
+	import { Cell as CalendarCoreCell, type ICalendarParams } from '@cluue/calendar-core'
 	import Navigator from '../Navigator/Navigator.svelte'
 	import PickerContainer from './PickerContainer.svelte'
 	import { CalendarContext, type ICalendarContextData } from '../../lib/context.js'

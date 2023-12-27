@@ -22,14 +22,14 @@
 
 	const handler = {
 		click(month: number) {
-			navigator.set('month', month)
+			navigator.setUnit('month', month)
 			navigator.goto('date')
 		},
 	}
 
 	const isActive = derived(navigator, ($navigator) => {
 		return (month: number) => {
-			return $navigator.date.getMonth() === month
+			return $navigator.viewDate.getMonth() === month
 		}
 	})
 </script>

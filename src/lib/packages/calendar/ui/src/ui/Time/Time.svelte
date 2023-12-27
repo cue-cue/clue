@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { generateClassNames } from '@cluue/utils'
-	import { CellList } from '@cluue/calendar-core'
 	import GridRow from '../Grid/GridRow.svelte'
 	import Cell from '../Cell.svelte'
 	import type { Cell as CellType } from '@cluue/calendar-core'

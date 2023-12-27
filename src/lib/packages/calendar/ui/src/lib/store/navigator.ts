@@ -3,7 +3,14 @@ import { get, writable } from 'svelte/store'
 import type { createCalendarOptionsStore } from './options.js'
 
 export interface ICalendarNavigatorStoreData {
+	/**
+	 * По этому полю мы генерируем дни и время. Всё, что связано дальнейшем выбором date в главном сторе
+	 */
 	date: Date
+	/**
+	 * viewDate отличается от date тем, что это поле дает пользователю возможность увидеть то, какую date он может выбрать самостоятельно
+	 */
+	viewDate: Date
 	year: {
 		current: number
 		step: number
@@ -19,12 +26,15 @@ export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({
 }) => {
 	const { update, subscribe } = writable<ICalendarNavigatorStoreData>({
 		date: new Date(),
+		viewDate: new Date(),
 		year: {
 			current: new Date().getFullYear(),
 			step: 3 * 4,
 		},
 		unit: 'date',
 	})
+
+	const getData = () => get({ subscribe })
 
 	const getOptionsData = () => get(options)
 
@@ -58,55 +68,41 @@ export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({
 		})
 	}
 
-	const next = () => {
+	//Прямое присваивание даты навигации
+	const set = (value: Date) => {
 		update((data) => {
-			switch (data.unit) {
-				case 'month':
-					break
-				case 'year': {
-					setYearCurrent(data.year.current + data.year.step)
-					break
-				}
-				default:
-					data.date = dayjs(data.date).add(1, getStepUnit()).toDate()
-			}
-			return data
-		})
-	}
-	const prev = () => {
-		update((data) => {
-			switch (data.unit) {
-				case 'month':
-					break
-				case 'year': {
-					setYearCurrent(data.year.current - data.year.step)
-					break
-				}
-				default:
-					data.date = dayjs(data.date).add(-1, getStepUnit()).toDate()
-			}
-			return data
-		})
-	}
-	const setDate = (date: Date) => {
-		update((data) => {
-			data.date = date
+			data.viewDate = data.date = value
 			return data
 		})
 	}
 
-	const set = (unit: dayjs.UnitType, value: number) => {
+	//Через эту функцию можно безопасно установить дату навигации
+	const setView = (value: Date) => {
 		update((data) => {
-			data.date = dayjs(data.date).set(unit, value).toDate()
+			data.viewDate = value
+			//Если time === true, то мы не должны изменять саму дату навигатора
+			if (!get(options).time) {
+				data.date = data.viewDate
+			}
 			return data
 		})
+	}
+
+	const setUnit = (unit: dayjs.UnitType, value: number) => {
+		const data = getData()
+		setView(dayjs(data.viewDate).set(unit, value).toDate())
+	}
+
+	const addUnit = (unit: dayjs.ManipulateType, value: number) => {
+		const data = getData()
+		setView(dayjs(data.viewDate).add(value, unit).toDate())
 	}
 
 	const goto = (unit: ICalendarNavigatorStoreData['unit']) => {
 		update((data) => {
 			switch (unit) {
 				case 'year': {
-					data.year.current = data.date.getFullYear()
+					data.year.current = data.viewDate.getFullYear()
 					break
 				}
 			}
@@ -116,12 +112,42 @@ export const createCalendarNavigatorStore = <TRange extends boolean = boolean>({
 		})
 	}
 
+	const step = (type: 'next' | 'prev') => {
+		const data = getData()
+
+		let yearStep = data.year.step
+		let dateUnitStep = 1
+
+		if (type === 'prev') {
+			yearStep = yearStep * -1
+			dateUnitStep = dateUnitStep * -1
+		}
+
+		switch (data.unit) {
+			case 'month':
+				break
+			case 'year': {
+				setYearCurrent(data.year.current + yearStep)
+				break
+			}
+			default:
+				addUnit(getStepUnit(), dateUnitStep)
+		}
+	}
+
+	const next = () => {
+		step('next')
+	}
+	const prev = () => {
+		step('prev')
+	}
+
 	return {
 		subscribe,
 		next,
 		prev,
+		setUnit,
 		set,
-		setDate,
 		goto,
 	}
 }

@@ -19,20 +19,20 @@
 
 	const handler = {
 		click(year: number) {
-			navigator.set('year', year)
+			navigator.setUnit('year', year)
 			navigator.goto('date')
 		},
 	}
 
 	const isActive = derived(navigator, ($navigator) => {
 		return (year: number) => {
-			return $navigator.date.getFullYear() === year
+			return $navigator.viewDate.getFullYear() === year
 		}
 	})
 
 	const isDisabled = derived([navigator, options], ([$navigator, $options]) => {
 		return (year: number) =>
-			$options.isDateExclude(dayjs($navigator.date).year(year).toDate()).result
+			$options.isDateExclude(dayjs($navigator.viewDate).year(year).toDate()).result
 	})
 
 	$: years = new Array($navigator.year.step)

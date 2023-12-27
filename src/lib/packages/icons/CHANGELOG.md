@@ -1,5 +1,17 @@
 # @cluue/icons
 
+## 2.0.10
+
+### Patch Changes
+
+-   View Date in the Calendar and update gray color
+
+## 2.0.9
+
+### Patch Changes
+
+-   Add view date into Calendar
+
 ## 2.0.8
 
 ### Patch Changes

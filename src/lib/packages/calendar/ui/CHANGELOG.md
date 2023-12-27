@@ -1,5 +1,23 @@
 # @cluue/calendar
 
+## 2.0.11
+
+### Patch Changes
+
+-   View Date in the Calendar and update gray color
+-   Updated dependencies
+    -   @cluue/forms@2.0.10
+    -   @cluue/icons@2.0.10
+
+## 2.0.10
+
+### Patch Changes
+
+-   Add view date into Calendar
+-   Updated dependencies
+    -   @cluue/icons@2.0.9
+    -   @cluue/forms@2.0.9
+
 ## 2.0.9
 
 ### Patch Changes

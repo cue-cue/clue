@@ -46,10 +46,10 @@
 	<NavigatorArrow on:click={handler.arrowPrev} hidden={isArrowHidden} />
 	<div>
 		<NavigatorControl on:click={handler.month} active={$navigator.unit === 'month'}>
-			{dayjs($navigator.date).format($options.formats?.month)}
+			{dayjs($navigator.viewDate).format($options.formats?.month)}
 		</NavigatorControl>
 		<NavigatorControl on:click={handler.year} active={$navigator.unit === 'year'}>
-			{dayjs($navigator.date).format($options.formats?.year)}
+			{dayjs($navigator.viewDate).format($options.formats?.year)}
 		</NavigatorControl>
 	</div>
 	<NavigatorArrow type="next" on:click={handler.arrowNext} hidden={isArrowHidden} />
