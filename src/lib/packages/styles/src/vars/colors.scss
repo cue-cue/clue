@@ -6,7 +6,7 @@
 	@include color-active-generator(#eecd47);
 	@include color-positive-generator(#839e44);
 	@include color-negative-generator(#d15a45);
-	@include color-generator('gray', #5f6377);
+	@include color-generator('gray', #6a6f85);
 	@include color-generator('blue', #c9e2ee);
 
 	--clue-color-txt-placeholder: var(--clue-color-gray-200);
@@ -17,7 +17,7 @@
 	--clue-color-border: var(--clue-color-gray-200);
 
 	--clue-color-icon: #32343f;
-	--clue-color-icon-secondary: #5f6377;
+	--clue-color-icon-secondary: var(--clue-color-gray);
 
 	--clue-color-bg-secondary: #f3f3f7;
 }
