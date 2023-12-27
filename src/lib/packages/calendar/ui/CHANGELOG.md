@@ -1,5 +1,11 @@
 # @cluue/calendar
 
+## 2.0.12
+
+### Patch Changes
+
+-   DayNames is active
+
 ## 2.0.11
 
 ### Patch Changes

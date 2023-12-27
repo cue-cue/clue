@@ -17,7 +17,7 @@
 	} = new CalendarContext().get()
 
 	$: dateList = [1, 2, 3, 4, 5, 6, 7].map((day) => {
-		let date = dayjs($navigator.date)
+		let date = dayjs($navigator.viewDate)
 		if (!$options.time) {
 			date = date.date(14)
 		}

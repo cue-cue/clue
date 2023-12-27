@@ -1,6 +1,6 @@
 {
 	"name": "@cluue/calendar",
-	"version": "2.0.11",
+	"version": "2.0.12",
 	"private": false,
 	"license": "MIT",
 	"main": "src/index.js",
