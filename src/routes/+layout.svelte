@@ -1,4 +1,6 @@
 <script lang="ts">
+	import dayjs from 'dayjs'
+	import ru from 'dayjs/locale/ru'
 	import '$lib/packages/styles/src/index.scss'
 	import colorGeneratorScss from '$lib/packages/styles/src/generators/color.scss?raw'
 	import './styles/index.scss'
@@ -24,6 +26,8 @@
 	import { Tooltip } from '@cluue/base'
 
 	type Link = ComponentProps<Button> & { name: string }
+
+	// dayjs.locale('ru', ru)
 
 	const packages: (Link & { pages?: Link[] })[] = [
 		{

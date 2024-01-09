@@ -5272,11 +5272,9 @@ const filledArrowLeftCircle = _filledArrowLeftCircle as unknown as ClueSvgIconDa
 import * as _filledArrowLeftArrowRight from '@cluue/icons/filled/arrow-left-arrow-right.svg'
 const filledArrowLeftArrowRight = _filledArrowLeftArrowRight as unknown as ClueSvgIconData
 import * as _filledArrowLeftArrowRightSquare from '@cluue/icons/filled/arrow-left-arrow-right-square.svg'
-const filledArrowLeftArrowRightSquare =
-	_filledArrowLeftArrowRightSquare as unknown as ClueSvgIconData
+const filledArrowLeftArrowRightSquare = _filledArrowLeftArrowRightSquare as unknown as ClueSvgIconData
 import * as _filledArrowLeftArrowRightCircle from '@cluue/icons/filled/arrow-left-arrow-right-circle.svg'
-const filledArrowLeftArrowRightCircle =
-	_filledArrowLeftArrowRightCircle as unknown as ClueSvgIconData
+const filledArrowLeftArrowRightCircle = _filledArrowLeftArrowRightCircle as unknown as ClueSvgIconData
 import * as _filledArrowImport from '@cluue/icons/filled/arrow-import.svg'
 const filledArrowImport = _filledArrowImport as unknown as ClueSvgIconData
 import * as _filledArrowForward from '@cluue/icons/filled/arrow-forward.svg'
@@ -5444,11 +5442,9 @@ const filledActivityStarCircle = _filledActivityStarCircle as unknown as ClueSvg
 import * as _filledActivitySquare from '@cluue/icons/filled/activity-square.svg'
 const filledActivitySquare = _filledActivitySquare as unknown as ClueSvgIconData
 import * as _filledActivityNotificationSquare from '@cluue/icons/filled/activity-notification-square.svg'
-const filledActivityNotificationSquare =
-	_filledActivityNotificationSquare as unknown as ClueSvgIconData
+const filledActivityNotificationSquare = _filledActivityNotificationSquare as unknown as ClueSvgIconData
 import * as _filledActivityNotificationCircle from '@cluue/icons/filled/activity-notification-circle.svg'
-const filledActivityNotificationCircle =
-	_filledActivityNotificationCircle as unknown as ClueSvgIconData
+const filledActivityNotificationCircle = _filledActivityNotificationCircle as unknown as ClueSvgIconData
 import * as _filledActivityHeartSquare from '@cluue/icons/filled/activity-heart-square.svg'
 const filledActivityHeartSquare = _filledActivityHeartSquare as unknown as ClueSvgIconData
 import * as _filledActivityHeartCircle from '@cluue/icons/filled/activity-heart-circle.svg'
@@ -8181,5 +8177,5 @@ export {
 	filledActivityNotificationCircle,
 	filledActivityHeartSquare,
 	filledActivityHeartCircle,
-	filledActivityCircle,
+	filledActivityCircle
 }

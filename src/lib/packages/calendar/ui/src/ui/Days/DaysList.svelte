@@ -21,9 +21,9 @@
 
 	const getStartDate = (baseDate: Date, options: { normalize: typeof normalize }) => {
 		if (options.normalize) {
-			return dayjs(baseDate).startOf('month').startOf('week').add(1, 'day').toDate()
+			return dayjs(baseDate).startOf('month').day(1).toDate()
 		} else {
-			return dayjs(baseDate).add(-1, 'day').startOf('week').add(1, 'day').toDate()
+			return dayjs(baseDate).add(-1, 'day').day(1).toDate()
 		}
 	}
 
